@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=VDD Pin=D1-5
+Removed Pin From Net: NetName=GND Pin=D1-6
+Removed Pin From Net: NetName=VDD Pin=R1-1
+Removed Member From Class: ClassName=505147_1_1 Member=R1
+Change Component Footprint: Designator=J1 Old Footprint=IDC_CONN_SMT New Footprint=IDC_CONN_SMT_4-PIN
+Change Component Footprint: Designator=D1 Old Footprint=NEOPIXEL New Footprint=NEOPIXEL_2
+Change Component Footprint: Designator=C1 Old Footprint=SMT_1206 New Footprint=SMT_1206_MOD
+Change Component Comment : Designator=D1 Old Comment=LED_NEOPIXEL New Comment=LED_NEOPIXEL_2
+Added Pin To Net: NetName=VDD Pin=C1-2
+Added Pin To Net: NetName=VDD Pin=D1-3
+Added Pin To Net: NetName=DO Pin=D1-4
+Change Class Name : Old Net Name=505147_1_1 New Net Name=505147_2_1
+Added Room: Name=505147_2_1
+Removed Pin From Net: NetName=DO Pin=D1-1
+Added Pin To Net: NetName=GND Pin=D1-1

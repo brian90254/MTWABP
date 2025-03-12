@@ -1,0 +1,47 @@
+Protel Design System Design Rule Check
+PCB File : C:\Protel_Select_091104\505147\505147_1_1.PcbDoc
+Date     : 10/25/2015
+Time     : 9:33:50 PM
+
+Processing Rule : Room 505147_1_1 (Bounding Region = (4230mil, 5015mil, 6290mil, 7640mil) (InComponentClass('505147_1_1'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=15mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=126mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Broken-Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0mil) ((HasFootprint('JUMPER_SMT'))),(All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=15mil) (Max=100mil) (Preferred=50mil) ((InNet('AC1') or InNet('AC2')))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=15mil) (Max=100mil) (Preferred=50mil) ((InNet('DC*')))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=5mil) (Max=250mil) (Preferred=25mil) (All)
+Rule Violations :0
+
+Processing Rule : SMD Neck-Down Constraint (Percent=75%) (Disabled)(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=35mil) ((InPolygon)),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0mil) ((HasFootprint('LED T-1'))),(All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:00

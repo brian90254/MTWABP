@@ -1,0 +1,15 @@
+Added Pin To Net: NetName=VDD Pin=J9-4
+Removed Pin From Net: NetName=DO Pin=J8-1
+Added Pin To Net: NetName=GND Pin=J8-1
+Removed Pin From Net: NetName=GND Pin=J8-2
+Added Pin To Net: NetName=DO Pin=J8-2
+Removed Pin From Net: NetName=VDD Pin=J8-3
+Added Pin To Net: NetName=DI Pin=J8-3
+Removed Pin From Net: NetName=DI Pin=J8-4
+Added Pin To Net: NetName=VDD Pin=J8-4
+Removed Pin From Net: NetName=DO Pin=J9-1
+Added Pin To Net: NetName=GND Pin=J9-1
+Removed Pin From Net: NetName=GND Pin=J9-2
+Added Pin To Net: NetName=DO Pin=J9-2
+Removed Pin From Net: NetName=VDD Pin=J9-3
+Added Pin To Net: NetName=DI Pin=J9-3

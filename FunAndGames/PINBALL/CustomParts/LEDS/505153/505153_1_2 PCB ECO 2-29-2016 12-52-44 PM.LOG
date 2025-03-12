@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=J3 Old Footprint=JUMPER_SMT New Footprint=HEADER, 3-pin
+Change Component Footprint: Designator=J6 Old Footprint=JUMPER_SMT New Footprint=HEADER, 3-pin
+Change Component Footprint: Designator=J5 Old Footprint=HEADER, 3-pin, 2mm MOD New Footprint=HEADER, 3-pin

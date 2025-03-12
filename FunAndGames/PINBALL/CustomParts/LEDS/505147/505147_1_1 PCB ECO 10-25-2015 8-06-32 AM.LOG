@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=GND Pin=C2-1
+Removed Pin From Net: NetName=GND Pin=C3-1
+Removed Pin From Net: NetName=VDD Pin=D2-5
+Removed Pin From Net: NetName=GND Pin=D2-6
+Removed Pin From Net: NetName=DO Pin=D3-1
+Removed Pin From Net: NetName=VDD Pin=D3-5
+Removed Pin From Net: NetName=GND Pin=D3-6
+Removed Pin From Net: NetName=VDD Pin=R2-1
+Removed Pin From Net: NetName=VDD Pin=R3-1
+Added Pin To Net: NetName=DO Pin=D1-1
+Added Class: Name=505147_1_1
+Added Room: Name=505147_1_1

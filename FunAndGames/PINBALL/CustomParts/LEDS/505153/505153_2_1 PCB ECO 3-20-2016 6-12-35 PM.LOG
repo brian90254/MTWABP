@@ -1,0 +1,76 @@
+Added Component: Designator=C1(SMT_1206_MOD)
+Added Component: Designator=C2(SMT_1206_MOD)
+Added Component: Designator=C3(SMT_1206_MOD)
+Added Component: Designator=C4(SMT_1206_MOD)
+Added Component: Designator=C5(SMT_1206_MOD)
+Added Component: Designator=C6(SMT_1206_MOD)
+Added Component: Designator=C7(SMT_1206_MOD)
+Added Component: Designator=C8(SMT_1206_MOD)
+Added Component: Designator=D1(NEOPIXEL_2)
+Added Component: Designator=D2(NEOPIXEL_2)
+Added Component: Designator=D3(NEOPIXEL_2)
+Added Component: Designator=D4(NEOPIXEL_2)
+Added Component: Designator=D5(NEOPIXEL_2)
+Added Component: Designator=D6(NEOPIXEL_2)
+Added Component: Designator=D7(NEOPIXEL_2)
+Added Component: Designator=D8(NEOPIXEL_2)
+Added Component: Designator=J1(HEADER, 2mm SMT MOD)
+Added Component: Designator=J?(JUMPER_SMT)
+Added Component: Designator=J?(JUMPER_SMT)
+Added Component: Designator=J?(JUMPER_SMT)
+Added Component: Designator=J?(JUMPER_SMT)
+Added Component: Designator=J?(JUMPER_SMT)
+Added Component: Designator=J?(JUMPER_SMT)
+Added Component: Designator=J?(JUMPER_SMT)
+Added Pin To Net: NetName=GND Pin=D1-1
+Added Pin To Net: NetName=DI Pin=D1-2
+Added Pin To Net: NetName=VDD Pin=D1-3
+Added Pin To Net: NetName=GND Pin=D2-1
+Added Pin To Net: NetName=VDD Pin=D2-3
+Added Pin To Net: NetName=GND Pin=D3-1
+Added Pin To Net: NetName=VDD Pin=D3-3
+Added Pin To Net: NetName=GND Pin=D4-1
+Added Pin To Net: NetName=VDD Pin=D4-3
+Added Pin To Net: NetName=GND Pin=D5-1
+Added Pin To Net: NetName=VDD Pin=D5-3
+Added Pin To Net: NetName=GND Pin=D6-1
+Added Pin To Net: NetName=VDD Pin=D6-3
+Added Pin To Net: NetName=GND Pin=D7-1
+Added Pin To Net: NetName=VDD Pin=D7-3
+Added Pin To Net: NetName=GND Pin=D8-1
+Added Pin To Net: NetName=VDD Pin=D8-3
+Added Pin To Net: NetName=DO Pin=D8-4
+Added Pin To Net: NetName=GND Pin=J1-1
+Added Pin To Net: NetName=VDD Pin=J1-2
+Added Pin To Net: NetName=DI Pin=J1-3
+Added Pin To Net: NetName=DO Pin=J1-4
+Added Pin To Net: NetName=DO Pin=J?-1
+Added Pin To Net: NetName=DO Pin=J?-1
+Added Pin To Net: NetName=DO Pin=J?-1
+Added Pin To Net: NetName=DO Pin=J?-1
+Added Pin To Net: NetName=DO Pin=J?-1
+Added Pin To Net: NetName=DO Pin=J?-1
+Added Pin To Net: NetName=DO Pin=J?-1
+Added Pin To Net: NetName=NetD1_4 Pin=D1-4
+Added Pin To Net: NetName=NetD1_4 Pin=D2-2
+Added Net: Name=NetD1_4
+Added Pin To Net: NetName=NetD2_4 Pin=D2-4
+Added Pin To Net: NetName=NetD2_4 Pin=D3-2
+Added Net: Name=NetD2_4
+Added Pin To Net: NetName=NetD3_4 Pin=D3-4
+Added Pin To Net: NetName=NetD3_4 Pin=D4-2
+Added Net: Name=NetD3_4
+Added Pin To Net: NetName=NetD4_4 Pin=D4-4
+Added Pin To Net: NetName=NetD4_4 Pin=D5-2
+Added Net: Name=NetD4_4
+Added Pin To Net: NetName=NetD5_4 Pin=D5-4
+Added Pin To Net: NetName=NetD5_4 Pin=D6-2
+Added Net: Name=NetD5_4
+Added Pin To Net: NetName=NetD6_4 Pin=D6-4
+Added Pin To Net: NetName=NetD6_4 Pin=D7-2
+Added Net: Name=NetD6_4
+Added Pin To Net: NetName=NetD7_4 Pin=D7-4
+Added Pin To Net: NetName=NetD7_4 Pin=D8-2
+Added Net: Name=NetD7_4
+Added Class: Name=505153_2_1
+Added Room: Name=505153_2_1

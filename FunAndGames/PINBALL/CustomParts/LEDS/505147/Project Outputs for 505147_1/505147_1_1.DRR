@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: 505147_1_1.PcbDoc   11/12/2015  3:12:28 PM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : 505147_1_1.TXT
+EIA File   : 505147_1_1.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        21mil (0.5334mm)         Round          4                8.97 Inch (227.85 mm)
+T2        125mil (3.175mm)         Round          1                8.65 Inch (219.72 mm)
+---------------------------------------------------------------------------
+Totals                                            5                17.62 Inch (447.57 mm)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

@@ -1,0 +1,10 @@
+Removed Member From Class: ClassName=505153_2_1 Member=C8
+Added Pin To Net: NetName=NetD1_4 Pin=J1-2
+Added Pin To Net: NetName=NetD2_4 Pin=J2-2
+Added Pin To Net: NetName=NetD3_4 Pin=J3-2
+Added Pin To Net: NetName=NetD4_4 Pin=J4-2
+Added Pin To Net: NetName=NetD5_4 Pin=J5-2
+Added Pin To Net: NetName=NetD6_4 Pin=J6-2
+Added Pin To Net: NetName=NetD7_4 Pin=J7-2
+Added Member To Class: ClassName=505153_2_1 Member=Component J1 JUMPER_MOD
+Added Member To Class: ClassName=505153_2_1 Member=Component J7 JUMPER_MOD

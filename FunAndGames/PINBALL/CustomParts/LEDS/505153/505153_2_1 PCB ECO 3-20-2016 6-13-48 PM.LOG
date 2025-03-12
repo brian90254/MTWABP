@@ -1,0 +1,20 @@
+Change Component Designator: OldDesignator=J1 NewDesignator=J8
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Component Designator: OldDesignator=J? NewDesignator=J2
+Change Component Designator: OldDesignator=J? NewDesignator=J3
+Change Component Designator: OldDesignator=J? NewDesignator=J4
+Change Component Designator: OldDesignator=J? NewDesignator=J5
+Change Component Designator: OldDesignator=J? NewDesignator=J6
+Change Component Designator: OldDesignator=J? NewDesignator=J7
+Added Pin To Net: NetName=DO Pin=J2-1
+Added Pin To Net: NetName=DO Pin=J3-1
+Added Pin To Net: NetName=DO Pin=J4-1
+Added Pin To Net: NetName=DO Pin=J5-1
+Added Pin To Net: NetName=DO Pin=J6-1
+Added Pin To Net: NetName=DO Pin=J7-1
+Added Member To Class: ClassName=505153_2_1 Member=Component J2 JUMPER_MOD
+Added Member To Class: ClassName=505153_2_1 Member=Component J3 JUMPER_MOD
+Added Member To Class: ClassName=505153_2_1 Member=Component J4 JUMPER_MOD
+Added Member To Class: ClassName=505153_2_1 Member=Component J5 JUMPER_MOD
+Added Member To Class: ClassName=505153_2_1 Member=Component J6 JUMPER_MOD
+Added Member To Class: ClassName=505153_2_1 Member=Component J8 HEADER, 4-pin

@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [505147_1.PrjPCB]
+   Generated File[505147_1_1.TXT]
+   Generated File[505147_1_1.DRL]
+   Generated File[505147_1_1.LDP]
+   Generated File[505147_1_1.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 3:12:28 PM On 11/12/2015

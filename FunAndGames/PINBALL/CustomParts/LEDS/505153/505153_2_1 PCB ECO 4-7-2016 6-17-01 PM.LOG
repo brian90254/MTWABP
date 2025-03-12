@@ -1,0 +1,15 @@
+Change Component Footprint: Designator=J8 Old Footprint=HEADER, 2mm SMT MOD New Footprint=CONN_NEOPIXEL_1
+Change Component Comment : Designator=J8 Old Comment=HEADER, 4-pin New Comment=CONN, 4-pin NeoPixel Strip
+Added Component: Designator=J9(CONN_NEOPIXEL_1)
+Added Pin To Net: NetName=DO Pin=J9-1
+Added Pin To Net: NetName=GND Pin=J9-2
+Added Pin To Net: NetName=VDD Pin=J9-3
+Added Member To Class: ClassName=505153_2_1 Member=Component J9 CONN, 4-pin NeoPixel Strip
+Removed Pin From Net: NetName=GND Pin=J8-1
+Added Pin To Net: NetName=DO Pin=J8-1
+Removed Pin From Net: NetName=VDD Pin=J8-2
+Added Pin To Net: NetName=GND Pin=J8-2
+Removed Pin From Net: NetName=DI Pin=J8-3
+Added Pin To Net: NetName=VDD Pin=J8-3
+Removed Pin From Net: NetName=DO Pin=J8-4
+Added Pin To Net: NetName=DI Pin=J8-4

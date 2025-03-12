@@ -1,0 +1,9 @@
+Added Component: Designator=J1(HEADER, 3-pin, 2mm MOD)
+Added Pin To Net: NetName=GND Pin=J1-1
+Added Pin To Net: NetName=VDD Pin=J1-2
+Added Pin To Net: NetName=DI Pin=J1-3
+Added Pin To Net: NetName=DO Pin=J2-3
+Added Pin To Net: NetName=NetD4_1 Pin=J3-1
+Added Pin To Net: NetName=DO Pin=J3-2
+Added Pin To Net: NetName=DI Pin=J4-3
+Added Member To Class: ClassName=505153_1_2 Member=Component J1 HEADER, 3-PIN
