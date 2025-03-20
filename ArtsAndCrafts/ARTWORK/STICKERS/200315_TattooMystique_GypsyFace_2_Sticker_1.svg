@@ -2,23 +2,23 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="5.0903726in"
    height="5.7922659in"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    sodipodi:docname="200315_TattooMystique_GypsyFace_2_Sticker_1.svg"
    inkscape:export-filename="/Users/briancox/Dropbox (Personal)/BriansPinballArtwork/TattooMystique/200315_TattooMystique_GypsyFace_2_Sticker_1.png"
    inkscape:export-xdpi="599.96002"
-   inkscape:export-ydpi="599.96002">
+   inkscape:export-ydpi="599.96002"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs4">
     <linearGradient
@@ -437,21 +437,24 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.56713928"
-     inkscape:cx="207.46416"
-     inkscape:cy="313.50721"
+     inkscape:cx="35.264706"
+     inkscape:cy="320.90883"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1440"
-     inkscape:window-height="855"
+     inkscape:window-width="1633"
+     inkscape:window-height="808"
      inkscape:window-x="0"
-     inkscape:window-y="1"
-     inkscape:window-maximized="1"
+     inkscape:window-y="38"
+     inkscape:window-maximized="0"
      units="in"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -471,12 +474,11 @@
      style="display:inline"
      transform="translate(-1014.2763,-717.24757)">
     <image
-       sodipodi:absref="/Users/briancox/Dropbox (Personal)/BriansPinballArtwork/TattooMystique/../Pinball_EK/TattooMystique/FinalComp_GypsyFace3.png"
-       xlink:href="../Pinball_EK/TattooMystique/FinalComp_GypsyFace3.png"
+       xlink:href="../../../../../BriansPinballArtwork/Pinball_EK/TattooMystique/FinalComp_GypsyFace3.png"
        y="872.92004"
        x="1123.7708"
        id="image3949"
-       height="356.26178"
+       height="357.31362"
        width="279.8847" />
   </g>
   <g
