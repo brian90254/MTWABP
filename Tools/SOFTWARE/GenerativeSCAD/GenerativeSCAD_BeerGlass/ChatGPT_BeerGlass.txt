@@ -1,0 +1,5 @@
+README ChatGPT_BeerGlass
+
+The link below takes you to the ChatGPT convo that generated the OpenSCAD script
+
+https://chatgpt.com/share/683a457c-94a0-8004-8f5b-7c6f6e5aad7f
