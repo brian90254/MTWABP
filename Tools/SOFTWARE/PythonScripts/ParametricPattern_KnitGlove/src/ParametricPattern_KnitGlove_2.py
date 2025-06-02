@@ -8,10 +8,11 @@ import os
 palmWidthRatio = 1.696
 palmHeightRatio = 2.261
 wristHeightRatio = 1.391
-castoffRow = 1  # Additional row at top or bottom of image
+castoffRow = 1        # Extra row to add to height
+buffer = 1            # Number of pixels for buffer on each side
 
 # Parse command-line arguments
-parser = argparse.ArgumentParser(description="Create a white BMP with 1px buffer, based on palm, wrist, and thumb measurements.")
+parser = argparse.ArgumentParser(description="Create a white BMP with buffer, based on palm, wrist, and thumb measurements.")
 parser.add_argument("lengthPalm", type=float, help="Palm length in arbitrary units")
 parser.add_argument("circumferencePalm", type=float, help="Palm circumference in arbitrary units")
 args = parser.parse_args()
@@ -40,9 +41,9 @@ wristHeight = round_to_nearest_even(raw_wristHeight)
 # Derived value (not part of image size)
 fingerRibHeight = round_to_nearest_odd(palmHeight / 3)
 
-# Final image dimensions with 1px buffer and castoffRow
-width = palmWidth + thumbWidth + 2
-height = palmHeight + wristHeight + castoffRow + 2
+# Final image dimensions
+width = palmWidth + thumbWidth + buffer * 2
+height = palmHeight + wristHeight + castoffRow + buffer * 2
 
 # Create white image (BGR: 255, 255, 255)
 image = np.full((height, width, 3), fill_value=255, dtype=np.uint8)
@@ -67,4 +68,4 @@ print(f"  palmHeight:       {palmHeight} (even)")
 print(f"  wristHeight:      {wristHeight} (even)")
 print(f"  castoffRow:       {castoffRow} (added to image height)")
 print(f"  fingerRibHeight:  {fingerRibHeight} (odd, not part of image)")
-print(f"  1px buffer added around full image")
+print(f"  buffer:           {buffer}px on each side (total of {buffer*2}px added to both width and height)")
