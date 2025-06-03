@@ -461,7 +461,7 @@ for i in range(num_thumb_drops):
     if end_x >= 0 and end_y >= 0:
         center_x = drop_x + (thumb_drop_width // 2)
         if center_x <= end_x:
-            image[end_y, center_x] = (192, 192, 192)  # grey center pixel
+            image[end_y, center_x] = (160, 160, 160)  # grey center pixel
             for j in range(1, 3):  # white pixels to the right
                 px = center_x + j
                 if px <= end_x:
