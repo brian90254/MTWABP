@@ -3,6 +3,7 @@ import numpy as np
 import argparse
 from datetime import datetime
 import os
+import math  # Make sure this is at the top of your script
 
 # Conversion ratios
 palmWidthRatio = 1.696
@@ -90,6 +91,91 @@ finger_row_end_y = finger_start_y + 2
 for x in range(finger_col_start_x, finger_col_end_x + 1, 2):
     for y in range(finger_row_start_y, finger_row_end_y - 1, -1):
         image[y, x] = (0, 255, 0)
+
+
+# === PALM CABLE KNIT SECTION ===
+palm_cable_width = palmWidth
+palm_cable_height = palmHeight - fingerRibHeight
+
+# Top-left aligned under the finger rib, same horizontal start as WRIST
+palm_cable_start_x = start_x
+palm_cable_start_y = finger_end_y + 1
+palm_cable_end_x = palm_cable_start_x + palm_cable_width - 1
+palm_cable_end_y = palm_cable_start_y + palm_cable_height - 1
+
+# Draw the red rectangle for the PALM CABLE KNIT area
+cv2.rectangle(image, 
+              (palm_cable_start_x, palm_cable_start_y), 
+              (palm_cable_end_x, palm_cable_end_y), 
+              color=(0, 0, 255), thickness=-1)
+
+# Calculate number of cables
+numberSnakeCables = math.floor(((palmWidth / 2) - 4) / 5)
+numberBraidedCables = math.floor(((palmWidth / 2) - 4) / 7)
+
+# === DEFINE SUBRECTANGLES INSIDE PALM CABLE KNIT ===
+
+# Starting point inside palm cable area
+palm_test_x = palm_cable_start_x + 2
+palm_test_y = palm_cable_start_y + 5  # enough buffer from top edge
+
+# -- rectangleBraidedRight --
+braid_right_w, braid_right_h = 6, 3
+braid_right_x = palm_test_x
+braid_right_y = palm_test_y
+cv2.rectangle(image, 
+              (braid_right_x, braid_right_y), 
+              (braid_right_x + braid_right_w - 1, braid_right_y + braid_right_h - 1), 
+              (0, 0, 255), thickness=-1)
+
+# Middle row coloring
+mid_y = braid_right_y + 1
+image[mid_y, braid_right_x + 2] = (255, 0, 255)
+image[mid_y, braid_right_x + 3] = (255, 0, 255)
+image[mid_y, braid_right_x + 4] = (255, 255, 0)
+image[mid_y, braid_right_x + 5] = (255, 255, 0)
+
+# -- rectangleBraidedLeft --
+braid_left_x = braid_right_x + 8
+cv2.rectangle(image, 
+              (braid_left_x, braid_right_y), 
+              (braid_left_x + braid_right_w - 1, braid_right_y + braid_right_h - 1), 
+              (0, 0, 255), thickness=-1)
+
+# Middle row coloring
+image[mid_y, braid_left_x + 2] = (255, 0, 255)
+image[mid_y, braid_left_x + 3] = (255, 0, 255)
+image[mid_y, braid_left_x + 0] = (255, 255, 0)
+image[mid_y, braid_left_x + 1] = (255, 255, 0)
+
+# -- rectangleSnakeRight --
+snake_right_w, snake_right_h = 4, 3
+snake_right_x = braid_left_x + 8
+snake_right_y = braid_right_y
+cv2.rectangle(image, 
+              (snake_right_x, snake_right_y), 
+              (snake_right_x + snake_right_w - 1, snake_right_y + snake_right_h - 1), 
+              (0, 0, 255), thickness=-1)
+
+# Middle row coloring
+image[mid_y, snake_right_x + 0] = (255, 255, 0)
+image[mid_y, snake_right_x + 1] = (255, 255, 0)
+image[mid_y, snake_right_x + 2] = (255, 0, 255)
+image[mid_y, snake_right_x + 3] = (255, 0, 255)
+
+# -- rectangleSnakeLeft --
+snake_left_x = snake_right_x + 6
+cv2.rectangle(image, 
+              (snake_left_x, snake_right_y), 
+              (snake_left_x + snake_right_w - 1, snake_right_y + snake_right_h - 1), 
+              (0, 0, 255), thickness=-1)
+
+# Middle row coloring
+image[mid_y, snake_left_x + 0] = (255, 0, 255)
+image[mid_y, snake_left_x + 1] = (255, 0, 255)
+image[mid_y, snake_left_x + 2] = (255, 255, 0)
+image[mid_y, snake_left_x + 3] = (255, 255, 0)
+
 
 # # === THUMB DROP LEFT ===
 # thumb_drop_width = thumbWidth // 2
@@ -193,3 +279,6 @@ print(f"    → bottom row: repeating red, green, yellow, blue")
 print(f"    → green cols: x={col_start_x} to {col_end_x}, y={row_start_y} to {row_end_y}")
 print(f"  FINGER RIB KNIT:  red rect ({finger_start_x},{finger_start_y}) to ({finger_end_x},{finger_end_y})")
 print(f"    → green cols: x={finger_col_start_x} to {finger_col_end_x}, y={finger_row_start_y} to {finger_row_end_y}")
+
+print(f"    → Snake cables:   {numberSnakeCables}")
+print(f"    → Braided cables: {numberBraidedCables}")

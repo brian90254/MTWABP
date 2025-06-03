@@ -22,6 +22,10 @@ Example to run this code:
 The ChatGPT convo that created the above example file can be found here:
 https://chatgpt.com/share/683e01f7-d0bc-8004-9f1a-12d07fe473d0
 
+With rib for wrist and fingers here:
+https://chatgpt.com/share/683e01f7-d0bc-8004-9f1a-12d07fe473d0
+
+
 
 
  
