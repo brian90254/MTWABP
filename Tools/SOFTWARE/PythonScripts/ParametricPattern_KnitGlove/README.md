@@ -25,6 +25,10 @@ https://chatgpt.com/share/683e01f7-d0bc-8004-9f1a-12d07fe473d0
 With rib for wrist and fingers here:
 https://chatgpt.com/share/683e01f7-d0bc-8004-9f1a-12d07fe473d0
 
+Scaling up to a printable version with annotations:
+https://chatgpt.com/share/683f9fd5-b194-8004-a6ae-31c484fe4a4a
+
+
 
 
 
