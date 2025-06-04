@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 # === CONFIGURATION ===
-input_path = 'images/ParametricPattern_KnitGlove_20250603_122155.bmp'
-output_path = 'images/Printable_KnitGlove_20250603_122155_6B.png'
+input_path = 'images/ParametricPattern_KnitGlove_20250603_130119.bmp'
+output_path = 'images/Printable_KnitGlove_20250603_130119_7S.png'
 scale_factor = 100
 border_color = (0, 0, 0)  # black border
 default_text_color = (0, 0, 0)  # black text
@@ -14,11 +14,14 @@ font_thickness = 3
 # === COLOR TO TEXT MAPPING (BGR format for OpenCV) ===
 color_text_map = {
     (255, 255, 0): "6",     # (0, 255, 255) in RGB — cyan
-    (255, 0, 255): "4",     # (255, 0, 255) in RGB — magenta
+    (255, 0, 255): "5",     # (255, 0, 255) in RGB — magenta
     (255, 255, 255): "7",   # white
-    (255, 0, 0): "5",       # (0, 0, 255) in RGB — red
+    (255, 0, 0): "4",       # (0, 0, 255) in RGB — red
     (192, 192, 0): "106",   # (0, 192, 192) in RGB
     (160, 160, 160): "107", # (192, 192, 192) in RGB
+    (128, 128, 255): "1",
+    (0, 255, 0): "2", 
+    (0, 255, 255): "3",
 }
 
 # === LOAD BMP IMAGE ===
@@ -52,7 +55,7 @@ for y in range(height):
         if color in color_text_map:
             text = color_text_map[color]
             font_scale = 1.5 if text in ["106", "107"] else default_font_scale
-            text_color = (255, 255, 255) if text == "5" else default_text_color
+            text_color = (255, 255, 255) if text == "4" else default_text_color
             text_size, _ = cv2.getTextSize(text, font, font_scale, font_thickness)
             text_width, text_height = text_size
             text_x = top_left_x + (scale_factor - text_width) // 2

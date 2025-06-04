@@ -56,8 +56,8 @@ start_x = buffer + (thumbWidth // 2)
 start_y = height - buffer - castoffRow - wristHeight + 1
 end_x = start_x + palmWidth - 1
 end_y = start_y + wristHeight - 1
-cv2.rectangle(image, (start_x, start_y), (end_x, end_y), (0, 0, 255), thickness=-1)
-colors = [(0, 0, 255), (0, 255, 0), (0, 255, 255), (255, 0, 0)]
+cv2.rectangle(image, (start_x, start_y), (end_x, end_y), (128, 128, 255), thickness=-1)
+colors = [(128, 128, 255), (0, 255, 0), (0, 255, 255), (255, 0, 0)]
 for i in range(start_x, end_x + 1):
     image[end_y, i] = colors[(i - start_x) % len(colors)]
 col_start_x = start_x + 3
@@ -75,7 +75,7 @@ finger_start_x = start_x
 finger_end_x = finger_start_x + palmWidth - 1
 finger_start_y = buffer + castoffRow
 finger_end_y = finger_start_y + fingerRibHeight - 1
-cv2.rectangle(image, (finger_start_x, finger_start_y), (finger_end_x, finger_end_y), (0, 0, 255), thickness=-1)
+cv2.rectangle(image, (finger_start_x, finger_start_y), (finger_end_x, finger_end_y), (128, 128, 255), thickness=-1)
 finger_col_start_x = finger_start_x + 3
 finger_col_end_x = finger_end_x - 2
 finger_row_start_y = finger_end_y - 1
@@ -93,7 +93,7 @@ palm_cable_start_x = start_x
 palm_cable_start_y = finger_end_y + 1
 palm_cable_end_x = palm_cable_start_x + palm_cable_width - 1
 palm_cable_end_y = palm_cable_start_y + palm_cable_height - 1
-cv2.rectangle(image, (palm_cable_start_x, palm_cable_start_y), (palm_cable_end_x, palm_cable_end_y), (0, 0, 255), thickness=-1)
+cv2.rectangle(image, (palm_cable_start_x, palm_cable_start_y), (palm_cable_end_x, palm_cable_end_y), (128, 128, 255), thickness=-1)
 numberSnakeCables = math.floor(((palmWidth / 2) - 4) / 5)
 numberBraidedCables = math.floor(((palmWidth / 2) - 4) / 7)
 
@@ -195,7 +195,7 @@ for i in range(numCables):
                     offsetEvenLeft = lookupTableEvenLeft.get(j,None)
                     if offsetEvenLeft is not None:
                         ly = center_y + offsetEvenLeft - 1
-                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + braided_w, ly + braided_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + braided_w, ly + braided_h - 1), (128, 128, 255), -1)
                         image[ly + 1, cable_x + 1] = (255, 0, 0)
                         image[ly + 1, cable_x + 2] = (255, 0, 0)
                         image[ly + 1, cable_x + 3] = (255, 0, 255)
@@ -209,7 +209,7 @@ for i in range(numCables):
                         ry = center_y + offsetEvenRight - 1
                         # ---------------------
                         # EVEN LEFT
-                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + braided_w, ry + braided_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + braided_w, ry + braided_h - 1), (128, 128, 255), -1)
                         # image[ly + 1, cable_x + 1] = (255, 0, 0)
                         # image[ly + 1, cable_x + 2] = (255, 0, 0)
                         image[ry + 1, cable_x + 3] = (255, 0, 255)
@@ -226,7 +226,7 @@ for i in range(numCables):
                     offsetEvenLeft = lookupTableEvenLeft.get(j,None)
                     if offsetEvenLeft is not None:
                         ly = center_y + offsetEvenLeft - 1
-                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + braided_w, ly + braided_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + braided_w, ly + braided_h - 1), (128, 128, 255), -1)
                         # image[ly + 1, cable_x + 1] = (255, 0, 0)
                         # image[ly + 1, cable_x + 2] = (255, 0, 0)
                         image[ly + 1, cable_x + 3] = (255, 0, 255)
@@ -240,7 +240,7 @@ for i in range(numCables):
                         ry = center_y + offsetEvenRight - 1
                         # ---------------------
                         # EVEN LEFT
-                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + braided_w, ry + braided_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + braided_w, ry + braided_h - 1), (128, 128, 255), -1)
                         image[ry + 1, cable_x + 1] = (255, 0, 0)
                         image[ry + 1, cable_x + 2] = (255, 0, 0)
                         image[ry + 1, cable_x + 3] = (255, 0, 255)
@@ -259,7 +259,7 @@ for i in range(numCables):
                     offsetEvenLeft = lookupTableEvenLeft.get(j,None)
                     if offsetEvenLeft is not None:
                         ly = center_y + offsetEvenLeft - 1
-                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (128, 128, 255), -1)
                         image[ly + 1, cable_x + 1] = (255, 0, 0)
                         image[ly + 1, cable_x + 2] = (255, 0, 0)
                         image[ly + 1, cable_x + 3] = (255, 0, 255)
@@ -269,7 +269,7 @@ for i in range(numCables):
                     offsetEvenRight = lookupTableEvenRight.get(j,None)
                     if offsetEvenRight is not None:
                         ry = center_y + offsetEvenRight - 1
-                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (128, 128, 255), -1)
                         image[ry + 1, cable_x + 1] = (255, 0, 255)
                         image[ry + 1, cable_x + 2] = (255, 0, 255)
                         image[ry + 1, cable_x + 3] = (255, 0, 0)
@@ -284,7 +284,7 @@ for i in range(numCables):
                     offsetEvenLeft = lookupTableEvenLeft.get(j,None)
                     if offsetEvenLeft is not None:
                         ly = center_y + offsetEvenLeft - 1
-                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (128, 128, 255), -1)
                         # ODD SWAPS LEFT AND RIGHT
                         image[ly + 1, cable_x + 1] = (255, 0, 255)
                         image[ly + 1, cable_x + 2] = (255, 0, 255)
@@ -295,7 +295,7 @@ for i in range(numCables):
                     offsetEvenRight = lookupTableEvenRight.get(j,None)
                     if offsetEvenRight is not None:
                         ry = center_y + offsetEvenRight - 1
-                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (128, 128, 255), -1)
                         # ODD SWAPS LEFT AND RIGHT
                         image[ry + 1, cable_x + 1] = (255, 0, 0)
                         image[ry + 1, cable_x + 2] = (255, 0, 0)
@@ -314,7 +314,7 @@ for i in range(numCables):
                     offsetOddLeft = lookupTableOddLeft.get(j,None)
                     if offsetOddLeft is not None:
                         ly = center_y + offsetOddLeft - 1
-                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + braided_w, ly + braided_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + braided_w, ly + braided_h - 1), (128, 128, 255), -1)
                         image[ly + 1, cable_x + 1] = (255, 0, 0)
                         image[ly + 1, cable_x + 2] = (255, 0, 0)
                         image[ly + 1, cable_x + 3] = (255, 0, 255)
@@ -328,7 +328,7 @@ for i in range(numCables):
                         ry = center_y + offsetOddRight - 1
                         # ---------------------
                         # Odd LEFT
-                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + braided_w, ry + braided_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + braided_w, ry + braided_h - 1), (128, 128, 255), -1)
                         # image[ly + 1, cable_x + 1] = (255, 0, 0)
                         # image[ly + 1, cable_x + 2] = (255, 0, 0)
                         image[ry + 1, cable_x + 3] = (255, 0, 255)
@@ -345,7 +345,7 @@ for i in range(numCables):
                     offsetOddLeft = lookupTableOddLeft.get(j,None)
                     if offsetOddLeft is not None:
                         ly = center_y + offsetOddLeft - 1
-                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + braided_w, ly + braided_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + braided_w, ly + braided_h - 1), (128, 128, 255), -1)
                         # image[ly + 1, cable_x + 1] = (255, 0, 0)
                         # image[ly + 1, cable_x + 2] = (255, 0, 0)
                         image[ly + 1, cable_x + 3] = (255, 0, 255)
@@ -359,7 +359,7 @@ for i in range(numCables):
                         ry = center_y + offsetOddRight - 1
                         # ---------------------
                         # Odd LEFT
-                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + braided_w, ry + braided_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + braided_w, ry + braided_h - 1), (128, 128, 255), -1)
                         image[ry + 1, cable_x + 1] = (255, 0, 0)
                         image[ry + 1, cable_x + 2] = (255, 0, 0)
                         image[ry + 1, cable_x + 3] = (255, 0, 255)
@@ -378,7 +378,7 @@ for i in range(numCables):
                     offsetOddLeft = lookupTableOddLeft.get(j,None)
                     if offsetOddLeft is not None:
                         ly = center_y + offsetOddLeft - 1
-                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (128, 128, 255), -1)
                         image[ly + 1, cable_x + 1] = (255, 0, 0)
                         image[ly + 1, cable_x + 2] = (255, 0, 0)
                         image[ly + 1, cable_x + 3] = (255, 0, 255)
@@ -388,7 +388,7 @@ for i in range(numCables):
                     offsetOddRight = lookupTableOddRight.get(j,None)
                     if offsetOddRight is not None:
                         ry = center_y + offsetOddRight - 1
-                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (128, 128, 255), -1)
                         image[ry + 1, cable_x + 1] = (255, 0, 255)
                         image[ry + 1, cable_x + 2] = (255, 0, 255)
                         image[ry + 1, cable_x + 3] = (255, 0, 0)
@@ -403,7 +403,7 @@ for i in range(numCables):
                     offsetOddLeft = lookupTableOddLeft.get(j,None)
                     if offsetOddLeft is not None:
                         ly = center_y + offsetOddLeft - 1
-                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (128, 128, 255), -1)
                         # ODD SWAPS LEFT AND RIGHT
                         image[ly + 1, cable_x + 1] = (255, 0, 255)
                         image[ly + 1, cable_x + 2] = (255, 0, 255)
@@ -414,7 +414,7 @@ for i in range(numCables):
                     offsetOddRight = lookupTableOddRight.get(j,None)
                     if offsetOddRight is not None:
                         ry = center_y + offsetOddRight - 1
-                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (0, 0, 255), -1)
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (128, 128, 255), -1)
                         # ODD SWAPS LEFT AND RIGHT
                         image[ry + 1, cable_x + 1] = (255, 0, 0)
                         image[ry + 1, cable_x + 2] = (255, 0, 0)
@@ -437,7 +437,7 @@ for i in range(num_thumb_drops):
     drop_y = finger_start_y + thumbDrop + i * 2
     end_x = drop_x + thumb_drop_width - 1
     end_y = drop_y + thumb_drop_height - 1
-    cv2.rectangle(image, (drop_x, drop_y), (end_x, end_y), (0, 0, 255), thickness=-1)
+    cv2.rectangle(image, (drop_x, drop_y), (end_x, end_y), (128, 128, 255), thickness=-1)
     
     if end_x >= 0 and end_y >= 0:
         center_x = drop_x + (thumb_drop_width // 2)
@@ -456,7 +456,7 @@ for i in range(num_thumb_drops):
     drop_y = finger_start_y + thumbDrop + 1 + i * 2
     end_x = drop_x + thumb_drop_width - 1
     end_y = drop_y + thumb_drop_height - 1
-    cv2.rectangle(image, (drop_x, drop_y), (end_x, end_y), (0, 0, 255), thickness=-1)
+    cv2.rectangle(image, (drop_x, drop_y), (end_x, end_y), (128, 128, 255), thickness=-1)
     
     if end_x >= 0 and end_y >= 0:
         center_x = drop_x + (thumb_drop_width // 2)
