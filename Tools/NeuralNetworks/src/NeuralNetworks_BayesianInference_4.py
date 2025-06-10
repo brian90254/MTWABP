@@ -11,6 +11,8 @@
 #   source venv39/bin/activate
 # THEN RUN THE CODE IN "src" AND PASS ARGUMENTS FROM "CSV":
 #   python src/NeuralNetworks_BayesianInference_4.py CSV/ConnectivityMatrix_1.csv CSV/WeightMatrix_1.csv CSV/ThresholdMatrix_1.csv
+# ONCE SCRIPT IS RUNNING:
+#   USE THE ARROW KEYS TO MOVE THE GAUSSIAN LEFT-RIGHT-UP-DOWN
 # ----------------------------
 
 import numpy as np
