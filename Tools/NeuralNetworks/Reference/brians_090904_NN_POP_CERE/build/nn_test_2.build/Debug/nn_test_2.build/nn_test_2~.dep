@@ -1,0 +1,4 @@
+a3cfd3474f66d05ba2f0bb40a5c804b7 0631df9011d283c86d1156eefa80d351 ffffffffffffffffffffffffffffffff 72836 /Users/briancox/opencv/samples/c/brians_090416_NEURAL_NETWORK/nn_test_2/build/Debug/nn_test_2
+000000000e9f2a3d000000000000c6df 962c72e2bf2e007399d0b8ca8aea2282 ffffffffffffffffffffffffffffffff 105784 /Users/briancox/opencv/samples/c/brians_090416_NEURAL_NETWORK/nn_test_2/build/nn_test_2.build/Debug/nn_test_2.build/Objects-normal/i386/vis_thread.o
+000000000e11aa2b0000000000006c8e 4e57a64c7aee148f100548ba52b624dd ffffffffffffffffffffffffffffffff 29560 /Users/briancox/opencv/samples/c/brians_090416_NEURAL_NETWORK/nn_test_2/build/nn_test_2.build/Debug/nn_test_2.build/Objects-normal/i386/neu_thread.o
+0000000047b051c200000000000061a5 7bb407e9c060ceaf2b254b307d62a4ce ffffffffffffffffffffffffffffffff 12064 /Users/briancox/opencv/samples/c/brians_090416_NEURAL_NETWORK/nn_test_2/build/nn_test_2.build/Debug/nn_test_2.build/Objects-normal/i386/main.o

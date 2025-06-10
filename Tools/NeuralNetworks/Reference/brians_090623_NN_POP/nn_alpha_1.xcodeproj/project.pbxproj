@@ -1,0 +1,275 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DD76FAC0486AB0100D96B5E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
+		8DD76FB00486AB0100D96B5E /* nn_test_2.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* nn_test_2.1 */; };
+		ECA8C5520F9BE5F400F012A5 /* neu_thread.c in Sources */ = {isa = PBXBuildFile; fileRef = ECA8C5500F9BE5F400F012A5 /* neu_thread.c */; };
+		ECA8C6C30F9CD66A00F012A5 /* vis_thread.c in Sources */ = {isa = PBXBuildFile; fileRef = ECA8C6C20F9CD66A00F012A5 /* vis_thread.c */; };
+		ECAE3E570FD1EAB8009701BC /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAE3E560FD1EAB8009701BC /* OpenCV.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76FAF0486AB0100D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76FB00486AB0100D96B5E /* nn_test_2.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C6A0FF2C0290799A04C91782 /* nn_test_2.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = nn_test_2.1; sourceTree = "<group>"; };
+		ECA8C5500F9BE5F400F012A5 /* neu_thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = neu_thread.c; sourceTree = "<group>"; };
+		ECA8C5510F9BE5F400F012A5 /* neu_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neu_thread.h; sourceTree = "<group>"; };
+		ECA8C5570F9BE73400F012A5 /* vis_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vis_thread.h; sourceTree = "<group>"; };
+		ECA8C5840F9BEA6A00F012A5 /* pthread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pthread.h; path = usr/include/pthread.h; sourceTree = SDKROOT; };
+		ECA8C5900F9BEB4C00F012A5 /* carlstructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = carlstructs.h; sourceTree = "<group>"; };
+		ECA8C5910F9BEB4C00F012A5 /* errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = errors.h; sourceTree = "<group>"; };
+		ECA8C5920F9BEB4C00F012A5 /* init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = init.h; sourceTree = "<group>"; };
+		ECA8C5930F9BEB4C00F012A5 /* messages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messages.h; sourceTree = "<group>"; };
+		ECA8C5940F9BEB4C00F012A5 /* neural_simulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neural_simulation.h; sourceTree = "<group>"; };
+		ECA8C5950F9BEB4C00F012A5 /* randnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randnums.h; sourceTree = "<group>"; };
+		ECA8C5960F9BEB4C00F012A5 /* remgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = remgui.h; sourceTree = "<group>"; };
+		ECA8C5970F9BEB4C00F012A5 /* simdefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = simdefs.h; sourceTree = "<group>"; };
+		ECA8C5980F9BEB4C00F012A5 /* timutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timutils.h; sourceTree = "<group>"; };
+		ECA8C6C20F9CD66A00F012A5 /* vis_thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vis_thread.c; sourceTree = "<group>"; };
+		ECA8C6C90F9CD71C00F012A5 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		ECAE3E560FD1EAB8009701BC /* OpenCV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCV.framework; path = ../../../../Library/Frameworks/OpenCV.framework; sourceTree = SOURCE_ROOT; };
+		ECAE3E700FD1ECDF009701BC /* nn_alpha_1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nn_alpha_1; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECAE3E570FD1EAB8009701BC /* OpenCV.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* nn_test_2 */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = nn_test_2;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				ECAE3E560FD1EAB8009701BC /* OpenCV.framework */,
+				08FB7796FE84155DC02AAC07 /* main.c */,
+				ECA8C6C90F9CD71C00F012A5 /* main.h */,
+				ECA8C58F0F9BEB4C00F012A5 /* Headers */,
+				ECA8C5840F9BEA6A00F012A5 /* pthread.h */,
+				ECA8C5550F9BE73400F012A5 /* VIS */,
+				ECA8C54F0F9BE5F400F012A5 /* NEU */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECAE3E700FD1ECDF009701BC /* nn_alpha_1 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6A0FF2C0290799A04C91782 /* nn_test_2.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		ECA8C54F0F9BE5F400F012A5 /* NEU */ = {
+			isa = PBXGroup;
+			children = (
+				ECA8C5500F9BE5F400F012A5 /* neu_thread.c */,
+				ECA8C5510F9BE5F400F012A5 /* neu_thread.h */,
+			);
+			path = NEU;
+			sourceTree = "<group>";
+		};
+		ECA8C5550F9BE73400F012A5 /* VIS */ = {
+			isa = PBXGroup;
+			children = (
+				ECA8C6C20F9CD66A00F012A5 /* vis_thread.c */,
+				ECA8C5570F9BE73400F012A5 /* vis_thread.h */,
+			);
+			path = VIS;
+			sourceTree = "<group>";
+		};
+		ECA8C58F0F9BEB4C00F012A5 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				ECA8C5900F9BEB4C00F012A5 /* carlstructs.h */,
+				ECA8C5910F9BEB4C00F012A5 /* errors.h */,
+				ECA8C5920F9BEB4C00F012A5 /* init.h */,
+				ECA8C5930F9BEB4C00F012A5 /* messages.h */,
+				ECA8C5940F9BEB4C00F012A5 /* neural_simulation.h */,
+				ECA8C5950F9BEB4C00F012A5 /* randnums.h */,
+				ECA8C5960F9BEB4C00F012A5 /* remgui.h */,
+				ECA8C5970F9BEB4C00F012A5 /* simdefs.h */,
+				ECA8C5980F9BEB4C00F012A5 /* timutils.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76FA90486AB0100D96B5E /* nn_alpha_1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "nn_alpha_1" */;
+			buildPhases = (
+				8DD76FAB0486AB0100D96B5E /* Sources */,
+				8DD76FAD0486AB0100D96B5E /* Frameworks */,
+				8DD76FAF0486AB0100D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nn_alpha_1;
+			productInstallPath = "$(HOME)/bin";
+			productName = nn_test_2;
+			productReference = ECAE3E700FD1ECDF009701BC /* nn_alpha_1 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "nn_alpha_1" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* nn_test_2 */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76FA90486AB0100D96B5E /* nn_alpha_1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76FAB0486AB0100D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76FAC0486AB0100D96B5E /* main.c in Sources */,
+				ECA8C5520F9BE5F400F012A5 /* neu_thread.c in Sources */,
+				ECA8C6C30F9CD66A00F012A5 /* vis_thread.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928608733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Frameworks\"",
+					"\"$(SRCROOT)/../../../../Library/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = nn_alpha_1;
+			};
+			name = Debug;
+		};
+		1DEB928708733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Frameworks\"",
+					"\"$(SRCROOT)/../../../../Library/Frameworks\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = nn_test_2;
+			};
+			name = Release;
+		};
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "nn_alpha_1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928608733DD80010E9CD /* Debug */,
+				1DEB928708733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "nn_alpha_1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

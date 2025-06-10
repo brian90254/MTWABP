@@ -1,0 +1,4 @@
+cab4ec507b68f5060987042b86be4aa8 c532349323a47ad67ba42f5e42e2774c ffffffffffffffffffffffffffffffff 72744 /Users/briancox/opencv/samples/c/brians_090530_NN_ALPHA/build/Debug/nn_test_2
+000000000e9f2a3d000000000000c6df d69218f5d62678db19c503f59d7753e8 ffffffffffffffffffffffffffffffff 105736 /Users/briancox/opencv/samples/c/brians_090530_NN_ALPHA/build/nn_alpha_1.build/Debug/nn_test_2.build/Objects-normal/i386/vis_thread.o
+000000000e11aa2b0000000000006c8e 67dcf2afda3a1bd3cf5a9daca8779ac9 ffffffffffffffffffffffffffffffff 29512 /Users/briancox/opencv/samples/c/brians_090530_NN_ALPHA/build/nn_alpha_1.build/Debug/nn_test_2.build/Objects-normal/i386/neu_thread.o
+0000000047b051c200000000000061a5 7bfa060a3db29c06df189a72b34825af ffffffffffffffffffffffffffffffff 11984 /Users/briancox/opencv/samples/c/brians_090530_NN_ALPHA/build/nn_alpha_1.build/Debug/nn_test_2.build/Objects-normal/i386/main.o
