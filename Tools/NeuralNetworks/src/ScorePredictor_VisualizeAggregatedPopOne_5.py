@@ -4,7 +4,7 @@ import pandas as pd
 import cv2
 
 # === CONFIGURATION ===
-teams = ["SEA", "ATL"]
+teams = ["HOU", "GNB"]
 roles = ["Offense", "Defense"]
 num_weeks = 6
 matrix_size = (13, 13)
@@ -77,24 +77,24 @@ for i, team in enumerate(teams):
             visualize_matrix(avg_matrix, key, 100 + j * 400, 100 + i * 400)
 
 # === Interaction Visualizations ===
-keyA = "SEA_Defense"
-keyB = "ATL_Offense"
-keyC = "SEA_Offense"
-keyD = "ATL_Defense"
+keyA = "HOU_Defense"
+keyB = "GNB_Offense"
+keyC = "HOU_Offense"
+keyD = "GNB_Defense"
 
 if keyA in popone_matrices and keyB in popone_matrices:
     interaction_AB = popone_matrices[keyA] * popone_matrices[keyB]
-    visualize_matrix(interaction_AB, "SEA_Def x ATL_Off", 100 + 400 * 2, 100)
+    visualize_matrix(interaction_AB, "HOU_Def x GNB_Off", 100 + 400 * 2, 100)
     cx, cy = compute_centroid(interaction_AB)
     if cx is not None:
-        print(f"Centroid SEA_Def x ATL_Off → X: {cx:.2f}, Y: {cy:.2f}")
+        print(f"Centroid HOU_Def x GNB_Off → X: {cx:.2f}, Y: {cy:.2f}")
 
 if keyC in popone_matrices and keyD in popone_matrices:
     interaction_CD = popone_matrices[keyC] * popone_matrices[keyD]
-    visualize_matrix(interaction_CD, "SEA_Off x ATL_Def", 100 + 400 * 2, 100 + 400)
+    visualize_matrix(interaction_CD, "HOU_Off x GNB_Def", 100 + 400 * 2, 100 + 400)
     cx, cy = compute_centroid(interaction_CD)
     if cx is not None:
-        print(f"Centroid SEA_Off x ATL_Def → X: {cx:.2f}, Y: {cy:.2f}")
+        print(f"Centroid HOU_Off x GNB_Def → X: {cx:.2f}, Y: {cy:.2f}")
 
 print("Press any key to close all windows.")
 cv2.waitKey(0)

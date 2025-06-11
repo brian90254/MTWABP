@@ -40,9 +40,11 @@ Neur_Ui = np.zeros(NUM_NEURONS)
 InputUnitOne, InputUnitTwo = 0.1, 0.1
 ScaleRushYds = 400.0
 ScalePassYds = 600.0
+ScaleTotalYds = 1000.0
 ScalePoints = 65.0
 OffsetRushYds = 0.2
 OffsetPassYds = 0.2
+OffsetTotalYds = 0.2
 OffsetPoints = 0.2
 
 
@@ -156,8 +158,8 @@ def main():
     loop_count = 0
     current_week_index = 0
 
-    #team = "ATL"
-    team = "SEA"
+    #team = "HOU"
+    team = "GNB"
     #role = "Defense"
     role = "Offense"
     stat_file = f"Aggregated/{team}_{role}.csv"
@@ -167,18 +169,24 @@ def main():
         all_weeks = [col for col in df_stats.columns if col.startswith("week_")]
 
         # Load and apply week_1 but don't save until loop_count == 100
-        rush_yds = df_stats.at["Rush Yds", all_weeks[0]]
-        pass_yds = df_stats.at["Pass Yds", all_weeks[0]]
+        #rush_yds = df_stats.at["Rush Yds", all_weeks[0]]
+        #pass_yds = df_stats.at["Pass Yds", all_weeks[0]]
+        total_yds = df_stats.at["Total Yards", all_weeks[0]]
         points = df_stats.at["Points", all_weeks[0]]
         # if str(rush_yds).lower() != "bye" and str(points).lower() != "bye":
         #     InputUnitOne = (float(rush_yds) / ScaleRushYds) + OffsetRushYds
         #     InputUnitTwo = (float(points) / ScalePoints) + OffsetPoints
         #     print(f"Rush Yds: {rush_yds} → InputUnitOne = {InputUnitOne:.4f}")
         #     print(f"Points: {points} → InputUnitTwo = {InputUnitTwo:.4f}")
-        if str(pass_yds).lower() != "bye" and str(points).lower() != "bye":
-            InputUnitOne = (float(pass_yds) / ScalePassYds) + OffsetPassYds
+        # if str(pass_yds).lower() != "bye" and str(points).lower() != "bye":
+        #     InputUnitOne = (float(pass_yds) / ScalePassYds) + OffsetPassYds
+        #     InputUnitTwo = (float(points) / ScalePoints) + OffsetPoints
+        #     print(f"Pass Yds: {pass_yds} → InputUnitOne = {InputUnitOne:.4f}")
+        #     print(f"Points: {points} → InputUnitTwo = {InputUnitTwo:.4f}")
+        if str(total_yds).lower() != "bye" and str(points).lower() != "bye":
+            InputUnitOne = (float(total_yds) / ScaleTotalYds) + OffsetTotalYds
             InputUnitTwo = (float(points) / ScalePoints) + OffsetPoints
-            print(f"Pass Yds: {pass_yds} → InputUnitOne = {InputUnitOne:.4f}")
+            print(f"Total Yards: {total_yds} → InputUnitOne = {InputUnitOne:.4f}")
             print(f"Points: {points} → InputUnitTwo = {InputUnitTwo:.4f}")
         else:
             print(f"{all_weeks[0]} is a bye week — using default input values.")
@@ -219,16 +227,23 @@ def main():
 
             if current_week_index < len(all_weeks):
                 week_col = all_weeks[current_week_index]
-                rush_yds = df_stats.at["Rush Yds", week_col]
-                pass_yds = df_stats.at["Pass Yds", week_col]
+                #rush_yds = df_stats.at["Rush Yds", week_col]
+                #pass_yds = df_stats.at["Pass Yds", week_col]
+                total_yds = df_stats.at["Total Yards", week_col]
                 points = df_stats.at["Points", week_col]
 
                 #if str(rush_yds).lower() != "bye" and str(points).lower() != "bye":
-                if str(pass_yds).lower() != "bye" and str(points).lower() != "bye":
-                    InputUnitOne = (float(pass_yds) / ScalePassYds) + OffsetPassYds
+                # if str(pass_yds).lower() != "bye" and str(points).lower() != "bye":
+                #     InputUnitOne = (float(pass_yds) / ScalePassYds) + OffsetPassYds
+                #     InputUnitTwo = (float(points) / ScalePoints) + OffsetPoints
+                #     print(f"\n[Loaded] New input: {week_col}")
+                #     print(f"Pass Yds: {pass_yds} → InputUnitOne = {InputUnitOne:.4f}")
+                #     print(f"Points: {points} → InputUnitTwo = {InputUnitTwo:.4f}")
+                if str(total_yds).lower() != "bye" and str(points).lower() != "bye":
+                    InputUnitOne = (float(total_yds) / ScaleTotalYds) + OffsetTotalYds
                     InputUnitTwo = (float(points) / ScalePoints) + OffsetPoints
                     print(f"\n[Loaded] New input: {week_col}")
-                    print(f"Pass Yds: {pass_yds} → InputUnitOne = {InputUnitOne:.4f}")
+                    print(f"Total Yds: {total_yds} → InputUnitOne = {InputUnitOne:.4f}")
                     print(f"Points: {points} → InputUnitTwo = {InputUnitTwo:.4f}")
                 else:
                     print(f"\n[Loaded] {week_col} is a BYE week — using default input values.")
