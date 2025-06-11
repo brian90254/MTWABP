@@ -198,7 +198,8 @@ def main():
         loop_count += 1
         loops_since_input_change += 1
 
-        if loops_since_input_change == 100 and df_stats is not None and current_week_index < len(all_weeks):
+        #if loops_since_input_change == 100 and df_stats is not None and current_week_index < len(all_weeks):
+        if loops_since_input_change == 50 and df_stats is not None and current_week_index < len(all_weeks):
             # Save current week's PopOne output
             week_col = all_weeks[current_week_index]
             try:
@@ -232,7 +233,7 @@ def main():
                 else:
                     print(f"\n[Loaded] {week_col} is a BYE week — using default input values.")
 
-        key = cv2.waitKey(100) & 0xFF
+        key = cv2.waitKey(50) & 0xFF
         if key == 27: break
         elif key in (ord('w'), ord('W')): print("=== WEIGHTS ===\n", Wij)
         elif key in (ord('c'), ord('C')): ClampOutputFlag = not ClampOutputFlag
