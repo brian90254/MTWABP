@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 # === CONFIGURATION ===
-input_path = 'images/ParametricPattern_KnitGlove_20250606_193801_CableB_L.bmp'
-output_path = 'images/BasicGlove_LARGE_CableB_L.png'
+input_path = 'images/ParametricPattern_KnitGlove_20250612_183409_CableB_L.bmp'
+output_path = 'images/BasicGlove_LongPalm_LARGE_CableB_L.png'
 scale_factor = 100
 border_color = (0, 0, 0)  # black border
 default_text_color = (0, 0, 0)  # black text
