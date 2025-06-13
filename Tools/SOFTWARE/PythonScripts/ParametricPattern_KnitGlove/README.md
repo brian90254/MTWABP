@@ -15,8 +15,8 @@ Example to run this code:
 - - Navigate to the project folder
 - - Activate venv
 - - - "source venv39/bin/activate"
-- - Run script, passing arguments
-- - - "python src/ParametricPattern_KnitGlove_2.py 11.5 23"
+- - Run script, passing arguments (S==snake, B==braid, L==left, R==right)
+- - - "python src/ParametricPattern_KnitGlove_2.py 11.5 23 S L"
 - - Output should be a BMP 
 
 The ChatGPT convo that created the above example file can be found here:
