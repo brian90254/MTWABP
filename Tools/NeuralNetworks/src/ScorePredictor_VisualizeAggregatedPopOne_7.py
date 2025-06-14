@@ -1,10 +1,19 @@
 import os
+import sys
 import numpy as np
 import pandas as pd
 import cv2
 
+# === USAGE CHECK ===
+if len(sys.argv) != 3:
+    print("Usage: python3 visualize_popone.py <homeTeam> <awayTeam>")
+    sys.exit(1)
+
+home_team = sys.argv[1].upper()
+away_team = sys.argv[2].upper()
+teams = [home_team, away_team]
+
 # === CONFIGURATION ===
-teams = ["CIN", "CLE"]
 roles = ["Offense", "Defense"]
 num_weeks = 6
 matrix_size = (13, 13)
@@ -12,22 +21,18 @@ scale_factor = 25
 grid_spacing = 20
 
 indicator = "RushYds"
-#indicator = "PassYds"
-#indicator = "SackedYards"
-#indicator = "Turnovers"
-#indicator = "PenaltyYds"
-#indicator = "TimeofPossession"
-
+# indicator = "PassYds"
+# indicator = "SackedYards"
+# indicator = "Turnovers"
+# indicator = "PenaltyYds"
+# indicator = "TimeofPossession"
 
 # === Functions ===
 def load_average_matrix(team, role):
     accumulator = np.zeros(matrix_size, dtype=float)
     valid_matrices = 0
     for week in range(1, num_weeks + 1):
-        # Example filename:
-        # PopOne_HOU_Defense_TimeofPossession_vs_Points_week_1
         filename = f"Outputs/PopOne_{team}_{role}_{indicator}_vs_Points_week_{week}.csv"
-        #filename = f"Outputs/PopOne_{team}_{role}_week_{week}.csv"
         if os.path.exists(filename):
             try:
                 matrix = pd.read_csv(filename, header=0).iloc[0:13, :].values
@@ -38,7 +43,6 @@ def load_average_matrix(team, role):
                 print(f"Error reading {filename}: {e}")
     if valid_matrices == 0:
         return None
-    #return accumulator / valid_matrices
     return (accumulator * 2) / valid_matrices
 
 def draw_cell(img, value, center, radius):
@@ -63,10 +67,9 @@ def visualize_matrix(matrix, title, offset_x, offset_y):
             cx = x * scale_factor + scale_factor // 2
             cy = y * scale_factor + scale_factor // 2
             draw_cell(img, value, (cx, cy), radius=scale_factor // 2 - 2)
-    window_title = title
-    cv2.namedWindow(window_title)
-    cv2.moveWindow(window_title, offset_x, offset_y)
-    cv2.imshow(window_title, img)
+    cv2.namedWindow(title)
+    cv2.moveWindow(title, offset_x, offset_y)
+    cv2.imshow(title, img)
 
 def compute_centroid(matrix):
     total = np.sum(matrix)
@@ -88,24 +91,24 @@ for i, team in enumerate(teams):
             visualize_matrix(avg_matrix, key, 100 + j * 400, 100 + i * 400)
 
 # === Interaction Visualizations ===
-keyA = "CIN_Defense"
-keyB = "CLE_Offense"
-keyC = "CIN_Offense"
-keyD = "CLE_Defense"
+keyA = f"{home_team}_Defense"
+keyB = f"{away_team}_Offense"
+keyC = f"{home_team}_Offense"
+keyD = f"{away_team}_Defense"
 
 if keyA in popone_matrices and keyB in popone_matrices:
     interaction_AB = popone_matrices[keyA] * popone_matrices[keyB]
-    visualize_matrix(interaction_AB, "CIN_Def x CLE_Off", 100 + 400 * 2, 100)
+    visualize_matrix(interaction_AB, f"{home_team}_Def x {away_team}_Off", 100 + 400 * 2, 100)
     cx, cy = compute_centroid(interaction_AB)
     if cx is not None:
-        print(f"Centroid CIN_Def x CLE_Off → X: {cx:.2f}, Y: {cy:.2f}")
+        print(f"Centroid {home_team}_Def x {away_team}_Off → X: {cx:.2f}, Y: {cy:.2f}")
 
 if keyC in popone_matrices and keyD in popone_matrices:
     interaction_CD = popone_matrices[keyC] * popone_matrices[keyD]
-    visualize_matrix(interaction_CD, "CIN_Off x CLE_Def", 100 + 400 * 2, 100 + 400)
+    visualize_matrix(interaction_CD, f"{home_team}_Off x {away_team}_Def", 100 + 400 * 2, 100 + 400)
     cx, cy = compute_centroid(interaction_CD)
     if cx is not None:
-        print(f"Centroid CIN_Off x CLE_Def → X: {cx:.2f}, Y: {cy:.2f}")
+        print(f"Centroid {home_team}_Off x {away_team}_Def → X: {cx:.2f}, Y: {cy:.2f}")
 
 print("Press any key to close all windows.")
 cv2.waitKey(0)
