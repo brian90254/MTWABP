@@ -527,7 +527,8 @@ for i in range(numCables):
 
 # === MIRROR PALM SECTION (LEFT HAND ONLY) ===
 if handedness == 'L':
-    left_inner_x = start_x + 3
+    #left_inner_x = start_x + 3
+    left_inner_x = start_x + 4
     right_inner_x = end_x - 4
     bottom_y = start_y - 1
     top_y = finger_end_y + 1
@@ -535,6 +536,8 @@ if handedness == 'L':
     mirrored = cv2.flip(region, 1)
     if mirrored.size > 0:
         image[top_y:bottom_y + 1, left_inner_x:right_inner_x + 1] = mirrored
+
+
 
 # === OUTPUT ===
 os.makedirs("images", exist_ok=True)
