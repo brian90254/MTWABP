@@ -1,0 +1,26 @@
+# ----------------------------
+# CONVERSION RATIOS
+# ----------------------------
+lengthPalm = 11.5
+circumferencePalm = 23
+patternType = S
+handedness = L
+palmWidthRatio = 1.696
+# LONG PLUS PALM
+# 56 COURSES
+# palmHeightRatio = 3.50
+# LONG MINUS PALM
+# 52 COURSES
+# palmHeightRatio = 3.20
+# VERY SHORT PALM
+# 42 COURSES
+palmHeightRatio = 2.261
+wristHeightRatio = 1.391
+thumbDropRatio = 0.45
+thumbHeightRatio = 5
+# LONG PALM
+# fingerHeightRatio = 4
+# SHORT PALM
+fingerHeightRatio = 3
+castoffRow = 1
+buffer = 1

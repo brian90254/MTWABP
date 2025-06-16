@@ -1,0 +1,15 @@
+# ----------------------------
+# CONVERSION RATIOS
+# ----------------------------
+lengthPalm = 11.5
+circumferencePalm = 23
+patternType = S
+handedness = L
+palmWidthRatio = 1.696
+palmHeightRatio = 3.50
+wristHeightRatio = 1.391
+thumbDropRatio = 0.45
+thumbHeightRatio = 5
+fingerHeightRatio = 4
+castoffRow = 1
+buffer = 1
