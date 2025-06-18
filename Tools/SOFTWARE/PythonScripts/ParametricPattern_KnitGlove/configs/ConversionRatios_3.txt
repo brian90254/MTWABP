@@ -3,14 +3,28 @@
 # ----------------------------
 lengthPalm = 11.5
 circumferencePalm = 23
-patternType = S
+patternType = C3
 handedness = L
 palmWidthRatio = 1.696
+# LONG PLUS PALM
+# 56 COURSES
+# palmHeightRatio = 3.50
+# LONG MINUS PALM
+# 52 COURSES
+# palmHeightRatio = 3.20
+# TEST
+# 47 COURSES
+# palmHeightRatio = 2.7
+# VERY SHORT PALM
+# 42 COURSES
 palmHeightRatio = 2.261
 wristHeightRatio = 1.391
 thumbDropRatio = 0.45
 thumbHeightRatio = 5
-thumbWidening = W3
+thumbWidening = W2
+# LONG PALM
+# fingerHeightRatio = 4
+# SHORT PALM
 fingerHeightRatio = 3
 castoffRow = 1
 buffer = 1
