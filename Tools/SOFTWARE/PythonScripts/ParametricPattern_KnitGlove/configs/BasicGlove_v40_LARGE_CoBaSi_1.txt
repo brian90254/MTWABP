@@ -3,8 +3,8 @@
 # ----------------------------
 lengthPalm = 11.5
 circumferencePalm = 23
-patternType = S
-handedness = L
+patternType = C3
+handedness = R
 palmWidthRatio = 1.696
 palmHeightRatio = 3.50
 wristHeightRatio = 1.391

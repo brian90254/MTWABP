@@ -3,14 +3,15 @@
 # ----------------------------
 lengthPalm = 11.5
 circumferencePalm = 23
-patternType = S
+patternType = C3
 handedness = L
 palmWidthRatio = 1.696
-palmHeightRatio = 2.261
+#palmHeightRatio = 2.261
+palmHeightRatio = 2.4
 wristHeightRatio = 1.391
 thumbDropRatio = 0.45
 thumbHeightRatio = 5
-thumbWidening = W3
+thumbWidening = W2
 fingerHeightRatio = 3
 castoffRow = 1
 buffer = 1
