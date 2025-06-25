@@ -52,8 +52,14 @@ def load_average_matrix(team, role, indicator):
         filename = f"Outputs/PopOne_{team}_{role}_{indicator}_vs_Points_week_{week}.csv"
         if os.path.exists(filename):
             try:
+                print(f"Reading: {filename}")
                 matrix = pd.read_csv(filename, header=0).iloc[0:13, :].values
                 if matrix.shape == matrix_size:
+                    # DEBUG Save avg_matrix as a CSV file
+                    # df = pd.DataFrame(matrix)
+                    # csv_filename = f"TEST/ReadMatrix_{team}_{role}_{indicator}_vs_Points_week_{week}.csv"
+                    # df.to_csv(csv_filename, index=False)
+                    # END DEBUG
                     accumulator += matrix
                     valid_matrices += 1
             except Exception as e:
@@ -61,6 +67,28 @@ def load_average_matrix(team, role, indicator):
     if valid_matrices == 0:
         return None
     return (accumulator * 2) / valid_matrices
+
+# def load_average_matrix(team, role, indicator):
+#     matrices = []
+#     for week in range(1, num_weeks + 1):
+#         filename = f"Outputs/PopOne_{team}_{role}_{indicator}_vs_Points_week_{week}.csv"
+#         if os.path.exists(filename):
+#             try:
+#                 #matrix = pd.read_csv(filename, header=0).iloc[0:13, :].values
+#                 matrix = pd.read_csv(filename, header=0).iloc[0:13, :].astype(float).values
+#                 if matrix.shape == matrix_size:
+#                     matrices.append(matrix)
+#             except Exception as e:
+#                 print(f"Error reading {filename}: {e}")
+    
+#     if not matrices:
+#         return None
+
+#     # Stack and average
+#     matrix_stack = np.stack(matrices)  # Shape: (weeks, rows, cols)
+#     #return np.mean(matrix_stack, axis=0)  # Element-wise mean across weeks
+#     return np.mean(matrix_stack, axis=0) * 2
+
 
 def draw_cell(img, value, center, radius):
     val = value * 4

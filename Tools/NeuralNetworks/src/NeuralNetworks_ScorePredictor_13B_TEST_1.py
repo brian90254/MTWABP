@@ -202,8 +202,15 @@ def main():
                             pop_vals = Vis_Ui[106:275].copy().reshape((13, 13))
                             pd.DataFrame(pop_vals).to_csv(out_path, index=False)
                             print(f"Saved → {out_path}")
+                        # else:
+                        #     print(f"[{week_col}] BYE week — skipping input")
                         else:
-                            print(f"[{week_col}] BYE week — skipping input")
+                            print(f"[{week_col}] BYE week — writing zeros")
+                            out_path = f"Outputs/PopOne_{team}_{role}_{statA.replace(' ','')}_vs_Points_{week_col}.csv"
+                            zero_matrix = np.zeros((13, 13))
+                            pd.DataFrame(zero_matrix).to_csv(out_path, index=False)
+                            print(f"Saved BYE week → {out_path}")
+
 
                         current_week_index += 1
 
