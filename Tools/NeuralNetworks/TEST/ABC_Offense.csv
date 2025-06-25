@@ -1,0 +1,25 @@
+INDICATOR,week_1,week_2,week_3,week_4,week_5,week_6
+Points,45,45,45,45,45,45
+First Downs,25,25,25,25,25,25
+Rush Att,50,50,50,50,50,50
+Rush Yds,200,200,200,200,200,200
+Rush TDs,4,4,4,4,4,4
+Pass Comp,30,30,30,30,30,30
+Pass Att,50,50,50,50,50,50
+Pass Yds,400,400,400,400,400,400
+Pass TD,4,4,4,4,4,4
+Pass INT,2.5,2.5,2.5,2.5,2.5,2.5
+Sacks Taken,5,5,5,5,5,5
+Sacked Yards,40,40,40,40,40,40
+Net Pass Yards,400,400,400,400,400,400
+Total Yards,600,600,600,600,600,600
+Fumbles,3,3,3,3,3,3
+Fumbles Lost,3,3,3,3,3,3
+Turnovers,5,5,5,5,5,5
+Penalties,10,10,10,10,10,10
+Penalty Yds,100,100,100,100,100,100
+3D Conv,10,10,10,10,10,10
+3D Conv Yards,25,25,25,25,25,25
+4D Conv,5,5,5,5,5,5
+4D Conv Yards,25,25,25,25,25,25
+Time of Possession,35,35,35,35,35,35

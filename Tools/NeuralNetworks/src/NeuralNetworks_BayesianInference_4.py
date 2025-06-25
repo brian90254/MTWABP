@@ -5,10 +5,10 @@
 # IN TERMINAL, NAVIGATE TO THE PROJECT FOLDER
 # COMMAND TO MAKE A VENV:
 #   python3.9 -m venv venv39
-# COMMAND TO DOWNLOAD ALL REQS FOR THIS PROJECT:
-#   pip3 install -r requirements.txt
 # IF NEEDED, ACTIVATE THE VENV:
 #   source venv39/bin/activate
+# COMMAND TO DOWNLOAD ALL REQS FOR THIS PROJECT:
+#   pip3 install -r requirements.txt
 # THEN RUN THE CODE IN "src" AND PASS ARGUMENTS FROM "CSV":
 #   python src/NeuralNetworks_BayesianInference_4.py CSV/ConnectivityMatrix_1.csv CSV/WeightMatrix_1.csv CSV/ThresholdMatrix_1.csv
 # ONCE SCRIPT IS RUNNING:
