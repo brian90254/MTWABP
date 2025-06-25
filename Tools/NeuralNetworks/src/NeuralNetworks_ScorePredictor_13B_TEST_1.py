@@ -184,10 +184,10 @@ def main():
                             if isinstance(valB, str) and ":" in valB:
                                 valB = valB.split(":")[0]
 
-                            # InputUnitOne = (float(valA) / scaleA) + 0.3
-                            # InputUnitTwo = (float(valB) / scalePoints) + 0.3
-                            InputUnitOne = (float(valA) / scaleA) + 0.05
-                            InputUnitTwo = (float(valB) / scalePoints) + 0.05
+                            InputUnitOne = (float(valA) / scaleA) + 0.3
+                            InputUnitTwo = (float(valB) / scalePoints) + 0.3
+                            # InputUnitOne = (float(valA) / scaleA) + 0.05
+                            # InputUnitTwo = (float(valB) / scalePoints) + 0.05
                             print(f"[{week_col}] {statA}: {valA} → {InputUnitOne:.3f}, Points: {valB} → {InputUnitTwo:.3f}")
 
                             for _ in range(50):
