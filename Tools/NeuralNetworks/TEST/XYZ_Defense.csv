@@ -1,25 +1,25 @@
 INDICATOR,week_1,week_2,week_3,week_4,week_5,week_6
-Points,22.5,27,31.5,36,40.5,45
-First Downs,12.5,15,17.5,20,22.5,25
-Rush Att,25,30,35,40,45,50
-Rush Yds,100,120,140,160,180,200
-Rush TDs,2,2.4,2.8,3.2,3.6,4
-Pass Comp,15,18,21,24,27,30
-Pass Att,25,30,35,40,45,50
-Pass Yds,200,240,280,320,360,400
-Pass TD,2,2.4,2.8,3.2,3.6,4
-Pass INT,1.25,1.5,1.75,2,2.25,2.5
-Sacks Taken,2.5,3,3.5,4,4.5,5
-Sacked Yards,20,24,28,32,36,40
-Net Pass Yards,200,240,280,320,360,400
-Total Yards,300,360,420,480,540,600
-Fumbles,1.5,1.8,2.1,2.4,2.7,3
-Fumbles Lost,1.5,1.8,2.1,2.4,2.7,3
-Turnovers,2.5,3,3.5,4,4.5,5
-Penalties,5,6,7,8,9,10
-Penalty Yds,50,60,70,80,90,100
-3D Conv,5,6,7,8,9,10
-3D Conv Yards,12.5,15,17.5,20,22.5,25
-4D Conv,2.5,3,3.5,4,4.5,5
-4D Conv Yards,12.5,15,17.5,20,22.5,25
-Time of Possession,17.5,21,24.5,28,31.5,35
+Points,22.5,27,31.5,bye,40.5,45
+First Downs,12.5,15,17.5,bye,22.5,25
+Rush Att,25,30,35,bye,45,50
+Rush Yds,100,120,140,bye,180,200
+Rush TDs,2,2.4,2.8,bye,3.6,4
+Pass Comp,15,18,21,bye,27,30
+Pass Att,25,30,35,bye,45,50
+Pass Yds,200,240,280,bye,360,400
+Pass TD,2,2.4,2.8,bye,3.6,4
+Pass INT,1.25,1.5,1.75,bye,2.25,2.5
+Sacks Taken,2.5,3,3.5,bye,4.5,5
+Sacked Yards,20,24,28,bye,36,40
+Net Pass Yards,200,240,280,bye,360,400
+Total Yards,300,360,420,bye,540,600
+Fumbles,1.5,1.8,2.1,bye,2.7,3
+Fumbles Lost,1.5,1.8,2.1,bye,2.7,3
+Turnovers,2.5,3,3.5,bye,4.5,5
+Penalties,5,6,7,bye,9,10
+Penalty Yds,50,60,70,bye,90,100
+3D Conv,5,6,7,bye,9,10
+3D Conv Yards,12.5,15,17.5,bye,22.5,25
+4D Conv,2.5,3,3.5,bye,4.5,5
+4D Conv Yards,12.5,15,17.5,bye,22.5,25
+Time of Possession,17.5,21,24.5,bye,31.5,35
