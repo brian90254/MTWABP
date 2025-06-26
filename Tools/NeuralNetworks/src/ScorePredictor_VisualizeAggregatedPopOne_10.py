@@ -140,10 +140,11 @@ for idx, indicator in enumerate(indicators):
                 popone_matrices[key] = avg_matrix
                 visualize_matrix(avg_matrix, key, 100 + j * 400, 100 + i * 400)
 
-                # DEBUG Save avg_matrix as a CSV file
-                df = pd.DataFrame(avg_matrix)
-                csv_filename = f"Outputs/AvgMatrix_{key}_{indicator}.csv"
-                df.to_csv(csv_filename, index=False)
+                # # DEBUG Save avg_matrix as a CSV file
+                # df = pd.DataFrame(avg_matrix)
+                # csv_filename = f"Outputs/AvgMatrix_{key}_{indicator}.csv"
+                # df.to_csv(csv_filename, index=False)
+                # # END DEBUG
 
     matchup_A = f"{home_team}_Defense x {away_team}_Offense"
     matchup_B = f"{home_team}_Offense x {away_team}_Defense"
