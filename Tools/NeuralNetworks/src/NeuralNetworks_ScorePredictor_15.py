@@ -148,13 +148,13 @@ def main():
         scale_df = pd.read_csv("CSV/ScaleStats_1.csv", header=None, index_col=0)
         scale_dict = scale_df[1].to_dict()
 
-        #team_files = [f.replace("_Offense.csv", "") for f in os.listdir("Aggregated") if f.endswith("_Offense.csv")]
-        team_files = [f.replace("_Offense.csv", "") for f in os.listdir("TEST") if f.endswith("_Offense.csv")]
+        team_files = [f.replace("_Offense.csv", "") for f in os.listdir("Aggregated") if f.endswith("_Offense.csv")]
+        #team_files = [f.replace("_Offense.csv", "") for f in os.listdir("TEST") if f.endswith("_Offense.csv")]
 
         for team in sorted(team_files):
             for role in ["Offense", "Defense"]:
-                #stat_file = f"Aggregated/{team}_{role}.csv"
-                stat_file = f"TEST/{team}_{role}.csv"
+                stat_file = f"Aggregated/{team}_{role}.csv"
+                #stat_file = f"TEST/{team}_{role}.csv"
                 if not os.path.exists(stat_file):
                     print(f"Missing file: {stat_file}")
                     continue
@@ -186,10 +186,8 @@ def main():
 
                             InputUnitOne = (float(valA) / scaleA) + 0.3
                             InputUnitTwo = (float(valB) / scalePoints) + 0.3
-                            #InputUnitOne = (float(valA) / scaleA) + 0.2
-                            #InputUnitTwo = (float(valB) / scalePoints) + 0.2
-                            #InputUnitOne = (float(valA) / scaleA) + 0.55
-                            #InputUnitTwo = (float(valB) / scalePoints) + 0.55
+                            # InputUnitOne = (float(valA) / scaleA) + 0.05
+                            # InputUnitTwo = (float(valB) / scalePoints) + 0.05
                             print(f"[{week_col}] {statA}: {valA} → {InputUnitOne:.3f}, Points: {valB} → {InputUnitTwo:.3f}")
 
                             for _ in range(50):
