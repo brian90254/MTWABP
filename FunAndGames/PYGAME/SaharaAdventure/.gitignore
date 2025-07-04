@@ -22,4 +22,4 @@ __pycache__/
 Thumbs.db
 
 # executable scripts
-.command
+*.command
