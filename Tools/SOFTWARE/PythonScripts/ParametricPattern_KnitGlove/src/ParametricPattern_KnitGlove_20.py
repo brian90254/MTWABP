@@ -1,6 +1,16 @@
 # BRIAN COX copyright 2025
-# HOW TO USE:
-# python src/ParametricPattern_KnitGlove_19.py configs/BasicGlove_v40_LARGE_Rios.txt
+#
+# EXAMPLE TO RUN THIS SCRIPT:
+# ---------------------------
+# IN TERMINAL, NAVIGATE TO THE PROJECT FOLDER
+# IF NEEDED, COMMAND TO MAKE A VENV:
+#   python3.9 -m venv venv39
+# ACTIVATE THE VENV:
+#   source venv39/bin/activate
+# IF NEEDED, COMMAND TO DOWNLOAD ALL REQS FOR THIS PROJECT:
+#   pip3 install -r requirements.txt
+# THEN RUN THE CODE IN "src"
+#   python src/ParametricPattern_KnitGlove_19.py configs/BasicGlove_v40_LARGE_Rios.txt
 
 import cv2
 import numpy as np
