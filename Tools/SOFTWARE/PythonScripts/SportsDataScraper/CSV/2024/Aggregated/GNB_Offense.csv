@@ -1,25 +1,25 @@
-Unnamed: 0,week_1,week_2,week_3,week_4,week_5,week_6
-Points,29,16,30,29,24,34
-First Downs,19,19,16,24,19,27
-Rush Att,21,53,37,19,30,38
-Rush Yds,163,261,188,86,126,179
-Rush TDs,1,0,1,0,1,0
-Pass Comp,17,12,13,32,15,22
-Pass Att,35,14,19,54,26,32
-Pass Yds,260,122,202,389,224,258
-Pass TD,2,1,1,4,2,4
-Pass INT,1,0,0,3,1,1
-Sacks Taken,2,0,3,1,2,0
-Sacked Yards,9,0,12,10,22,0
-Net Pass Yards,251,122,190,379,202,258
-Total Yards,414,383,378,465,328,437
-Fumbles,1,2,0,1,1,0
-Fumbles Lost,0,1,0,1,0,0
-Turnovers,1,1,0,4,1,1
-Penalties,10,6,10,8,7,5
-Penalty Yds,71,50,75,68,39,40
-3D Conv,3,10,5,4,1,7
-3D Conv Yards,11,17,14,12,8,12
-4D Conv,1,0,0,0,0,1
-4D Conv Yards,1,0,0,2,0,1
-Time of Possession,27:13,40:11,32:28,27:45,27:19,36:35
+Unnamed: 0,week_3,week_4,week_5
+Points,30,29,24
+First Downs,16,24,19
+Rush Att,37,19,30
+Rush Yds,188,86,126
+Rush TDs,1,0,1
+Pass Comp,13,32,15
+Pass Att,19,54,26
+Pass Yds,202,389,224
+Pass TD,1,4,2
+Pass INT,0,3,1
+Sacks Taken,3,1,2
+Sacked Yards,12,10,22
+Net Pass Yards,190,379,202
+Total Yards,378,465,328
+Fumbles,0,1,1
+Fumbles Lost,0,1,0
+Turnovers,0,4,1
+Penalties,10,8,7
+Penalty Yds,75,68,39
+3D Conv,5,4,1
+3D Conv Yards,14,12,8
+4D Conv,0,0,0
+4D Conv Yards,0,2,0
+Time of Possession,32:28,27:45,27:19
