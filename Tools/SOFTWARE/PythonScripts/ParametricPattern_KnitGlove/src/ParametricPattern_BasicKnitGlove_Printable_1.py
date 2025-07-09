@@ -18,7 +18,6 @@ import numpy as np
 from datetime import datetime
 import os
 import math
-# FOR PRINTABLE VERSION
 import sys
 
 # ----------------------------
@@ -42,9 +41,33 @@ def load_conversion_ratios(filepath):
                         ratios[key] = value
     return ratios
 
+# # Prompt user to choose a config file from the "configs" folder
+# configs_dir = "configs"
+# config_files = [f for f in os.listdir(configs_dir) if f.endswith(".txt")]
+
+# if not config_files:
+#     raise FileNotFoundError(f"No config files found in '{configs_dir}' folder.")
+
+# print("Select a configuration file:")
+# for idx, fname in enumerate(config_files):
+#     print(f"  {idx + 1}: {fname}")
+
+# selected_index = input("Enter the number of the config file to use: ").strip()
+# try:
+#     selected_index = int(selected_index)
+#     if not (1 <= selected_index <= len(config_files)):
+#         raise ValueError
+# except ValueError:
+#     raise ValueError("Invalid selection. Please enter a number from the list.")
+
+# selected_file = config_files[selected_index - 1]
+# selected_path = os.path.join(configs_dir, selected_file)
+
 # Prompt user to choose a config file from the "configs" folder
 configs_dir = "configs"
-config_files = [f for f in os.listdir(configs_dir) if f.endswith(".txt")]
+config_files = sorted(
+    [f for f in os.listdir(configs_dir) if f.endswith(".txt")]
+)
 
 if not config_files:
     raise FileNotFoundError(f"No config files found in '{configs_dir}' folder.")
@@ -63,6 +86,7 @@ except ValueError:
 
 selected_file = config_files[selected_index - 1]
 selected_path = os.path.join(configs_dir, selected_file)
+
 
 # Load all parameters
 ratios = load_conversion_ratios(selected_path)
