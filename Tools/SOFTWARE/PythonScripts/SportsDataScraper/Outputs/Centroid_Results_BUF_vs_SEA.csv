@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,BUF_Defense x SEA_Offense,23.1
+FirstDowns,BUF_Offense x SEA_Defense,26.6
+RushAtt,BUF_Defense x SEA_Offense,23.9
+RushAtt,BUF_Offense x SEA_Defense,27.7
+RushYds,BUF_Defense x SEA_Offense,23.3
+RushYds,BUF_Offense x SEA_Defense,26.6
+RushTDs,BUF_Defense x SEA_Offense,23.2
+RushTDs,BUF_Offense x SEA_Defense,22.4
+PassComp,BUF_Defense x SEA_Offense,22.5
+PassComp,BUF_Offense x SEA_Defense,27.8
+PassAtt,BUF_Defense x SEA_Offense,22.5
+PassAtt,BUF_Offense x SEA_Defense,26.2
+PassYds,BUF_Defense x SEA_Offense,22.8
+PassYds,BUF_Offense x SEA_Defense,26.2
+PassTD,BUF_Defense x SEA_Offense,23.6
+PassTD,BUF_Offense x SEA_Defense,23.7
+PassINT,BUF_Defense x SEA_Offense,24.7
+PassINT,BUF_Offense x SEA_Defense,28.2
+SackedYards,BUF_Defense x SEA_Offense,24.8
+SackedYards,BUF_Offense x SEA_Defense,27.2
+Turnovers,BUF_Defense x SEA_Offense,23.8
+Turnovers,BUF_Offense x SEA_Defense,28.9
+PenaltyYds,BUF_Defense x SEA_Offense,24.2
+PenaltyYds,BUF_Offense x SEA_Defense,25.6
+TimeofPossession,BUF_Defense x SEA_Offense,24.5
+TimeofPossession,BUF_Offense x SEA_Defense,26.3

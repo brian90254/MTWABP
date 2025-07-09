@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,ARI_Defense x MIA_Offense,14.9
+FirstDowns,ARI_Offense x MIA_Defense,18.9
+RushAtt,ARI_Defense x MIA_Offense,16.0
+RushAtt,ARI_Offense x MIA_Defense,20.4
+RushYds,ARI_Defense x MIA_Offense,14.5
+RushYds,ARI_Offense x MIA_Defense,22.4
+RushTDs,ARI_Defense x MIA_Offense,15.4
+RushTDs,ARI_Offense x MIA_Defense,18.6
+PassComp,ARI_Defense x MIA_Offense,15.4
+PassComp,ARI_Offense x MIA_Defense,18.7
+PassAtt,ARI_Defense x MIA_Offense,15.7
+PassAtt,ARI_Offense x MIA_Defense,20.8
+PassYds,ARI_Defense x MIA_Offense,14.1
+PassYds,ARI_Offense x MIA_Defense,19.1
+PassTD,ARI_Defense x MIA_Offense,14.4
+PassTD,ARI_Offense x MIA_Defense,20.6
+PassINT,ARI_Defense x MIA_Offense,13.9
+PassINT,ARI_Offense x MIA_Defense,19.7
+SackedYards,ARI_Defense x MIA_Offense,16.7
+SackedYards,ARI_Offense x MIA_Defense,22.9
+Turnovers,ARI_Defense x MIA_Offense,15.1
+Turnovers,ARI_Offense x MIA_Defense,22.2
+PenaltyYds,ARI_Defense x MIA_Offense,18.3
+PenaltyYds,ARI_Offense x MIA_Defense,18.5
+TimeofPossession,ARI_Defense x MIA_Offense,16.9
+TimeofPossession,ARI_Offense x MIA_Defense,19.6

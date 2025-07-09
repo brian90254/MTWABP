@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,ATL_Defense x TAM_Offense,25.5
+FirstDowns,ATL_Offense x TAM_Defense,23.8
+RushAtt,ATL_Defense x TAM_Offense,26.7
+RushAtt,ATL_Offense x TAM_Defense,22.4
+RushYds,ATL_Defense x TAM_Offense,26.8
+RushYds,ATL_Offense x TAM_Defense,24.4
+RushTDs,ATL_Defense x TAM_Offense,24.6
+RushTDs,ATL_Offense x TAM_Defense,23.6
+PassComp,ATL_Defense x TAM_Offense,26.3
+PassComp,ATL_Offense x TAM_Defense,21.8
+PassAtt,ATL_Defense x TAM_Offense,25.4
+PassAtt,ATL_Offense x TAM_Defense,21.6
+PassYds,ATL_Defense x TAM_Offense,22.9
+PassYds,ATL_Offense x TAM_Defense,22.3
+PassTD,ATL_Defense x TAM_Offense,24.9
+PassTD,ATL_Offense x TAM_Defense,23.7
+PassINT,ATL_Defense x TAM_Offense,25.7
+PassINT,ATL_Offense x TAM_Defense,24.7
+SackedYards,ATL_Defense x TAM_Offense,28.3
+SackedYards,ATL_Offense x TAM_Defense,25.0
+Turnovers,ATL_Defense x TAM_Offense,24.6
+Turnovers,ATL_Offense x TAM_Defense,26.0
+PenaltyYds,ATL_Defense x TAM_Offense,27.0
+PenaltyYds,ATL_Offense x TAM_Defense,23.8
+TimeofPossession,ATL_Defense x TAM_Offense,25.6
+TimeofPossession,ATL_Offense x TAM_Defense,24.0

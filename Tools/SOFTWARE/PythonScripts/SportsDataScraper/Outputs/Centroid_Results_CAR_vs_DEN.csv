@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,CAR_Defense x DEN_Offense,27.2
+FirstDowns,CAR_Offense x DEN_Defense,16.7
+RushAtt,CAR_Defense x DEN_Offense,28.7
+RushAtt,CAR_Offense x DEN_Defense,14.5
+RushYds,CAR_Defense x DEN_Offense,29.9
+RushYds,CAR_Offense x DEN_Defense,15.6
+RushTDs,CAR_Defense x DEN_Offense,25.8
+RushTDs,CAR_Offense x DEN_Defense,14.2
+PassComp,CAR_Defense x DEN_Offense,29.5
+PassComp,CAR_Offense x DEN_Defense,14.9
+PassAtt,CAR_Defense x DEN_Offense,29.1
+PassAtt,CAR_Offense x DEN_Defense,14.6
+PassYds,CAR_Defense x DEN_Offense,29.8
+PassYds,CAR_Offense x DEN_Defense,15.1
+PassTD,CAR_Defense x DEN_Offense,29.6
+PassTD,CAR_Offense x DEN_Defense,11.9
+PassINT,CAR_Defense x DEN_Offense,30.3
+PassINT,CAR_Offense x DEN_Defense,14.4
+SackedYards,CAR_Defense x DEN_Offense,26.9
+SackedYards,CAR_Offense x DEN_Defense,16.2
+Turnovers,CAR_Defense x DEN_Offense,28.7
+Turnovers,CAR_Offense x DEN_Defense,15.0
+PenaltyYds,CAR_Defense x DEN_Offense,29.4
+PenaltyYds,CAR_Offense x DEN_Defense,14.7
+TimeofPossession,CAR_Defense x DEN_Offense,28.8
+TimeofPossession,CAR_Offense x DEN_Defense,15.8

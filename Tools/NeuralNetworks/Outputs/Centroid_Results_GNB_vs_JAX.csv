@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,GNB_Defense x JAX_Offense,15.8
+FirstDowns,GNB_Offense x JAX_Defense,26.8
+RushAtt,GNB_Defense x JAX_Offense,15.0
+RushAtt,GNB_Offense x JAX_Defense,27.5
+RushYds,GNB_Defense x JAX_Offense,18.3
+RushYds,GNB_Offense x JAX_Defense,27.7
+RushTDs,GNB_Defense x JAX_Offense,16.3
+RushTDs,GNB_Offense x JAX_Defense,27.0
+PassComp,GNB_Defense x JAX_Offense,15.7
+PassComp,GNB_Offense x JAX_Defense,29.9
+PassAtt,GNB_Defense x JAX_Offense,17.5
+PassAtt,GNB_Offense x JAX_Defense,29.4
+PassYds,GNB_Defense x JAX_Offense,14.9
+PassYds,GNB_Offense x JAX_Defense,28.5
+PassTD,GNB_Defense x JAX_Offense,16.9
+PassTD,GNB_Offense x JAX_Defense,27.4
+PassINT,GNB_Defense x JAX_Offense,18.2
+PassINT,GNB_Offense x JAX_Defense,26.3
+SackedYards,GNB_Defense x JAX_Offense,18.6
+SackedYards,GNB_Offense x JAX_Defense,28.1
+Turnovers,GNB_Defense x JAX_Offense,17.5
+Turnovers,GNB_Offense x JAX_Defense,27.7
+PenaltyYds,GNB_Defense x JAX_Offense,17.5
+PenaltyYds,GNB_Offense x JAX_Defense,30.4
+TimeofPossession,GNB_Defense x JAX_Offense,17.1
+TimeofPossession,GNB_Offense x JAX_Defense,28.1

@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,DAL_Defense x SFO_Offense,27.8
+FirstDowns,DAL_Offense x SFO_Defense,21.2
+RushAtt,DAL_Defense x SFO_Offense,23.7
+RushAtt,DAL_Offense x SFO_Defense,21.4
+RushYds,DAL_Defense x SFO_Offense,24.1
+RushYds,DAL_Offense x SFO_Defense,20.5
+RushTDs,DAL_Defense x SFO_Offense,21.0
+RushTDs,DAL_Offense x SFO_Defense,20.7
+PassComp,DAL_Defense x SFO_Offense,24.4
+PassComp,DAL_Offense x SFO_Defense,21.9
+PassAtt,DAL_Defense x SFO_Offense,22.8
+PassAtt,DAL_Offense x SFO_Defense,21.7
+PassYds,DAL_Defense x SFO_Offense,26.2
+PassYds,DAL_Offense x SFO_Defense,21.2
+PassTD,DAL_Defense x SFO_Offense,24.2
+PassTD,DAL_Offense x SFO_Defense,21.7
+PassINT,DAL_Defense x SFO_Offense,25.6
+PassINT,DAL_Offense x SFO_Defense,24.1
+SackedYards,DAL_Defense x SFO_Offense,26.0
+SackedYards,DAL_Offense x SFO_Defense,21.1
+Turnovers,DAL_Defense x SFO_Offense,24.9
+Turnovers,DAL_Offense x SFO_Defense,22.0
+PenaltyYds,DAL_Defense x SFO_Offense,24.9
+PenaltyYds,DAL_Offense x SFO_Defense,20.9
+TimeofPossession,DAL_Defense x SFO_Offense,24.7
+TimeofPossession,DAL_Offense x SFO_Defense,21.6

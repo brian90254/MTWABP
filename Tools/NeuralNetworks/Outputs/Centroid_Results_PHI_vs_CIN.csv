@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,PHI_Defense x CIN_Offense,20.3
+FirstDowns,PHI_Offense x CIN_Defense,21.5
+RushAtt,PHI_Defense x CIN_Offense,26.5
+RushAtt,PHI_Offense x CIN_Defense,23.0
+RushYds,PHI_Defense x CIN_Offense,23.9
+RushYds,PHI_Offense x CIN_Defense,22.1
+RushTDs,PHI_Defense x CIN_Offense,26.4
+RushTDs,PHI_Offense x CIN_Defense,20.3
+PassComp,PHI_Defense x CIN_Offense,24.5
+PassComp,PHI_Offense x CIN_Defense,23.2
+PassAtt,PHI_Defense x CIN_Offense,23.6
+PassAtt,PHI_Offense x CIN_Defense,21.5
+PassYds,PHI_Defense x CIN_Offense,23.6
+PassYds,PHI_Offense x CIN_Defense,23.1
+PassTD,PHI_Defense x CIN_Offense,24.5
+PassTD,PHI_Offense x CIN_Defense,22.5
+PassINT,PHI_Defense x CIN_Offense,24.2
+PassINT,PHI_Offense x CIN_Defense,20.0
+SackedYards,PHI_Defense x CIN_Offense,24.7
+SackedYards,PHI_Offense x CIN_Defense,23.8
+Turnovers,PHI_Defense x CIN_Offense,25.9
+Turnovers,PHI_Offense x CIN_Defense,20.8
+PenaltyYds,PHI_Defense x CIN_Offense,26.3
+PenaltyYds,PHI_Offense x CIN_Defense,20.3
+TimeofPossession,PHI_Defense x CIN_Offense,24.2
+TimeofPossession,PHI_Offense x CIN_Defense,23.1

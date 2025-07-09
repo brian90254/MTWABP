@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,NYG_Defense x PIT_Offense,19.3
+FirstDowns,NYG_Offense x PIT_Defense,15.0
+RushAtt,NYG_Defense x PIT_Offense,20.6
+RushAtt,NYG_Offense x PIT_Defense,14.2
+RushYds,NYG_Defense x PIT_Offense,19.5
+RushYds,NYG_Offense x PIT_Defense,13.8
+RushTDs,NYG_Defense x PIT_Offense,18.3
+RushTDs,NYG_Offense x PIT_Defense,13.5
+PassComp,NYG_Defense x PIT_Offense,20.0
+PassComp,NYG_Offense x PIT_Defense,13.8
+PassAtt,NYG_Defense x PIT_Offense,20.1
+PassAtt,NYG_Offense x PIT_Defense,15.3
+PassYds,NYG_Defense x PIT_Offense,19.5
+PassYds,NYG_Offense x PIT_Defense,13.5
+PassTD,NYG_Defense x PIT_Offense,19.2
+PassTD,NYG_Offense x PIT_Defense,15.4
+PassINT,NYG_Defense x PIT_Offense,18.8
+PassINT,NYG_Offense x PIT_Defense,15.2
+SackedYards,NYG_Defense x PIT_Offense,19.3
+SackedYards,NYG_Offense x PIT_Defense,14.2
+Turnovers,NYG_Defense x PIT_Offense,19.3
+Turnovers,NYG_Offense x PIT_Defense,12.7
+PenaltyYds,NYG_Defense x PIT_Offense,19.6
+PenaltyYds,NYG_Offense x PIT_Defense,15.7
+TimeofPossession,NYG_Defense x PIT_Offense,19.9
+TimeofPossession,NYG_Offense x PIT_Defense,14.5

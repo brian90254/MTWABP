@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,KAN_Defense x LVR_Offense,17.8
+FirstDowns,KAN_Offense x LVR_Defense,25.0
+RushAtt,KAN_Defense x LVR_Offense,17.0
+RushAtt,KAN_Offense x LVR_Defense,24.6
+RushYds,KAN_Defense x LVR_Offense,16.0
+RushYds,KAN_Offense x LVR_Defense,24.6
+RushTDs,KAN_Defense x LVR_Offense,17.1
+RushTDs,KAN_Offense x LVR_Defense,22.9
+PassComp,KAN_Defense x LVR_Offense,18.1
+PassComp,KAN_Offense x LVR_Defense,24.4
+PassAtt,KAN_Defense x LVR_Offense,17.8
+PassAtt,KAN_Offense x LVR_Defense,24.5
+PassYds,KAN_Defense x LVR_Offense,17.8
+PassYds,KAN_Offense x LVR_Defense,24.4
+PassTD,KAN_Defense x LVR_Offense,16.9
+PassTD,KAN_Offense x LVR_Defense,23.6
+PassINT,KAN_Defense x LVR_Offense,16.8
+PassINT,KAN_Offense x LVR_Defense,21.8
+SackedYards,KAN_Defense x LVR_Offense,16.8
+SackedYards,KAN_Offense x LVR_Defense,24.7
+Turnovers,KAN_Defense x LVR_Offense,20.8
+Turnovers,KAN_Offense x LVR_Defense,24.2
+PenaltyYds,KAN_Defense x LVR_Offense,17.6
+PenaltyYds,KAN_Offense x LVR_Defense,25.5
+TimeofPossession,KAN_Defense x LVR_Offense,17.7
+TimeofPossession,KAN_Offense x LVR_Defense,24.4

@@ -1,6 +1,6 @@
 # BRIAN COX copyright 2025
 #
-# SHORTCUT:
+# SHORTCUT SCRIPT:
 #   runSportsDataAggregator.command
 #
 # EXAMPLE TO RUN THIS SCRIPT:

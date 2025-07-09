@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,TEN_Defense x DET_Offense,22.8
+FirstDowns,TEN_Offense x DET_Defense,15.8
+RushAtt,TEN_Defense x DET_Offense,22.2
+RushAtt,TEN_Offense x DET_Defense,17.0
+RushYds,TEN_Defense x DET_Offense,23.7
+RushYds,TEN_Offense x DET_Defense,19.9
+RushTDs,TEN_Defense x DET_Offense,20.0
+RushTDs,TEN_Offense x DET_Defense,17.0
+PassComp,TEN_Defense x DET_Offense,23.1
+PassComp,TEN_Offense x DET_Defense,15.8
+PassAtt,TEN_Defense x DET_Offense,23.9
+PassAtt,TEN_Offense x DET_Defense,16.1
+PassYds,TEN_Defense x DET_Offense,23.4
+PassYds,TEN_Offense x DET_Defense,16.0
+PassTD,TEN_Defense x DET_Offense,21.5
+PassTD,TEN_Offense x DET_Defense,18.0
+PassINT,TEN_Defense x DET_Offense,23.8
+PassINT,TEN_Offense x DET_Defense,19.8
+SackedYards,TEN_Defense x DET_Offense,22.3
+SackedYards,TEN_Offense x DET_Defense,19.7
+Turnovers,TEN_Defense x DET_Offense,22.5
+Turnovers,TEN_Offense x DET_Defense,19.4
+PenaltyYds,TEN_Defense x DET_Offense,23.1
+PenaltyYds,TEN_Offense x DET_Defense,18.4
+TimeofPossession,TEN_Defense x DET_Offense,23.0
+TimeofPossession,TEN_Offense x DET_Defense,18.2

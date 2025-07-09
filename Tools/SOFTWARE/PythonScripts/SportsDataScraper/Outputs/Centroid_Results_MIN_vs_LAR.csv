@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,MIN_Defense x LAR_Offense,17.1
+FirstDowns,MIN_Offense x LAR_Defense,26.1
+RushAtt,MIN_Defense x LAR_Offense,16.8
+RushAtt,MIN_Offense x LAR_Defense,25.8
+RushYds,MIN_Defense x LAR_Offense,17.3
+RushYds,MIN_Offense x LAR_Defense,25.5
+RushTDs,MIN_Defense x LAR_Offense,16.6
+RushTDs,MIN_Offense x LAR_Defense,26.2
+PassComp,MIN_Defense x LAR_Offense,16.7
+PassComp,MIN_Offense x LAR_Defense,26.3
+PassAtt,MIN_Defense x LAR_Offense,17.7
+PassAtt,MIN_Offense x LAR_Defense,26.0
+PassYds,MIN_Defense x LAR_Offense,16.2
+PassYds,MIN_Offense x LAR_Defense,26.0
+PassTD,MIN_Defense x LAR_Offense,15.6
+PassTD,MIN_Offense x LAR_Defense,26.3
+PassINT,MIN_Defense x LAR_Offense,17.7
+PassINT,MIN_Offense x LAR_Defense,26.5
+SackedYards,MIN_Defense x LAR_Offense,16.6
+SackedYards,MIN_Offense x LAR_Defense,26.4
+Turnovers,MIN_Defense x LAR_Offense,15.6
+Turnovers,MIN_Offense x LAR_Defense,26.2
+PenaltyYds,MIN_Defense x LAR_Offense,19.9
+PenaltyYds,MIN_Offense x LAR_Defense,26.6
+TimeofPossession,MIN_Defense x LAR_Offense,18.1
+TimeofPossession,MIN_Offense x LAR_Defense,26.1

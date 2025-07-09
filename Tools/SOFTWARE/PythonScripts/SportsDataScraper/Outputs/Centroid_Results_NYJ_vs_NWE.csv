@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,NYJ_Defense x NWE_Offense,14.8
+FirstDowns,NYJ_Offense x NWE_Defense,20.0
+RushAtt,NYJ_Defense x NWE_Offense,15.9
+RushAtt,NYJ_Offense x NWE_Defense,20.5
+RushYds,NYJ_Defense x NWE_Offense,14.6
+RushYds,NYJ_Offense x NWE_Defense,19.7
+RushTDs,NYJ_Defense x NWE_Offense,15.0
+RushTDs,NYJ_Offense x NWE_Defense,20.9
+PassComp,NYJ_Defense x NWE_Offense,15.7
+PassComp,NYJ_Offense x NWE_Defense,19.1
+PassAtt,NYJ_Defense x NWE_Offense,15.7
+PassAtt,NYJ_Offense x NWE_Defense,20.5
+PassYds,NYJ_Defense x NWE_Offense,15.6
+PassYds,NYJ_Offense x NWE_Defense,19.6
+PassTD,NYJ_Defense x NWE_Offense,13.5
+PassTD,NYJ_Offense x NWE_Defense,19.6
+PassINT,NYJ_Defense x NWE_Offense,12.9
+PassINT,NYJ_Offense x NWE_Defense,19.9
+SackedYards,NYJ_Defense x NWE_Offense,17.7
+SackedYards,NYJ_Offense x NWE_Defense,21.6
+Turnovers,NYJ_Defense x NWE_Offense,13.2
+Turnovers,NYJ_Offense x NWE_Defense,20.1
+PenaltyYds,NYJ_Defense x NWE_Offense,14.2
+PenaltyYds,NYJ_Offense x NWE_Defense,20.5
+TimeofPossession,NYJ_Defense x NWE_Offense,16.0
+TimeofPossession,NYJ_Offense x NWE_Defense,19.7

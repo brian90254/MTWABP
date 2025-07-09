@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,CHI_Defense x WAS_Offense,20.0
+FirstDowns,CHI_Offense x WAS_Defense,24.2
+RushAtt,CHI_Defense x WAS_Offense,20.1
+RushAtt,CHI_Offense x WAS_Defense,23.0
+RushYds,CHI_Defense x WAS_Offense,19.7
+RushYds,CHI_Offense x WAS_Defense,27.4
+RushTDs,CHI_Defense x WAS_Offense,20.5
+RushTDs,CHI_Offense x WAS_Defense,21.6
+PassComp,CHI_Defense x WAS_Offense,19.6
+PassComp,CHI_Offense x WAS_Defense,27.1
+PassAtt,CHI_Defense x WAS_Offense,19.9
+PassAtt,CHI_Offense x WAS_Defense,27.2
+PassYds,CHI_Defense x WAS_Offense,19.8
+PassYds,CHI_Offense x WAS_Defense,24.6
+PassTD,CHI_Defense x WAS_Offense,19.9
+PassTD,CHI_Offense x WAS_Defense,24.0
+PassINT,CHI_Defense x WAS_Offense,20.6
+PassINT,CHI_Offense x WAS_Defense,26.5
+SackedYards,CHI_Defense x WAS_Offense,19.8
+SackedYards,CHI_Offense x WAS_Defense,25.4
+Turnovers,CHI_Defense x WAS_Offense,21.2
+Turnovers,CHI_Offense x WAS_Defense,27.1
+PenaltyYds,CHI_Defense x WAS_Offense,19.9
+PenaltyYds,CHI_Offense x WAS_Defense,24.6
+TimeofPossession,CHI_Defense x WAS_Offense,20.0
+TimeofPossession,CHI_Offense x WAS_Defense,25.5

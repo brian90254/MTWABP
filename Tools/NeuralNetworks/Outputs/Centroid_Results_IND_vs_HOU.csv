@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,IND_Defense x HOU_Offense,23.7
+FirstDowns,IND_Offense x HOU_Defense,22.1
+RushAtt,IND_Defense x HOU_Offense,23.7
+RushAtt,IND_Offense x HOU_Defense,22.9
+RushYds,IND_Defense x HOU_Offense,22.6
+RushYds,IND_Offense x HOU_Defense,24.3
+RushTDs,IND_Defense x HOU_Offense,22.8
+RushTDs,IND_Offense x HOU_Defense,22.4
+PassComp,IND_Defense x HOU_Offense,24.7
+PassComp,IND_Offense x HOU_Defense,22.1
+PassAtt,IND_Defense x HOU_Offense,25.5
+PassAtt,IND_Offense x HOU_Defense,21.8
+PassYds,IND_Defense x HOU_Offense,23.4
+PassYds,IND_Offense x HOU_Defense,22.0
+PassTD,IND_Defense x HOU_Offense,22.1
+PassTD,IND_Offense x HOU_Defense,23.0
+PassINT,IND_Defense x HOU_Offense,24.1
+PassINT,IND_Offense x HOU_Defense,25.4
+SackedYards,IND_Defense x HOU_Offense,23.0
+SackedYards,IND_Offense x HOU_Defense,23.3
+Turnovers,IND_Defense x HOU_Offense,22.3
+Turnovers,IND_Offense x HOU_Defense,24.4
+PenaltyYds,IND_Defense x HOU_Offense,26.3
+PenaltyYds,IND_Offense x HOU_Defense,24.7
+TimeofPossession,IND_Defense x HOU_Offense,22.6
+TimeofPossession,IND_Offense x HOU_Defense,23.4

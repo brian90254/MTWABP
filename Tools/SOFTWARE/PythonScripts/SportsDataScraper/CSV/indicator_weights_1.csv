@@ -1,0 +1,14 @@
+INDICATOR,WEIGHT
+FirstDowns,1.0
+RushAtt,1.0
+RushYds,1.0
+RushTDs,1.0
+PassComp,1.0
+PassAtt,1.0
+PassYds,1.0
+PassTD,1.0
+PassINT,1.0
+SackedYards,1.0
+Turnovers,1.0
+PenaltyYds,1.0
+TimeofPossession,1.

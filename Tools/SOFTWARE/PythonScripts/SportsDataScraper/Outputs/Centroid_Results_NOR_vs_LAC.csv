@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,NOR_Defense x LAC_Offense,18.0
+FirstDowns,NOR_Offense x LAC_Defense,16.0
+RushAtt,NOR_Defense x LAC_Offense,16.8
+RushAtt,NOR_Offense x LAC_Defense,16.3
+RushYds,NOR_Defense x LAC_Offense,16.4
+RushYds,NOR_Offense x LAC_Defense,16.2
+RushTDs,NOR_Defense x LAC_Offense,18.9
+RushTDs,NOR_Offense x LAC_Defense,14.6
+PassComp,NOR_Defense x LAC_Offense,18.3
+PassComp,NOR_Offense x LAC_Defense,16.6
+PassAtt,NOR_Defense x LAC_Offense,19.1
+PassAtt,NOR_Offense x LAC_Defense,16.2
+PassYds,NOR_Defense x LAC_Offense,17.1
+PassYds,NOR_Offense x LAC_Defense,18.3
+PassTD,NOR_Defense x LAC_Offense,18.3
+PassTD,NOR_Offense x LAC_Defense,16.4
+PassINT,NOR_Defense x LAC_Offense,23.7
+PassINT,NOR_Offense x LAC_Defense,15.5
+SackedYards,NOR_Defense x LAC_Offense,22.4
+SackedYards,NOR_Offense x LAC_Defense,16.2
+Turnovers,NOR_Defense x LAC_Offense,23.7
+Turnovers,NOR_Offense x LAC_Defense,16.8
+PenaltyYds,NOR_Defense x LAC_Offense,17.8
+PenaltyYds,NOR_Offense x LAC_Defense,15.8
+TimeofPossession,NOR_Defense x LAC_Offense,18.6
+TimeofPossession,NOR_Offense x LAC_Defense,16.5

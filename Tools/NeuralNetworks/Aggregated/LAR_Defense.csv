@@ -1,25 +1,25 @@
-Unnamed: 0,week_1,week_2,week_3,week_4,week_5,week_6
-Points,26,41,24,24,24,bye
-First Downs,21,24,25,17,19,bye
-Rush Att,31,40,34,28,30,bye
-Rush Yds,163,231,137,131,126,bye
-Rush TDs,2,1,0,2,1,bye
-Pass Comp,18,17,22,17,15,bye
-Pass Att,28,21,30,23,26,bye
-Pass Yds,217,266,292,157,224,bye
-Pass TD,1,3,3,1,2,bye
-Pass INT,1,0,0,0,1,bye
-Sacks Taken,2,1,1,3,2,bye
-Sacked Yards,17,8,4,24,22,bye
-Net Pass Yards,200,258,288,133,202,bye
-Total Yards,363,489,425,264,328,bye
-Fumbles,0,2,2,1,1,bye
-Fumbles Lost,0,1,1,0,0,bye
-Turnovers,1,1,1,0,1,bye
-Penalties,6,5,7,10,7,bye
-Penalty Yds,56,52,111,84,39,bye
-3D Conv,6,7,6,3,1,bye
-3D Conv Yards,13,11,11,9,8,bye
-4D Conv,1,0,1,0,0,bye
-4D Conv Yards,1,0,1,0,0,bye
-Time of Possession,29:45,36:54,33:27,28:58,27:19,bye
+Unnamed: 0,week_1,week_2,week_3,week_4,week_5,week_6,week_7
+Points,26,41,24,24,24,bye,15
+First Downs,21,24,25,17,19,bye,20
+Rush Att,31,40,34,28,30,bye,29
+Rush Yds,163,231,137,131,126,bye,122
+Rush TDs,2,1,0,2,1,bye,0
+Pass Comp,18,17,22,17,15,bye,21
+Pass Att,28,21,30,23,26,bye,44
+Pass Yds,217,266,292,157,224,bye,206
+Pass TD,1,3,3,1,2,bye,0
+Pass INT,1,0,0,0,1,bye,3
+Sacks Taken,2,1,1,3,2,bye,2
+Sacked Yards,17,8,4,24,22,bye,11
+Net Pass Yards,200,258,288,133,202,bye,195
+Total Yards,363,489,425,264,328,bye,317
+Fumbles,0,2,2,1,1,bye,1
+Fumbles Lost,0,1,1,0,0,bye,1
+Turnovers,1,1,1,0,1,bye,4
+Penalties,6,5,7,10,7,bye,10
+Penalty Yds,56,52,111,84,39,bye,80
+3D Conv,6,7,6,3,1,bye,3
+3D Conv Yards,13,11,11,9,8,bye,15
+4D Conv,1,0,1,0,0,bye,1
+4D Conv Yards,1,0,1,0,0,bye,1
+Time of Possession,29:45,36:54,33:27,28:58,27:19,bye,33:48

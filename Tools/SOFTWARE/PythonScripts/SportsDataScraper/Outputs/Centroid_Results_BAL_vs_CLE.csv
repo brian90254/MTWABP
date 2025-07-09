@@ -1,0 +1,27 @@
+INDICATOR,MATCHUP,SCORE
+FirstDowns,BAL_Defense x CLE_Offense,17.5
+FirstDowns,BAL_Offense x CLE_Defense,24.5
+RushAtt,BAL_Defense x CLE_Offense,17.8
+RushAtt,BAL_Offense x CLE_Defense,26.1
+RushYds,BAL_Defense x CLE_Offense,16.4
+RushYds,BAL_Offense x CLE_Defense,24.7
+RushTDs,BAL_Defense x CLE_Offense,18.5
+RushTDs,BAL_Offense x CLE_Defense,24.9
+PassComp,BAL_Defense x CLE_Offense,17.9
+PassComp,BAL_Offense x CLE_Defense,27.4
+PassAtt,BAL_Defense x CLE_Offense,17.6
+PassAtt,BAL_Offense x CLE_Defense,26.1
+PassYds,BAL_Defense x CLE_Offense,15.0
+PassYds,BAL_Offense x CLE_Defense,25.2
+PassTD,BAL_Defense x CLE_Offense,18.0
+PassTD,BAL_Offense x CLE_Defense,27.7
+PassINT,BAL_Defense x CLE_Offense,17.1
+PassINT,BAL_Offense x CLE_Defense,25.6
+SackedYards,BAL_Defense x CLE_Offense,17.1
+SackedYards,BAL_Offense x CLE_Defense,24.7
+Turnovers,BAL_Defense x CLE_Offense,17.9
+Turnovers,BAL_Offense x CLE_Defense,25.5
+PenaltyYds,BAL_Defense x CLE_Offense,17.4
+PenaltyYds,BAL_Offense x CLE_Defense,27.0
+TimeofPossession,BAL_Defense x CLE_Offense,17.5
+TimeofPossession,BAL_Offense x CLE_Defense,26.7
