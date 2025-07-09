@@ -15,10 +15,11 @@
 
 import cv2
 import numpy as np
-import argparse
 from datetime import datetime
 import os
 import math
+# FOR PRINTABLE VERSION
+import sys
 
 # ----------------------------
 # LOAD CONFIG FROM FILE
@@ -41,13 +42,31 @@ def load_conversion_ratios(filepath):
                         ratios[key] = value
     return ratios
 
-# Parse command-line argument
-parser = argparse.ArgumentParser(description="Create a parametric knit glove pattern BMP with ribbing and cables.")
-parser.add_argument("ratiosFile", help="Path to the ConversionRatios.txt file")
-args = parser.parse_args()
+# Prompt user to choose a config file from the "configs" folder
+configs_dir = "configs"
+config_files = [f for f in os.listdir(configs_dir) if f.endswith(".txt")]
+
+if not config_files:
+    raise FileNotFoundError(f"No config files found in '{configs_dir}' folder.")
+
+print("Select a configuration file:")
+for idx, fname in enumerate(config_files):
+    print(f"  {idx + 1}: {fname}")
+
+selected_index = input("Enter the number of the config file to use: ").strip()
+try:
+    selected_index = int(selected_index)
+    if not (1 <= selected_index <= len(config_files)):
+        raise ValueError
+except ValueError:
+    raise ValueError("Invalid selection. Please enter a number from the list.")
+
+selected_file = config_files[selected_index - 1]
+selected_path = os.path.join(configs_dir, selected_file)
 
 # Load all parameters
-ratios = load_conversion_ratios(args.ratiosFile)
+ratios = load_conversion_ratios(selected_path)
+
 try:
     lengthPalm         = float(ratios["lengthPalm"])
     circumferencePalm  = float(ratios["circumferencePalm"])
@@ -786,3 +805,99 @@ print(f"  Pattern type:     {'Snake' if patternType == 'S' else 'Braided'}")
 print(f"    → Snake cables:   {numberSnakeCables}")
 print(f"    → Braided cables: {numberBraidedCables}")
 print(f"  THUMB DROP:       {num_thumb_drops} stacked rectangles")
+
+
+# ----------------------------------------------------------------
+#   CREATE PRINTABLE VERSION :: MERGED CODE
+# ----------------------------------------------------------------
+# Automatically generate output path by changing extension to .png
+#output_path = os.path.splitext(input_path)[0] + '.png'
+input_path = f"images/ParametricPattern_KnitGlove_{timestamp}_Cable{patternType}_{handedness}.bmp"
+output_path = f"images/ParametricPattern_KnitGlove_{timestamp}_Cable{patternType}_{handedness}.png"
+
+# === CONFIGURATION ===
+scale_factor = 100
+border_color = (0, 0, 0)  # black border
+default_text_color = (0, 0, 0)  # black text
+font = cv2.FONT_HERSHEY_SIMPLEX
+default_font_scale = 2
+font_thickness = 3
+
+# === COLOR TO TEXT MAPPING (BGR format for OpenCV) ===
+color_text_map = {
+    (255, 255, 0): "6",
+    (255, 0, 255): "5",
+    (255, 255, 255): "7",
+    (255, 0, 0): "4",
+    (192, 192, 0): "106",
+    (160, 160, 160): "107",
+    (128, 128, 255): "1",
+    (0, 255, 0): "2",
+    (0, 255, 255): "3",
+}
+
+# === LOAD BMP IMAGE ===
+image = cv2.imread(input_path, cv2.IMREAD_COLOR)
+if image is None:
+    raise ValueError(f"Could not load image: {input_path}")
+
+height, width, _ = image.shape
+scaled_height = height * scale_factor
+scaled_width = width * scale_factor
+
+# === CREATE NEW SCALED IMAGE ===
+scaled_image = np.zeros((scaled_height, scaled_width, 3), dtype=np.uint8)
+
+# === SCALE AND DRAW BLOCKS ===
+for y in range(height):
+    for x in range(width):
+        color = tuple(int(c) for c in image[y, x])
+        top_left_x = x * scale_factor
+        top_left_y = y * scale_factor
+        bottom_right_x = top_left_x + scale_factor - 1
+        bottom_right_y = top_left_y + scale_factor - 1
+
+        # Fill block
+        cv2.rectangle(scaled_image, (top_left_x, top_left_y), (bottom_right_x, bottom_right_y), color, -1)
+
+        # Draw border
+        cv2.rectangle(scaled_image, (top_left_x, top_left_y), (bottom_right_x, bottom_right_y), border_color, 1)
+
+        # Annotate with text
+        if color in color_text_map:
+            text = color_text_map[color]
+            font_scale = 1.5 if text in ["106", "107"] else default_font_scale
+            text_color = (255, 255, 255) if text == "4" else default_text_color
+            text_size, _ = cv2.getTextSize(text, font, font_scale, font_thickness)
+            text_width, text_height = text_size
+            text_x = top_left_x + (scale_factor - text_width) // 2
+            text_y = top_left_y + (scale_factor + text_height) // 2
+            cv2.putText(scaled_image, text, (text_x, text_y), font, font_scale, text_color, font_thickness, cv2.LINE_AA)
+
+# === ADD ROW AND COLUMN NUMBERS ===
+number_font_scale = 1.2
+number_font_thickness = 2
+number_color = (0, 0, 0)
+
+for x in range(width):
+    col_number = str(x)
+    text_size, _ = cv2.getTextSize(col_number, font, number_font_scale, number_font_thickness)
+    text_width, text_height = text_size
+    x_center = x * scale_factor + (scale_factor - text_width) // 2
+    cv2.putText(scaled_image, col_number, (x_center, text_height + 5), font, number_font_scale, number_color, number_font_thickness, cv2.LINE_AA)
+    bottom_y = scaled_height - 5
+    cv2.putText(scaled_image, col_number, (x_center, bottom_y), font, number_font_scale, number_color, number_font_thickness, cv2.LINE_AA)
+
+for y in range(height):
+    row_number = str(height - 1 - y)
+    text_size, _ = cv2.getTextSize(row_number, font, number_font_scale, number_font_thickness)
+    text_width, text_height = text_size
+    y_center = y * scale_factor + (scale_factor + text_height) // 2
+    cv2.putText(scaled_image, row_number, (5, y_center), font, number_font_scale, number_color, number_font_thickness, cv2.LINE_AA)
+    right_x = scaled_width - text_width - 5
+    cv2.putText(scaled_image, row_number, (right_x, y_center), font, number_font_scale, number_color, number_font_thickness, cv2.LINE_AA)
+
+# === SAVE THE OUTPUT IMAGE ===
+cv2.imwrite(output_path, scaled_image)
+print(f"Saved scaled image to {output_path}")
+

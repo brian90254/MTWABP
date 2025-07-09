@@ -15,10 +15,31 @@
 
 import cv2
 import numpy as np
-import argparse
+#import argparse
 from datetime import datetime
 import os
 import math
+
+# # ----------------------------
+# # LOAD CONFIG FROM FILE
+# # ----------------------------
+# def load_conversion_ratios(filepath):
+#     ratios = {}
+#     with open(filepath, 'r') as f:
+#         for line in f:
+#             line = line.strip()
+#             if line and not line.startswith("#") and "=" in line:
+#                 key, value = line.split("=", 1)
+#                 key = key.strip()
+#                 value = value.strip()
+#                 try:
+#                     ratios[key] = int(value)
+#                 except ValueError:
+#                     try:
+#                         ratios[key] = float(value)
+#                     except ValueError:
+#                         ratios[key] = value
+#     return ratios
 
 # ----------------------------
 # LOAD CONFIG FROM FILE
@@ -41,13 +62,40 @@ def load_conversion_ratios(filepath):
                         ratios[key] = value
     return ratios
 
-# Parse command-line argument
-parser = argparse.ArgumentParser(description="Create a parametric knit glove pattern BMP with ribbing and cables.")
-parser.add_argument("ratiosFile", help="Path to the ConversionRatios.txt file")
-args = parser.parse_args()
+# Prompt user to choose a config file from the "configs" folder
+configs_dir = "configs"
+config_files = [f for f in os.listdir(configs_dir) if f.endswith(".txt")]
+
+if not config_files:
+    raise FileNotFoundError(f"No config files found in '{configs_dir}' folder.")
+
+print("Select a configuration file:")
+for idx, fname in enumerate(config_files):
+    print(f"  {idx + 1}: {fname}")
+
+selected_index = input("Enter the number of the config file to use: ").strip()
+try:
+    selected_index = int(selected_index)
+    if not (1 <= selected_index <= len(config_files)):
+        raise ValueError
+except ValueError:
+    raise ValueError("Invalid selection. Please enter a number from the list.")
+
+selected_file = config_files[selected_index - 1]
+selected_path = os.path.join(configs_dir, selected_file)
 
 # Load all parameters
-ratios = load_conversion_ratios(args.ratiosFile)
+ratios = load_conversion_ratios(selected_path)
+
+
+# # Parse command-line argument
+# parser = argparse.ArgumentParser(description="Create a parametric knit glove pattern BMP with ribbing and cables.")
+# parser.add_argument("ratiosFile", help="Path to the ConversionRatios.txt file")
+# args = parser.parse_args()
+
+# Load all parameters
+#ratios = load_conversion_ratios(args.ratiosFile)
+#ratios = load_conversion_ratios(selected_path)
 try:
     lengthPalm         = float(ratios["lengthPalm"])
     circumferencePalm  = float(ratios["circumferencePalm"])
