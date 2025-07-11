@@ -1,0 +1,1 @@
+function flip(coords) = [CAM_PLATE_WIDTH - coords[0], coords[1], coords[2]];
