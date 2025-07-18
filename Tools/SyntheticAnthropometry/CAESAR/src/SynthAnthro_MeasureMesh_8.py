@@ -11,7 +11,7 @@
 # IF NEEDED, COMMAND TO DOWNLOAD ALL REQS FOR THIS PROJECT:
 #   pip3 install -r requirements.txt
 # THEN RUN THE CODE IN "src"
-#   python src/SynthAnthro_MeasureMesh_1.py
+#   python src/SynthAnthro_MeasureMesh_8.py
 
 import cv2
 import numpy as np
@@ -27,20 +27,9 @@ import random
 
 # Configuration
 obj_directory = "OBJ/TEST"
-measurement_filename = "measurements2.txt"
-
-
-# import math
-# import os
-# import pandas as pd
-# import cv2
-# import numpy as np
-
-# Configuration
-# obj_directory = "OBJ/TEST"
-# measurement_filename = "measurements.txt"
-
-output_csv = "measurement_results_wide_pandas.csv"
+#measurement_filename = "measurements2.txt"
+measurement_filename = "CSV/SynthAnthro_CAESAR_POMs_1.csv"
+output_csv = "MEASUREMENTS/measurementResults_TEST.csv"
 
 def load_vertices_from_obj(filepath):
     vertices = []
@@ -161,9 +150,9 @@ def process_files_with_combined_overlay_and_csv():
             results.append(result_row)
 
             #show_combined_measurements(vertices, measurements)
-            #show_combined_measurements(vertices, measurements, projection_axis="xy")
+            show_combined_measurements(vertices, measurements, projection_axis="xy", window_name="Combined Measurement X-Y")
             #show_combined_measurements(vertices, measurements, projection_axis="xz")
-            #show_combined_measurements(vertices, measurements, projection_axis="yz")
+            #show_combined_measurements(vertices, measurements, projection_axis="yz", window_name="Combined Measurement Y-Z")
 
     df = pd.DataFrame(results)
     df.to_csv(output_csv, index=False)
