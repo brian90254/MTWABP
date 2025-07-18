@@ -11,7 +11,9 @@
 # IF NEEDED, COMMAND TO DOWNLOAD ALL REQS FOR THIS PROJECT:
 #   pip3 install -r requirements.txt
 # THEN RUN THE CODE IN "src"
-#   python src/SynthAnthro_MeasureMesh_8.py
+#   python src/SynthAnthro_MeasureMesh_8_MALE.py
+# ...or
+#   python src/SynthAnthro_MeasureMesh_8_FEMALE.py
 
 import cv2
 import numpy as np
@@ -26,10 +28,10 @@ import numpy as np
 import random
 
 # Configuration
-obj_directory = "OBJ/TEST"
+obj_directory = "OBJ/SPRING_MALE"
 #measurement_filename = "measurements2.txt"
 measurement_filename = "CSV/SynthAnthro_CAESAR_POMs_2.csv"
-output_csv = "MEASUREMENTS/measurementResults_TEST.csv"
+output_csv = "MEASUREMENTS/measurementResults_SPRING_MALE.csv"
 
 def load_vertices_from_obj(filepath):
     vertices = []
@@ -151,7 +153,7 @@ def process_files_with_combined_overlay_and_csv():
 
             #show_combined_measurements(vertices, measurements)
             #show_combined_measurements(vertices, measurements, projection_axis="xy", window_name="Combined Measurement X-Y")
-            show_combined_measurements(vertices, measurements, projection_axis="xz")
+            #show_combined_measurements(vertices, measurements, projection_axis="xz")
             #show_combined_measurements(vertices, measurements, projection_axis="yz", window_name="Combined Measurement Y-Z")
 
     df = pd.DataFrame(results)
