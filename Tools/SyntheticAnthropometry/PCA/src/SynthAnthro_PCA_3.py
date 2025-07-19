@@ -32,7 +32,7 @@ delimiter = ","  # Use '\t' if your CSV is comma-separated
 #filename = "your_data.csv"  # <- Change to your actual filename
 #filename = "CSV/SynthAnthro_SizeAndShape_CSV_MALE_11.csv"  # <- Change to your actual filename
 #filename = "CSV/SynthAnthro_ShapeOnly_CSV_MALE_5.csv"  # <- Change to your actual filename
-filename = "CSV/SynthAnthro_SizeAndShape_CSV_FEMALE_3.csv"  # <- Change to your actual filename
+filename = "CSV/SynthAnthro_SizeAndShape_CSV_FEMALE_4.csv"  # <- Change to your actual filename
 
 #df = pd.read_csv(filename, sep="\t")  # Use sep="," if it's comma-separated
 #df = pd.read_csv(filename, sep=",")  # Use sep="\t" if it's tab-separated
