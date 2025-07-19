@@ -27,7 +27,7 @@ delimiter = ","  # Use '\t' if your CSV is comma-separated
 # === Load your CSV file ===
 #filename = "your_data.csv"  # <- Change to your actual filename
 #filename = "CSV/SynthAnthro_SizeAndShape_CSV_MALE_1.csv"  # <- Change to your actual filename
-filename = "CSV/SynthAnthro_ShapeOnly_CSV_MALE_2.csv"  # <- Change to your actual filename
+filename = "CSV/SynthAnthro_ShapeOnly_CSV_MALE_5.csv"  # <- Change to your actual filename
 
 
 #df = pd.read_csv(filename, sep="\t")  # Use sep="," if it's comma-separated
