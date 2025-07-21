@@ -21,7 +21,7 @@ import numpy as np
 # --- CONFIGURATION ---
 # model_csv = 'models.csv'         # Path to the CSV with the 10 standard models
 # target_csv = 'target.csv'        # Path to the target CSV file
-model_csv = 'CSV/measurementResults_BLENDED_MALE.csv'         # Path to the CSV with the 10 standard models
+model_csv = 'CSV/measurementResults_BLENDED_FEMALE.csv'         # Path to the CSV with the 10 standard models
 target_csv = 'CSV/measurementTarget_Test_1_FEMALE.csv'        # Path to the target CSV file
 learning_rate = 0.01
 #max_iterations = 10000

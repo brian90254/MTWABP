@@ -167,9 +167,9 @@ import numpy as np
 
 # Directories
 #INPUT_DIR = "blended_output"
-INPUT_DIR = "OBJ/BLENDED_MALE"
-CSV_FILE = "CSV/SynthAnthro_Target_Test2_MALE.csv"
-OUTPUT_FILE = "OBJ/DECODED/SynthAnthro_Target_Test1_MALE.obj"
+INPUT_DIR = "OBJ/BLENDED_FEMALE"
+CSV_FILE = "CSV/SynthAnthro_Target_Test1_FEMALE.csv"
+OUTPUT_FILE = "OBJ/DECODED/SynthAnthro_Target_Test1_FEMALE.obj"
 
 def load_obj(filepath):
     vertices, normals, faces = [], [], []
