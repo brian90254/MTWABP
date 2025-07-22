@@ -11,10 +11,16 @@
 # IF NEEDED, COMMAND TO DOWNLOAD ALL REQS FOR THIS PROJECT:
 #   pip3 install -r requirements.txt
 # THEN RUN THE CODE IN "src"
-#   python src/SynthAnthro_MeasureMesh_8_MALE.py
+#   python src/SynthAnthro_MeasureMesh_10.py
+# COMMAND LINE WILL FIRST PROMPT FOR AN "OBJ" SOURCE DIRECTORY
+#   [1] == TEST
+# COMMAND LINE WITH SECOND PROMPT YOU FOR A MEASUREMENT LIST FILE IN THE "CSV" DIRECORY
+#   [1] == SynthAnthro_CAESAR_POMs_2.csv
+#
 # ...or
-#   python src/SynthAnthro_MeasureMesh_8_FEMALE.py
-# BRIAN COX copyright 2025
+#
+# RUN THE "command" SCRIPT DIRECTLY, DOUBLE CLICK:
+#   runSynthAnthro_MeasureMesh.command
 
 import cv2
 import numpy as np
