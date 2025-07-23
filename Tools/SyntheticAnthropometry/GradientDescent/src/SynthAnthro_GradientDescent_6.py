@@ -12,6 +12,11 @@
 #   pip3 install -r requirements.txt
 # THEN RUN THE CODE IN "src"
 #   python src/SynthAnthro_GradientDescent_6.py
+#
+# ...or
+#
+# USE THE COMMAND FILE, DOUBLE CLICK:
+#   runSynthAnthro_GradientDescent.command
 
 import cv2
 import numpy as np
@@ -152,6 +157,21 @@ print("\nOptimized Weights:")
 for name, w in zip(model_names, weights):
     print(f"{name}: {w:.4f}")
 
+
+# --- SAVE OUTPUT FILE ---
 # Save weights to CSV
 output_df = pd.DataFrame({'File': model_names, 'Weight': weights})
-output_df.to_csv('optimized_weights.csv', index=False)
+#output_df.to_csv('optimized_weights.csv', index=False)
+
+# Generate output filename from target file
+target_basename = os.path.basename(target_csv)  # e.g., "measurementTarget_Test_3_MALE.csv"
+output_filename = "output_" + target_basename
+output_path = os.path.join("CSV", "OUTPUTS", output_filename)
+
+# Ensure output directory exists
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+# Save weights to CSV
+output_df.to_csv(output_path, index=False)
+print(f"\nSaved optimized weights to {output_path}")
+
