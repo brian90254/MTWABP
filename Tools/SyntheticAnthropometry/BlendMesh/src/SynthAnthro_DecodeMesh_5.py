@@ -12,6 +12,10 @@
 #   pip3 install -r requirements.txt
 # THEN RUN THE CODE IN "src"
 #   python src/SynthAnthro_BlendMesh_5.py
+#
+# ...or
+# RUN THE COMMAND SCRIPT DIRECTLY
+#   runSynthAnthro_DecodeMesh.command
 
 
 import os
@@ -138,11 +142,10 @@ def main():
     print(f"Blending {len(files_and_weights)} files using weighted average...")
     v_avg, n_avg, faces = weighted_average(files_and_weights)
 
-    # Generate output filename from target file
-    output_basename = os.path.basename(CSV_FILE)  # e.g., "SynthAnthro_Target_Test3_MALE.obj"
-    #output_filename = "output_" + output_basename
-    output_filename = output_basename
-    #output_path = os.path.join("OBJ", "DECODED", output_filename)
+
+    # Generate output filename from CSV_FILE, replacing .csv with .obj
+    base_name = os.path.splitext(os.path.basename(CSV_FILE))[0]  # e.g., "SynthAnthro_Target_Test3_MALE"
+    output_filename = base_name + ".obj"
     OUTPUT_FILE = os.path.join("OBJ", "DECODED", output_filename)
 
     write_obj(OUTPUT_FILE, v_avg, n_avg, faces)
