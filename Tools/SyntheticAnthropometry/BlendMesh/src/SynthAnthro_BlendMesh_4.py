@@ -11,7 +11,7 @@
 # IF NEEDED, COMMAND TO DOWNLOAD ALL REQS FOR THIS PROJECT:
 #   pip3 install -r requirements.txt
 # THEN RUN THE CODE IN "src"
-#   python src/SynthAnthro_BlendMesh_1.py
+#   python src/SynthAnthro_BlendMesh_4.py
 
 import os
 import sys
@@ -25,14 +25,47 @@ CSV_DIR = "CSV"
 #OUTPUT_DIR = "OBJ/BLENDED_MALE"
 #CSV_FILENAME = "SynthAnthro_AggregateExtremes_MALE_1.csv"  # You can rename this as needed
 
-def prompt_for_obj_directory():
+def prompt_for_obj_input_directory():
     base_dir = "OBJ"
-    subdirs = [d for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d))]
+    subdirs = [
+        d for d in os.listdir(base_dir)
+        if os.path.isdir(os.path.join(base_dir, d)) and d.startswith("SPRING_")
+    ]
+
+    subdirs.sort()  # <-- Sort alphabetically
+    
     if not subdirs:
-        print(f"No subdirectories found in {base_dir}")
+        print(f"No 'SPRING_' subdirectories found in {base_dir}")
         sys.exit(1)
 
-    print(f"\nAvailable OBJ subdirectories in '{base_dir}':")
+    print(f"\nAvailable OBJ subdirectories in '{base_dir}' that start with 'SPRING_':")
+    for i, d in enumerate(subdirs):
+        print(f"[{i}] {d}")
+    
+    while True:
+        try:
+            index = int(input("\nEnter the number of the OBJ subdirectory to process: ").strip())
+            if 0 <= index < len(subdirs):
+                return os.path.join(base_dir, subdirs[index])
+            else:
+                print("Invalid selection. Try again.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+def prompt_for_obj_output_directory():
+    base_dir = "OBJ"
+    subdirs = [
+        d for d in os.listdir(base_dir)
+        if os.path.isdir(os.path.join(base_dir, d)) and d.startswith("BLENDED_")
+    ]
+
+    subdirs.sort()  # <-- Sort alphabetically
+
+    if not subdirs:
+        print(f"No 'BLENDED_' subdirectories found in {base_dir}")
+        sys.exit(1)
+
+    print(f"\nAvailable OBJ subdirectories in '{base_dir}' that start with 'BLENDED_':")
     for i, d in enumerate(subdirs):
         print(f"[{i}] {d}")
     
@@ -48,12 +81,18 @@ def prompt_for_obj_directory():
 
 def prompt_for_measurement_file():
     base_dir = "CSV"
-    files = [f for f in os.listdir(base_dir) if f.lower().endswith('.csv')]
+    files = [
+        f for f in os.listdir(base_dir)
+        if f.startswith("SynthAnthro_AggregateExtremes") and f.lower().endswith('.csv')
+    ]
+
+    files.sort()  # <-- Sort alphabetically
+
     if not files:
-        print(f"No CSV files found in {base_dir}")
+        print(f"No CSV files starting with 'SynthAnthro_AggregateExtremes' found in {base_dir}")
         sys.exit(1)
 
-    print(f"\nAvailable CSV files in '{base_dir}':")
+    print(f"\nAvailable CSV files in '{base_dir}' starting with 'SynthAnthro_AggregateExtremes':")
     for i, f in enumerate(files):
         print(f"[{i}] {f}")
     
@@ -135,15 +174,14 @@ def main():
         print(f"→ Saved to {out_path}")
 
 if __name__ == "__main__":
-    #obj_directory = prompt_for_obj_directory()
     # -- Get the OBJ directory with the indexex meshes
-    print("\nPlease choose SPRING_MALE or SPRING_FEMALE")
-    OBJ_DIR = prompt_for_obj_directory()
-    #measurement_filename = prompt_for_measurement_file()
+    print("\nPlease choose SPRING_MALE or SPRING_FEMALE as the INPUT directory")
+    OBJ_DIR = prompt_for_obj_input_directory()
     # -- Get the CSV file with the OBJ file names
-    print("\nPlease choose an Aggregated Extremes file")
+    print("\nPlease choose a CSV file of IDs to aggregate")
     CSV_FILENAME = prompt_for_measurement_file()
     # -- Get the OBJ directory to output blended meshes to
-    print("\nPlease choose BLENDED_MALE or BLENDED_FEMALE")
-    OUTPUT_DIR = prompt_for_obj_directory()
+    print("\nPlease choose BLENDED_MALE or BLENDED_FEMALE as the OUTPUT directory")
+    OUTPUT_DIR = prompt_for_obj_output_directory()
+    # -- MAIN --
     main()
