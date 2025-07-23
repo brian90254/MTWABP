@@ -1,35 +1,14 @@
-# Parametric Patterning
- Parametric Knit Glove Pattern coding in Python with OpenCV visualization
+BRIAN COX copyright 2025
 
- 1. Clone the repro
- 2. Make sure you have Python 3.9 available
- 3. Create a venv in the project folder using the terminal command "python3.9 -m venv venv39"
- 4. Activate the venv with "source venv39/bin/activate" from the project folder
- 5. If OpenCV is not installed, type "pip3 install opencv-python" in the active environment.
- 6. Run the example python script from the terminal with "python src/ParametricPattern_KnitGlove_1.py 39 52"
- 7. By default, because Python 3.9 was used to create the venv, using "python" should equate to "python3.9".
- 8. Check the output file, a BMP which should end up in your project directory
-
-Example to run this code:
-- Terminal:
-- - Navigate to the project folder
-- - Activate venv
-- - - "source venv39/bin/activate"
-- - Run script, passing arguments (S==snake, B==braid, L==left, R==right)
-- - - "python src/ParametricPattern_KnitGlove_2.py 11.5 23 S L"
-- - Output should be a BMP 
-
-The ChatGPT convo that created the above example file can be found here:
-https://chatgpt.com/share/683e01f7-d0bc-8004-9f1a-12d07fe473d0
-
-With rib for wrist and fingers here:
-https://chatgpt.com/share/683e01f7-d0bc-8004-9f1a-12d07fe473d0
-
-Scaling up to a printable version with annotations:
-https://chatgpt.com/share/683f9fd5-b194-8004-a6ae-31c484fe4a4a
-
-
-
-
-
- 
+EXAMPLE TO RUN THIS SCRIPT:
+---------------------------
+IN TERMINAL, NAVIGATE TO THE PROJECT FOLDER
+  cd Dropbox/GitHub/MTWABP/Tools/SyntheticAnthropometry/PCA
+IF NEEDED, COMMAND TO MAKE A VENV:
+  python3.9 -m venv venv39
+ACTIVATE THE VENV:
+  source venv39/bin/activate
+IF NEEDED, COMMAND TO DOWNLOAD ALL REQS FOR THIS PROJECT:
+  pip3 install -r requirements.txt
+THEN RUN THE CODE IN "src"
+  python src/SynthAnthro_PCA_4.py
