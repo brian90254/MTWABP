@@ -18,7 +18,6 @@
 #   [1] == SynthAnthro_CAESAR_POMs_2.csv
 #
 # ...or
-#
 # RUN THE "command" SCRIPT DIRECTLY, DOUBLE CLICK:
 #   runSynthAnthro_MeasureMesh.command
 
