@@ -11,11 +11,7 @@
 # IF NEEDED, COMMAND TO DOWNLOAD ALL REQS FOR THIS PROJECT:
 #   pip3 install -r requirements.txt
 # THEN RUN THE CODE IN "src"
-#   python src/SynthAnthro_GradientDescent_1.py
-#
-
-# import pandas as pd
-# import numpy as np
+#   python src/SynthAnthro_GradientDescent_6.py
 
 import cv2
 import numpy as np
@@ -29,7 +25,6 @@ def prompt_for_model_file():
     base_dir = "CSV/MODELS"
     files = [
         f for f in os.listdir(base_dir)
-        #if f.startswith("SynthAnthro_AggregateExtremes") and f.lower().endswith('.csv')
         if f.lower().endswith('.csv')
     ]
 
@@ -57,7 +52,6 @@ def prompt_for_target_file():
     base_dir = "CSV/TARGETS"
     files = [
         f for f in os.listdir(base_dir)
-        #if f.startswith("SynthAnthro_AggregateExtremes") and f.lower().endswith('.csv')
         if f.lower().endswith('.csv')
     ]
 
@@ -115,35 +109,6 @@ if len(target) != num_features:
 # --- INITIALIZE WEIGHTS ---
 weights = np.random.uniform(-0.1, 0.1, num_models)
 weights /= np.sum(weights)  # normalize
-
-# # --- GRADIENT DESCENT LOOP ---
-# errors = []
-# for iteration in range(max_iterations):
-#     prediction = data_T @ weights
-#     error_vector = prediction - target
-#     rms_error = np.sqrt(np.mean(error_vector ** 2))
-#     errors.append(rms_error)
-
-#     # Main gradient
-#     gradient = 2 * (data @ error_vector) / num_features
-
-#     # Penalty gradient to pull HIGH/LOW pairs together
-#     penalty_gradient = np.zeros_like(weights)
-#     for i in range(0, num_models, 2):  # assuming HIGH is i, LOW is i+1
-#         delta = weights[i] - weights[i+1]
-#         penalty_gradient[i]     += 2 * penalty_lambda * delta
-#         penalty_gradient[i + 1] -= 2 * penalty_lambda * delta
-
-#     # Combine gradients
-#     total_gradient = gradient + penalty_gradient
-
-#     # Update weights
-#     weights -= learning_rate * total_gradient
-
-#     # Convergence check
-#     if iteration > 0 and abs(errors[-2] - rms_error) < tolerance:
-#         print(f"Converged at iteration {iteration}")
-#         break
 
 # --- HANDLE MISSING TARGET VALUES ---
 valid_mask = ~np.isnan(target)
