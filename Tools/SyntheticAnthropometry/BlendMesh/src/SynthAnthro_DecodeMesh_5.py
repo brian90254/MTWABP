@@ -17,16 +17,9 @@
 # RUN THE COMMAND SCRIPT DIRECTLY
 #   runSynthAnthro_DecodeMesh.command
 
-
 import os
 import csv
 import numpy as np
-
-# Directories
-#INPUT_DIR = "blended_output"
-# INPUT_DIR = "OBJ/BLENDED_MALE"
-# CSV_FILE = "CSV/SynthAnthro_Target_Test3_MALE.csv"
-# OUTPUT_FILE = "OBJ/DECODED/SynthAnthro_Target_Test3_MALE.obj"
 
 def prompt_for_obj_input_directory():
     base_dir = "OBJ"
