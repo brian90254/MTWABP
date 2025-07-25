@@ -3,4 +3,4 @@ cd Dropbox/GitHub/MTWABP/Tools/SyntheticAnthropometry/GradientDescent/
 
 source venv39/bin/activate
 
-python src/SynthAnthro_GradientDescent_6.py
+python src/SynthAnthro_GradientDescent_7.py

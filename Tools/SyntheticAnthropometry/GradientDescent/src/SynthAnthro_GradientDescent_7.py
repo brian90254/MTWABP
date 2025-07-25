@@ -90,7 +90,8 @@ learning_rate = 0.01
 max_iterations = 1000000
 tolerance = 1e-10
 
-penalty_lambda = 0.0001  # try 0.01–0.5, adjust for strength of penalty
+#penalty_lambda = 0.0001  # try 0.01–0.5, adjust for strength of penalty
+penalty_lambda = 0.0002  # try 0.01–0.5, adjust for strength of penalty
 
 # --- LOAD MODEL DATA ---
 df_models = pd.read_csv(model_csv)
@@ -132,12 +133,16 @@ for iteration in range(max_iterations):
     masked_data = data[:, valid_mask]  # shape: (num_models, num_valid_features)
     gradient = 2 * (masked_data @ error_vector) / len(valid_indices)
 
-    # Penalty gradient to pull HIGH/LOW pairs together
-    penalty_gradient = np.zeros_like(weights)
-    for i in range(0, num_models, 2):  # assuming HIGH is i, LOW is i+1
-        delta = weights[i] - weights[i + 1]
-        penalty_gradient[i]     += 2 * penalty_lambda * delta
-        penalty_gradient[i + 1] -= 2 * penalty_lambda * delta
+    # # Penalty gradient to pull HIGH/LOW pairs together
+    # penalty_gradient = np.zeros_like(weights)
+    # for i in range(0, num_models, 2):  # assuming HIGH is i, LOW is i+1
+    #     delta = weights[i] - weights[i + 1]
+    #     penalty_gradient[i]     += 2 * penalty_lambda * delta
+    #     penalty_gradient[i + 1] -= 2 * penalty_lambda * delta
+
+    # Penalty gradient to pull all weights toward the average
+    average_weight = np.mean(weights)
+    penalty_gradient = 2 * penalty_lambda * (weights - average_weight)
 
     # Combine gradients
     total_gradient = gradient + penalty_gradient
