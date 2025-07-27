@@ -4,6 +4,12 @@ OBJ/
 # Screen Cap files
 MOV/
 
+# FBX files
+FBX/
+
+# Blender files
+BLENDER/
+
 # Virtual environment
 venv/
 .venv/
