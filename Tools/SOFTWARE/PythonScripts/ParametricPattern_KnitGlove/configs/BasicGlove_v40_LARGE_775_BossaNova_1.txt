@@ -3,7 +3,7 @@
 # ----------------------------
 lengthPalm = 11.5
 circumferencePalm = 23
-patternType = C3
+patternType = B
 handedness = L
 palmWidthRatio = 1.696
 #palmHeightRatio = 2.261
