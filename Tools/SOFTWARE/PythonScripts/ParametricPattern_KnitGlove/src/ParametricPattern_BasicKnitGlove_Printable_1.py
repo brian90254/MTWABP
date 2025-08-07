@@ -159,7 +159,9 @@ numberTwoByTwoCables = math.floor(((palmWidth / 2) - 4) / 5)
 numberBraidedCables = math.floor(((palmWidth / 2) - 4) / 7)
 # TWO BY THREE CABLES == 3 + 3 + 1 for offset = 7
 numberTwoByThreeCables = math.floor(((palmWidth / 2) - 4) / 7)
-
+# === ADDED 250806 ===
+numberCandyCaneCables = math.floor(((palmWidth / 2) - 4) / 3)
+# --------------------
 
 # ----------------------
 # === THUMB DROP LEFT & RIGHT (simplified calc) ===
@@ -263,6 +265,9 @@ print(f"isCableLinkOdd = {isCableLinkOdd}")
 
 braided_w, braided_h = 6, 3
 snake_w, snake_h = 4, 3
+# === ADDED 250806 ===
+candycane_w, candycane_h = 2, 3
+# --------------------
 start_offset_x = 5
 
 # NUMBER OF CABLES
@@ -274,6 +279,8 @@ elif patternType == "C2":
     numCables = numberTwoByTwoCables
 elif patternType == "C3":
     numCables = numberTwoByThreeCables
+elif patternType == "CC":
+    numCables = numberCandyCaneCables
 else:
     numCables = 0
 
@@ -398,7 +405,8 @@ lookupTableOddRightX3 = {
 }
 
 cable_x = start_x + start_offset_x
-image[palm_cable_start_y:palm_cable_end_y + 1, cable_x] = (0, 255, 0)
+if patternType in ("B", "C3", "S", "C2"):
+    image[palm_cable_start_y:palm_cable_end_y + 1, cable_x] = (0, 255, 0)
 
 for i in range(numCables):
     # print(f"numCable = {i}")
@@ -769,7 +777,17 @@ for i in range(numCables):
                         
 
     #cable_right_x = cable_x + ((braided_w + 1) if patternType == "B" else (snake_w + 1))
-    cable_right_x = cable_x + ((braided_w + 1) if patternType in ("B", "C3") else (snake_w + 1))
+    #cable_right_x = cable_x + ((braided_w + 1) if patternType in ("B", "C3") else (snake_w + 1))
+    # ===
+    width_map = {
+    'B': braided_w + 1,
+    'C3': braided_w + 1,
+    'CC': candycane_w + 1,
+    'S': snake_w + 1
+    }
+    cable_right_x = cable_x + width_map.get(patternType, snake_w + 1)  # Default to snake if unknown
+    #cable_right_x = cable_x + width_map.get(patternType, 5)  # Default to snake if unknown
+    # ---
     image[palm_cable_start_y:palm_cable_end_y + 1, cable_right_x] = (0, 255, 0)
 
 
@@ -803,7 +821,16 @@ print(f"  castoffRow:       {castoffRow} (added to image height)")
 print(f"  fingerRibHeight:  {fingerRibHeight} (odd, not part of image size)")
 print(f"  thumbDrop:        {thumbDrop} (even)")
 print(f"  buffer:           {buffer}px")
-print(f"  Pattern type:     {'Snake' if patternType == 'S' else 'Braided'}")
+# === ADDED 250806
+patternNames = {
+    'S': 'Snake',
+    'C3': 'Cable3',
+    'B': 'Braided',
+    'CC': 'CandyCane'
+}
+print(f"  Pattern type:     {patternNames.get(patternType, 'Unknown')}")
+# ---
+#print(f"  Pattern type:     {'Snake' if patternType == 'S' else 'Braided'}")
 print(f"    → Snake cables:   {numberSnakeCables}")
 print(f"    → Braided cables: {numberBraidedCables}")
 print(f"  THUMB DROP:       {num_thumb_drops} stacked rectangles")
