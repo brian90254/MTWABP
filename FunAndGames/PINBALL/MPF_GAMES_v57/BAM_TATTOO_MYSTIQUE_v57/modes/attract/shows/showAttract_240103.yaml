@@ -1,0 +1,241 @@
+#show_version=6
+
+# ---------------------
+# SLIDES::IRON MAIDEN
+# ---------------------
+- time: 0
+  events:
+    eventShowAttractIronMaiden2
+
+- time: '+4'
+  events:
+    eventShowAttractIronMaiden3
+
+# ---------------------
+# SLIDES::6MDM
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttract6MDM2
+
+- time: '+4'
+  events:
+    eventShowAttract6MDM3
+
+# ---------------------
+# SLIDES::STAR TREK
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractStarTrek2
+
+- time: '+4'
+  events:
+    eventShowAttractStarTrek3
+
+# ---------------------
+# SLIDES::STRIKES SPARES
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractStrikesSpares2
+
+- time: '+4'
+  events:
+    eventShowAttractStrikeSpares3
+
+# ---------------------
+# SLIDES::VIKING
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractViking2
+
+- time: '+4'
+  events:
+    eventShowAttractViking3
+
+# ---------------------
+# SLIDES::CAPT FANTASTIC
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractCaptFantastic2
+
+- time: '+4'
+  events:
+    eventShowAttractCaptFantastic3
+
+# ---------------------
+# SLIDES::EIGHT BALL
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractEightBall2
+
+- time: '+4'
+  events:
+    eventShowAttractEightBall3
+
+# ---------------------
+# SLIDES::FLASH GORDON
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractFlashGordon2
+
+- time: '+4'
+  events:
+    eventShowAttractFlashGordon3
+
+# ---------------------
+# SLIDES::GLOBETROTTERS
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractGlobetrotters2
+
+- time: '+4'
+  events:
+    eventShowAttractGlobetrotters3
+
+# ---------------------
+# SLIDES::HULK
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractHulk2
+
+- time: '+4'
+  events:
+    eventShowAttractHulk3
+
+# ---------------------
+# SLIDES::JAMES BOND
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractJamesBond2
+
+- time: '+4'
+  events:
+    eventShowAttractJamesBond3
+
+# ---------------------
+# SLIDES::KISS
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractKiss2A
+- time: '+1'
+  events:
+    eventShowAttractKiss2B
+- time: '+1'
+  events:
+    eventShowAttractKiss2C
+- time: '+1'
+  events:
+    eventShowAttractKiss2D
+
+- time: '+1'
+  events:
+    eventShowAttractKiss3A
+- time: '+1'
+  events:
+    eventShowAttractKiss3B
+- time: '+1'
+  events:
+    eventShowAttractKiss3C
+- time: '+1'
+  events:
+    eventShowAttractKiss3D
+
+# ---------------------
+# SLIDES::MATA HARI
+# ---------------------
+- time: '+1'
+  events:
+    eventShowAttractMataHari2
+
+- time: '+4'
+  events:
+    eventShowAttractMataHari3
+
+# ---------------------
+# SLIDES::PLAYBOY
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractPlayboy2
+
+- time: '+4'
+  events:
+    eventShowAttractPlayboy3
+
+# ---------------------
+# SLIDES::SILVERBALL MANIA
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractSilverballMania2
+
+- time: '+4'
+  events:
+    eventShowAttractSilverballMania3
+
+# ---------------------
+# SLIDES::SPIDERMAN
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractSpiderman2
+
+- time: '+4'
+  events:
+    eventShowAttractSpiderman3
+
+# ---------------------
+# SLIDES::STERN MAGIC
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractSternMagic2
+
+- time: '+4'
+  events:
+    eventShowAttractSternMagic3
+
+# ---------------------
+# SLIDES::SUPERMAN
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractSuperman2
+
+- time: '+4'
+  events:
+    eventShowAttractSuperman3
+
+# ---------------------
+# SLIDES::VOLTAN
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractVoltan2
+
+- time: '+4'
+  events:
+    eventShowAttractVoltan3
+
+# ---------------------
+# SLIDES::TOTEM
+# ---------------------
+- time: '+4'
+  events:
+    eventShowAttractTotem2
+
+- time: '+4'
+  events:
+    eventShowAttractTotem3
+
+- time: '+4'

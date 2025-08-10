@@ -1,0 +1,236 @@
+#config_version=6
+
+# ---------------
+# DISPLAYS::KIVY
+# ---------------
+kivy_config:
+  kivy:
+    desktop: 1
+    exit_on_escape: true
+    pause_on_minimize: 0
+    log_dir:
+    window_icon:
+  graphics:
+    borderless: true
+    window_state: visible
+    # visible, hidden, maximized, minimized
+    fbo: hardware
+    # hardware, software, force-hardware
+    left: 0
+    top: 0
+    width: 3840
+    height: 1080
+    #width: 1920
+    #height: 540
+    maxfps: 30
+    multisamples: 2
+    position: custom
+    # auto, custom
+    show_cursor: false
+    resizable: false
+    rotation: 0
+    
+# -----------------
+# DISPLAYS::WINDOWS
+# -----------------
+window:
+  # --------------------------
+  # DISPLAYS::WINDOWS::BOOMBOX
+  # --------------------------
+  # width: 3840
+  # height: 1080
+  # fullscreen: true
+  ## --------------------------
+  # DISPLAYS::WINDOWS::LAPTOP
+  # --------------------------
+  width: 1920
+  height: 540
+  fullscreen: false
+  # --------------------------
+  title: My first FAST game
+  resizable: true
+  borderless: true
+  exit_on_escape: true
+  no_window: false
+
+# -----------------
+# DISPLAYS::DISPLAYS
+# -----------------
+displays:
+  window:
+    width: 3840
+    height: 1080
+    default: true
+    round_anchor_x: left
+    round_anchor_y: bottom
+  displayDMD:
+    width: 240
+    height: 135
+  displayBackglass:
+    width: 1920
+    height: 1080
+  # THIS IS A TEST FOR DISPLAY
+  # VIDEO ON TOP OF DMD
+  displayVideoDMD:
+    width: 1920
+    height: 1080
+    
+    
+# *****************
+# -----------------
+# SLIDES
+# -----------------
+# *****************
+slides:
+  # -----------------
+  # DISPLAYS::SLIDES::DMD::LAYOUT
+  # -----------------
+  slideLayout:
+    target: window
+    background_color: yellow
+    widgets:
+      
+      # DMD
+      - type: display
+        width: 1920
+        height: 1080
+        source_display: displayDMD
+        x: 0
+        y: 0
+        z: 100
+        anchor_y: bottom
+        anchor_x: left
+        effects:
+          - type: pixelate
+            pixel_size: 8
+          - type: gain
+            gain: 1.0
+          - type: dot_filter
+            dots_x: 240
+            dots_y: 135
+            background_color: '000000'
+            dot_size: 0.87
+
+        # BACKGLASS
+      - type: display
+        width: 1920
+        height: 1080
+        source_display: displayBackglass
+        x: 1920
+        y: 0
+        z: 100
+        anchor_y: bottom
+        anchor_x: left
+        
+        
+  # -----------------
+  # DISPLAYS::SLIDES::VIDEO::LAYOUT
+  # -----------------
+  slideVideoLayout:
+    target: window
+    background_color: yellow
+    widgets:
+      
+        # THIS IS A TEST FOR DISPLAY
+        # VIDEO ON TOP OF DMD
+      - type: display
+        width: 1920
+        height: 1080
+        source_display: displayVideoDMD
+        x: 0
+        y: 0
+        z: 200
+        anchor_y: bottom
+        anchor_x: left
+        
+        
+        # BACKGLASS
+      - type: display
+        width: 1920
+        height: 1080
+        source_display: displayBackglass
+        x: 1920
+        y: 0
+        z: 200
+        anchor_y: bottom
+        anchor_x: left
+        
+        
+  # -----------------
+  # SLIDES::DMD
+  # -----------------
+  slideDisplayDMD:
+    background_color: green
+    widgets:
+    - type: text
+      text: "this is a slide in the displayDMD"
+      style: fontMachineInitOne
+      color: colorFontMachineInitOne
+        
+  slideDisplayDMD2:
+    background_color: '000000'
+    widgets:
+    - type: text
+      text: pause
+      color: '101010'
+      
+  # -----------------
+  # SLIDES::BACKGLASS
+  # -----------------
+  slideDisplayBackglass:
+    background_color: blue
+    widgets:
+    - type: text
+      text: "this is a slide in the DisplayBackglass"
+      style: fontMachineInitOne
+      color: colorFontMachineInitOne
+        
+  slideDisplayBackglass2:
+    widgets:
+    - type: image
+      image: imagebackglass
+      
+  slideVideoBuckRogersTest:
+    target: displayVideoDMD
+    widgets:
+    - type: video
+      video: videoBuckRogersTest
+      auto_play: True
+      volume: 1.0
+      z: 200
+        
+        
+# *****************
+# -----------------
+# SLIDES::PLAYER
+# -----------------
+# *****************
+slide_player:
+  
+  mc_ready:
+    slideLayout:
+      target: window
+    slideDisplayDMD:
+      target: displayDMD
+    slideDisplayBackglass:
+      target: displayBackglass
+      
+  init_done:
+    slideDisplayBackglass2:
+      target: displayBackglass
+    slideDisplayDMD2:
+      target: displayDMD
+      
+  presentSlideVideoLayout:
+    slideLayout:
+      target: window
+      action: remove
+    slideVideoLayout:
+      target: window
+
+  removeSlideVideoLayout:
+    slideVideoLayout:
+      target: window
+      action: remove
+    slideLayout:
+      target: window

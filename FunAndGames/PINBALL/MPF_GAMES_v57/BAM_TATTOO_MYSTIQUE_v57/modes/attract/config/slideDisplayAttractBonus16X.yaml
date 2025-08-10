@@ -1,0 +1,158 @@
+#config_version=6
+
+# *********************
+# TATTOO MYSTIQUE
+# *********************
+
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  # *************************
+  # BONUS 16X
+  # *************************
+  slideDisplayAttractBonus16X:
+    # -----------------------
+    # STAR :: PURPLE
+    - type: image
+      image: imageStar5Purple
+      y: middle
+      x: middle
+      z: 20
+      opacity: 1
+      scale: 0.01
+      rotation: 0
+      animations:
+        # -----------------------
+        # SCALE + ROTATE
+        show_slide:
+          # -----------------------
+          - property: rotation
+            value: 360
+            duration: 2s
+          - property: scale
+            value: 0.8
+            duration: 2s
+            timing: with_previous
+          # -----------------------
+
+    # -----------------------
+    # STAR :: ORANGE
+    - type: image
+      image: imageStar5Orange
+      y: middle
+      x: middle
+      z: 30
+      opacity: 0
+      scale: 0.01
+      rotation: 0
+      animations:
+        # -----------------------
+        # SCALE + ROTATE
+        show_slide:
+        # -----------------------
+          - property: opacity
+            value: 0
+            #duration: 1s
+            duration: 0.5s
+          # -----------------------
+          - property: opacity
+            value: 1
+            duration: 0.1s
+          - property: rotation
+            value: -360
+            duration: 2s
+            timing: with_previous
+          - property: scale
+            value: 0.8
+            duration: 2s
+            timing: with_previous
+          # -----------------------
+
+    # -----------------------
+    # TEXT :: BONUS :: 4X
+    - type: image
+      image: imageBonus16xPurple
+      y: middle
+      x: middle
+      z: 40
+      opacity: 0
+      scale: 0.01
+      rotation: 0
+      animations:
+        # -----------------------
+        # SCALE
+        show_slide:
+        # -----------------------
+          - property: opacity
+            value: 0
+            duration: 1s
+          # -----------------------
+          - property: scale
+            value: 0.15
+            duration: 1s
+          - property: opacity
+            value: 1
+            duration: 0.1s
+            timing: with_previous
+          # -----------------------
+          - property: scale
+            value: 0.15
+            duration: 0.5s
+          # -----------------------
+          - property: scale
+            value: 2
+            duration: 1s
+          - property: opacity
+            value: 0
+            duration: 1s
+            timing: with_previous
+          # -----------------------
+
+    # --------------------
+    # ORANGE INFILL
+    # --------------------
+    - type: rectangle
+      color: 'ff8000'
+      width: 240
+      height: 135
+      x: 120
+      y: 67
+      z: 10
+      opacity: 1
+      animations:
+        # -----------------------
+        # OPACITY
+        show_slide:
+        # -----------------------
+          - property: opacity
+            value: 1
+            duration: 2.5s
+        # -----------------------
+          - property: opacity
+            value: 0
+            duration: 1.5s
+
+    # --------------------
+    # PURPLE INFILL
+    # --------------------
+    - type: rectangle
+      color: '8000ff'
+      width: 240
+      height: 135
+      x: 120
+      y: 67
+      z: 50
+      opacity: 0
+      animations:
+        # -----------------------
+        # OPACITY
+        show_slide:
+        # -----------------------
+          - property: opacity
+            value: 0
+            duration: 2.5s
+        # -----------------------
+          - property: opacity
+            value: 1
+            duration: 1.5s

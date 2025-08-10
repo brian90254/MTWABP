@@ -1,0 +1,256 @@
+#show_version=6
+
+# ---------------------
+# SLIDES::TESTING
+# ---------------------
+- time: 0
+# TEST BLACK SLIDE
+  events:
+    - eventShowDisplayAttractBlack
+    #- eventMakeVisible|100ms
+    - eventMakeVisibleTigerHeadOrange|100ms
+    - playPoolSoundTiger
+
+# - time: "+0.1"
+# # TEST BLACK SLIDE
+#   events:
+#     #- eventShowDisplayAttractBlack
+#     - eventMakeVisible
+
+  # slides:
+  #   slideAnimationTigerPurple:
+  #     target: displayDMD
+  #     widgets:
+  #     - type: image
+  #       image: 150331_TigerHead_medPUR_1
+  #       y: middle
+  #       x: middle
+  #       z: 20
+  #       opacity: 0
+  #       animations:
+  #         add_to_slide:
+  #           - property: opacity
+  #             value: 1
+  #             duration: 3.0s
+
+# - time: '+1'
+#   events:
+#     - eventMakeVisible
+# - time: '+2'
+
+# - time: '+3'
+
+#   events:
+#     #- eventShowDisplayAttractBlack
+#     #- eventMakeVisible|100ms
+#     - eventMakeVisibleTigerHeadPurple
+
+- time: '+3'
+
+# COLLECT BONUS :: 2X
+  events:
+    eventShowDisplayAttractBonus2xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 4X
+#   events:
+#     eventShowDisplayAttractBonus4X
+# - time: '+2'
+
+# COLLECT BONUS :: 4X
+  events:
+    eventShowDisplayAttractBonus4xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 8X
+#   events:
+#     eventShowDisplayAttractBonus8X
+# - time: '+4'
+
+# COLLECT BONUS :: 8X
+  events:
+    eventShowDisplayAttractBonus8xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 16X
+#   events:
+#     eventShowDisplayAttractBonus16X
+# - time: '+4'
+
+# COLLECT BONUS :: 16X
+  events:
+    eventShowDisplayAttractBonus16xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 32X
+#   events:
+#     eventShowDisplayAttractBonus32X
+# - time: '+4'
+
+# COLLECT BONUS :: 32X
+  events:
+    eventShowDisplayAttractBonus32xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 64X
+#   events:
+#     eventShowDisplayAttractBonus64X
+# - time: '+4'
+
+# COLLECT BONUS :: 64X
+  events:
+    eventShowDisplayAttractBonus64xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 128X
+#   events:
+#     eventShowDisplayAttractBonus128X
+# - time: '+4'
+
+# COLLECT BONUS :: 128X
+  events:
+    eventShowDisplayAttractBonus128xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 256X
+#   events:
+#     eventShowDisplayAttractBonus256X
+# - time: '+4'
+
+# COLLECT BONUS :: 256X
+  events:
+    eventShowDisplayAttractBonus256xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 512X
+#   events:
+#     eventShowDisplayAttractBonus512X
+# - time: '+4'
+
+# COLLECT BONUS :: 512X
+  events:
+    eventShowDisplayAttractBonus512xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 1024X
+#   events:
+#     eventShowDisplayAttractBonus1024X
+# - time: '+4'
+
+# COLLECT BONUS :: 1024X
+  events:
+    eventShowDisplayAttractBonus1024xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 2048X
+#   events:
+#     eventShowDisplayAttractBonus2048X
+# - time: '+4'
+
+# COLLECT BONUS :: 2048X
+  events:
+    eventShowDisplayAttractBonus2048xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 4096X
+#   events:
+#     eventShowDisplayAttractBonus4096X
+# - time: '+4'
+
+# COLLECT BONUS :: 4096X
+  events:
+    eventShowDisplayAttractBonus4096xFast
+- time: '+1'
+
+# # COLLECT BONUS :: 8192X
+#   events:
+#     eventShowDisplayAttractBonus8192X
+# - time: '+4'
+
+# COLLECT BONUS :: 8192X
+  events:
+    eventShowDisplayAttractBonus8192xFast
+- time: '+1'
+
+# COLLECT BONUS :: 16384X
+  events:
+    eventShowDisplayAttractBonus16384X
+- time: '+4'
+
+# ----------------------------------
+# COLLECT BONUS :: BASE
+  events:
+    eventShowDisplayAttractCollectBonusBase
+- time: '+3'
+
+# COLLECT BONUS :: SCORE
+  events:
+    eventShowDisplayAttractCollectBonusScore
+- time: '+3'
+
+# COLLECT BONUS :: SUB TOTAL
+  events:
+    eventShowDisplayAttractCollectBonusSubTotal
+- time: '+3'
+
+# COLLECT BONUS :: TITLE
+  events:
+    eventShowDisplayAttractCollectBonusTitle
+- time: '+3'
+
+# COLLECT BONUS :: TOTAL
+  events:
+    eventShowDisplayAttractCollectBonusTotal
+- time: '+3'
+
+# ----------------------
+
+# BALL SAVED
+  events:
+    eventShowDisplayAttractBallSaved
+- time: '+3'
+
+# EXTRA BALL LIT
+  events:
+    eventShowDisplayAttractExtraBallLit
+- time: '+3'
+
+# EXTRA BALL AWARD
+  events:
+    eventShowDisplayAttractExtraBallAward
+- time: '+3'
+
+# ---------------------
+# SLIDES::TattooMystique
+# ---------------------
+  events:
+    eventShowDisplayAttractLast
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractTitle
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractGrandChampion
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractFirstHighScore
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractSecondHighScore
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractTitle
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractThirdHighScore
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractFourthHighScore
+- time: '+3'

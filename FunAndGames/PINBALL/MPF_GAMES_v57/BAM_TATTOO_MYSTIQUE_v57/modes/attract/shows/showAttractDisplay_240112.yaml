@@ -1,0 +1,38 @@
+#show_version=6
+
+# ---------------------
+# SLIDES::TattooMystique
+# ---------------------
+- time: 0
+
+  events:
+    eventShowDisplayAttractLast
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractTitle
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractGrandChampion
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractFirstHighScore
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractSecondHighScore
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractTitle
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractThirdHighScore
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractFourthHighScore
+- time: '+3'

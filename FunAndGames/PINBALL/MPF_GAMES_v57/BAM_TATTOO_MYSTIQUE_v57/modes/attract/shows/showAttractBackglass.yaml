@@ -1,0 +1,35 @@
+#show_version=6
+
+# ---------------------
+# SLIDES::TattooMystique
+# ---------------------
+# START
+- time: 0
+  events:
+    eventShowAttractBackglassTattooMystique5
+
+# FLASH RED EYES
+- time: '+15'
+  events:
+    - eventFlashRedEyes
+    - eventWalkTigerLeft
+    - eventWalkEagleRight
+
+# FLASH SKULL
+- time: '+5'
+  events:
+    eventFlashSkull
+
+# MOVE OUT HANDS
+- time: '+16'
+  events:
+    - eventMoveOutHandLeft
+    - eventMoveOutHandRight
+
+# FLASH SKULL
+- time: '+16'
+  events:
+    - eventFadeGypsy
+    - eventFadeSkull
+
+- time: '+16'

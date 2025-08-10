@@ -1,0 +1,165 @@
+#config_version=6
+
+config:
+# STANDARD SPEED
+- slideCollectExponentialBonus/slideCollectExponentialBonus2X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus4X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus8X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus16X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus32X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus64X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus128X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus256X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus512X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus1024X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus2048X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus4096X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus8192X.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus16384X.yaml
+# FAST SPEED
+- slideCollectExponentialBonus/slideCollectExponentialBonus2xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus4xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus8xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus16xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus32xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus64xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus128xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus256xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus512xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus1024xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus2048xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus4096xFast.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonus8192xFast.yaml
+#- slideCollectExponentialBonus/slideCollectExponentialBonus16384xFast.yaml
+
+# TITLE - BASE - TOTAL
+- slideCollectExponentialBonus/slideCollectExponentialBonusTitle.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonusBase.yaml
+- slideCollectExponentialBonus/slideCollectExponentialBonusTotal.yaml
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+    # ----------------------------
+    eventShowSlideCollectExponentialBonusTitle:
+        slideCollectExponentialBonusTitle:
+            target: displayDMD
+    # ----------------------------
+    eventShowSlideCollectExponentialBonusBase:
+        slideCollectExponentialBonusBase:
+            target: displayDMD
+    # ----------------------------
+    eventShowSlideCollectExponentialBonusTotal:
+        slideCollectExponentialBonusTotal:
+            target: displayDMD
+
+    # TEST BONUS SLIDE ANIMATION
+    eventShowSlideCollectExponentialBonus2X:
+        slideCollectExponentialBonus2X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus2xFast:
+        slideCollectExponentialBonus2xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus4X:
+        slideCollectExponentialBonus4X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus4xFast:
+        slideCollectExponentialBonus4xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus8X:
+        slideCollectExponentialBonus8X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus8xFast:
+        slideCollectExponentialBonus8xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus16X:
+        slideCollectExponentialBonus16X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus16xFast:
+        slideCollectExponentialBonus16xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus32X:
+        slideCollectExponentialBonus32X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus32xFast:
+        slideCollectExponentialBonus32xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus64X:
+        slideCollectExponentialBonus64X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus64xFast:
+        slideCollectExponentialBonus64xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus128X:
+        slideCollectExponentialBonus128X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus128xFast:
+        slideCollectExponentialBonus128xFast:
+            target: displayDMD
+
+  # TEST BONUS SLIDE ANIMATION
+    eventShowSlideCollectExponentialBonus256X:
+        slideCollectExponentialBonus256X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus256xFast:
+        slideCollectExponentialBonus256xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus512X:
+        slideCollectExponentialBonus512X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus512xFast:
+        slideCollectExponentialBonus512xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus1024X:
+        slideCollectExponentialBonus1024X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus1024xFast:
+        slideCollectExponentialBonus1024xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus2048X:
+        slideCollectExponentialBonus2048X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus2048xFast:
+        slideCollectExponentialBonus2048xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus4096X:
+        slideCollectExponentialBonus4096X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus4096xFast:
+        slideCollectExponentialBonus4096xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus8192X:
+        slideCollectExponentialBonus8192X:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus8192xFast:
+        slideCollectExponentialBonus8192xFast:
+            target: displayDMD
+
+    eventShowSlideCollectExponentialBonus16384X:
+        slideCollectExponentialBonus16384X:
+            target: displayDMD

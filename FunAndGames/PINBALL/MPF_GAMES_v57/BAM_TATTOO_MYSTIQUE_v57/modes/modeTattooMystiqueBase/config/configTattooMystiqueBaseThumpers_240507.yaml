@@ -1,0 +1,517 @@
+#config_version=6
+
+# FLASH GORDON
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::THUMPER
+    # -------------------
+    shotThumperMiddle:
+        switch: s_1_3
+        enable_events: eventEnableShotThumperMiddle
+        disable_events: eventDisableShotThumperMiddle
+        restart_events: eventRestartShotThumperMiddle
+        reset_events: eventResetShotThumperMiddle
+        profile: spShotThumper
+        # show_tokens:
+        #     led1: ledCircleThumperMiddle1
+        #     led2: ledCircleThumperMiddle2
+        #     led3: ledCircleThumperMiddle3
+        #     led4: ledCircleThumperMiddle4
+        #     led5: ledCircleThumperMiddle5
+        #     led6: ledCircleThumperMiddle6
+        #     led7: ledCircleThumperMiddle7
+        #     led8: ledCircleThumperMiddle8
+        #     led9: ledCircleThumperMiddle9
+        #     led10: ledCircleThumperMiddle10
+        #     led11: ledCircleThumperMiddle11
+        #     led12: ledCircleThumperMiddle12
+        #     led13: ledCircleThumperMiddle13
+        #     led14: ledCircleThumperMiddle14
+
+    shotThumperLeft:
+        switch: s_1_13
+        enable_events: eventEnableShotThumperLeft
+        disable_events: eventDisableShotThumperLeft
+        restart_events: eventRestartShotThumperLeft
+        reset_events: eventResetShotThumperLeft
+        profile: spShotThumper
+        # show_tokens:
+        #     led1: ledCircleThumperLeft1
+        #     led2: ledCircleThumperLeft2
+        #     led3: ledCircleThumperLeft3
+        #     led4: ledCircleThumperLeft4
+        #     led5: ledCircleThumperLeft5
+        #     led6: ledCircleThumperLeft6
+        #     led7: ledCircleThumperLeft7
+        #     led8: ledCircleThumperLeft8
+        #     led9: ledCircleThumperLeft9
+        #     led10: ledCircleThumperLeft10
+        #     led11: ledCircleThumperLeft11
+        #     led12: ledCircleThumperLeft12
+        #     led13: ledCircleThumperLeft13
+        #     led14: ledCircleThumperLeft14
+
+    shotThumperLowerLeft:
+        switch: s_1_2
+        enable_events: eventEnableShotThumperLowerLeft
+        disable_events: eventDisableShotThumperLowerLeft
+        restart_events: eventRestartShotThumperLowerLeft
+        reset_events: eventResetShotThumperLowerLeft
+        profile: spShotThumper
+        # show_tokens:
+        #     led1: ledCircleThumperLowerLeft1
+        #     led2: ledCircleThumperLowerLeft2
+        #     led3: ledCircleThumperLowerLeft3
+        #     led4: ledCircleThumperLowerLeft4
+        #     led5: ledCircleThumperLowerLeft5
+        #     led6: ledCircleThumperLowerLeft6
+        #     led7: ledCircleThumperLowerLeft7
+        #     led8: ledCircleThumperLowerLeft8
+        #     led9: ledCircleThumperLowerLeft9
+        #     led10: ledCircleThumperLowerLeft10
+        #     led11: ledCircleThumperLowerLeft11
+        #     led12: ledCircleThumperLowerLeft12
+        #     led13: ledCircleThumperLowerLeft13
+        #     led14: ledCircleThumperLowerLeft14
+
+    shotThumperAward:
+        enable_events: eventEnableShotThumperAward
+        disable_events: eventDisableShotThumperAward
+        restart_events: eventRestartShotThumperAward
+        reset_events: eventResetShotThumperAward
+        advance_events: eventAdvanceShotThumperAward
+        hit_events: eventHitShotThumperAward
+        profile: spShotThumperAward
+            
+#drop_target_bank_dtDropRight_down
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::BUMPER
+    # -----------------------------
+    spShotThumper:
+        states:
+          - name: litFlashCyan
+            # show: showLedShotBumper
+            # speed: 3
+            # show_tokens:
+            #     color1: '00ffff'
+            #     color2: '008888'
+          - name: litFlashMagenta
+            # show: showLedShotBumper
+            # speed: 3
+            # show_tokens:
+            #     color1: 'ff00ff'
+            #     color2: '880088'
+        loop: true
+
+    # -----------------------------
+    # PROFILE::THUMPER::AWARD
+    # -----------------------------
+    spShotThumperAward:
+        states:
+          - name: litFlashOne
+          # -----------------
+          - name: litFlashTwo
+          # -----------------
+          - name: litFlashThree
+          # -----------------
+          - name: litFlashFour
+          # -----------------
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    # ---------------------
+    # MODE::START
+    # ---------------------
+    mode_modeTattooMystiqueBase_started:
+        # THUMPERS::AWARD::RESTART
+        - eventRestartShotThumperAward
+        # THUMPERS::INIT::DISABLED
+        # - eventDisableShotThumperMiddle
+        # - eventDisableShotThumperLeft
+        # - eventDisableShotThumperLowerLeft
+        # THUMPERS::INIT::RESTART
+        - eventRestartShotThumperMiddle
+        - eventRestartShotThumperLeft
+        - eventRestartShotThumperLowerLeft
+        # SET LIGHTS
+        # MIDDLE
+        - eventShowLedShotThumperMiddleLitFlash
+        - eventShowLedShotThumperMiddleLitSolid|500ms
+        # LEFT
+        - eventShowLedShotThumperLeftLitFlash
+        - eventShowLedShotThumperLeftLitSolid|500ms
+        # LOWER LEFT
+        - eventShowLedShotThumperLowerLeftLitFlash
+        - eventShowLedShotThumperLowerLeftLitSolid|500ms
+
+    shotThumperMiddle_hit:
+        - eventShowLedShotThumperMiddleLitFlash
+        - eventShowLedShotThumperMiddleLitSolid|500ms
+
+    shotThumperLeft_hit:
+        - eventShowLedShotThumperLeftLitFlash
+        - eventShowLedShotThumperLeftLitSolid|500ms
+
+    shotThumperLowerLeft_hit:
+        - eventShowLedShotThumperLowerLeftLitFlash
+        - eventShowLedShotThumperLowerLeftLitSolid|500ms
+
+    # # -------------------
+    # # ENABLE THUMPER SHOTS
+    # # -------------------
+    # # HIT ON INLINE DROP DOWN
+    # drop_target_bank_dtDropRight_down:
+    #     - eventHitShotThumperAward
+    # # TOP
+    # shotThumperAward_litFlashOne_hit:
+    #     # START THUMPER MIDDLE
+    #     - eventRestartShotThumperMiddle
+    # # LOWER
+    # shotThumperAward_litFlashTwo_hit:
+    #     # START THUMPER SIDES
+    #     - eventDisableShotThumperMiddle
+    #     - eventRestartShotThumperLeft
+    #     - eventRestartShotThumperRight
+    # # ALL
+    # shotThumperAward_litFlashThree_hit:
+    #     # START THUMPER MIDDLE
+    #     - eventRestartShotThumperMiddle
+        
+    #shotTargetTopAward_unlitFlashLightThumpers_hit:
+    #    # START THUMPER MIDDLE
+    #    - eventRestartShotThumperMiddle
+    ## LOWER
+    #shotTargetTopAward_litFlashCollectBonus_hit:
+    #    # START THUMPER SIDES
+    #    - eventDisableShotThumperMiddle
+    #    - eventRestartShotThumperLeft
+    #    - eventRestartShotThumperRight
+    ## ALL
+    #shotTargetTopAward_litFlashSpecial_hit:
+    #    # START THUMPER MIDDLE
+    #    - eventRestartShotThumperMiddle
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------
+    # SCORING::THUMPER
+    # ---------------
+    sw_tagThumper:
+        score: 10 * current_player.multiPlayfield
+    # ----------------
+    shotThumperMiddle_litFlashCyan_hit:
+        score: 100 * current_player.multiPlayfield
+    shotThumperLeft_litFlashCyan_hit:
+        score: 100 * current_player.multiPlayfield
+    shotThumperLowerLeft_litFlashCyan_hit:
+        score: 100 * current_player.multiPlayfield
+    # ----------------
+    shotThumperMiddle_litFlashMagenta_hit:
+        score: 100 * current_player.multiPlayfield
+    shotThumperLeft_litFlashMagenta_hit:
+        score: 100 * current_player.multiPlayfield
+    shotThumperLowerLeft_litFlashMagenta_hit:
+        score: 100 * current_player.multiPlayfield
+        
+# *********************
+# SHOW::PLAYER
+# *********************
+show_player:
+    # THUMPER LIT FLASH
+    eventShowLedShotThumperMiddleLitFlash:
+        # ----------------------------
+        # SHOW::LIT FLASH
+        showLedShotThumperLitFlash:
+            loops: 0
+            speed: 8
+            key: keyShowLedShotThumperMiddleLitFlash
+            show_tokens:
+                # ------------------
+                led1: ledThumperMiddle1
+                led2: ledThumperMiddle2
+                led3: ledThumperMiddle3
+                led4: ledThumperMiddle4
+                led5: ledThumperMiddle5
+                led6: ledThumperMiddle6
+                led7: ledThumperMiddle7
+                led8: ledThumperMiddle8
+                led9: ledThumperMiddle9
+                led10: ledThumperMiddle10
+                led11: ledThumperMiddle11
+                led12: ledThumperMiddle12
+                led13: ledThumperMiddle13
+                led14: ledThumperMiddle14
+                # ------------------
+                color1: '440044'
+                color2: 'ff00ff'
+                # ------------------
+
+    eventShowLedShotThumperLeftLitFlash:
+        # ----------------------------
+        # SHOW::LIT FLASH
+        showLedShotThumperLitFlash:
+            loops: 0
+            speed: 8
+            key: keyShowLedShotThumperLeftLitFlash
+            show_tokens:
+                # ------------------
+                led1: ledThumperLeft1
+                led2: ledThumperLeft2
+                led3: ledThumperLeft3
+                led4: ledThumperLeft4
+                led5: ledThumperLeft5
+                led6: ledThumperLeft6
+                led7: ledThumperLeft7
+                led8: ledThumperLeft8
+                led9: ledThumperLeft9
+                led10: ledThumperLeft10
+                led11: ledThumperLeft11
+                led12: ledThumperLeft12
+                led13: ledThumperLeft13
+                led14: ledThumperLeft14
+                # ------------------
+                color1: '004444'
+                color2: '00ffff'
+                # ------------------
+
+    eventShowLedShotThumperLowerLeftLitFlash:
+        # ----------------------------
+        # SHOW::LIT FLASH
+        showLedShotThumperLitFlash:
+            loops: 0
+            speed: 8
+            key: keyShowLedShotThumperLowerLeftLitFlash
+            show_tokens:
+                # ------------------
+                led1: ledThumperLowerLeft1
+                led2: ledThumperLowerLeft2
+                led3: ledThumperLowerLeft3
+                led4: ledThumperLowerLeft4
+                led5: ledThumperLowerLeft5
+                led6: ledThumperLowerLeft6
+                led7: ledThumperLowerLeft7
+                led8: ledThumperLowerLeft8
+                led9: ledThumperLowerLeft9
+                led10: ledThumperLowerLeft10
+                led11: ledThumperLowerLeft11
+                led12: ledThumperLowerLeft12
+                led13: ledThumperLowerLeft13
+                led14: ledThumperLowerLeft14
+                # ------------------
+                color1: '444400'
+                color2: 'ffff00'
+                # ------------------
+
+    # THUMPER LIT SOLID
+    eventShowLedShotThumperMiddleLitSolid:
+        # ----------------------------
+        # ILLUMINATION::BACK
+        showLedShotThumperLitSolid:
+            loops: -1
+            speed: 2
+            key: keyShowLedShotThumperMiddleLitSolid
+            show_tokens:
+                # ------------------
+                led1: ledThumperMiddle1
+                led2: ledThumperMiddle2
+                led3: ledThumperMiddle3
+                led4: ledThumperMiddle4
+                led5: ledThumperMiddle5
+                led6: ledThumperMiddle6
+                led7: ledThumperMiddle7
+                led8: ledThumperMiddle8
+                led9: ledThumperMiddle9
+                led10: ledThumperMiddle10
+                led11: ledThumperMiddle11
+                led12: ledThumperMiddle12
+                led13: ledThumperMiddle13
+                led14: ledThumperMiddle14
+                # ------------------
+                color1: '440044'
+                color2: '880088'
+                # ------------------
+
+    eventShowLedShotThumperLeftLitSolid:
+        # ----------------------------
+        # ILLUMINATION::BACK
+        showLedShotThumperLitSolid:
+            loops: -1
+            speed: 2
+            key: keyShowLedShotThumperLeftLitSolid
+            show_tokens:
+                # ------------------
+                led1: ledThumperLeft1
+                led2: ledThumperLeft2
+                led3: ledThumperLeft3
+                led4: ledThumperLeft4
+                led5: ledThumperLeft5
+                led6: ledThumperLeft6
+                led7: ledThumperLeft7
+                led8: ledThumperLeft8
+                led9: ledThumperLeft9
+                led10: ledThumperLeft10
+                led11: ledThumperLeft11
+                led12: ledThumperLeft12
+                led13: ledThumperLeft13
+                led14: ledThumperLeft14
+                # ------------------
+                color1: '004444'
+                color2: '008888'
+                # ------------------
+
+    eventShowLedShotThumperLowerLeftLitSolid:
+        # ----------------------------
+        # ILLUMINATION::BACK
+        showLedShotThumperLitSolid:
+            loops: -1
+            speed: 2
+            key: keyShowLedShotThumperLowerLeftLitSolid
+            show_tokens:
+                # ------------------
+                led1: ledThumperLowerLeft1
+                led2: ledThumperLowerLeft2
+                led3: ledThumperLowerLeft3
+                led4: ledThumperLowerLeft4
+                led5: ledThumperLowerLeft5
+                led6: ledThumperLowerLeft6
+                led7: ledThumperLowerLeft7
+                led8: ledThumperLowerLeft8
+                led9: ledThumperLowerLeft9
+                led10: ledThumperLowerLeft10
+                led11: ledThumperLowerLeft11
+                led12: ledThumperLowerLeft12
+                led13: ledThumperLowerLeft13
+                led14: ledThumperLowerLeft14
+                # ------------------
+                color1: '444400'
+                color2: '888800'
+                # ------------------
+
+# *********************
+# SHOWS
+# *********************
+shows:
+# -----------------------------------
+# SHOW::LED::BUMPERS
+# -----------------------------------
+    # LIT FLASH
+    showLedShotThumperLitFlash:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color2)
+            (led11): (color2)
+            (led12): (color2)
+            (led13): (color2)
+            (led14): (color2)
+        - time: 1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color2)
+            (led11): (color2)
+            (led12): (color2)
+            (led13): (color2)
+            (led14): (color2)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color2)
+            (led11): (color2)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+        - time: 3
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+        - time: 4
+          
+
+    # LIT SOLID
+    showLedShotThumperLitSolid:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color2)
+            (led6): (color1)
+            (led7): (color2)
+            (led8): (color1)
+            (led9): (color2)
+            (led10): (color1)
+            (led11): (color2)
+            (led12): (color1)
+            (led13): (color2)
+            (led14): (color1)
+        - time: 1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color2)
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color1)
+            (led10): (color2)
+            (led11): (color1)
+            (led12): (color2)
+            (led13): (color1)
+            (led14): (color2)
+        - time: 2

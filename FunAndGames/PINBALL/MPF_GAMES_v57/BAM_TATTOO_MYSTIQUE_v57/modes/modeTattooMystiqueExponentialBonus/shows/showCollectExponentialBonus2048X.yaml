@@ -1,0 +1,88 @@
+#show_version=6
+
+# ---------------------
+# SLIDES::EXPONENTIAL MULTIPLIERS
+# ---------------------
+- time: 0
+
+# SHOW FAST BONUS :: 2X
+  events:
+    - eventShowSlideCollectExponentialBonus2xFast
+    - playPoolSoundTransporter
+    - playPoolSoundCoins
+- time: '+1'
+
+# SHOW FAST BONUS :: 4X
+  events:
+    - eventShowSlideCollectExponentialBonus4xFast
+    - playPoolSoundTransporter
+    - playPoolSoundCoins
+- time: '+1'
+
+# SHOW FAST BONUS :: 8X
+  events:
+    - eventShowSlideCollectExponentialBonus8xFast
+    - playPoolSoundTransporter
+    - playPoolSoundCoins
+- time: '+1'
+
+# SHOW FAST BONUS :: 16X
+  events:
+    - eventShowSlideCollectExponentialBonus16xFast
+    - playPoolSoundTransporter
+    - playPoolSoundCoins
+- time: '+1'
+
+# SHOW FAST BONUS :: 32X
+  events:
+    - eventShowSlideCollectExponentialBonus32xFast
+    - playPoolSoundTransporter
+    - playPoolSoundCoins
+- time: '+1'
+
+# SHOW FAST BONUS :: 64X
+  events:
+    - eventShowSlideCollectExponentialBonus64xFast
+    - playPoolSoundTransporter
+    - playPoolSoundCoins
+- time: '+1'
+
+# SHOW FAST BONUS :: 128X
+  events:
+    - eventShowSlideCollectExponentialBonus128xFast
+    - playPoolSoundTransporter
+    - playPoolSoundCoins
+- time: '+1'
+
+# SHOW FAST BONUS :: 256X
+  events:
+    - eventShowSlideCollectExponentialBonus256xFast
+    - playPoolSoundTransporter
+    - playPoolSoundCoins
+- time: '+1'
+
+# SHOW FAST BONUS :: 512X
+  events:
+    - eventShowSlideCollectExponentialBonus512xFast
+    - playPoolSoundTransporter
+    - playPoolSoundCoins
+- time: '+1'
+
+# SHOW FAST BONUS :: 1024X
+  events:
+    - eventShowSlideCollectExponentialBonus1024xFast
+    - playPoolSoundTransporter
+    - playPoolSoundCoins
+- time: '+1'
+
+# COLLECT BONUS :: 2048X
+  events:
+    - eventShowSlideCollectExponentialBonus2048X
+    - playPoolSoundTransporter
+    - playPoolSoundCoins
+- time: '+3.5'
+
+  events:
+    - eventCollectExponentialBonusBase
+- time: '+0.5'
+
