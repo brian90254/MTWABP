@@ -14,7 +14,7 @@ as well as providing a standard for training your coding copilot.
 
 What's not inculded?
 
-I'm specifically NOT including sound files or video files, which generally aren't supported
+I'm specifically NOT including sound, video, or font files, which generally aren't supported
 by GitHub anyway, and may have licensing issues. To run these games correctly, you'll have to
 provide your own files and sync the names of those to match your configs.
 
