@@ -531,6 +531,58 @@ for i in range(numCables):
                         image[ry + 1, cable_x + 3] = (255, 0, 255)
                         image[ry + 1, cable_x + 4] = (255, 0, 255)
 
+        elif patternType == "C2":
+            if i % 2 == 0:
+                # i is even
+                print(f"{i} is even")
+                for j in range(numberCableLinks):
+                    # ---------------------
+                    # EVEN LEFT
+                    offsetEvenLeft = lookupTableEvenLeft.get(j,None)
+                    if offsetEvenLeft is not None:
+                        ly = center_y + offsetEvenLeft - 1
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (128, 128, 255), -1)
+                        image[ly + 1, cable_x + 1] = (255, 0, 255)
+                        image[ly + 1, cable_x + 2] = (255, 0, 255)
+                        image[ly + 1, cable_x + 3] = (255, 0, 0)
+                        image[ly + 1, cable_x + 4] = (255, 0, 0)
+                    # ---------------------
+                    # EVEN RIGHT
+                    offsetEvenRight = lookupTableEvenRight.get(j,None)
+                    if offsetEvenRight is not None:
+                        ry = center_y + offsetEvenRight - 1
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (128, 128, 255), -1)
+                        image[ry + 1, cable_x + 1] = (255, 0, 255)
+                        image[ry + 1, cable_x + 2] = (255, 0, 255)
+                        image[ry + 1, cable_x + 3] = (255, 0, 0)
+                        image[ry + 1, cable_x + 4] = (255, 0, 0)
+
+            else:
+                # i is odd
+                print(f"{i} is odd")
+                for j in range(numberCableLinks):
+                    # ---------------------
+                    # EVEN LEFT
+                    offsetEvenLeft = lookupTableEvenLeft.get(j,None)
+                    if offsetEvenLeft is not None:
+                        ly = center_y + offsetEvenLeft - 1
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (128, 128, 255), -1)
+                        # ODD SWAPS LEFT AND RIGHT
+                        image[ly + 1, cable_x + 1] = (255, 0, 0)
+                        image[ly + 1, cable_x + 2] = (255, 0, 0)
+                        image[ly + 1, cable_x + 3] = (255, 0, 255)
+                        image[ly + 1, cable_x + 4] = (255, 0, 255)
+                    # ---------------------
+                    # EVEN RIGHT
+                    offsetEvenRight = lookupTableEvenRight.get(j,None)
+                    if offsetEvenRight is not None:
+                        ry = center_y + offsetEvenRight - 1
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (128, 128, 255), -1)
+                        # ODD SWAPS LEFT AND RIGHT
+                        image[ry + 1, cable_x + 1] = (255, 0, 0)
+                        image[ry + 1, cable_x + 2] = (255, 0, 0)
+                        image[ry + 1, cable_x + 3] = (255, 0, 255)
+                        image[ry + 1, cable_x + 4] = (255, 0, 255)
 
         elif patternType == "C3":
             if i % 2 == 0:
@@ -701,6 +753,59 @@ for i in range(numCables):
                         image[ly + 1, cable_x + 2] = (255, 0, 255)
                         image[ly + 1, cable_x + 3] = (255, 0, 0)
                         image[ly + 1, cable_x + 4] = (255, 0, 0)
+                    # ---------------------
+                    # Odd RIGHT
+                    offsetOddRight = lookupTableOddRight.get(j,None)
+                    if offsetOddRight is not None:
+                        ry = center_y + offsetOddRight - 1
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (128, 128, 255), -1)
+                        # ODD SWAPS LEFT AND RIGHT
+                        image[ry + 1, cable_x + 1] = (255, 0, 0)
+                        image[ry + 1, cable_x + 2] = (255, 0, 0)
+                        image[ry + 1, cable_x + 3] = (255, 0, 255)
+                        image[ry + 1, cable_x + 4] = (255, 0, 255)
+
+        elif patternType == "C2":
+            if i % 2 == 0:
+                # i is even
+                print(f"{i} is even")
+                for j in range(numberCableLinks):
+                    # ---------------------
+                    # Odd LEFT
+                    offsetOddLeft = lookupTableOddLeft.get(j,None)
+                    if offsetOddLeft is not None:
+                        ly = center_y + offsetOddLeft - 1
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (128, 128, 255), -1)
+                        image[ly + 1, cable_x + 1] = (255, 0, 255)
+                        image[ly + 1, cable_x + 2] = (255, 0, 255)
+                        image[ly + 1, cable_x + 3] = (255, 0, 0)
+                        image[ly + 1, cable_x + 4] = (255, 0, 0)
+                    # ---------------------
+                    # Odd RIGHT
+                    offsetOddRight = lookupTableOddRight.get(j,None)
+                    if offsetOddRight is not None:
+                        ry = center_y + offsetOddRight - 1
+                        cv2.rectangle(image, (cable_x + 1, ry), (cable_x + snake_w, ry + snake_h - 1), (128, 128, 255), -1)
+                        image[ry + 1, cable_x + 1] = (255, 0, 255)
+                        image[ry + 1, cable_x + 2] = (255, 0, 255)
+                        image[ry + 1, cable_x + 3] = (255, 0, 0)
+                        image[ry + 1, cable_x + 4] = (255, 0, 0)
+
+            else:
+                # i is odd
+                print(f"{i} is odd")
+                for j in range(numberCableLinks):
+                    # ---------------------
+                    # Odd LEFT
+                    offsetOddLeft = lookupTableOddLeft.get(j,None)
+                    if offsetOddLeft is not None:
+                        ly = center_y + offsetOddLeft - 1
+                        cv2.rectangle(image, (cable_x + 1, ly), (cable_x + snake_w, ly + snake_h - 1), (128, 128, 255), -1)
+                        # ODD SWAPS LEFT AND RIGHT
+                        image[ly + 1, cable_x + 1] = (255, 0, 0)
+                        image[ly + 1, cable_x + 2] = (255, 0, 0)
+                        image[ly + 1, cable_x + 3] = (255, 0, 255)
+                        image[ly + 1, cable_x + 4] = (255, 0, 255)
                     # ---------------------
                     # Odd RIGHT
                     offsetOddRight = lookupTableOddRight.get(j,None)
