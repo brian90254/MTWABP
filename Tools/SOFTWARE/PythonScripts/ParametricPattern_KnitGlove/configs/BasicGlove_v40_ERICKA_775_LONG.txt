@@ -1,14 +1,14 @@
 # ----------------------------
 # CONVERSION RATIOS
 # ----------------------------
-lengthPalm = 11.5
-circumferencePalm = 23
+lengthPalm = 11
+circumferencePalm = 20
 patternType = S
-handedness = R
+handedness = L
 palmWidthRatio = 1.696
 palmHeightRatio = 3.20
 wristHeightRatio = 1.391
-thumbDropRatio = 0.45
+thumbDropRatio = 0.5
 thumbHeightRatio = 5
 thumbWidening = W3
 fingerHeightRatio = 4
