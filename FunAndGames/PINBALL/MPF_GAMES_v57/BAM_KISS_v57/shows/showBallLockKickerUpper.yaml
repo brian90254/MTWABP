@@ -1,0 +1,16 @@
+#show_version=6
+- time: 0
+  events: playPoolSoundCannonLoad
+
+- time: '+1'
+  events:
+    playPoolSoundCompute
+    #eventStartSaucerKickerShow
+    #eventStopSaucerKickerShow|6s
+
+- time: '+2'
+  events:
+    - playPoolSoundVUKCannon
+    - releaseBallLockKickerUpper
+    
+- time: '+1'

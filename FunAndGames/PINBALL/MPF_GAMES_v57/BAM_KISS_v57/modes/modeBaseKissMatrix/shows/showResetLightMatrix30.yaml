@@ -1,0 +1,165 @@
+#show_version=6
+
+# --------------------
+- time: 0
+  lights:
+    # --------------------
+    ledMatrix31A: '888888'
+    ledMatrix31B: '888888'
+    ledMatrix31C: '888888'
+    # --------------------
+    ledMatrix32A: '888888'
+    ledMatrix32B: '888888'
+    ledMatrix32C: '888888'
+    # --------------------
+    ledMatrix33A: '888888'
+    ledMatrix33B: '888888'
+    ledMatrix33C: '888888'
+    # --------------------
+    ledMatrix34A: '888888'
+    ledMatrix34B: '888888'
+    ledMatrix34C: '888888'
+    # --------------------
+# --------------------
+- time: 1
+  lights:
+    # --------------------
+    ledMatrix31A: 'ffffff'
+    ledMatrix31B: 'ffffff'
+    ledMatrix31C: 'ffffff'
+    # --------------------
+    ledMatrix32A: 'ffffff'
+    ledMatrix32B: 'ffffff'
+    ledMatrix32C: 'ffffff'
+    # --------------------
+    ledMatrix33A: 'ffffff'
+    ledMatrix33B: 'ffffff'
+    ledMatrix33C: 'ffffff'
+    # --------------------
+    ledMatrix34A: 'ffffff'
+    ledMatrix34B: 'ffffff'
+    ledMatrix34C: 'ffffff'
+    # --------------------
+# --------------------
+- time: 2
+  lights:
+    # --------------------
+    ledMatrix31A: '888888'
+    ledMatrix31B: '888888'
+    ledMatrix31C: '888888'
+    # --------------------
+    ledMatrix32A: '888888'
+    ledMatrix32B: '888888'
+    ledMatrix32C: '888888'
+    # --------------------
+    ledMatrix33A: '888888'
+    ledMatrix33B: '888888'
+    ledMatrix33C: '888888'
+    # --------------------
+    ledMatrix34A: '888888'
+    ledMatrix34B: '888888'
+    ledMatrix34C: '888888'
+    # --------------------
+# --------------------
+- time: 3
+  lights:
+    # --------------------
+    ledMatrix31A: 'ffffff'
+    ledMatrix31B: 'ffffff'
+    ledMatrix31C: 'ffffff'
+    # --------------------
+    ledMatrix32A: 'ffffff'
+    ledMatrix32B: 'ffffff'
+    ledMatrix32C: 'ffffff'
+    # --------------------
+    ledMatrix33A: 'ffffff'
+    ledMatrix33B: 'ffffff'
+    ledMatrix33C: 'ffffff'
+    # --------------------
+    ledMatrix34A: 'ffffff'
+    ledMatrix34B: 'ffffff'
+    ledMatrix34C: 'ffffff'
+    # --------------------
+# --------------------
+- time: 4
+  lights:
+    # --------------------
+    ledMatrix31A: '888888'
+    ledMatrix31B: '888888'
+    ledMatrix31C: '888888'
+    # --------------------
+    ledMatrix32A: '888888'
+    ledMatrix32B: '888888'
+    ledMatrix32C: '888888'
+    # --------------------
+    ledMatrix33A: '888888'
+    ledMatrix33B: '888888'
+    ledMatrix33C: '888888'
+    # --------------------
+    ledMatrix34A: '888888'
+    ledMatrix34B: '888888'
+    ledMatrix34C: '888888'
+    # --------------------
+# --------------------
+- time: 5
+  lights:
+    # --------------------
+    ledMatrix31A: 'ffffff'
+    ledMatrix31B: 'ffffff'
+    ledMatrix31C: 'ffffff'
+    # --------------------
+    ledMatrix32A: 'ffffff'
+    ledMatrix32B: 'ffffff'
+    ledMatrix32C: 'ffffff'
+    # --------------------
+    ledMatrix33A: 'ffffff'
+    ledMatrix33B: 'ffffff'
+    ledMatrix33C: 'ffffff'
+    # --------------------
+    ledMatrix34A: 'ffffff'
+    ledMatrix34B: 'ffffff'
+    ledMatrix34C: 'ffffff'
+    # --------------------
+# --------------------
+- time: 6
+  lights:
+    # --------------------
+    ledMatrix31A: '888888'
+    ledMatrix31B: '888888'
+    ledMatrix31C: '888888'
+    # --------------------
+    ledMatrix32A: '888888'
+    ledMatrix32B: '888888'
+    ledMatrix32C: '888888'
+    # --------------------
+    ledMatrix33A: '888888'
+    ledMatrix33B: '888888'
+    ledMatrix33C: '888888'
+    # --------------------
+    ledMatrix34A: '888888'
+    ledMatrix34B: '888888'
+    ledMatrix34C: '888888'
+    # --------------------
+# --------------------
+- time: 7
+  lights:
+    # --------------------
+    ledMatrix31A: 'ffffff'
+    ledMatrix31B: 'ffffff'
+    ledMatrix31C: 'ffffff'
+    # --------------------
+    ledMatrix32A: 'ffffff'
+    ledMatrix32B: 'ffffff'
+    ledMatrix32C: 'ffffff'
+    # --------------------
+    ledMatrix33A: 'ffffff'
+    ledMatrix33B: 'ffffff'
+    ledMatrix33C: 'ffffff'
+    # --------------------
+    ledMatrix34A: 'ffffff'
+    ledMatrix34B: 'ffffff'
+    ledMatrix34C: 'ffffff'
+    # --------------------
+# --------------------
+- time: 8
+

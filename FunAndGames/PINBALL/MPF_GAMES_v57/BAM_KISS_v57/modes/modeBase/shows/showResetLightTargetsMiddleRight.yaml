@@ -1,0 +1,61 @@
+#show_version=6
+
+# --------------------
+- time: 0
+  lights:
+    ledTargetMiddleRightA: '880000'
+    ledTargetMiddleRightB: '880000'
+    ledTargetMiddleRightC: '880000'
+    ledTargetMiddleRightD: '880000'
+# --------------------
+- time: 1
+  lights:
+    ledTargetMiddleRightA: 'ff0000'
+    ledTargetMiddleRightB: 'ff0000'
+    ledTargetMiddleRightC: 'ff0000'
+    ledTargetMiddleRightD: 'ff0000'
+# --------------------
+- time: 2
+  lights:
+    ledTargetMiddleRightA: '880000'
+    ledTargetMiddleRightB: '880000'
+    ledTargetMiddleRightC: '880000'
+    ledTargetMiddleRightD: '880000'
+# --------------------
+- time: 3
+  lights:
+    ledTargetMiddleRightA: 'ff0000'
+    ledTargetMiddleRightB: 'ff0000'
+    ledTargetMiddleRightC: 'ff0000'
+    ledTargetMiddleRightD: 'ff0000'
+# --------------------
+- time: 4
+  lights:
+    ledTargetMiddleRightA: '880000'
+    ledTargetMiddleRightB: '880000'
+    ledTargetMiddleRightC: '880000'
+    ledTargetMiddleRightD: '880000'
+# --------------------
+- time: 5
+  lights:
+    ledTargetMiddleRightA: 'ff0000'
+    ledTargetMiddleRightB: 'ff0000'
+    ledTargetMiddleRightC: 'ff0000'
+    ledTargetMiddleRightD: 'ff0000'
+# --------------------
+- time: 6
+  lights:
+    ledTargetMiddleRightA: '880000'
+    ledTargetMiddleRightB: '880000'
+    ledTargetMiddleRightC: '880000'
+    ledTargetMiddleRightD: '880000'
+# --------------------
+- time: 7
+  lights:
+    ledTargetMiddleRightA: 'ff0000'
+    ledTargetMiddleRightB: 'ff0000'
+    ledTargetMiddleRightC: 'ff0000'
+    ledTargetMiddleRightD: 'ff0000'
+# --------------------
+- time: 8
+

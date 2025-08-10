@@ -1,0 +1,61 @@
+#show_version=6
+
+# --------------------
+- time: 0
+  lights:
+    ledTargetBottomLeft: '888800'
+    ledTargetTopLeft: '888800'
+    ledTargetTopRight: '888800'
+    ledTargetBottomRight: '888800'
+# --------------------
+- time: 1
+  lights:
+    ledTargetBottomLeft: 'ffff00'
+    ledTargetTopLeft: 'ffff00'
+    ledTargetTopRight: 'ffff00'
+    ledTargetBottomRight: 'ffff00'
+# --------------------
+- time: 2
+  lights:
+    ledTargetBottomLeft: '888800'
+    ledTargetTopLeft: '888800'
+    ledTargetTopRight: '888800'
+    ledTargetBottomRight: '888800'
+# --------------------
+- time: 3
+  lights:
+    ledTargetBottomLeft: 'ffff00'
+    ledTargetTopLeft: 'ffff00'
+    ledTargetTopRight: 'ffff00'
+    ledTargetBottomRight: 'ffff00'
+# --------------------
+- time: 4
+  lights:
+    ledTargetBottomLeft: '888800'
+    ledTargetTopLeft: '888800'
+    ledTargetTopRight: '888800'
+    ledTargetBottomRight: '888800'
+# --------------------
+- time: 5
+  lights:
+    ledTargetBottomLeft: 'ffff00'
+    ledTargetTopLeft: 'ffff00'
+    ledTargetTopRight: 'ffff00'
+    ledTargetBottomRight: 'ffff00'
+# --------------------
+- time: 6
+  lights:
+    ledTargetBottomLeft: '888800'
+    ledTargetTopLeft: '888800'
+    ledTargetTopRight: '888800'
+    ledTargetBottomRight: '888800'
+# --------------------
+- time: 7
+  lights:
+    ledTargetBottomLeft: 'ffff00'
+    ledTargetTopLeft: 'ffff00'
+    ledTargetTopRight: 'ffff00'
+    ledTargetBottomRight: 'ffff00'
+# --------------------
+- time: 8
+

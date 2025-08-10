@@ -1,0 +1,1097 @@
+#config_version=6
+
+# KISS
+
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX
+# -----------------------------
+achievements:
+# *****************************
+# ACHIEVEMENT::KISS::MATRIX::ROW::1
+# *****************************
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::1::1
+# -----------------------------
+  achKissMatrix11:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix11
+    events_when_disabled:
+      - eventAchKissMatrix11Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix11
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix11Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix11
+    events_when_selected:
+      - eventAchKissMatrix11Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix11
+    events_when_started:
+      - eventAchKissMatrix11Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix11
+    events_when_completed:
+      - eventAchKissMatrix11Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix11
+    events_when_stopped:
+      - eventAchKissMatrix11Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashRed
+    show_when_started: showKissMatrixLitFlashRed
+    show_when_completed: showKissMatrixLitSolidRed
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix11A
+      led2: ledMatrix11B
+      led3: ledMatrix11C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::1::2
+# -----------------------------
+  achKissMatrix12:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix12
+    events_when_disabled:
+      - eventAchKissMatrix12Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix12
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix12Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix12
+    events_when_selected:
+      - eventAchKissMatrix12Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix12
+    events_when_started:
+      - eventAchKissMatrix12Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix12
+    events_when_completed:
+      - eventAchKissMatrix12Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix12
+    events_when_stopped:
+      - eventAchKissMatrix12Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashRed
+    show_when_started: showKissMatrixLitFlashRed
+    show_when_completed: showKissMatrixLitSolidRed
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix12A
+      led2: ledMatrix12B
+      led3: ledMatrix12C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::1::3
+# -----------------------------
+  achKissMatrix13:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix13
+    events_when_disabled:
+      - eventAchKissMatrix13Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix13
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix13Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix13
+    events_when_selected:
+      - eventAchKissMatrix13Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix13
+    events_when_started:
+      - eventAchKissMatrix13Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix13
+    events_when_completed:
+      - eventAchKissMatrix13Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix13
+    events_when_stopped:
+      - eventAchKissMatrix13Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashRed
+    show_when_started: showKissMatrixLitFlashRed
+    show_when_completed: showKissMatrixLitSolidRed
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix13A
+      led2: ledMatrix13B
+      led3: ledMatrix13C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::1::4
+# -----------------------------
+  achKissMatrix14:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix14
+    events_when_disabled:
+      - eventAchKissMatrix14Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix14
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix14Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix14
+    events_when_selected:
+      - eventAchKissMatrix14Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix14
+    events_when_started:
+      - eventAchKissMatrix14Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix14
+    events_when_completed:
+      - eventAchKissMatrix14Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix14
+    events_when_stopped:
+      - eventAchKissMatrix14Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashRed
+    show_when_started: showKissMatrixLitFlashRed
+    show_when_completed: showKissMatrixLitSolidRed
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix14A
+      led2: ledMatrix14B
+      led3: ledMatrix14C
+      
+# *****************************
+# ACHIEVEMENT::KISS::MATRIX::ROW::2
+# *****************************
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::2::1
+# -----------------------------
+  achKissMatrix21:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix21
+    events_when_disabled:
+      - eventAchKissMatrix21Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix21
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix21Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix21
+    events_when_selected:
+      - eventAchKissMatrix21Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix21
+    events_when_started:
+      - eventAchKissMatrix21Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix21
+    events_when_completed:
+      - eventAchKissMatrix21Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix21
+    events_when_stopped:
+      - eventAchKissMatrix21Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashCyan
+    show_when_started: showKissMatrixLitFlashCyan
+    show_when_completed: showKissMatrixLitSolidCyan
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix21A
+      led2: ledMatrix21B
+      led3: ledMatrix21C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::2::2
+# -----------------------------
+  achKissMatrix22:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix22
+    events_when_disabled:
+      - eventAchKissMatrix22Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix22
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix22Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix22
+    events_when_selected:
+      - eventAchKissMatrix22Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix22
+    events_when_started:
+      - eventAchKissMatrix22Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix22
+    events_when_completed:
+      - eventAchKissMatrix22Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix22
+    events_when_stopped:
+      - eventAchKissMatrix22Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashCyan
+    show_when_started: showKissMatrixLitFlashCyan
+    show_when_completed: showKissMatrixLitSolidCyan
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix22A
+      led2: ledMatrix22B
+      led3: ledMatrix22C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::2::3
+# -----------------------------
+  achKissMatrix23:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix23
+    events_when_disabled:
+      - eventAchKissMatrix23Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix23
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix23Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix23
+    events_when_selected:
+      - eventAchKissMatrix23Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix23
+    events_when_started:
+      - eventAchKissMatrix23Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix23
+    events_when_completed:
+      - eventAchKissMatrix23Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix23
+    events_when_stopped:
+      - eventAchKissMatrix23Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashCyan
+    show_when_started: showKissMatrixLitFlashCyan
+    show_when_completed: showKissMatrixLitSolidCyan
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix23A
+      led2: ledMatrix23B
+      led3: ledMatrix23C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::2::4
+# -----------------------------
+  achKissMatrix24:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix24
+    events_when_disabled:
+      - eventAchKissMatrix24Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix24
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix24Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix24
+    events_when_selected:
+      - eventAchKissMatrix24Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix24
+    events_when_started:
+      - eventAchKissMatrix24Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix24
+    events_when_completed:
+      - eventAchKissMatrix24Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix24
+    events_when_stopped:
+      - eventAchKissMatrix24Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashCyan
+    show_when_started: showKissMatrixLitFlashCyan
+    show_when_completed: showKissMatrixLitSolidCyan
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix24A
+      led2: ledMatrix24B
+      led3: ledMatrix24C
+      
+
+# *****************************
+# ACHIEVEMENT::KISS::MATRIX::ROW::3
+# *****************************
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::3::1
+# -----------------------------
+  achKissMatrix31:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix31
+    events_when_disabled:
+      - eventAchKissMatrix31Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix31
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix31Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix31
+    events_when_selected:
+      - eventAchKissMatrix31Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix31
+    events_when_started:
+      - eventAchKissMatrix31Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix31
+    events_when_completed:
+      - eventAchKissMatrix31Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix31
+    events_when_stopped:
+      - eventAchKissMatrix31Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashYellow
+    show_when_started: showKissMatrixLitFlashYellow
+    show_when_completed: showKissMatrixLitSolidYellow
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix31A
+      led2: ledMatrix31B
+      led3: ledMatrix31C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::3::2
+# -----------------------------
+  achKissMatrix32:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix32
+    events_when_disabled:
+      - eventAchKissMatrix32Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix32
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix32Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix32
+    events_when_selected:
+      - eventAchKissMatrix32Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix32
+    events_when_started:
+      - eventAchKissMatrix32Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix32
+    events_when_completed:
+      - eventAchKissMatrix32Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix32
+    events_when_stopped:
+      - eventAchKissMatrix32Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashYellow
+    show_when_started: showKissMatrixLitFlashYellow
+    show_when_completed: showKissMatrixLitSolidYellow
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix32A
+      led2: ledMatrix32B
+      led3: ledMatrix32C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::3::3
+# -----------------------------
+  achKissMatrix33:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix33
+    events_when_disabled:
+      - eventAchKissMatrix33Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix33
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix33Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix33
+    events_when_selected:
+      - eventAchKissMatrix33Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix33
+    events_when_started:
+      - eventAchKissMatrix33Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix33
+    events_when_completed:
+      - eventAchKissMatrix33Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix33
+    events_when_stopped:
+      - eventAchKissMatrix33Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashYellow
+    show_when_started: showKissMatrixLitFlashYellow
+    show_when_completed: showKissMatrixLitSolidYellow
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix33A
+      led2: ledMatrix33B
+      led3: ledMatrix33C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::3::4
+# -----------------------------
+  achKissMatrix34:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix34
+    events_when_disabled:
+      - eventAchKissMatrix34Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix34
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix34Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix34
+    events_when_selected:
+      - eventAchKissMatrix34Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix34
+    events_when_started:
+      - eventAchKissMatrix34Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix34
+    events_when_completed:
+      - eventAchKissMatrix34Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix34
+    events_when_stopped:
+      - eventAchKissMatrix34Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashYellow
+    show_when_started: showKissMatrixLitFlashYellow
+    show_when_completed: showKissMatrixLitSolidYellow
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix34A
+      led2: ledMatrix34B
+      led3: ledMatrix34C
+      
+# *****************************
+# ACHIEVEMENT::KISS::MATRIX::ROW::4
+# *****************************
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::4::1
+# -----------------------------
+  achKissMatrix41:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix41
+    events_when_disabled:
+      - eventAchKissMatrix41Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix41
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix41Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix41
+    events_when_selected:
+      - eventAchKissMatrix41Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix41
+    events_when_started:
+      - eventAchKissMatrix41Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix41
+    events_when_completed:
+      - eventAchKissMatrix41Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix41
+    events_when_stopped:
+      - eventAchKissMatrix41Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashGreen
+    show_when_started: showKissMatrixLitFlashGreen
+    show_when_completed: showKissMatrixLitSolidGreen
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix41A
+      led2: ledMatrix41B
+      led3: ledMatrix41C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::4::2
+# -----------------------------
+  achKissMatrix42:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix42
+    events_when_disabled:
+      - eventAchKissMatrix42Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix42
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix42Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix42
+    events_when_selected:
+      - eventAchKissMatrix42Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix42
+    events_when_started:
+      - eventAchKissMatrix42Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix42
+    events_when_completed:
+      - eventAchKissMatrix42Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix42
+    events_when_stopped:
+      - eventAchKissMatrix42Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashGreen
+    show_when_started: showKissMatrixLitFlashGreen
+    show_when_completed: showKissMatrixLitSolidGreen
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix42A
+      led2: ledMatrix42B
+      led3: ledMatrix42C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::4::3
+# -----------------------------
+  achKissMatrix43:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix43
+    events_when_disabled:
+      - eventAchKissMatrix43Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix43
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix43Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix43
+    events_when_selected:
+      - eventAchKissMatrix43Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix43
+    events_when_started:
+      - eventAchKissMatrix43Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix43
+    events_when_completed:
+      - eventAchKissMatrix43Completed
+      #- eventAddBonusMatrix
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix43
+    events_when_stopped:
+      - eventAchKissMatrix43Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashGreen
+    show_when_started: showKissMatrixLitFlashGreen
+    show_when_completed: showKissMatrixLitSolidGreen
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix43A
+      led2: ledMatrix43B
+      led3: ledMatrix43C
+      
+# -----------------------------
+# ACHIEVEMENT::KISS::MATRIX::4::4
+# -----------------------------
+  achKissMatrix44:
+    # -----------------
+    # DISABLED
+    disable_events: eventDisableAchKissMatrix44
+    events_when_disabled:
+      - eventAchKissMatrix44Disabled
+    # -----------------
+    # ENABLED
+    enable_events:
+      - eventEnableAchKissMatrix44
+      - eventEnableAchKissMatrixAll
+    events_when_enabled:
+      - eventAchKissMatrix44Enabled
+      #- eventEnableAchKissMatrixAll
+    # -----------------
+    # SELECTED
+    select_events: eventSelectAchKissMatrix44
+    events_when_selected:
+      - eventAchKissMatrix44Selected
+    # -----------------
+    # STARTED
+    start_enabled: false
+    start_events: eventStartAchKissMatrix44
+    events_when_started:
+      - eventAchKissMatrix44Started
+    # -----------------
+    # COMPLETED
+    complete_events: eventCompleteAchKissMatrix44
+    events_when_completed:
+      - eventAchKissMatrix44Completed
+    # -----------------
+    # STOPPED
+    stop_events: eventStopAchKissMatrix44
+    events_when_stopped:
+      - eventAchKissMatrix44Stopped
+    restart_after_stop_possible: true
+    # -----------------
+    # RESET
+    reset_events:
+      - ball_ending
+      - eventResetAchKissMatrixAll
+    # -----------------
+    # SHOWS
+    show_when_selected: showKissMatrixLitFlashGreen
+    show_when_started: showKissMatrixLitFlashGreen
+    show_when_completed: showKissMatrixLitSolidGreen
+    sync_ms: 1
+    show_tokens:
+      led1: ledMatrix44A
+      led2: ledMatrix44B
+      led3: ledMatrix44C
+      
+      
+# *****************************
+# ACHIEVEMENT::GROUPS
+# *****************************
+achievement_groups:
+# *****************************
+# ROWS
+# *****************************
+  # -----------------------------
+  # KISS::MATRIX::ROW::1
+  # -----------------------------
+  achGroupKissMatrix10:
+    achievements:
+      - achKissMatrix11
+      - achKissMatrix12
+      - achKissMatrix13
+      - achKissMatrix14
+    enable_events: eventEnableAchGroupKissMatrix10
+    rotate_right_events: eventRotateRightAchGroupKissMatrix10
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    events_when_all_completed: eventAchGroupKissMatrix10Complete
+
+  # -----------------------------
+  # KISS::MATRIX::ROW::2
+  # -----------------------------
+  achGroupKissMatrix20:
+    achievements:
+      - achKissMatrix21
+      - achKissMatrix22
+      - achKissMatrix23
+      - achKissMatrix24
+    enable_events: eventEnableAchGroupKissMatrix20
+    rotate_right_events: eventRotateRightAchGroupKissMatrix20
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    events_when_all_completed: eventAchGroupKissMatrix20Complete
+    
+  # -----------------------------
+  # KISS::MATRIX::ROW::3
+  # -----------------------------
+  achGroupKissMatrix30:
+    achievements:
+      - achKissMatrix31
+      - achKissMatrix32
+      - achKissMatrix33
+      - achKissMatrix34
+    enable_events: eventEnableAchGroupKissMatrix30
+    rotate_right_events: eventRotateRightAchGroupKissMatrix30
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    events_when_all_completed: eventAchGroupKissMatrix30Complete
+    
+  # -----------------------------
+  # KISS::MATRIX::ROW::4
+  # -----------------------------
+  achGroupKissMatrix40:
+    achievements:
+      - achKissMatrix41
+      - achKissMatrix42
+      - achKissMatrix43
+      - achKissMatrix44
+    enable_events: eventEnableAchGroupKissMatrix40
+    rotate_right_events: eventRotateRightAchGroupKissMatrix40
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    events_when_all_completed: eventAchGroupKissMatrix40Complete
+    
+# *****************************
+# COLUMNS
+# *****************************
+  # -----------------------------
+  # KISS::MATRIX::COLUMN::1
+  # -----------------------------
+  achGroupKissMatrix01:
+    achievements:
+      - achKissMatrix11
+      - achKissMatrix21
+      - achKissMatrix31
+      - achKissMatrix41
+    enable_events: eventEnableAchGroupKissMatrix01
+    rotate_right_events: eventRotateRightAchGroupKissMatrix01
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    events_when_all_completed: eventAchGroupKissMatrix01Complete
+    
+  # -----------------------------
+  # KISS::MATRIX::COLUMN::2
+  # -----------------------------
+  achGroupKissMatrix02:
+    achievements:
+      - achKissMatrix12
+      - achKissMatrix22
+      - achKissMatrix32
+      - achKissMatrix42
+    enable_events: eventEnableAchGroupKissMatrix02
+    rotate_right_events: eventRotateRightAchGroupKissMatrix02
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    events_when_all_completed: eventAchGroupKissMatrix02Complete
+    
+  # -----------------------------
+  # KISS::MATRIX::COLUMN::3
+  # -----------------------------
+  achGroupKissMatrix03:
+    achievements:
+      - achKissMatrix13
+      - achKissMatrix23
+      - achKissMatrix33
+      - achKissMatrix43
+    enable_events: eventEnableAchGroupKissMatrix03
+    rotate_right_events: eventRotateRightAchGroupKissMatrix03
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    events_when_all_completed: eventAchGroupKissMatrix03Complete
+    
+  # -----------------------------
+  # KISS::MATRIX::COLUMN::4
+  # -----------------------------
+  achGroupKissMatrix04:
+    achievements:
+      - achKissMatrix14
+      - achKissMatrix24
+      - achKissMatrix34
+      - achKissMatrix44
+    enable_events: eventEnableAchGroupKissMatrix04
+    rotate_right_events: eventRotateRightAchGroupKissMatrix04
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    events_when_all_completed: eventAchGroupKissMatrix04Complete
+
+  # -----------------------------
+  # KISS::MATRIX::ALL
+  # -----------------------------
+  achGroupKissMatrixAll:
+    achievements:
+      # ---------------
+      - achKissMatrix11
+      - achKissMatrix12
+      - achKissMatrix13
+      - achKissMatrix14
+      # ---------------
+      - achKissMatrix21
+      - achKissMatrix22
+      - achKissMatrix23
+      - achKissMatrix24
+      # ---------------
+      - achKissMatrix31
+      - achKissMatrix32
+      - achKissMatrix33
+      - achKissMatrix34
+      # ---------------
+      - achKissMatrix41
+      - achKissMatrix42
+      - achKissMatrix43
+      - achKissMatrix44
+      # ---------------
+    enable_events: eventEnableAchGroupKissMatrixAll
+    rotate_right_events: eventRotateRightAchGroupKissMatrixAll
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    events_when_all_completed: eventAchGroupKissMatrixAllComplete
+    

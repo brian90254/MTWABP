@@ -1,0 +1,294 @@
+#show_version=6
+
+- time: 0
+# *************************
+# SHOW ONE SLIDE BEFORE VIDEO
+# *************************
+  slides:
+    # *************************
+    # LAST GAME SCORE
+    # *************************
+    showAttractDisplay_slide_1E:
+      target: displayDMD
+      widgets:
+      # -------------------------------------------------
+      #                       TOP
+      # -------------------------------------------------
+      # -----------------
+      # CENTER
+      # -----------------
+      - type: text
+        text: PLAYER 1
+        y: top - 24
+        x: middle
+        z: 40
+        style: fontAttractLastHeader
+        color: colorFontAttractLastHeaderInner
+      
+      # -----------------
+      # OUTLINE ONE
+      # -----------------
+      - type: text
+        text: PLAYER 1
+        y: top - 23
+        x: middle - 1
+        z: 30
+        style: fontAttractLastHeader
+        color: colorFontAttractLastHeaderOuter1
+      
+      - type: text
+        text: PLAYER 1
+        y: top - 23
+        x: middle + 1
+        z: 30
+        style: fontAttractLastHeader
+        color: colorFontAttractLastHeaderOuter1
+      
+      - type: text
+        text: PLAYER 1
+        y: top - 25
+        x: middle - 1
+        z: 30
+        style: fontAttractLastHeader
+        color: colorFontAttractLastHeaderOuter1
+        
+      - type: text
+        text: PLAYER 1
+        y: top - 25
+        x: middle + 1
+        z: 30
+        style: fontAttractLastHeader
+        color: colorFontAttractLastHeaderOuter1
+      # -------------------------------------------------
+      # -----------------
+      # OUTLINE TWO
+      # -----------------
+      - type: text
+        text: PLAYER 1
+        y: top - 22
+        x: middle - 2
+        z: 30
+        style: fontAttractLastHeader
+        color: colorFontAttractLastHeaderOuter2
+      
+      - type: text
+        text: PLAYER 1
+        y: top - 22
+        x: middle + 2
+        z: 30
+        style: fontAttractLastHeader
+        color: colorFontAttractLastHeaderOuter2
+      
+      - type: text
+        text: PLAYER 1
+        y: top - 26
+        x: middle - 2
+        z: 30
+        style: fontAttractLastHeader
+        color: colorFontAttractLastHeaderOuter2
+        
+      - type: text
+        text: PLAYER 1
+        y: top - 26
+        x: middle + 2
+        z: 30
+        style: fontAttractLastHeader
+        color: colorFontAttractLastHeaderOuter2
+      # -------------------------------------------------
+
+      # -------------------------------------------------
+      #                       MIDDLE
+      # -------------------------------------------------
+      # -----------------
+      # RED CENTER
+      # -----------------
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        y: middle - 4
+        x: middle
+        z: 40
+        style: fontAttractLastMiddle
+        color: colorFontAttractLastMiddleInner
+        
+      # -----------------
+      # OUTLINE CYAN
+      # -----------------
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        y: middle - 5
+        x: middle - 1
+        z: 30
+        style: fontAttractLastMiddle
+        color: colorFontAttractLastMiddleOuter1
+        
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        y: middle - 5
+        x: middle + 1
+        z: 30
+        style: fontAttractLastMiddle
+        color: colorFontAttractLastMiddleOuter1
+        
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        y: middle  - 3
+        x: middle + 1
+        z: 30
+        style: fontAttractLastMiddle
+        color: colorFontAttractLastMiddleOuter1
+        
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        y: middle - 3
+        x: middle - 1
+        z: 30
+        style: fontAttractLastMiddle
+        color: colorFontAttractLastMiddleOuter1
+      # -------------------------------------------------
+
+
+      # -------------------------------------------------
+      #                       BOTTOM
+      # -------------------------------------------------
+      # -----------------
+      # CENTER YELLOW
+      # -----------------
+      - type: text
+        text: (machine|credits_string)
+        anchor_y: bottom
+        y: bottom + 4
+        x: middle
+        z: 40
+        style: fontAttractLastFooter
+        color: colorFontAttractLastFooterInner
+        
+      # -----------------
+      # OUTLINE GREEN
+      # -----------------
+      - type: text
+        text: (machine|credits_string)
+        anchor_y: bottom
+        y: bottom + 3
+        x: middle - 1
+        z: 30
+        style: fontAttractLastFooter
+        color: colorFontAttractLastFooterOuter1
+        
+      - type: text
+        text: (machine|credits_string)
+        anchor_y: bottom
+        y: bottom + 5
+        x: middle + 1
+        z: 30
+        style: fontAttractLastFooter
+        color: colorFontAttractLastFooterOuter1
+        
+      - type: text
+        text: (machine|credits_string)
+        anchor_y: bottom
+        y: bottom + 3
+        x: middle + 1
+        z: 30
+        style: fontAttractLastFooter
+        color: colorFontAttractLastFooterOuter1
+        
+      - type: text
+        text: (machine|credits_string)
+        anchor_y: bottom
+        y: bottom + 5
+        x: middle - 1
+        z: 30 
+        style: fontAttractLastFooter
+        color: colorFontAttractLastFooterOuter1
+
+        # --------------------
+        # COLOR OUTLINE
+        # --------------------
+      - type: rectangle
+        color: colorBoxAttractLastOuter
+        width: 236
+        height: 130
+        x: 120
+        y: 67
+        z: 3
+      - type: rectangle
+        color: colorBoxAttractLastMiddle
+        width: 232
+        height: 126
+        x: 120
+        y: 67
+        z: 5
+      - type: rectangle
+        color: colorBoxAttractLastInner
+        width: 228
+        height: 122
+        x: 120
+        y: 67
+        z: 6
+        # --------------------
+        # BLACK INFILL
+        # --------------------
+      - type: rectangle
+        color: colorBoxAttractLastFill
+        width: 224
+        height: 118
+        x: 120
+        y: 67
+        z: 7
+
+# *************************
+# SETUP VIDEO SLIDE
+# *************************
+- time: '+6'
+#  events:
+#    - eventPauseTrackPlaylist
+#
+#- time: '+1'
+  events:
+    - presentSlideVideoLayout
+    
+# *************************
+# SHOW VIDEO
+# *************************
+- time: '+1'
+  slides:
+    slideVideoKiss_Clip1:
+      target: displayVideoDMD
+      widgets:
+      - type: video
+        video: videoKiss_Clip1
+        auto_play: True
+        volume: 1.0
+        z: 200
+
+## THIS TIME IS VIDEO MINUS 2
+#- time: '+2'
+#  events:
+#    - eventResumeTrackPlaylist
+
+# *************************
+# REMOVE VIDEO SLIDE AND START NORMAL ATTRACT DISPLAY 
+# *************************
+- time: '+141'
+  events:
+    #- releaseBallHoldSaucerTop
+    #- removeSlideVideoLayout
+    - eventShowSlideAttractDisplay
+              
+- time: '+2'
+  events:
+    #- releaseBallHoldSaucerTop
+    - removeSlideVideoLayout
+    #- eventShowSlideAttractDisplay
+    
+- time: '+1'

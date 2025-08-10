@@ -1,0 +1,238 @@
+#config_version=6
+
+# KISS PeterCriss
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::THUMPER
+    # -------------------
+    shotThumperPeterCrissTop:
+        switch: s_1_25
+        enable_events: eventEnableShotThumperTop
+        disable_events: eventDisableShotThumperTop
+        restart_events: eventRestartShotThumperTop
+        reset_events: eventResetShotThumperTop
+        profile: spShotThumperPeterCrissBand
+        show_tokens:
+            led1: ledThumperTop1
+            led2: ledThumperTop2
+            led3: ledThumperTop3
+            led4: ledThumperTop4
+            led5: ledThumperTop5
+            led6: ledThumperTop6
+            led7: ledThumperTop7
+            led8: ledThumperTop8
+            led9: ledThumperTop9
+            led10: ledThumperTop10
+            led11: ledThumperTop11
+            led12: ledThumperTop12
+            
+    shotThumperPeterCrissLeft:
+        switch: s_1_24
+        enable_events: eventEnableShotThumperLeft
+        disable_events: eventDisableShotThumperLeft
+        restart_events: eventRestartShotThumperLeft
+        reset_events: eventResetShotThumperLeft
+        profile: spShotThumperPeterCrissBand
+        show_tokens:
+            led1: ledThumperLeft1
+            led2: ledThumperLeft2
+            led3: ledThumperLeft3
+            led4: ledThumperLeft4
+            led5: ledThumperLeft5
+            led6: ledThumperLeft6
+            led7: ledThumperLeft7
+            led8: ledThumperLeft8
+            led9: ledThumperLeft9
+            led10: ledThumperLeft10
+            led11: ledThumperLeft11
+            led12: ledThumperLeft12
+            
+    shotThumperPeterCrissRight:
+        switch: s_1_23
+        enable_events: eventEnableShotThumperRight
+        disable_events: eventDisableShotThumperRight
+        restart_events: eventRestartShotThumperRight
+        reset_events: eventResetShotThumperRight
+        profile: spShotThumperPeterCrissBand
+        show_tokens:
+            led1: ledThumperRight1
+            led2: ledThumperRight2
+            led3: ledThumperRight3
+            led4: ledThumperRight4
+            led5: ledThumperRight5
+            led6: ledThumperRight6
+            led7: ledThumperRight7
+            led8: ledThumperRight8
+            led9: ledThumperRight9
+            led10: ledThumperRight10
+            led11: ledThumperRight11
+            led12: ledThumperRight12
+
+    shotThumperPeterCrissBottom:
+        switch: s_1_22
+        enable_events: eventEnableShotThumperBottom
+        disable_events: eventDisableShotThumperBottom
+        restart_events: eventRestartShotThumperBottom
+        reset_events: eventResetShotThumperBottom
+        profile: spShotThumperPeterCriss
+        show_tokens:
+            led1: ledThumperBottom1
+            led2: ledThumperBottom2
+            led3: ledThumperBottom3
+            led4: ledThumperBottom4
+            led5: ledThumperBottom5
+            led6: ledThumperBottom6
+            led7: ledThumperBottom7
+            led8: ledThumperBottom8
+            led9: ledThumperBottom9
+            led10: ledThumperBottom10
+            led11: ledThumperBottom11
+            led12: ledThumperBottom12
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::BUMPER
+    # -----------------------------
+    spShotThumperPeterCriss:
+        states:
+          - name: litFlashYellow
+            show: showLedShotBumperPeterCriss
+            speed: 3
+            show_tokens:
+                color1: '00ffff'
+                color2: '008888'
+          - name: litFlashMagenta
+            show: showLedShotBumperPeterCriss
+            speed: 3
+            show_tokens:
+                color1: 'ff00ff'
+                color2: '880088'
+        loop: true
+
+    # -----------------------------
+    # PROFILE::BUMPER::BAND
+    # -----------------------------
+    spShotThumperPeterCrissBand:
+        states:
+          - name: litFlashYellow
+            show: showLedShotBumperPeterCriss
+            speed: 3
+            show_tokens:
+                color1: '888888'
+                color2: '666666'
+          - name: litFlashMagenta
+            show: showLedShotBumperPeterCriss
+            speed: 3
+            show_tokens:
+                color1: '888888'
+                color2: '666666'
+        loop: true
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeKissPeterCriss_started:
+        - eventRestartShotThumperBottom
+        
+    ## -------------------
+    ## ENABLE THUMPER SHOTS
+    ## -------------------
+    ## LEFT
+    #shotMatrixSpotPeterCrissVerticalLeft_litFlash_hit:
+    #    - eventRestartShotThumperLeft
+    ## MIDDLE
+    #shotMatrixSpotPeterCrissVerticalMiddle_litFlash_hit:
+    #    - eventRestartShotThumperMiddle
+    ## RIGHT
+    #shotMatrixSpotPeterCrissVerticalRight_litFlash_hit:
+    #    - eventRestartShotThumperRight
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------
+    # SCORING::THUMPER
+    # ---------------
+    sw_tagThumper:
+        score: 50
+    shotThumperPeterCrissTop_litFlashYellow_hit:
+        score: 500 * current_player.multiPlayfield
+    shotThumperPeterCrissLeft_litFlashYellow_hit:
+        score: 500 * current_player.multiPlayfield
+    shotThumperPeterCrissRight_litFlashYellow_hit:
+        score: 500 * current_player.multiPlayfield
+    shotThumperPeterCrissBottom_litFlashYellow_hit:
+        score: 500 * current_player.multiPlayfield
+    # ----------------
+    shotThumperPeterCrissTop_litFlashMagenta_hit:
+        score: 600 * current_player.multiPlayfield
+    shotThumperPeterCrissLeft_litFlashMagenta_hit:
+        score: 600 * current_player.multiPlayfield
+    shotThumperPeterCrissRight_litFlashMagenta_hit:
+        score: 600 * current_player.multiPlayfield
+    shotThumperPeterCrissBottom_litFlashMagenta_hit:
+        score: 600 * current_player.multiPlayfield
+        
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::BUMPERS
+    # -----------------------------------
+    showLedShotBumperPeterCriss:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color2)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color2)
+            (led11): (color1)
+            (led12): (color1)
+        - time: 1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color2)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color2)
+            (led12): (color1)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color2)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color2)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color2)
+        - time: 3
