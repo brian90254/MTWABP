@@ -1,0 +1,405 @@
+#config_version=6
+
+# FLASH GORDON
+
+# *********************
+# EVENT::PLAYER
+# *********************
+event_player:
+# -------------------
+# EVENTS::ON BALL STARTING
+# -------------------
+    mode_modeFlashGordon_started:
+        # -------------------------
+        # RESET / ENABLE EVERYTHING FROM SCRATCH
+        - eventRestartShotSaucerAdvance
+
+    shotSaucerAdvance_hit:
+        - randomEventShowVideoFlashGordon
+
+# -------------------
+# EVENTS::BALL IN PLAY
+# -------------------
+    # -------------------
+    # EVENTS::SAUCER SHOT::HIT
+    # -------------------
+    ball_hold_ballHoldSaucerTop_held_ball:
+        # ADVANCE BONUS BY THREE
+        - eventCompleteBonusOnes
+        - eventCompleteBonusOnes|1s
+        - eventCompleteBonusOnes|2s
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:    
+# ---------------
+# ADVANCE MULTIPLIER ON SAUCER HIT
+# ---------------
+    # SPECIAL
+    shotSaucerAdvance_litFlashSaucer3000_hit:
+        score: 3000 * current_player.multiPlayfield
+        
+    # 2X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer2X_hit:
+        multiBonus:
+            int: 2
+            action: set
+        bonus_multiplier:
+            int: 2
+            action: set
+        score: 3000 * current_player.multiPlayfield
+        
+    # 3X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer3X_hit:
+        multiBonus:
+            int: 3
+            action: set
+        bonus_multiplier:
+            int: 3
+            action: set
+        score: 3000 * current_player.multiPlayfield
+        
+    # 5X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer5X_hit:
+        multiBonus:
+            int: 5
+            action: set
+        bonus_multiplier:
+            int: 5
+            action: set
+        score: 3000 * current_player.multiPlayfield
+        
+# ---------------------
+# RANDOM::EVENT::PLAYER
+# ---------------------
+random_event_player:
+# ---------------------
+# PLAY VIDEO::SAUCER::SPARE
+# ---------------------
+    # -------------------
+    # PLAY VIDEO::SAUCER::FLASH GORDON
+    # -------------------
+    randomEventShowVideoFlashGordon:
+        scope: player
+        events:
+          - eventShowVideoFlashGordon_Clip1
+          - eventShowVideoFlashGordon_Clip2
+          - eventShowVideoFlashGordon_Clip3
+          - eventShowVideoFlashGordon_Clip4
+          - eventShowVideoFlashGordon_Clip5
+          - eventShowVideoFlashGordon_Clip6
+          - eventShowVideoFlashGordon_Clip7
+          - eventShowVideoFlashGordon_Clip8
+          - eventShowVideoFlashGordon_Clip9
+          - eventShowVideoFlashGordon_Clip10
+          - eventShowVideoFlashGordon_Clip11
+          - eventShowVideoFlashGordon_Clip12
+          - eventShowVideoFlashGordon_Clip13
+          - eventShowVideoFlashGordon_Clip14
+          - eventShowVideoFlashGordon_Clip15
+          - eventShowVideoFlashGordon_Clip16
+          - eventShowVideoFlashGordon_Clip17
+          - eventShowVideoFlashGordon_Clip18
+          - eventShowVideoFlashGordon_Clip19
+          - eventShowVideoFlashGordon_Clip20
+          - eventShowVideoFlashGordon_Clip21
+          - eventShowVideoFlashGordon_Clip22
+          - eventShowVideoFlashGordon_Clip23
+          - eventShowVideoFlashGordon_Clip24
+          - eventShowVideoFlashGordon_Clip25
+          - eventShowVideoFlashGordon_Clip26
+          - eventShowVideoFlashGordon_Clip27
+          - eventShowVideoFlashGordon_Clip28
+          - eventShowVideoFlashGordon_Clip29
+          - eventShowVideoFlashGordon_Clip30
+          - eventShowVideoFlashGordon_Clip31
+          - eventShowVideoFlashGordon_Clip32
+          - eventShowVideoFlashGordon_Clip33
+          - eventShowVideoFlashGordon_Clip34
+          - eventShowVideoFlashGordon_Clip35
+          - eventShowVideoFlashGordon_Clip36
+          - eventShowVideoFlashGordon_Clip37
+          - eventShowVideoFlashGordon_Clip38
+          # -------------------------------
+          #- eventShowVideoFlashGordon_Clip39
+          #- eventShowVideoFlashGordon_Clip40
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# --------------------------
+# SHOW::PLAYER::VIDEO CLIPS
+# --------------------------            
+    # --------------------------
+    # SAUCER::FLASH GORDON
+    # --------------------------
+    eventShowVideoFlashGordon_Clip1:
+        showVideoFlashGordon_Clip1:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip2:
+        showVideoFlashGordon_Clip2:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip3:
+        showVideoFlashGordon_Clip3:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip4:
+        showVideoFlashGordon_Clip4:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip5:
+        showVideoFlashGordon_Clip5:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip6:
+        showVideoFlashGordon_Clip6:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip7:
+        showVideoFlashGordon_Clip7:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip8:
+        showVideoFlashGordon_Clip8:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip9:
+        showVideoFlashGordon_Clip9:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip10:
+        showVideoFlashGordon_Clip10:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip11:
+        showVideoFlashGordon_Clip11:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip12:
+        showVideoFlashGordon_Clip12:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip13:
+        showVideoFlashGordon_Clip13:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip14:
+        showVideoFlashGordon_Clip14:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip15:
+        showVideoFlashGordon_Clip15:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip16:
+        showVideoFlashGordon_Clip16:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip17:
+        showVideoFlashGordon_Clip17:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip18:
+        showVideoFlashGordon_Clip18:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip19:
+        showVideoFlashGordon_Clip19:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip20:
+        showVideoFlashGordon_Clip20:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip21:
+        showVideoFlashGordon_Clip21:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip22:
+        showVideoFlashGordon_Clip22:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip23:
+        showVideoFlashGordon_Clip23:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip24:
+        showVideoFlashGordon_Clip24:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip25:
+        showVideoFlashGordon_Clip25:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip26:
+        showVideoFlashGordon_Clip26:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip27:
+        showVideoFlashGordon_Clip27:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip28:
+        showVideoFlashGordon_Clip28:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip29:
+        showVideoFlashGordon_Clip29:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip30:
+        showVideoFlashGordon_Clip30:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip31:
+        showVideoFlashGordon_Clip31:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip32:
+        showVideoFlashGordon_Clip32:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip33:
+        showVideoFlashGordon_Clip33:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip34:
+        showVideoFlashGordon_Clip34:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip35:
+        showVideoFlashGordon_Clip35:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip36:
+        showVideoFlashGordon_Clip36:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip37:
+        showVideoFlashGordon_Clip37:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    eventShowVideoFlashGordon_Clip38:
+        showVideoFlashGordon_Clip38:
+            loops: 0
+            speed: 1
+            key: keyShowVideoFlashGordon
+            
+    #eventShowVideoFlashGordon_Clip39:
+    #    showVideoFlashGordon_Clip39:
+    #        loops: 0
+    #        speed: 1
+    #        key: keyShowVideoFlashGordon
+    #        
+    #eventShowVideoFlashGordon_Clip40:
+    #    showVideoFlashGordon_Clip40:
+    #        loops: 0
+    #        speed: 1
+    #        key: keyShowVideoFlashGordon
+            
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showShotSaucerAdvance:
+        - time: 0
+          lights:
+            (led1): (color1A)
+            (led2): (color2A)
+            (led3): (color3A)
+            (led4): (color4A)
+            (led5): (color5A)
+            (led6): (color6A)
+            (led7): (color7A)
+        - time: 1
+          lights:
+            (led1): (color1B)
+            (led2): (color2B)
+            (led3): (color3B)
+            (led4): (color4B)
+            (led5): (color5B)
+            (led6): (color6B)
+            (led7): (color7B)
+        - time: 2
+            

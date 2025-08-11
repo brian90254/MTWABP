@@ -1,0 +1,32 @@
+#config_version=6
+
+config:
+- slidePlayerAdded.yaml
+- slideCreditAdded.yaml
+- slideNotEnoughCredits.yaml
+- slideMaxCreditsReached.yaml
+
+slide_player:
+    credits_added:
+        slideCreditAdded:
+            target: displayDMD
+            expire: 2s
+    player_added:
+        slidePlayerAdded:
+            target: displayDMD
+            expire: 2s
+    not_enough_credits:
+        slideNotEnoughCredits:
+            target: displayDMD
+            expire: 2s
+    max_credits_reached:
+        slideMaxCreditsReached:
+            target: displayDMD
+            expire: 2s
+    
+    #enabling_free_play:
+    #    enabling_free_play_slide:
+    #        expire: 2s
+    #enabling_credit_play:
+    #    enabling_credit_play_slide:
+    #        expire: 2s

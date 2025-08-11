@@ -1,0 +1,320 @@
+#config_version=6
+
+# FLASH GORDON PLAYFIELD MULTIPLIERS TIMERS
+        
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # PLAYFIELD MULTIPLIER 2X
+    # -------------------
+    shotPlayfieldMultiplier2x:
+        enable_events: eventEnableShotPlayfieldMultiplier2x
+        disable_events: eventDisableShotPlayfieldMultiplier2x
+        restart_events: eventRestartShotPlayfieldMultiplier2x
+        reset_events: eventResetShotPlayfieldMultiplier2x
+        #advance_events: eventAdvanceShotPlayfieldMultiplier2x
+        hit_events: eventHitShotPlayfieldMultiplier2x
+        profile: spShotPlayfieldMultiplier
+        show_tokens:
+            led: ledPlayfieldMultiplier2X
+            
+    # -------------------
+    # PLAYFIELD MULTIPLIER 3X
+    # -------------------
+    shotPlayfieldMultiplier3x:
+        enable_events: eventEnableShotPlayfieldMultiplier3x
+        disable_events: eventDisableShotPlayfieldMultiplier3x
+        restart_events: eventRestartShotPlayfieldMultiplier3x
+        reset_events: eventResetShotPlayfieldMultiplier3x
+        #advance_events: eventAdvanceShotPlayfieldMultiplier3x
+        hit_events: eventHitShotPlayfieldMultiplier3x
+        profile: spShotPlayfieldMultiplier
+        show_tokens:
+            led: ledPlayfieldMultiplier3X
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::PLAYFIELD MULTIPLIER
+    # -----------------------------
+    spShotPlayfieldMultiplier:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 2
+            show_tokens:
+                color1: 'ff0000'
+                color2: '880000'
+            # -------------------------------
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 2
+            show_tokens:
+                color1: 'ff00ff'
+                color2: 'ff00ff'
+            # -------------------------------
+        loop: false
+        
+# *****************************
+# EVENT::PLAYER
+# *****************************
+event_player:
+  # -----------------------------------
+  # ENABLE PLAYFIELD MULTIPLIER SHOTS
+  # -----------------------------------
+    eventAwardBonusMini:
+        eventRestartShotPlayfieldMultiplier2x
+        
+    eventAwardBonusSuper:
+        eventRestartShotPlayfieldMultiplier3x
+
+  # -----------------------------------
+  # SHOT HIT PLAYFIELD MULTIPLIER SHOTS
+  # -----------------------------------
+    # THIS IS FROM VIDEO SLIDE SHOW, EJECT SAUCER
+    releaseBallHoldSaucerTop:
+        # HIT BOTH, ONLY ENABLED SHOTS REGISTER
+        - eventHitShotPlayfieldMultiplier2x
+        - eventHitShotPlayfieldMultiplier3x
+
+  # -----------------------------------
+  # TIMERS START. AWARD PLAYFIELD MULTIPLIER SHOTS
+  # -----------------------------------
+    shotPlayfieldMultiplier2x_litFlash_hit:
+        eventStartTimerMultiplier2x
+        
+    shotPlayfieldMultiplier3x_litFlash_hit:
+        eventStartTimerMultiplier3x
+        
+  # -----------------------------------
+  # TIMER EVENTS HURRY UP START
+  # -----------------------------------
+    timer_timerMultiplier2x_complete:
+        eventStartTimerMultiplier2xHurryUp
+        
+    timer_timerMultiplier3x_complete:
+        eventStartTimerMultiplier3xHurryUp
+
+  # -----------------------------------
+  # TIMERS FINISHED, DISABLE SHOTS
+  # -----------------------------------
+    timer_timerMultiplier2xHurryUp_complete:
+        eventDisableShotPlayfieldMultiplier2x
+        
+    timer_timerMultiplier3xHurryUp_complete:
+        eventDisableShotPlayfieldMultiplier3x
+
+  # -----------------------------------
+  # DISABLE SHOTS
+  # -----------------------------------
+    ball_ending:
+        - eventDisableShotPlayfieldMultiplier2x
+        - eventDisableShotPlayfieldMultiplier3x
+
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+    # ---------------
+    # 2X PLAYFILED MULTIPLIER
+    eventStartTimerMultiplier2x:
+        # ADD ONE TO MULTIPLIER
+        multiPlayfield: 1
+        #multiPlayfield:
+        #    int: 2
+        #    action: set
+            
+    # ---------------
+    # 3X PLAYFILED MULTIPLIER
+    eventStartTimerMultiplier3x:
+        # ADD TWO TO MULTIPLIER
+        multiPlayfield: 2
+        #multiPlayfield:
+        #    int: 3
+        #    action: set
+            
+    # ---------------
+    # 1X PLAYFILED MULTIPLIER
+    timer_timerMultiplier2xHurryUp_complete:
+        # SUBTRACT ONE TO MULTIPLIER
+        multiPlayfield: -1
+        #multiPlayfield:
+        #    int: 1
+        #    action: set
+            
+    timer_timerMultiplier3xHurryUp_complete:
+        # SUBTRACT TWO TO MULTIPLIER
+        multiPlayfield: -2
+        #multiPlayfield:
+        #    int: 1
+        #    action: set
+            
+
+# ---------------------
+# TIMERS
+# ---------------------
+timers:
+# ----
+# 2X 
+# ----
+  # ----------------------------
+  # TIMER MULTIPLIER 2X PLAYFIELD
+  # ----------------------------
+    timerMultiplier2x:
+        start_value: 20
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        control_events:
+          - action: start
+            event: eventStartTimerMultiplier2x
+  # ----------------------------
+  # TIMER MULTIPLIER 2X PLAYFIELD HURRY UP
+  # ----------------------------
+    timerMultiplier2xHurryUp:
+        start_value: 10
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        control_events:
+          - action: start
+            event: eventStartTimerMultiplier2xHurryUp
+# ----
+# 3X 
+# ----
+  # ----------------------------
+  # TIMER MULTIPLIER 3X PLAYFIELD
+  # ----------------------------
+    timerMultiplier3x:
+        start_value: 20
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        control_events:
+          - action: start
+            event: eventStartTimerMultiplier3x
+  # ----------------------------
+  # TIMER MULTIPLIER 3X PLAYFIELD HURRY UP
+  # ----------------------------
+    timerMultiplier3xHurryUp:
+        start_value: 10
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        control_events:
+          - action: start
+            event: eventStartTimerMultiplier3xHurryUp
+            
+# *********************
+# SHOW PLAYER
+# *********************
+show_player:
+  # -----------------------------------
+  # PLAY SHOW::PLAYFIELD MULTIPLIER 2X
+  # -----------------------------------
+    # ------
+    # START
+    # ------
+    eventStartTimerMultiplier2x:
+        showPlayfieldMultiplier2x:
+            speed: 3
+            action: play
+    # ------
+    # HURRY UP
+    # ------
+    eventStartTimerMultiplier2xHurryUp:
+        showPlayfieldMultiplier2x:
+            speed: 6
+            action: play
+    # ------
+    # STOP
+    # ------
+    timer_timerMultiplier2xHurryUp_complete:
+        showPlayfieldMultiplier2x:
+            action: stop
+
+  # -----------------------------------
+  # PLAY SHOW::PLAYFIELD MULTIPLIER 3X
+  # -----------------------------------
+    # ------
+    # START
+    # ------
+    eventStartTimerMultiplier3x:
+        showPlayfieldMultiplier3x:
+            speed: 3
+            action: play
+    # ------
+    # HURRY UP
+    # ------
+    eventStartTimerMultiplier3xHurryUp:
+        showPlayfieldMultiplier3x:
+            speed: 6
+            action: play
+    # ------
+    # STOP
+    # ------
+    timer_timerMultiplier3xHurryUp_complete:
+        showPlayfieldMultiplier3x:
+            action: stop
+
+  # -----------------------------------
+  # STOP SHOWS
+  # -----------------------------------
+    ball_ending:
+        showPlayfieldMultiplier2x:
+            action: stop
+            
+        showPlayfieldMultiplier3x:
+            action: stop
+            
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::PLAYFIELD MULTIPLIER 2X
+    # -----------------------------------
+    showPlayfieldMultiplier2x:
+        - time: 0
+          lights:
+            ledClock15Sec1A: '00ff00'
+            ledClock15Sec1B: '008800'
+            ledClock15Sec1C: '008800'
+        - time: "+1"
+          lights:
+            ledClock15Sec1A: '008800'
+            ledClock15Sec1B: '00ff00'
+            ledClock15Sec1C: '008800'
+        - time: "+1"
+          lights:
+            ledClock15Sec1A: '008800'
+            ledClock15Sec1B: '008800'
+            ledClock15Sec1C: '00ff00'
+        - time: "+1"
+        
+    # -----------------------------------
+    # SHOW::PLAYFIELD MULTIPLIER 3X
+    # -----------------------------------
+    showPlayfieldMultiplier3x:
+        - time: 0
+          lights:
+            ledClock15Sec2A: '00ff00'
+            ledClock15Sec2B: '008800'
+            ledClock15Sec2C: '008800'
+        - time: "+1"
+          lights:
+            ledClock15Sec2A: '008800'
+            ledClock15Sec2B: '00ff00'
+            ledClock15Sec2C: '008800'
+        - time: "+1"
+          lights:
+            ledClock15Sec2A: '008800'
+            ledClock15Sec2B: '008800'
+            ledClock15Sec2C: '00ff00'
+        - time: "+1"
+        

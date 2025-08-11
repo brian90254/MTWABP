@@ -1,0 +1,512 @@
+#config_version=6
+
+# FLASH GORDON
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::TARGET::TOP
+    # -------------------
+    shotTargetTop:
+        switch: s_1_8
+        enable_events: eventEnableShotTargetTop
+        disable_events: eventDisableShotTargetTop
+        restart_events: eventRestartShotTargetTop
+        reset_events: eventResetShotTargetTop
+
+    shotTargetTopCollectBonus:
+        switch: s_1_8
+        enable_events: eventEnableShotTargetTopCollectBonus
+        disable_events: eventDisableShotTargetTopCollectBonus
+        restart_events: eventRestartShotTargetTopCollectBonus
+        reset_events: eventResetShotTargetTopCollectBonus
+        profile: spShotTargetTop
+        show_tokens:
+            led: ledTargetUpperCollectBonus
+    
+    shotTargetTopSpecial:
+        switch: s_1_8
+        enable_events: eventEnableShotTargetTopSpecial
+        disable_events: eventDisableShotTargetTopSpecial
+        restart_events: eventRestartShotTargetTopSpecial
+        reset_events: eventResetShotTargetTopSpecial
+        profile: spShotTargetTop
+        show_tokens:
+            led: ledTargetUpperSpecial
+    
+    shotTargetTopAward:
+        enable_events: eventEnableShotTargetTopAward
+        disable_events: eventDisableShotTargetTopAward
+        restart_events: eventRestartShotTargetTopAward
+        reset_events: eventResetShotTargetTopAward
+        hit_events: eventHitShotTargetTopAward
+        profile: spShotTargetTopAward
+        #show_tokens:
+        #    led1: ledTargetUpperCollectBonus
+        #    led2: ledTargetUpperSpecial
+    
+    # -------------------
+    # SHOTS::DROP::TOP
+    # -------------------
+    shotDropTop1:
+        switch: s_1_7
+        enable_events: eventEnableShotDropTop1
+        disable_events: eventDisableShotDropTop1
+        restart_events: eventRestartShotDropTop1
+        reset_events: eventResetShotDropTop1
+        profile: spShotDropTop
+        
+    shotDropTop2:
+        switch: s_1_9
+        enable_events: eventEnableShotDropTop2
+        disable_events: eventDisableShotDropTop2
+        restart_events: eventRestartShotDropTop2
+        reset_events: eventResetShotDropTop2
+        profile: spShotDropTop
+        
+    shotDropTop3:
+        switch: s_1_6
+        enable_events: eventEnableShotDropTop3
+        disable_events: eventDisableShotDropTop3
+        restart_events: eventRestartShotDropTop3
+        reset_events: eventResetShotDropTop3
+        profile: spShotDropTop
+
+    # -------------------
+    # SHOTS::DROP::SINGLE
+    # -------------------
+    shotSingle:
+        switch: s_0_5
+        enable_events: eventEnableShotSingle
+        disable_events: eventDisableShotSingle
+        restart_events: eventRestartShotSingle
+        reset_events: eventResetShotSingle
+        
+    # -------------------
+    # SHOTS::ROLLOVERS
+    # -------------------
+    # RIGHT
+    shotRolloverRight1:
+        switch: s_0_6
+        enable_events: eventEnableShotRolloverRight1
+        disable_events: eventDisableShotRolloverRight1
+        restart_events: eventRestartShotRolloverRight1
+        reset_events: eventResetShotRolloverRight1
+        profile: spShotRollover
+        show_tokens:
+            led1: ledRolloverRight1A
+            led2: ledRolloverRight1B
+            led3: ledRolloverRight1C
+            led4: ledRolloverRight1D
+        
+    shotRolloverRight2:
+        switch: s_1_14
+        enable_events: eventEnableShotRolloverRight2
+        disable_events: eventDisableShotRolloverRight2
+        restart_events: eventRestartShotRolloverRight2
+        reset_events: eventResetShotRolloverRight2
+        profile: spShotRollover
+        show_tokens:
+            led1: ledRolloverRight2A
+            led2: ledRolloverRight2B
+            led3: ledRolloverRight2C
+            led4: ledRolloverRight2D
+            
+    # LEFT
+    shotRolloverLeft1:
+        switch: s_0_7
+        enable_events: eventEnableShotRolloverLeft1
+        disable_events: eventDisableShotRolloverLeft1
+        restart_events: eventRestartShotRolloverLeft1
+        reset_events: eventResetShotRolloverLeft1
+        profile: spShotRollover
+        show_tokens:
+            led1: ledRolloverLeft1A
+            led2: ledRolloverLeft1B
+            led3: ledRolloverLeft1C
+            led4: ledRolloverLeft1D
+            
+    shotRolloverLeft2:
+        switch: s_1_0
+        enable_events: eventEnableShotRolloverLeft2
+        disable_events: eventDisableShotRolloverLeft2
+        restart_events: eventRestartShotRolloverLeft2
+        reset_events: eventResetShotRolloverLeft2
+        profile: spShotRollover
+        show_tokens:
+            led1: ledRolloverLeft2A
+            led2: ledRolloverLeft2B
+            led3: ledRolloverLeft2C
+            led4: ledRolloverLeft2D
+            
+    # SHOOTER
+    shotRolloverShooter1:
+        switch: s_1_1
+        enable_events: eventEnableShotRolloverShooter1
+        disable_events: eventDisableShotRolloverShooter1
+        restart_events: eventRestartShotRolloverShooter1
+        reset_events: eventResetShotRolloverShooter1
+        profile: spShotRollover
+        show_tokens:
+            led1: ledRolloverShooter1A
+            led2: ledRolloverShooter1B
+            led3: ledRolloverShooter1C
+            led4: ledRolloverShooter1D
+            
+    shotRolloverShooter2:
+        switch: s_1_12
+        enable_events: eventEnableShotRolloverShooter2
+        disable_events: eventDisableShotRolloverShooter2
+        restart_events: eventRestartShotRolloverShooter2
+        reset_events: eventResetShotRolloverShooter2
+        profile: spShotRollover
+        show_tokens:
+            led1: ledRolloverShooter2A
+            led2: ledRolloverShooter2B
+            led3: ledRolloverShooter2C
+            led4: ledRolloverShooter2D
+            
+    shotRolloverShooter3:
+        switch: s_1_25
+        enable_events: eventEnableShotRolloverShooter3
+        disable_events: eventDisableShotRolloverShooter3
+        restart_events: eventRestartShotRolloverShooter3
+        reset_events: eventResetShotRolloverShooter3
+        profile: spShotRollover
+        show_tokens:
+            led1: ledRolloverShooter3A
+            led2: ledRolloverShooter3B
+            led3: ledRolloverShooter3C
+            led4: ledRolloverShooter3D
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::DROP::TOP
+    # -------------------
+    shotGroupDropTop:
+        shots:
+            - shotDropTop1
+            - shotDropTop2
+            - shotDropTop3
+        enable_events:
+            - eventEnableShotGroupDropTop
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupDropTop
+        reset_events:
+            - eventResetShotGroupDropTop
+        restart_events:
+            - eventRestartShotGroupDropTop
+        #rotate_left_events:
+        #    - sw_left_flipper
+        #rotate_right_events:
+        #    - sw_right_flipper
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::ROLLOVER
+    # -----------------------------
+    spShotRollover:
+        states:
+          - name: litFlash
+            show: swirlFourLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '000000'
+                color2: 'cccccc'
+          - name: litSolid
+            show: swirlFourLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '006600'
+                color2: '00ff00'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::DROP::TOP
+    # -----------------------------
+    spShotDropTop:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::TARGET::TOP
+    # -----------------------------
+    spShotTargetTop:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '666666'
+                color2: 'cccccc'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: 'ffffff'
+                color2: 'ffffff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::TARGET::TOP::AWARD
+    # -----------------------------
+    spShotTargetTopAward:
+        states:
+          - name: unlitFlashLightThumpers
+          - name: litFlashCollectBonus
+          - name: litFlashSpecial
+          - name: litSolid
+        loop: false
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+# ---------------------
+# MODE::STARTING
+# ---------------------
+    mode_modeFlashGordon_started:
+        # TARGET TOP AND AWARD
+        - eventRestartShotTargetTop
+        - eventRestartShotTargetTopAward
+        # DROP TOP
+        - eventRestartShotDropTop1
+        - eventRestartShotDropTop2
+        - eventRestartShotDropTop3
+        - eventRestartShotGroupDropTop
+        # ROLLOVERS
+        # MOVED THESE TO RESTART ON DROP COMPLETE
+        #- eventRestartShotRolloverRight1
+        #- eventRestartShotRolloverRight2
+        #- eventRestartShotRolloverLeft1
+        #- eventRestartShotRolloverLeft2
+        - eventRestartShotRolloverShooter1
+        - eventRestartShotRolloverShooter2
+        - eventRestartShotRolloverShooter3
+        
+# ---------------------
+# MODE::ENDING
+# ---------------------
+    ball_ending:
+        - eventDisableShotTargetTopCollectBonus
+        - eventDisableShotTargetTopSpecial
+        
+# ---------------------
+# SHOT::HIT::EVENTS
+# ---------------------
+    shotGroupDropTop_litSolid_complete:
+        # THIS IS TO LIT THUMPERS
+        - eventHitShotTargetTopAward
+        # RESET
+        - eventRestartShotDropTop1
+        - eventRestartShotDropTop2
+        - eventRestartShotDropTop3
+        - eventRestartShotGroupDropTop
+        # RESTART ROLLOVERS ON DROP COMPLETE
+        - eventRestartShotRolloverRight1
+        - eventRestartShotRolloverRight2
+        - eventRestartShotRolloverLeft1
+        - eventRestartShotRolloverLeft2
+        
+  # ---------------
+  # DROPS::BONUS
+  # ---------------
+    shotDropTop1_litFlash_hit:
+        - eventCompleteAchBonusUpperOnes
+    shotDropTop2_litFlash_hit:
+        - eventCompleteAchBonusUpperOnes
+    shotDropTop3_litFlash_hit:
+        - eventCompleteAchBonusUpperOnes
+        
+  # ---------------
+  # ROLLOVERS::BONUS
+  # ---------------
+    shotRolloverLeft1_litFlash_hit:
+        - eventCompleteAchBonusUpperOnes
+    shotRolloverLeft2_litFlash_hit:
+        - eventCompleteAchBonusUpperOnes
+    shotRolloverRight1_litFlash_hit:
+        - eventCompleteAchBonusUpperOnes
+    shotRolloverRight2_litFlash_hit:
+        - eventCompleteAchBonusUpperOnes
+        
+  # ---------------
+  # DROPS::COLLECT BONUS::SPECIAL
+  # ---------------
+    shotTargetTopAward_litFlashCollectBonus_hit:
+        - eventRestartShotTargetTopCollectBonus
+
+    shotTargetTopAward_litFlashSpecial_hit:
+        - eventRestartShotTargetTopSpecial
+        
+# ---------------------
+# BONUS ADVANCE
+# ---------------------
+    shotTargetTop_hit:
+        - eventCompleteAchBonusUpperOnes
+    
+    shotSingle_hit:
+        - eventCompleteAchBonusUpperOnes
+        - eventCompleteAchBonusUpperOnes|1000ms
+
+  # ---------------
+  # TODO enable rollovers after fisrt drop target complete
+  # ---------------
+  # ---------------
+  # ROLLOVERS
+  # ---------------
+    # LEFT
+    shotRolloverLeft1_hit:
+        - eventCompleteAchBonusUpperOnes
+    shotRolloverLeft2_hit:
+        - eventCompleteAchBonusUpperOnes
+    # ---------------
+    # RIGHT
+    shotRolloverRight1_hit:
+        - eventCompleteAchBonusUpperOnes
+    shotRolloverRight2_hit:
+        - eventCompleteAchBonusUpperOnes
+
+  # ---------------
+  # MINI UPPER BONUS
+  # ---------------
+    shotGroupRotateDropTop_litSolid_complete:
+        - eventAwardBonusMini
+      
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------
+    # TARGET TOP
+    shotTargetTop_hit:
+        score: 5000 * current_player.multiPlayfield
+    shotTargetTopSpecial_litFlash_hit:
+        score: 50000 * current_player.multiPlayfield
+
+    # ---------------
+    # DROP SINGLE
+    shotSingle_hit:
+        score: 10000 * current_player.multiPlayfield
+        
+  # ---------------
+  # ROLLOVERS
+    # ---------------
+    # LEFT
+    shotRolloverLeft1_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotRolloverLeft2_hit:
+        score: 1000 * current_player.multiPlayfield
+    # ---------------
+    # RIGHT
+    shotRolloverRight1_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotRolloverRight2_hit:
+        score: 1000 * current_player.multiPlayfield
+    # ---------------
+    # SHOOTER
+    shotRolloverShooter1_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotRolloverShooter2_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotRolloverShooter3_hit:
+        score: 1000 * current_player.multiPlayfield
+
+    #shotGroupRotateDropTop_litSolid_complete:
+        
+    # -------------------------
+    # SET BONUS SUPER LOWER
+    eventAwardBonusMini:
+        bonusMiniUpper:
+            int: 50000
+            action: set
+            
+# *********************
+# SHOW PLAYER
+# *********************
+show_player:
+    # -----------------------------------
+    # PLAY SHOW::AWARD BONUS SUPER
+    # -----------------------------------
+    eventAwardBonusMini:
+        showAwardBonusMini:
+            speed: 5
+            action: play
+            
+    ball_ending:
+        showAwardBonusMini:
+            action: stop
+            
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::TARGET::TOP::AWARD
+    # -----------------------------------
+    showShotTargetTopAward:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color3)
+        - time: 1
+          lights:
+            (led1): (color2)
+            (led2): (color4)
+        - time: 2
+
+    # -----------------------------------
+    # SHOW::SHOT::DROP::LEFT::COMPLETE::SAUCER
+    # -----------------------------------
+    showAwardBonusMini:
+        - time: 0
+          lights:
+            ledBonusMini50A: 'cccc00'
+            ledBonusMini50B: '666600'
+            ledBonusMini50C: '666600'
+            ledBonusMini50D: '666600'
+            ledBonusMini50E: '666600'
+        - time: "+1"
+          lights:
+            ledBonusMini50A: '666600'
+            ledBonusMini50B: 'cccc00'
+            ledBonusMini50C: '666600'
+            ledBonusMini50D: '666600'
+            ledBonusMini50E: '666600'
+        - time: "+1"
+          lights:
+            ledBonusMini50A: '666600'
+            ledBonusMini50B: '666600'
+            ledBonusMini50C: 'cccc00'
+            ledBonusMini50D: '666600'
+            ledBonusMini50E: '666600'
+        - time: "+1"
+          lights:
+            ledBonusMini50A: '666600'
+            ledBonusMini50B: '666600'
+            ledBonusMini50C: '666600'
+            ledBonusMini50D: 'cccc00'
+            ledBonusMini50E: '666600'
+        - time: "+1"
+          lights:
+            ledBonusMini50A: '666600'
+            ledBonusMini50B: '666600'
+            ledBonusMini50C: '666600'
+            ledBonusMini50D: '666600'
+            ledBonusMini50E: 'cccc00'
+        - time: "+1"
+        

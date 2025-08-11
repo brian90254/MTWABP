@@ -1,0 +1,571 @@
+#config_version=6
+
+# GLOBETROTTERS GLOBE AWARD
+
+
+# *****************************
+# ACHIEVEMENT::GROUPS
+# *****************************
+
+achievement_groups:
+  agAchGlobeAward:
+    achievements:
+        - achGlobeAward1
+        - achGlobeAward2
+        - achGlobeAward3
+        - achGlobeAward4
+        - achGlobeAward5
+    events_when_all_completed: eventAgAchGlobeAwardCompleted
+    enable_while_no_achievement_started: yes
+    disable_while_achievement_started: no
+    enable_events: eventEnableAgAchGlobeAward
+    disable_events: eventDisableAgAchGlobeAward
+
+# *****************************
+# ACHIEVEMENTS
+# *****************************
+achievements:
+  
+# -----------------------------
+# ACHIEVEMENT::GLOBE::AWARD
+# -----------------------------
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::AWARED::ONE
+  # -----------------------------
+  achGlobeAward1:
+    show_tokens:
+      led1: ledAwardGlobe1A
+      led2: ledAwardGlobe1B
+      led3: ledAwardGlobe1C
+      led4: ledDummy1
+      led5: ledDummy2
+      color1: 'ffff00'
+      color2: '808000'
+    show_when_selected: showWhenSelectedAchGlobeAward
+    show_when_started: showWhenStartedAchGlobeAward
+    show_when_stopped: showWhenStoppedAchGlobeAward
+    show_when_completed: showWhenCompletedAchGlobeAward
+    #events_when_selected:
+    #events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchGlobeAward
+    select_events: eventSelectAchGlobeAward
+    #start_events: eventStartAchGlobeAward1
+    # -------------------
+    # TEST 210223 BC
+    start_events: eventCompletedAchGlobeAward1
+    # -------------------
+    stop_events: eventStopAchGlobeAward1
+    complete_events: eventCompletedAchGlobeAward1
+    reset_events: eventResetAchGlobeAward
+    sync_ms: 1
+    restart_after_stop_possible: true
+
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::AWARED::TWO
+  # -----------------------------
+  achGlobeAward2:
+    show_tokens:
+      led1: ledAwardGlobe2A
+      led2: ledAwardGlobe2B
+      led3: ledAwardGlobe2C
+      led4: ledDummy1
+      led5: ledDummy2
+      color1: 'ffff00'
+      color2: '808000'
+    show_when_selected: showWhenSelectedAchGlobeAward
+    show_when_started: showWhenStartedAchGlobeAward
+    show_when_stopped: showWhenStoppedAchGlobeAward
+    show_when_completed: showWhenCompletedAchGlobeAward
+    #events_when_selected:
+    #events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchGlobeAward
+    select_events: eventSelectAchGlobeAward
+    #start_events: eventStartAchGlobeAward2
+    # -------------------
+    # TEST 210223 BC
+    start_events: eventCompletedAchGlobeAward2
+    # -------------------
+    stop_events: eventStopAchGlobeAward2
+    complete_events: eventCompletedAchGlobeAward2
+    reset_events: eventResetAchGlobeAward
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::AWARED::THREE
+  # -----------------------------
+  achGlobeAward3:
+    show_tokens:
+      led1: ledAwardGlobe3A
+      led2: ledAwardGlobe3B
+      led3: ledAwardGlobe3C
+      led4: ledDummy1
+      led5: ledDummy2
+      color1: 'ffff00'
+      color2: '808000'
+    show_when_selected: showWhenSelectedAchGlobeAward
+    show_when_started: showWhenStartedAchGlobeAward
+    show_when_stopped: showWhenStoppedAchGlobeAward
+    show_when_completed: showWhenCompletedAchGlobeAward
+    #events_when_selected:
+    #events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchGlobeAward
+    select_events: eventSelectAchGlobeAward
+    #start_events: eventStartAchGlobeAward3
+    # -------------------
+    # TEST 210223 BC
+    start_events: eventCompletedAchGlobeAward3
+    # -------------------
+    stop_events: eventStopAchGlobeAward3
+    complete_events: eventCompletedAchGlobeAward3
+    reset_events: eventResetAchGlobeAward
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::AWARED::FOUR
+  # -----------------------------
+  achGlobeAward4:
+    show_tokens:
+      led1: ledAwardGlobe4A
+      led2: ledAwardGlobe4B
+      led3: ledAwardGlobe4C
+      led4: ledDummy1
+      led5: ledDummy2
+      color1: 'ffff00'
+      color2: '808000'
+    show_when_selected: showWhenSelectedAchGlobeAward
+    show_when_started: showWhenStartedAchGlobeAward
+    show_when_stopped: showWhenStoppedAchGlobeAward
+    show_when_completed: showWhenCompletedAchGlobeAward
+    #events_when_selected:
+    #events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchGlobeAward
+    select_events: eventSelectAchGlobeAward
+    #start_events: eventStartAchGlobeAward4
+    # -------------------
+    # TEST 210223 BC
+    start_events: eventCompletedAchGlobeAward4
+    # -------------------
+    stop_events: eventStopAchGlobeAward4
+    complete_events: eventCompletedAchGlobeAward4
+    reset_events: eventResetAchGlobeAward
+    sync_ms: 1
+    restart_after_stop_possible: true
+
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::AWARED::FIVE
+  # -----------------------------
+  achGlobeAward5:
+    show_tokens:
+      led1: ledAwardGlobe5A
+      led2: ledAwardGlobe5B
+      led3: ledAwardGlobe5C
+      led4: ledDummy1
+      led5: ledDummy2
+      color1: 'ffff00'
+      color2: '808000'
+    show_when_selected: showWhenSelectedAchGlobeAward
+    show_when_started: showWhenStartedAchGlobeAward
+    show_when_stopped: showWhenStoppedAchGlobeAward
+    show_when_completed: showWhenCompletedAchGlobeAward
+    #events_when_selected:
+    #events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchGlobeAward
+    select_events: eventSelectAchGlobeAward
+    #start_events: eventStartAchGlobeAward5
+    # -------------------
+    # TEST 210223 BC
+    start_events: eventCompletedAchGlobeAward5
+    # -------------------
+    stop_events: eventStopAchGlobeAward5
+    complete_events: eventCompletedAchGlobeAward5
+    reset_events: eventResetAchGlobeAward
+    sync_ms: 1
+    restart_after_stop_possible: true
+
+## *****************************
+## END ACHIEVEMENTS
+## *****************************
+
+# *****************************      
+# SHOTS
+# *****************************
+shots:
+    shotGlobeSaucer1:
+        switch: s_1_8
+        enable_events: eventEnableShotshotGlobeSaucer1
+        disable_events: eventDisableShotGlobeSaucer1
+        restart_events: eventRestartShotGlobeSaucer1
+        reset_events: eventResetShotGlobeSaucer1
+        profile: spGlobeSaucer1
+        advance_events: eventAdvanceShotGlobeSaucer
+        show_tokens:
+            led1: ledGlobeSaucer1A
+            led2: ledGlobeSaucer1B
+            led3: ledGlobeSaucer1C
+            
+    shotGlobeSaucer2:
+        switch: s_1_8
+        enable_events: eventEnableShotshotGlobeSaucer2
+        disable_events: eventDisableShotGlobeSaucer2
+        restart_events: eventRestartShotGlobeSaucer2
+        reset_events: eventResetShotGlobeSaucer2
+        profile: spGlobeSaucer2
+        advance_events: eventAdvanceShotGlobeSaucer
+        show_tokens:
+            led1: ledGlobeSaucer2A
+            led2: ledGlobeSaucer2B
+            led3: ledGlobeSaucer2C
+            
+    shotGlobeSaucer3:
+        switch: s_1_8
+        enable_events: eventEnableShotshotGlobeSaucer3
+        disable_events: eventDisableShotGlobeSaucer3
+        restart_events: eventRestartShotGlobeSaucer3
+        reset_events: eventResetShotGlobeSaucer3
+        profile: spGlobeSaucer3
+        advance_events: eventAdvanceShotGlobeSaucer
+        show_tokens:
+            led1: ledGlobeSaucer3A
+            led2: ledGlobeSaucer3B
+            led3: ledGlobeSaucer3C
+            
+    shotGlobeSaucer4:
+        switch: s_1_8
+        enable_events: eventEnableShotshotGlobeSaucer4
+        disable_events: eventDisableShotGlobeSaucer4
+        restart_events: eventRestartShotGlobeSaucer4
+        reset_events: eventResetShotGlobeSaucer4
+        profile: spGlobeSaucer4
+        advance_events: eventAdvanceShotGlobeSaucer
+        show_tokens:
+            led1: ledGlobeSaucer4A
+            led2: ledGlobeSaucer4B
+            led3: ledGlobeSaucer4C
+            
+    shotGlobeSaucer5:
+        switch: s_1_8
+        enable_events: eventEnableShotshotGlobeSaucer5
+        disable_events: eventDisableShotGlobeSaucer5
+        restart_events: eventRestartShotGlobeSaucer5
+        reset_events: eventResetShotGlobeSaucer5
+        profile: spGlobeSaucer5
+        advance_events: eventAdvanceShotGlobeSaucer
+        show_tokens:
+            led1: ledGlobeSaucer5A
+            led2: ledGlobeSaucer5B
+            led3: ledGlobeSaucer5C
+            
+            
+# *****************************      
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::GLOBE::SAUCER::1
+    # -----------------------------
+    spGlobeSaucer1:
+        states:
+          - name: litGlobeSaucer
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: '800000'
+          - name: unlitGlobeSaucerStepOne
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepTwo
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepThree
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepFour
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+        loop: true
+        
+    # -----------------------------
+    # PROFILE::GLOBE::SAUCER::2
+    # -----------------------------
+    spGlobeSaucer2:
+        states:
+          - name: unlitGlobeSaucerStepFour
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litGlobeSaucer
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: '800000'
+          - name: unlitGlobeSaucerStepOne
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepTwo
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepThree
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+        loop: true
+        
+    # -----------------------------
+    # PROFILE::GLOBE::SAUCER::3
+    # -----------------------------
+    spGlobeSaucer3:
+        states:
+          - name: unlitGlobeSaucerStepThree
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepFour
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litGlobeSaucer
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: '800000'
+          - name: unlitGlobeSaucerStepOne
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepTwo
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+        loop: true
+        
+    # -----------------------------
+    # PROFILE::GLOBE::SAUCER::4
+    # -----------------------------
+    spGlobeSaucer4:
+        states:
+          - name: unlitGlobeSaucerStepTwo
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepThree
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepFour
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litGlobeSaucer
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: '800000'
+          - name: unlitGlobeSaucerStepOne
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+        loop: true
+        
+    # -----------------------------
+    # PROFILE::GLOBE::SAUCER::5
+    # -----------------------------
+    spGlobeSaucer5:
+        states:
+          - name: unlitGlobeSaucerStepOne
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepTwo
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepThree
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: unlitGlobeSaucerStepFour
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litGlobeSaucer
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: '800000'
+        loop: true
+        
+        
+    spGlobeSaucerOn:
+        states:
+          - name: litGlobeSaucer
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: '000000'
+        loop: true
+        
+    spGlobeSaucerOff:
+        states:
+          - name: unlitGlobeSaucer
+            show: showGlobeSaucerTrace
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+        loop: true
+        
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::TARGET::PLAYER
+    # -------------------
+    sgGlobeSaucer:
+        shots:
+            - shotGlobeSaucer1
+            - shotGlobeSaucer2
+            - shotGlobeSaucer3
+            - shotGlobeSaucer4
+            - shotGlobeSaucer5
+        #rotate_left_events: s_flipper_left_active
+        #rotate_right_events: s_flipper_right_active
+        rotate_right_events: eventRotateRightShotGroupGlobeSaucer
+        enable_events: eventEnableShotGroupGlobeSaucer
+        disable_events: ball_ending
+        reset_events:
+            - ball_started
+            - mode_modeGlobetrotters_started
+            - eventResetShotGroupGlobeSaucer
+            
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # ----------------------------
+  # TIMER TO ROTATE SHOT
+  # ----------------------------
+  timer_timerRotateRightShotGroupGlobeSaucer_complete:
+    #- eventRotateRightShotGroupGlobeSaucer
+    - eventAdvanceShotGlobeSaucer
+    
+  # ----------------------------
+  # COMPLETE ACHIEVEMENTS
+  # ----------------------------
+  shotGlobeSaucer1_spGlobeSaucer1_litGlobeSaucer_hit:
+    - eventCompletedAchGlobeAward1
+    - eventTimerAddFourSeconds
+    # THIS IS TO ADD TO BONUS ON SAUCER HIT
+    - eventCompleteBonus
+    
+  shotGlobeSaucer2_spGlobeSaucer2_litGlobeSaucer_hit:
+    - eventCompletedAchGlobeAward2
+    - eventTimerAddFourSeconds
+    # THIS IS TO ADD TO BONUS ON SAUCER HIT
+    - eventCompleteBonus
+    
+  shotGlobeSaucer3_spGlobeSaucer3_litGlobeSaucer_hit:
+    - eventCompletedAchGlobeAward3
+    - eventTimerAddFourSeconds
+    # THIS IS TO ADD TO BONUS ON SAUCER HIT
+    - eventCompleteBonus
+    
+  shotGlobeSaucer4_spGlobeSaucer4_litGlobeSaucer_hit:
+    - eventCompletedAchGlobeAward4
+    - eventTimerAddFourSeconds
+    # THIS IS TO ADD TO BONUS ON SAUCER HIT
+    - eventCompleteBonus
+    
+  shotGlobeSaucer5_spGlobeSaucer5_litGlobeSaucer_hit:
+    - eventCompletedAchGlobeAward5
+    - eventTimerAddFourSeconds
+    # THIS IS TO ADD TO BONUS ON SAUCER HIT
+    - eventCompleteBonus
+
+  # DROP TARGET HIT
+  eventCompleteNextAchGlobeAward:
+    - eventCompletedAchGlobeAward1{device.achievements.achGlobeAward1.state!="completed"}
+  eventCompleteNextAchGlobeAward.2:
+    - eventCompletedAchGlobeAward2{device.achievements.achGlobeAward1.state=="completed" and device.achievements.achGlobeAward2.state!="completed"}
+  eventCompleteNextAchGlobeAward.3:
+    - eventCompletedAchGlobeAward3{device.achievements.achGlobeAward1.state=="completed" and device.achievements.achGlobeAward2.state=="completed" and device.achievements.achGlobeAward3.state!="completed"}
+  eventCompleteNextAchGlobeAward.4:
+    - eventCompletedAchGlobeAward4{device.achievements.achGlobeAward1.state=="completed" and device.achievements.achGlobeAward2.state=="completed" and device.achievements.achGlobeAward3.state=="completed" and device.achievements.achGlobeAward4.state!="completed"}
+  eventCompleteNextAchGlobeAward.5:
+    - eventCompletedAchGlobeAward5{device.achievements.achGlobeAward1.state=="completed" and device.achievements.achGlobeAward2.state=="completed" and device.achievements.achGlobeAward3.state=="completed" and device.achievements.achGlobeAward4.state=="completed" and device.achievements.achGlobeAward5.state!="completed"}
+
+
+# ---------------------
+# TIMERS
+# ---------------------
+timers:
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # ----------------------------
+    timerRotateRightShotGroupGlobeSaucer:
+        start_value: 4
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: true
+        restart_on_complete: true
+        control_events:
+          - event: eventTimerAddFourSeconds
+            action: add
+            value: 4
+
+            
