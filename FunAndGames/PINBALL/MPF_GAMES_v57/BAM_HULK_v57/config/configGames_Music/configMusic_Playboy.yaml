@@ -1,0 +1,425 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:
+# ---------------------
+# SOUNDS::MUSIC::THEME
+# ---------------------
+  musicPlayboyTheme001:
+    file: musicPlayboyTheme_RunningFast_001.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme002:
+    file: musicPlayboyTheme_Trops_002.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme003:
+    file: musicPlayboyTheme_BluesForAlexandra_003.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme004:
+    file: musicPlayboyTheme_MotoCentripeto_004.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicPlayboyTheme005:
+    file: musicPlayboyTheme_BlueMedia_005.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme006:
+    file: musicPlayboyTheme_DiamondBossaNova_006.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme007:
+    file: musicPlayboyTheme_LitaliaVistaDalCielo_007.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme008:
+    file: musicPlayboyTheme_FearingMuch_008.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme009:
+    file: musicPlayboyTheme_Sessomatto_009.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme010:
+    file: musicPlayboyTheme_Decisione_010.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme011:
+    file: musicPlayboyTheme_AirportRock_011.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme012:
+    file: musicPlayboyTheme_HoneyRhythmAndButter_012.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme013:
+    file: musicPlayboyTheme_UnDetective_013.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme014:
+    file: musicPlayboyTheme_CasaDiModa_014.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme015:
+    file: musicPlayboyTheme_LadyMagnolia_015.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme016:
+    file: musicPlayboyTheme_Messaggio_016.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::THEME
+# ---------------------
+  musicFlashGordon001:
+    file: musicFlashGordonTheme_001.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicFlashGordon002:
+    file: musicFlashGordonTheme_002.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  #musicFlashGordon003:
+  #  file: musicFlashGordonTheme_003.wav
+  #  track: music
+  #  volume: 0.7
+  #  mode_end_action: stop
+  #  
+  #musicFlashGordon004:
+  #  file: musicFlashGordonTheme_004.wav
+  #  track: music
+  #  volume: 0.7
+  #  mode_end_action: stop
+    
+## ---------------------
+## SOUNDS::MUSIC::RUNNING
+## ---------------------
+#  musicFlashGordon005:
+#    file: musicFlashGordon_Running_001.wav
+#    track: music
+#    volume: 1.0
+#    mode_end_action: stop
+
+# ---------------------
+# SOUNDS::MUSIC::AMBIENT
+# ---------------------
+  musicFlashGordonAmbient001:
+    file: musicFlashGordonAmbient_001.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient002:
+    file: musicFlashGordonAmbient_002.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient003:
+    file: musicFlashGordonAmbient_003.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient004:
+    file: musicFlashGordonAmbient_004.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient005:
+    file: musicFlashGordonAmbient_005.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient006:
+    file: musicFlashGordonAmbient_006.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient007:
+    file: musicFlashGordonAmbient_007.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient008:
+    file: musicFlashGordonAmbient_008.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient009:
+    file: musicFlashGordonAmbient_009.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient010:
+    file: musicFlashGordonAmbient_010.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient011:
+    file: musicFlashGordonAmbient_011.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient012:
+    file: musicFlashGordonAmbient_012.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient013:
+    file: musicFlashGordonAmbient_013.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient014:
+    file: musicFlashGordonAmbient_014.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient015:
+    file: musicFlashGordonAmbient_015.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient016:
+    file: musicFlashGordonAmbient_016.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient017:
+    file: musicFlashGordonAmbient_017.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient018:
+    file: musicFlashGordonAmbient_018.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient019:
+    file: musicFlashGordonAmbient_019.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicFlashGordonAmbient020:
+    file: musicFlashGordonAmbient_020.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  #musicFlashGordonAmbient021:
+  #  file: musicFlashGordonAmbient_021.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicFlashGordonAmbient022:
+  #  file: musicFlashGordonAmbient_022.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicFlashGordonAmbient023:
+  #  file: musicFlashGordonAmbient_023.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicFlashGordonAmbient024:
+  #  file: musicFlashGordonAmbient_024.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicFlashGordonAmbient025:
+  #  file: musicFlashGordonAmbient_025.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicPlayboyTheme001
+      - musicPlayboyTheme002
+      - musicPlayboyTheme003
+      - musicPlayboyTheme004
+      - musicPlayboyTheme005
+      - musicPlayboyTheme006
+      - musicPlayboyTheme007
+      - musicPlayboyTheme008
+      - musicPlayboyTheme009
+      - musicPlayboyTheme010
+      - musicPlayboyTheme011
+      - musicPlayboyTheme012
+      - musicPlayboyTheme013
+      - musicPlayboyTheme014
+      - musicPlayboyTheme015
+      - musicPlayboyTheme016
+      #- musicFlashGordon001
+      #- musicFlashGordon002
+      #- musicFlashGordon003
+      #- musicFlashGordon004
+
+  poolMusicBaseMode:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicPlayboyTheme001
+      - musicPlayboyTheme002
+      - musicPlayboyTheme003
+      - musicPlayboyTheme004
+      - musicPlayboyTheme005
+      - musicPlayboyTheme006
+      - musicPlayboyTheme007
+      - musicPlayboyTheme008
+      - musicPlayboyTheme009
+      - musicPlayboyTheme010
+      - musicPlayboyTheme011
+      - musicPlayboyTheme012
+      - musicPlayboyTheme013
+      - musicPlayboyTheme014
+      - musicPlayboyTheme015
+      - musicPlayboyTheme016
+      #- musicFlashGordon001
+      #- musicFlashGordon002
+      #- musicFlashGordon003
+      #- musicFlashGordon004
+
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+sound_player:
+# ---------------------
+# SOUNDS::PLAYER::STAR TREK::BY MODE
+# ---------------------
+  playPoolMusicBaseMode:
+    poolMusicBaseMode:
+      loops: 0
+      volume: 0.7
+      
+## ---------------------
+## EVENT::PLAYER
+## ---------------------
+#event_player:
+#  eventPlaylistModeFlashGordonStart:
+#    playPoolMusicBaseMode
+    
+# ---------------------
+# MUSIC::PLAYLISTS
+# ---------------------
+playlists:
+  playlistModeFlashGordonMusic:
+    shuffle: true
+    repeat: true
+    sounds:
+      - musicFlashGordonAmbient001
+      - musicFlashGordonAmbient002
+      - musicFlashGordonAmbient003
+      - musicFlashGordonAmbient004
+      - musicFlashGordonAmbient005
+      - musicFlashGordonAmbient006
+      - musicFlashGordonAmbient007
+      - musicFlashGordonAmbient008
+      - musicFlashGordonAmbient009
+      - musicFlashGordonAmbient010
+      - musicFlashGordonAmbient011
+      - musicFlashGordonAmbient012
+      - musicFlashGordonAmbient013
+      - musicFlashGordonAmbient014
+      - musicFlashGordonAmbient015
+      - musicFlashGordonAmbient016
+      - musicFlashGordonAmbient017
+      - musicFlashGordonAmbient018
+      - musicFlashGordonAmbient019
+      - musicFlashGordonAmbient020
+      #- musicFlashGordonAmbient021
+      #- musicFlashGordonAmbient022
+      #- musicFlashGordonAmbient023
+      #- musicFlashGordonAmbient024
+      #- musicFlashGordonAmbient025
+      
+  playlistModePlayboyMusic:
+    shuffle: true
+    repeat: true
+    sounds:
+      - musicPlayboyTheme001
+      - musicPlayboyTheme002
+      - musicPlayboyTheme003
+      - musicPlayboyTheme004
+      - musicPlayboyTheme005
+      - musicPlayboyTheme006
+      - musicPlayboyTheme007
+      - musicPlayboyTheme008
+      - musicPlayboyTheme009
+      - musicPlayboyTheme010
+      - musicPlayboyTheme011
+      - musicPlayboyTheme012
+      - musicPlayboyTheme013
+      - musicPlayboyTheme014
+      - musicPlayboyTheme015
+      - musicPlayboyTheme016
+      
+

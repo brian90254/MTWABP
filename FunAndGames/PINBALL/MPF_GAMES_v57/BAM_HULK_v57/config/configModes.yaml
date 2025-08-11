@@ -1,0 +1,39 @@
+#config_version=6
+
+modes:
+#-----------------
+# MODES::BASE
+#-----------------
+- modeBase
+- credits
+- bonus
+- high_score
+#- carousel
+
+#-----------------
+# MODES::GAME SPECIFIC
+#-----------------
+# CAROUSEL
+- modeCarousel
+
+#-----------------
+# MODES::SPIDERMAN::VILLAN
+#-----------------
+#- modePlayboy1955
+- modeSpidermanVillanScorpion
+- modeSpidermanVillanKraven
+- modeSpidermanVillanLizard
+- modeSpidermanVillanKingPin
+
+#-----------------
+# MODES::GENERIC
+#-----------------
+- modeBallSave
+#- modeBallSaveOutlane
+#- modeBallSaveHidden
+#- modeCollectBonus
+#- modeCollectMidGameBonus
+#- modeSkillShot
+#- modeAwardWheel
+#- modeMultiball
+

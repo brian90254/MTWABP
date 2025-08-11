@@ -1,0 +1,196 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:
+# ---------------------
+# SOUNDS::MUSIC::THEME
+# ---------------------
+  musicSpidermanAmbiance001:
+    file: musicSpidermanTheme_1.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance002:
+    file: musicSpidermanTheme_2.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance003:
+    file: musicSpidermanTheme_3.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance004:
+    file: musicSpidermanTheme_4.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicSpidermanAmbiance005:
+    file: musicSpidermanTheme_5.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance006:
+    file: musicSpidermanTheme_6.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance007:
+    file: musicSpidermanTheme_7.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance008:
+    file: musicSpidermanTheme_8.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance009:
+    file: musicSpidermanTheme_9.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance010:
+    file: musicSpidermanTheme_10.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance011:
+    file: musicSpidermanTheme_11.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance012:
+    file: musicSpidermanTheme_12.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance013:
+    file: musicSpidermanTheme_13.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicSpidermanAmbiance014:
+    file: musicSpidermanTheme_14.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  #musicSpidermanAmbiance015:
+  #  file: musicSpidermanTheme_15.wav
+  #  track: music
+  #  volume: 0.7
+  #  mode_end_action: stop
+
+  musicSpidermanAmbiance015:
+    #file: musicSpidermanTheme_15.wav
+    file: musicHulkTheme_1.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      #- musicSpidermanAmbiance001
+      #- musicSpidermanAmbiance002
+      #- musicSpidermanAmbiance003
+      #- musicSpidermanAmbiance004
+      #- musicSpidermanAmbiance005
+      #- musicSpidermanAmbiance006
+      #- musicSpidermanAmbiance007
+      #- musicSpidermanAmbiance008
+      #- musicSpidermanAmbiance009
+      #- musicSpidermanAmbiance010
+      #- musicSpidermanAmbiance011
+      #- musicSpidermanAmbiance012
+      #- musicSpidermanAmbiance013
+      #- musicSpidermanAmbiance014
+      - musicSpidermanAmbiance015
+      #- musicSpidermanAmbiance016
+      #- musicFlashGordon001
+      #- musicFlashGordon002
+      #- musicFlashGordon003
+      #- musicFlashGordon004
+
+  poolMusicBaseMode:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicSpidermanAmbiance001
+      - musicSpidermanAmbiance002
+      - musicSpidermanAmbiance003
+      - musicSpidermanAmbiance004
+      - musicSpidermanAmbiance005
+      - musicSpidermanAmbiance006
+      - musicSpidermanAmbiance007
+      - musicSpidermanAmbiance008
+      - musicSpidermanAmbiance009
+      - musicSpidermanAmbiance010
+      - musicSpidermanAmbiance011
+      - musicSpidermanAmbiance012
+      - musicSpidermanAmbiance013
+      - musicSpidermanAmbiance014
+      #- musicSpidermanAmbiance015
+      #- musicSpidermanAmbiance016
+
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+sound_player:
+# ---------------------
+# SOUNDS::PLAYER::STAR TREK::BY MODE
+# ---------------------
+  playPoolMusicBaseMode:
+    poolMusicBaseMode:
+      loops: 0
+      volume: 0.7
+
+# ---------------------
+# MUSIC::PLAYLISTS
+# ---------------------
+playlists:
+  playlistModeSpidermanMusic:
+    shuffle: true
+    repeat: true
+    sounds:
+      - musicSpidermanAmbiance001
+      - musicSpidermanAmbiance002
+      - musicSpidermanAmbiance003
+      - musicSpidermanAmbiance004
+      - musicSpidermanAmbiance005
+      - musicSpidermanAmbiance006
+      - musicSpidermanAmbiance007
+      - musicSpidermanAmbiance008
+      - musicSpidermanAmbiance009
+      - musicSpidermanAmbiance010
+      - musicSpidermanAmbiance011
+      - musicSpidermanAmbiance012
+      - musicSpidermanAmbiance013
+      - musicSpidermanAmbiance014
+      #- musicSpidermanAmbiance015
+      #- musicSpidermanAmbiance016
+      
+

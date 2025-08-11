@@ -1,0 +1,117 @@
+#show_version=6
+
+- time: 0
+
+#-------------
+# RED
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneTopRightA
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledLaneTopRightA1
+        led2: ledLaneTopRightA2
+        led3: ledLaneTopRightA3
+        led4: ledLaneTopRightA4
+        led5: ledLaneTopRightA5
+
+- time: "+4"
+
+#-------------
+# YELLOW
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneTopRightA
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledLaneTopRightA1
+        led2: ledLaneTopRightA2
+        led3: ledLaneTopRightA3
+        led4: ledLaneTopRightA4
+        led5: ledLaneTopRightA5
+
+- time: "+4"
+
+#-------------
+# GREEN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneTopRightA
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledLaneTopRightA1
+        led2: ledLaneTopRightA2
+        led3: ledLaneTopRightA3
+        led4: ledLaneTopRightA4
+        led5: ledLaneTopRightA5
+
+- time: "+4"
+
+#-------------
+# CYAN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneTopRightA
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledLaneTopRightA1
+        led2: ledLaneTopRightA2
+        led3: ledLaneTopRightA3
+        led4: ledLaneTopRightA4
+        led5: ledLaneTopRightA5
+
+- time: "+4"
+
+#-------------
+# BLUE
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneTopRightA
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledLaneTopRightA1
+        led2: ledLaneTopRightA2
+        led3: ledLaneTopRightA3
+        led4: ledLaneTopRightA4
+        led5: ledLaneTopRightA5
+
+- time: "+4"
+
+#-------------
+# MAGENTA
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneTopRightA
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledLaneTopRightA1
+        led2: ledLaneTopRightA2
+        led3: ledLaneTopRightA3
+        led4: ledLaneTopRightA4
+        led5: ledLaneTopRightA5
+
+- time: "+4"
