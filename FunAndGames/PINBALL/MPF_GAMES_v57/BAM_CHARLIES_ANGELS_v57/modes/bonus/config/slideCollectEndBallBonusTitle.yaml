@@ -1,0 +1,204 @@
+#config_version=6
+
+slides:
+  # ----------------------
+  # INTRO BONUS
+  # ----------------------
+  slideCollectEndBallBonusTitle:
+    widgets:
+    # -------------------
+    # TITLE BONUS::HEADER
+    # -------------------
+      # -------------------------
+      # TITLE BONUS::HEADER::INNER
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle + 25
+      x: middle
+      z: 40
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderInner
+      # -------------------------
+      # TITLE BONUS::HEADER::OUTER::ONE
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle + 26
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle + 24
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle + 26
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle + 24
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter1
+      # -------------------------
+      # TITLE BONUS::HEADER::OUTER::TWO
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle + 27
+      x: middle + 2
+      z: 20
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle + 23
+      x: middle + 2
+      z: 20
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle + 27
+      x: middle - 2
+      z: 20
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle + 23
+      x: middle - 2
+      z: 20
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter2
+
+    # -------------------
+    # TITLE BONUS::MIDDLE
+    # -------------------
+      # -------------------------
+      # TITLE BONUS::MIDDLE::INNER
+      # -------------------------
+    - type: text
+      text: BONUS
+      #style: fontCollectBonusTitleCharliesAngelsMiddle
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      #y: middle + 3
+      #x: middle
+      y: middle - 25
+      x: middle
+      z: 40
+      #font_size: 32
+      #color: colorFontCollectBonusTitleCharliesAngelsMiddleInner
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderInner
+      # -------------------------
+      # TITLE BONUS::MIDDLE::OUTER::ONE
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle - 26
+      x: middle + 1
+      z: 30
+      #color: colorFontCollectBonusTitleCharliesAngelsMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle - 24
+      x: middle + 1
+      z: 30
+      #color: colorFontCollectBonusTitleCharliesAngelsMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle - 26
+      x: middle - 1
+      z: 30
+      #color: colorFontCollectBonusTitleCharliesAngelsMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle - 24
+      x: middle - 1
+      z: 30
+      #color: colorFontCollectBonusTitleCharliesAngelsMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter1
+      # -------------------------
+      # -------------------------
+      # TITLE BONUS::MIDDLE::OUTER::TWO
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle - 27
+      x: middle + 2
+      z: 20
+      #color: colorFontCollectBonusTitleCharliesAngelsMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle - 23
+      x: middle + 2
+      z: 20
+      #color: colorFontCollectBonusTitleCharliesAngelsMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle - 27
+      x: middle - 2
+      z: 20
+      #color: colorFontCollectBonusTitleCharliesAngelsMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleCharliesAngelsHeader
+      y: middle - 23
+      x: middle - 2
+      z: 20
+      #color: colorFontCollectBonusTitleCharliesAngelsMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleCharliesAngelsHeaderOuter2
+      # -------------------------

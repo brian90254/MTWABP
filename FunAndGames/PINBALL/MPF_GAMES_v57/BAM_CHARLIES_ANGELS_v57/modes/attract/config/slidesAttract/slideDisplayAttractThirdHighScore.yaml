@@ -1,0 +1,185 @@
+#config_version=6
+
+# *********************
+# TATTOO MYSTIQUE
+# *********************
+
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  # *************************
+  # Third High Score
+  # *************************
+  slideDisplayAttractThirdHighScore:
+    target: displayDMD
+    widgets:
+    # -----------
+    # HS - HEADER
+    # -----------
+      # --------------------
+      # HS - Third High Score - MAIN
+      # --------------------
+    - type: text
+      text: Third High Score
+      z: 20
+      y: top - 25
+      x: middle
+      style: fontAttractThirdHighScoreCharliesAngelsHeader
+      color: colorAttractThirdHighScoreCharliesAngelsHeader
+      
+      # --------------------
+      # HS - Third High Score - OUTLINE
+      # --------------------
+    - type: text
+      text: Third High Score
+      z: 15
+      y: top - 24
+      x: middle + 1
+      style: fontAttractThirdHighScoreCharliesAngelsHeader
+      color: '000000'
+      
+    - type: text
+      text: Third High Score
+      z: 15
+      y: top - 24
+      x: middle - 1
+      style: fontAttractThirdHighScoreCharliesAngelsHeader
+      color: '000000'
+      
+    - type: text
+      text: Third High Score
+      z: 15
+      y: top - 26
+      x: middle + 1
+      style: fontAttractThirdHighScoreCharliesAngelsHeader
+      color: '000000'
+      
+    - type: text
+      text: Third High Score
+      z: 15
+      y: top - 26
+      x: middle - 1
+      style: fontAttractThirdHighScoreCharliesAngelsHeader
+      color: '000000'
+      
+    # -----------
+    # HS - MIDDLE
+    # -----------
+      # --------------------
+      # HS - SCORE - MAIN
+      # --------------------
+    - type: text
+      text: (machine|score3_value)
+      number_grouping: true
+      y: middle + 2
+      x: middle
+      z: 20
+      style: fontAttractThirdHighScoreCharliesAngelsMiddle
+      color: colorAttractThirdHighScoreCharliesAngelsMiddle
+      
+      # --------------------
+      # HS - SCORE - OUTLINE
+      # --------------------
+    - type: text
+      text: (machine|score3_value)
+      number_grouping: true
+      y: middle + 3
+      x: middle - 1
+      z: 18
+      style: fontAttractThirdHighScoreCharliesAngelsMiddle
+      color: '000000'
+      
+    - type: text
+      text: (machine|score3_value)
+      number_grouping: true
+      y: middle + 3
+      x: middle + 1
+      z: 18
+      style: fontAttractThirdHighScoreCharliesAngelsMiddle
+      color: '000000'
+      
+    - type: text
+      text: (machine|score3_value)
+      number_grouping: true
+      y: middle + 1
+      x: middle + 1
+      z: 18
+      style: fontAttractThirdHighScoreCharliesAngelsMiddle
+      color: '000000'
+      
+    - type: text
+      text: (machine|score3_value)
+      number_grouping: true
+      y: middle + 1
+      x: middle - 1
+      z: 18
+      style: fontAttractThirdHighScoreCharliesAngelsMiddle
+      color: '000000'
+      
+    # -----------
+    # HS - FOOTER
+    # -----------
+      # --------------------
+      # HS - NAME - MAIN
+      # --------------------
+    - type: text
+      text: (machine|score3_name)
+      anchor_y: bottom
+      y: bottom - 15
+      x: middle
+      z: 20
+      style: fontAttractThirdHighScoreCharliesAngelsFooter
+      color: colorAttractThirdHighScoreCharliesAngelsFooter
+      
+      # --------------------
+      # HS - NAME - OUTLINE
+      # --------------------
+    - type: text
+      text: (machine|score3_name)
+      anchor_y: bottom
+      y: bottom - 14
+      x: middle + 1
+      z: 15
+      style: fontAttractThirdHighScoreCharliesAngelsFooter
+      color: '000000'
+      
+    - type: text
+      text: (machine|score3_name)
+      anchor_y: bottom
+      y: bottom - 14
+      x: middle - 1
+      z: 15
+      style: fontAttractThirdHighScoreCharliesAngelsFooter
+      color: '000000'
+      
+    - type: text
+      text: (machine|score3_name)
+      anchor_y: bottom
+      y: bottom - 16
+      x: middle + 1
+      z: 15
+      style: fontAttractThirdHighScoreCharliesAngelsFooter
+      color: '000000'
+      
+    - type: text
+      text: (machine|score3_name)
+      anchor_y: bottom
+      y: bottom - 16
+      x: middle - 1
+      z: 15
+      style: fontAttractThirdHighScoreCharliesAngelsFooter
+      color: '000000'
+      
+      # --------------------
+      # SOLID BACKGROUND
+      # --------------------
+    - type: rectangle
+      width: 240
+      height: 134
+      anchor_x: left
+      anchor_y: top
+      x: left + 0
+      y: top + 0
+      z: 5
+      color: colorAttractThirdHighScoreCharliesAngelsBackground

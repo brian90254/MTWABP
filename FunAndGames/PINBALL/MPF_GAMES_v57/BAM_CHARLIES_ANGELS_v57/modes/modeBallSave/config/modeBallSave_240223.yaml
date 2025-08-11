@@ -1,0 +1,209 @@
+#config_version=6
+
+mode:
+  start_events:
+    - ball_starting
+  stop_events:
+    - eventStopBallSave
+    - ball_ending
+  priority: 6000
+
+ball_saves:
+  default:
+    #active_time: 30s
+    active_time: 20s
+    hurry_up_time: "7.0"
+    grace_period: 3s
+    enable_events: mode_modeBase_started
+    #timer_start_events: balldevice_plunger_lane_ball_eject_success
+    #timer_start_events: balldevice_plunger_lane_ejecting_ball
+    # ----------------
+    # 210423
+    #timer_start_events: balldevice_ballDeviceTrough_ball_eject_success
+    timer_start_events: balldevice_trough_ball_eject_success
+    # ----------------
+    #auto_launch: true
+    balls_to_save: 1
+    #debug: true
+
+# ---------------------
+# EVENT::PLAYER::BALLSAVES
+# ---------------------
+event_player:
+  
+  ball_save_default_saving_ball:
+    - eventStopBallSave|5s
+    
+  ball_save_default_disabled:
+    #- eventStopBallSave
+    - eventStopBallSave|5s
+    - stopShowBallSave
+
+  ball_save_default_timer_start:
+    - playShowBallSaveStandard
+    
+  ball_save_default_hurry_up:
+    - playShowBallSaveHurryUp
+
+  ball_save_default_grace_period:
+    - stopShowBallSave
+    
+  #ball_save_default_disabled:
+  #  stopShowBallSave
+    
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+  # ---------------------
+  # SHOW::BALL SAVE::DEFAULT
+  # ---------------------
+  playShowBallSaveStandard:
+    #flashLedTwoColor:
+    #  speed: 2
+    #  action: play
+    #  key: showBallSaveStandard
+    #  show_tokens:
+    #    led: ledShootAgain
+    #    color1: '444400'
+    #    color2: 'ffff00'
+    traceSixLedTwoColor:
+      speed: 10
+      action: play
+      key: showBallSaveStandard
+      show_tokens:
+        led1: ledShootAgain2
+        led2: ledShootAgain3
+        led3: ledShootAgain4
+        led4: ledShootAgain5
+        led5: ledShootAgain6
+        led6: ledShootAgain7
+        color1: '000000'
+        color2: 'ffff00'
+        
+  playShowBallSaveHurryUp:
+    showBallSaveStandard:
+      action: stop
+    #flashLedTwoColor:
+    #  speed: 4
+    #  action: play
+    #  key: showBallSaveHurryUp
+    #  show_tokens:
+    #    led: ledShootAgain
+    #    color1: '440000'
+    #    color2: 'ff0000'
+    traceSixLedTwoColor:
+      speed: 20
+      action: play
+      key: showBallSaveHurryUp
+      show_tokens:
+        led1: ledShootAgain2
+        led2: ledShootAgain3
+        led3: ledShootAgain4
+        led4: ledShootAgain5
+        led5: ledShootAgain6
+        led6: ledShootAgain7
+        color1: '000000'
+        color2: 'ff0000'
+
+  stopShowBallSave:
+    showBallSaveHurryUp:
+      action: stop
+    showBallSaveStandard:
+      action: stop
+      
+# ---------------------
+# SLIDE::PLAYER::BALLSAVES
+# ---------------------
+slide_player:
+  ball_save_default_saving_ball:
+    slide_2:
+      target: displayDMD
+  
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  slide_2:
+    widgets:
+      # BLUE FORGROUND
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveInner
+        text: Ball Saved
+        y: middle
+        x: middle
+        z: 40
+      # -------------------------------
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: Ball Saved
+        y: middle - 1
+        x: middle + 1
+        z: 30
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: Ball Saved
+        y: middle - 1
+        x: middle - 1
+        z: 30
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: Ball Saved
+        y: middle + 1
+        x: middle + 1
+        z: 30
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: Ball Saved
+        y: middle + 1
+        x: middle - 1
+        z: 30
+      # -------------------------------
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter2
+        text: Ball Saved
+        y: middle - 2
+        x: middle + 2
+        z: 20
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter2
+        text: Ball Saved
+        y: middle - 2
+        x: middle - 2
+        z: 20
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter2
+        text: Ball Saved
+        y: middle + 2
+        x: middle + 2
+        z: 20
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter2
+        text: Ball Saved
+        y: middle + 2
+        x: middle - 2
+        z: 20
+        # -------------------------------
+    expire: 4.0s
+    
+
+

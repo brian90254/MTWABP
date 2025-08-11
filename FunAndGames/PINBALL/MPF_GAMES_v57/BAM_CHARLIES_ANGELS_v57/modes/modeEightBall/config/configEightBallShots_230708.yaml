@@ -1,0 +1,930 @@
+#config_version=6
+
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+# -------------------
+# SHOTS::BALLS::SOLIDS
+# -------------------
+    # -------------------
+    # SHOTS::BALL::1
+    # -------------------
+    shotBall1:
+        switch: s_1_28
+        enable_events: eventEnableShotBall1
+        disable_events: eventDisableShotBall1
+        restart_events: eventRestartShotBall1
+        reset_events: eventResetShotBall1
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall1
+            # -------------
+            ledA: ledRack1A
+            ledB: ledRack1B
+            ledC: ledRack1C
+            ledD: ledRack1D
+            ledE: ledRack1E
+            ledF: ledRack1F
+            # ---------------
+            # BALL
+            color1A: '888800'
+            color1B: '666600'
+            color1C: 'ffff00'
+            color1D: 'ffff00'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: 'cccc00'
+            color2D: 'ffff00'
+            # ---------------
+                
+    # -------------------
+    # SHOTS::BALL::2
+    # -------------------
+    shotBall2:
+        switch: s_1_19
+        enable_events: eventEnableShotBall2
+        disable_events: eventDisableShotBall2
+        restart_events: eventRestartShotBall2
+        reset_events: eventResetShotBall2
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall2
+            # -------------
+            ledA: ledRack2A
+            ledB: ledRack2B
+            ledC: ledRack2C
+            ledD: ledRack2D
+            ledE: ledRack2E
+            ledF: ledRack2F
+            # -------------
+            # BALL
+            color1A: '000088'
+            color1B: '000066'
+            color1C: '0000ff'
+            color1D: '0000ff'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: '0000cc'
+            color2D: '0000ff'
+            # ---------------
+    # -------------------
+    # SHOTS::BALL::3
+    # -------------------
+    shotBall3:
+        switch: s_1_29
+        enable_events: eventEnableShotBall3
+        disable_events: eventDisableShotBall3
+        restart_events: eventRestartShotBall3
+        reset_events: eventResetShotBall3
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall3
+            # -------------
+            ledA: ledRack3A
+            ledB: ledRack3B
+            ledC: ledRack3C
+            ledD: ledRack3D
+            ledE: ledRack3E
+            ledF: ledRack3F
+            # -------------
+            # BALL
+            color1A: '880044'
+            color1B: '660033'
+            color1C: 'ff0088'
+            color1D: 'ff0088'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: 'cc0066'
+            color2D: 'ff0088'
+            # ---------------
+            
+    # -------------------
+    # SHOTS::BALL::4
+    # -------------------
+    shotBall4:
+        switch: s_1_18
+        enable_events: eventEnableShotBall4
+        disable_events: eventDisableShotBall4
+        restart_events: eventRestartShotBall4
+        reset_events: eventResetShotBall4
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall4
+            # -------------
+            ledA: ledRack4A
+            ledB: ledRack4B
+            ledC: ledRack4C
+            ledD: ledRack4D
+            ledE: ledRack4E
+            ledF: ledRack4F
+            # -------------
+            # BALL
+            color1A: '440088'
+            color1B: '330066'
+            color1C: '8800ff'
+            color1D: '8800ff'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: '6600cc'
+            color2D: '8800ff'
+            # ---------------
+            
+    # -------------------
+    # SHOTS::BALL::5
+    # -------------------
+    shotBall5:
+        switch: s_1_30
+        enable_events: eventEnableShotBall5
+        disable_events: eventDisableShotBall5
+        restart_events: eventRestartShotBall5
+        reset_events: eventResetShotBall5
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall5
+            # -------------
+            ledA: ledRack5A
+            ledB: ledRack5B
+            ledC: ledRack5C
+            ledD: ledRack5D
+            ledE: ledRack5E
+            ledF: ledRack5F
+            # -------------
+            # BALL
+            color1A: '884400'
+            color1B: '663300'
+            color1C: 'ff8800'
+            color1D: 'ff8800'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: 'cc6600'
+            color2D: 'ff8800'
+            # ---------------
+            
+    # -------------------
+    # SHOTS::BALL::6
+    # -------------------
+    shotBall6:
+        switch: s_1_17
+        enable_events: eventEnableShotBall6
+        disable_events: eventDisableShotBall6
+        restart_events: eventRestartShotBall6
+        reset_events: eventResetShotBall6
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall6
+            # -------------
+            ledA: ledRack6A
+            ledB: ledRack6B
+            ledC: ledRack6C
+            ledD: ledRack6D
+            ledE: ledRack6E
+            ledF: ledRack6F
+            # -------------
+            # BALL
+            color1A: '008800'
+            color1B: '006600'
+            color1C: '00ff00'
+            color1D: '00ff00'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: '00cc00'
+            color2D: '00ff00'
+            # ---------------
+            
+    # -------------------
+    # SHOTS::BALL::7
+    # -------------------
+    shotBall7:
+        switch: s_1_31
+        enable_events: eventEnableShotBall7
+        disable_events: eventDisableShotBall7
+        restart_events: eventRestartShotBall7
+        reset_events: eventResetShotBall7
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall7
+            # -------------
+            ledA: ledRack7A
+            ledB: ledRack7B
+            ledC: ledRack7C
+            ledD: ledRack7D
+            ledE: ledRack7E
+            ledF: ledRack7F
+            # -------------
+            # BALL
+            color1A: '880000'
+            color1B: '660000'
+            color1C: 'ff0000'
+            color1D: 'ff0000'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: 'cc0000'
+            color2D: 'ff0000'
+            # ---------------
+            
+# -------------------
+# SHOTS::BALLS::8-BALL
+# -------------------
+    # -------------------
+    # SHOTS::BALL::8
+    # -------------------
+    shotBall8:
+        switch: s_1_28
+        enable_events: eventEnableShotBall8
+        disable_events: eventDisableShotBall8
+        restart_events: eventRestartShotBall8
+        reset_events: eventResetShotBall8
+        profile: spShotEightBall
+        show_tokens:
+            # -------------
+            led1: ledBall8A
+            led2: ledBall8B
+            led3: ledBall8C
+            # -------------
+            ledA: ledRack8A
+            ledB: ledRack8B
+            ledC: ledRack8C
+            ledD: ledRack8D
+            ledE: ledRack8E
+            ledF: ledRack8F
+            # -------------
+            # BALL
+            color1A: '888888'
+            color1B: '666666'
+            color1C: 'ffffff'
+            color1D: 'ffffff'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: 'cccccc'
+            color2D: 'ffffff'
+            # ---------------
+            
+# -------------------
+# SHOTS::BALLS::STRIPES
+# -------------------
+    # -------------------
+    # SHOTS::BALL::9
+    # -------------------
+    shotBall9:
+        switch: s_1_28
+        enable_events: eventEnableShotBall9
+        disable_events: eventDisableShotBall9
+        restart_events: eventRestartShotBall9
+        reset_events: eventResetShotBall9
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall9
+            # -------------
+            ledA: ledRack9A
+            ledB: ledRack9B
+            ledC: ledRack9C
+            ledD: ledRack9D
+            ledE: ledRack9E
+            ledF: ledRack9F
+            # -------------
+            # BALL
+            color1A: '888800'
+            color1B: '666600'
+            color1C: 'ffff00'
+            color1D: 'ffff00'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: 'cccc00'
+            color2D: 'ffff00'
+            # ---------------
+
+    # -------------------
+    # SHOTS::BALL::10
+    # -------------------
+    shotBall10:
+        switch: s_1_19
+        enable_events: eventEnableShotBall10
+        disable_events: eventDisableShotBall10
+        restart_events: eventRestartShotBall10
+        reset_events: eventResetShotBall10
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall10
+            # -------------
+            ledA: ledRack10A
+            ledB: ledRack10B
+            ledC: ledRack10C
+            ledD: ledRack10D
+            ledE: ledRack10E
+            ledF: ledRack10F
+            # -------------
+            # BALL
+            color1A: '000088'
+            color1B: '000066'
+            color1C: '0000ff'
+            color1D: '0000ff'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: '0000cc'
+            color2D: '0000ff'
+            # ---------------
+            
+    # -------------------
+    # SHOTS::BALL::11
+    # -------------------
+    shotBall11:
+        switch: s_1_29
+        enable_events: eventEnableShotBall11
+        disable_events: eventDisableShotBall11
+        restart_events: eventRestartShotBall11
+        reset_events: eventResetShotBall11
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall11
+            # -------------
+            ledA: ledRack11A
+            ledB: ledRack11B
+            ledC: ledRack11C
+            ledD: ledRack11D
+            ledE: ledRack11E
+            ledF: ledRack11F
+            # -------------
+            # BALL
+            color1A: '880044'
+            color1B: '660033'
+            color1C: 'ff0088'
+            color1D: 'ff0088'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: 'cc0066'
+            color2D: 'ff0088'
+            # ---------------
+            
+    # -------------------
+    # SHOTS::BALL::12
+    # -------------------
+    shotBall12:
+        switch: s_1_18
+        enable_events: eventEnableShotBall12
+        disable_events: eventDisableShotBall12
+        restart_events: eventRestartShotBall12
+        reset_events: eventResetShotBall12
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall12
+            # -------------
+            ledA: ledRack12A
+            ledB: ledRack12B
+            ledC: ledRack12C
+            ledD: ledRack12D
+            ledE: ledRack12E
+            ledF: ledRack12F
+            # -------------
+            # BALL
+            color1A: '440088'
+            color1B: '330066'
+            color1C: '8800ff'
+            color1D: '8800ff'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: '6600cc'
+            color2D: '8800ff'
+            # ---------------
+            
+    # -------------------
+    # SHOTS::BALL::13
+    # -------------------
+    shotBall13:
+        switch: s_1_30
+        enable_events: eventEnableShotBall13
+        disable_events: eventDisableShotBall13
+        restart_events: eventRestartShotBall13
+        reset_events: eventResetShotBall13
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall13
+            # -------------
+            ledA: ledRack13A
+            ledB: ledRack13B
+            ledC: ledRack13C
+            ledD: ledRack13D
+            ledE: ledRack13E
+            ledF: ledRack13F
+            # -------------
+            # BALL
+            color1A: '884400'
+            color1B: '663300'
+            color1C: 'ff8800'
+            color1D: 'ff8800'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: 'cc6600'
+            color2D: 'ff8800'
+            # ---------------
+            
+    # -------------------
+    # SHOTS::BALL::14
+    # -------------------
+    shotBall14:
+        switch: s_1_17
+        enable_events: eventEnableShotBall14
+        disable_events: eventDisableShotBall14
+        restart_events: eventRestartShotBall14
+        reset_events: eventResetShotBall14
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall14
+            # -------------
+            ledA: ledRack14A
+            ledB: ledRack14B
+            ledC: ledRack14C
+            ledD: ledRack14D
+            ledE: ledRack14E
+            ledF: ledRack14F
+            # -------------
+            # BALL
+            color1A: '008800'
+            color1B: '006600'
+            color1C: '00ff00'
+            color1D: '00ff00'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: '00cc00'
+            color2D: '00ff00'
+            # ---------------
+            
+    # -------------------
+    # SHOTS::BALL::15
+    # -------------------
+    shotBall15:
+        switch: s_1_31
+        enable_events: eventEnableShotBall15
+        disable_events: eventDisableShotBall15
+        restart_events: eventRestartShotBall15
+        reset_events: eventResetShotBall15
+        profile: spShotBall2
+        show_tokens:
+            # -------------
+            led1: ledBall15
+            # -------------
+            ledA: ledRack15A
+            ledB: ledRack15B
+            ledC: ledRack15C
+            ledD: ledRack15D
+            ledE: ledRack15E
+            ledF: ledRack15F
+            # -------------
+            # BALL
+            color1A: '880000'
+            color1B: '660000'
+            color1C: 'ff0000'
+            color1D: 'ff0000'
+            # ---------------
+            # RACK
+            color2A: '000000'
+            color2B: '000000'
+            color2C: 'cc0000'
+            color2D: 'ff0000'
+            # ---------------
+    
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::BALLS::SOLIDS
+    # -------------------
+    shotGroupBallsSolids:
+        shots:
+            - shotBall1
+            - shotBall2
+            - shotBall3
+            - shotBall4
+            - shotBall5
+            - shotBall6
+            - shotBall7
+        enable_events:
+            - eventEnableShotGroupShotBallsSolids
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupShotBallsSolids
+        reset_events:
+            - eventResetShotGroupShotBallsSolids
+        restart_events:
+            - eventRestartShotGroupShotBallsSolids
+        #rotate_left_events:
+        #    - sw_left_flipper
+        #rotate_right_events:
+        #    - sw_right_flipper
+            
+    # -------------------
+    # SHOTGROUP::BALLS::STRIPS
+    # -------------------
+    shotGroupBallsStrips:
+        shots:
+            - shotBall9
+            - shotBall10
+            - shotBall11
+            - shotBall12
+            - shotBall13
+            - shotBall14
+            - shotBall15
+        enable_events:
+            - eventEnableShotGroupShotBallsStrips
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupShotBallsStrips
+        reset_events:
+            - eventResetShotGroupShotBallsStrips
+        restart_events:
+            - eventRestartShotGroupShotBallsStrips
+        #rotate_left_events:
+        #    - sw_left_flipper
+        #rotate_right_events:
+        #    - sw_right_flipper
+
+
+# *****************************      
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::BALL
+    # -----------------------------
+    spShotBall:
+        states:
+          - name: unlitFlash
+            show: showBall
+            speed: 1
+            show_tokens:
+                # ---------------
+                # BALL
+                color1A: '888888'
+                color1B: 'ffffff'
+                # ---------------
+                # RACK
+                color2A: '000000'
+                color2B: '000000'
+                # ---------------
+          - name: litSolid
+            show: showBall
+            speed: 1
+            show_tokens:
+                # ---------------
+                # BALL
+                color1A: 'ffffff'
+                color1B: 'ffffff'
+                # ---------------
+                # RACK
+                color2A: 'cccccc'
+                color2B: 'ffffff'
+                # ---------------
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::BALL
+    # -----------------------------
+    spShotBall2:
+        states:
+          - name: unlitFlash
+            show: showShotBallUnlitFlash
+            speed: 2
+          - name: litSolid
+            show: showShotBallLitSolid
+            speed: 2
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::BALL
+    # -----------------------------
+    spShotEightBall:
+        states:
+          - name: unlitFlash
+            show: showEightBall
+            speed: 1
+            show_tokens:
+                # ---------------
+                # BALL
+                color1A: '888888'
+                color1B: 'ffffff'
+                # ---------------
+                # RACK
+                color2A: '000000'
+                color2B: '000000'
+                # ---------------
+          - name: litSolid
+            show: showEightBall
+            speed: 1
+            show_tokens:
+                # ---------------
+                # BALL
+                color1A: 'ffffff'
+                color1B: 'ffffff'
+                # ---------------
+                # RACK
+                color2A: 'cccccc'
+                color2B: 'ffffff'
+                # ---------------
+        loop: false
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    # -------------------
+    # BALL STARTED
+    # -------------------
+    mode_modeEightBall_started:
+        #- eventEnableShotGroupShotBallsSolids
+        - eventRestartShotBall1
+        - eventRestartShotBall2
+        - eventRestartShotBall3
+        - eventRestartShotBall4
+        - eventRestartShotBall5
+        - eventRestartShotBall6
+        - eventRestartShotBall7
+        
+    # -------------------
+    # ENABLE STRIPS ON SOLID HIT
+    # -------------------
+    shotBall1_unlitFlash_hit:
+        #- eventEnableShotBall9
+        - eventRestartShotBall9
+        
+    shotBall2_unlitFlash_hit:
+        #- eventEnableShotBall10
+        - eventRestartShotBall10
+        
+    shotBall3_unlitFlash_hit:
+        #- eventEnableShotBall11
+        - eventRestartShotBall11
+        
+    shotBall4_unlitFlash_hit:
+        #- eventEnableShotBall12
+        - eventRestartShotBall12
+        
+    shotBall5_unlitFlash_hit:
+        #- eventEnableShotBall13
+        - eventRestartShotBall13
+        
+    shotBall6_unlitFlash_hit:
+        #- eventEnableShotBall14
+        - eventRestartShotBall14
+        
+    shotBall7_unlitFlash_hit:
+        #- eventEnableShotBall15
+        - eventRestartShotBall15
+        
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    shotBankShot_litFlash300_hit:
+        score: 300
+    shotBankShot_litFlash600_hit:
+        score: 600
+    shotBankShot_litFlash900_hit:
+        score: 900
+    shotBankShot_litFlash1200_hit:
+        score: 1200
+    shotBankShot_litFlash1500_hit:
+        score: 1500
+    shotBankShot_litFlash5000_hit:
+        score: 5000
+        
+    shotGroupBallsSolids_unlitFlash_hit:
+        score: 500
+    shotGroupBallsStripes_unlitFlash_hit:
+        score: 500
+        
+    #shotABAward_litFlash1k_hit:
+    #    score: 1000
+    #shotABAward_litFlash2k_hit:
+    #    score: 2000
+    #shotABAward_litFlash3k_hit:
+    #    score: 3000
+    #shotABAward_litFlash4k_hit:
+    #    score: 4000
+    #shotABAward_litFlash5k_hit:
+    #    score: 5000
+    #shotABAward_litFlashExtraBall_hit:
+    #    score: 1
+    #shotABAward_litFlashSpecial_hit:
+    #    score: 25000
+    #shotABAward_litSolid_hit:
+    #    score: 5000
+    #    
+    ## ---------------
+    ## SCORING::OUTLANES
+    ## ---------------
+    #sw_tagOutlane:
+    #    score: 1000
+    #
+    #shotGroupOutlaneWhenLit_litFlash_hit:
+    #    score: 24000
+    #
+    ## -------------------
+    ## RIGHT::LANE
+    ## -------------------
+    #shotGroupReturnLane_hit:
+    #    score: 300
+    #
+    ## -------------------
+    ## TARGET MIDDLE
+    ## -------------------
+    #shotTargetMiddle_litFlash_hit:
+    #    score: 3000
+    #    
+    #shotTargetMiddle_litSolid_hit:
+    #    score: 300
+        
+        
+# -----------------
+# SHOWS
+# -----------------
+shows:
+    # -----------------------------
+    # LIGHTS::SHOW::SHOT::BALL
+    # -----------------------------
+    showBall:
+        - time: 0
+          lights:
+            # ---------------
+            (led1): (color1A)
+            # ---------------
+            (ledA): (color2A)
+            (ledB): (color2A)
+            (ledC): (color2A)
+            (ledD): (color2A)
+            (ledE): (color2A)
+            (ledF): (color2A)
+            # ---------------
+        - time: "+1"
+          lights:
+            # ---------------
+            (led1): (color1B)
+            # ---------------
+            (ledA): (color2B)
+            (ledB): (color2B)
+            (ledC): (color2B)
+            (ledD): (color2B)
+            (ledE): (color2B)
+            (ledF): (color2B)
+            # ---------------
+        - time: "+1"
+        
+    # -----------------------------
+    # LIGHTS::SHOW::SHOT::BALL::UNLIT FLASH
+    # -----------------------------
+    showShotBallUnlitFlash:
+        - time: 0
+          lights:
+            # ---------------
+            (led1): (color1A)
+            # ---------------
+            (ledA): (color2A)
+            (ledB): (color2A)
+            (ledC): (color2A)
+            (ledD): (color2A)
+            (ledE): (color2A)
+            (ledF): (color2A)
+            # ---------------
+            ledDummy1: (color1C)
+            ledDummy2: (color1D)
+            ledDummy3: (color2C)
+            ledDummy4: (color2D)
+            # ---------------
+        - time: "+1"
+          lights:
+            # ---------------
+            (led1): (color1B)
+            # ---------------
+            (ledA): (color2B)
+            (ledB): (color2B)
+            (ledC): (color2B)
+            (ledD): (color2B)
+            (ledE): (color2B)
+            (ledF): (color2B)
+            # ---------------
+            ledDummy1: (color1C)
+            ledDummy2: (color1D)
+            ledDummy3: (color2C)
+            ledDummy4: (color2D)
+            # ---------------
+        - time: "+1"
+        
+    # -----------------------------
+    # LIGHTS::SHOW::SHOT::BALL::LIT SOLID
+    # -----------------------------
+    showShotBallLitSolid:
+        - time: 0
+          lights:
+            # ---------------
+            (led1): (color1C)
+            # ---------------
+            (ledA): (color2C)
+            (ledB): (color2C)
+            (ledC): (color2C)
+            (ledD): (color2C)
+            (ledE): (color2C)
+            (ledF): (color2C)
+            # ---------------
+            ledDummy1: (color1A)
+            ledDummy2: (color1B)
+            ledDummy3: (color2A)
+            ledDummy4: (color2B)
+            # ---------------
+        - time: "+1"
+          lights:
+            # ---------------
+            (led1): (color1D)
+            # ---------------
+            (ledA): (color2D)
+            (ledB): (color2D)
+            (ledC): (color2D)
+            (ledD): (color2D)
+            (ledE): (color2D)
+            (ledF): (color2D)
+            # ---------------
+            ledDummy1: (color1A)
+            ledDummy2: (color1B)
+            ledDummy3: (color2A)
+            ledDummy4: (color2B)
+            # ---------------
+        - time: "+1"
+        
+    # -----------------------------
+    # LIGHTS::SHOW::SHOT::EIGHT BALL
+    # -----------------------------
+    showEightBall:
+        - time: 0
+          lights:
+            # ---------------
+            (led1): (color1A)
+            (led2): (color1A)
+            (led3): (color1A)
+            # ---------------
+            (ledA): (color2A)
+            (ledB): (color2A)
+            (ledC): (color2A)
+            (ledD): (color2A)
+            (ledE): (color2A)
+            (ledF): (color2A)
+            # ---------------
+        - time: "+1"
+          lights:
+            # ---------------
+            (led1): (color1B)
+            (led2): (color1B)
+            (led3): (color1B)
+            # ---------------
+            (ledA): (color2B)
+            (ledB): (color2B)
+            (ledC): (color2B)
+            (ledD): (color2B)
+            (ledE): (color2B)
+            (ledF): (color2B)
+            # ---------------
+        - time: "+1"
+        
