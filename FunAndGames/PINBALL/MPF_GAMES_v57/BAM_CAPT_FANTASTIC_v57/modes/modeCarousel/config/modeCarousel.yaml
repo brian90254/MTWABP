@@ -1,0 +1,200 @@
+#config_version=6
+
+config:
+# -------------
+- configModeCarouselSlide1954.yaml
+- configModeCarouselSlide1955.yaml
+- configModeCarouselSlide1956.yaml
+- configModeCarouselSlide1957.yaml
+- configModeCarouselSlide1958.yaml
+- configModeCarouselSlide1959.yaml
+# -------------
+- configModeCarouselSlide1960.yaml
+- configModeCarouselSlide1961.yaml
+- configModeCarouselSlide1962.yaml
+- configModeCarouselSlide1963.yaml
+- configModeCarouselSlide1964.yaml
+- configModeCarouselSlide1965.yaml
+- configModeCarouselSlide1966.yaml
+- configModeCarouselSlide1967.yaml
+- configModeCarouselSlide1968.yaml
+- configModeCarouselSlide1969.yaml
+# -------------
+- configModeCarouselSlide1970.yaml
+- configModeCarouselSlide1971.yaml
+- configModeCarouselSlide1972.yaml
+- configModeCarouselSlide1973.yaml
+- configModeCarouselSlide1974.yaml
+- configModeCarouselSlide1975.yaml
+- configModeCarouselSlide1976.yaml
+- configModeCarouselSlide1977.yaml
+- configModeCarouselSlide1978.yaml
+- configModeCarouselSlide1979.yaml
+# -------------
+- configModeCarouselSlide1980.yaml
+- configModeCarouselSlide1981.yaml
+- configModeCarouselSlide1982.yaml
+- configModeCarouselSlide1983.yaml
+- configModeCarouselSlide1984.yaml
+- configModeCarouselSlide1985.yaml
+
+mode:
+  start_events:
+    - eventStartModeCarousel
+    #- ball_starting{ball==1}
+  stop_events: eventStopModeCarousel
+  code: mpf.modes.carousel.code.carousel.Carousel
+  use_wait_queue: true
+  priority: 200
+  
+mode_settings:
+  selectable_items:
+    # -------------
+    - year1954
+    - year1955
+    - year1956
+    - year1957
+    - year1958
+    - year1959
+    # -------------
+    - year1960
+    - year1961
+    - year1962
+    - year1963
+    - year1964
+    - year1965
+    - year1966
+    - year1967
+    - year1968
+    - year1969
+    # -------------
+    - year1970
+    - year1971
+    - year1972
+    - year1973
+    - year1974
+    - year1975
+    - year1976
+    - year1977
+    - year1978
+    - year1979
+    # -------------
+    - year1980
+    - year1981
+    - year1982
+    - year1983
+    - year1984
+    - year1985
+    # -------------
+    
+  select_item_events: eventModeCarouselSelect
+  next_item_events: eventModeCarouselNext
+  previous_item_events: eventModeCarouselPrevious
+  # TESTING
+  block_events: flipper_cancel
+  release_events: both_flippers_inactive
+
+# -----------------------
+# EVENT::PLAYER::SELECT
+# -----------------------
+event_player:
+  # -----------------------------------
+  # MUSIC
+  # -----------------------------------
+  mode_modeCarousel_started:
+  - eventPlaylistModeCaptFantasticStart
+
+  # -----------------------------------
+  # SELECT
+  # -----------------------------------
+  sw_flipper_left_inactive:
+    - eventModeCarouselPrevious
+    - playPoolSoundStart
+  sw_flipper_right_inactive:
+    - eventModeCarouselNext
+    - playPoolSoundStart
+  sw_tagLaunch:
+    - eventModeCarouselSelect
+  flipper_cancel:
+    - eventModeCarouselSelect
+  modeCarousel_item_selected:
+    - eventStopModeCarousel
+
+  #sw_flipper_left_inactive:
+  #  - playPoolSoundStart
+    
+# -----------------------
+# START BY YEAR SELECTED
+# -----------------------
+  # 1950's
+  modeCarousel_year1954_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1955_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1956_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1957_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1958_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1959_selected:
+    - eventStartModePlayboy1955
+  # -------------
+  # 1960's
+  modeCarousel_year1960_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1961_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1962_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1963_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1964_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1965_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1966_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1967_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1968_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1969_selected:
+    - eventStartModePlayboy1955
+  # -------------
+  # 1970's
+  modeCarousel_year1970_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1971_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1972_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1973_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1974_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1975_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1976_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1977_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1978_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1979_selected:
+    - eventStartModePlayboy1955
+  # -------------
+  # 1980's
+  modeCarousel_year1980_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1981_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1982_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1983_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1984_selected:
+    - eventStartModePlayboy1955
+  modeCarousel_year1985_selected:
+    - eventStartModePlayboy1955
+  # -------------

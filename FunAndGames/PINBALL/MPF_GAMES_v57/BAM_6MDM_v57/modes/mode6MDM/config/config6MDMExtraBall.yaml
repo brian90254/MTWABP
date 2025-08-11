@@ -1,0 +1,197 @@
+#config_version=6
+
+# ---------------------
+# EXTRA::BALLS
+# ---------------------
+extra_balls:
+    extraBall6MDM:
+        light_events: eventExtraBall6MDMLit
+        award_events: eventExtraBall6MDMAward
+        max_per_game: 3
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    
+    ## -------------------
+    ## AB::LANE::LIT/AWARD EXTRA BALL
+    ## -------------------
+    #TODO CHANGE THIS
+    shotABAward_litFlash5k_hit:
+        #- eventLightExtraBall
+        - eventExtraBall6MDMLit
+    # --------------------------------
+    #TODO CHANGE THIS
+    shotABAward_litFlashExtraBall_hit:
+        #- eventAwardExtraBall
+        - eventExtraBall6MDMAward
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+  ## ----------------------------
+  ## LIGHT EXTRA BALL
+  ## ----------------------------
+  #eventExtraBall6MDMLit:
+  #  showExtraBall6MDMLit:
+  #    loops: -1
+  #    speed: 24
+  #    key: keyExtraBallLit
+
+  # ----------------------------
+  # AWARD EXTRA BALL
+  # ----------------------------
+  extra_ball_extraBall6MDM_awarded:
+    showExtraBall6MDMAward:
+      loops: -1
+      speed: 8
+      key: keyExtraBallAward
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  extra_ball_extraBall6MDM_lit:
+    slideExtraBall6MDMLit:
+      target: displayDMD
+      
+  extra_ball_extraBall6MDM_awarded:
+    slideExtraBall6MDMAward:
+      target: displayDMD
+
+# ---------------------
+# SLIDE::EXTRA BALL::LIGHT
+# ---------------------
+slides:
+  slideExtraBall6MDMLit:
+    widgets:
+      # -------------------------------
+      # RED FORGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitInner
+        text: EXTRA BALL LIT
+        y: middle
+        x: middle
+
+      # -------------------------------
+      # YELLOW BACKGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle - 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle - 1
+        x: middle - 1
+
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle + 1
+        x: middle + 1
+
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle + 1
+        x: middle - 1
+
+      # -------------------------------
+    expire: 4.0s
+
+# ---------------------
+# SLIDE::EXTRA BALL::AWARD
+# ---------------------
+
+  slideExtraBall6MDMAward:
+    widgets:
+      # BLUE FORGROUND
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardInner
+        text: EXTRA BALL
+        y: middle
+        x: middle
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle - 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle - 1
+        x: middle - 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle + 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle + 1
+        x: middle - 1
+      # -------------------------------
+    expire: 4.0s
+
+
+# *********************
+# SHOWS
+# *********************
+shows:
+  # -----------------------------------
+  # SHOW::LED::EXTRA BALL::AWARD
+  # -----------------------------------
+    #showExtraBall6MDMAward:
+    #    - time: 0
+    #      lights:
+    #        ledShootAgain: 'ffff00'
+    #    - time: 1
+    #      lights:
+    #        ledShootAgain: 'cccc00'
+    #    - time: 2
+  # -----------------------------------
+  # SHOW::LED::EXTRA BALL::AWARD
+  # -----------------------------------
+    showExtraBall6MDMAward:
+        - time: 0
+          lights:
+            ledShootAgain1: '00ff00'
+            ledShootAgain2: '008800'
+            ledShootAgain3: '008800'
+            ledShootAgain4: '008800'
+            ledShootAgain5: '008800'
+            ledShootAgain6: '008800'
+            ledShootAgain7: '008800'
+        - time: 1
+          lights:
+            ledShootAgain1: '008800'
+            ledShootAgain2: '00ff00'
+            ledShootAgain3: '00ff00'
+            ledShootAgain4: '00ff00'
+            ledShootAgain5: '00ff00'
+            ledShootAgain6: '00ff00'
+            ledShootAgain7: '00ff00'
+        - time: 2

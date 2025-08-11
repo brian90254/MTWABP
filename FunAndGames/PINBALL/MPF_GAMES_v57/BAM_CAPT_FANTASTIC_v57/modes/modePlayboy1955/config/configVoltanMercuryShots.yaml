@@ -1,0 +1,1008 @@
+#config_version=6
+
+# VOLTAN
+
+# *****************************
+# SHOTS::LANES
+# *****************************
+shots:
+    # -------------------
+    # MATRIX SPOT
+    # -------------------
+    shotMatrixSpotMercury1:
+        switch: s_1_28
+        enable_events: eventEnableShotMatrixSpotMercury1
+        disable_events: eventDisableShotMatrixSpotMercury1
+        restart_events: eventRestartShotMatrixSpotMercury1
+        reset_events: eventResetShotMatrixSpotMercury1
+        profile: spShotMatrixSpotMercury
+        show_tokens:
+            led1: ledSpot1A
+            led2: ledSpot1B
+            led3: ledSpot1C
+            led4: ledSpot1D
+            led5: ledSpot1E
+            led6: ledLane1
+           
+    shotMatrixSpotMercury2:
+        switch: s_1_30
+        enable_events: eventEnableShotMatrixSpotMercury2
+        disable_events: eventDisableShotMatrixSpotMercury2
+        restart_events: eventRestartShotMatrixSpotMercury2
+        reset_events: eventResetShotMatrixSpotMercury2
+        profile: spShotMatrixSpotMercury
+        show_tokens:
+            led1: ledSpot2A
+            led2: ledSpot2B
+            led3: ledSpot2C
+            led4: ledSpot2D
+            led5: ledSpot2E
+            led6: ledTarget2
+            
+    shotMatrixSpotMercury3:
+        switch: s_1_19
+        enable_events: eventEnableShotMatrixSpotMercury3
+        disable_events: eventDisableShotMatrixSpotMercury3
+        restart_events: eventRestartShotMatrixSpotMercury3
+        reset_events: eventResetShotMatrixSpotMercury3
+        profile: spShotMatrixSpotMercury
+        show_tokens:
+            led1: ledSpot3A
+            led2: ledSpot3B
+            led3: ledSpot3C
+            led4: ledSpot3D
+            led5: ledSpot3E
+            led6: ledLane3
+            
+    shotMatrixSpotMercury4:
+        switch: s_1_17
+        enable_events: eventEnableShotMatrixSpotMercury4
+        disable_events: eventDisableShotMatrixSpotMercury4
+        restart_events: eventRestartShotMatrixSpotMercury4
+        reset_events: eventResetShotMatrixSpotMercury4
+        profile: spShotMatrixSpotMercury
+        show_tokens:
+            led1: ledSpot4A
+            led2: ledSpot4B
+            led3: ledSpot4C
+            led4: ledSpot4D
+            led5: ledSpot4E
+            led6: ledLane4
+           
+    shotMatrixSpotMercury5:
+        switch: s_1_9
+        enable_events: eventEnableShotMatrixSpotMercury5
+        disable_events: eventDisableShotMatrixSpotMercury5
+        restart_events: eventRestartShotMatrixSpotMercury5
+        reset_events: eventResetShotMatrixSpotMercury5
+        profile: spShotMatrixSpotMercury
+        show_tokens:
+            led1: ledSpot5A
+            led2: ledSpot5B
+            led3: ledSpot5C
+            led4: ledSpot5D
+            led5: ledSpot5E
+            led6: ledTarget5
+            
+    shotMatrixSpotMercury6:
+        switch: s_1_31
+        enable_events: eventEnableShotMatrixSpotMercury6
+        disable_events: eventDisableShotMatrixSpotMercury6
+        restart_events: eventRestartShotMatrixSpotMercury6
+        reset_events: eventResetShotMatrixSpotMercury6
+        profile: spShotMatrixSpotMercury
+        show_tokens:
+            led1: ledSpot6A
+            led2: ledSpot6B
+            led3: ledSpot6C
+            led4: ledSpot6D
+            led5: ledSpot6E
+            led6: ledLane6
+            
+    shotMatrixSpotMercury7:
+        switch: s_1_29
+        enable_events: eventEnableShotMatrixSpotMercury7
+        disable_events: eventDisableShotMatrixSpotMercury7
+        restart_events: eventRestartShotMatrixSpotMercury7
+        reset_events: eventResetShotMatrixSpotMercury7
+        profile: spShotMatrixSpotMercury
+        show_tokens:
+            led1: ledSpot7A
+            led2: ledSpot7B
+            led3: ledSpot7C
+            led4: ledSpot7D
+            led5: ledSpot7E
+            led6: ledLane7
+           
+    shotMatrixSpotMercury8:
+        switch: s_1_16
+        enable_events: eventEnableShotMatrixSpotMercury8
+        disable_events: eventDisableShotMatrixSpotMercury8
+        restart_events: eventRestartShotMatrixSpotMercury8
+        reset_events: eventResetShotMatrixSpotMercury8
+        profile: spShotMatrixSpotMercury
+        show_tokens:
+            led1: ledSpot8A
+            led2: ledSpot8B
+            led3: ledSpot8C
+            led4: ledSpot8D
+            led5: ledSpot8E
+            led6: ledTarget8
+            
+    shotMatrixSpotMercury9:
+        switch: s_1_18
+        enable_events: eventEnableShotMatrixSpotMercury9
+        disable_events: eventDisableShotMatrixSpotMercury9
+        restart_events: eventRestartShotMatrixSpotMercury9
+        reset_events: eventResetShotMatrixSpotMercury9
+        profile: spShotMatrixSpotMercury
+        show_tokens:
+            led1: ledSpot9A
+            led2: ledSpot9B
+            led3: ledSpot9C
+            led4: ledSpot9D
+            led5: ledSpot9E
+            led6: ledLane9
+            
+    # -------------------
+    # MATRIX SPOT::GROUPS
+    # -------------------
+    # DIAGONAL
+    shotMatrixSpotMercuryDiagonalLeft:
+        enable_events: eventEnableShotMatrixSpotMercuryDiagonalLeft
+        disable_events: eventDisableShotMatrixSpotMercuryDiagonalLeft
+        restart_events: eventRestartShotMatrixSpotMercuryDiagonalLeft
+        reset_events: eventResetShotMatrixSpotMercuryDiagonalLeft
+        hit_events: eventHitShotMatrixSpotMercuryDiagonalLeft
+        profile: spShotMatrixSpotMercuryDiagonal
+            
+    shotMatrixSpotMercuryDiagonalRight:
+        enable_events: eventEnableShotMatrixSpotMercuryDiagonalRight
+        disable_events: eventDisableShotMatrixSpotMercuryDiagonalRight
+        restart_events: eventRestartShotMatrixSpotMercuryDiagonalRight
+        reset_events: eventResetShotMatrixSpotMercuryDiagonalRight
+        hit_events: eventHitShotMatrixSpotMercuryDiagonalRight
+        profile: spShotMatrixSpotMercuryDiagonal
+        
+    # VERTICAL
+    shotMatrixSpotMercuryVerticalLeft:
+        enable_events: eventEnableShotMatrixSpotMercuryVerticalLeft
+        disable_events: eventDisableShotMatrixSpotMercuryVerticalLeft
+        restart_events: eventRestartShotMatrixSpotMercuryVerticalLeft
+        reset_events: eventResetShotMatrixSpotMercuryVerticalLeft
+        hit_events: eventHitShotMatrixSpotMercuryVerticalLeft
+        profile: spShotMatrixSpotMercuryVertical
+            
+    shotMatrixSpotMercuryVerticalMiddle:
+        enable_events: eventEnableShotMatrixSpotMercuryVerticalMiddle
+        disable_events: eventDisableShotMatrixSpotMercuryVerticalMiddle
+        restart_events: eventRestartShotMatrixSpotMercuryVerticalMiddle
+        reset_events: eventResetShotMatrixSpotMercuryVerticalMiddle
+        hit_events: eventHitShotMatrixSpotMercuryVerticalMiddle
+        profile: spShotMatrixSpotMercuryVertical
+        
+    shotMatrixSpotMercuryVerticalRight:
+        enable_events: eventEnableShotMatrixSpotMercuryVerticalRight
+        disable_events: eventDisableShotMatrixSpotMercuryVerticalRight
+        restart_events: eventRestartShotMatrixSpotMercuryVerticalRight
+        reset_events: eventResetShotMatrixSpotMercuryVerticalRight
+        hit_events: eventHitShotMatrixSpotMercuryVerticalRight
+        profile: spShotMatrixSpotMercuryVertical
+        
+    # -------------------
+    # SHOTS::SPINNERS
+    # -------------------
+    shotSpinnerMercuryLeft:
+        switch: s_1_11
+        enable_events: eventEnableShotSpinnerMercuryLeft
+        disable_events: eventDisableShotSpinnerMercuryLeft
+        restart_events: eventRestartShotSpinnerMercuryLeft
+        reset_events: eventResetShotSpinnerMercuryLeft
+        profile: spShotSpinnerMercury
+        show_tokens:
+            led1: ledSpinnerLeft1
+            led2: ledSpinnerLeft2
+            led3: ledSpinnerLeft3
+        
+    shotSpinnerMercuryRight:
+        switch: s_1_4
+        enable_events: eventEnableShotSpinnerMercuryRight
+        disable_events: eventDisableShotSpinnerMercuryRight
+        restart_events: eventRestartShotSpinnerMercuryRight
+        reset_events: eventResetShotSpinnerMercuryRight
+        profile: spShotSpinnerMercury
+        show_tokens:
+            led1: ledSpinnerRight1
+            led2: ledSpinnerRight2
+            led3: ledSpinnerRight3
+        
+    # -------------------
+    # SHOTS::OUTLANES
+    # -------------------
+    shotOutlaneMercuryLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlaneMercuryLeft
+        disable_events: eventDisableShotOutlaneMercuryLeft
+        restart_events: eventRestartShotOutlaneMercuryLeft
+        reset_events: eventResetShotOutlaneMercuryLeft
+        profile: spShotOutlaneMercury
+            
+    shotOutlaneMercuryRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlaneMercuryRight
+        disable_events: eventDisableShotOutlaneMercuryRight
+        restart_events: eventRestartShotOutlaneMercuryRight
+        reset_events: eventResetShotOutlaneMercuryRight
+        profile: spShotOutlaneMercury
+            
+    # -------------------
+    # SHOTS::OUTLANE::SPECIAL
+    # -------------------
+    shotOutlaneMercurySpecialLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlaneMercurySpecialLeft
+        disable_events: eventDisableShotOutlaneMercurySpecialLeft
+        restart_events: eventRestartShotOutlaneMercurySpecialLeft
+        reset_events: eventResetShotOutlaneMercurySpecialLeft
+        profile: spShotOutlaneMercurySpecial
+        show_tokens:
+            led: ledOutlaneLeft
+            
+    shotOutlaneMercurySpecialRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlaneMercurySpecialRight
+        disable_events: eventDisableShotOutlaneMercurySpecialRight
+        restart_events: eventRestartShotOutlaneMercurySpecialRight
+        reset_events: eventResetShotOutlaneMercurySpecialRight
+        profile: spShotOutlaneMercurySpecial
+        show_tokens:
+            led: ledOutlaneRight
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotMercuryAll:
+        shots:
+            - shotMatrixSpotMercury7
+            - shotMatrixSpotMercury2
+            - shotMatrixSpotMercury1
+            - shotMatrixSpotMercury4
+            - shotMatrixSpotMercury6
+            - shotMatrixSpotMercury9
+            - shotMatrixSpotMercury8
+            - shotMatrixSpotMercury3
+            - shotMatrixSpotMercury5
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMercuryAll
+        disable_events:
+            - eventDisableShotGroupMatrixSpotMercuryAll
+        reset_events:
+            - eventResetShotGroupMatrixSpotMercuryAll
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMercuryAll
+        rotate_left_events:
+            - sw_right_flipper
+        rotate_right_events:
+            - sw_left_flipper
+        
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotMercuryDiagonalLeft:
+        shots:
+            - shotMatrixSpotMercury1
+            - shotMatrixSpotMercury5
+            - shotMatrixSpotMercury9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMercuryDiagonalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotMercuryDiagonalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotMercuryDiagonalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMercuryDiagonalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotMercuryDiagonalRight:
+        shots:
+            - shotMatrixSpotMercury3
+            - shotMatrixSpotMercury5
+            - shotMatrixSpotMercury7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMercuryDiagonalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotMercuryDiagonalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotMercuryDiagonalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMercuryDiagonalRight
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotMercuryVerticalLeft:
+        shots:
+            - shotMatrixSpotMercury1
+            - shotMatrixSpotMercury4
+            - shotMatrixSpotMercury7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMercuryVerticalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotMercuryVerticalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotMercuryVerticalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMercuryVerticalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotMercuryVerticalMiddle:
+        shots:
+            - shotMatrixSpotMercury2
+            - shotMatrixSpotMercury5
+            - shotMatrixSpotMercury8
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMercuryVerticalMiddle
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotMercuryVerticalMiddle
+        reset_events:
+            - eventResetShotGroupMatrixSpotMercuryVerticalMiddle
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMercuryVerticalMiddle
+            
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotMercuryVerticalRight:
+        shots:
+            - shotMatrixSpotMercury3
+            - shotMatrixSpotMercury6
+            - shotMatrixSpotMercury9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMercuryVerticalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotMercuryVerticalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotMercuryVerticalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMercuryVerticalRight
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::MARTIX::SPOT
+    # -----------------------------
+    spShotMatrixSpotMercury:
+        states:
+          - name: litFlash
+            show: showMatrixSpotMercury
+            speed: 4
+            show_tokens:
+                color1: '880088'
+                color2: 'ff00ff'
+                color3: '000000'
+                color4: '000000'
+          - name: litSolid
+            show: showMatrixSpotMercury
+            speed: 4
+            show_tokens:
+                color1: '660088'
+                color2: '660088'
+                color3: '008888'
+                color4: '00ffff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::MARTIX::GROUPS
+    # -----------------------------
+    spShotMatrixSpotMercuryDiagonal:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    spShotMatrixSpotMercuryVertical:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::SPINNER
+    # -----------------------------
+    spShotSpinnerMercury:
+        states:
+          - name: litSolid
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: 'ffff00'
+                color2: '888800'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE
+    # -----------------------------
+    spShotOutlaneMercury:
+        states:
+          #- name: litFlash
+          - name: litSolid
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE::SPECIAL
+    # -----------------------------
+    spShotOutlaneMercurySpecial:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '440066'
+                color2: '8800cc'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: 'cc00ff'
+                color2: 'cc00ff'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeVoltanMercury_started:
+        # -----------
+        # OUTLANES
+        # -----------
+        - eventEnableShotOutlaneMercuryLeft
+        - eventEnableShotOutlaneMercuryRight
+        # -----------
+        # MATRIX
+        # -----------
+        - eventEnableShotMatrixSpotMercury1
+        - eventEnableShotMatrixSpotMercury2
+        - eventEnableShotMatrixSpotMercury3
+        - eventEnableShotMatrixSpotMercury4
+        - eventEnableShotMatrixSpotMercury5
+        - eventEnableShotMatrixSpotMercury6
+        - eventEnableShotMatrixSpotMercury7
+        - eventEnableShotMatrixSpotMercury8
+        - eventEnableShotMatrixSpotMercury9
+        # -----------
+        # MATRIX::GROUPS
+        # -----------
+        # DIAGONAL
+        # TODO reserve this for higher level modes past Mercury
+        - eventEnableShotMatrixSpotMercuryDiagonalLeft
+        - eventEnableShotMatrixSpotMercuryDiagonalRight
+        #VERTICAL
+        - eventEnableShotMatrixSpotMercuryVerticalLeft
+        - eventEnableShotMatrixSpotMercuryVerticalMiddle
+        - eventEnableShotMatrixSpotMercuryVerticalRight
+        
+# -----------
+# MATRIX::GROUPS::COMPLETE
+# -----------
+# -----------
+# DIAGONAL
+# -----------
+    # TODO this is not enables in Mercury
+    # -----------
+    # DIAGONAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotMercuryDiagonalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotMercuryDiagonalLeft
+        # -------------
+    shotMatrixSpotMercuryDiagonalLeft_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotMercury1
+        #- eventDisableShotMatrixSpotMercury5
+        #- eventDisableShotMatrixSpotMercury9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalLeft
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotMercury1|3000ms
+        #- eventRestartShotMatrixSpotMercury5|3000ms
+        #- eventRestartShotMatrixSpotMercury9|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerMercuryLeft
+    
+    # -----------
+    # DIAGONAL::RIGHT
+    # -----------
+    # TODO this is not enables in Mercury
+    shotGroupMatrixSpotMercuryDiagonalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotMercuryDiagonalRight
+        # -------------
+    shotMatrixSpotMercuryDiagonalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotMercury3
+        #- eventDisableShotMatrixSpotMercury5
+        #- eventDisableShotMatrixSpotMercury7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalRight
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotMercury3|3000ms
+        #- eventRestartShotMatrixSpotMercury5|3000ms
+        #- eventRestartShotMatrixSpotMercury7|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerMercuryRight
+        
+    # -----------
+    # GROUP::ALL
+    # -----------
+    shotGroupMatrixSpotMercuryAll_litSolid_complete:
+        - eventVoltanMercuryComplete|3000ms
+    
+# -----------
+# VERTICAL
+# -----------
+    # -----------
+    # VERTICAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotMercuryVerticalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotMercuryVerticalLeft
+        # -------------
+    shotMatrixSpotMercuryVerticalLeft_litFlash_hit:
+        # TODO this is not enables in Mercury
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotMercury1
+        #- eventDisableShotMatrixSpotMercury4
+        #- eventDisableShotMatrixSpotMercury7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalLeft
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Mercury
+        #- eventRestartShotMatrixSpotMercury1|3000ms
+        #- eventRestartShotMatrixSpotMercury4|3000ms
+        #- eventRestartShotMatrixSpotMercury7|3000ms
+        
+    shotGroupMatrixSpotMercuryVerticalMiddle_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotMercuryVerticalMiddle
+        # -------------
+    shotMatrixSpotMercuryVerticalMiddle_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in Mercury
+        #- eventDisableShotMatrixSpotMercury2
+        #- eventDisableShotMatrixSpotMercury5
+        #- eventDisableShotMatrixSpotMercury8
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalMiddle
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Mercury
+        #- eventRestartShotMatrixSpotMercury2|3000ms
+        #- eventRestartShotMatrixSpotMercury5|3000ms
+        #- eventRestartShotMatrixSpotMercury8|3000ms
+        
+    shotGroupMatrixSpotMercuryVerticalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotMercuryVerticalRight
+        # -------------
+    shotMatrixSpotMercuryVerticalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in Mercury
+        #- eventDisableShotMatrixSpotMercury3
+        #- eventDisableShotMatrixSpotMercury6
+        #- eventDisableShotMatrixSpotMercury9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalRight
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Mercury
+        #- eventRestartShotMatrixSpotMercury3|3000ms
+        #- eventRestartShotMatrixSpotMercury6|3000ms
+        #- eventRestartShotMatrixSpotMercury9|3000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------------
+    # SPINNERS
+    # ---------------------
+    shotSpinnerMercuryLeft_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotSpinnerMercuryRight_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    sw_tagSpinner:
+      score: 1 * current_player.multiPlayfield
+
+    # ---------------------
+    # OUTLANES
+    # ---------------------
+    # STANDARD
+    shotOutlaneMercuryLeft_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    shotOutlaneMercuryRight_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    # SPECIAL
+    shotOutlaneMercurySpecialLeft_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+    shotOutlaneMercurySpecialRight_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+
+    # ---------------------
+    # TARGETS AND LANES
+    # ---------------------
+    shotGroupMatrixSpotMercuryAll_litFlash_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotGroupMatrixSpotMercuryAll_litSolid_hit:
+        score: 10 * current_player.multiPlayfield
+      
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+    # ---------------------
+    # SHOW::DIAGONAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalLeft:
+        showMatrixSpotMercuryThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotMercuryThreeCompleteDiagonalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+        
+    # ---------------------
+    # SHOW::DIAGONAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalRight:
+        showMatrixSpotMercuryThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotMercuryThreeCompleteDiagonalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalLeft:
+        showMatrixSpotMercuryThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotMercuryThreeCompleteVerticalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot4A
+                led2B: ledSpot4B
+                led2C: ledSpot4C
+                led2D: ledSpot4D
+                led2E: ledSpot4E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::MIDDLE
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalMiddle:
+        showMatrixSpotMercuryThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotMercuryThreeCompleteVerticalMiddle
+            show_tokens:
+                # --------------
+                led1A: ledSpot2A
+                led1B: ledSpot2B
+                led1C: ledSpot2C
+                led1D: ledSpot2D
+                led1E: ledSpot2E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot8A
+                led3B: ledSpot8B
+                led3C: ledSpot8C
+                led3D: ledSpot8D
+                led3E: ledSpot8E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalRight:
+        showMatrixSpotMercuryThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotMercuryThreeCompleteVerticalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot6A
+                led2B: ledSpot6B
+                led2C: ledSpot6C
+                led2D: ledSpot6D
+                led2E: ledSpot6E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotMercury:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotMercuryThreeComplete:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1)
+            (led1B): (color1)
+            (led1C): (color1)
+            (led1D): (color1)
+            (led1E): (color1)
+            # ----------------
+            (led2A): (color1)
+            (led2B): (color1)
+            (led2C): (color1)
+            (led2D): (color1)
+            (led2E): (color1)
+            # ----------------
+            (led3A): (color1)
+            (led3B): (color1)
+            (led3C): (color1)
+            (led3D): (color1)
+            (led3E): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color2)
+            (led1B): (color2)
+            (led1C): (color2)
+            (led1D): (color2)
+            (led1E): (color2)
+            # ----------------
+            (led2A): (color2)
+            (led2B): (color2)
+            (led2C): (color2)
+            (led2D): (color2)
+            (led2E): (color2)
+            # ----------------
+            (led3A): (color2)
+            (led3B): (color2)
+            (led3C): (color2)
+            (led3D): (color2)
+            (led3E): (color2)
+            # ----------------
+        - time: "+1"

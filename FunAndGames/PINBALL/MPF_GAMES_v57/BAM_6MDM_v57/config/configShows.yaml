@@ -1,0 +1,2255 @@
+#config_version=6
+
+shows:
+
+    flashLedColor:
+        - time: 0
+          lights:
+            (led): (color)
+        - time: 0.5s
+          lights:
+            (led): '000000'
+        - time: 1.0s
+        
+    flashLedColorFast:
+        - time: 0
+          lights:
+            (led): (color)
+        - time: 0.5s
+          lights:
+            (led): '000000'
+        - time: 1.0s
+
+    flashLedColorSuperFast:
+        - time: 0
+          lights:
+            (led): (color)
+        - time: 0.25s
+          lights:
+            (led): '000000'
+        - time: 0.50s
+        
+    onLedColor:
+        - time: 0
+          duration: -1
+          lights:
+            (led): (color)
+
+    onLedRed:
+        - time: 0
+          duration: -1
+          lights:
+            (led): 'ff0000'
+            
+    onLedOrange:
+        - time: 0
+          duration: -1
+          lights:
+            (led): 'ff8800'
+            
+    onLedPink:
+        - time: 0
+          duration: -1
+          lights:
+            #(led): 'ff0088'
+            (led): 'cc0066'
+            
+    onLedCyan:
+        - time: 0
+          duration: -1
+          lights:
+            (led): '00ffff'
+            
+    onLedGreen:
+        - time: 0
+          duration: -1
+          lights:
+            (led): '00ff00'
+            
+    onLedYellow:
+        - time: 0
+          duration: -1
+          lights:
+            (led): 'ffff00'
+            
+    onLedBlue:
+        - time: 0
+          duration: -1
+          lights:
+            (led): '0000ff'
+                        
+    offLed:
+        - time: 0
+          duration: -1
+          lights:
+            (led): '000000'
+            
+    onThreeLedPink:
+        - time: 0
+          duration: -1
+          lights:
+            (led1): 'cc0066'
+            (led2): 'cc0066'
+            (led3): 'cc0066'
+            
+    onLedTwoColor:
+        - time: 0
+          lights:
+            (led): (color)
+        - time: 0.50s
+          lights:
+            (led): (color/2)
+        - time: 1.0s
+            
+    offLedColor:
+        - time: 0
+          lights:
+            (led): (color)
+        - time: 0.10s
+          duration: -1
+          lights:
+            (led): '000000'
+            
+    flashTwoLedColor:
+        - time: 0
+          lights:
+            (led): (color1)
+        - time: 0.25s
+          lights:
+            (led): (color2)
+        - time: 0.50s
+        
+    flashLedTwoColor:
+        - time: 0
+          lights:
+            (led): (color1)
+        - time: 1
+          lights:
+            (led): (color2)
+        - time: 2
+
+    flashLedTwoRed:
+        - time: 0
+          lights:
+            (led): '600000'
+        - time: 0.250s
+          lights:
+            (led): '800000'
+        - time: 0.50s
+        
+    flashLedTwoOrange:
+        - time: 0
+          lights:
+            (led): '604000'
+        - time: 0.25s
+          lights:
+            (led): '806000'
+        - time: 0.50s
+        
+    flashLedTwoPink:
+        - time: 0
+          lights:
+            (led): '660033'
+        - time: 0.250s
+          lights:
+            (led): '880044'
+        - time: 0.5s
+        
+    flashLedTwoPurple:
+        - time: 0
+          lights:
+            (led): '440066'
+        - time: 0.250s
+          lights:
+            (led): '660088'
+        - time: 0.5s
+        
+    flashThreeLedColor:
+        - time: 0
+          lights:
+            (led1): (color)
+            (led2): (color)
+            (led3): (color)
+        - time: 0.125s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+        - time: 0.250s
+
+    flashThreeLedYellow:
+        - time: 0
+          lights:
+            (led1): 'ffff00'
+            (led2): 'ffff00'
+            (led3): 'ffff00'
+        - time: 0.125s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+        - time: 0.250s
+        
+    flashThreeLedTwoPink:
+        - time: 0
+          lights:
+            (led1): '880044'
+            (led2): '880044'
+            (led3): '880044'
+        - time: 0.125s
+          lights:
+            (led1): '660033'
+            (led2): '660033'
+            (led3): '660033'
+        - time: 0.250s
+
+    traceThreeLedTwoPurple:
+        - time: 0
+          lights:
+            (led1): '440088'
+            (led2): '330066'
+            (led3): '330066'
+        - time: 0.33s
+          lights:
+            (led1): '330066'
+            (led2): '440088'
+            (led3): '330066'
+        - time: 0.66s
+          lights:
+            (led1): '330066'
+            (led2): '330066'
+            (led3): '440088'
+        - time: 1.0s
+        
+    traceThreeLedTwoGreen:
+        - time: 0
+          lights:
+            (led1): '00ff00'
+            (led2): '008000'
+            (led3): '008000'
+        - time: 0.33s
+          lights:
+            (led1): '008000'
+            (led2): '00ff00'
+            (led3): '008000'
+        - time: 0.66s
+          lights:
+            (led1): '008000'
+            (led2): '008000'
+            (led3): '00ff00'
+        - time: 1.0s
+        
+    traceFiveLedTwoGreen:
+        - time: 0
+          lights:
+            (led1): '00ff00'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+        - time: 1s
+          lights:
+            (led1): '00ff00'
+            (led2): '00ff00'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+        - time: 2s
+          lights:
+            (led1): '00ff00'
+            (led2): '00ff00'
+            (led3): '00ff00'
+            (led4): '000000'
+            (led5): '000000'
+        - time: 3s
+          lights:
+            (led1): '000000'
+            (led2): '00ff00'
+            (led3): '00ff00'
+            (led4): '00ff00'
+            (led5): '000000'
+        - time: 4s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '00ff00'
+            (led4): '00ff00'
+            (led5): '00ff00'
+        - time: 5s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '00ff00'
+            (led5): '00ff00'
+        - time: 6s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '00ff00'
+        - time: 7s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+        - time: 8s
+
+    flashTwoLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+        - time: 0.5s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+        - time: 1s
+        
+    flashTwoLedFourColor:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+        - time: 0.25s
+          lights:
+            (led1): (color3)
+            (led2): (color4)
+        - time: 0.5s
+        
+    flashTwoLedFourColor2:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+        - time: 0.25s
+          lights:
+            (led1): (color3)
+            (led2): (color4)
+        - time: 0.5s
+        
+    flashTwoLedFourColor3:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+        - time: 0.25s
+          lights:
+            (led1): (color3)
+            (led2): (color4)
+        - time: 0.5s
+        
+    flashSixLedTwoRed:
+        - time: 0
+          lights:
+            (led1): '600000'
+            (led2): '600000'
+            (led3): '600000'
+            (led4): '600000'
+            (led5): '600000'
+            (led6): '600000'
+        - time: 0.250s
+          lights:
+            (led1): '800000'
+            (led2): '800000'
+            (led3): '800000'
+            (led4): '800000'
+            (led5): '800000'
+            (led6): '800000'
+        - time: 0.50s
+        
+    onThreeLedColor:
+        - time: 0
+          duration: -1
+          lights:
+            (led1): (color)
+            (led2): (color)
+            (led3): (color)
+
+    onThreeLedRed:
+        - time: 0
+          duration: -1
+          lights:
+            (led1): '800000'
+            (led2): '800000'
+            (led3): '800000'
+
+    onThreeLedColorTwoColor:
+        - time: 0
+          duration: -1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+
+    onThreeLedYellow:
+        - time: 0
+          duration: -1
+          lights:
+            (led1): 'ffff00'
+            (led2): 'ffff00'
+            (led3): 'ffff00'
+
+    onThreeLedBlueGreen:
+        - time: 0
+          duration: -1
+          lights:
+            (led1): '00c060'
+            (led2): '00c060'
+            (led3): '00c060'
+            
+    onThreeLedThreeColor:
+        - time: 0
+          duration: -1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color3)
+
+    offThreeLedThreeColor:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color3)
+        - time: 0.5s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+        - time: 1.0s
+        
+    onSixLedRed:
+        - time: 0
+          duration: -1
+          lights:
+            (led1): 'ff0000'
+            (led2): 'ff0000'
+            (led3): 'ff0000'
+            (led4): 'ff0000'
+            (led5): 'ff0000'
+            (led6): 'ff0000'
+            
+    onFiveLedFiveColor:
+        - time: 0
+          duration: -1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color5)
+            
+    traceThreeLedColor:
+        - time: 0
+          lights:
+            (led1): (color)
+            (led2): '000000'
+            (led3): '000000'
+        - time: 0.1s
+          lights:
+            (led1): (color)
+            (led2): (color)
+            (led3): '000000'
+        - time: 0.2s
+          lights:
+            (led1): (color)
+            (led2): (color)
+            (led3): (color)
+        - time: 0.3s
+          lights:
+            (led1): '000000'
+            (led2): (color)
+            (led3): (color)
+        - time: 0.4s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): (color)
+        - time: 0.5s
+        
+    traceThreeLedColorRev:
+        - time: 0
+          lights:
+            (led3): (color)
+            (led2): '000000'
+            (led1): '000000'
+        - time: 0.1s
+          lights:
+            (led3): (color)
+            (led2): (color)
+            (led1): '000000'
+        - time: 0.2s
+          lights:
+            (led3): (color)
+            (led2): (color)
+            (led1): (color)
+        - time: 0.3s
+          lights:
+            (led3): '000000'
+            (led2): (color)
+            (led1): (color)
+        - time: 0.4s
+          lights:
+            (led3): '000000'
+            (led2): '000000'
+            (led1): (color)
+        - time: 0.5s
+
+    traceThreeLedYellowRev:
+        - time: 0
+          lights:
+            (led3): 'ffff00'
+            (led2): '000000'
+            (led1): '000000'
+        - time: 0.1s
+          lights:
+            (led3): 'ffff00'
+            (led2): 'ffff00'
+            (led1): '000000'
+        - time: 0.2s
+          lights:
+            (led3): 'ffff00'
+            (led2): 'ffff00'
+            (led1): 'ffff00'
+        - time: 0.3s
+          lights:
+            (led3): '000000'
+            (led2): 'ffff00'
+            (led1): 'ffff00'
+        - time: 0.4s
+          lights:
+            (led3): '000000'
+            (led2): '000000'
+            (led1): 'ffff00'
+        - time: 0.5s
+
+    pulseThreeLedColor:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): (color)
+            (led3): '000000'
+        - time: 1s
+          lights:
+            (led1): (color)
+            (led2): (color)
+            (led3): (color)
+        - time: 3s
+          lights:
+            (led1): (color)
+            (led2): '000000'
+            (led3): (color)
+        - time: 4s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+        - time: 5s
+
+    pulseThreeLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color2)
+        - time: 0.2s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+        - time: 0.5s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+        - time: 0.7s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+        - time: 1.0s
+        
+    traceThreeLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+        - time: 1s
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+        - time: 2s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+        - time: 3s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+        - time: 4s
+        
+    chaseThreeLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+        - time: 0.25s
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color2)
+        - time: 0.50s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+        - time: 0.75s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+        - time: 1.0s
+        
+    triangleThreeLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+        - time: 0.33s
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color2)
+        - time: 0.66s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+        - time: 1.0s
+        
+    offThreeLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)%0
+            (led2): (color2)%0
+            (led3): (color2)%0
+        - time: 0.1s
+          lights:
+            (led1): (color1)%0
+            (led2): (color1)%0
+            (led3): (color1)%0
+        - time: 0.2s
+        
+    onThreeLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+        - time: 0.1s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+        - time: 0.2s
+        
+    glowLedColor:
+        - time: 0
+          lights:
+            (led): (color1)
+        - time: 0.2s
+          lights:
+            (led): (color2)
+        - time: 0.3s
+          lights:
+            (led): (color3)
+        - time: 0.4s
+          lights:
+            (led): (color4)
+        - time: 0.5s
+          lights:
+            (led): (color5)
+        - time: 0.7s
+          lights:
+            (led): (color4)
+        - time: 0.8s
+          lights:
+            (led): (color3)
+        - time: 0.9s
+          lights:
+            (led): (color2)
+        - time: 1.0s
+        
+    swirlFourLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+        - time: 1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color1)
+        - time: 3
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color2)
+        - time: 4
+        
+    flashFourLedEightColor:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color3)
+            (led4): (color4)
+        - time: 0.25s
+          lights:
+            (led1): (color5)
+            (led2): (color6)
+            (led3): (color7)
+            (led4): (color8)
+        - time: 0.5s
+        
+    traceSevenLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 1s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 2s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 3s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 4s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 5s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color1)
+        - time: 6s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+        - time: 7s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+        - time: 8s
+        
+    traceSixLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+        - time: 1s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+        - time: 2s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color1)
+        - time: 3s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color1)
+        - time: 4s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color2)
+            (led6): (color2)
+        - time: 5s
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color2)
+        - time: 6s
+        
+    rotateFiveLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+        - time: 1s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color2)
+            (led5): (color2)
+        - time: 2s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color2)
+        - time: 3s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color1)
+        - time: 4s
+        
+    # ----------------------
+    # USED FOR:
+    #   - BuckRogers - AttractPlayers
+    traceFiveLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+        - time: 1s
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+        - time: 2s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+        - time: 3s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+        - time: 4s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color1)
+        - time: 5s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+        - time: 6s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color2)
+            (led5): (color2)
+        - time: 7s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color2)
+        - time: 8s
+        
+    traceFourLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+        - time: 1s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+        - time: 2s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color1)
+        - time: 3s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+        - time: 4s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color2)
+        - time: 5s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color2)
+        - time: 6s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+        - time: 7s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+        - time: 8s
+    
+    traceEightFlashLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+        - time: "+1"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+        - time: "+1"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color1)
+            (led8): (color1)
+        - time: "+1"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+        - time: "+1"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+        - time: "+1"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+        - time: "+1"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color2)
+            (led8): (color2)
+        - time: "+1"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+        - time: "+1"
+
+    # ----------------------
+    # USED FOR:
+    #   - BallyViking - AttractBonus
+    chaseTenFlashLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color2)
+        - time: "+2"
+        
+    # ----------------------
+    # USED FOR:
+    #   - BuckRogers - AttractBonus
+    #   - BallyViking - AttractBonus
+    traceTenFlashLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color2)
+            (led10): (color2)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color2)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+        - time: "+2"
+
+    
+    # ----------------------
+    # USED FOR:
+    #   - BuckRogers - Award - Globe
+    traceFifteenLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color2)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color2)
+            (led10): (color2)
+            (led11): (color2)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color2)
+            (led11): (color2)
+            (led12): (color2)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color2)
+            (led12): (color2)
+            (led13): (color2)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color2)
+            (led13): (color2)
+            (led14): (color2)
+            (led15): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color2)
+            (led14): (color2)
+            (led15): (color2)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color2)
+            (led15): (color2)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color2)
+        - time: "+2"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+        - time: "+2"
+        
+    # ----------------------
+    # USED FOR:
+    #   - BuckRogers - Award - Globe
+    traceTwelveLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color2)
+            (led11): (color1)
+            (led12): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color2)
+            (led11): (color2)
+            (led12): (color1)
+        - time: "+2"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            (led8): (color2)
+            (led9): (color2)
+            (led10): (color2)
+            (led11): (color2)
+            (led12): (color2)
+        - time: "+2"
+        
+# **************************************
+# ACHIEVEMENT::GLOBE::SAUCER
+# **************************************
+    # --------------------------------------
+    # SELECTED::ACHIEVEMENT::GLOBE::SAUCER
+    # --------------------------------------
+    showWhenSelectedAchGlobeSaucer:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): (color1)
+            (led3): (color1)
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.167s
+          lights:
+            (led1): (color1)
+            (led2): '000000'
+            (led3): (color1)
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.33s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.5s
+          lights:
+            (led1): '000000'
+            (led2): (color1)
+            (led3): (color1)
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.667s
+          lights:
+            (led1): (color1)
+            (led2): '000000'
+            (led3): (color1)
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.833s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 1.0s
+        
+    # --------------------------------------
+    # STARTED::ACHIEVEMENT::GLOBE::SAUCER
+    # --------------------------------------
+    showWhenStartedAchGlobeSaucer:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.167s
+          lights:
+            (led1): (color1)
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.33s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.50s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.667s
+          lights:
+            (led1): '000000'
+            (led2): (color1)
+            (led3): (color1)
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.833s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): (color1)
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 1.0s
+        
+    # --------------------------------------
+    # STOPPED::ACHIEVEMENT::GLOBE::SAUCER
+    # --------------------------------------
+    showWhenStoppedAchGlobeSaucer:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.167s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.33s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.5s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.667s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.833s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 1.0s
+        
+    # --------------------------------------
+    # COMPLETED::ACHIEVEMENT::GLOBE::SAUCER
+    # --------------------------------------
+    showWhenCompletedAchGlobeSaucer:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color4)
+            (led5): (color3)
+            (led6): (color3)
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.167s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color3)
+            (led5): (color4)
+            (led6): (color3)
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.33s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color3)
+            (led5): (color3)
+            (led6): (color4)
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.5s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color4)
+            (led5): (color3)
+            (led6): (color3)
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.667s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color3)
+            (led5): (color4)
+            (led6): (color3)
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 0.833s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color3)
+            (led5): (color3)
+            (led6): (color4)
+            # --------------
+            # DUMMY BELOW
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color3)
+            (led10): (color4)
+            # ---------------
+        - time: 1.0s
+        

@@ -1,0 +1,140 @@
+#config_version=6
+
+mode:
+  start_events: eventStartModeMultiball
+  stop_events: eventStopModeMultiball
+  priority: 1000
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SAUCER::ADVANCE
+    # -------------------
+    shotSaucerMultiball:
+        enable_events: eventEnableShotSaucerMultiball
+        disable_events: eventDisableShotSaucerMultiball
+        restart_events: eventRestartShotSaucerMultiball
+        reset_events: eventResetShotSaucerMultiball
+        #advance_events: eventMultiballSaucerMultiball
+        hit_events: eventHitShotSaucerMultiball
+        profile: spShotSaucerMultiball
+        #show_tokens:
+        #    # ------------------------
+        #    led1: ledSaucer3k
+        #    led2: ledSaucer5k
+        #    led3: ledSaucer2X
+        #    led4: ledSaucer3X
+        #    led5: ledSaucer5X
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+# -----------------------------
+# SHOT PROFILES
+# -----------------------------
+    # -----------------------------
+    # PROFILE::SAUCER::MULTIBALL
+    # -----------------------------
+    spShotSaucerMultiball:
+        states:
+          - name: litFlash
+        loop: false
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # ---------------------
+  # MODE STARTED
+  # ---------------------
+  mode_modeMultiball_started:
+    # ENABLE / DISABLE
+    - eventEnableMultiballTwoBall
+    - eventEnableMultiballThreeBall
+    - eventEnableMultiballFourBall
+    - eventEnableMultiballFiveBall
+    - eventEnableMultiballSixBall
+    
+  # ---------------------
+  # MULTIBALL STARTED
+  # ---------------------
+  eventStartMultiballTwoBall:
+    - eventRestartShotSaucerMultiball
+  eventStartMultiballThreeBall:
+    - eventRestartShotSaucerMultiball
+  eventStartMultiballFourBall:
+    - eventRestartShotSaucerMultiball
+  eventStartMultiballFiveBall:
+    - eventRestartShotSaucerMultiball
+    
+  ## -------------------
+  ## EVENTS::SAUCER SHOT::HIT
+  ## -------------------
+  #ball_hold_ballHoldSaucerTop_held_ball:
+  #  # SAUCER MULTIBALL
+  #  - eventHitShotSaucerMultiball
+    
+  # ---------------------
+  # SAUCER HIT
+  # ---------------------
+  shotSaucerMultiball_litFlash_hit:
+    - eventReleaseBallHoldSaucerTop
+
+  # ---------------------
+  # MULTIBALL ENDED
+  # ---------------------
+  multiball_multiballTwoBall_ended:
+    - eventDisableShotSaucerMultiball
+    - eventEnableShotSaucerAdvance
+  multiball_multiballThreeBall_ended:
+    - eventDisableShotSaucerMultiball
+    - eventEnableShotSaucerAdvance
+  multiball_multiballFourBall_ended:
+    - eventDisableShotSaucerMultiball
+    - eventEnableShotSaucerAdvance
+  multiball_multiballFiveBall_ended:
+    - eventDisableShotSaucerMultiball
+    - eventEnableShotSaucerAdvance
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::BIG FOOT
+  # ----------------------------
+  multiballTwoBall:
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 20s
+    enable_events: eventEnableMultiballTwoBall
+    disable_events: eventDisableMultiballTwoBall
+    start_events: eventStartMultiballTwoBall
+    stop_events: eventStopMultiballTwoBall
+
+  # ----------------------------
+  # MULTIBALL::JOHN SAXON
+  # ----------------------------
+  multiballThreeBall:
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 20s
+    enable_events: eventEnableMultiballThreeBall
+    disable_events: eventDisableMultiballThreeBall
+    start_events: eventStartMultiballThreeBall
+    stop_events: eventStopMultiballThreeBall
+    
+  # ----------------------------
+  # MULTIBALL::7MDM
+  # ----------------------------
+  multiballFourBall:
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 20s
+    enable_events: eventEnableMultiballFourBall
+    disable_events: eventDisableMultiballFourBall
+    start_events: eventStartMultiballFourBall
+    stop_events: eventStopMultiballFourBall

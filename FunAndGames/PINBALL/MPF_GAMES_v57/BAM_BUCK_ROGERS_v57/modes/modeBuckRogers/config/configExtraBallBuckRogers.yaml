@@ -1,0 +1,239 @@
+#config_version=6
+
+# ---------------------
+# SHOTS
+# ---------------------
+shots:
+    shotAlphaExtraBallJupiterOne:
+        switch: s_rollover_rt
+        enable_events: extra_ball_extraBallJupiterOne_lit
+    shotBetaExtraBallJupiterOne:
+        switch: s_kicker_upper
+        enable_events: extra_ball_extraBallJupiterOne_lit
+    
+# ---------------------
+# SEQUENCE::SHOTS
+# ---------------------
+sequence_shots:
+    sequenceShotExtraBallJupiterOne:
+        event_sequence:
+        - shotAlphaExtraBallJupiterOne_hit
+        #- shotBetaExtraBallJupiterOne_hit
+        sequence_timeout: 5s
+
+
+# ---------------------
+# EXTRA::BALLS
+# ---------------------
+extra_balls:
+    extraBallJupiterOne:
+        light_events: eventLightExtraBallJupiterOne
+        award_events: eventAwardExtraBallJupiterOne
+        max_per_game: 1
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    sgDropRtJupiterOne_lit_complete:
+        eventLightExtraBallJupiterOne
+    
+    sequenceShotExtraBallJupiterOne_hit:
+        eventAwardExtraBallJupiterOne
+
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+  # ----------------------------
+  # LIGHT EXTRA BALL
+  # ----------------------------
+  eventLightExtraBallJupiterOne:
+    showLightExtraBallJupiterOne:
+      loops: -1
+      speed: 24
+      key: keyLightExtraBall
+
+  # ----------------------------
+  # AWARD EXTRA BALL
+  # ----------------------------
+  extra_ball_extraBallJupiterOne_awarded:
+    showAwardExtraBallJupiterOne:
+      loops: -1
+      speed: 8
+      key: keyAwardExtraBall
+
+    keyLightExtraBall:
+      action: stop
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  extra_ball_extraBallJupiterOne_lit:
+    slideLightExtraBallJupiterOne:
+      target: displayDMD
+      
+  extra_ball_extraBallJupiterOne_awarded:
+    slideAwardExtraBallJupiterOne:
+      target: displayDMD
+
+# ---------------------
+# SLIDE::EXTRA BALL::LIGHT
+# ---------------------
+slides:
+  slideLightExtraBallJupiterOne:
+    widgets:
+      # -------------------------------
+      # RED FORGROUND
+      # -------------------------------
+      - type: text
+        style: tall_title
+        font_size: 24
+        color: ff0000
+        text: Extra Ball Lit
+        y: middle
+        x: middle
+
+      # -------------------------------
+      # YELLOW BACKGROUND
+      # -------------------------------
+      - type: text
+        style: tall_title
+        font_size: 24
+        color: ffff00
+        text: Extra Ball Lit
+        y: middle-1
+        x: middle+1
+            
+      - type: text
+        style: tall_title
+        font_size: 24
+        color: ffff00
+        text: Extra Ball Lit
+        y: middle-1
+        x: middle-1
+
+      - type: text
+        style: tall_title
+        font_size: 24
+        color: ffff00
+        text: Extra Ball Lit
+        y: middle+1
+        x: middle+1
+
+      - type: text
+        style: tall_title
+        font_size: 24
+        color: ffff00
+        text: Extra Ball Lit
+        y: middle+1
+        x: middle-1
+
+      # -------------------------------
+    expire: 2.0s
+
+# ---------------------
+# SLIDE::EXTRA BALL::AWARD
+# ---------------------
+
+  slideAwardExtraBallJupiterOne:
+    widgets:
+      # BLUE FORGROUND
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: ff0000
+        text: Extra Ball!
+        y: middle
+        x: middle
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+      # -------------------------------
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: ffff00
+        text: Extra Ball!
+        y: middle-1
+        x: middle+1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: ffff00
+        text: Extra Ball!
+        y: middle-1
+        x: middle-1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: ffff00
+        text: Extra Ball!
+        y: middle+1
+        x: middle+1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: ffff00
+        text: Extra Ball!
+        y: middle+1
+        x: middle-1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      # -------------------------------
+    expire: 2.0s
+
+

@@ -1,0 +1,85 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  modeCarousel_year1965_highlighted:
+    slideYear1965:
+      target: displayDMD
+
+slides:
+  slideYear1965:
+    widgets:
+      # ---------------
+      # INNER
+      # ---------------
+      - type: text
+        text: "1965"
+        y: middle
+        x: middle
+        style: font1965
+        color: colorFontYear1960sThree
+        z: 20
+      # ---------------
+      # OUTER ONE
+      # ---------------
+      - type: text
+        text: "1965"
+        y: middle + 1
+        x: middle + 1
+        style: font1965
+        color: black
+        z: 15
+      - type: text
+        text: "1965"
+        y: middle - 1
+        x: middle + 1
+        style: font1965
+        color: black
+        z: 15
+      - type: text
+        text: "1965"
+        y: middle + 1
+        x: middle - 1
+        style: font1965
+        color: black
+        z: 15
+      - type: text
+        text: "1965"
+        y: middle - 1
+        x: middle - 1
+        style: font1965
+        color: black
+        z: 15
+      # ---------------
+      # OUTER TWO
+      # ---------------
+      - type: text
+        text: "1965"
+        y: middle + 2
+        x: middle + 2
+        style: font1965
+        color: colorFontYear1960sTwo
+        z: 10
+      - type: text
+        text: "1965"
+        y: middle - 2
+        x: middle + 2
+        style: font1965
+        color: colorFontYear1960sTwo
+        z: 10
+      - type: text
+        text: "1965"
+        y: middle + 2
+        x: middle - 2
+        style: font1965
+        color: colorFontYear1960sTwo
+        z: 10
+      - type: text
+        text: "1965"
+        y: middle - 2
+        x: middle - 2
+        style: font1965
+        color: colorFontYear1960sTwo
+        z: 10

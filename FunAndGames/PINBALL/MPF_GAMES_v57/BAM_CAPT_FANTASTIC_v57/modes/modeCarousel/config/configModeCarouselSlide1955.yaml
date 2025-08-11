@@ -1,0 +1,85 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  modeCarousel_year1955_highlighted:
+    slideYear1955:
+      target: displayDMD
+
+slides:
+  slideYear1955:
+    widgets:
+      # ---------------
+      # INNER
+      # ---------------
+      - type: text
+        text: "1955"
+        y: middle
+        x: middle
+        style: font1955
+        color: colorFontYear1950sOne
+        z: 20
+      # ---------------
+      # OUTER ONE
+      # ---------------
+      - type: text
+        text: "1955"
+        y: middle + 1
+        x: middle + 1
+        style: font1955
+        color: black
+        z: 15
+      - type: text
+        text: "1955"
+        y: middle - 1
+        x: middle + 1
+        style: font1955
+        color: black
+        z: 15
+      - type: text
+        text: "1955"
+        y: middle + 1
+        x: middle - 1
+        style: font1955
+        color: black
+        z: 15
+      - type: text
+        text: "1955"
+        y: middle - 1
+        x: middle - 1
+        style: font1955
+        color: black
+        z: 15
+      # ---------------
+      # OUTER TWO
+      # ---------------
+      - type: text
+        text: "1955"
+        y: middle + 2
+        x: middle + 2
+        style: font1955
+        color: colorFontYear1950sTwo
+        z: 10
+      - type: text
+        text: "1955"
+        y: middle - 2
+        x: middle + 2
+        style: font1955
+        color: colorFontYear1950sTwo
+        z: 10
+      - type: text
+        text: "1955"
+        y: middle + 2
+        x: middle - 2
+        style: font1955
+        color: colorFontYear1950sTwo
+        z: 10
+      - type: text
+        text: "1955"
+        y: middle - 2
+        x: middle - 2
+        style: font1955
+        color: colorFontYear1950sTwo
+        z: 10
