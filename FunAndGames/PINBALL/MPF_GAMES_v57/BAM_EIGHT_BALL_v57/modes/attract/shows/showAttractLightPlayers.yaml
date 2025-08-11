@@ -1,0 +1,93 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '800000'
+        led1: ledPlayersLeft1
+        led2: ledPlayersLeft2
+        led3: ledPlayersLeft3
+        led4: ledPlayersLeft4
+        led5: ledPlayersLeft5
+
+- time: "+2"
+
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '808000'
+        led1: ledPlayersLeft1
+        led2: ledPlayersLeft2
+        led3: ledPlayersLeft3
+        led4: ledPlayersLeft4
+        led5: ledPlayersLeft5
+
+- time: "+2"
+
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '008000'
+        led1: ledPlayersLeft1
+        led2: ledPlayersLeft2
+        led3: ledPlayersLeft3
+        led4: ledPlayersLeft4
+        led5: ledPlayersLeft5
+
+- time: "+2"
+
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '008080'
+        led1: ledPlayersLeft1
+        led2: ledPlayersLeft2
+        led3: ledPlayersLeft3
+        led4: ledPlayersLeft4
+        led5: ledPlayersLeft5
+
+- time: "+2"
+
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '000080'
+        led1: ledPlayersLeft1
+        led2: ledPlayersLeft2
+        led3: ledPlayersLeft3
+        led4: ledPlayersLeft4
+        led5: ledPlayersLeft5
+
+- time: "+2"
+
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '800080'
+        led1: ledPlayersLeft1
+        led2: ledPlayersLeft2
+        led3: ledPlayersLeft3
+        led4: ledPlayersLeft4
+        led5: ledPlayersLeft5
+
+- time: "+2"

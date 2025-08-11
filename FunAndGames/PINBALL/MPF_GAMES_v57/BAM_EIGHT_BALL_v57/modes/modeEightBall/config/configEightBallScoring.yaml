@@ -1,0 +1,83 @@
+#config_version=6
+
+# Globetrotters v2.01
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    # -------------------
+    # SHOTS::ADVANCE::BONUS
+    # -------------------
+    sgTargetPlayers_litFlash_hit:
+      - eventCompleteBonusOnes
+
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+
+  # ---------------
+  # SCORING::PLAYER::TARGETS
+  # ---------------
+  sgTargetPlayers_litFlash_hit:
+    score: 300
+  sgTargetPlayers_litSolid_hit:
+    score: 10
+  sgTargetPlayers_litSolid_complete:
+    score: 10000
+    
+  # ---------------
+  # SCORING::SLAM::DUNK
+  # ---------------
+  shotTargetSlamDunk_hit:
+    score: 300
+  eventScoreAchTargetSlamDunk5000Pts:
+    score: 5000
+
+  # ---------------
+  # SCORING::SPINNER
+  # ---------------
+  shotSpinnerMiddle_hit:
+    score: 1
+    
+  shotSpinnerRight_hit:
+    score: 1
+
+  # ---------------
+  # GLOBE::SAUCER
+  # ---------------
+  eventCompletedAchGlobeSaucer:
+    score: 3000
+
+  eventAgAchGlobeAwardCompleted:
+    #score: 50000
+    # THIS EVENT IS POSTED TWICE FOR SOME REASON
+    # CAN'T FIGURE OUT, SO CUTTING POINTS IN HALF
+    score: 25000
+    
+  # ---------------
+  # SCORING::RIGHT::RETURN::LANE
+  # ---------------
+  shotRightReturnLane_hit:
+    score: 300
+    #totalBonus: 3
+    totalBonus: 1
+    
+  # ---------------
+  # SCORING::RIGHT::OUTLANE
+  # ---------------
+  shotRightOutlane_spRightOutlane_litChasePink_hit:
+    score: 3000
+
+  shotRightOutlane_spRightOutlane_unlitSolid_hit:
+    score: 1000
+
+  # ---------------
+  # SCORING::LEFT::OUTLANE
+  # ---------------
+  shotLeftOutlane_spLeftOutlane_litTriangleCyan_hit:
+    score: 25000

@@ -1,0 +1,33 @@
+#show_version=6
+
+- time: 0
+  events:
+    - eventPauseTrackPlaylist
+
+- time: '+1'
+  events:
+    - presentSlideVideoLayout
+    
+- time: '+1'
+  slides:
+    slideVideoGlobetrotters_Clip2:
+      target: displayVideoDMD
+      widgets:
+      - type: video
+        video: videoGlobetrotters_Clip2
+        auto_play: True
+        volume: 1.0
+        z: 200
+
+# THIS TIME IS VIDEO MINUS 2
+- time: '+16'
+  events:
+    - eventResumeTrackPlaylist
+
+- time: '+2'
+  events:
+    #- releaseBallHoldSaucerTop
+    - releaseBallLockKickerRight
+    - removeSlideVideoLayout
+              
+- time: '+1'
