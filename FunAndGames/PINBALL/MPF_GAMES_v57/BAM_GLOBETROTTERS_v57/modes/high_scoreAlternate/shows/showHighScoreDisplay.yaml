@@ -1,0 +1,548 @@
+#show_version=6
+
+- time: 0
+  slides:
+    showAttractDisplay_slide_1:
+      widgets:
+      - type: text
+        text: Jupiter
+        y: top-20
+        x: middle
+        style: fontJupiterCrush
+        font_size: 24
+        color: ff00ff
+        z: 20
+      - type: text
+        style: fontJupiterCrush
+        text: Crush
+        y: middle+3
+        x: middle
+        font_size: 32
+        color: ff00ff
+        #color: red
+        z: 20
+      - type: rectangle
+        color: '00ffff'
+        #width: 150
+        #height: 50
+        width: 171
+        height: 96
+        x: left+0
+        y: top+0
+        z: 10
+        anchor_x: left
+        anchor_y: top
+      #transition:
+      #  type: move_out
+      #  duration: 1s
+      #  direction: left
+
+- time: '+4'
+  slides:
+    showAttractDisplay_slide_1D:
+      widgets:
+      # RED HIGH SCORE TEXT
+      - type: text
+        style: tall_title
+        text: (machine|high_score)
+        color: red
+        x: middle
+        y: middle
+        z: 20
+      # BLACK BACKDROP
+      - type: text
+        style: tall_title
+        text: (machine|high_score)
+        color: black
+        x: middle+1
+        y: middle+1
+        z: 18
+      - type: text
+        style: tall_title
+        text: (machine|high_score)
+        color: black
+        x: middle-1
+        y: middle+1
+        z: 18
+      - type: text
+        style: tall_title
+        text: (machine|high_score)
+        color: black
+        x: middle+1
+        y: middle-1
+        z: 18
+      - type: text
+        style: tall_title
+        text: (machine|high_score)
+        color: black
+        x: middle-1
+        y: middle-1
+        z: 18
+      - type: text
+        text: HIGH SCORE
+        style: tall_title
+        color: red
+        x: middle
+        y: 7
+        z: 20
+      - type: rectangle
+        color: yellow
+        #width: 150
+        #height: 50
+        width: 171
+        height: 96
+        x: left+0
+        y: top+0
+        z: 5
+        anchor_x: left
+        anchor_y: top
+      #transition:
+      #  type: move_out
+      #  duration: 1s
+      #  direction: left
+
+- time: '+6'
+  slides:
+    showAttractDisplay_slide_1B:
+      widgets:
+      - type: Text
+        text: (machine|player1_score)
+        number_grouping: true
+        style: tall_title
+        x: middle
+        y: middle
+        color: 'ffff00'
+        z: 30
+      - type: text
+        text: PLAYER 1
+        style: tall_title
+        color: 'ffff00'
+        x: middle
+        y: 7
+        z: 30
+      - type: rectangle
+        color: '8000ff'
+        #width: 150
+        #height: 50
+        width: 166
+        height: 90
+        x: 85
+        y: 48
+        z: 3
+      - type: rectangle
+        color: '000000'
+        #width: 146
+        #height: 46
+        #width: 150
+        #height: 50
+        width: 162
+        height: 86
+        x: 85
+        y: 48
+        z: 5
+      #transition:
+      #  type: move_in
+      #  duration: 1s
+      #  direction: left
+
+- time: '+8'
+  slides:
+    showAttractDisplay_slide_1C:
+      widgets:
+      - type: Text
+        text: (machine|player2_score)
+        number_grouping: true
+        style: tall_title
+        x: middle
+        y: middle
+        color: 'ffff00'
+        z: 30
+      - type: text
+        text: PLAYER 2
+        style: tall_title
+        color: 'ffff00'
+        x: middle
+        y: 7
+        z: 30
+      - type: rectangle
+        color: 'ff8000'
+        width: 150
+        height: 50
+        x: 75
+        y: 25
+        z: 3
+      - type: rectangle
+        color: '000000'
+        width: 146
+        height: 46
+        x: 75
+        y: 25
+        z: 5
+      #transition:
+      #  type: move_in
+      #  duration: 1s
+      #  direction: left
+          
+- time: '+8'
+  slides:
+    showAttractDisplay_slide_1a:
+      widgets:
+      - type: rectangle
+        color: black
+        width: 150
+        height: 50
+        x: left+0
+        y: top+0
+        z: 5
+        anchor_x: left
+        anchor_y: top
+      #transition:
+      #  type: move_in
+      #  duration: 1s
+      #  direction: bottom
+      
+- time: '+5'
+
+
+# ----------------------
+# ----------------------
+
+
+#
+##- time: '+8'
+#  #sounds: gong1
+#  #events:
+#  #  requestSoundGong
+#  slides:
+#    showAttractDisplay_slide_2:
+#      widgets:
+#      - type: image
+#        image: gypsyPur
+#        z: 20
+#      #- type: text
+#      #  text: TEXT UNDER IMAGE
+#      #  color: lime
+#      #  z: 1
+#        #brightness: 8
+#      transition:
+#        type: move_in
+#        direction: bottom
+#
+#- time: '+8'
+#  sounds: tiger1
+#  
+#  slides:
+#    showAttractDisplay_slide_3:
+#      widgets:
+#      - type: image
+#        image: tigerGrnSm
+#        z: 20
+#      transition:
+#        type: move_in
+#        direction: right
+#
+#- time: '+6'      
+##- time: '+4'
+#
+#  slides:
+#    showAttractDisplay_slide_4:
+#      widgets:
+#      - type: image
+#        image: magentaFrame
+#        z: 5
+#      transition:
+#        type: move_out
+#        direction: top
+#- time: '+2'
+##- time: '+36'
+#  #events:
+#  #  requestSoundMermaidPinup
+#  slides:
+#    showAttractDisplay_slide_5:
+#      widgets:
+#      - type: video
+#        video: DMD_Mermary
+#        z: 30
+#        control_events: 
+#          - event: pre_show_slide
+#            action: seek 
+#            value: 0.0
+#          - event: pre_show_slide
+#            action: play
+#      - type: image
+#        image: magentaFrame
+#        z: 5
+#
+#  sounds: MermaidPinup1
+#  
+#- time: '+36'
+##- time: '+36'
+#  #events:
+#  #  requestSoundPinupMermaid
+#  slides:
+#    showAttractDisplay_slide_6:
+#      widgets:
+#      - type: video
+#        video: DMD_Pinup
+#        z: 30
+#        control_events: 
+#          - event: pre_show_slide
+#            action: seek 
+#            value: 0.0
+#          - event: pre_show_slide
+#            action: play
+#      - type: image
+#        image: magentaFrame
+#        z: 5
+#        #loop: false
+#      transition:
+#        type: move_in
+#        direction: bottom
+#
+#  sounds: PinupMermaid1
+#  
+#- time: '+36'      
+##- time: '+4'
+#  slides:
+#    showAttractDisplay_slide_7:
+#      widgets:
+#      - type: image
+#        image: magentaFrame
+#        z: 20
+#      transition:
+#        type: move_in
+#        direction: bottom
+#- time: '+4'
+##- time: '+8'
+#  #events:
+#    #playWhatWillYourFortuneBe
+#  #  requestWhatWillYourFortuneBe
+#  slides:
+#    showAttractDisplay_slide_8:
+#      widgets:
+#      - type: text
+#        style: tall_title
+#        text: PRESS START
+#        color: lime
+#        z: 20
+#      - type: text
+#        text: FREE PLAY
+#        color: blue
+#        anchor_y: bottom
+#        style: small
+#        y: bottom
+#        z: 20
+#      - type: rectangle
+#        color: black
+#        width: 150
+#        height: 50
+#        x: left+0
+#        y: top+0
+#        z: 5
+#        anchor_x: left
+#        anchor_y: top
+#      transition:
+#        type: move_in
+#        #duration: 1s
+#        direction: right
+#
+#  sounds: WhatWillYourFortuneBe
+#  
+#- time: '+8'      
+##- time: '+12'
+#  slides:
+#    showAttractDisplay_slide_9:
+#      widgets:
+#      - type: text
+#        style: tall_title
+#        text: TATTOO MYSTIQUE
+#        color: red
+#        z: 20
+#      - type: rectangle
+#        color: yellow
+#        width: 150
+#        height: 50
+#        x: left+0
+#        y: top+0
+#        z: 5
+#        anchor_x: left
+#        anchor_y: top
+#      transition:
+#        type: move_out
+#        duration: 1s
+#        direction: left
+#        
+#
+#- time: '+4'
+#  slides:
+#    showAttractDisplay_slide_9D:
+#      widgets:
+#      - type: text
+#        style: tall_title
+#        text: (machine|high_score)
+#        #text: TATTOO HIGH
+#        color: red
+#        x: middle
+#        y: middle
+#        z: 20
+#      # BLACK BACKDROP
+#      - type: text
+#        style: tall_title
+#        text: (machine|high_score)
+#        color: black
+#        x: middle+1
+#        y: middle+1
+#        z: 18
+#      - type: text
+#        style: tall_title
+#        text: (machine|high_score)
+#        color: black
+#        x: middle-1
+#        y: middle+1
+#        z: 18
+#      - type: text
+#        style: tall_title
+#        text: (machine|high_score)
+#        color: black
+#        x: middle+1
+#        y: middle-1
+#        z: 18
+#      - type: text
+#        style: tall_title
+#        text: (machine|high_score)
+#        color: black
+#        x: middle-1
+#        y: middle-1
+#        z: 18
+#      - type: text
+#        text: HIGH SCORE
+#        style: tall_title
+#        color: red
+#        x: middle
+#        y: 7
+#        z: 20
+#      - type: rectangle
+#        color: yellow
+#        width: 150
+#        height: 50
+#        x: left+0
+#        y: top+0
+#        z: 5
+#        anchor_x: left
+#        anchor_y: top
+#      transition:
+#        type: move_out
+#        duration: 1s
+#        direction: left
+#
+#- time: '+6'
+#  slides:
+#    showAttractDisplay_slide_9B:
+#      widgets:
+#      - type: Text
+#        text: (machine|player1_score)
+#        number_grouping: true
+#        style: tall_title
+#        x: middle
+#        y: middle
+#        color: 'ffff00'
+#        z: 30
+#      - type: text
+#        text: PLAYER 1
+#        style: tall_title
+#        color: 'ffff00'
+#        x: middle
+#        y: 7
+#        z: 30
+#      - type: rectangle
+#        color: '8000ff'
+#        width: 150
+#        height: 50
+#        x: 75
+#        y: 25
+#        z: 3
+#      - type: rectangle
+#        color: '000000'
+#        width: 146
+#        height: 46
+#        x: 75
+#        y: 25
+#        z: 5
+#      transition:
+#        type: move_in
+#        duration: 1s
+#        direction: left
+#
+#- time: '+8'
+#  slides:
+#    showAttractDisplay_slide_9C:
+#      widgets:
+#      - type: Text
+#        text: (machine|player2_score)
+#        number_grouping: true
+#        style: tall_title
+#        x: middle
+#        y: middle
+#        color: 'ffff00'
+#        z: 30
+#      - type: text
+#        text: PLAYER 2
+#        style: tall_title
+#        color: 'ffff00'
+#        x: middle
+#        y: 7
+#        z: 30
+#      - type: rectangle
+#        color: 'ff8000'
+#        width: 150
+#        height: 50
+#        x: 75
+#        y: 25
+#        z: 3
+#      - type: rectangle
+#        color: '000000'
+#        width: 146
+#        height: 46
+#        x: 75
+#        y: 25
+#        z: 5
+#      transition:
+#        type: move_in
+#        duration: 1s
+#        direction: left
+#
+#- time: '+8'
+#  slides:
+#    showAttractDisplay_slide_10:
+#      widgets:    
+#      - type: video
+#        video: DMD_Fortune
+#        z: 30
+#        control_events: 
+#          - event: pre_show_slide
+#            action: seek 
+#            value: 0.0
+#          - event: pre_show_slide
+#            action: play
+#      expire: 100s
+#- time: '+2' 
+#  sounds: TattooMystique4
+#    
+#- time: '+72'   
+#  events: eventFortuneFavors
+#  
+#- time: '+14'     
+##- time: '+8'
+#  slides:
+#    showAttractDisplay_slide_11:
+#      widgets:
+#      - type: text
+#        style: tall_title
+#        text: PRESS START
+#        color: white
+#        z: 20
+#      transition:
+#        type: move_in
+#        duration: 1s
+#        direction: right
+#- time: '+8'

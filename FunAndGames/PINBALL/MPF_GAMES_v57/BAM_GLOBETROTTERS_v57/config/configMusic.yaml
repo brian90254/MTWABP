@@ -1,0 +1,412 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:
+# ---------------------
+# SOUNDS::AMBIENCE::BALLY VIKINGS
+# ---------------------
+  #musicAmbienceBallyViking001:
+  #  file: soundBallyViking_Ambiance_001.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::ATTRACT
+# ---------------------
+  #musicJupiterOneAttract:
+  #  file: JupiterCrush_Track_1_JupiterOne.wav
+  #  track: music
+  #  volume: 0.5
+  #  mode_end_action: stop
+  #  
+  #musicEuropaAttract:
+  #  file: JupiterCrush_Track_2_Europa.wav
+  #  track: music
+  #  volume: 0.5
+  #  mode_end_action: stop
+  #  
+  #musicGanymedeAttract:
+  #  file: JupiterCrush_Track_3_Ganymede.wav
+  #  track: music
+  #  volume: 0.5
+  #  mode_end_action: stop
+  #  
+  #musicCallistoAttract:
+  #  file: JupiterCrush_Track_4_Callisto.wav
+  #  track: music
+  #  volume: 0.5
+  #  mode_end_action: stop
+
+# ---------------------
+# SOUNDS::MUSIC::BALLY STRIKES AND SPARES
+# ---------------------
+  musicGlobetrotters001:
+    file: musicGlobetrottersTheme_Globetrottin.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicGlobetrotters002:
+    file: musicGlobetrottersTheme_Gravy.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicGlobetrotters003:
+    file: musicGlobetrottersTheme_BouncinAllOverTheWorld.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicGlobetrotters004:
+    file: musicGlobetrottersTheme_HouseParty.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicGlobetrotters005:
+    file: musicGlobetrottersTheme_Meadowlark.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicGlobetrotters006:
+    file: musicGlobetrottersTheme_SweetGeorgiaBrown_1.wav
+    track: music
+    volume: 1.0
+    mode_end_action: stop
+    
+  musicGlobetrotters007:
+    file: musicGlobetrottersTheme_Cartoon_0.wav
+    track: music
+    volume: 0.4
+    mode_end_action: stop
+
+  musicGlobetrotters008:
+    file: musicGlobetrottersTheme_KurtisBlow.wav
+    track: music
+    volume: 1.0
+    mode_end_action: stop
+    
+  #musicGlobetrotters009:
+  #  file: musicBowlingTheme_CVBTakeTheSkinheadsBowling.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+    
+  musicGlobetrotters010:
+    file: musicGlobetrottersTheme_ChicagoBulls.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  #musicGlobetrotters011:
+  #  file: musicBowlingTheme_TelefoneBowlingSong.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+
+  musicGlobetrotters012:
+    file: Globetrotters_Loop_8_Ambience.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+# ---------------------
+# SOUNDS::AMBIENCE::GLOBETROTTERS
+# ---------------------
+
+  musicAmbienceGlobetrotters001:
+    file: soundGlobetrotters_Ambience_1.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicAmbienceGlobetrotters002:
+    file: soundGlobetrotters_Ambience_2.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicAmbienceGlobetrotters003:
+    file: soundGlobetrotters_Ambience_3.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicAmbienceGlobetrotters004:
+    file: soundGlobetrotters_Ambience_4.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicAmbienceGlobetrotters005:
+    file: soundGlobetrotters_Ambience_Combined.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::JUPITER ONE
+# ---------------------
+  #musicJupiterOne001:
+  #  file: JupiterOne_Loop_1_Sweet.wav
+  #  track: music
+  #  volume: 0.15
+  #  mode_end_action: stop
+  #  
+  #musicJupiterOne002:
+  #  file: JupiterOne_Loop_2_Shield.wav
+  #  track: music
+  #  volume: 0.45
+  #  mode_end_action: stop
+  #  
+  #musicJupiterOne003:
+  #  file: JupiterOne_Loop_3_Pressure.wav
+  #  track: music
+  #  volume: 0.2
+  #  mode_end_action: stop
+  #  
+  #musicJupiterOne004:
+  #  file: JupiterOne_Loop_4_Space.wav
+  #  track: music
+  #  volume: 0.5
+  #  mode_end_action: stop
+  #  
+  #musicJupiterOne005:
+  #  file: JupiterOne_Loop_5_Son.wav
+  #  track: music
+  #  volume: 0.45
+  #  mode_end_action: stop
+  #  
+  #musicJupiterOne006:
+  #  file: JupiterOne_Loop_6_Gonzagues.wav
+  #  track: music
+  #  volume: 0.45
+  #  mode_end_action: stop
+  #  
+  #musicJupiterOne007:
+  #  file: JupiterOne_Loop_7_Obsbertis.wav
+  #  track: music
+  #  volume: 0.2
+  #  mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::EUROPA
+# ---------------------
+  #musicEuropa001:
+  #  file: Europa_Loop_1_Arcanes.wav
+  #  track: music
+  #  volume: 0.15
+  #  mode_end_action: stop
+  #  
+  #musicEuropa002:
+  #  file: Europa_Loop_2_HardTrap.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+  #  
+  #musicEuropa003:
+  #  file: Europa_Loop_3_Interstellar.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+  #  
+  #musicEuropa004:
+  #  file: Europa_Loop_4_Tokyo.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+  #  
+  #musicEuropa005:
+  #  file: Europa_Loop_5_SpaceMelody.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+  #  
+  #musicEuropa006:
+  #  file: Europa_Loop_6_ShiraSynth.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+  #  
+  #musicEuropa007:
+  #  file: Europa_Loop_7_WavyRhodes.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::GANYMEDE
+# ---------------------
+  #musicGanymede001:
+  #  file: Ganymede_Loop_1_RetroGame.wav
+  #  track: music
+  #  volume: 0.15
+  #  mode_end_action: stop
+  #  
+  #musicGanymede002:
+  #  file: Ganymede_Loop_2_GangstaBells.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+  #  
+  #musicGanymede003:
+  #  file: Ganymede_Loop_3_RetroDice.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+  #  
+  #musicGanymede004:
+  #  file: Ganymede_Loop_4_SquareLead.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+  #  
+  #musicGanymede005:
+  #  file: Ganymede_Loop_5_SynthBass.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+  #  
+  #musicGanymede006:
+  #  file: Ganymede_Loop_6_Organized.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+  #  
+  #musicGanymede007:
+  #  file: Ganymede_Loop_7_LikeaStar.wav
+  #  track: music
+  #  volume: 0.40
+  #  mode_end_action: stop
+  #  
+# ---------------------
+# SOUNDS::MUSIC::CALLISTO
+# ---------------------
+  #musicCallisto001:
+  #  file: Callisto_Loop_1_PowerUnsolvable.wav
+  #  track: music
+  #  volume: 0.15
+  #  mode_end_action: stop
+  #  
+  #musicCallisto002:
+  #  file: Callisto_Loop_2_SynthCriz.wav
+  #  track: music
+  #  volume: 0.15
+  #  mode_end_action: stop
+  #  
+  #musicCallisto003:
+  #  file: Callisto_Loop_3_HxcBass.wav
+  #  track: music
+  #  volume: 0.15
+  #  mode_end_action: stop
+  #  
+  #musicCallisto004:
+  #  file: Callisto_Loop_4_Ukan8bit.wav
+  #  track: music
+  #  volume: 0.15
+  #  mode_end_action: stop
+  #  
+  #musicCallisto005:
+  #  file: Callisto_Loop_5_Leese8bit.wav
+  #  track: music
+  #  volume: 0.15
+  #  mode_end_action: stop
+  #  
+  #musicCallisto006:
+  #  file: Callisto_Loop_6_JapaneseTrap.wav
+  #  track: music
+  #  volume: 0.15
+  #  mode_end_action: stop
+  #  
+  #musicCallisto007:
+  #  file: Callisto_Loop_7_AdArp.wav
+  #  track: music
+  #  volume: 0.15
+  #  mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicGlobetrotters007
+
+  poolMusicBaseMode:
+    track: music
+    type: random_force_next
+    volume: 0.80
+    sounds:
+      - musicGlobetrotters001
+      - musicGlobetrotters002
+      - musicGlobetrotters003
+      - musicGlobetrotters004
+      - musicGlobetrotters005
+      - musicGlobetrotters006
+      #- musicGlobetrotters007
+      - musicGlobetrotters008
+      #- musicGlobetrotters009
+      - musicGlobetrotters010
+
+  poolMusicAmbienceGlobetrotters:
+    track: music
+    #type: random_force_all
+    type: random_force_next
+    volume: 0.40
+    sounds:
+      - musicAmbienceGlobetrotters001
+      - musicAmbienceGlobetrotters002
+      - musicAmbienceGlobetrotters003
+      - musicAmbienceGlobetrotters004
+      
+# ---------------------
+# MUSIC::PLAYLISTS
+# ---------------------
+playlists:
+  playlistModeGlobetrottersMusic:
+    shuffle: true
+    repeat: true
+    crossfade_mode: override
+    crossfade_time: 3s
+    sounds:
+      - musicGlobetrotters001
+      - musicGlobetrotters002
+      - musicGlobetrotters003
+      - musicGlobetrotters004
+      #- musicGlobetrotters005
+      - musicGlobetrotters006
+      #- musicGlobetrotters007
+      - musicGlobetrotters008
+      #- musicGlobetrotters009
+      - musicGlobetrotters010
+
+  playlistHighScore:
+    shuffle: true
+    repeat: false
+    crossfade_mode: override
+    crossfade_time: 5s
+    sounds:
+      - soundHighScore001
+      - soundHighScore002
+      - soundHighScore003
+      - soundHighScore004
+      
+  #playlistHighScore:
+  #  shuffle: true
+  #  repeat: true
+  #  crossfade_mode: override
+  #  crossfade_time: 5s
+  #  sounds:
+  #    - soundHighScore001
+  #    - soundHighScore002
+  #    - soundHighScore003
+  #    - soundHighScore004

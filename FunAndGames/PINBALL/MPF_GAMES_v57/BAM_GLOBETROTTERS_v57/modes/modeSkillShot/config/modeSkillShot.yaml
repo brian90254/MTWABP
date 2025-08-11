@@ -1,0 +1,478 @@
+#config_version=6
+
+mode:
+  start_events: eventStartModeSkillShot
+  stop_events: eventStopModeSkillShot
+  priority: 10000
+
+# ---------------------
+# EVENT::PLAYER::RANDOM
+# ---------------------
+random_event_player:
+  mode_modeSkillShot_started:
+    events:
+      #- eventEnableSkillShotAlpha
+      #- eventEnableSkillShotBeta
+      - eventSelectSkillShotBeta
+      #- startModeEuropa
+      #- startModeGanymede
+      #- startModeCallisto
+
+    force_all: true
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+# ---------------------
+# EVENT::SKILL SHOT
+# ---------------------
+  # ---------------------
+  # EVENT::SKILL SHOT::STARTED
+  # ---------------------
+  balldevice_plunger_lane_ball_eject_success:
+    eventStartSkillShotTimer
+
+  # ---------------------
+  # EVENT::SKILL SHOT::STOPPED
+  # ---------------------
+  timer_timerSkillShot_complete:
+    - eventResetSkillShotBeta
+    - eventStopModeSkillShot|3s
+
+
+# ---------------------
+# EVENT::ALPHA
+# ---------------------
+  # ---------------------
+  # STARTED
+  # ---------------------
+  eventEnableSkillShotAlpha:
+    playLightShowSkillShotAlpha
+
+  # ---------------------
+  # HIT
+  # ---------------------
+  sequenceShotSkillShotAlpha_hit:
+    eventSkillShotAlphaMade|1s
+
+  eventSkillShotAlphaMade:
+    - eventStopModeSkillShot|3s
+    - playSlideSkillShotAlphaMade
+
+# ---------------------
+# EVENT::BETA
+# ---------------------
+  # ---------------------
+  # SELECTED
+  # ---------------------
+  eventSelectSkillShotBeta:
+    - eventEnableSkillShotBeta
+    - eventResetSkillShotBeta
+    - playLightShowSkillShotBeta
+    - eventAdvanceShotProfileSkillShotBeta|1s
+  # ---------------------
+  # STARTED
+  # ---------------------
+  #eventEnableSkillShotBeta:
+  #  - playLightShowSkillShotBeta
+  #  - eventAdvanceShotProfileSkillShotBeta|1s
+
+  # ---------------------
+  # HIT
+  # ---------------------
+  sgDropLfSkillShotBeta_LitFlash_hit:
+    - eventSkillShotBetaMade|1s
+    - eventStopTimerSkillShotBeta
+
+  eventSkillShotBetaMade:
+    - playSlideSkillShotBetaMade
+    - eventResetSkillShotBeta|3s
+    - eventStopModeSkillShot|4s
+    
+  # ---------------------
+  # MISSED
+  # ---------------------
+  sgDropLfSkillShotBeta_LitSolid_hit:
+    - eventResetSkillShotBeta
+    - eventStopModeSkillShot|1s
+    # ADDED 190121
+    - eventStopTimerSkillShotBeta
+
+  ## ---------------------
+  ## RESET ON MODE SWITCH
+  ## ---------------------
+  #mode_modeMoonJupiterOne_started:
+  #  - eventResetSkillShotAlpha
+  #  - eventResetSkillShotBeta
+  #
+  #mode_modeMoonEuropa_started:
+  #  - eventResetSkillShotAlpha
+  #  - eventResetSkillShotBeta
+  #  
+  #mode_modeMoonGanymede_started:
+  #  - eventResetSkillShotAlpha
+  #  - eventResetSkillShotBeta
+  #  
+  #mode_modeMoonCallisto_started:
+  #  - eventResetSkillShotAlpha
+  #  - eventResetSkillShotBeta
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+  # ---------------
+  # SCORING::SKILL SHOT
+  # ---------------
+  eventSkillShotAlphaMade:
+    score: 10000 * current_player.multiMode
+
+  eventSkillShotBetaMade:
+    score: 10000 * current_player.multiMode
+
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------
+  timer_timerSkillShot_complete:
+    lightShowSkillShotAlpha:
+      action: stop
+    lightShowSkillShotBeta:
+      action: stop
+
+  # ---------------------
+  # SHOW::ALPHA
+  # ---------------------
+  playLightShowSkillShotAlpha:
+    lightShowSkillShotAlpha:
+      loops: -1
+      speed: 9
+      priority: 100
+
+  eventSkillShotAlphaMade:
+    lightShowSkillShotAlpha:
+      action: stop
+      
+  #timer_timerSkillShot_complete:
+  #  lightShowSkillShotAlpha:
+  #    action: stop
+
+  # ---------------------
+  # SHOW::BETA
+  # ---------------------
+  playLightShowSkillShotBeta:
+    lightShowSkillShotBeta:
+      loops: -1
+      speed: 12
+      priority: 100
+
+  eventSkillShotBetaMade:
+    lightShowSkillShotBeta:
+      action: stop
+      
+  #timer_timerSkillShot_complete:
+  #  lightShowSkillShotAlpha:
+  #    action: stop
+  
+# ---------------------
+# SHOT::PROFILES
+# ---------------------
+shot_profiles:
+  # ---------------------
+  # SHOT::PROFILES::ALPHA
+  # ---------------------
+  spSkillShotAlpha:
+    states:
+      - name: litReady
+      - name: litSolid
+    loop: false
+    
+  spDropLf123SkillShotBeta:
+    states:
+    - name: litSolid
+      show: onThreeLedThreeColor
+      show_tokens:
+        color1: '0000ff'
+        color2: '0000ff'
+        color3: '0000ff'
+    - name: litFlash
+      show: traceThreeLedColorRev
+      speed: 1
+      show_tokens:
+        color: 'ff0000'
+    - name: hitSolid
+      show: traceThreeLedColorRev
+      speed: 1
+      show_tokens:
+        color: '00ff00'
+    loop: false
+        
+# ---------------------
+# SHOTS
+# ---------------------
+shots:
+# ---------------------
+# SHOTS::ALPHA
+# ---------------------
+  shotSkillShotAlpha:
+    switch: s_kicker_upper
+    enable_events: eventEnableSkillShotAlpha
+    disable_events: timer_timerSkillShot_complete
+    profile:
+      spSkillShotAlpha
+
+# ---------------------
+# SHOTS::BETA
+# ---------------------
+  # -------------------
+  # BETA::LEFT DROP ONE
+  # -------------------
+  shotDropLf1SkillShotBeta:
+    switch: s_drop_lf_1
+    profile:
+      spDropLf123SkillShotBeta
+    show_tokens:
+      led1: l_drop_lf_1_3
+      led2: l_drop_lf_1_2
+      led3: l_drop_lf_1_1
+    advance_events: eventAdvanceShotProfileSkillShotBeta
+    enable_events: eventEnableSkillShotBeta
+    disable_events:
+    #  - eventResetSkillShotBeta
+      - eventDisableSkillShotBeta
+      - eventStopModeSkillShot
+    reset_events:
+      - eventResetSkillShotBeta
+      - eventStopModeSkillShot
+  # -------------------
+  # BETA::LEFT DROP TWO
+  # -------------------
+  shotDropLf2SkillShotBeta:
+    switch: s_drop_lf_2
+    profile:
+      spDropLf123SkillShotBeta
+    show_tokens:
+      led1: l_drop_lf_2_3
+      led2: l_drop_lf_2_2
+      led3: l_drop_lf_2_1
+    enable_events: eventEnableSkillShotBeta
+    disable_events:
+    #  - eventResetSkillShotBeta
+      - eventDisableSkillShotBeta
+      - eventStopModeSkillShot
+    reset_events:
+      - eventResetSkillShotBeta
+      - eventStopModeSkillShot
+  # -------------------
+  # BETA::LEFT DROP THREE
+  # -------------------
+  shotDropLf3SkillShotBeta:
+    switch: s_drop_lf_3
+    profile:
+      spDropLf123SkillShotBeta
+    show_tokens:
+      led1: l_drop_lf_3_3
+      led2: l_drop_lf_3_2
+      led3: l_drop_lf_3_1
+    enable_events: eventEnableSkillShotBeta
+    disable_events:
+    #  - eventResetSkillShotBeta
+      - eventDisableSkillShotBeta
+      - eventStopModeSkillShot
+    reset_events:
+      - eventResetSkillShotBeta
+      - eventStopModeSkillShot
+          
+# ---------------------
+# SEQUENCE::SHOTS
+# ---------------------
+sequence_shots:
+  # ---------------------
+  # ALPHA
+  # ---------------------
+  sequenceShotSkillShotAlpha:
+    event_sequence:
+      - s_rollover_lf_1_active
+      - s_rollover_lf_2_active
+      - shotSkillShotAlpha_spSkillShotAlpha_hit
+    sequence_timeout: 6s
+
+
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+  # -------------------
+  # SHOTGROUP::DROP::LEFT
+  # -------------------
+  sgDropLfSkillShotBeta:
+    shots:
+      - shotDropLf1SkillShotBeta
+      - shotDropLf2SkillShotBeta
+      - shotDropLf3SkillShotBeta
+    #rotate_left_events: timer_timerSkillShotBeta_complete
+    rotate_right_events: timer_timerSkillShotBeta_complete
+    #reset_events:
+      #eventEnableSkillShotBeta
+    enable_events:
+      eventEnableSkillShotBeta
+    disable_events:
+      - eventStopModeSkillShot
+      - sgDropLfSkillShotBeta_LitFlash_hit
+        
+# ---------------------
+# TIMERS
+# ---------------------
+timers:
+  # ---------------------
+  # TIMERS::MODE
+  # ---------------------
+  timerSkillShot:
+    start_value: 5
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: no
+    control_events:
+      - event: eventStartSkillShotTimer
+        action: start
+
+  # ---------------------
+  # TIMERS::BETA
+  # ---------------------
+  # FOR ROTATION OF TARGETS
+  # ---------------------
+  timerSkillShotBeta:
+    start_value: 2
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: false
+    restart_on_complete: true
+    control_events:
+      - event: eventEnableSkillShotBeta
+        action: start
+      - event: eventStopTimerSkillShotBeta
+        action: stop
+        
+        
+slide_player:
+  playSlideSkillShotAlphaMade:
+    slideSkillShotAlphaMade:
+      target: displayDMD
+  
+  playSlideSkillShotBetaMade:
+    #fix this later, change to Beta
+    slideSkillShotAlphaMade:
+      target: displayDMD
+      
+slides:
+  slideSkillShotAlphaMade:
+    widgets:
+      # BLUE FORGROUND
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: '0000ff'
+        text: Skill Shot!
+        y: middle
+        x: middle
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+      # -------------------------------
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: '00ff00'
+        text: Skill Shot!
+        y: middle-1
+        x: middle+1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: '00ff00'
+        text: Skill Shot!
+        y: middle-1
+        x: middle-1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: '00ff00'
+        text: Skill Shot!
+        y: middle+1
+        x: middle+1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: '00ff00'
+        text: Skill Shot!
+        y: middle+1
+        x: middle-1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      # -------------------------------
+    expire: 2.0s
+
+
+
+

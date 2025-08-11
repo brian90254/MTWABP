@@ -1,0 +1,169 @@
+#config_version=6
+
+mode:
+  start_events: eventStartModeCollectMidGameBonus
+  stop_events: eventStopModeCollectMidGameBonus, ball_will_end
+  priority: 9000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # ---------------------
+  # EVENT::SLIDES
+  # ---------------------
+  eventCollectMidGameBonus:
+    - eventShowSlideCollectMidGameBonusTitle
+    - playPoolSoundStart
+    - eventShowSlideCollectMidGameBonusBase|1.5s
+    - eventShowSlideCollectMidGameBonusHunter|3s
+    - eventResetHunterMultiplier|6s
+    # ----------------------------
+
+  # ---------------------
+  # EVENT::SOUNDS
+  # ---------------------
+  #eventShowSlideCollectMidGameBonusTitle:
+  #  - playPoolSoundStart
+
+  eventShowSlideCollectMidGameBonusBase:
+    - playPoolSoundStart
+    
+  #eventShowSlideCollectMidGameBonusHunter:
+  #  - playPoolSoundStart
+  # ----------------------------
+
+  # ---------------------
+  # EVENT::CHECK::MODE::ADVANCE
+  # ---------------------
+  eventCollectMidGameBonus.2{current_player.multiHunter==6}:
+    - eventCompletedAchModeJupiterOne|6s
+    
+  eventCollectMidGameBonus.3{current_player.multiHunter==8}:
+    - eventCompletedAchModeEuropa|6s
+    
+  eventCollectMidGameBonus.4{current_player.multiHunter==10}:
+    - eventCompletedAchModeGanymede|6s
+    
+  eventCollectMidGameBonus.5{current_player.multiHunter==14}:
+    - eventCompletedAchModeCallisto|6s
+    
+    
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  # ----------------------------
+  eventShowSlideCollectMidGameBonusTitle:
+    scoreHunterBonus:
+      int: 500 * 2**current_player.multiHunter
+      action: set
+    
+  eventShowSlideCollectMidGameBonusHunter:
+    score: current_player.scoreHunterBonus
+      
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  # ----------------------------
+  eventShowSlideCollectMidGameBonusTitle:
+    slideCollectMidGameBonusTitle:
+      target: displayDMD
+  # ----------------------------
+  eventShowSlideCollectMidGameBonusBase:
+    slideCollectMidGameBonusBase:
+      target: displayDMD
+  # ----------------------------
+  eventShowSlideCollectMidGameBonusHunter:
+    slideCollectMidGameBonusHunter:
+      target: displayDMD
+
+slides:
+  # ----------------------
+  # INTRO BONUS
+  # ----------------------
+  slideCollectMidGameBonusTitle:
+    widgets:
+    - type: text
+      text: COLLECT
+      style: tall_title
+      y: top-10.25
+      x: middle-.25
+      font_size: 16
+      color: '00ff00'
+      # ----------------
+    - type: text
+      text: BONUS
+      style: tall_title
+      y: middle+3
+      x: middle
+      font_size: 32
+      color: 'ff0000'
+      # ----------------
+    expire: 2s
+    
+  # ----------------------
+  # BASE BONUS
+  # ----------------------
+  slideCollectMidGameBonusBase:
+    widgets:
+    - type: text
+      text: BONUS BASE
+      style: tall_title
+      y: top-10.25
+      x: middle-.25
+      font_size: 16
+      color: '00ff00'
+      # ----------------
+    - type: text
+      text: "500 pts"
+      style: tall_title
+      y: middle+3
+      x: middle
+      font_size: 32
+      color: 'ff0000'
+      # ----------------
+    - type: text
+      text: BONUS COLLECTION
+      style: tall_title
+      font_size: 18
+      anchor_y: bottom
+      y: bottom+4
+      x: middle
+      color: '8000ff'
+      # ----------------
+    expire: 2s
+    
+  # ----------------------
+  # HUNTER BONUS
+  # ----------------------
+  slideCollectMidGameBonusHunter:
+    widgets:
+    - type: text
+      text: BONUS HUNTER
+      style: tall_title
+      y: top-10.25
+      x: middle-.25
+      font_size: 16
+      color: '00ff00'
+      # ----------------
+    - type: text
+      text: "(player|multiHunter)x HUNTER"
+      style: tall_title
+      y: middle+3
+      x: middle
+      font_size: 32
+      color: 'ff0000'
+      # ----------------
+    - type: text
+      text: "(player|scoreHunterBonus) pts"
+      style: tall_title
+      font_size: 18
+      anchor_y: bottom
+      y: bottom+4
+      x: middle
+      color: '00ffff'
+      # ----------------
+    expire: 2s
+    

@@ -1,0 +1,177 @@
+#config_version=6
+
+# -----------------------------
+# ACHIEVEMENT::GLOBE
+# -----------------------------
+achievements:
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::ONE
+  # -----------------------------
+  achGlobeSaucer1:
+    show_tokens:
+      led1: ledGlobeSaucer1A
+      led2: ledGlobeSaucer1B
+      led3: ledGlobeSaucer1C
+      led4: ledAwardGlobe1A
+      led5: ledAwardGlobe1B
+      led6: ledAwardGlobe1C
+      led7: ledDummy1
+      led8: ledDummy2
+      led9: ledDummy3
+      led10: ledDummy4
+      color1: 'ff0000'
+      color2: '00ff00'
+      color3: 'ffff00'
+      color4: '808000'
+    show_when_selected: showWhenSelectedAchGlobeSaucer
+    show_when_started: showWhenStartedAchGlobeSaucer
+    show_when_stopped: showWhenStoppedAchGlobeSaucer
+    show_when_completed: showWhenCompletedAchGlobeSaucer
+    #events_when_selected:
+    events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchGlobeSaucer
+    select_events: startAchGlobeSaucer1
+    stop_events: stopAchGlobeSaucer1
+    complete_events: eventCompletedAchGlobeSaucer
+    reset_events: eventResetAchGlobeSaucer
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::TWO
+  # -----------------------------
+  achGlobeSaucer2:
+    show_tokens:
+      led1: ledGlobeSaucer2A
+      led2: ledGlobeSaucer2B
+      led3: ledGlobeSaucer2C
+      led4: ledAwardGlobe2A
+      led5: ledAwardGlobe2B
+      led6: ledAwardGlobe2C
+      color1: 'ff0000'
+      color2: '00ff00'
+      color3: 'ffff00'
+      color4: '808000'
+    show_when_selected: showWhenSelectedAchGlobeSaucer
+    show_when_started: showWhenStartedAchGlobeSaucer
+    show_when_stopped: showWhenStoppedAchGlobeSaucer
+    show_when_completed: showWhenCompletedAchGlobeSaucer
+    #events_when_selected:
+    events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchGlobeSaucer
+    select_events: startAchGlobeSaucer2
+    stop_events: stopAchGlobeSaucer2
+    complete_events: eventCompletedAchGlobeSaucer
+    reset_events: eventResetAchGlobeSaucer
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::THREE
+  # -----------------------------
+  achGlobeSaucer3:
+    show_tokens:
+      led1: ledGlobeSaucer3A
+      led2: ledGlobeSaucer3B
+      led3: ledGlobeSaucer3C
+      led4: ledAwardGlobe3A
+      led5: ledAwardGlobe3B
+      led6: ledAwardGlobe3C
+      color1: 'ff0000'
+      color2: '00ff00'
+      color3: 'ffff00'
+      color4: '808000'
+    show_when_selected: showWhenSelectedAchGlobeSaucer
+    show_when_started: showWhenStartedAchGlobeSaucer
+    show_when_stopped: showWhenStoppedAchGlobeSaucer
+    show_when_completed: showWhenCompletedAchGlobeSaucer
+    #events_when_selected:
+    events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchGlobeSaucer
+    select_events: startAchGlobeSaucer3
+    stop_events: stopAchGlobeSaucer3
+    complete_events: eventCompletedAchGlobeSaucer
+    reset_events: eventResetAchGlobeSaucer
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::FOUR
+  # -----------------------------
+  achGlobeSaucer4:
+    show_tokens:
+      led1: ledGlobeSaucer4A
+      led2: ledGlobeSaucer4B
+      led3: ledGlobeSaucer4C
+      led4: ledAwardGlobe4A
+      led5: ledAwardGlobe4B
+      led6: ledAwardGlobe4C
+      color1: 'ff0000'
+      color2: '00ff00'
+      color3: 'ffff00'
+      color4: '808000'
+    show_when_selected: showWhenSelectedAchGlobeSaucer
+    show_when_started: showWhenStartedAchGlobeSaucer
+    show_when_stopped: showWhenStoppedAchGlobeSaucer
+    show_when_completed: showWhenCompletedAchGlobeSaucer
+    #events_when_selected:
+    events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchGlobeSaucer
+    select_events: startAchGlobeSaucer4
+    stop_events: stopAchGlobeSaucer4
+    complete_events: eventCompletedAchGlobeSaucer
+    reset_events: eventResetAchGlobeSaucer
+    sync_ms: 1
+    restart_after_stop_possible: true
+
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::FIVE
+  # -----------------------------
+  achGlobeSaucer5:
+    show_tokens:
+      led1: ledGlobeSaucer5A
+      led2: ledGlobeSaucer5B
+      led3: ledGlobeSaucer5C
+      led4: ledAwardGlobe5A
+      led5: ledAwardGlobe5B
+      led6: ledAwardGlobe5C
+      color1: 'ff0000'
+      color2: '00ff00'
+      color3: 'ffff00'
+      color4: '808000'
+    show_when_selected: showWhenSelectedAchGlobeSaucer
+    show_when_started: showWhenStartedAchGlobeSaucer
+    show_when_stopped: showWhenStoppedAchGlobeSaucer
+    show_when_completed: showWhenCompletedAchGlobeSaucer
+    #events_when_selected:
+    events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchGlobeSaucer
+    select_events: startAchGlobeSaucer5
+    stop_events: stopAchGlobeSaucer5
+    complete_events: eventCompletedAchGlobeSaucer
+    reset_events: eventResetAchGlobeSaucer
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+# -----------------------------
+# ACHIEVEMENT::GROUPS
+# -----------------------------
+achievement_groups:
+  # -----------------------------
+  # GROUP::GLOBE
+  # -----------------------------
+  grpAchGlobeSaucer:
+    achievements:
+      achGlobeSaucer1
+      achGlobeSaucer2
+      achGlobeSaucer3
+      achGlobeSaucer4
+      achGlobeSaucer5
+    enable_events: eventEnableAchGlobeSaucer
+    #rotate_right_events: eventAdvanceModeLeft
+    rotate_right_events: eventRotateRightGrpAchGlobeSaucer
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    

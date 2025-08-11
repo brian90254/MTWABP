@@ -1,0 +1,78 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceFifteenLedTwoColor:
+      loops: 0
+      speed: 18
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledGlobeSaucer1A
+        led2: ledGlobeSaucer1B
+        led3: ledGlobeSaucer1C
+        led4: ledGlobeSaucer2A
+        led5: ledGlobeSaucer2B
+        led6: ledGlobeSaucer2C
+        led7: ledGlobeSaucer3A
+        led8: ledGlobeSaucer3B
+        led9: ledGlobeSaucer3C
+        led10: ledGlobeSaucer4A
+        led11: ledGlobeSaucer4B
+        led12: ledGlobeSaucer4C
+        led13: ledGlobeSaucer5A
+        led14: ledGlobeSaucer5B
+        led15: ledGlobeSaucer5C
+
+- time: '+2'
+
+  shows:
+    traceFifteenLedTwoColor:
+      loops: 0
+      speed: 18
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledGlobeSaucer1A
+        led2: ledGlobeSaucer1B
+        led3: ledGlobeSaucer1C
+        led4: ledGlobeSaucer2A
+        led5: ledGlobeSaucer2B
+        led6: ledGlobeSaucer2C
+        led7: ledGlobeSaucer3A
+        led8: ledGlobeSaucer3B
+        led9: ledGlobeSaucer3C
+        led10: ledGlobeSaucer4A
+        led11: ledGlobeSaucer4B
+        led12: ledGlobeSaucer4C
+        led13: ledGlobeSaucer5A
+        led14: ledGlobeSaucer5B
+        led15: ledGlobeSaucer5C
+
+- time: '+2'
+
+  shows:
+    traceFifteenLedTwoColor:
+      loops: 0
+      speed: 18
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledGlobeSaucer1A
+        led2: ledGlobeSaucer1B
+        led3: ledGlobeSaucer1C
+        led4: ledGlobeSaucer2A
+        led5: ledGlobeSaucer2B
+        led6: ledGlobeSaucer2C
+        led7: ledGlobeSaucer3A
+        led8: ledGlobeSaucer3B
+        led9: ledGlobeSaucer3C
+        led10: ledGlobeSaucer4A
+        led11: ledGlobeSaucer4B
+        led12: ledGlobeSaucer4C
+        led13: ledGlobeSaucer5A
+        led14: ledGlobeSaucer5B
+        led15: ledGlobeSaucer5C
+
+- time: '+2'
