@@ -1,0 +1,179 @@
+#config_version=6
+
+      #led1: ledAwardGlobe1A
+      #led2: ledAwardGlobe1B
+      #led3: ledAwardGlobe1C
+      #led4: ledDummy1
+      #led5: ledDummy2
+      #color1: 'ffff00'
+      #color2: '808000'
+      
+shows:
+    # --------------------------------------
+    # SELECTED::ACHIEVEMENT::GLOBE::SAUCER
+    # --------------------------------------
+    showWhenSelectedAchGlobeAward:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+        - time: 0.33s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+            # ---------------
+        - time: 0.66s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+        - time: 1.0s
+        
+    # --------------------------------------
+    # STARTED::ACHIEVEMENT::GLOBE::SAUCER
+    # --------------------------------------
+    showWhenStartedAchGlobeAward:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+        - time: 0.33s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+            # ---------------
+        - time: 0.66s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+        - time: 1.0s
+        
+    # --------------------------------------
+    # STOPPED::ACHIEVEMENT::GLOBE::SAUCER
+    # --------------------------------------
+    showWhenStoppedAchGlobeAward:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+        - time: 0.33s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+            # ---------------
+        - time: 0.66s
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+        - time: 1.0s
+        
+    # --------------------------------------
+    # COMPLETED::ACHIEVEMENT::GLOBE::SAUCER
+    # --------------------------------------
+    showWhenCompletedAchGlobeAward:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+        - time: 0.33s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+            # ---------------
+        - time: 0.66s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            # --------------
+            # DUMMY BELOW
+            (led4): (color1)
+            (led5): (color2)
+            # ---------------
+        - time: 1.0s
+
+    # --------------------------------------
+    # COMPLETED::ACHIEVEMENT::GLOBE::SAUCER
+    # --------------------------------------
+    showGlobeSaucerTrace:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+        - time: 0.33s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+        - time: 0.66s
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+        - time: 1.0s

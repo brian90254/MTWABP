@@ -1,0 +1,317 @@
+#config_version=6
+
+config:
+- configEightBallAchBonus.yaml
+- configEightBallAchGlobeAward.yaml
+- configEightBallAchievements.yaml
+- configEightBallExtraBall.yaml
+- configEightBallSaucerRight.yaml
+- configEightBallScoring.yaml
+- configEightBallShots.yaml
+#- configEightBallShotsSpecial.yaml
+- configEightBallShows.yaml
+- configEightBallThumpers.yaml
+
+mode:
+  start_events: eventStartModeEightBall
+  stop_events:
+    - eventStopModeEightBall
+    - ball_ending
+    
+  priority: 2000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  
+  ball_started:
+    # RESET DROPS
+    - eventResetDropTargetRight|1000ms
+
+  # -----------------------------------
+  # DIVERTER
+  # -----------------------------------
+  shotTargetSlamDunk_spTargetSlamDunk_litFlash_hit:
+    - eventEnableDiverter
+    - eventStartShowDiverter
+    #- eventAdvanceShotRightOutlane
+    - eventRestartShotRightOutlane
+    
+  #sw_sRightOutlane:
+  shotRightOutlane_spRightOutlane_litChasePink_hit:
+    - eventDisableDiverter|3s
+    - eventRestartShotTargetSlamDunk|100ms
+    #- eventStopShowDiverter
+    - eventRestartShotRightOutlane
+    - eventAdvanceShotRightOutlane|100ms
+
+  ball_ending:
+    - eventDisableDiverter
+    - eventStopShowDiverter
+    - eventResetDropTargetRight|500ms
+
+  ## -----------------------------------
+  ## HITTING DROP RIGHT ADVANCES GLOBE SAUCER
+  ## -----------------------------------
+  #sgShotDropRight_hit:
+  #  #- eventCompletedAchGlobeSaucer
+  #  - eventCompleteNextAchGlobeAward
+  #  # THIS IS TO ADD TO BONUS ON INLINE DROP HIT
+  #  - eventCompleteBonusOnes
+
+
+  # -----------------------------------
+  # HITTING BUMPER SWIITCHES SPINNER LANES 
+  # -----------------------------------
+  sw_sUpperBumper:
+    - eventDisableShotSpinnerMiddle
+    - eventEnableShotSpinnerRight
+    
+  sw_sLowerBumper:
+    - eventEnableShotSpinnerMiddle
+    - eventDisableShotSpinnerRight
+    
+  # -----------------------------------
+  # RIGHT RETURN LANE ADDS 3 BONUS
+  # -----------------------------------
+  shotRightReturnLane_hit:
+    - eventCompleteBonusOnes
+    #- eventCompleteBonusOnes|500ms
+    #- eventCompleteBonusOnes|1000ms
+    
+  # -----------------------------------
+  # COMPLETING PLAYER TARGETS ADVANCES SLAM DUNK SHOT
+  # -----------------------------------
+  sgTargetPlayers_litSolid_complete:
+    - eventStartAchTargetSlamDunk5000Pts
+    - eventStartAchTargetSlamDunkOpenLane
+    - eventStartAchTargetSlamDunkExtraBall
+    - eventStartAchTargetSlamDunkSpecial
+  
+  
+  shotSpinnerMiddle_spSpinner_litSolidFive_hit:
+    - eventCompleteBonusOnes
+  
+  shotSpinnerRight_spSpinner_litSolidFive_hit:
+    - eventCompleteBonusOnes
+
+
+  # -----------------------------------
+  # SPINNER LIGHTS
+  # -----------------------------------
+  eventEnableShotSpinnerMiddle:
+    - eventStartShowSpinnerMiddle
+    
+  eventEnableShotSpinnerRight:
+    - eventStartShowSpinnerRight
+
+  # -----------------------------------
+  # GLOBE AWARD LIGHTS LEFT OUTLANE FEATURE
+  # -----------------------------------
+  eventAgAchGlobeAwardCompleted:
+    - eventEnableShotLeftOutlane
+
+
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeEightBall_started.1:
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeEightBallStart
+
+    # -----------------------------------
+    # RESET SHOTS (RESET BEFORE ENABLE)
+    # -----------------------------------
+    - eventResetShotTargetSlamDunk
+    - eventResetShotSpinnerMiddle
+    - eventResetShotSpinnerRight
+    #- eventRestartShotSaucerRight
+    
+    # -----------------------------------
+    # SAUCER RESET SHOTS (RESET BEFORE ENABLE)
+    # -----------------------------------
+    - eventResetShotGroupGlobeSaucer
+    - eventResetAchGlobeAward
+    
+    # REBOUND DIVERTER
+    - eventRestartShotRightOutlane
+    - eventAdvanceShotRightOutlane|100ms
+    
+    # DISABLE LEFT OUTLANE
+    - eventDisableShotLeftOutlane
+    
+    # -----------------------------------
+    # ENABLE SPINNERS (ENABLE AFTER RESET)
+    # -----------------------------------
+    - eventEnableShotSpinnerMiddle
+    - eventDisableShotSpinnerRight
+    
+    # -----------------------------------
+    # SAUCER ENABLE SHOTS (AFTER RESET)
+    # -----------------------------------
+    - eventEnableShotGroupGlobeSaucer
+    - eventEnableAchGlobeAward
+    - eventSelectAchGlobeAward
+    
+    # -----------------------------------
+    # SLAM DUNK ACHIEVEMENTS (ENABLE AFTER RESET)
+    # -----------------------------------
+    #- eventEnableAchTargetSlamDunk5000k
+    - eventEnableAchTargetSlamDunkExtraBall
+    
+
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    # THIS HAPPENS BEFORE 1000MS DELAY THAT ADDS ONE TOTAL BONUS TO START
+    - eventResetMultipliersEightBall
+
+  mode_modeEightBall_started.2:
+    #-----------------------------------
+    #ENABLE BONUS
+    #-----------------------------------
+    # ONES
+    #- eventResetAchBonusOnes
+    - eventEnableAchBonusOnes
+    #- eventStartAchBonus0
+    #- eventCompleteBonusOnes|1s
+    # TENS
+    #- eventResetAchBonusTens
+    - eventEnableAchBonusTens
+
+
+  mode_modeEightBall_started.3:
+    #-----------------------------------
+    #ENABLE BONUS
+    #-----------------------------------
+    - eventResetTotalBonus
+    # TENS
+    - eventResetAchBonusTens|100ms
+    - eventEnableAchBonusTens|200ms
+    # ONES
+    - eventResetAchBonusOnes|300ms
+    - eventEnableAchBonusOnes|400ms
+    - eventStartAchBonus0|500ms
+    - eventCompleteBonusOnes|600ms
+
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# INITIALIZE MODE
+# ---------------
+  mode_modeEightBall_started:
+    nameMoon:
+      string: "Eight Ball"
+      action: set
+      
+# ---------------
+# INITIALIZE BONUS COUNT
+# ---------------
+  eventResetTotalBonus:
+    # -------------------------
+    # RESET BONUS COUNT
+    # TEMP REMOVE FOR TEST
+    totalBonus:
+      #int: 1
+      int: 0
+      action: set
+    # LEAVE OUT TO ACCUMULATE BONUS BETWEEN BALLS
+    # -------------------------
+
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# ---------------------
+# SHOW::PLAYER::COILS
+# ---------------------
+  ball_hold_blKickerUpper_held_ball:
+    showBallLockKickerUpper:
+      loops: 0
+      speed: 1
+
+  # ----------------------------
+  # SPINNER RIGHT
+  # ----------------------------
+  eventStartShowSpinnerRight:
+    showSpinnerRightRed:
+      action: stop
+      
+    traceThreeLedTwoGreen:
+      loops: -1
+      speed: 2
+      show_tokens:
+        led1: ledAwardSpinnerRightA
+        led2: ledAwardSpinnerRightB
+        led3: ledAwardSpinnerRightC
+      key: showSpinnerRightGreen
+
+    showSpinnerMiddleGreen:
+      action: stop
+
+    onThreeLedRed:
+      loops: -1
+      speed: 2
+      show_tokens:
+        led1: ledAwardSpinnerMiddleA
+        led2: ledAwardSpinnerMiddleB
+        led3: ledAwardSpinnerMiddleC
+      key: showSpinnerMiddleRed
+  # ----------------------------
+
+  # ----------------------------
+  # SPINNER MIDDLE
+  # ----------------------------
+  eventStartShowSpinnerMiddle:
+
+    showSpinnerMiddleRed:
+      action: stop
+      
+    traceThreeLedTwoGreen:
+      loops: -1
+      speed: 2
+      show_tokens:
+        led1: ledAwardSpinnerMiddleA
+        led2: ledAwardSpinnerMiddleB
+        led3: ledAwardSpinnerMiddleC
+      key: showSpinnerMiddleGreen
+
+    showSpinnerRightGreen:
+      action: stop
+
+    onThreeLedRed:
+      loops: -1
+      speed: 2
+      show_tokens:
+        led1: ledAwardSpinnerRightA
+        led2: ledAwardSpinnerRightB
+        led3: ledAwardSpinnerRightC
+      key: showSpinnerRightRed
+  # ----------------------------
+
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  #---------------------
+  # AMBIENCE
+  mode_modeEightBall_started:
+    #musicAmbienceEightBall005:
+    #poolMusicAmbienceEightBall:
+    poolMusicAmbienceIronMaiden:
+      loops: -1
+      volume: 0.5
+      
+  mode_modeEightBall_ending:
+    #musicAmbienceEightBall005:
+    #poolMusicAmbienceEightBall:
+    poolMusicAmbienceIronMaiden:
+      action: stop
+  #---------------------
