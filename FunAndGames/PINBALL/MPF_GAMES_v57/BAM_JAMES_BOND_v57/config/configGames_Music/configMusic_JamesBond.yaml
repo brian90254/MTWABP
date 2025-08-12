@@ -1,0 +1,170 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:
+# ---------------------
+# SOUNDS::MUSIC::AMBIENT
+# ---------------------
+  musicJamesBondAmbient001:
+    file: musicJamesBondAmbient001.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondAmbient002:
+    file: musicJamesBondAmbient002.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondAmbient003:
+    file: musicJamesBondAmbient003.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondAmbient004:
+    file: musicJamesBondAmbient004.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::THEME
+# ---------------------
+  musicJamesBondTheme001:
+    file: musicJamesBondTheme_02_FromRussiaWithLove.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondTheme002:
+    file: musicJamesBondTheme_03_Goldfinger.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondTheme003:
+    file: musicJamesBondTheme_04_Thunderball.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondTheme004:
+    file: musicJamesBondTheme_05_YouOnlyLiveTwice.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondTheme005:
+    file: musicJamesBondTheme_08 DiamondsAreForever.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondTheme006:
+    file: musicJamesBondTheme_09_LiveAndLetDie.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondTheme007:
+    file: musicJamesBondTheme_10_TheManWithTheGoldenGun.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondTheme008:
+    file: musicJamesBondTheme_11_NobodyDoesItBetter.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondTheme009:
+    file: musicJamesBondTheme_13_ForYourEyesOnly.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondTheme010:
+    file: musicJamesBondTheme_15_AViewToAKill.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicJamesBondTheme011:
+    file: musicJamesBondTheme_16_TheLivingDaylights.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicJamesBondTheme001
+      - musicJamesBondTheme002
+      - musicJamesBondTheme003
+      - musicJamesBondTheme004
+      - musicJamesBondTheme005
+      - musicJamesBondTheme006
+      - musicJamesBondTheme007
+      - musicJamesBondTheme008
+      - musicJamesBondTheme009
+      - musicJamesBondTheme010
+      - musicJamesBondTheme011
+
+  poolMusicBaseMode:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicJamesBondAmbient001
+      - musicJamesBondAmbient002
+      - musicJamesBondAmbient003
+      - musicJamesBondAmbient004
+      
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+sound_player:
+# ---------------------
+# SOUNDS::PLAYER::STAR TREK::BY MODE
+# ---------------------
+  playPoolMusicBaseMode:
+    poolMusicBaseMode:
+      loops: 0
+      volume: 0.7
+
+# ---------------------
+# MUSIC::PLAYLISTS
+# ---------------------
+playlists:
+  playlistModeJamesBondMusic:
+    shuffle: true
+    repeat: true
+    sounds:
+      - musicJamesBondAmbient001
+      - musicJamesBondAmbient002
+      - musicJamesBondAmbient003
+      - musicJamesBondAmbient004
+      #- musicJamesBondTheme001
+      #- musicJamesBondTheme002
+      #- musicJamesBondTheme003
+      #- musicJamesBondTheme004
+      #- musicJamesBondTheme005
+      #- musicJamesBondTheme006
+      #- musicJamesBondTheme007
+      #- musicJamesBondTheme008
+      #- musicJamesBondTheme009
+      #- musicJamesBondTheme010
+      #- musicJamesBondTheme011
+      
+      

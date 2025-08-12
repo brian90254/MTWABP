@@ -1,0 +1,422 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - SILVERBALL MANIA
+
+- time: 0
+
+# ----------------------
+# CYAN CHASE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '00ffff'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '00ffff'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '00ffff'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '00ffff'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '00ffff'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '00ffff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# BLUE CHASE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '0000ff'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '0000ff'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '0000ff'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '0000ff'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '0000ff'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '0000ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# MAGENTA CHASE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: 'ff00ff'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: 'ff00ff'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: 'ff00ff'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: 'ff00ff'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: 'ff00ff'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: 'ff00ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# RED CHASE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: 'ff0000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: 'ff0000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: 'ff0000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: 'ff0000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: 'ff0000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: 'ff0000'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: 'ffff00'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: 'ffff00'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: 'ffff00'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: 'ffff00'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: 'ffff00'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: 'ffff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# GREEN CHASE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '00ff00'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '00ff00'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '00ff00'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '00ff00'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '00ff00'
+    ledTargetBottomRight: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetBottomLeft: '000000'
+    ledTargetTopLeft: '000000'
+    ledSpinnerLeft: '000000'
+    ledSpinnerRight: '000000'
+    ledTargetTopRight: '000000'
+    ledTargetBottomRight: '00ff00'
+    # ---------------------- 
+- time: "+1"
+

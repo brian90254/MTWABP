@@ -1,0 +1,78 @@
+#config_version=6
+
+mode:
+  start_events: eventStartModeCarousel
+  stop_events: eventStopModeCarousel
+  code: mpf.modes.carousel.code.carousel.Carousel
+  use_wait_queue: true
+  priority: 200
+  
+mode_settings:
+  selectable_items:
+    - year1955
+    - year1965
+    - year1975
+    - year1985
+  select_item_events: eventCarouselSelect
+  next_item_events: eventCarouselNext
+  previous_item_events: eventCarouselPrevious
+
+# -----------------------
+# EVENT::PLAYER::SFX
+# -----------------------
+event_player:
+  sw_flipper_left_active:
+    - eventCarouselPrevious
+  sw_flipper_right_active:
+    - eventCarouselNext
+  sw_tagLaunch:
+    - eventCarouselSelect
+  carousel_item_selected:
+    - eventStopModeCarousel
+
+slide_player:
+  carousel_year1955_highlighted:
+    slideYear1955:
+      target: displayDMD
+  carousel_year1965_highlighted:
+    slideYear1965:
+      target: displayDMD
+  carousel_year1975_highlighted:
+    slideYear1975:
+      target: displayDMD
+  carousel_year1985_highlighted:
+    slideYear1985:
+      target: displayDMD
+  
+slides:
+  slideYear1955:
+    widgets:
+      - type: text
+        text: "1955"
+        y: middle
+        x: middle
+        style: font1955
+        color: colorFontYear1950Inner
+        z: 20
+      
+  slideYear1965:
+    widgets:
+      - type: text
+        text: "1965"
+        style: font1965
+        color: 'ffffff'
+      
+  slideYear1975:
+    widgets:
+      - type: text
+        text: "1975"
+        style: font1975
+        color: 'ffffff'
+      
+  slideYear1985:
+    widgets:
+      - type: text
+        text: "1985"
+        style: font1985
+        color: 'ffffff'
+      

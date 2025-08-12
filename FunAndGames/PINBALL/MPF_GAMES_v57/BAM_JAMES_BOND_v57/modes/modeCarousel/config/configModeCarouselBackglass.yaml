@@ -1,0 +1,75 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  eventShowSlideCarouselBackglass:
+    slideCarouselBackglass:
+      target: displayBackglass
+
+slides:
+  slideCarouselBackglass:
+    widgets:
+    - type: image
+      image: imagebackglass
+      z: 40
+    - type: text
+      text: (player1|score)
+      z: 30
+      x: left + 722
+      y: bottom + 861
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      text: (player2|score)
+      z: 30
+      x: left + 1450
+      y: bottom + 861
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      text: (player3|score)
+      z: 30
+      x: left + 722
+      y: bottom + 272
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      text: (player4|score)
+      z: 30
+      x: left + 1450
+      y: bottom + 272
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      text: (player|ball)
+      #min_digits: 2
+      z: 30
+      x: left + 516
+      y: bottom + 567
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+# -----------------------
+# ADDED 200507
+    - type: text
+      text: (machine|credits_string)
+      #min_digits: 2
+      z: 30
+      x: left + 459
+      y: bottom + 567
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+## -----------------------

@@ -1,0 +1,97 @@
+#config_version=6
+
+config:
+#- configJamesBondDanielCraigExtraBall.yaml
+##- configJamesBondDanielCraigShots.yaml
+- configJamesBondDanielCraigSlides.yaml
+#- configJamesBondDanielCraigThumpers.yaml
+
+mode:
+  start_events:
+    - eventStartModeJamesBondDanielCraig
+  stop_events:
+    - eventStopModeJamesBondDanielCraig
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  #mode_modeJamesBondDanielCraig_started:
+  mode_modeJamesBondDanielCraig_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlideJamesBondDanielCraigBase
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeJamesBondStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersJamesBondDanielCraig|1000ms
+    - eventResetBonusJamesBondDanielCraig|1000ms
+
+  # ---------------------
+  # EVENT::RESET::MULTIPLIERS
+  # ---------------------
+  eventResetMultipliersJamesBond:
+    - eventResetMultipliersJamesBondDanielCraig
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  mode_modeJamesBondDanielCraig_started:
+    nameMoon:
+      string: "DANIEL CRAIG"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersJamesBondDanielCraig:
+  #eventResetBonusJamesBondDanielCraig:
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusMatrix:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusRows:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusColumns:
+      int: 0
+      action: set
+    # -------------------------
+    
+  #eventResetMultipliersJamesBondDanielCraig:
+  eventResetBonusJamesBondDanielCraig:
+    # -------------------------
+    # RESET BONUS SUPER COLOSSAL
+    bonusSuper:
+      int: 0
+      action: set
+    # -------------------------
+    bonusColossal:
+      int: 0
+      action: set
+    # -------------------------
+
+    ## -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set

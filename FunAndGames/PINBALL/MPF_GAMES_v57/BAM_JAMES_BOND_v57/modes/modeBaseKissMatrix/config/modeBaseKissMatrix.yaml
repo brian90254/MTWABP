@@ -1,0 +1,527 @@
+#config_version=6
+
+# KISS MATRIX
+
+config:
+- configBaseKissMatrixAchievements.yaml
+- configBaseKissMatrixArrows.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 6000
+  
+    
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+# ---------------------
+# BASE STARTED
+# ---------------------
+  mode_modeBaseKissMatrix_started:
+    # -----------------------------
+    # GROUP::MATRIX::ALL
+    - eventEnableAchGroupKissMatrixAll
+    # -----------------------------
+    # GROUP::MATRIX::ROWS
+    - eventEnableAchGroupKissMatrix10
+    - eventEnableAchGroupKissMatrix20
+    - eventEnableAchGroupKissMatrix30
+    - eventEnableAchGroupKissMatrix40
+    # -----------------------------
+    # GROUP::MATRIX::COLUMNS
+    - eventEnableAchGroupKissMatrix01
+    - eventEnableAchGroupKissMatrix02
+    - eventEnableAchGroupKissMatrix03
+    - eventEnableAchGroupKissMatrix04
+    # -----------------------------
+    # MATRIX::1::1
+    - eventEnableAchKissMatrix11
+    # MATRIX::1::2
+    - eventEnableAchKissMatrix12
+    # MATRIX::1::3
+    - eventEnableAchKissMatrix13
+    # MATRIX::1::4
+    - eventEnableAchKissMatrix14
+    # ----------------------
+    # MATRIX::2::1
+    - eventEnableAchKissMatrix21
+    # MATRIX::2::2
+    - eventEnableAchKissMatrix22
+    # MATRIX::2::3
+    - eventEnableAchKissMatrix23
+    # MATRIX::2::4
+    - eventEnableAchKissMatrix24
+    # ----------------------
+    # MATRIX::3::1
+    - eventEnableAchKissMatrix31
+    # MATRIX::3::2
+    - eventEnableAchKissMatrix32
+    # MATRIX::3::3
+    - eventEnableAchKissMatrix33
+    # MATRIX::3::4
+    - eventEnableAchKissMatrix34
+    # ----------------------
+    # MATRIX::4::1
+    - eventEnableAchKissMatrix41
+    # MATRIX::4::2
+    - eventEnableAchKissMatrix42
+    # MATRIX::4::3
+    - eventEnableAchKissMatrix43
+    # MATRIX::4::4
+    - eventEnableAchKissMatrix44
+    # ----------------------
+
+# -----------
+# COMPLETE::K
+# -----------
+  # -----------
+  # LANES
+  # -----------
+  shotLaneTopK_litFlash_hit.1{current_player.shot_shotMatrixRow==0}:
+    - eventStartAchKissMatrix11
+    - eventCompleteAchKissMatrix11|100
+  shotLaneTopK_litFlash_hit.2{current_player.shot_shotMatrixRow==1}:
+    - eventStartAchKissMatrix21
+    - eventCompleteAchKissMatrix21|100
+  shotLaneTopK_litFlash_hit.3{current_player.shot_shotMatrixRow==2}:
+    - eventStartAchKissMatrix31
+    - eventCompleteAchKissMatrix31|100
+  shotLaneTopK_litFlash_hit.4{current_player.shot_shotMatrixRow==3}:
+    - eventStartAchKissMatrix41
+    - eventCompleteAchKissMatrix41|100
+  # -----------
+  # TARGETS
+  # -----------
+  shotTargetK_litFlash_hit.1{current_player.shot_shotMatrixRow==0}:
+    - eventStartAchKissMatrix11
+    - eventCompleteAchKissMatrix11|100
+  shotTargetK_litFlash_hit.2{current_player.shot_shotMatrixRow==1}:
+    - eventStartAchKissMatrix21
+    - eventCompleteAchKissMatrix21|100
+  shotTargetK_litFlash_hit.3{current_player.shot_shotMatrixRow==2}:
+    - eventStartAchKissMatrix31
+    - eventCompleteAchKissMatrix31|100
+  shotTargetK_litFlash_hit.4{current_player.shot_shotMatrixRow==3}:
+    - eventStartAchKissMatrix41
+    - eventCompleteAchKissMatrix41|100
+    
+# -----------
+# COMPLETE::I
+# -----------
+  # -----------
+  # LANES
+  # -----------
+  shotLaneTopI_litFlash_hit.1{current_player.shot_shotMatrixRow==0}:
+    - eventStartAchKissMatrix12
+    - eventCompleteAchKissMatrix12|100
+  shotLaneTopI_litFlash_hit.2{current_player.shot_shotMatrixRow==1}:
+    - eventStartAchKissMatrix22
+    - eventCompleteAchKissMatrix22|100
+  shotLaneTopI_litFlash_hit.3{current_player.shot_shotMatrixRow==2}:
+    - eventStartAchKissMatrix32
+    - eventCompleteAchKissMatrix32|100
+  shotLaneTopI_litFlash_hit.4{current_player.shot_shotMatrixRow==3}:
+    - eventStartAchKissMatrix42
+    - eventCompleteAchKissMatrix42|100
+  # -----------
+  # TARGETS
+  # -----------
+  shotTargetI_litFlash_hit.1{current_player.shot_shotMatrixRow==0}:
+    - eventStartAchKissMatrix12
+    - eventCompleteAchKissMatrix12|100
+  shotTargetI_litFlash_hit.2{current_player.shot_shotMatrixRow==1}:
+    - eventStartAchKissMatrix22
+    - eventCompleteAchKissMatrix22|100
+  shotTargetI_litFlash_hit.3{current_player.shot_shotMatrixRow==2}:
+    - eventStartAchKissMatrix32
+    - eventCompleteAchKissMatrix32|100
+  shotTargetI_litFlash_hit.4{current_player.shot_shotMatrixRow==3}:
+    - eventStartAchKissMatrix42
+    - eventCompleteAchKissMatrix42|100
+    
+# -----------
+# COMPLETE::S1
+# -----------
+  # -----------
+  # LANES
+  # -----------
+  shotLaneTopS1_litFlash_hit.1{current_player.shot_shotMatrixRow==0}:
+    - eventStartAchKissMatrix13
+    - eventCompleteAchKissMatrix13|100
+  shotLaneTopS1_litFlash_hit.2{current_player.shot_shotMatrixRow==1}:
+    - eventStartAchKissMatrix23
+    - eventCompleteAchKissMatrix23|100
+  shotLaneTopS1_litFlash_hit.3{current_player.shot_shotMatrixRow==2}:
+    - eventStartAchKissMatrix33
+    - eventCompleteAchKissMatrix33|100
+  shotLaneTopS1_litFlash_hit.4{current_player.shot_shotMatrixRow==3}:
+    - eventStartAchKissMatrix43
+    - eventCompleteAchKissMatrix43|100
+  # -----------
+  # TARGETS
+  # -----------
+  shotTargetS1_litFlash_hit.1{current_player.shot_shotMatrixRow==0}:
+    - eventStartAchKissMatrix13
+    - eventCompleteAchKissMatrix13|100
+  shotTargetS1_litFlash_hit.2{current_player.shot_shotMatrixRow==1}:
+    - eventStartAchKissMatrix23
+    - eventCompleteAchKissMatrix23|100
+  shotTargetS1_litFlash_hit.3{current_player.shot_shotMatrixRow==2}:
+    - eventStartAchKissMatrix33
+    - eventCompleteAchKissMatrix33|100
+  shotTargetS1_litFlash_hit.4{current_player.shot_shotMatrixRow==3}:
+    - eventStartAchKissMatrix43
+    - eventCompleteAchKissMatrix43|100
+    
+# -----------
+# COMPLETE::S2
+# -----------
+  # -----------
+  # LANES
+  # -----------
+  shotLaneTopS2_litFlash_hit.1{current_player.shot_shotMatrixRow==0}:
+    - eventStartAchKissMatrix14
+    - eventCompleteAchKissMatrix14|100
+  shotLaneTopS2_litFlash_hit.2{current_player.shot_shotMatrixRow==1}:
+    - eventStartAchKissMatrix24
+    - eventCompleteAchKissMatrix24|100
+  shotLaneTopS2_litFlash_hit.3{current_player.shot_shotMatrixRow==2}:
+    - eventStartAchKissMatrix34
+    - eventCompleteAchKissMatrix34|100
+  shotLaneTopS2_litFlash_hit.4{current_player.shot_shotMatrixRow==3}:
+    - eventStartAchKissMatrix44
+    - eventCompleteAchKissMatrix44|100
+  # -----------
+  # TARGETS
+  # -----------
+  shotTargetS2_litFlash_hit.1{current_player.shot_shotMatrixRow==0}:
+    - eventStartAchKissMatrix14
+    - eventCompleteAchKissMatrix14|100
+  shotTargetS2_litFlash_hit.2{current_player.shot_shotMatrixRow==1}:
+    - eventStartAchKissMatrix24
+    - eventCompleteAchKissMatrix24|100
+  shotTargetS2_litFlash_hit.3{current_player.shot_shotMatrixRow==2}:
+    - eventStartAchKissMatrix34
+    - eventCompleteAchKissMatrix34|100
+  shotTargetS2_litFlash_hit.4{current_player.shot_shotMatrixRow==3}:
+    - eventStartAchKissMatrix44
+    - eventCompleteAchKissMatrix44|100
+
+# -----------
+# LIGHT-A-LINE
+# -----------
+  # -----------
+  # EVENT
+  # -----------
+  eventMatrixLightLine.1{current_player.shot_shotMatrixRow==0}:
+    - eventStartAchKissMatrix11
+    - eventCompleteAchKissMatrix11|100
+    - eventStartAchKissMatrix12
+    - eventCompleteAchKissMatrix12|100
+    - eventStartAchKissMatrix13
+    - eventCompleteAchKissMatrix13|100
+    - eventStartAchKissMatrix14
+    - eventCompleteAchKissMatrix14|100
+  eventMatrixLightLine.2{current_player.shot_shotMatrixRow==1}:
+    - eventStartAchKissMatrix21
+    - eventCompleteAchKissMatrix21|100
+    - eventStartAchKissMatrix22
+    - eventCompleteAchKissMatrix22|100
+    - eventStartAchKissMatrix23
+    - eventCompleteAchKissMatrix23|100
+    - eventStartAchKissMatrix24
+    - eventCompleteAchKissMatrix24|100
+  eventMatrixLightLine.3{current_player.shot_shotMatrixRow==2}:
+    - eventStartAchKissMatrix31
+    - eventCompleteAchKissMatrix31|100
+    - eventStartAchKissMatrix32
+    - eventCompleteAchKissMatrix32|100
+    - eventStartAchKissMatrix33
+    - eventCompleteAchKissMatrix33|100
+    - eventStartAchKissMatrix34
+    - eventCompleteAchKissMatrix34|100
+  eventMatrixLightLine.4{current_player.shot_shotMatrixRow==3}:
+    - eventStartAchKissMatrix41
+    - eventCompleteAchKissMatrix41|100
+    - eventStartAchKissMatrix42
+    - eventCompleteAchKissMatrix42|100
+    - eventStartAchKissMatrix43
+    - eventCompleteAchKissMatrix43|100
+    - eventStartAchKissMatrix44
+    - eventCompleteAchKissMatrix44|100
+    
+# -----------
+# ADD TO BONUS
+# -----------
+  # -----------
+  # MATRIX
+  # -----------
+  # ROW 1
+  eventAchKissMatrix11Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix12Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix13Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix14Completed:
+    - eventAddBonusMatrix
+  # -----------
+  # ROW 2
+  eventAchKissMatrix21Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix22Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix23Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix24Completed:
+    - eventAddBonusMatrix
+  # -----------
+  # ROW 3
+  eventAchKissMatrix31Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix32Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix33Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix34Completed:
+    - eventAddBonusMatrix
+  # -----------
+  # ROW 4
+  eventAchKissMatrix41Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix42Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix43Completed:
+    - eventAddBonusMatrix
+  eventAchKissMatrix44Completed:
+    - eventAddBonusMatrix
+    
+  # -----------
+  # ROWS
+  # -----------
+  eventAchGroupKissMatrix10Complete:
+    - eventAddBonusRows
+  eventAchGroupKissMatrix20Complete:
+    - eventAddBonusRows
+  eventAchGroupKissMatrix30Complete:
+    - eventAddBonusRows
+  eventAchGroupKissMatrix40Complete:
+    - eventAddBonusRows
+    
+  # -----------
+  # COLUMNS
+  # -----------
+  eventAchGroupKissMatrix01Complete:
+    - eventAddBonusColumns
+  eventAchGroupKissMatrix02Complete:
+    - eventAddBonusColumns
+  eventAchGroupKissMatrix03Complete:
+    - eventAddBonusColumns
+  eventAchGroupKissMatrix04Complete:
+    - eventAddBonusColumns
+    
+  # -----------
+  # ALL
+  # -----------
+  eventAchGroupKissMatrixAllComplete:
+    # HIT AWARD
+    - eventHitShotAwardBonusSuperColossal|2000
+    # --------------------------
+    # RESET MATRIX ACHIEVEMENT
+    - eventResetAchKissMatrixAll|2000
+    - eventDisableShotGroupArrowRow|2000
+    - eventDisableShotGroupArrowColumn|2000
+    # --------------------------
+    # RESET MATRIX-ROW-COLUMN BONUS COUNT
+    - eventResetMultipliersKiss|2000
+    # --------------------------
+    # START SHOW
+    - eventShowResetLightMatrixAll|2000
+    # --------------------------
+    # STOP SHOW
+    - eventStopShowResetLightMatrixAll|4000
+    # --------------------------
+    # RESTART SHOTS
+    - eventEnableAchKissMatrixAll|4100
+    - eventRestartShotGroupArrowRow|4100
+    - eventRestartShotGroupArrowColumn|4100
+    # -----------
+    # RESTART MATRIX SHOTS
+    # -----------
+    - eventRestartShotMatrixK
+    - eventRestartShotMatrixI
+    - eventRestartShotMatrixS1
+    - eventRestartShotMatrixS2
+    - eventRestartShotMatrixRow
+        
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # -----------
+  # MATRIX
+  # -----------
+  eventAddBonusMatrix:
+    bonusMatrix: 1
+  # -----------
+  # ROWS
+  # -----------
+  eventAddBonusRows:
+    bonusRows: 1
+    #bonusRows: 3
+  # -----------
+  # COLUMNS
+  # -----------
+  eventAddBonusColumns:
+    bonusColumns: 1
+    #bonusColumns: 3
+  ## -----------
+  ## MULTIPLIER
+  ## -----------
+  #eventHitShotAwardBonusMultiplier2X:
+  #  bonus_multiplier:
+  #    int: 2
+  #    action: set
+      
+# -----------------------------
+# SHOWS
+# -----------------------------
+shows:
+  # -----------------------------
+  # KISS::MATRIX::RED
+  # -----------------------------
+  showKissMatrixLitSolidRed:
+    - time: 0
+      lights:
+        (led1): 'ff0000'
+        (led2): 'ff0000'
+        (led3): 'ff0000'
+    - time: 0.5s
+      lights:
+        (led1): 'ee0000'
+        (led2): 'ee0000'
+        (led3): 'ee0000'
+    - time: 1.0s
+
+  showKissMatrixLitFlashRed:
+    - time: 0
+      lights:
+        (led1): 'cc0000'
+        (led2): '660000'
+        (led3): '660000'
+    - time: 0.33s
+      lights:
+        (led1): '660000'
+        (led2): 'cc0000'
+        (led3): '660000'
+    - time: 0.66s
+      lights:
+        (led1): '660000'
+        (led2): '660000'
+        (led3): 'cc0000'
+    - time: 1.0s
+
+  # -----------------------------
+  # KISS::MATRIX::CYAN
+  # -----------------------------
+  showKissMatrixLitSolidCyan:
+    - time: 0
+      lights:
+        (led1): '00ffff'
+        (led2): '00ffff'
+        (led3): '00ffff'
+    - time: 0.5s
+      lights:
+        (led1): '00eeee'
+        (led2): '00eeee'
+        (led3): '00eeee'
+    - time: 1.0s
+        
+  showKissMatrixLitFlashCyan:
+    - time: 0
+      lights:
+        (led1): '00cccc'
+        (led2): '006666'
+        (led3): '006666'
+    - time: 0.33s
+      lights:
+        (led1): '006666'
+        (led2): '00cccc'
+        (led3): '006666'
+    - time: 0.66s
+      lights:
+        (led1): '006666'
+        (led2): '006666'
+        (led3): '00cccc'
+    - time: 1.0s
+    
+  # -----------------------------
+  # KISS::MATRIX::YELLOW
+  # -----------------------------
+  showKissMatrixLitSolidYellow:
+    - time: 0
+      lights:
+        (led1): 'ffff00'
+        (led2): 'ffff00'
+        (led3): 'ffff00'
+    - time: 0.5s
+      lights:
+        (led1): 'eeee00'
+        (led2): 'eeee00'
+        (led3): 'eeee00'
+    - time: 1.0s
+        
+  showKissMatrixLitFlashYellow:
+    - time: 0
+      lights:
+        (led1): 'cccc00'
+        (led2): '666600'
+        (led3): '666600'
+    - time: 0.33s
+      lights:
+        (led1): '666600'
+        (led2): 'cccc00'
+        (led3): '666600'
+    - time: 0.66s
+      lights:
+        (led1): '666600'
+        (led2): 'cccc00'
+        (led3): '666600'
+    - time: 1.0s
+    
+  # -----------------------------
+  # KISS::MATRIX::GREEN
+  # -----------------------------
+  showKissMatrixLitSolidGreen:
+    - time: 0
+      lights:
+        (led1): '00ff00'
+        (led2): '00ff00'
+        (led3): '00ff00'
+    - time: 0.5s
+      lights:
+        (led1): '00ee00'
+        (led2): '00ee00'
+        (led3): '00ee00'
+    - time: 1.0s
+        
+  showKissMatrixLitFlashGreen:
+    - time: 0
+      lights:
+        (led1): '00cc00'
+        (led2): '006600'
+        (led3): '006600'
+    - time: 0.33s
+      lights:
+        (led1): '006600'
+        (led2): '00cc00'
+        (led3): '006600'
+    - time: 0.66s
+      lights:
+        (led1): '006600'
+        (led2): '00cc00'
+        (led3): '006600'
+    - time: 1.0s
+

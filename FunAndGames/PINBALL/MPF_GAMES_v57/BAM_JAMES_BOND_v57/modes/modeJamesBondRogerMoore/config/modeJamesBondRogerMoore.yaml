@@ -1,0 +1,97 @@
+#config_version=6
+
+config:
+#- configJamesBondRogerMooreExtraBall.yaml
+##- configJamesBondRogerMooreShots.yaml
+- configJamesBondRogerMooreSlides.yaml
+#- configJamesBondRogerMooreThumpers.yaml
+
+mode:
+  start_events:
+    - eventStartModeJamesBondRogerMoore
+  stop_events:
+    - eventStopModeJamesBondRogerMoore
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  #mode_modeJamesBondRogerMoore_started:
+  mode_modeJamesBondRogerMoore_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlideJamesBondRogerMooreBase
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeJamesBondStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersJamesBondRogerMoore|1000ms
+    - eventResetBonusJamesBondRogerMoore|1000ms
+
+  # ---------------------
+  # EVENT::RESET::MULTIPLIERS
+  # ---------------------
+  eventResetMultipliersJamesBond:
+    - eventResetMultipliersJamesBondRogerMoore
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  mode_modeJamesBondRogerMoore_started:
+    nameMoon:
+      string: "ROGER MOORE"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersJamesBondRogerMoore:
+  #eventResetBonusJamesBondRogerMoore:
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusMatrix:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusRows:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusColumns:
+      int: 0
+      action: set
+    # -------------------------
+    
+  #eventResetMultipliersJamesBondRogerMoore:
+  eventResetBonusJamesBondRogerMoore:
+    # -------------------------
+    # RESET BONUS SUPER COLOSSAL
+    bonusSuper:
+      int: 0
+      action: set
+    # -------------------------
+    bonusColossal:
+      int: 0
+      action: set
+    # -------------------------
+
+    ## -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set

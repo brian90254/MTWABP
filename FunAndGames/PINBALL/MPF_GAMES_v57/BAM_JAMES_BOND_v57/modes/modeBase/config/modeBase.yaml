@@ -1,0 +1,38 @@
+#config_version=6
+
+# KISS
+
+#config:
+#- configBaseKissMatrixShots.yaml
+#- configBaseKissShots.yaml
+#- configBaseKissShows.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 5000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # ----------------------------
+  # START
+  # ----------------------------
+  mode_modeBase_started:
+    - playPoolSoundHorn
+
+# ---------------------
+# PLAYLIST::PLAYER
+# ---------------------
+playlist_player:
+
+  eventPauseTrackPlaylist:
+    trackplaylist:
+      action: stop
+      
+  eventResumeTrackPlaylist:
+    trackplaylist:
+      #playlist: playlistModeKissMusic
+      playlist: playlistModeJamesBondMusic
+      action: play
