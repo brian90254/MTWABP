@@ -1,0 +1,261 @@
+#config_version=6
+
+# MATA HARI
+
+# *****************************
+# SHOTS::DROPS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::DROP::LEFT
+    # -------------------
+    shotDropLeftA:
+        switch: s_1_8
+        enable_events: eventEnableShotDropLeftA
+        disable_events: eventDisableShotDropLeftA
+        restart_events: eventRestartShotDropLeftA
+        reset_events: eventResetShotDropLeftA
+        profile: spShotDrop
+
+    shotDropLeftB:
+        switch: s_1_7
+        enable_events: eventEnableShotDropLeftB
+        disable_events: eventDisableShotDropLeftB
+        restart_events: eventRestartShotDropLeftB
+        reset_events: eventResetShotDropLeftB
+        profile: spShotDrop
+
+    shotDropLeftC:
+        switch: s_1_9
+        enable_events: eventEnableShotDropLeftC
+        disable_events: eventDisableShotDropLeftC
+        restart_events: eventRestartShotDropLeftC
+        reset_events: eventResetShotDropLeftC
+        profile: spShotDrop
+        
+    shotDropLeftD:
+        switch: s_1_6
+        enable_events: eventEnableShotDropLeftD
+        disable_events: eventDisableShotDropLeftD
+        restart_events: eventRestartShotDropLeftD
+        reset_events: eventResetShotDropLeftD
+        profile: spShotDrop
+        
+    # -------------------
+    # SHOTS::DROP::LEFT
+    # -------------------
+    shotDropRightA:
+        switch: s_1_10
+        enable_events: eventEnableShotDropRightA
+        disable_events: eventDisableShotDropRightA
+        restart_events: eventRestartShotDropRightA
+        reset_events: eventResetShotDropRightA
+        profile: spShotDrop
+
+    shotDropRightB:
+        switch: s_1_5
+        enable_events: eventEnableShotDropRightB
+        disable_events: eventDisableShotDropRightB
+        restart_events: eventRestartShotDropRightB
+        reset_events: eventResetShotDropRightB
+        profile: spShotDrop
+
+    shotDropRightC:
+        switch: s_1_11
+        enable_events: eventEnableShotDropRightC
+        disable_events: eventDisableShotDropRightC
+        restart_events: eventRestartShotDropRightC
+        reset_events: eventResetShotDropRightC
+        profile: spShotDrop
+        
+    shotDropRightD:
+        switch: s_1_4
+        enable_events: eventEnableShotDropRightD
+        disable_events: eventDisableShotDropRightD
+        restart_events: eventRestartShotDropRightD
+        reset_events: eventResetShotDropRightD
+        profile: spShotDrop
+
+    # -------------------
+    # SHOTS::DROP::AWARD
+    # -------------------
+    shotDropLeftRightAward:
+        #switch: s_1_4
+        enable_events: eventEnableShotDropLeftRightAward
+        disable_events: eventDisableShotDropLeftRightAward
+        restart_events: eventRestartShotDropLeftRightAward
+        reset_events: eventResetShotDropLeftRightAward
+        hit_events: eventHitShotDropLeftRightAward
+        profile: spShotDropLeftRightAward
+        show_tokens:
+            led: ledSpecialWhenLit
+        
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::LANES::LEFT
+    # -------------------
+    shotGroupDropLeftRight:
+        shots:
+            - shotDropRightA
+            - shotDropRightB
+            - shotDropRightC
+            - shotDropRightD
+            - shotDropLeftA
+            - shotDropLeftB
+            - shotDropLeftC
+            - shotDropLeftD
+        enable_events:
+            - eventEnableShotGroupDropLeftRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupDropLeftRight
+        reset_events:
+            - eventResetShotGroupDropLeftRight
+        restart_events:
+            - eventRestartShotGroupDropLeftRight
+        #rotate_left_events:
+        #    - sw_left_flipper
+        #rotate_right_events:
+        #    - sw_right_flipper
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::DROP::AWARD
+    # -----------------------------
+    spShotDropLeftRightAward:
+        states:
+          - name: unlitFlash
+            show: flashLedTwoColor
+            speed: 2
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 2
+            show_tokens:
+                color1: 'cc0000'
+                color2: '880000'
+          - name: litSolid
+            show: flashLedTwoColor
+            show_tokens:
+                color1: 'ff0000'
+                color2: 'ff0000'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::DROPS
+    # -----------------------------
+    spShotDrop:
+        states:
+          - name: litFlash
+          # --------------
+          - name: litSolid
+          # --------------
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    mode_modeMataHari_started:
+        # DROPS
+        - eventRestartShotDropLeftA
+        - eventRestartShotDropLeftB
+        - eventRestartShotDropLeftC
+        - eventRestartShotDropLeftD
+        - eventRestartShotDropRightA
+        - eventRestartShotDropRightB
+        - eventRestartShotDropRightC
+        - eventRestartShotDropRightD
+        # GROUP
+        - eventRestartShotGroupDropLeftRight
+        # AWARD
+        - eventRestartShotDropLeftRightAward
+        
+    shotGroupDropLeftRight_litSolid_complete:
+        # AWARD
+        - eventHitShotDropLeftRightAward
+        # RESET DROPS AFTER DELAY
+        - eventResetDropTargetBankRight|2000
+        - eventResetDropTargetBankLeft|2500
+        # RESTART
+        - eventRestartShotDropLeftA|3000
+        - eventRestartShotDropLeftB|3000
+        - eventRestartShotDropLeftC|3000
+        - eventRestartShotDropLeftD|3000
+        - eventRestartShotDropRightA|3000
+        - eventRestartShotDropRightB|3000
+        - eventRestartShotDropRightC|3000
+        - eventRestartShotDropRightD|3000
+        # GROUP
+        - eventRestartShotGroupDropLeftRight|3500
+
+    # -----------------------------------
+    # THIS IS TO ADD TO BONUS ON DROP LEFT HIT
+    # -----------------------------------
+    shotDropLeftA_hit:
+        - eventCompleteBonusOnes
+    shotDropLeftB_hit:
+        - eventCompleteBonusOnes
+    shotDropLeftC_hit:
+        - eventCompleteBonusOnes
+    shotDropLeftD_hit:
+        - eventCompleteBonusOnes
+    # -----------------------------------
+    # THIS IS TO ADD TO BONUS ON DROP RIGHT HIT
+    # -----------------------------------
+    shotDropRightA_hit:
+        - eventCompleteBonusOnes
+    shotDropRightB_hit:
+        - eventCompleteBonusOnes
+    shotDropRightC_hit:
+        - eventCompleteBonusOnes
+    shotDropRightD_hit:
+        - eventCompleteBonusOnes
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+# -----------------------------------
+# THIS IS TO ADD TO SCORE ON DROP LEFT HIT
+# -----------------------------------
+    shotDropLeftA_hit:
+        score: 501
+    shotDropLeftB_hit:
+        score: 502
+    shotDropLeftC_hit:
+        score: 503
+    shotDropLeftD_hit:
+        score: 504
+    
+# -----------------------------------
+# THIS IS TO ADD TO SCORE ON DROP LEFT HIT
+# -----------------------------------
+    shotDropRightA_hit:
+        score: 505
+    shotDropRightB_hit:
+        score: 506
+    shotDropRightC_hit:
+        score: 507
+    shotDropRightD_hit:
+        score: 508
+        
+    # SPECIAL
+    shotDropLeftRightAward_unlitFlash_hit:
+        score: 25000
+        
+    shotDropLeftRightAward_litFlash_hit:
+        score: 50000
+

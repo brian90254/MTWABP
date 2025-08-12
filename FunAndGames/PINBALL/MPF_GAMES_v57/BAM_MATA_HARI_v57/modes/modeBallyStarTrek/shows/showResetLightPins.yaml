@@ -1,0 +1,255 @@
+#show_version=6
+
+- time: 0
+
+  lights:
+    # PIN 1
+    ledPin1A: 'ffffff'
+    ledPin1B: '888888'
+    ledPin1C: '888888'
+    ledPin1D: '888888'
+
+    # PIN 2
+    ledPin2A: 'ffffff'
+    ledPin2B: '888888'
+    ledPin2C: '888888'
+    ledPin2D: '888888'
+    
+    # PIN 3
+    ledPin3A: 'ffffff'
+    ledPin3B: '888888'
+    ledPin3C: '888888'
+    ledPin3D: '888888'
+
+    # PIN 4
+    ledPin4A: 'ffffff'
+    ledPin4B: '888888'
+    ledPin4C: '888888'
+    ledPin4D: '888888'
+    
+    # PIN 5
+    ledPin5A: 'ffffff'
+    ledPin5B: '888888'
+    ledPin5C: '888888'
+    ledPin5D: '888888'
+    
+    # PIN 6
+    ledPin6A: 'ffffff'
+    ledPin6B: '888888'
+    ledPin6C: '888888'
+    ledPin6D: '888888'
+
+    # PIN 7
+    ledPin7A: 'ffffff'
+    ledPin7B: '888888'
+    ledPin7C: '888888'
+    ledPin7D: '888888'
+    
+    # PIN 8
+    ledPin8A: 'ffffff'
+    ledPin8B: '888888'
+    ledPin8C: '888888'
+    ledPin8D: '888888'
+
+    # PIN 9
+    ledPin9A: 'ffffff'
+    ledPin9B: '888888'
+    ledPin9C: '888888'
+    ledPin9D: '888888'
+    
+    # PIN 10
+    ledPin10A: 'ffffff'
+    ledPin10B: '888888'
+    ledPin10C: '888888'
+    ledPin10D: '888888'
+    
+- time: 1
+
+  lights:
+    # PIN 1
+    ledPin1A: '888888'
+    ledPin1B: 'ffffff'
+    ledPin1C: '888888'
+    ledPin1D: '888888'
+
+    # PIN 2
+    ledPin2A: '888888'
+    ledPin2B: 'ffffff'
+    ledPin2C: '888888'
+    ledPin2D: '888888'
+    
+    # PIN 3
+    ledPin3A: '888888'
+    ledPin3B: 'ffffff'
+    ledPin3C: '888888'
+    ledPin3D: '888888'
+
+    # PIN 4
+    ledPin4A: '888888'
+    ledPin4B: 'ffffff'
+    ledPin4C: '888888'
+    ledPin4D: '888888'
+    
+    # PIN 5
+    ledPin5A: '888888'
+    ledPin5B: 'ffffff'
+    ledPin5C: '888888'
+    ledPin5D: '888888'
+    
+    # PIN 6
+    ledPin6A: '888888'
+    ledPin6B: 'ffffff'
+    ledPin6C: '888888'
+    ledPin6D: '888888'
+
+    # PIN 7
+    ledPin7A: '888888'
+    ledPin7B: 'ffffff'
+    ledPin7C: '888888'
+    ledPin7D: '888888'
+    
+    # PIN 8
+    ledPin8A: '888888'
+    ledPin8B: 'ffffff'
+    ledPin8C: '888888'
+    ledPin8D: '888888'
+
+    # PIN 9
+    ledPin9A: '888888'
+    ledPin9B: 'ffffff'
+    ledPin9C: '888888'
+    ledPin9D: '888888'
+    
+    # PIN 10
+    ledPin10A: '888888'
+    ledPin10B: 'ffffff'
+    ledPin10C: '888888'
+    ledPin10D: '888888'
+    
+- time: 2
+
+  lights:
+    # PIN 1
+    ledPin1A: '888888'
+    ledPin1B: '888888'
+    ledPin1C: 'ffffff'
+    ledPin1D: '888888'
+
+    # PIN 2
+    ledPin2A: '888888'
+    ledPin2B: '888888'
+    ledPin2C: 'ffffff'
+    ledPin2D: '888888'
+    
+    # PIN 3
+    ledPin3A: '888888'
+    ledPin3B: '888888'
+    ledPin3C: 'ffffff'
+    ledPin3D: '888888'
+
+    # PIN 4
+    ledPin4A: '888888'
+    ledPin4B: '888888'
+    ledPin4C: 'ffffff'
+    ledPin4D: '888888'
+    
+    # PIN 5
+    ledPin5A: '888888'
+    ledPin5B: '888888'
+    ledPin5C: 'ffffff'
+    ledPin5D: '888888'
+    
+    # PIN 6
+    ledPin6A: '888888'
+    ledPin6B: '888888'
+    ledPin6C: 'ffffff'
+    ledPin6D: '888888'
+
+    # PIN 7
+    ledPin7A: '888888'
+    ledPin7B: '888888'
+    ledPin7C: 'ffffff'
+    ledPin7D: '888888'
+    
+    # PIN 8
+    ledPin8A: '888888'
+    ledPin8B: '888888'
+    ledPin8C: 'ffffff'
+    ledPin8D: '888888'
+
+    # PIN 9
+    ledPin9A: '888888'
+    ledPin9B: '888888'
+    ledPin9C: 'ffffff'
+    ledPin9D: '888888'
+    
+    # PIN 10
+    ledPin10A: '888888'
+    ledPin10B: '888888'
+    ledPin10C: 'ffffff'
+    ledPin10D: '888888'
+    
+- time: 3
+
+  lights:
+    # PIN 1
+    ledPin1A: '888888'
+    ledPin1B: '888888'
+    ledPin1C: '888888'
+    ledPin1D: 'ffffff'
+
+    # PIN 2
+    ledPin2A: '888888'
+    ledPin2B: '888888'
+    ledPin2C: '888888'
+    ledPin2D: 'ffffff'
+    
+    # PIN 3
+    ledPin3A: '888888'
+    ledPin3B: '888888'
+    ledPin3C: '888888'
+    ledPin3D: 'ffffff'
+
+    # PIN 4
+    ledPin4A: '888888'
+    ledPin4B: '888888'
+    ledPin4C: '888888'
+    ledPin4D: 'ffffff'
+    
+    # PIN 5
+    ledPin5A: '888888'
+    ledPin5B: '888888'
+    ledPin5C: '888888'
+    ledPin5D: 'ffffff'
+    
+    # PIN 6
+    ledPin6A: '888888'
+    ledPin6B: '888888'
+    ledPin6C: '888888'
+    ledPin6D: 'ffffff'
+
+    # PIN 7
+    ledPin7A: '888888'
+    ledPin7B: '888888'
+    ledPin7C: '888888'
+    ledPin7D: 'ffffff'
+    
+    # PIN 8
+    ledPin8A: '888888'
+    ledPin8B: '888888'
+    ledPin8C: '888888'
+    ledPin8D: 'ffffff'
+
+    # PIN 9
+    ledPin9A: '888888'
+    ledPin9B: '888888'
+    ledPin9C: '888888'
+    ledPin9D: 'ffffff'
+    
+    # PIN 10
+    ledPin10A: '888888'
+    ledPin10B: '888888'
+    ledPin10C: '888888'
+    ledPin10D: 'ffffff'
+    
+- time: 4

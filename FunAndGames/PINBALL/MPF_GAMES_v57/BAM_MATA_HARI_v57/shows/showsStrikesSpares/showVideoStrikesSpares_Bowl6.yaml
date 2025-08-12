@@ -1,0 +1,24 @@
+#show_version=6
+
+- time: 0
+  slides:
+    slideVideoStrikesSpares_Bowl6:
+      target: displayVideoDMD
+      widgets:
+      - type: video
+        video: Bowl6
+        auto_play: True
+        volume: 1.0
+        z: 200
+
+# TIME EQUALS VIDEO LENGTH - 1
+- time: '+15'
+  events:
+    - eventResumeTrackPlaylist
+
+- time: '+2'
+  events:
+    - releaseBallHoldSaucerTop
+    - removeSlideVideoLayout
+              
+- time: '+1'
