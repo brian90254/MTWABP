@@ -1,0 +1,476 @@
+#config_version=6
+
+# JCv50 (Jupiter Crush v0.50)
+  
+# *****************************      
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+  # -----------------------------
+  # PROFILE::DROP::LEFT
+  # -----------------------------
+    spDropLfJupiterOne:
+        states:
+          - name: litFlash
+            show: flashTwoLedColor
+            speed: 2
+            show_tokens:
+               color1: 'ffff00'
+               color2: '808000'
+          - name: litSolid
+            show: onLedColor
+            show_tokens:
+               color: '00ff00'
+        loop: false
+        
+    spDropLf123JupiterOne:
+        states:
+          - name: litFlash
+            show: traceThreeLedColorRev
+            speed: 1
+            show_tokens:
+               color: '0000ff'
+          - name: litSolid
+            show: onThreeLedThreeColor
+            show_tokens:
+               color1: 'ff0000'
+               color2: '00ff00'
+               color3: 'ff0000'
+        #loop: true
+        loop: false
+        
+  # -----------------------------
+  # PROFILE::TARGET::HUNTER
+  # -----------------------------
+    spTargetHUNTERJupiterOne:
+        states:
+          - name: litFlash
+            show: flashTwoLedFourColor
+            speed: 2
+            #speed: 1
+            show_tokens:
+                color1: 'ff00ff'
+                color2: '000000'
+                color3: '800080'
+                color4: '000000'
+          - name: unlitSolid
+            show: flashTwoLedFourColor2
+            show_tokens:
+                color1: '000000'
+                color2: '00ff00'
+                color3: '000000'
+                color4: '00ff00'
+        loop: false
+        
+  # -----------------------------
+  # PROFILE::HUNTER::MUSIC
+  # -----------------------------
+    spMusicHUNTERJupiterOne:
+        states:
+          - name: loopOn
+          - name: loopOff
+        loop: true
+        
+  # -----------------------------
+  # PROFILE::OUTLANES
+  # -----------------------------
+    spLaneOutretJupiterOne:
+        states:
+          - name: unlitSolid
+            show: onLedColor
+            show_tokens:
+               color: '000000'
+          - name: litFlash
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ffff'
+               color2: '00cccc'  
+        loop: false
+        
+  # -----------------------------
+  # PROFILE::REVERSE::TARGET
+  # -----------------------------
+    spReverseTargetJupiterOne:
+        states:
+          - name: litFlashBlue
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '0000ff'
+               color2: '0000cc'
+          - name: litFlashCyan
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ffff'
+               color2: '00cccc'
+          - name: litFlashGreen
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ff00'
+               color2: '00cc00'
+          - name: litFlashYellow
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ffff00'
+               color2: 'cccc00'
+          - name: litFlashRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'cc0000'
+          - name: litSolidRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'ff0000'
+        loop: false
+
+  # -----------------------------
+  # PROFILE::TURN::AROUND
+  # -----------------------------
+    spTurnAroundJupiterOne:
+        states:
+          - name: litFlashBlue
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '0000ff'
+               color2: '0000cc'
+          - name: litFlashCyan
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ffff'
+               color2: '00cccc'
+          - name: litFlashGreen
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ff00'
+               color2: '00cc00'
+          - name: litFlashYellow
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ffff00'
+               color2: 'cccc00'
+          - name: litFlashRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'cc0000'
+          - name: litSolidRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'ff0000'
+        loop: false
+        
+  # -----------------------------
+  # PROFILE::VUK::SPINNER
+  # -----------------------------
+    spVukSpinnerJupiterOne:
+        states:
+          - name: litFlashBlue
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '0000ff'
+               color2: '0000cc'
+          - name: litFlashCyan
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ffff'
+               color2: '00cccc'
+          - name: litFlashGreen
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ff00'
+               color2: '00cc00'
+          - name: litFlashYellow
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ffff00'
+               color2: 'cccc00'
+          - name: litFlashRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'cc0000'
+          - name: litSolidRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'ff0000'
+        loop: false
+        
+# *****************************      
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::DROP::LEFT
+    # -------------------
+    shotDropLf1JupiterOne:
+        switch: s_drop_lf_1
+        profile:
+            spDropLf123JupiterOne
+        show_tokens:
+            led1: l_drop_lf_1_3
+            led2: l_drop_lf_1_2
+            led3: l_drop_lf_1_1
+            
+    shotDropLf2JupiterOne:
+        switch: s_drop_lf_2
+        profile:
+            spDropLf123JupiterOne
+        show_tokens:
+            led1: l_drop_lf_2_3
+            led2: l_drop_lf_2_2
+            led3: l_drop_lf_2_1
+
+    shotDropLf3JupiterOne:
+        switch: s_drop_lf_3
+        profile:
+            spDropLf123JupiterOne
+        show_tokens:
+            led1: l_drop_lf_3_3
+            led2: l_drop_lf_3_2
+            led3: l_drop_lf_3_1
+
+    # -------------------
+    # SHOTS::DROP::RIGHT
+    # -------------------
+    shotDropRt1JupiterOne:
+        switch: s_drop_rt_1
+            
+    shotDropRt2JupiterOne:
+        switch: s_drop_rt_2
+        
+    shotDropRt3JupiterOne:
+        switch: s_drop_rt_3
+            
+
+    # -------------------
+    # SHOTS::TARGET::HUNTER
+    # -------------------
+    shotTargetHJupiterOne:
+        switch: s_target_H
+        profile: spTargetHUNTERJupiterOne
+        show_tokens:
+            led1: l_hunter_target_1
+            led2: l_hunter_bonus_1
+            
+    shotTargetUJupiterOne:
+        switch: s_target_U
+        profile: spTargetHUNTERJupiterOne
+        show_tokens:
+            led1: l_hunter_target_2
+            led2: l_hunter_bonus_2
+            
+    shotTargetNJupiterOne:
+        switch: s_target_N
+        profile: spTargetHUNTERJupiterOne
+        show_tokens:
+            led1: l_hunter_target_3
+            led2: l_hunter_bonus_3
+            
+    shotTargetTJupiterOne:
+        switch: s_target_T
+        profile: spTargetHUNTERJupiterOne
+        show_tokens:
+            led1: l_hunter_target_4
+            led2: l_hunter_bonus_4
+            
+    shotTargetEJupiterOne:
+        switch: s_target_E
+        profile: spTargetHUNTERJupiterOne
+        show_tokens:
+            led1: l_hunter_target_5
+            led2: l_hunter_bonus_5
+            
+    shotTargetRJupiterOne:
+        switch: s_target_R
+        profile: spTargetHUNTERJupiterOne
+        show_tokens:
+            led1: l_hunter_target_6
+            led2: l_hunter_bonus_6
+            
+    # -------------------
+    # SHOTS::TARGET::MUSIC
+    # -------------------
+    shotMusicHJupiterOne:
+        switch: s_target_H
+        profile: spMusicHUNTERJupiterOne
+            
+    shotMusicUJupiterOne:
+        switch: s_target_U
+        profile: spMusicHUNTERJupiterOne
+            
+    shotMusicNJupiterOne:
+        switch: s_target_N
+        profile: spMusicHUNTERJupiterOne
+             
+    shotMusicTJupiterOne:
+        switch: s_target_T
+        profile: spMusicHUNTERJupiterOne
+            
+    shotMusicEJupiterOne:
+        switch: s_target_E
+        profile: spMusicHUNTERJupiterOne
+            
+    shotMusicRJupiterOne:
+        switch: s_target_R
+        profile: spMusicHUNTERJupiterOne
+
+    # -------------------
+    # SHOTS::LANES::OUTRET
+    # -------------------
+    shotLaneOutret1JupiterOne:
+        switch: s_outlane_left
+        profile: spLaneOutretJupiterOne
+        show_tokens:
+            led: l_lane_outret_1
+
+    shotLaneOutret2JupiterOne:
+        switch: s_return_lane_left
+        profile: spLaneOutretJupiterOne
+        show_tokens:
+            led: l_lane_outret_2
+            
+    shotLaneOutret3JupiterOne:
+        switch: s_return_lane_right
+        profile: spLaneOutretJupiterOne
+        show_tokens:
+            led: l_lane_outret_3
+            
+    shotLaneOutret4JupiterOne:
+        switch: s_outlane_right
+        profile: spLaneOutretJupiterOne
+        show_tokens:
+            led: l_lane_outret_4
+
+    # -------------------
+    # SHOTS::REVERSE::TARGET
+    # -------------------
+    shotReverseTargetJupiterOne:
+        switch: s_target_reverse
+        profile: spReverseTargetJupiterOne
+        show_tokens:
+            led: l_target_rev_2
+
+    # -------------------
+    # SHOTS::TURN::AROUND
+    # -------------------
+    shotTurnAroundJupiterOne:
+        switch: s_turn_around
+        profile: spTurnAroundJupiterOne
+        show_tokens:
+            led: l_turn_around_3
+            
+    # -------------------
+    # SHOTS::VUK::SPINNER
+    # -------------------
+    shotVukSpinnerJupiterOne:
+        switch: s_vuk
+        profile: spVukSpinnerJupiterOne
+        show_tokens:
+            led: l_spinner_mid_2
+
+
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::DROP::LEFT
+    # -------------------
+    sgDropLfJupiterOne:
+        shots:
+            shotDropLf1JupiterOne
+            shotDropLf2JupiterOne
+            shotDropLf3JupiterOne
+        reset_events:
+            sgDropLfJupiterOne_litSolid_complete
+            ball_started
+            mode_modeMoonJupiterOne_started
+            ball_will_end
+        enable_events:
+            ball_started
+            mode_modeMoonJupiterOne_started
+        disable_events: ball_ending
+
+    # -------------------
+    # SHOTGROUP::DROP::RIGHT
+    # -------------------
+    sgDropRtJupiterOne:
+        shots:
+            shotDropRt1JupiterOne
+            shotDropRt2JupiterOne
+            shotDropRt3JupiterOne
+        reset_events:
+            ball_started
+            mode_modeMoonJupiterOne_started
+            ball_will_end
+            #sgDropRtJupiterOne_litSolid_complete
+        enable_events:
+            ball_started
+            mode_modeMoonJupiterOne_started
+        disable_events: ball_ending
+
+    # -------------------
+    # SHOTGROUP::TARGET::HUNTER
+    # -------------------
+    sgTargetHUNTERJupiterOne:
+        shots:
+            shotTargetHJupiterOne
+            shotTargetUJupiterOne
+            shotTargetNJupiterOne
+            shotTargetTJupiterOne
+            shotTargetEJupiterOne
+            shotTargetRJupiterOne
+        rotate_left_events: s_flipper_left_active
+        rotate_right_events: s_flipper_right_active
+        enable_events:
+            ball_started
+            mode_modeMoonJupiterOne_started
+        disable_events: ball_ending
+        reset_events:
+            ball_will_end
+            ball_started
+            mode_modeMoonJupiterOne_started
+            eventResetHunterMultiplier
+        
+    # -------------------
+    # SHOTGROUP::LANES::OUTRET
+    # -------------------
+    sgLaneOutretJupiterOne:
+        shots:
+            shotLaneOutret1JupiterOne
+            shotLaneOutret2JupiterOne
+            shotLaneOutret3JupiterOne
+            shotLaneOutret4JupiterOne
+        rotate_left_events: s_flipper_left_active
+        rotate_right_events: s_flipper_right_active
+        reset_events:
+            ball_will_end
+            sgOutlaneReset
+            ball_started
+            mode_modeMoonJupiterOne_started
+        enable_events:
+            ball_started
+            mode_modeMoonJupiterOne_started
+        disable_events: ball_ending

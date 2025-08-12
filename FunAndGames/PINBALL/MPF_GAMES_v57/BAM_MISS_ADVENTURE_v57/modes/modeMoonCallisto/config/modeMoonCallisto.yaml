@@ -1,0 +1,341 @@
+#config_version=6
+
+config:
+- configShotsCallisto.yaml
+- configAchievementsCallisto.yaml
+- configScoringCallisto.yaml
+- configSpecialShotsCallisto.yaml
+- configExtraBallCallisto.yaml
+
+mode:
+  start_events: startModeCallisto
+  stop_events: stopModeCallisto
+  priority: 5000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeMoonCallisto_started:
+    # ---------------------
+    # EVENT::START::SPECIAL MODES
+    # ---------------------
+    #- eventStartModeSkillShot
+    #- eventStartModeCollectMidGameBonus
+    - eventStartModeAwardWheel
+    # ---------------------
+    # START::LIGHT::SHOWS
+    # ---------------------
+    - showCallistoStarShooterLane
+    - showCallistoStarTurnAround
+    - showCallistoStarOrbitLeft1
+    - showCallistoStarOrbitLeft2
+    - showCallistoStarOrbitRight
+    # ----------------------------
+    - eventResetMultipliersCalisto
+    # ----------------------------
+    # ---------------------
+    # EVENT::PLAYER::FLIPPERS
+    # ---------------------
+    - eventEnableFlipperCallisto|250ms
+    # ----------------------------
+    - eventDisableFlipperJupiterOne
+    - eventDisableFlipperEuropa
+    - eventDisableFlipperGanymede
+    #- eventDisableFlipperCallisto
+    # ---------------------
+    # EVENT::RESET::DROPS
+    # ---------------------
+    - eventResetDropTargetLeft|1.5s
+    - eventResetDropTargetRight|1s
+    # ---------------------
+    # EVENT::START::MULTIBALLS
+    # ---------------------
+    - eventStartModeMultiball
+    #- eventEnableMultiballUpperKicker
+    - eventDisableMultiballUpperKicker
+    - eventDisableShotStartMultiballVukCallisto
+    
+  # ----------------------------
+  # CALLISTO::INCREASE::DIFFICULTY
+  shotReverseTargetCallisto_hit:
+    eventRotateDropTargetLeft
+  shotTurnAroundCallisto_hit:
+    eventResetDropTargetLeft
+  # ----------------------------
+
+  # ---------------------
+  # EVENT::START::WHEEL_ACHIEVEMENT
+  # ---------------------
+  multiball_multiballUpperKicker_ended:
+    - eventEnableMultiballVuk
+    - eventEnableAwardWheel
+
+  # ---------------------
+  # COLLECT BONUS
+  # ---------------------
+  shotCollectMidGameBonusCallisto_hit:
+    - eventStartModeCollectMidGameBonus
+    - eventCollectMidGameBonus|1s
+
+variable_player:
+  mode_modeMoonCallisto_started:
+    nameMoon:
+      string: "Moon: Callisto"
+      action: set
+      
+# ---------------------
+# COIL::PLAYER
+# ---------------------
+coil_player:
+  # ----------------------------
+  # SAUCER MOTOR
+  # ----------------------------
+  eventStartSaucerVukShow:
+    c_spinner:
+      action: enable
+      
+  eventStopSaucerVukShow:
+    c_spinner:
+      action: disable
+      
+  eventStartSaucerKickerShow:
+    c_spinner:
+      action: enable
+      
+  eventStopSaucerKickerShow:
+    c_spinner:
+      action: disable
+  
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# ---------------------
+# SHOW::PLAYER::COILS
+# ---------------------
+  ball_lock_blVUK_locked_ball:
+    showBallLockVUK:
+      loops: 0
+      speed: 1
+
+  ball_lock_blKickerUpper_locked_ball:
+    showBallLockKickerUpper:
+      loops: 0
+      speed: 1
+      
+  # ----------------------------
+  # VUK SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  eventStartSaucerVukShow:
+    showSaucerMotorLights:
+      loops: -1
+      speed: 16
+      show_tokens:
+        color1: '80ff00'
+        color2: '00ff80'
+        color3: '000000'
+        color4: '000000'
+      key: saucerVukShow
+      
+  eventStopSaucerVukShow:
+    saucerVukShow:
+      action: stop
+  # ----------------------------
+  
+  # ----------------------------
+  # KICKER SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  eventStartSaucerKickerShow:
+    showSaucerMotorLights:
+      loops: -1
+      speed: 16
+      show_tokens:
+        color1: '8000ff'
+        color2: 'ff0080'
+        color3: '000000'
+        color4: '000000'
+      key: saucerKickerShow
+      
+  eventStopSaucerKickerShow:
+    #showSaucerMotorLights:
+    saucerKickerShow:
+      action: stop
+  # ----------------------------
+      
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------    
+  mode_modeMoonCallisto_started:
+    onThreeLedColor:
+      show_tokens:
+        led1: l_newton_ball_2
+        led2: l_newton_ball_3
+        led3: l_newton_ball_4
+        color: 'ffff88'
+      key: newtonBall
+                  
+  showJupiterOneMoonMode:
+    onThreeLedColor:
+      show_tokens:
+        led1: l_moon_modes_1_1
+        led2: l_moon_modes_1_2
+        led3: l_moon_modes_1_3
+        color: 'cc00ff'
+      key: JupiterOne
+
+  showEuropaMoonMode:
+    onThreeLedColor:
+      show_tokens:
+        led1: l_moon_modes_2_1
+        led2: l_moon_modes_2_2
+        led3: l_moon_modes_2_3
+        color: 'cc00ff'
+      key: Europa
+
+  showGanymedeMoonMode:
+    onThreeLedColor:
+      show_tokens:
+        led1: l_moon_modes_3_1
+        led2: l_moon_modes_3_2
+        led3: l_moon_modes_3_3
+        color: 'cc00ff'
+      key: Ganymede
+
+  showCallistoMoonMode:
+    pulseThreeLedTwoColor:
+      show_tokens:
+        led1: l_moon_modes_4_1
+        led2: l_moon_modes_4_2
+        led3: l_moon_modes_4_3
+        color1: 'cc00ff'
+        color2: '660088'
+      key: Callisto
+            
+  # -------------------------------
+  
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------
+  # ---------------------
+  # MODE SPECIFIC::STAR::ROLLOVERS
+  # ---------------------
+  # CALLISTO::MAGENTA
+  # ---------------------
+  showCallistoStarShooterLane:
+    swirlFourLedTwoColor:
+      show_tokens:
+        led1: l_lane_shooter_2_1
+        led2: l_lane_shooter_2_2
+        led3: l_lane_shooter_2_3
+        led4: l_lane_shooter_2_4
+        color1: '0000cc'
+        color2: '000066'
+      key: starShooterLane
+      
+  showCallistoStarTurnAround:
+    swirlFourLedTwoColor:
+      show_tokens:
+        led1: l_turn_around_4_1
+        led2: l_turn_around_4_2
+        led3: l_turn_around_4_3
+        led4: l_turn_around_4_4
+        color1: '0000cc'
+        color2: '000066'
+      key: starTurnAround
+      
+  showCallistoStarOrbitLeft1:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_left_4
+        color1: '0000ff'
+        color2: '0000cc'
+      key: starOrbitLeft1
+      
+  showCallistoStarOrbitLeft2:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_left_5
+        color1: '0000ff'
+        color2: '0000cc'
+      key: starOrbitLeft2
+      
+  showCallistoStarOrbitRight:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_right_2
+        color1: '0000ff'
+        color2: '0000cc'
+      key: starOrbitRight
+  # ---------------------
+  # END MODE SPECIFIC::CALLISTO::MAGENTA
+  # ---------------------
+      
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  mode_modeMoonCallisto_started:
+    musicCallisto001:
+      loops: -1
+      volume: 0.3
+      
+  mode_modeMoonCallisto_ending:
+    musicCallisto001:
+      action: stop
+  #---------------------
+  shotMusicHCallisto_loopOn_hit:
+    musicCallisto002:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicHCallisto_loopOff_hit:
+    musicCallisto002:
+      action: stop
+  # ---------------------      
+  shotMusicUCallisto_loopOn_hit:
+    musicCallisto003:
+      loops: -1
+      volume: 0.25
+      
+  shotMusicUCallisto_loopOff_hit:
+    musicCallisto003:
+      action: stop
+  # ---------------------
+  shotMusicNCallisto_loopOn_hit:
+    musicCallisto004:
+      loops: -1
+      volume: 0.6
+      
+  shotMusicNCallisto_loopOff_hit:
+    musicCallisto004:
+      action: stop
+  # ---------------------
+  shotMusicTCallisto_loopOn_hit:
+    musicCallisto005:
+      loops: -1
+      volume: 0.15
+      
+  shotMusicTCallisto_loopOff_hit:
+    musicCallisto005:
+      action: stop
+  # ---------------------
+  shotMusicECallisto_loopOn_hit:
+    musicCallisto006:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicECallisto_loopOff_hit:
+    musicCallisto006:
+      action: stop
+  # ---------------------
+  shotMusicRCallisto_loopOn_hit:
+    musicCallisto007:
+      loops: -1
+      volume: 0.3
+      
+  shotMusicRCallisto_loopOff_hit:
+    musicCallisto007:
+      action: stop
+  # ---------------------
+  

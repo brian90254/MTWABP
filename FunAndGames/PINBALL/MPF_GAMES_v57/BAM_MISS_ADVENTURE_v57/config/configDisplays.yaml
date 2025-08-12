@@ -1,0 +1,187 @@
+#config_version=6
+
+# ---------------
+# DISPLAYS::KIVY
+# ---------------
+kivy_config:
+  kivy:
+    desktop: 1
+    exit_on_escape: true
+    pause_on_minimize: 0
+    log_dir:
+    window_icon:
+  graphics:
+    borderless: true
+    window_state: visible
+    # visible, hidden, maximized, minimized
+    fbo: hardware
+    # hardware, software, force-hardware
+    left: 0
+    top: 0
+    #
+    #width: 3286
+    #height: 1180
+    #
+    #width: 1920
+    #height: 1080
+    #
+    #width: 1440
+    #height: 900
+    #
+    #
+    width: 3840
+    height: 1080
+    #width: 1920
+    #height: 540
+    maxfps: 30
+    multisamples: 2
+    position: custom
+    # auto, custom
+    show_cursor: false
+    resizable: false
+    rotation: 0
+    
+# -----------------
+# DISPLAYS::WINDOWS
+# -----------------
+window:
+  #width: 3286
+  #height: 1180
+  #
+  #width: 1920
+  #height: 1080
+  #
+  #width: 2880
+  #height: 1800
+  #
+  #width: 1440
+  #height: 900
+  #
+  #
+  #width: 3840
+  #height: 1080
+  width: 1920
+  height: 540
+  title: My first FAST game
+  resizable: true
+  fullscreen: false
+  #fullscreen: true
+  borderless: true
+  exit_on_escape: true
+  no_window: false
+
+# -----------------
+# DISPLAYS::DISPLAYS
+# -----------------
+displays:
+  window:
+    #width: 3286
+    #height: 1180
+    #
+    #width: 1920
+    #height: 1080
+    #
+    #width: 2880
+    #height: 1800
+    #
+    width: 3840
+    height: 1080
+    default: true
+    round_anchor_x: left
+    round_anchor_y: bottom
+  displayDMD:
+    #width: 170
+    #height: 96
+    width: 240
+    height: 135
+    #width: 240
+    #height: 150
+  displayBackglass:
+    width: 1920
+    height: 1080
+    
+# -----------------
+# DISPLAYS::SLIDES
+# -----------------
+slides:
+  slideLayout:
+    background_color: yellow
+    widgets:
+      - type: display
+        #width: 1366
+        #height: 768
+        width: 1920
+        height: 1080
+        #width: 2880
+        #height: 1800
+        source_display: displayDMD
+        x: 0
+        #y: 412
+        y: 0
+        anchor_y: bottom
+        anchor_x: left
+        effects:
+          - type: pixelate
+            pixel_size: 8
+            #pixel_size: 12
+          - type: gain
+            gain: 1.0
+          - type: dot_filter
+            #dots_x: 170
+            #dots_y: 96
+            dots_x: 240
+            dots_y: 135
+            #dots_x: 240
+            #dots_y: 150
+            #background_color: '101010'
+            background_color: '000000'
+            dot_size: 0.87
+      - type: display
+        width: 1920
+        height: 1080
+        source_display: displayBackglass
+        #x: 1366
+        #y: 52
+        x: 1920
+        y: 0
+        anchor_y: bottom
+        anchor_x: left
+        
+  slideDisplayDMD:
+    background_color: green
+    widgets:
+      - type: text
+        text: this is a slide in the displayDMD
+
+  slideDisplayDMD2:
+    background_color: '000000'
+    widgets:
+    - type: text
+      text: pause
+      color: '101010'
+      
+  slideDisplayBackglass:
+    background_color: blue
+    widgets:
+    - type: text
+      text: this is a slide in the DisplayBackglass
+        
+  slideDisplayBackglass2:
+    widgets:
+    - type: image
+      image: imagebackglass
+      #image: imagebackglassStrikesAndSpares
+      
+slide_player:
+  mc_ready:
+    slideLayout:
+      target: window
+    slideDisplayDMD:
+      target: displayDMD
+    slideDisplayBackglass:
+      target: displayBackglass
+  init_done:
+    slideDisplayBackglass2:
+      target: displayBackglass
+    slideDisplayDMD2:
+      target: displayDMD

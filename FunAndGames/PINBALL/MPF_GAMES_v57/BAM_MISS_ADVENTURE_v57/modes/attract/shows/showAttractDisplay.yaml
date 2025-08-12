@@ -1,0 +1,1368 @@
+#show_version=6
+
+- time: 0
+
+  slides:
+    # *************************
+    # LAST GAME SCORE
+    # *************************
+    showAttractDisplay_slide_1E:
+      target: displayDMD
+      widgets:
+      # -------------------------------------------------
+      #                       TOP
+      # -------------------------------------------------
+      # -----------------
+      # RED CENTER
+      # -----------------
+      - type: text
+        text: PLAYER 1
+        y: top-20
+        x: middle
+        z: 40
+        style: fontHeader
+        color: ff0000
+      
+      # -----------------
+      # OUTLINE GREEN
+      # -----------------
+      - type: text
+        text: PLAYER 1
+        y: top-20.25
+        x: middle-.25
+        z: 30
+        style: fontHeader
+        color: '00ff00'
+      
+      - type: text
+        text: PLAYER 1
+        y: top-20.25
+        x: middle+.25
+        z: 30
+        style: fontHeader
+        color: '00ff00'
+      
+      - type: text
+        text: PLAYER 1
+        y: top-19.75
+        x: middle-.25
+        z: 30
+        style: fontHeader
+        color: '00ff00'
+        
+      - type: text
+        text: PLAYER 1
+        y: top-19.75
+        x: middle+.25
+        z: 30
+        style: fontHeader
+        color: '00ff00'
+      # -------------------------------------------------
+
+
+      # -------------------------------------------------
+      #                       MIDDLE
+      # -------------------------------------------------
+      # -----------------
+      # RED CENTER
+      # -----------------
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        y: middle+3
+        x: middle
+        z: 40
+        style: fontCenter
+        color: ff0000
+      
+      # -----------------
+      # OUTLINE CYAN
+      # -----------------
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        y: middle+2
+        x: middle-1
+        z: 30
+        style: fontCenter
+        color: '00ffff'
+        
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        y: middle+4
+        x: middle+1
+        z: 30
+        style: fontCenter
+        color: '00ffff'
+        
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        y: middle+2
+        x: middle+1
+        z: 30
+        style: fontCenter
+        color: '00ffff'
+        
+      - type: text
+        text: (machine|player1_score)
+        number_grouping: true
+        min_digits: 2
+        y: middle+4
+        x: middle-1
+        z: 30
+        style: fontCenter
+        color: '00ffff'
+      # -------------------------------------------------
+
+
+      # -------------------------------------------------
+      #                       BOTTOM
+      # -------------------------------------------------
+      # -----------------
+      # CENTER YELLOW
+      # -----------------
+      - type: text
+        style: fontFooter
+        text: (machine|credits_string)
+        anchor_y: bottom
+        y: bottom+2
+        x: middle
+        z: 40
+        color: 8000ff
+      
+      # -----------------
+      # OUTLINE GREEN
+      # -----------------
+      - type: text
+        style: fontFooter
+        text: (machine|credits_string)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle-1
+        z: 30
+        color: ffff00
+        
+      - type: text
+        style: fontFooter
+        text: (machine|credits_string)
+        anchor_y: bottom
+        y: bottom+3
+        x: middle+1
+        z: 30
+        color: ffff00
+        
+      - type: text
+        style: fontFooter
+        text: (machine|credits_string)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle+1
+        z: 30
+        color: ffff00
+        
+      - type: text
+        style: fontFooter
+        text: (machine|credits_string)
+        anchor_y: bottom
+        y: bottom+3
+        x: middle-1
+        z: 30
+        color: ffff00
+      
+        # --------------------
+        # COLOR OUTLINE 
+        # --------------------
+      - type: rectangle
+        color: 8000ff
+        width: 236
+        height: 130
+        x: 120
+        y: 67
+        z: 3
+        # --------------------
+        # BLACK INFILL
+        # --------------------
+      - type: rectangle
+        color: '000000'
+        width: 232
+        height: 126
+        x: 120
+        y: 67
+        z: 5
+
+- time: '+4'
+
+  slides:
+    # *************************
+    # MISS ADVENTURE TITLE
+    # *************************
+    showAttractDisplay_slide_1:
+      target: displayDMD
+      widgets:
+        # --------------------
+        # MISS - CENTER TEXT
+        # --------------------
+      - type: text
+        text: Miss
+        y: top - 40
+        x: middle
+        style: fontTitle
+        color: ff00ff
+        z: 20
+        # --------------------
+        # MISS - OUTLINE
+        # --------------------
+      - type: text
+        text: Miss
+        y: top - 39
+        x: middle - 1
+        style: fontTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Miss
+        y: top - 39
+        x: middle + 1
+        style: fontTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Miss
+        y: top - 41
+        x: middle - 1
+        style: fontTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Miss
+        y: top - 41
+        x: middle + 1
+        style: fontTitle
+        color: 8000ff
+        z: 15
+        # --------------------
+        # MISS - DOUBLE _ OUTLINE
+        # --------------------
+      - type: text
+        text: Miss
+        y: top - 38
+        x: middle - 2
+        style: fontTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Miss
+        y: top - 38
+        x: middle + 2
+        style: fontTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Miss
+        y: top - 42
+        x: middle - 2
+        style: fontTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Miss
+        y: top - 42
+        x: middle + 2
+        style: fontTitle
+        color: ffff00
+        z: 10
+        # --------------------
+        # ADVENTURE - CENTER TEXT
+        # --------------------
+      - type: text
+        text: Adventure
+        y: middle - 15
+        x: middle
+        style: fontSubTitle
+        color: ff00ff
+        z: 20
+        # --------------------
+        # ADVENTURE - OUTLINE
+        # --------------------
+      - type: text
+        text: Adventure
+        y: middle - 16
+        x: middle - 1
+        style: fontSubTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Adventure
+        y: middle - 14
+        x: middle - 1
+        style: fontSubTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Adventure
+        y: middle - 14
+        x: middle + 1
+        style: fontSubTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Adventure
+        y: middle - 16
+        x: middle + 1
+        style: fontSubTitle
+        color: 8000ff
+        z: 15
+        # --------------------
+        # ADVENTURE - DOUBLE - OUTLINE
+        # --------------------
+      - type: text
+        text: Adventure
+        y: middle - 17
+        x: middle - 2
+        style: fontSubTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Adventure
+        y: middle - 13
+        x: middle - 2
+        style: fontSubTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Adventure
+        y: middle - 13
+        x: middle + 2
+        style: fontSubTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Adventure
+        y: middle - 17
+        x: middle + 2
+        style: fontSubTitle
+        color: ffff00
+        z: 10
+        # --------------------
+        # COLOR OUTLINE
+        # --------------------
+      - type: rectangle
+        color: 8000ff
+        width: 236
+        height: 130
+        x: 120
+        y: 67
+        z: 3
+      - type: rectangle
+        color: ff00ff
+        width: 228
+        height: 122
+        x: 120
+        y: 67
+        z: 6
+        # --------------------
+        # BLACK INFILL
+        # --------------------
+      - type: rectangle
+        color: ffff00
+        width: 232
+        height: 126
+        x: 120
+        y: 67
+        z: 5
+      - type: rectangle
+        color: '000000'
+        width: 224
+        height: 118
+        x: 120
+        y: 67
+        z: 7
+        
+- time: '+4'
+
+  slides:
+    # *************************
+    # GRAND CHAMPION
+    # *************************
+    showAttractDisplay_slide_1D:
+      target: displayDMD
+      widgets:
+        # --------------------
+        # GC NAME & SCORE - MAIN
+        # --------------------
+      - type: text
+        style: fontCenter
+        text: (machine|score1_value)
+        number_grouping: true
+        color: red
+        x: middle
+        y: middle + 2
+        z: 20
+        # --------------------
+        # GC NAME & SCORE - OUTLINE
+        # --------------------
+      - type: text
+        style: fontCenter
+        text: (machine|score1_value)
+        number_grouping: true
+        color: black
+        x: middle+1
+        y: middle + 1
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score1_value)
+        number_grouping: true
+        color: black
+        x: middle-1
+        y: middle + 3
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score1_value)
+        number_grouping: true
+        color: black
+        x: middle+1
+        y: middle + 3
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score1_value)
+        number_grouping: true
+        color: black
+        x: middle-1
+        y: middle + 1
+        z: 18
+        # --------------------
+        # GRAND CHAMPION - MAIN
+        # --------------------
+      - type: text
+        text: GRAND CHAMPION
+        z: 20
+        style: fontHeader
+        y: top - 15
+        x: middle
+        #color: '00ff00'
+        color: ffffff
+        # --------------------
+        # GRAND CHAMPION - OUTLINE
+        # --------------------
+      - type: text
+        text: GRAND CHAMPION
+        z: 15
+        style: fontHeader
+        y: top - 14
+        x: middle + 1
+        color: '000000'
+      - type: text
+        text: GRAND CHAMPION
+        z: 15
+        style: fontHeader
+        y: top - 14
+        x: middle - 1
+        color: '000000'
+      - type: text
+        text: GRAND CHAMPION
+        z: 15
+        style: fontHeader
+        y: top - 16
+        x: middle + 1
+        color: '000000'
+      - type: text
+        text: GRAND CHAMPION
+        z: 15
+        style: fontHeader
+        y: top - 16
+        x: middle - 1
+        color: '000000'
+        
+        # --------------------
+        # NAME - MAIN
+        # --------------------
+      - type: text
+        style: fontFooter
+        text: (machine|score1_name)
+        anchor_y: bottom
+        y: bottom
+        x: middle
+        #color: '00ff00'
+        color: ffffff
+        z: 20
+        # --------------------
+        # NAME - OUTLINE
+        # --------------------
+      - type: text
+        style: fontFooter
+        text: (machine|score1_name)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle+1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score1_name)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle-1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score1_name)
+        anchor_y: bottom
+        y: bottom-1
+        x: middle+1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score1_name)
+        anchor_y: bottom
+        y: bottom-1
+        x: middle-1
+        color: '000000'
+        z: 15
+        
+        # --------------------
+        # SOLID BACKGROUND
+        # --------------------
+      - type: rectangle
+        color: yellow
+        width: 240
+        height: 134
+        x: left+0
+        y: top+0
+        z: 5
+        anchor_x: left
+        anchor_y: top
+ 
+- time: '+4'
+
+  slides:
+    # *************************
+    # FIRST HIGH SCORE
+    # *************************
+    showAttractDisplay_slide_1E:
+      target: displayDMD
+      widgets:
+        # --------------------
+        # HS1 NAME & SCORE - MAIN
+        # --------------------
+      - type: text
+        style: fontCenter
+        text: (machine|score2_value)
+        number_grouping: true
+        color: ffff00
+        x: middle
+        y: middle+2
+        z: 20
+        # --------------------
+        # HS1 NAME & SCORE - OUTLINE
+        # --------------------
+      - type: text
+        style: fontCenter
+        text: (machine|score2_value)
+        number_grouping: true
+        color: black
+        x: middle+1
+        y: middle+3
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score2_value)
+        number_grouping: true
+        color: black
+        x: middle+1
+        y: middle+1
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score2_value)
+        number_grouping: true
+        color: black
+        x: middle-1
+        y: middle+3
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score2_value)
+        number_grouping: true
+        color: black
+        x: middle-1
+        y: middle+1
+        z: 18
+        # --------------------
+        # FIRST HIGH SCORE - MAIN
+        # --------------------
+      - type: text
+        text: FIRST HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 15
+        x: middle
+        #color: '00ff00'
+        color: ff8000
+        # --------------------
+        # FIRST HIGH SCORE - OUTLINE
+        # --------------------
+      - type: text
+        text: FIRST HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 14
+        x: middle + 1
+        color: '000000'
+      - type: text
+        text: FIRST HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 14
+        x: middle - 1
+        color: '000000'
+      - type: text
+        text: FIRST HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 16
+        x: middle + 1
+        color: '000000'
+      - type: text
+        text: FIRST HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 16
+        x: middle - 1
+        color: '000000'
+        
+        # --------------------
+        # NAME - MAIN
+        # --------------------
+      - type: text
+        style: fontFooter
+        text: (machine|score2_name)
+        anchor_y: bottom
+        y: bottom
+        x: middle
+        #color: '00ff00'
+        color: ff8000
+        z: 20
+        # --------------------
+        # NAME - OUTLINE
+        # --------------------
+      - type: text
+        style: fontFooter
+        text: (machine|score2_name)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle+1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score2_name)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle-1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score2_name)
+        anchor_y: bottom
+        y: bottom-1
+        x: middle+1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score2_name)
+        anchor_y: bottom
+        y: bottom-1
+        x: middle-1
+        color: '000000'
+        z: 15
+        
+        # --------------------
+        # SOLID BACKGROUND
+        # --------------------
+      - type: rectangle
+        #color: 8000ff
+        color: ff0000
+        width: 240
+        height: 134
+        x: left+0
+        y: top+0
+        z: 5
+        anchor_x: left
+        anchor_y: top
+
+- time: '+4'
+
+  slides:
+    # *************************
+    # SECOND HIGH SCORE
+    # *************************
+    showAttractDisplay_slide_1E:
+      target: displayDMD
+      widgets:
+        # --------------------
+        # HS2 NAME & SCORE - MAIN
+        # --------------------
+      - type: text
+        style: fontCenter
+        text: (machine|score3_value)
+        number_grouping: true
+        color: ffff00
+        x: middle
+        y: middle+2
+        z: 20
+        # --------------------
+        # HS1 NAME & SCORE - OUTLINE
+        # --------------------
+      - type: text
+        style: fontCenter
+        text: (machine|score3_value)
+        number_grouping: true
+        color: black
+        x: middle+1
+        y: middle+3
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score3_value)
+        number_grouping: true
+        color: black
+        x: middle+1
+        y: middle+1
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score3_value)
+        number_grouping: true
+        color: black
+        x: middle-1
+        y: middle+3
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score3_value)
+        number_grouping: true
+        color: black
+        x: middle-1
+        y: middle+1
+        z: 18
+        # --------------------
+        # SECOND HIGH SCORE - MAIN
+        # --------------------
+      - type: text
+        text: SECOND HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 15
+        x: middle
+        #color: '00ff00'
+        color: ff0000
+        # --------------------
+        # SECOND HIGH SCORE - OUTLINE
+        # --------------------
+      - type: text
+        text: SECOND HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 14
+        x: middle + 1
+        color: '000000'
+      - type: text
+        text: SECOND HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 14
+        x: middle - 1
+        color: '000000'
+      - type: text
+        text: SECOND HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 16
+        x: middle + 1
+        color: '000000'
+      - type: text
+        text: SECOND HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 16
+        x: middle - 1
+        color: '000000'
+        
+        # --------------------
+        # NAME - MAIN
+        # --------------------
+      - type: text
+        style: fontFooter
+        text: (machine|score3_name)
+        anchor_y: bottom
+        y: bottom
+        x: middle
+        #color: '00ff00'
+        color: ff0000
+        z: 20
+        # --------------------
+        # NAME - OUTLINE
+        # --------------------
+      - type: text
+        style: fontFooter
+        text: (machine|score3_name)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle+1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score3_name)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle-1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score3_name)
+        anchor_y: bottom
+        y: bottom-1
+        x: middle+1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score3_name)
+        anchor_y: bottom
+        y: bottom-1
+        x: middle-1
+        color: '000000'
+        z: 15
+        
+        # --------------------
+        # SOLID BACKGROUND
+        # --------------------
+      - type: rectangle
+        color: ff8000
+        width: 240
+        height: 134
+        x: left+0
+        y: top+0
+        z: 5
+        anchor_x: left
+        anchor_y: top
+        
+- time: '+4'
+
+  slides:
+    # *************************
+    # MISS ADVENTURE TITLE
+    # *************************
+    showAttractDisplay_slide_1:
+      target: displayDMD
+      widgets:
+        # --------------------
+        # MISS - CENTER TEXT
+        # --------------------
+      - type: text
+        text: Miss
+        y: top - 40
+        x: middle
+        style: fontTitle
+        color: ff00ff
+        z: 20
+        # --------------------
+        # MISS - OUTLINE
+        # --------------------
+      - type: text
+        text: Miss
+        y: top - 39
+        x: middle - 1
+        style: fontTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Miss
+        y: top - 39
+        x: middle + 1
+        style: fontTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Miss
+        y: top - 41
+        x: middle - 1
+        style: fontTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Miss
+        y: top - 41
+        x: middle + 1
+        style: fontTitle
+        color: 8000ff
+        z: 15
+        # --------------------
+        # MISS - DOUBLE _ OUTLINE
+        # --------------------
+      - type: text
+        text: Miss
+        y: top - 38
+        x: middle - 2
+        style: fontTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Miss
+        y: top - 38
+        x: middle + 2
+        style: fontTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Miss
+        y: top - 42
+        x: middle - 2
+        style: fontTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Miss
+        y: top - 42
+        x: middle + 2
+        style: fontTitle
+        color: ffff00
+        z: 10
+        # --------------------
+        # ADVENTURE - CENTER TEXT
+        # --------------------
+      - type: text
+        text: Adventure
+        y: middle - 15
+        x: middle
+        style: fontSubTitle
+        color: ff00ff
+        z: 20
+        # --------------------
+        # ADVENTURE - OUTLINE
+        # --------------------
+      - type: text
+        text: Adventure
+        y: middle - 16
+        x: middle - 1
+        style: fontSubTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Adventure
+        y: middle - 14
+        x: middle - 1
+        style: fontSubTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Adventure
+        y: middle - 14
+        x: middle + 1
+        style: fontSubTitle
+        color: 8000ff
+        z: 15
+      - type: text
+        text: Adventure
+        y: middle - 16
+        x: middle + 1
+        style: fontSubTitle
+        color: 8000ff
+        z: 15
+        # --------------------
+        # ADVENTURE - DOUBLE - OUTLINE
+        # --------------------
+      - type: text
+        text: Adventure
+        y: middle - 17
+        x: middle - 2
+        style: fontSubTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Adventure
+        y: middle - 13
+        x: middle - 2
+        style: fontSubTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Adventure
+        y: middle - 13
+        x: middle + 2
+        style: fontSubTitle
+        color: ffff00
+        z: 10
+      - type: text
+        text: Adventure
+        y: middle - 17
+        x: middle + 2
+        style: fontSubTitle
+        color: ffff00
+        z: 10
+        # --------------------
+        # COLOR OUTLINE
+        # --------------------
+      - type: rectangle
+        color: 8000ff
+        width: 236
+        height: 130
+        x: 120
+        y: 67
+        z: 3
+      - type: rectangle
+        color: ff00ff
+        width: 228
+        height: 122
+        x: 120
+        y: 67
+        z: 6
+        # --------------------
+        # BLACK INFILL
+        # --------------------
+      - type: rectangle
+        color: ffff00
+        width: 232
+        height: 126
+        x: 120
+        y: 67
+        z: 5
+      - type: rectangle
+        color: '000000'
+        width: 224
+        height: 118
+        x: 120
+        y: 67
+        z: 7
+        
+- time: '+4'
+
+  slides:
+    # *************************
+    # THIRD HIGH SCORE
+    # *************************
+    showAttractDisplay_slide_1E:
+      target: displayDMD
+      widgets:
+        # --------------------
+        # HS3 NAME & SCORE - MAIN
+        # --------------------
+      - type: text
+        style: fontCenter
+        text: (machine|score4_value)
+        number_grouping: true
+        color: ffff00
+        x: middle
+        y: middle+2
+        z: 20
+        # --------------------
+        # HS3 NAME & SCORE - OUTLINE
+        # --------------------
+      - type: text
+        style: fontCenter
+        text: (machine|score4_value)
+        number_grouping: true
+        color: black
+        x: middle+1
+        y: middle+3
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score4_value)
+        number_grouping: true
+        color: black
+        x: middle+1
+        y: middle+1
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score4_value)
+        number_grouping: true
+        color: black
+        x: middle-1
+        y: middle+3
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score4_value)
+        number_grouping: true
+        color: black
+        x: middle-1
+        y: middle+1
+        z: 18
+        # --------------------
+        # THIRD HIGH SCORE - MAIN
+        # --------------------
+      - type: text
+        text: THIRD HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 15
+        x: middle
+        color: '00ff00'
+        # --------------------
+        # THIRD HIGH SCORE - OUTLINE
+        # --------------------
+      - type: text
+        text: THIRD HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 14
+        x: middle + 1
+        color: '000000'
+      - type: text
+        text: THIRD HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 14
+        x: middle - 1
+        color: '000000'
+      - type: text
+        text: THIRD HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 16
+        x: middle + 1
+        color: '000000'
+      - type: text
+        text: THIRD HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 16
+        x: middle - 1
+        color: '000000'
+        
+        # --------------------
+        # NAME - MAIN
+        # --------------------
+      - type: text
+        style: fontFooter
+        text: (machine|score4_name)
+        anchor_y: bottom
+        y: bottom
+        x: middle
+        color: '00ff00'
+        z: 20
+        # --------------------
+        # NAME - OUTLINE
+        # --------------------
+      - type: text
+        style: fontFooter
+        text: (machine|score4_name)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle+1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score4_name)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle-1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score4_name)
+        anchor_y: bottom
+        y: bottom-1
+        x: middle+1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score4_name)
+        anchor_y: bottom
+        y: bottom-1
+        x: middle-1
+        color: '000000'
+        z: 15
+        
+        # --------------------
+        # SOLID BACKGROUND
+        # --------------------
+      - type: rectangle
+        color: 8000ff
+        width: 240
+        height: 134
+        x: left+0
+        y: top+0
+        z: 5
+        anchor_x: left
+        anchor_y: top
+
+- time: '+4'
+
+  slides:
+    # *************************
+    # FORTH HIGH SCORE
+    # *************************
+    showAttractDisplay_slide_1E:
+      target: displayDMD
+      widgets:
+        # --------------------
+        # HS4 NAME & SCORE - MAIN
+        # --------------------
+      - type: text
+        style: fontCenter
+        text: (machine|score5_value)
+        number_grouping: true
+        color: ffff00
+        x: middle
+        y: middle+2
+        z: 20
+        # --------------------
+        # HS4 NAME & SCORE - OUTLINE
+        # --------------------
+      - type: text
+        style: fontCenter
+        text: (machine|score5_value)
+        number_grouping: true
+        color: black
+        x: middle+1
+        y: middle+3
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score5_value)
+        number_grouping: true
+        color: black
+        x: middle+1
+        y: middle+1
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score5_value)
+        number_grouping: true
+        color: black
+        x: middle-1
+        y: middle+3
+        z: 18
+      - type: text
+        style: fontCenter
+        text: (machine|score5_value)
+        number_grouping: true
+        color: black
+        x: middle-1
+        y: middle+1
+        z: 18
+        # --------------------
+        # FORTH HIGH SCORE - MAIN
+        # --------------------
+      - type: text
+        text: FORTH HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 15
+        x: middle
+        color: '00ff00'
+        # --------------------
+        # FORTH HIGH SCORE - OUTLINE
+        # --------------------
+      - type: text
+        text: FORTH HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 14
+        x: middle + 1
+        color: '000000'
+      - type: text
+        text: FORTH HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 14
+        x: middle - 1
+        color: '000000'
+      - type: text
+        text: FORTH HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 16
+        x: middle + 1
+        color: '000000'
+      - type: text
+        text: FORTH HIGH SCORE
+        z: 20
+        style: fontHeader
+        y: top - 16
+        x: middle - 1
+        color: '000000'
+        
+        # --------------------
+        # NAME - MAIN
+        # --------------------
+      - type: text
+        style: fontFooter
+        text: (machine|score5_name)
+        anchor_y: bottom
+        y: bottom
+        x: middle
+        color: '00ff00'
+        z: 20
+        # --------------------
+        # NAME - OUTLINE
+        # --------------------
+      - type: text
+        style: fontFooter
+        text: (machine|score5_name)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle+1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score5_name)
+        anchor_y: bottom
+        y: bottom+1
+        x: middle-1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score5_name)
+        anchor_y: bottom
+        y: bottom-1
+        x: middle+1
+        color: '000000'
+        z: 15
+      - type: text
+        style: fontFooter
+        text: (machine|score5_name)
+        anchor_y: bottom
+        y: bottom-1
+        x: middle-1
+        color: '000000'
+        z: 15
+        
+        # --------------------
+        # SOLID BACKGROUND
+        # --------------------
+      - type: rectangle
+        color: ff8000
+        width: 240
+        height: 134
+        x: left+0
+        y: top+0
+        z: 5
+        anchor_x: left
+        anchor_y: top
+        
+- time: '+4'
+

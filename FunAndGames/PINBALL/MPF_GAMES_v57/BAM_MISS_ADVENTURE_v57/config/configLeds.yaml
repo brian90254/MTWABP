@@ -1,0 +1,555 @@
+#config_version=6
+
+# JCv50 (Jupiter Crush v0.50)
+
+lights:
+  
+  l_drop_rt_1_1:
+    number: 0-42
+    type: grb
+  l_drop_rt_1_2:
+    number: 0-43
+    type: grb
+  l_drop_rt_1_3:
+    number: 0-44
+    type: grb
+  l_drop_rt_2:
+    number: 0-7
+    type: grb
+  l_drop_rt_3:
+    number: 0-8
+    type: grb
+
+  l_drop_lf_1_1:
+    number: 0-94
+    type: grb
+    subtype: led
+  l_drop_lf_1_2:
+    number: 0-95
+    subtype: led
+    type: grb
+  l_drop_lf_1_3:
+    number: 0-96
+    subtype: led
+    type: grb
+  l_drop_lf_2_1:
+    number: 0-97
+    type: grb
+    subtype: led
+  l_drop_lf_2_2:
+    number: 0-98
+    type: grb
+    subtype: led
+  l_drop_lf_2_3:
+    number: 0-99
+    type: grb
+    subtype: led
+  l_drop_lf_3_1:
+    number: 0-100
+    type: grb
+    subtype: led
+  l_drop_lf_3_2:
+    number: 0-101
+    type: grb
+    subtype: led
+  l_drop_lf_3_3:
+    number: 0-102
+    type: grb
+    subtype: led
+
+  l_bonus_multi_1:
+    number: 0-3
+    type: grb
+  l_bonus_multi_2:
+    number: 0-4
+    type: grb
+  l_bonus_multi_3:
+    number: 0-5
+    type: grb
+  l_bonus_multi_4:
+    number: 0-6
+    type: grb
+  l_bonus_multi_5_1:
+    number: 0-30
+    type: grb
+  l_bonus_multi_5_2:
+    number: 0-31
+    type: grb
+  l_bonus_multi_5_3:
+    number: 0-32
+    type: grb
+  l_bonus_multi_5_4:
+    number: 0-33
+    type: grb
+  l_bonus_multi_5_5:
+    number: 0-34
+    type: grb
+  l_bonus_multi_5_6:
+    number: 0-35
+    type: grb
+
+  l_moon_modes_1_1:
+    number: 0-112
+    type: grb
+  l_moon_modes_1_2:
+    number: 0-113
+    type: grb
+  l_moon_modes_1_3:
+    number: 0-114
+    type: grb
+  l_moon_modes_2_1:
+    number: 0-115
+    type: grb
+  l_moon_modes_2_2:
+    number: 0-116
+    type: grb
+  l_moon_modes_2_3:
+    number: 0-117
+    type: grb
+  l_moon_modes_3_1:
+    number: 0-118
+    type: grb
+  l_moon_modes_3_2:
+    number: 0-119
+    type: grb
+  l_moon_modes_3_3:
+    number: 0-120
+    type: grb
+  l_moon_modes_4_1:
+    number: 0-121
+    type: grb
+  l_moon_modes_4_2:
+    number: 0-122
+    type: grb
+  l_moon_modes_4_3:
+    number: 0-123
+    type: grb
+
+  l_kicker_wheel_1_1:
+    number: 0-64
+    type: grb
+  l_kicker_wheel_1_2:
+    number: 0-65
+    type: grb
+  l_kicker_wheel_1_3:
+    number: 0-66
+    type: grb
+  l_kicker_wheel_2_1:
+    number: 0-67
+    type: grb
+  l_kicker_wheel_2_2:
+    number: 0-68
+    type: grb
+  l_kicker_wheel_2_3:
+    number: 0-69
+    type: grb
+  l_kicker_wheel_3_1:
+    number: 0-70
+    type: grb
+  l_kicker_wheel_3_2:
+    number: 0-71
+    type: grb
+  l_kicker_wheel_3_3:
+    number: 0-72
+    type: grb
+  l_kicker_wheel_4_1:
+    number: 0-73
+    type: grb
+  l_kicker_wheel_4_2:
+    number: 0-74
+    type: grb
+  l_kicker_wheel_4_3:
+    number: 0-75
+    type: grb
+  l_kicker_wheel_5_1:
+    number: 0-76
+    type: grb
+  l_kicker_wheel_5_2:
+    number: 0-77
+    type: grb
+  l_kicker_wheel_5_3:
+    number: 0-78
+    type: grb
+
+  l_hunter_target_1:
+    number: 0-132
+    type: grb
+  l_hunter_target_2:
+    number: 0-131
+    type: grb
+  l_hunter_target_3:
+    number: 0-128
+    type: grb
+  l_hunter_target_4:
+    number: 0-0
+    type: grb
+  l_hunter_target_5:
+    number: 0-1
+    type: grb
+  l_hunter_target_6:
+    number: 0-2
+    type: grb
+
+  l_hunter_bonus_1:
+    number: 0-15
+    type: grb
+  l_hunter_bonus_2:
+    number: 0-16
+    type: grb
+  l_hunter_bonus_3:
+    number: 0-17
+    type: grb
+  l_hunter_bonus_4:
+    number: 0-18
+    type: grb
+  l_hunter_bonus_5:
+    number: 0-19
+    type: grb
+  l_hunter_bonus_6:
+    number: 0-20
+    type: grb
+
+  l_attack_adv_1:
+    number: 0-14
+    type: grb
+  l_attack_adv_2:
+    number: 0-13
+    type: grb
+  l_attack_adv_3:
+    number: 0-12
+    type: grb
+  l_attack_adv_4:
+    number: 0-11
+    type: grb
+  l_attack_adv_5:
+    number: 0-10
+    type: grb
+
+  l_lane_outret_1:
+    number: 0-143
+    type: grb
+  l_lane_outret_2:
+    number: 0-144
+    type: grb
+  l_lane_outret_3:
+    number: 0-21
+    type: grb
+  l_lane_outret_4:
+    number: 0-22
+    type: grb
+
+  l_kicker_mode_1_1:
+    number: 0-79
+    type: grb
+  l_kicker_mode_1_2:
+    number: 0-80
+    type: grb
+  l_kicker_mode_1_3:
+    number: 0-81
+    type: grb
+  l_kicker_mode_2_1:
+    number: 0-82
+    type: grb
+  l_kicker_mode_2_2:
+    number: 0-83
+    type: grb
+  l_kicker_mode_2_3:
+    number: 0-84
+    type: grb
+  l_kicker_mode_3_1:
+    number: 0-85
+    type: grb
+  l_kicker_mode_3_2:
+    number: 0-86
+    type: grb
+  l_kicker_mode_3_3:
+    number: 0-87
+    type: grb
+
+  l_turn_around_1_1:
+    number: 0-103
+    type: grb
+  l_turn_around_1_2:
+    number: 0-104
+    type: grb
+  l_turn_around_1_3:
+    number: 0-105
+    type: grb
+  l_turn_around_2_1:
+    number: 0-106
+    type: grb
+  l_turn_around_2_2:
+    number: 0-107
+    type: grb
+  l_turn_around_2_3:
+    number: 0-108
+    type: grb
+  l_turn_around_3:
+    #number: 0-142
+    number: 0-138
+    type: grb
+  l_turn_around_4_1:
+    #number: 0-138
+    number: 0-139
+    type: grb
+  l_turn_around_4_2:
+    #number: 0-139
+    number: 0-140
+    type: grb
+  l_turn_around_4_3:
+    #number: 0-140
+    number: 0-141
+    type: grb
+  l_turn_around_4_4:
+    #number: 0-141
+    number: 0-142
+    type: grb
+
+  l_lane_shooter_1_1:
+    number: 0-27
+    type: grb
+  l_lane_shooter_1_2:
+    number: 0-28
+    type: grb
+  l_lane_shooter_1_3:
+    number: 0-29
+    type: grb
+  l_lane_shooter_2_1:
+    number: 0-23
+    type: grb
+  l_lane_shooter_2_2:
+    number: 0-24
+    type: grb
+  l_lane_shooter_2_3:
+    number: 0-25
+    type: grb
+  l_lane_shooter_2_4:
+    number: 0-26
+    type: grb
+  l_target_rev_1_1:
+    number: 0-36
+    type: grb
+  l_target_rev_1_2:
+    number: 0-37
+    type: grb
+  l_target_rev_1_3:
+    number: 0-38
+    type: grb
+  l_target_rev_2:
+    number: 0-9
+    type: grb
+
+  l_orbit_left_1_1:
+    number: 0-133
+    type: grb
+  l_orbit_left_1_2:
+    number: 0-134
+    type: grb
+  l_orbit_left_1_3:
+    number: 0-135
+    type: grb
+  l_orbit_left_2_1:
+    number: 0-88
+    type: grb
+  l_orbit_left_2_2:
+    number: 0-89
+    type: grb
+  l_orbit_left_2_3:
+    number: 0-90
+    type: grb
+  l_orbit_left_3:
+    number: 0-136
+    type: grb
+  l_orbit_left_4:
+    number: 0-130
+    type: grb
+  l_orbit_left_5:
+    number: 0-129
+    type: grb
+
+  l_spinner_mid_1_1:
+    number: 0-91
+    type: grb
+  l_spinner_mid_1_2:
+    number: 0-92
+    type: grb
+  l_spinner_mid_1_3:
+    number: 0-93
+    type: grb
+  l_spinner_mid_2:
+    number: 0-137
+    type: grb
+
+  l_newton_ball_1_1:
+    number: 0-39
+    type: grb
+  l_newton_ball_1_2:
+    number: 0-40
+    type: grb
+  l_newton_ball_1_3:
+    number: 0-41
+    type: grb
+  l_newton_ball_2:
+    number: 0-45
+    type: grb
+  l_newton_ball_3:
+    number: 0-46
+    type: grb
+  l_newton_ball_4:
+    number: 0-47
+    type: grb
+
+  l_orbit_right_1_1:
+    number: 0-49
+    type: grb
+  l_orbit_right_1_2:
+    number: 0-50
+    type: grb
+  l_orbit_right_1_3:
+    number: 0-51
+    type: grb
+  l_orbit_right_2:
+    number: 0-48
+    type: grb
+
+  l_vuk_left_1_1:
+    number: 0-109
+    type: grb
+  l_vuk_left_1_2:
+    number: 0-110
+    type: grb
+  l_vuk_left_1_3:
+    number: 0-111
+    type: grb
+
+  l_shoot_again_1_1:
+    number: 0-145
+    type: grb
+  l_shoot_again_1_2:
+    number: 0-146
+    type: grb
+  l_shoot_again_1_3:
+    number: 0-147
+    type: grb
+  l_shoot_again_1_4:
+    number: 0-148
+    type: grb
+  l_shoot_again_1_5:
+    number: 0-149
+    type: grb
+  l_shoot_again_1_6:
+    number: 0-150
+    type: grb
+
+  l_flying_saucer_1_1:
+    number: 0-192
+    type: grb
+  l_flying_saucer_1_2:
+    number: 0-193
+    type: grb
+  l_flying_saucer_1_3:
+    number: 0-194
+    type: grb
+  l_flying_saucer_1_4:
+    number: 0-195
+    type: grb
+  l_flying_saucer_1_5:
+    number: 0-196
+    type: grb
+  l_flying_saucer_1_6:
+    number: 0-197
+    type: grb
+  l_flying_saucer_1_7:
+    number: 0-198
+    type: grb
+  l_flying_saucer_1_8:
+    number: 0-199
+    type: grb
+  l_flying_saucer_1_9:
+    number: 0-200
+    type: grb
+  l_flying_saucer_1_10:
+    number: 0-201
+    type: grb
+  l_flying_saucer_1_11:
+    number: 0-202
+    type: grb
+  l_flying_saucer_1_12:
+    number: 0-203
+    type: grb
+  l_flying_saucer_1_13:
+    number: 0-204
+    type: grb
+  l_flying_saucer_1_14:
+    number: 0-205
+    type: grb
+  l_flying_saucer_1_15:
+    number: 0-206
+    type: grb
+  l_flying_saucer_1_16:
+    number: 0-207
+    type: grb
+
+  l_flying_saucer_1_17:
+    number: 0-208
+    type: grb
+  l_flying_saucer_1_18:
+    number: 0-209
+    type: grb
+  l_flying_saucer_1_19:
+    number: 0-210
+    type: grb
+  l_flying_saucer_1_20:
+    number: 0-211
+    type: grb
+  l_flying_saucer_1_21:
+    number: 0-212
+    type: grb
+  l_flying_saucer_1_22:
+    number: 0-213
+    type: grb
+  l_flying_saucer_1_23:
+    number: 0-214
+    type: grb
+  l_flying_saucer_1_24:
+    number: 0-215
+    type: grb
+
+  l_cabinet_button_1_1:
+    number: 0-256
+    type: grb
+  l_cabinet_button_1_2:
+    number: 0-257
+    type: grb
+  l_cabinet_button_1_3:
+    number: 0-258
+    type: grb
+  l_cabinet_button_1_4:
+    number: 0-259
+    type: grb
+  
+  l_cabinet_button_2_1:
+    number: 0-260
+    type: grb
+  l_cabinet_button_2_2:
+    number: 0-261
+    type: grb
+  l_cabinet_button_2_3:
+    number: 0-262
+    type: grb
+  l_cabinet_button_2_4:
+    number: 0-263
+    type: grb
+  
+  l_cabinet_button_3_1:
+    number: 0-264
+    type: grb
+  l_cabinet_button_3_2:
+    number: 0-265
+    type: grb
+  l_cabinet_button_3_3:
+    number: 0-266
+    type: grb
+  l_cabinet_button_3_4:
+    number: 0-267
+    type: grb

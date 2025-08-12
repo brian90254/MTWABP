@@ -1,0 +1,290 @@
+#config_version=6
+    
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  
+  mode_credits_started:
+    eventCreditStart|1000ms
+# ---------------------
+# EVENT::PLAYER::SOUNDS_ON_SWITCH
+# ---------------------
+  sw_tagHiddenLane:
+    playPoolSoundHighScore
+    
+  sw_tagCoin:
+    playPoolSoundCoin
+      
+  sw_tagDrain:
+    playPoolSoundDrain
+      
+  sw_tagLowerPFDropTarget:
+    playPoolSoundLowerPFDropTarget
+      
+  sw_tagDropRt:
+    playPoolSoundLowerPFDropTarget
+    
+  sw_tagLowerPFTarget:
+    playPoolSoundLowerPFTarget
+      
+  sw_tagDropLf:
+    playPoolSoundLowerPFTarget
+    
+  sw_tagNewtonBall:
+    playPoolSoundNewtonBall
+
+  sw_tagLane:
+    #playPoolSoundNewtonBall
+    playPoolSoundUpperToLower
+    
+  sw_tagOutlane:
+    playPoolSoundOutlane
+      
+  sw_tagReturnLane:
+    playPoolSoundReturnLane
+      
+  sw_tagRollover:
+    #playPoolSoundRollovers
+    playPoolSoundBowlingStrikeMultiplePins
+    
+  sw_tagSlingShot:
+    playPoolSoundSlingShot
+      
+  sw_tagSpinner:
+    #playPoolSoundSpinner
+    # -------------------
+    # SFX Angry Daddy Reload
+    playPoolSoundTroughEject
+    
+  sw_tagStandupTarget:
+    #playPoolSoundStandupTarget
+    playPoolSoundChimesB
+    
+  sw_tagStart:
+    playPoolSoundStart
+      
+  sw_tagThumper:
+    #playPoolSoundThumper
+    playPoolSoundChimesA
+    
+  sw_tagReverseTarget:
+    playPoolSoundReverse
+    
+
+# ---------------------
+# EVENT::PLAYER::BALLSAVES
+# ---------------------
+  # ---------------------
+  # BALLSAVES::DEFAULT
+  # ---------------------
+  ball_save_default_timer_start:
+    playShowBallSaveStandard
+    
+  ball_save_default_hurry_up:
+    playShowBallSaveHurryUp
+
+  ball_save_default_grace_period:
+    stopShowBallSave
+    
+  ball_save_default_disabled:
+    stopShowBallSave
+
+  # ---------------------
+  # BALLSAVES::OUTLANE
+  # ---------------------
+  ball_save_bsOutlane_disabled:
+    - stopShowBallSaveOutlane
+    - sgOutlaneReset
+    
+  mode_modeBallSaveOutlane_started:
+    playShowBallSaveOutlane
+    
+  mode_modeBallSaveOutlane_stopping:
+    stopShowBallSaveOutlane
+    
+  # ---------------------
+  # BALLSAVES::HIDDEN
+  # ---------------------
+  ball_save_bsHidden_timer_start:
+    playShowBallSaveHidden
+    
+  ball_save_bsHidden_hurry_up:
+    playShowBallSaveHiddenHurryUp
+
+  ball_save_bsHidden_grace_period:
+    stopShowBallSaveHidden
+    
+  ball_save_bsHidden_disabled:
+    stopShowBallSaveHidden
+    
+  #ball_started:
+  #  stopShowBallSaveHidden
+    
+  ball_started:
+    - stopShowBallSaveOutlane
+    - stopShowBallSaveHidden
+    
+  # ---------------------
+  # CALL OUTS
+  # ---------------------
+  game_started:
+    - playPoolVoiceAnnouncerSpaceCadet
+    - showSlideDisplayBackglass2
+    
+# -----------------
+# DISPLAYS::SLIDES
+# -----------------
+slides:
+  slideDisplayBackglass2:
+    widgets:
+    - type: image
+      image: imagebackglass
+
+#slide_player:
+#  showSlideDisplayBackglass2:
+#    slideDisplayBackglass2:
+#      target: displayBackglass
+      
+# ---------------------
+# PLAYLIST::PLAYER
+# ---------------------
+playlist_player:
+  # -------------------
+  # ADDED SURPRISE VOICE DURING ATTRACT MODE
+  playlistAttention:
+    trackplaylist:
+      playlist: playlistIntro
+      action: play
+
+  #mode_attract_started:
+  #  trackplaylist:
+  #    action: stop
+
+  eventPlaylistModeGlobetrottersStart:
+    trackplaylist:
+      playlist: playlistModeGlobetrottersMusic
+      action: play
+
+  ball_ending:
+    trackplaylist:
+      action: stop
+  
+  high_score_enter_initials:
+    trackplaylist:
+      playlist: playlistHighScore
+      shuffle: true
+      repeat: false
+      action: play
+
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+  # ---------------------
+  # SHOW::BALL SAVE::DEFAULT
+  # ---------------------
+  playShowBallSaveStandard:
+    traceSixLedTwoColor:
+      speed: 10
+      action: play
+      key: showBallSaveStandard
+      show_tokens:
+        led1: l_shoot_again_1_1
+        led2: l_shoot_again_1_2
+        led3: l_shoot_again_1_3
+        led4: l_shoot_again_1_4
+        led5: l_shoot_again_1_5
+        led6: l_shoot_again_1_6
+        color1: '884400'
+        color2: '442200'
+        
+  playShowBallSaveHurryUp:
+    showBallSaveStandard:
+      action: stop
+      
+    traceSixLedTwoColor:
+      speed: 20
+      action: play
+      key: showBallSaveHurryUp
+      show_tokens:
+        led1: l_shoot_again_1_1
+        led2: l_shoot_again_1_2
+        led3: l_shoot_again_1_3
+        led4: l_shoot_again_1_4
+        led5: l_shoot_again_1_5
+        led6: l_shoot_again_1_6
+        color1: '884400'
+        color2: '442200'
+        
+  stopShowBallSave:
+    showBallSaveHurryUp:
+      action: stop
+    showBallSaveStandard:
+      action: stop
+
+  # ---------------------
+  # SHOW::BALL SAVE::HIDDEN
+  # ---------------------
+  playShowBallSaveHidden:
+    traceSixLedTwoColor:
+      speed: 10
+      action: play
+      key: showBallSaveHidden
+      show_tokens:
+        led1: l_shoot_again_1_1
+        led2: l_shoot_again_1_2
+        led3: l_shoot_again_1_3
+        led4: l_shoot_again_1_4
+        led5: l_shoot_again_1_5
+        led6: l_shoot_again_1_6
+        color1: '448800'
+        color2: '224400'
+        
+  playShowBallSaveHiddenHurryUp:
+    showBallSaveHidden:
+      action: stop
+      
+    traceSixLedTwoColor:
+      speed: 20
+      action: play
+      key: showBallSaveHiddenHurryUp
+      show_tokens:
+        led1: l_shoot_again_1_1
+        led2: l_shoot_again_1_2
+        led3: l_shoot_again_1_3
+        led4: l_shoot_again_1_4
+        led5: l_shoot_again_1_5
+        led6: l_shoot_again_1_6
+        color1: '448800'
+        color2: '224400'
+        
+  stopShowBallSaveHidden:
+    showBallSaveHiddenHurryUp:
+      action: stop
+    showBallSaveHidden:
+      action: stop
+
+  # ---------------------
+  # SHOW::BALL SAVE::OUTLANE
+  # ---------------------
+  playShowBallSaveOutlane:
+    traceSixLedTwoColor:
+      speed: 10
+      action: play
+      key: showballsaveoutlane
+      show_tokens:
+        led1: l_shoot_again_1_1
+        led2: l_shoot_again_1_2
+        led3: l_shoot_again_1_3
+        led4: l_shoot_again_1_4
+        led5: l_shoot_again_1_5
+        led6: l_shoot_again_1_6
+        color1: '000000'
+        color2: '008888'
+        
+  stopShowBallSaveOutlane:
+    showballsaveoutlane:
+      action: stop
+      
+        
