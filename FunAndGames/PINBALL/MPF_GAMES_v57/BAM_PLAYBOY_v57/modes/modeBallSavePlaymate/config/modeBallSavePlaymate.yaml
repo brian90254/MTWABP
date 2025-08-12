@@ -1,0 +1,143 @@
+#config_version=6
+
+mode:
+  start_events:
+    - eventStartModeBallSavePlaymate
+  stop_events:
+    - eventStopModeBallSavePlaymate
+    - ball_ending
+  priority: 6000
+
+ball_saves:
+  ballSavePlaymate:
+    active_time: 6s
+    hurry_up_time: 4s
+    grace_period: 2s
+    enable_events: eventEnableBallSavePlaymate
+    timer_start_events: eventTimerStartBallSavePlaymate
+    balls_to_save: 1
+    #debug: true
+    debug: false
+
+# ---------------------
+# EVENT::PLAYER::BALLSAVES
+# ---------------------
+event_player:
+  # ---------------------
+  # BALLSAVES::PLAYMATE
+  # ---------------------
+  mode_modeBallSavePlaymate_started:
+    - eventEnableBallSavePlaymate
+    - eventTimerStartBallSavePlaymate|500ms
+    
+  ball_save_ballSavePlaymate_saving_ball:
+    - eventStopModeBallSavePlaymate|2s
+    
+  ball_save_ballSavePlaymate_disabled:
+    - eventStopModeBallSavePlaymate|2s
+    - stopShowBallSavePlaymate
+    
+  # ---------------------
+  # BALLSAVES::PLAYMATE::SHOWS
+  # ---------------------
+  ball_save_ballSavePlaymate_timer_start:
+    playShowBallSavePlaymate
+
+  ball_save_ballSavePlaymate_hurry_up:
+    playShowBallSavePlaymateHurryUp
+    
+  ball_save_ballSavePlaymate_grace_period:
+    stopShowBallSavePlaymate
+
+
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+  # ---------------------
+  # SHOW::BALL SAVE::DEFAULT
+  # ---------------------
+  playShowBallSavePlaymate:
+    triangleThreeLedTwoColor:
+      speed: 3
+      action: play
+      key: showBallSavePlaymate
+      show_tokens:
+        led1: ledShootAgain1
+        led2: ledShootAgain2
+        led3: ledShootAgain3
+        color1: '440044'
+        color2: 'ff00ff'
+        
+  playShowBallSavePlaymateHurryUp:
+    showBallSavePlaymate:
+      action: stop
+      
+    triangleThreeLedTwoColor:
+      speed: 3
+      action: play
+      key: showBallSavePlaymateHurryUp
+      show_tokens:
+        led1: ledShootAgain1
+        led2: ledShootAgain2
+        led3: ledShootAgain3
+        color1: '440000'
+        color2: 'ff0000'
+
+  stopShowBallSave:
+    showBallSavePlaymateHurryUp:
+      action: stop
+    showBallSavePlaymate:
+      action: stop
+      
+# ---------------------
+# SLIDE::PLAYER::
+# ---------------------
+slide_player:
+  ball_save_ballSavePlaymate_saving_ball:
+    slideBallSavePlaymate:
+      target: displayDMD
+  
+slides:
+  slideBallSavePlaymate:
+    widgets:
+      # BLUE FORGROUND
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveInner
+        text: BALL SAVED
+        y: middle
+        x: middle
+      # -------------------------------
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: BALL SAVED
+        y: middle - 1
+        x: middle + 1
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: BALL SAVED
+        y: middle - 1
+        x: middle - 1
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: BALL SAVED
+        y: middle + 1
+        x: middle + 1
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: BALL SAVED
+        y: middle + 1
+        x: middle - 1
+            
+      # -------------------------------
+    expire: 4.0s

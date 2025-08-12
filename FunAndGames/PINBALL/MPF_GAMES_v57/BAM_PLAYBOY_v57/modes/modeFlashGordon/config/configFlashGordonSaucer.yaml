@@ -1,0 +1,949 @@
+#config_version=6
+
+# MATA HARI
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SAUCER::SPARE
+    # -------------------
+    shotSaucerAdvance:
+        enable_events: eventEnableShotSaucerAdvance
+        disable_events: eventDisableShotSaucerAdvance
+        restart_events: eventRestartShotSaucerAdvance
+        reset_events: eventResetShotSaucerAdvance
+        #advance_events: eventAdvanceSaucerAdvance
+        hit_events: eventHitShotSaucerAdvance
+        profile: spShotSaucerAdvance
+        show_tokens:
+            led1: ledSaucer3000
+            led2: ledSaucer2X
+            led3: ledSaucer3X
+            led4: ledSaucer5X
+            # ------------------------
+            led5: ledBonusMultiplier2X
+            led6: ledBonusMultiplier3X
+            led7: ledBonusMultiplier5X
+            
+    ## -------------------
+    ## SAUCER::SPARE
+    ## -------------------
+    #shotSaucerSpare:
+    #    enable_events: eventEnableShotSaucerSpare
+    #    disable_events: eventDisableShotSaucerSpare
+    #    restart_events: eventRestartShotSaucerSpare
+    #    reset_events: eventResetShotSaucerSpare
+    #    #advance_events: eventSpareSaucerSpare
+    #    hit_events: eventHitShotSaucer
+    #    
+    ## -------------------
+    ## SAUCER::STRIKE
+    ## -------------------
+    #shotSaucerStrike:
+    #    enable_events: eventEnableShotSaucerStrike
+    #    disable_events: eventDisableShotSaucerStrike
+    #    restart_events: eventRestartShotSaucerStrike
+    #    reset_events: eventResetShotSaucerStrike
+    #    #advance_events: eventStrikeSaucerStrike
+    #    hit_events: eventHitShotSaucer
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+# -----------------------------
+# SAUCER::ADVANCE::ACHIEVEMENTS
+# -----------------------------
+    # -----------------------------
+    # PROFILE::SAUCER::ADVANCE
+    # -----------------------------
+    spShotSaucerAdvance:
+        states:
+          - name: litFlashSaucer3000
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: '0000cc'
+                color2A: '000000'
+                color3A: '000000'
+                color4A: '000000'
+                # --------------
+                color5A: '000000'
+                color6A: '000000'
+                color7A: '000000'
+                # --------------
+                # --------------
+                color1B: '000066'
+                color2B: '000000'
+                color3B: '000000'
+                color4B: '000000'
+                # --------------
+                color5B: '000000'
+                color6B: '000000'
+                color7B: '000000'
+            # -------------------------------
+          - name: litFlashSaucer2X
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: '0000ff'
+                color2A: '00cc00'
+                color3A: '000000'
+                color4A: '000000'
+                # --------------
+                color5A: '000000'
+                color6A: '000000'
+                color7A: '000000'
+                # --------------
+                # --------------
+                color1B: '0000cc'
+                color2B: '006600'
+                color3B: '000000'
+                color4B: '000000'
+                # --------------
+                color5B: '000000'
+                color6B: '000000'
+                color7B: '000000'
+            # -------------------------------
+          - name: litFlashSaucer3X
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: '0000ff'
+                color2A: '00ff00'
+                color3A: 'cccc00'
+                color4A: '000000'
+                # --------------
+                color5A: '00ff00'
+                color6A: '000000'
+                color7A: '000000'
+                # --------------
+                # --------------
+                color1B: '0000cc'
+                color2B: '00cc00'
+                color3B: '666600'
+                color4B: '000000'
+                # --------------
+                color5B: '00cc00'
+                color6B: '000000'
+                color7B: '000000'
+            # -------------------------------
+          - name: litFlashSaucer5X
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: '0000ff'
+                color2A: '00ff00'
+                color3A: 'ffff00'
+                color4A: 'cc00cc'
+                # --------------
+                color5A: '00ff00'
+                color6A: 'ffff00'
+                color7A: '000000'
+                # --------------
+                # --------------
+                color1B: '0000cc'
+                color2B: '00cc00'
+                color3B: 'cccc00'
+                color4B: '660066'
+                # --------------
+                color5B: '00cc00'
+                color6B: 'cccc00'
+                color7B: '000000'
+            # -------------------------------
+          - name: litSolid
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: '0000ff'
+                color2A: '00ff00'
+                color3A: 'ffff00'
+                color4A: 'ff00ff'
+                # --------------
+                color5A: '00ff00'
+                color6A: 'ffff00'
+                color7A: 'ff00ff'
+                # --------------
+                # --------------
+                color1B: '0000cc'
+                color2B: '00cc00'
+                color3B: 'cccc00'
+                color4B: 'cc00cc'
+                # --------------
+                color5B: '00cc00'
+                color6B: 'cccc00'
+                color7B: 'cc00cc'
+            # -------------------------------
+        loop: false
+            
+# *********************
+# EVENT::PLAYER
+# *********************
+event_player:
+# -------------------
+# EVENTS::ON BALL STARTING
+# -------------------
+    mode_modeFlashGordon_started:
+        # START IN SPARE MODE
+        #- eventDisableShotSaucerStrike
+        #- eventRestartShotSaucerSpare
+        # -------------------------
+        # RESET / ENABLE EVERYTHING FROM SCRATCH
+        - eventRestartShotSaucerAdvance
+        #- eventResetEnableAllThumperSaucer
+
+# -------------------
+# ENABLE RESET OF THE PINS 
+# -------------------
+    #shotGroupPins_litSolid_complete:
+    #    - eventDisableShotSaucerSpare
+    #    - eventRestartShotSaucerStrike
+    #    # STOP MODE
+    #    - eventResetShotGroupPins|3100
+    #    - eventDisableShotGroupPins|3200
+    #    - eventStopModeStrikesSparesShotPinsOne|3300
+    #    - eventShowResetLightPins|3000
+
+
+    #shotSaucerSpare_hit:
+    shotSaucerAdvance_hit:
+        #- randomEventShowVideoStrikesSparesCeleb
+        - randomEventShowVideoStrikesSparesAd
+
+    #shotSaucerStrike_hit:
+    #    # REPLACE WITH INTRO-BOWL SHOWS
+    #    #- randomEventShowVideoStrikesSparesCeleb
+    #    - randomEventShowVideoStrikesSparesIntro
+    #    # START MODE
+    #    - eventStopShowResetLightPins|3100
+    #    - eventStartModeStrikesSparesShotPinsOne|3000
+
+
+# -------------------
+# EVENTS::BALL IN PLAY
+# -------------------
+    # -------------------
+    # EVENTS::SAUCER SHOT::HIT
+    # -------------------
+    ball_hold_ballHoldSaucerTop_held_ball:
+        # ADVANCE SAUCER
+        #- eventHitShotSaucer
+        # ADVANCE SAUCER ACHIEVEMENT
+        - eventHitShotSaucerAdvance
+        # ADVANCE BONUS BY THREE
+        - eventCompleteBonusOnes
+        - eventCompleteBonusOnes|1s
+        - eventCompleteBonusOnes|2s
+        # ADD TIME TO THUMPER SUPER LIT
+        #- eventAddValueTimerThumperSuperLit
+
+
+        
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+    # ---------------
+    ## TOP::SAUCER::HIT
+    ## ---------------
+    #ball_hold_ballHoldSaucerTop_held_ball:
+    #    score: 3000
+    
+# ---------------
+# ADVANCE MULTIPLIER ON SAUCER HIT
+# ---------------
+    # SPECIAL
+    shotSaucerAdvance_litFlashSaucer3000_hit:
+        score: 3000
+        
+    # 2X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer2X_hit:
+        multiBonus:
+            int: 2
+            action: set
+        bonus_multiplier:
+            int: 2
+            action: set
+        score: 3000
+        
+    # 3X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer3X_hit:
+        multiBonus:
+            int: 3
+            action: set
+        bonus_multiplier:
+            int: 3
+            action: set
+        score: 3000
+        
+    # 5X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer5X_hit:
+        multiBonus:
+            int: 5
+            action: set
+        bonus_multiplier:
+            int: 5
+            action: set
+        score: 3000
+        
+# ---------------------
+# RANDOM::EVENT::PLAYER
+# ---------------------
+random_event_player:
+# ---------------------
+# PLAY VIDEO::SAUCER::SPARE
+# ---------------------
+    # -------------------
+    # PLAY VIDEO::SAUCER::SPARE::CELEB
+    # -------------------
+    randomEventShowVideoStrikesSparesCeleb:
+        scope: player
+        events:
+          - eventShowVideoStrikesSpares_Celeb1
+          - eventShowVideoStrikesSpares_Celeb2
+          - eventShowVideoStrikesSpares_Celeb3
+          - eventShowVideoStrikesSpares_Celeb4
+          - eventShowVideoStrikesSpares_Celeb5
+          - eventShowVideoStrikesSpares_Celeb6
+          - eventShowVideoStrikesSpares_Celeb7
+          - eventShowVideoStrikesSpares_Celeb8
+          - eventShowVideoStrikesSpares_Celeb9
+          - eventShowVideoStrikesSpares_Celeb10
+          - eventShowVideoStrikesSpares_Celeb11
+          - eventShowVideoStrikesSpares_Celeb12
+          - eventShowVideoStrikesSpares_Celeb13
+          - eventShowVideoStrikesSpares_Celeb14
+          - eventShowVideoStrikesSpares_Celeb15
+          - eventShowVideoStrikesSpares_Celeb16
+          - eventShowVideoStrikesSpares_Celeb17
+          - eventShowVideoStrikesSpares_Celeb18
+          - eventShowVideoStrikesSpares_Celeb19
+          - eventShowVideoStrikesSpares_Celeb20
+          - eventShowVideoStrikesSpares_Celeb21
+          - eventShowVideoStrikesSpares_Celeb22
+          - eventShowVideoStrikesSpares_Celeb23
+          - eventShowVideoStrikesSpares_Celeb24
+          - eventShowVideoStrikesSpares_Celeb25
+          
+    # -------------------
+    # PLAY VIDEO::SAUCER::SPARE::COLOR
+    # -------------------
+    randomEventShowVideoStrikesSparesColor:
+        scope: player
+        events:
+          - eventShowVideoStrikesSpares_Color1
+          - eventShowVideoStrikesSpares_Color2
+          - eventShowVideoStrikesSpares_Color3
+          - eventShowVideoStrikesSpares_Color4
+          - eventShowVideoStrikesSpares_Color5
+          - eventShowVideoStrikesSpares_Color6
+          
+    # -------------------
+    # PLAY VIDEO::SAUCER::SPARE::AD
+    # -------------------
+    randomEventShowVideoStrikesSparesAd:
+        scope: player
+        events:
+          - eventShowVideoStrikesSpares_Ad1
+          - eventShowVideoStrikesSpares_Ad2
+          - eventShowVideoStrikesSpares_Ad3
+          - eventShowVideoStrikesSpares_Ad4
+          - eventShowVideoStrikesSpares_Ad5
+          - eventShowVideoStrikesSpares_Ad6
+          #- eventShowVideoStrikesSpares_Ad7
+          - eventShowVideoStrikesSpares_Ad8
+          - eventShowVideoStrikesSpares_Ad9
+          - eventShowVideoStrikesSpares_Ad10
+          - eventShowVideoStrikesSpares_Ad11
+          - eventShowVideoStrikesSpares_Ad12
+          - eventShowVideoStrikesSpares_Ad13
+          - eventShowVideoStrikesSpares_Ad14
+          - eventShowVideoStrikesSpares_Ad15
+          #- eventShowVideoStrikesSpares_Ad16
+          - eventShowVideoStrikesSpares_Ad17
+          - eventShowVideoStrikesSpares_Ad18
+          - eventShowVideoStrikesSpares_Ad19
+          - eventShowVideoStrikesSpares_Ad20
+          - eventShowVideoStrikesSpares_Ad21
+          - eventShowVideoStrikesSpares_Ad22
+          - eventShowVideoStrikesSpares_Ad23
+          - eventShowVideoStrikesSpares_Ad24
+          - eventShowVideoStrikesSpares_Ad25
+          - eventShowVideoStrikesSpares_Ad26
+          - eventShowVideoStrikesSpares_Ad27
+          - eventShowVideoStrikesSpares_Ad28
+          - eventShowVideoStrikesSpares_Ad29
+          - eventShowVideoStrikesSpares_Ad30
+          - eventShowVideoStrikesSpares_Ad31
+          - eventShowVideoStrikesSpares_Ad32
+          
+# ---------------------
+# PLAY VIDEO::SAUCER::STRIKE
+# ---------------------
+    # -------------------
+    # PLAY VIDEO::SAUCER::STRIKE::INTRO
+    # -------------------
+    randomEventShowVideoStrikesSparesIntro:
+        scope: player
+        events:
+          - eventShowVideoStrikesSpares_Intro1
+          - eventShowVideoStrikesSpares_Intro2
+          - eventShowVideoStrikesSpares_Intro3
+          - eventShowVideoStrikesSpares_Intro4
+          
+    # -------------------
+    # PLAY VIDEO::SAUCER::STRIKE::INTRO
+    # -------------------
+    randomEventShowVideoStrikesSparesBowl:
+        scope: player
+        events:
+          - eventShowVideoStrikesSpares_Bowl1
+          - eventShowVideoStrikesSpares_Bowl2
+          - eventShowVideoStrikesSpares_Bowl3
+          - eventShowVideoStrikesSpares_Bowl4
+          - eventShowVideoStrikesSpares_Bowl5
+          - eventShowVideoStrikesSpares_Bowl6
+          - eventShowVideoStrikesSpares_Bowl7
+          - eventShowVideoStrikesSpares_Bowl8
+          - eventShowVideoStrikesSpares_Bowl9
+          - eventShowVideoStrikesSpares_Bowl10
+          - eventShowVideoStrikesSpares_Bowl11
+          - eventShowVideoStrikesSpares_Bowl12
+          - eventShowVideoStrikesSpares_Bowl13
+          
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# --------------------------
+# SHOW::PLAYER::VIDEO CLIPS::SAUCER SPARE
+# --------------------------
+    # --------------------------
+    # SAUCER::SPARE::CELEB
+    # --------------------------
+    eventShowVideoStrikesSpares_Celeb1:
+        showVideoStrikesSpares_Celeb1:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Celeb2:
+        showVideoStrikesSpares_Celeb2:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb3:
+        showVideoStrikesSpares_Celeb3:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Celeb4:
+        showVideoStrikesSpares_Celeb4:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Celeb5:
+        showVideoStrikesSpares_Celeb5:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb6:
+        showVideoStrikesSpares_Celeb6:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb7:
+        showVideoStrikesSpares_Celeb7:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Celeb8:
+        showVideoStrikesSpares_Celeb8:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb9:
+        showVideoStrikesSpares_Celeb9:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb10:
+        showVideoStrikesSpares_Celeb10:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Celeb11:
+        showVideoStrikesSpares_Celeb11:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb12:
+        showVideoStrikesSpares_Celeb12:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb13:
+        showVideoStrikesSpares_Celeb13:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Celeb14:
+        showVideoStrikesSpares_Celeb14:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb15:
+        showVideoStrikesSpares_Celeb15:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Celeb16:
+        showVideoStrikesSpares_Celeb16:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Celeb17:
+        showVideoStrikesSpares_Celeb17:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb18:
+        showVideoStrikesSpares_Celeb18:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb19:
+        showVideoStrikesSpares_Celeb19:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Celeb20:
+        showVideoStrikesSpares_Celeb20:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb21:
+        showVideoStrikesSpares_Celeb21:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb22:
+        showVideoStrikesSpares_Celeb22:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Celeb23:
+        showVideoStrikesSpares_Celeb23:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Celeb24:
+        showVideoStrikesSpares_Celeb24:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+
+    eventShowVideoStrikesSpares_Celeb25:
+        showVideoStrikesSpares_Celeb25:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+    # --------------------------
+    # SAUCER::SPARE::COLOR
+    # --------------------------
+    eventShowVideoStrikesSpares_Color1:
+        showVideoStrikesSpares_Color1:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+
+    eventShowVideoStrikesSpares_Color2:
+        showVideoStrikesSpares_Color2:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Color3:
+        showVideoStrikesSpares_Color3:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Color4:
+        showVideoStrikesSpares_Color4:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Color5:
+        showVideoStrikesSpares_Color5:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Color6:
+        showVideoStrikesSpares_Color6:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    # --------------------------
+    # SAUCER::SPARE::AD
+    # --------------------------
+    eventShowVideoStrikesSpares_Ad1:
+        showVideoStrikesSpares_Ad1:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Ad2:
+        showVideoStrikesSpares_Ad2:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad3:
+        showVideoStrikesSpares_Ad3:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad4:
+        showVideoStrikesSpares_Ad4:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad5:
+        showVideoStrikesSpares_Ad5:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad6:
+        showVideoStrikesSpares_Ad6:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad7:
+        showVideoStrikesSpares_Ad7:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad8:
+        showVideoStrikesSpares_Ad8:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+    
+    eventShowVideoStrikesSpares_Ad9:
+        showVideoStrikesSpares_Ad9:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad10:
+        showVideoStrikesSpares_Ad10:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad11:
+        showVideoStrikesSpares_Ad11:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad12:
+        showVideoStrikesSpares_Ad12:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad13:
+        showVideoStrikesSpares_Ad13:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad14:
+        showVideoStrikesSpares_Ad14:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad15:
+        showVideoStrikesSpares_Ad15:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad16:
+        showVideoStrikesSpares_Ad16:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad17:
+        showVideoStrikesSpares_Ad17:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad18:
+        showVideoStrikesSpares_Ad18:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Ad19:
+        showVideoStrikesSpares_Ad19:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad20:
+        showVideoStrikesSpares_Ad20:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad21:
+        showVideoStrikesSpares_Ad21:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad22:
+        showVideoStrikesSpares_Ad22:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad23:
+        showVideoStrikesSpares_Ad23:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad24:
+        showVideoStrikesSpares_Ad24:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad25:
+        showVideoStrikesSpares_Ad25:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+    
+    eventShowVideoStrikesSpares_Ad26:
+        showVideoStrikesSpares_Ad26:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad27:
+        showVideoStrikesSpares_Ad27:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad28:
+        showVideoStrikesSpares_Ad28:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad29:
+        showVideoStrikesSpares_Ad29:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad30:
+        showVideoStrikesSpares_Ad30:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad31:
+        showVideoStrikesSpares_Ad31:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Ad32:
+        showVideoStrikesSpares_Ad32:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+
+
+# --------------------------
+# SHOW::PLAYER::VIDEO CLIPS::SAUCER STRIKE
+# --------------------------
+    # --------------------------
+    # SAUCER::STRIKE::INTRO
+    # --------------------------
+    eventShowVideoStrikesSpares_Intro1:
+        showVideoStrikesSpares_Intro1:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Intro2:
+        showVideoStrikesSpares_Intro2:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Intro3:
+        showVideoStrikesSpares_Intro3:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Intro4:
+        showVideoStrikesSpares_Intro4:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    # --------------------------
+    # SAUCER::STRIKE::BOWL
+    # --------------------------
+    eventShowVideoStrikesSpares_Bowl1:
+        showVideoStrikesSpares_Bowl1:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Bowl2:
+        showVideoStrikesSpares_Bowl2:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Bowl3:
+        showVideoStrikesSpares_Bowl3:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Bowl4:
+        showVideoStrikesSpares_Bowl4:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Bowl5:
+        showVideoStrikesSpares_Bowl5:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Bowl6:
+        showVideoStrikesSpares_Bowl6:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Bowl7:
+        showVideoStrikesSpares_Bowl7:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Bowl8:
+        showVideoStrikesSpares_Bowl8:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Bowl9:
+        showVideoStrikesSpares_Bowl9:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Bowl10:
+        showVideoStrikesSpares_Bowl10:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+      
+    eventShowVideoStrikesSpares_Bowl11:
+        showVideoStrikesSpares_Bowl11:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Bowl12:
+        showVideoStrikesSpares_Bowl12:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+    eventShowVideoStrikesSpares_Bowl13:
+        showVideoStrikesSpares_Bowl13:
+            loops: 0
+            speed: 1
+            key: keyShowVideoStrikesSpares
+            
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showShotSaucerAdvance:
+        - time: 0
+          lights:
+            (led1): (color1A)
+            (led2): (color2A)
+            (led3): (color3A)
+            (led4): (color4A)
+            (led5): (color5A)
+            (led6): (color6A)
+            (led7): (color7A)
+        - time: 1
+          lights:
+            (led1): (color1B)
+            (led2): (color2B)
+            (led3): (color3B)
+            (led4): (color4B)
+            (led5): (color5B)
+            (led6): (color6B)
+            (led7): (color7B)
+        - time: 2
+            

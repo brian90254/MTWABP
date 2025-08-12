@@ -1,0 +1,219 @@
+#config_version=6
+
+# ---------------------
+# EXTRA::BALLS
+# ---------------------
+extra_balls:
+    extraBallFlashGordonInline:
+        light_events: eventExtraBallFlashGordonInlineLit
+        award_events: eventExtraBallFlashGordonInlineAward
+        max_per_game: 3
+
+    extraBallFlashGordonSaucer:
+        light_events: eventExtraBallFlashGordonSaucerLit
+        award_events: eventExtraBallFlashGordonSaucerAward
+        max_per_game: 3
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+# -------------------
+# EXTRA BALL::LIGHT
+# -------------------
+    # -------------------
+    # INLINE
+    # -------------------
+    #shotDropInline3_litFlash_hit:
+    shotTargetInline_unlitFlash_hit:
+        - eventExtraBallFlashGordonInlineLit
+    # -------------------
+    # SAUCER
+    # -------------------
+    #TODO CHECK
+    shotDropLeftCompleteSaucer_litFlash60K_hit:
+    #shotGroupNoLightDropLeft_litSolid_complete.2{current_player.shot_shotDropLeftCompleteSaucer=4}:
+        - eventExtraBallFlashGordonSaucerLit
+        
+# -------------------
+# EXTRA BALL::AWARD
+# -------------------
+    # -------------------
+    # INLINE
+    # -------------------
+    shotTargetInline_litFlash_hit:
+        - eventExtraBallFlashGordonInlineAward
+    # -------------------
+    # SAUCER
+    # -------------------
+    ball_hold_ballHoldSaucerTop_held_ball{current_player.shot_shotDropLeftCompleteSaucer==4}:
+        - eventExtraBallFlashGordonSaucerAward
+        
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+  ## ----------------------------
+  ## LIGHT EXTRA BALL
+  ## ----------------------------
+  #eventExtraBallFlashGordonInlineLit:
+  #  showExtraBallFlashGordonInlineLit:
+  #    loops: -1
+  #    speed: 24
+  #    key: keyExtraBallLit
+
+  # ----------------------------
+  # AWARD EXTRA BALL
+  # ----------------------------
+  extra_ball_extraBallFlashGordonInline_awarded:
+    showExtraBallFlashGordonInlineAward:
+      loops: -1
+      speed: 8
+      key: keyExtraBallAward
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  extra_ball_extraBallFlashGordonInline_lit:
+    slideExtraBallFlashGordonInlineLit:
+      target: displayDMD
+      
+  extra_ball_extraBallFlashGordonInline_awarded:
+    slideExtraBallFlashGordonInlineAward:
+      target: displayDMD
+
+# ---------------------
+# SLIDE::EXTRA BALL::LIGHT
+# ---------------------
+slides:
+  slideExtraBallFlashGordonInlineLit:
+    widgets:
+      # -------------------------------
+      # RED FORGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitInner
+        text: EXTRA BALL LIT
+        y: middle
+        x: middle
+
+      # -------------------------------
+      # YELLOW BACKGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle - 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle - 1
+        x: middle - 1
+
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle + 1
+        x: middle + 1
+
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle + 1
+        x: middle - 1
+
+      # -------------------------------
+    expire: 4.0s
+
+# ---------------------
+# SLIDE::EXTRA BALL::AWARD
+# ---------------------
+
+  slideExtraBallFlashGordonInlineAward:
+    widgets:
+      # BLUE FORGROUND
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardInner
+        text: EXTRA BALL
+        y: middle
+        x: middle
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle - 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle - 1
+        x: middle - 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle + 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle + 1
+        x: middle - 1
+      # -------------------------------
+    expire: 4.0s
+
+
+# *********************
+# SHOWS
+# *********************
+shows:
+  ## -----------------------------------
+  ## SHOW::LED::EXTRA BALL::AWARD
+  ## -----------------------------------
+  #  showExtraBallFlashGordonInlineAward:
+  #      - time: 0
+  #        lights:
+  #          ledShootAgain: 'ffff00'
+  #      - time: 1
+  #        lights:
+  #          ledShootAgain: 'cccc00'
+  #      - time: 2
+  # -----------------------------------
+  # SHOW::LED::EXTRA BALL::AWARD
+  # -----------------------------------
+    showExtraBallFlashGordonInlineAward:
+        - time: 0
+          lights:
+            ledShootAgain1: 'ffff00'
+            ledShootAgain2: '888800'
+            ledShootAgain3: '888800'
+            ledShootAgain4: '888800'
+            ledShootAgain5: '888800'
+            ledShootAgain6: '888800'
+            ledShootAgain7: '888800'
+        - time: 1
+          lights:
+            ledShootAgain1: '888800'
+            ledShootAgain2: 'ffff00'
+            ledShootAgain3: 'ffff00'
+            ledShootAgain4: 'ffff00'
+            ledShootAgain5: 'ffff00'
+            ledShootAgain6: 'ffff00'
+            ledShootAgain7: 'ffff00'
+        - time: 2

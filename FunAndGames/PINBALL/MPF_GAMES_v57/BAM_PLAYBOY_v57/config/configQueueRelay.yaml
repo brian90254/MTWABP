@@ -1,0 +1,34 @@
+#config_version=6
+    
+queue_relay_player:
+  ball_starting:
+    # use this event to enable selection
+    post: eventQueueRelayBallStartingPost
+    wait_for: eventQueueRelayBallStartingWaitFor
+    
+# ---------------------
+# RANDOM::EVENT::PLAYER
+# ---------------------
+random_event_player:
+  eventQueueRelayBallStartingPost:
+    scope: machine
+    force_all: true
+    force_different: true
+    events:
+      - eventStartModeCarousel
+      #- eventStartModeCarousel1
+      #- eventStartModeCarousel2
+      #- eventStartModeCarousel3
+      #- eventStartModeCarousel4
+      
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # STOP CAROUSEL
+  eventQueueRelayBallStartingWaitFor:
+    - eventStopModeCarousel
+    #- eventStopModeCarousel1
+    #- eventStopModeCarousel2
+    #- eventStopModeCarousel3
+    #- eventStopModeCarousel4

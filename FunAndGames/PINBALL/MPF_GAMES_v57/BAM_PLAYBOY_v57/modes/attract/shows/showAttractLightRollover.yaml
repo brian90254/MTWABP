@@ -1,0 +1,178 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - BALLY PLAYBOY
+
+- time: 0
+# ----------------------
+# RED CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverA: 'ff0000'
+    ledRolloverB: '000000'
+    ledRolloverC: '000000'
+    ledRolloverD: '000000'
+    # ----------------------    
+
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: 'ff0000'
+    ledRolloverC: '000000'
+    ledRolloverD: '000000'
+    # ----------------------
+    
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: '000000'
+    ledRolloverC: 'ff0000'
+    ledRolloverD: '000000'
+    # ----------------------
+    
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: '000000'
+    ledRolloverC: '000000'
+    ledRolloverD: 'ff0000'
+    # ----------------------
+    
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverA: 'ffff00'
+    ledRolloverB: '000000'
+    ledRolloverC: '000000'
+    ledRolloverD: '000000'
+    # ----------------------
+    
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: 'ffff00'
+    ledRolloverC: '000000'
+    ledRolloverD: '000000'
+    # ----------------------
+    
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: '000000'
+    ledRolloverC: 'ffff00'
+    ledRolloverD: '000000'
+    # ----------------------
+    
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: '000000'
+    ledRolloverC: '000000'
+    ledRolloverD: 'ffff00'
+    # ----------------------    
+
+- time: "+1"
+
+# ----------------------
+# GREEN CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverA: '00ff00'
+    ledRolloverB: '000000'
+    ledRolloverC: '000000'
+    ledRolloverD: '000000'
+    # ----------------------    
+    
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: '00ff00'
+    ledRolloverC: '000000'
+    ledRolloverD: '000000'
+    # ----------------------    
+
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: '000000'
+    ledRolloverC: '00ff00'
+    ledRolloverD: '000000'
+    # ----------------------    
+
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: '000000'
+    ledRolloverC: '000000'
+    ledRolloverD: '00ff00'
+    # ----------------------    
+
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverA: 'ffff00'
+    ledRolloverB: '000000'
+    ledRolloverC: '000000'
+    ledRolloverD: '000000'
+    # ----------------------
+    
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: 'ffff00'
+    ledRolloverC: '000000'
+    ledRolloverD: '000000'
+    # ----------------------    
+
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: '000000'
+    ledRolloverC: 'ffff00'
+    ledRolloverD: '000000'
+    # ----------------------    
+
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverA: '000000'
+    ledRolloverB: '000000'
+    ledRolloverC: '000000'
+    ledRolloverD: 'ffff00'
+    # ----------------------    
+
+- time: "+1"

@@ -1,0 +1,404 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - SILVERBALL MANIA
+
+- time: 0
+
+
+# ----------------------
+# BLUE CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '0000ff'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: '0000ff'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: '0000ff'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: '0000ff'
+    ledBonus20B: '000000'
+    ledBonus20C: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: '0000ff'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: '0000ff'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: '0000ff'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: '0000ff'
+    ledBonus20C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: '0000ff'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: '0000ff'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: '0000ff'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: '000000'
+    ledBonus20C: '0000ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# MAGENTA CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: 'ff00ff'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: 'ff00ff'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: 'ff00ff'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: 'ff00ff'
+    ledBonus20B: '000000'
+    ledBonus20C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: 'ff00ff'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: 'ff00ff'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: 'ff00ff'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: 'ff00ff'
+    ledBonus20C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: 'ff00ff'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: 'ff00ff'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: 'ff00ff'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: '000000'
+    ledBonus20C: 'ff00ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# RED CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: 'ff0000'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: 'ff0000'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: 'ff0000'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: 'ff0000'
+    ledBonus20B: '000000'
+    ledBonus20C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: 'ff0000'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: 'ff0000'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: 'ff0000'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: 'ff0000'
+    ledBonus20C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: 'ff0000'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: 'ff0000'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: 'ff0000'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: '000000'
+    ledBonus20C: 'ff0000'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: 'ffff00'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: 'ffff00'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: 'ffff00'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: 'ffff00'
+    ledBonus20B: '000000'
+    ledBonus20C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: 'ffff00'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: 'ffff00'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: 'ffff00'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: 'ffff00'
+    ledBonus20C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: 'ffff00'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: 'ffff00'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: 'ffff00'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: '000000'
+    ledBonus20C: 'ffff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# GREEN CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '00ff00'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: '00ff00'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: '00ff00'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: '00ff00'
+    ledBonus20B: '000000'
+    ledBonus20C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: '00ff00'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: '00ff00'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: '00ff00'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: '00ff00'
+    ledBonus20C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: '00ff00'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: '00ff00'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: '00ff00'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: '000000'
+    ledBonus20C: '00ff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# CYAN CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '00ffff'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: '00ffff'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: '00ffff'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: '00ffff'
+    ledBonus20B: '000000'
+    ledBonus20C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: '00ffff'
+    ledBonusMultiplier2XC: '000000'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: '00ffff'
+    ledBonusMultiplier3XC: '000000'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: '00ffff'
+    ledDropRightSpecialC: '000000'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: '00ffff'
+    ledBonus20C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledBonusMultiplier2XA: '000000'
+    ledBonusMultiplier2XB: '000000'
+    ledBonusMultiplier2XC: '00ffff'
+    # ----------------------    
+    ledBonusMultiplier3XA: '000000'
+    ledBonusMultiplier3XB: '000000'
+    ledBonusMultiplier3XC: '00ffff'
+    # ---------------------- 
+    ledDropRightSpecialA: '000000'
+    ledDropRightSpecialB: '000000'
+    ledDropRightSpecialC: '00ffff'
+    # ---------------------- 
+    ledBonus20A: '000000'
+    ledBonus20B: '000000'
+    ledBonus20C: '00ffff'
+    # ---------------------- 
+- time: "+1"

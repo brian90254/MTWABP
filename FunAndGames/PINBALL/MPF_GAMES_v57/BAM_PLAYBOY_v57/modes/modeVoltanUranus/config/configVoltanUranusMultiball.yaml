@@ -1,0 +1,136 @@
+#config_version=6
+
+# VOLTAN
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeVoltanEarth_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballEarthUpperKickerLeft
+    - eventEnableMultiballEarthUpperKickerRight
+    - eventEnableMultiballEarthUpperKickerBoth
+    # ----------------------------------
+    # ENABLE LOCK
+    - eventEnableMultiballEarthLockSaucerTopRight
+    - eventEnableMultiballEarthLockSaucerTopLeft
+    # ----------------------------------
+    
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::RIGHT
+  # ---------------------
+  # RIGHT::TWO BALL
+  multiball_lock_multiballEarthLockSaucerTopRight_full.1{device.multiball_locks.multiballEarthLockSaucerTopLeft.locked_balls==0}:
+    - eventStartMultiballEarthUpperKickerRight|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballEarthLockSaucerTopRight
+    - eventDisableMultiballEarthLockSaucerTopLeft
+  # ---------------------
+  # RIGHT::THREE BALL
+  multiball_lock_multiballEarthLockSaucerTopRight_full.2{device.multiball_locks.multiballEarthLockSaucerTopLeft.locked_balls==1}:
+    - eventStartMultiballEarthUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballEarthLockSaucerTopRight|3500ms
+    - eventDisableMultiballEarthLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::LEFT
+  # ---------------------
+  # LEFT::TWO BALL
+  multiball_lock_multiballEarthLockSaucerTopLeft_full.1{device.multiball_locks.multiballEarthLockSaucerTopRight.locked_balls==0}:
+    - eventStartMultiballEarthUpperKickerLeft|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballEarthLockSaucerTopRight
+    - eventDisableMultiballEarthLockSaucerTopLeft
+  # ---------------------
+  # LEFT::THREE BALL
+  multiball_lock_multiballEarthLockSaucerTopLeft_full.2{device.multiball_locks.multiballEarthLockSaucerTopRight.locked_balls==1}:
+    - eventStartMultiballEarthUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballEarthLockSaucerTopRight|3500ms
+    - eventDisableMultiballEarthLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # ENDING MULTIBALL
+  # ---------------------
+  # BOTH
+  multiball_multiballEarthUpperKickerBoth_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballEarthLockSaucerTopRight
+    - eventEnableMultiballEarthLockSaucerTopLeft
+  # LEFT
+  multiball_multiballEarthUpperKickerLeft_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballEarthLockSaucerTopRight
+    - eventEnableMultiballEarthLockSaucerTopLeft
+  # RIGHT
+  multiball_multiballEarthUpperKickerRight_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballEarthLockSaucerTopRight
+    - eventEnableMultiballEarthLockSaucerTopLeft
+
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballEarthLockSaucerTopRight:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopRight
+    enable_events: eventEnableMultiballEarthLockSaucerTopRight
+    disable_events: eventDisableMultiballEarthLockSaucerTopRight
+    locked_ball_counting_strategy: physical_only
+
+  multiballEarthLockSaucerTopLeft:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopLeft
+    enable_events: eventEnableMultiballEarthLockSaucerTopLeft
+    disable_events: eventDisableMultiballEarthLockSaucerTopLeft
+    locked_ball_counting_strategy: physical_only
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballEarthUpperKickerLeft:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballEarthUpperKickerLeft
+    disable_events: eventDisableMultiballEarthUpperKickerLeft
+    start_events: eventStartMultiballEarthUpperKickerLeft
+    stop_events: eventStopMultiballEarthUpperKickerLeft
+    
+  multiballEarthUpperKickerRight:
+    ball_locks:
+      - ballDeviceSaucerTopRight
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballEarthUpperKickerRight
+    disable_events: eventDisableMultiballEarthUpperKickerRight
+    start_events: eventStartMultiballEarthUpperKickerRight
+    stop_events: eventStopMultiballEarthUpperKickerRight
+    
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::BOTH
+  # ----------------------------
+  multiballEarthUpperKickerBoth:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+      - ballDeviceSaucerTopRight
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballEarthUpperKickerBoth
+    disable_events: eventDisableMultiballEarthUpperKickerBoth
+    start_events: eventStartMultiballEarthUpperKickerBoth
+    stop_events: eventStopMultiballEarthUpperKickerBoth
+    

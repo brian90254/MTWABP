@@ -1,0 +1,570 @@
+#config_version=6
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+# ---------------------
+# SHOW NEW ACHIEVEMENT
+# ---------------------
+  # ---------------------
+  # ACHIEVEMENT::ONE
+  # ---------------------
+  eventShowSlidePlayboyPlaymate1LRG:
+    - eventSlidePlaymateMoveUp|1000ms
+    - eventShowSlidePlayboyPlaymatesB|10800ms
+  # ---------------------
+  # ACHIEVEMENT::TWO
+  # ---------------------
+  eventShowSlidePlayboyPlaymate2LRG:
+    - eventSlidePlaymateMoveUp|1000ms
+    - eventShowSlidePlayboyPlaymatesC|10800ms
+  # ---------------------
+  # ACHIEVEMENT::THREE
+  # ---------------------
+  eventShowSlidePlayboyPlaymate3LRG:
+    - eventSlidePlaymateMoveUp|1000ms
+    - eventShowSlidePlayboyPlaymatesD|10800ms
+  # ---------------------
+  # ACHIEVEMENT::FOUR
+  # ---------------------
+  eventShowSlidePlayboyPlaymate4LRG:
+    - eventSlidePlaymateMoveUp|1000ms
+    - eventShowSlidePlayboyPlaymatesE|10800ms
+  # ---------------------
+  # ACHIEVEMENT::FIVE
+  # ---------------------
+  eventShowSlidePlayboyPlaymate5LRG:
+    - eventSlidePlaymateMoveUp|1000ms
+    - eventShowSlidePlayboyPlaymatesF|10800ms
+    
+  # ---------------------
+  # SHOW STATUS
+  # ---------------------
+  flipper_cancel:
+    - eventShowSlidePlayboyPlaymatesF
+    
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+# ---------------------
+# BASE SLIDES
+# ---------------------
+  eventShowSlidePlayboy1982Base:
+    slideBaseDMDPlayboy1982:
+      target: displayDMD
+    slideBaseBackglassPlayboy1982:
+      target: displayBackglass
+
+# ---------------------
+# SHOW ACHIEVEMENT SLIDES
+# ---------------------
+  # ---------------------
+  # ACHIEVEMENT::ONE
+  # ---------------------
+  eventShowSlidePlayboyPlaymate1LRG:
+    slidePlayboy1982Playmate1LRG:
+      target: displayBackglass
+  # ---------------------
+  # ACHIEVEMENT::TWO
+  # ---------------------
+  eventShowSlidePlayboyPlaymate2LRG:
+    slidePlayboy1982Playmate2LRG:
+      target: displayBackglass
+  # ---------------------
+  # ACHIEVEMENT::THREE
+  # ---------------------
+  eventShowSlidePlayboyPlaymate3LRG:
+    slidePlayboy1982Playmate3LRG:
+      target: displayBackglass
+  # ---------------------
+  # ACHIEVEMENT::FOUR
+  # ---------------------
+  eventShowSlidePlayboyPlaymate4LRG:
+    slidePlayboy1982Playmate4LRG:
+      target: displayBackglass
+  # ---------------------
+  # ACHIEVEMENT::FIVE
+  # ---------------------
+  eventShowSlidePlayboyPlaymate5LRG:
+    slidePlayboy1982Playmate5LRG:
+      target: displayBackglass
+      
+# ---------------------
+# SHOW STATUS SLIDES
+# ---------------------
+  # ---------------------
+  # STATUS::ZERO
+  # ---------------------
+  eventShowSlidePlayboyPlaymatesA:
+    slidePlayboy1982PlaymatesA:
+      target: displayBackglass
+  # ---------------------
+  # STATUS::ONE
+  # ---------------------
+  eventShowSlidePlayboyPlaymatesB:
+    slidePlayboy1982PlaymatesB:
+      target: displayBackglass
+  # ---------------------
+  # STATUS::ONE
+  # ---------------------
+  eventShowSlidePlayboyPlaymatesC:
+    slidePlayboy1982PlaymatesC:
+      target: displayBackglass
+  # ---------------------
+  # STATUS::ONE
+  # ---------------------
+  eventShowSlidePlayboyPlaymatesD:
+    slidePlayboy1982PlaymatesD:
+      target: displayBackglass
+  # ---------------------
+  # STATUS::ONE
+  # ---------------------
+  eventShowSlidePlayboyPlaymatesE:
+    slidePlayboy1982PlaymatesE:
+      target: displayBackglass
+  # ---------------------
+  # STATUS::FIVE
+  # ---------------------
+  eventShowSlidePlayboyPlaymatesF:
+    slidePlayboy1982PlaymatesF:
+      target: displayBackglass
+      
+slides:
+# ---------------------
+# ACHIEVEMENT SLIDES
+# ---------------------
+  # ---------------------
+  # ACHIEVEMENT::PLAYMATE 1 LRG::BACKGLASS
+  # ---------------------
+  slidePlayboy1982Playmate1LRG:
+    widgets:
+    - type: image
+      image: 1982Playmate1LRG
+      z: 50
+      x: middle
+      y: -864
+      animations:
+        eventSlidePlaymateMoveUp:
+          property: y
+          value: 864
+          duration: 10s
+    expire: 11s
+  # ---------------------
+  # ACHIEVEMENT::PLAYMATE 2 LRG::BACKGLASS
+  # ---------------------
+  slidePlayboy1982Playmate2LRG:
+    widgets:
+    - type: image
+      image: 1982Playmate2LRG
+      z: 50
+      x: middle
+      y: -864
+      animations:
+        eventSlidePlaymateMoveUp:
+          property: y
+          value: 864
+          duration: 10s
+    expire: 11s
+  # ---------------------
+  # ACHIEVEMENT::PLAYMATE 3 LRG::BACKGLASS
+  # ---------------------
+  slidePlayboy1982Playmate3LRG:
+    widgets:
+    - type: image
+      image: 1982Playmate3LRG
+      z: 50
+      x: middle
+      y: -864
+      animations:
+        eventSlidePlaymateMoveUp:
+          property: y
+          value: 864
+          duration: 10s
+    expire: 11s
+  # ---------------------
+  # ACHIEVEMENT::PLAYMATE 4 LRG::BACKGLASS
+  # ---------------------
+  slidePlayboy1982Playmate4LRG:
+    widgets:
+    - type: image
+      image: 1982Playmate4LRG
+      z: 50
+      x: middle
+      y: -864
+      animations:
+        eventSlidePlaymateMoveUp:
+          property: y
+          value: 864
+          duration: 10s
+    expire: 11s
+  # ---------------------
+  # ACHIEVEMENT::PLAYMATE 5 LRG::BACKGLASS
+  # ---------------------
+  slidePlayboy1982Playmate5LRG:
+    widgets:
+    - type: image
+      image: 1982Playmate5LRG
+      z: 50
+      x: middle
+      y: -864
+      animations:
+        eventSlidePlaymateMoveUp:
+          property: y
+          value: 864
+          duration: 10s
+    expire: 11s
+    
+# ---------------------
+# STATUS SLIDES
+# ---------------------
+  # ---------------------
+  # STATUS::PLAYMATE 0 LRG::BACKGLASS
+  # ---------------------
+  slidePlayboy1982PlaymatesA:
+    widgets:
+    - type: image
+      image: 1982PlaymatesA
+      z: 60
+    expire: 5s
+  # ---------------------
+  # STATUS::PLAYMATE 1 LRG::BACKGLASS
+  # ---------------------
+  slidePlayboy1982PlaymatesB:
+    widgets:
+    - type: image
+      image: 1982PlaymatesB
+      z: 60
+    expire: 5s
+  # ---------------------
+  # STATUS::PLAYMATE 2 LRG::BACKGLASS
+  # ---------------------
+  slidePlayboy1982PlaymatesC:
+    widgets:
+    - type: image
+      image: 1982PlaymatesC
+      z: 60
+    expire: 5s
+  # ---------------------
+  # STATUS::PLAYMATE 3 LRG::BACKGLASS
+  # ---------------------
+  slidePlayboy1982PlaymatesD:
+    widgets:
+    - type: image
+      image: 1982PlaymatesD
+      z: 60
+    expire: 5s
+  # ---------------------
+  # STATUS::PLAYMATE 4 LRG::BACKGLASS
+  # ---------------------
+  slidePlayboy1982PlaymatesE:
+    widgets:
+    - type: image
+      image: 1982PlaymatesE
+      z: 60
+    expire: 5s
+  # ---------------------
+  # STATUS::PLAYMATE 5 LRG::BACKGLASS
+  # ---------------------
+  slidePlayboy1982PlaymatesF:
+    widgets:
+    - type: image
+      image: 1982PlaymatesF
+      z: 60
+    expire: 5s
+    
+# ---------------------
+# BASE SLIDES
+# ---------------------
+  # ---------------------
+  # BASE::BACKGLASS
+  # ---------------------
+  slideBaseBackglassPlayboy1982:
+    widgets:
+    - type: image
+      image: imagebackglass
+      z: 40
+    - type: text
+      text: (player1|score)
+      z: 30
+      x: left + 745
+      y: bottom + 790
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+    - type: text
+      text: (player2|score)
+      z: 30
+      x: left + 1377
+      y: bottom + 790
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+    - type: text
+      text: (player3|score)
+      z: 30
+      x: left + 745
+      y: bottom + 220
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+    - type: text
+      text: (player4|score)
+      z: 30
+      x: left + 1377
+      y: bottom + 220
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+    - type: text
+      text: (player|ball)
+      #min_digits: 2
+      z: 30
+      x: left + 1443
+      y: bottom + 584
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+# -----------------------
+# ADDED 200507
+    - type: text
+      text: (machine|credits_string)
+      #min_digits: 2
+      z: 30
+      x: left + 1342
+      y: bottom + 584
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+## -----------------------
+
+  slideBaseDMDPlayboy1982:
+    widgets:
+      # -------------------------------------------------
+      #                       TOP
+      # -------------------------------------------------
+      # -----------------
+      # MOON NAME, CENTER ORANGE
+      # -----------------
+    - type: text
+      text: "(player|nameMoon)"
+      y: top - 20
+      x: middle
+      style: fontBaseMainHeader
+      color: colorFontBaseMainHeaderInner
+      
+      # -----------------
+      # MOON NAME, OUTLINE ONE
+      # -----------------
+    - type: text
+      text: (player|nameMoon)
+      y: top - 21
+      x: middle - 1
+      style: fontBaseMainHeader
+      color: colorFontBaseMainHeaderOuter1
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 21
+      x: middle + 1
+      style: fontBaseMainHeader
+      color: colorFontBaseMainHeaderOuter1
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 19
+      x: middle - 1
+      style: fontBaseMainHeader
+      color: colorFontBaseMainHeaderOuter1
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 19
+      x: middle + 1
+      style: fontBaseMainHeader
+      color: colorFontBaseMainHeaderOuter1
+      # -------------------------------------------------
+
+      # -----------------
+      # MOON NAME, OUTLINE TWO
+      # -----------------
+    - type: text
+      text: (player|nameMoon)
+      y: top - 22
+      x: middle - 2
+      style: fontBaseMainHeader
+      color: colorFontBaseMainHeaderOuter2
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 22
+      x: middle + 2
+      style: fontBaseMainHeader
+      color: colorFontBaseMainHeaderOuter2
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 18
+      x: middle - 2
+      style: fontBaseMainHeader
+      color: colorFontBaseMainHeaderOuter2
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 18
+      x: middle + 2
+      style: fontBaseMainHeader
+      color: colorFontBaseMainHeaderOuter2
+      # -------------------------------------------------
+      
+      # -------------------------------------------------
+      #                       MIDDLE
+      # -------------------------------------------------
+      # -----------------
+      # RED CENTER
+      # -----------------
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle
+      x: middle
+      style: fontBaseMainMiddle
+      color: colorFontBaseMainMiddleInner
+      
+      # -----------------
+      # OUTLINE CYAN
+      # -----------------
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle + 1
+      x: middle - 1
+      style: fontBaseMainMiddle
+      color: colorFontBaseMainMiddleOuter1
+      
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle + 1
+      x: middle + 1
+      style: fontBaseMainMiddle
+      color: colorFontBaseMainMiddleOuter1
+      
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 1
+      x: middle + 1
+      style: fontBaseMainMiddle
+      color: colorFontBaseMainMiddleOuter1
+      
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 1
+      x: middle - 1
+      style: fontBaseMainMiddle
+      color: colorFontBaseMainMiddleOuter1
+      # -------------------------------------------------
+
+      # -----------------
+      # OUTLINE TWO
+      # -----------------
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle + 2
+      x: middle - 2
+      style: fontBaseMainMiddle
+      color: colorFontBaseMainMiddleOuter2
+      
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle + 2
+      x: middle + 2
+      style: fontBaseMainMiddle
+      color: colorFontBaseMainMiddleOuter2
+      
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 2
+      x: middle + 2
+      style: fontBaseMainMiddle
+      color: colorFontBaseMainMiddleOuter2
+      
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 2
+      x: middle - 2
+      style: fontBaseMainMiddle
+      color: colorFontBaseMainMiddleOuter2
+      # -------------------------------------------------
+      
+      # -------------------------------------------------
+      #                       BOTTOM
+      # -------------------------------------------------
+      # -----------------
+      # CENTER YELLOW
+      # -----------------
+    - type: text
+      text: PLAYER (player|number)    BALL (player|ball)
+      anchor_y: bottom
+      y: bottom
+      x: middle
+      style: fontBaseMainFooter
+      color: colorFontBaseMainFooterInner
+      
+      # -----------------
+      # OUTLINE GREEN
+      # -----------------
+    - type: text
+      text: PLAYER (player|number)    BALL (player|ball)
+      anchor_y: bottom
+      y: bottom + 1
+      x: middle - 1
+      style: fontBaseMainFooter
+      color: colorFontBaseMainFooterOuter1
+      
+    - type: text
+      text: PLAYER (player|number)    BALL (player|ball)
+      anchor_y: bottom
+      y: bottom - 1
+      x: middle + 1
+      style: fontBaseMainFooter
+      color: colorFontBaseMainFooterOuter1
+      
+    - type: text
+      text: PLAYER (player|number)    BALL (player|ball)
+      anchor_y: bottom
+      y: bottom + 1
+      x: middle + 1
+      style: fontBaseMainFooter
+      color: colorFontBaseMainFooterOuter1
+      
+    - type: text
+      text: PLAYER (player|number)    BALL (player|ball)
+      anchor_y: bottom
+      y: bottom - 1
+      x: middle - 1
+      style: fontBaseMainFooter
+      color: colorFontBaseMainFooterOuter1
+      # -------------------------------------------------

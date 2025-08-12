@@ -1,0 +1,1369 @@
+#config_version=6
+
+# BASE::PLAYBOY
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # LANES::KEYS
+    # -------------------
+    shotLaneKey1:
+        switch: s_1_6
+        enable_events: eventEnableShotLaneKey1
+        disable_events: eventDisableShotLaneKey1
+        restart_events: eventRestartShotLaneKey1
+        reset_events: eventResetShotLaneKey1
+        profile: spShotLaneKey
+        show_tokens:
+            led1: ledKey1A
+            led2: ledKey1B
+            led3: ledKey1C
+            led4: ledKey1D
+            led5: ledKey1E
+            led6: ledKey1F
+            led7: ledKey1G
+            
+    shotLaneKey2:
+        switch: s_1_10
+        enable_events: eventEnableShotLaneKey2
+        disable_events: eventDisableShotLaneKey2
+        restart_events: eventRestartShotLaneKey2
+        reset_events: eventResetShotLaneKey2
+        profile: spShotLaneKey
+        show_tokens:
+            led1: ledKey2A
+            led2: ledKey2B
+            led3: ledKey2C
+            led4: ledKey2D
+            led5: ledKey2E
+            led6: ledKey2F
+            led7: ledKey2G
+            
+    shotLaneKey3:
+        switch: s_1_5
+        enable_events: eventEnableShotLaneKey3
+        disable_events: eventDisableShotLaneKey3
+        restart_events: eventRestartShotLaneKey3
+        reset_events: eventResetShotLaneKey3
+        profile: spShotLaneKey
+        show_tokens:
+            led1: ledKey3A
+            led2: ledKey3B
+            led3: ledKey3C
+            led4: ledKey3D
+            led5: ledKey3E
+            led6: ledKey3F
+            led7: ledKey3G
+            
+    shotLaneKey4:
+        switch: s_1_11
+        enable_events: eventEnableShotLaneKey4
+        disable_events: eventDisableShotLaneKey4
+        restart_events: eventRestartShotLaneKey4
+        reset_events: eventResetShotLaneKey4
+        profile: spShotLaneKey
+        show_tokens:
+            led1: ledKey4A
+            led2: ledKey4B
+            led3: ledKey4C
+            led4: ledKey4D
+            led5: ledKey4E
+            led6: ledKey4F
+            led7: ledKey4G
+            
+    # -------------------
+    # TARGET::KEY
+    # -------------------
+    shotTargetKey5:
+        switch: s_1_4
+        enable_events: eventEnableShotTargetKey5
+        disable_events: eventDisableShotTargetKey5
+        restart_events: eventRestartShotTargetKey5
+        reset_events: eventResetShotTargetKey5
+        profile: spShotLaneKey
+        show_tokens:
+            led1: ledKey5A
+            led2: ledKey5B
+            led3: ledKey5C
+            led4: ledKey5D
+            led5: ledKey5E
+            led6: ledKey5F
+            led7: ledKey5G
+            
+    # -------------------
+    # TARGET::KEY::PLAYMATE ADVANCE
+    # -------------------
+    shotTargetKeyPlaymateAdvance:
+        switch: s_1_4
+        enable_events: eventEnableShotTargetKeyPlaymateAdvance
+        disable_events: eventDisableShotTargetKeyPlaymateAdvance
+        restart_events: eventRestartShotTargetKeyPlaymateAdvance
+        reset_events: eventResetShotTargetKeyPlaymateAdvance
+        #profile: spShotTargetKeyPlaymateAdvance
+            
+# -------------------
+# GROTTO SHOT
+# -------------------
+    shotGrotto:
+        #switch:
+        enable_events: eventEnableShotGrotto
+        disable_events: eventDisableShotGrotto
+        restart_events: eventRestartShotGrotto
+        reset_events: eventResetShotGrotto
+        advance_events: eventAdvanceShotGrotto
+        hit_events: eventHitShotGrotto
+        profile: spShotGrotto
+        show_tokens:
+            # ---------------------
+            led1A: ledGrottoBonus1A
+            led1B: ledGrottoBonus1B
+            led1C: ledGrottoBonus1C
+            # ---------------------
+            led2A: ledGrottoBonus2A
+            led2B: ledGrottoBonus2B
+            led2C: ledGrottoBonus2C
+            # ---------------------
+            led3A: ledGrottoBonus3A
+            led3B: ledGrottoBonus3B
+            led3C: ledGrottoBonus3C
+            # ---------------------
+            led4A: ledGrottoBonus4A
+            led4B: ledGrottoBonus4B
+            led4C: ledGrottoBonus4C
+            # ---------------------
+            led5A: ledGrottoBonus5A
+            led5B: ledGrottoBonus5B
+            led5C: ledGrottoBonus5C
+            # ---------------------
+            led6A: ledGrottoSpecialA
+            led6B: ledGrottoSpecialB
+            led6C: ledGrottoSpecialC
+
+# -------------------
+# TARGET::PLAYMATES
+# -------------------
+    # -------------------
+    # TARGET::PLAYMATES
+    # -------------------
+    shotTargetPlaymate1:
+        switch: s_1_16
+        enable_events: eventEnableShotTargetPlaymate1
+        disable_events: eventDisableShotTargetPlaymate1
+        restart_events: eventRestartShotTargetPlaymate1
+        reset_events: eventResetShotTargetPlaymate1
+        advance_events: eventAdvanceShotTargetPlaymate1
+        hit_events: eventHitShotTargetPlaymate1
+        profile: spShotTargetPlaymate
+        show_tokens:
+            led: ledPlaymate1
+
+    shotTargetPlaymate2:
+        switch: s_1_31
+        enable_events: eventEnableShotTargetPlaymate2
+        disable_events: eventDisableShotTargetPlaymate2
+        restart_events: eventRestartShotTargetPlaymate2
+        reset_events: eventResetShotTargetPlaymate2
+        advance_events: eventAdvanceShotTargetPlaymate2
+        hit_events: eventHitShotTargetPlaymate2
+        profile: spShotTargetPlaymate
+        show_tokens:
+            led: ledPlaymate2
+            
+    shotTargetPlaymate3:
+        switch: s_1_17
+        enable_events: eventEnableShotTargetPlaymate3
+        disable_events: eventDisableShotTargetPlaymate3
+        restart_events: eventRestartShotTargetPlaymate3
+        reset_events: eventResetShotTargetPlaymate3
+        advance_events: eventAdvanceShotTargetPlaymate3
+        hit_events: eventHitShotTargetPlaymate3
+        profile: spShotTargetPlaymate
+        show_tokens:
+            led: ledPlaymate3
+
+    shotTargetPlaymate4:
+        switch: s_1_30
+        enable_events: eventEnableShotTargetPlaymate4
+        disable_events: eventDisableShotTargetPlaymate4
+        restart_events: eventRestartShotTargetPlaymate4
+        reset_events: eventResetShotTargetPlaymate4
+        advance_events: eventAdvanceShotTargetPlaymate4
+        hit_events: eventHitShotTargetPlaymate4
+        profile: spShotTargetPlaymate
+        show_tokens:
+            led: ledPlaymate4
+            
+    shotTargetPlaymate5:
+        switch: s_1_18
+        enable_events: eventEnableShotTargetPlaymate5
+        disable_events: eventDisableShotTargetPlaymate5
+        restart_events: eventRestartShotTargetPlaymate5
+        reset_events: eventResetShotTargetPlaymate5
+        advance_events: eventAdvanceShotTargetPlaymate5
+        hit_events: eventHitShotTargetPlaymate5
+        profile: spShotTargetPlaymate
+        show_tokens:
+            led: ledPlaymate5
+
+    # -------------------
+    # ROLLOVER::AWARD::PLAYMATES
+    # -------------------
+    shotRolloverPlaymate:
+        switch: s_1_29
+        enable_events: eventEnableShotRolloverPlaymate
+        disable_events: eventDisableShotRolloverPlaymate
+        restart_events: eventRestartShotRolloverPlaymate
+        reset_events: eventResetShotRolloverPlaymate
+        hit_events: eventHitShotRolloverPlaymate
+        profile: spShotRolloverPlaymate
+        show_tokens:
+            led1: ledRolloverA
+            led2: ledRolloverB
+            led3: ledRolloverC
+            led4: ledRolloverD
+            
+    # -------------------
+    # ROLLOVER::AWARD::PLAYMATES
+    # -------------------
+    shotRolloverSpecialExtraBall:
+        switch: s_1_29
+        enable_events: eventEnableShotRolloverSpecialExtraBall
+        disable_events: eventDisableShotRolloverSpecialExtraBall
+        restart_events: eventRestartShotRolloverSpecialExtraBall
+        reset_events: eventResetShotRolloverSpecialExtraBall
+        hit_events: eventHitShotRolloverSpecialExtraBall
+        profile: spShotRolloverSpecialExtraBall
+        show_tokens:
+            led1: ledRolloverSpecial
+            led2: ledRolloverExtraBall
+            
+    # -------------------
+    # LANE::RIGHT
+    # -------------------
+    shotLaneRight:
+        switch: s_1_19
+        enable_events: eventEnableShotLaneRight
+        disable_events: eventDisableShotLaneRight
+        restart_events: eventRestartShotLaneRight
+        reset_events: eventResetShotLaneRight
+        
+    # -------------------
+    # DROP RIGHT
+    # -------------------
+    shotDropRightA:
+        switch: s_0_7
+        enable_events: eventEnableShotDropRightA
+        disable_events: eventDisableShotDropRightA
+        restart_events: eventRestartShotDropRightA
+        reset_events: eventResetShotDropRightA
+        advance_events: eventAdvanceShotDropRightA
+        hit_events: eventHitShotDropRightA
+        profile: spShotDropRight
+            
+    shotDropRightB:
+        switch: s_0_6
+        enable_events: eventEnableShotDropRightB
+        disable_events: eventDisableShotDropRightB
+        restart_events: eventRestartShotDropRightB
+        reset_events: eventResetShotDropRightB
+        advance_events: eventAdvanceShotDropRightB
+        hit_events: eventHitShotDropRightB
+        profile: spShotDropRight
+        
+    shotDropRightC:
+        switch: s_0_5
+        enable_events: eventEnableShotDropRightC
+        disable_events: eventDisableShotDropRightC
+        restart_events: eventRestartShotDropRightC
+        reset_events: eventResetShotDropRightC
+        advance_events: eventAdvanceShotDropRightC
+        hit_events: eventHitShotDropRightC
+        profile: spShotDropRight
+        
+    shotDropRightD:
+        switch: s_0_4
+        enable_events: eventEnableShotDropRightD
+        disable_events: eventDisableShotDropRightD
+        restart_events: eventRestartShotDropRightD
+        reset_events: eventResetShotDropRightD
+        advance_events: eventAdvanceShotDropRightD
+        hit_events: eventHitShotDropRightD
+        profile: spShotDropRight
+        
+    shotDropRightE:
+        switch: s_0_3
+        enable_events: eventEnableShotDropRightE
+        disable_events: eventDisableShotDropRightE
+        restart_events: eventRestartShotDropRightE
+        reset_events: eventResetShotDropRightE
+        advance_events: eventAdvanceShotDropRightE
+        hit_events: eventHitShotDropRightE
+        profile: spShotDropRight
+        
+        
+    # -------------------
+    # DROP RIGHT::SPECIAL
+    # -------------------
+    shotDropRightSpecial:
+        #switch:
+        enable_events: eventEnableShotDropRightSpecial
+        disable_events: eventDisableShotDropRightSpecial
+        restart_events: eventRestartShotDropRightSpecial
+        reset_events: eventResetShotDropRightSpecial
+        advance_events: eventAdvanceShotDropRightSpecial
+        hit_events: eventHitShotDropRightSpecial
+        profile: spShotDropRightSpecial
+        show_tokens:
+            led1: ledDropRightSpecialA
+            led2: ledDropRightSpecialB
+            led3: ledDropRightSpecialC
+            
+    # -------------------
+    # MULTIPLIER ADVANCE
+    # -------------------
+    shotAdvanceMultiplier:
+        #switch:
+        enable_events: eventEnableShotAdvanceMultiplier
+        disable_events: eventDisableShotAdvanceMultiplier
+        restart_events: eventRestartShotAdvanceMultiplier
+        reset_events: eventResetShotAdvanceMultiplier
+        advance_events: eventAdvanceShotAdvanceMultiplier
+        hit_events: eventHitShotAdvanceMultiplier
+        profile: spShotAdvanceMultiplier
+        show_tokens:
+            # -------------------------
+            led1A: ledBonusMultiplier2XA
+            led1B: ledBonusMultiplier2XB
+            led1C: ledBonusMultiplier2XC
+            # -------------------------
+            led2A: ledBonusMultiplier3XA
+            led2B: ledBonusMultiplier3XB
+            led2C: ledBonusMultiplier3XC
+            # -------------------------
+            led3A: ledBonusMultiplier5XA
+            led3B: ledBonusMultiplier5XB
+            led3C: ledBonusMultiplier5XC
+            led3D: ledBonusMultiplier5XD
+            led3E: ledBonusMultiplier5XE
+            led3F: ledBonusMultiplier5XF
+            led3G: ledBonusMultiplier5XG
+            # -------------------------
+
+    # -------------------
+    # OUTLANE SPECIAL
+    # -------------------
+    shotOutlaneSpecialLeft:
+        switch: s_1_7
+        enable_events: eventEnableShotOutlaneSpecialLeft
+        disable_events: eventDisableShotOutlaneSpecialLeft
+        restart_events: eventRestartShotOutlaneSpecialLeft
+        reset_events: eventResetShotOutlaneSpecialLeft
+        advance_events: eventAdvanceShotOutlaneSpecialLeft
+        hit_events: eventHitShotOutlaneSpecialLeft
+        profile: spShotOutlaneSpecial
+        show_tokens:
+            led: ledOutlaneSpecialLeft
+            
+    shotOutlaneSpecialRight:
+        switch: s_1_9
+        enable_events: eventEnableShotOutlaneSpecialRight
+        disable_events: eventDisableShotOutlaneSpecialRight
+        restart_events: eventRestartShotOutlaneSpecialRight
+        reset_events: eventResetShotOutlaneSpecialRight
+        advance_events: eventAdvanceShotOutlaneSpecialRight
+        hit_events: eventHitShotOutlaneSpecialRight
+        profile: spShotOutlaneSpecial
+        show_tokens:
+            led: ledOutlaneSpecialRight
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::DROP::RIGHT
+    # -------------------
+    shotGroupDropRight:
+        shots:
+            - shotDropRightA
+            - shotDropRightB
+            - shotDropRightC
+            - shotDropRightD
+            - shotDropRightE
+        enable_events:
+            - eventEnableShotGroupDropRight
+        disable_events:
+            - eventDisableShotGroupDropRight
+        reset_events:
+            - eventResetShotGroupDropRight
+        restart_events:
+            - eventRestartShotGroupDropRight
+        #rotate_left_events:
+        #    - sw_right_flipper
+        #rotate_right_events:
+        #    - sw_left_flipper
+            
+    # -------------------
+    # SHOTGROUP::LANE::TOP
+    # -------------------
+    shotGroupLaneKey:
+        shots:
+            - shotLaneKey1
+            - shotLaneKey2
+            - shotLaneKey3
+            - shotLaneKey4
+        enable_events:
+            - eventEnableShotGroupLaneKey
+        disable_events:
+            - eventDisableShotGroupLaneKey
+        reset_events:
+            - eventResetShotGroupLaneKey
+        restart_events:
+            - eventRestartShotGroupLaneKey
+        rotate_left_events:
+            - sw_right_flipper
+        rotate_right_events:
+            - sw_left_flipper
+            
+    # -------------------
+    # SHOTGROUP::TARGET::PLAYMATEs
+    # -------------------
+    shotGroupTargetPlaymate:
+        shots:
+            - shotTargetPlaymate1
+            - shotTargetPlaymate2
+            - shotTargetPlaymate3
+            - shotTargetPlaymate4
+            - shotTargetPlaymate5
+        enable_events:
+            - eventEnableShotGroupTargetPlaymate
+        disable_events:
+            - eventDisableShotGroupTargetPlaymate
+        reset_events:
+            - eventResetShotGroupTargetPlaymate
+        restart_events:
+            - eventRestartShotGroupTargetPlaymate
+        rotate_left_events:
+            - sw_right_flipper
+        rotate_right_events:
+            - sw_left_flipper
+            
+    # -------------------
+    # SHOTGROUP::LANE::TOP
+    # -------------------
+    shotGroupOutlaneSpecial:
+        shots:
+            - shotOutlaneSpecialLeft
+            - shotOutlaneSpecialRight
+        enable_events:
+            - eventEnableShotGroupOutlaneSpecial
+        disable_events:
+            - eventDisableShotGroupOutlaneSpecial
+        reset_events:
+            - eventResetShotGroupOutlaneSpecial
+        restart_events:
+            - eventRestartShotGroupOutlaneSpecial
+        rotate_left_events:
+            - sw_right_flipper
+        rotate_right_events:
+            - sw_left_flipper
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::LANE::KEY
+    # -----------------------------
+    spShotLaneKey:
+        states:
+          - name: litFlash
+            show: twistSevenLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '00cccc'
+                color2: '000000'
+          - name: litSolid
+            show: twistSevenLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: 'ff00ff'
+                color2: 'cc00cc'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::TARGET::PLAYMATES::A
+    # -----------------------------
+    spShotTargetPlaymate:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 2
+            show_tokens:
+                color1: '00ff00'
+                color2: '008800'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 2
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::DROP::RIGHT
+    # -----------------------------
+    spShotDropRight:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::DROP RIGHT::SPECIAL
+    # -----------------------------
+    spShotDropRightSpecial:
+        states:
+          - name: litFlash
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: 'ff00ff'
+                color2: '000000'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE SPECIAL
+    # -----------------------------
+    spShotOutlaneSpecial:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 2
+            show_tokens:
+                color1: 'cccc00'
+                color2: '666600'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 2
+            show_tokens:
+                color1: 'ff0000'
+                color2: 'cc0000'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::ROLLOVER::SPECIAL EXTRA BALL
+    # -----------------------------
+    spShotRolloverSpecialExtraBall:
+        states:
+          - name: unlitSolid
+            show: showLedShotRolloverSpecialExtraBall
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: '000000'
+                color1B: '000000'
+                # --------------
+                color2A: '000000'
+                color2B: '000000'
+                # --------------
+          - name: litFlashSpecial
+            show: showLedShotRolloverSpecialExtraBall
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: 'ff00ff'
+                color1B: '880088'
+                # --------------
+                color2A: '000000'
+                color2B: '000000'
+                # --------------
+          - name: litFlashExtraBall
+            show: showLedShotRolloverSpecialExtraBall
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: 'ff00ff'
+                color1B: 'cc00cc'
+                # --------------
+                color2A: 'ffff00'
+                color2B: '888800'
+                # --------------
+          - name: litSolid
+            show: showLedShotRolloverSpecialExtraBall
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: 'ff00ff'
+                color1B: 'cc00cc'
+                # --------------
+                color2A: 'ffff00'
+                color2B: 'cccc00'
+                # --------------
+        loop: false
+
+    # -----------------------------
+    # PROFILE::ROLLOVER::AWARD::PLAYMATES
+    # -----------------------------
+    spShotRolloverPlaymate:
+        states:
+          - name: litFlashOne
+            show: swirlFourLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '880000'
+                color2: 'ff0000'
+                # -------------
+          - name: litFlashTwo
+            show: swirlFourLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '884400'
+                color2: 'ff8800'
+                # -------------
+          - name: litFlashThree
+            show: swirlFourLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '888800'
+                color2: 'ffff00'
+                # -------------
+          - name: litFlashFour
+            show: swirlFourLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '008800'
+                color2: '00ff00'
+                # -------------
+          - name: litFlashFive
+            show: swirlFourLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '888888'
+                color2: 'ffffff'
+                # -------------
+          - name: litFlashSix
+            show: swirlFourLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '888888'
+                color2: 'ffffff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::LANE::KEY
+    # -----------------------------
+    spShotGrotto:
+        states:
+          - name: unlitSolid
+            show: showLedShotGrotto
+            speed: 3
+            show_tokens:
+                # ---------------
+                color1A: '000000'
+                color1B: '000000'
+                # ---------------
+                color2A: '000000'
+                color2B: '000000'
+                # ---------------
+                color3A: '000000'
+                color3B: '000000'
+                # ---------------
+                color4A: '000000'
+                color4B: '000000'
+                # ---------------
+                color5A: '000000'
+                color5B: '000000'
+                # ---------------
+                color6A: '000000'
+                color6B: '000000'
+                # ---------------
+          - name: litFlashOne
+            show: showLedShotGrotto
+            speed: 3
+            show_tokens:
+                # ---------------
+                color1A: 'ff00ff'
+                color1B: 'cc00cc'
+                # ---------------
+                color2A: '000000'
+                color2B: '000000'
+                # ---------------
+                color3A: '000000'
+                color3B: '000000'
+                # ---------------
+                color4A: '000000'
+                color4B: '000000'
+                # ---------------
+                color5A: '000000'
+                color5B: '000000'
+                # ---------------
+                color6A: '000000'
+                color6B: '000000'
+                # ---------------
+          - name: litFlashTwo
+            show: showLedShotGrotto
+            speed: 3
+            show_tokens:
+                # ---------------
+                color1A: 'ff00ff'
+                color1B: 'cc00cc'
+                # ---------------
+                color2A: 'ff00ff'
+                color2B: 'cc00cc'
+                # ---------------
+                color3A: '000000'
+                color3B: '000000'
+                # ---------------
+                color4A: '000000'
+                color4B: '000000'
+                # ---------------
+                color5A: '000000'
+                color5B: '000000'
+                # ---------------
+                color6A: '000000'
+                color6B: '000000'
+                # ---------------
+          - name: litFlashThree
+            show: showLedShotGrotto
+            speed: 3
+            show_tokens:
+                # ---------------
+                color1A: 'ff00ff'
+                color1B: 'cc00cc'
+                # ---------------
+                color2A: 'ff00ff'
+                color2B: 'cc00cc'
+                # ---------------
+                color3A: 'ff00ff'
+                color3B: 'cc00cc'
+                # ---------------
+                color4A: '000000'
+                color4B: '000000'
+                # ---------------
+                color5A: '000000'
+                color5B: '000000'
+                # ---------------
+                color6A: '000000'
+                color6B: '000000'
+                # ---------------
+          - name: litFlashFour
+            show: showLedShotGrotto
+            speed: 3
+            show_tokens:
+                # ---------------
+                color1A: 'ff00ff'
+                color1B: 'cc00cc'
+                # ---------------
+                color2A: 'ff00ff'
+                color2B: 'cc00cc'
+                # ---------------
+                color3A: 'ff00ff'
+                color3B: 'cc00cc'
+                # ---------------
+                color4A: 'ff00ff'
+                color4B: 'cc00cc'
+                # ---------------
+                color5A: '000000'
+                color5B: '000000'
+                # ---------------
+                color6A: '000000'
+                color6B: '000000'
+                # ---------------
+          - name: litFlashFive
+            show: showLedShotGrotto
+            speed: 6
+            show_tokens:
+                # ---------------
+                color1A: 'ff00ff'
+                color1B: 'cc00cc'
+                # ---------------
+                color2A: 'ff00ff'
+                color2B: 'cc00cc'
+                # ---------------
+                color3A: 'ff00ff'
+                color3B: 'cc00cc'
+                # ---------------
+                color4A: 'ff00ff'
+                color4B: 'cc00cc'
+                # ---------------
+                color5A: 'ff00ff'
+                color5B: 'cc00cc'
+                # ---------------
+                color6A: 'ffff00'
+                color6B: '888800'
+                # ---------------
+        loop: false
+
+    # -----------------------------
+    # PROFILE::2X::3X::5X::MULTIPLIERS
+    # -----------------------------
+    spShotAdvanceMultiplier:
+        states:
+          - name: litFlash2X
+            show: showLedShotAdvanceMultiplier
+            speed: 3
+            show_tokens:
+                # ---------------
+                color1A: '000000'
+                color1B: '000000'
+                # ---------------
+                color2A: '000000'
+                color2B: '000000'
+                # ---------------
+                color3A: '000000'
+                color3B: '000000'
+                # ---------------
+          - name: litFlash3X
+            show: showLedShotAdvanceMultiplier
+            speed: 3
+            show_tokens:
+                # ---------------
+                color1A: '00ff00'
+                color1B: '00cc00'
+                # ---------------
+                color2A: '000000'
+                color2B: '000000'
+                # ---------------
+                color3A: '000000'
+                color3B: '000000'
+                # ---------------
+          - name: litFlash5X
+            show: showLedShotAdvanceMultiplier
+            speed: 3
+            show_tokens:
+                # ---------------
+                color1A: '00ff00'
+                color1B: '00cc00'
+                # ---------------
+                color2A: 'ffff00'
+                color2B: 'cccc00'
+                # ---------------
+                color3A: '000000'
+                color3B: '000000'
+                # ---------------
+          - name: litSolid
+            show: showLedShotAdvanceMultiplier
+            speed: 3
+            show_tokens:
+                # ---------------
+                color1A: '00ff00'
+                color1B: '00cc00'
+                # ---------------
+                color2A: 'ffff00'
+                color2B: 'cccc00'
+                # ---------------
+                color3A: 'ff00ff'
+                color3B: 'cc00cc'
+                # ---------------
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    # ---------------------
+    # BALL ENDING
+    # ---------------------
+    ball_ending:
+      - eventDisableShotGroupOutlaneSpecial
+      
+    # ---------------------
+    # BASE STARTING
+    # ---------------------
+    mode_modeBase_started:
+        # -----------
+        # TARGETS
+        # -----------
+        - eventEnableShotGroupTargetPlaymate
+        # -----------
+        # LANES::KEYS::TOP
+        # -----------
+        - eventRestartShotGroupLaneKey
+        # -----------
+        # GROTTO
+        # -----------
+        - eventRestartShotGrotto
+        # -----------
+        # TARGETS::KEY ADVANCE
+        # -----------
+        #- eventEnableShotGroupTargetPlaymate
+        - eventRestartShotTargetKeyPlaymateAdvance
+        # -----------
+        # LANE::RIGHT
+        # -----------
+        - eventRestartShotLaneRight
+        # -----------
+        # MULTIPLIERS
+        # -----------
+        - eventRestartShotAdvanceMultiplier
+        ## -----------
+        ## OUTLANE SPECIAL
+        ## -----------
+        #- eventRestartShotGroupOutlaneSpecial
+        # -----------
+        # DROP::RIGHT
+        # -----------
+        - eventRestartShotGroupDropRight
+        
+    # ---------------------
+    # KEY LANES COMPLETE
+    # ---------------------
+    shotGroupLaneKey_litSolid_complete:
+        # --------------------------
+        # ENABLE TARGET KEY 5
+        - eventRestartShotTargetKey5
+
+    shotTargetKey5_litFlash_hit:
+        # ----------------------------
+        - eventRestartShotGroupLaneKey
+        # ----------------------------
+        - eventAdvanceShotGrotto
+        # -----------
+        # MULTIPLIERS HIT
+        # -----------
+        - eventHitShotAdvanceMultiplier
+        
+    shotGroupLaneKey_litFlash_hit:
+        # --------------------------
+        # ENABLE TARGET KEY 5
+        - eventAdvanceShotGrotto
+        
+        
+    # ---------------------
+    # MULTIPLIERS AWARD
+    # ---------------------
+    shotAdvanceMultiplier_litFlash2X_hit:
+        - eventHitShotAwardBonusMultiplier2X
+        
+    shotAdvanceMultiplier_litFlash3X_hit:
+        - eventHitShotAwardBonusMultiplier3X
+        
+    shotAdvanceMultiplier_litFlash5X_hit:
+        - eventHitShotAwardBonusMultiplier5X
+        
+    # ---------------------
+    # RESTART GROTTO
+    # ---------------------
+    ball_hold_ballHoldKickbackLeft_held_ball.5{current_player.shot_shotGrotto==5}:
+        - eventRestartShotGrotto
+
+    # ---------------------
+    # SPOT PLAYMATES::CENTER TARGET
+    # ---------------------
+    shotTargetKeyPlaymateAdvance_hit.1{current_player.shot_shotTargetPlaymate1==0}:
+        - eventHitShotTargetPlaymate1
+    shotTargetKeyPlaymateAdvance_hit.2{current_player.shot_shotTargetPlaymate1==1 and current_player.shot_shotTargetPlaymate2==0}:
+        - eventHitShotTargetPlaymate2
+    shotTargetKeyPlaymateAdvance_hit.3{current_player.shot_shotTargetPlaymate1==1 and current_player.shot_shotTargetPlaymate2==1 and current_player.shot_shotTargetPlaymate3==0}:
+        - eventHitShotTargetPlaymate3
+    shotTargetKeyPlaymateAdvance_hit.4{current_player.shot_shotTargetPlaymate1==1 and current_player.shot_shotTargetPlaymate2==1 and current_player.shot_shotTargetPlaymate3==1 and current_player.shot_shotTargetPlaymate4==0}:
+        - eventHitShotTargetPlaymate4
+    shotTargetKeyPlaymateAdvance_hit.5{current_player.shot_shotTargetPlaymate1==1 and current_player.shot_shotTargetPlaymate2==1 and current_player.shot_shotTargetPlaymate3==1 and current_player.shot_shotTargetPlaymate4==1 and current_player.shot_shotTargetPlaymate5==0}:
+        - eventHitShotTargetPlaymate5
+        
+    # ---------------------
+    # PLAYMATES COMPLETE
+    # ---------------------
+    shotGroupTargetPlaymate_litSolid_complete:
+        # ENABLE ROLLOVER TO COMPLETE AWARD
+        - eventEnableShotRolloverPlaymate
+        - eventEnableShotRolloverSpecialExtraBall
+        # ENABLE DROP RIHGT SPECIAL TO COMPLETE AWARD
+        - eventResetDropTargetBankRight
+        - eventEnableShotDropRightSpecial|1000ms
+        
+    # ---------------------
+    # DROP RIGHT SPECIAL::AWARD PLAYMATES COMPLETE
+    # ---------------------
+    drop_target_bank_dropTargetBankRight_down:
+        # ADVANCE DROP RIGHT SPECIAL
+        - eventHitShotDropRightSpecial|100ms
+        # RESTART DROP RIGHT SHOT
+        - eventRestartShotGroupDropRight
+        # ---------------------------
+    shotDropRightSpecial_litFlash_hit:
+        # AWARD ROLOVER PLAYMATE
+        - eventHitShotRolloverPlaymate|100ms
+        # OUTLANE SPECIAL
+        - eventRestartShotGroupOutlaneSpecial
+        
+    # --------------------------------------
+    # ROLLOVER PLAYMATE HIT
+    shotRolloverPlaymate_hit:
+        - eventStartModeBallSavePlaymate
+        - eventDisableShotDropRightSpecial
+        # DISABLE SHOTS
+        - eventRestartShotGroupTargetPlaymate|100ms
+        - eventDisableShotRolloverPlaymate|200ms
+        
+    # --------------------------------------
+    # ROLLOVER SPECIAL EXTRA BALL
+    shotRolloverSpecialExtraBall_hit:
+        - eventDisableShotRolloverSpecialExtraBall|200ms
+    #  
+    #shotRolloverSpecialExtraBall_litFlashExtraBall_hit:
+    #    - eventAwardExtraBall
+
+      
+    # ---------------------
+    # AWARD ROLLOVER::PLAYMATES COMPLETE
+    # ---------------------
+    shotRolloverPlaymate_litFlashOne_hit:
+        ## DISABLE SHOTS
+        #- eventRestartShotGroupTargetPlaymate|100ms
+        #- eventDisableShotRolloverPlaymate|200ms
+        # SHOW PLAYMATE
+        - eventShowSlidePlayboyPlaymate1LRG
+        
+    shotRolloverPlaymate_litFlashTwo_hit:
+        #- eventRestartShotGroupTargetPlaymate
+        #- eventDisableShotRolloverPlaymate
+        # SHOW PLAYMATE
+        - eventShowSlidePlayboyPlaymate2LRG
+        
+    shotRolloverPlaymate_litFlashThree_hit:
+        #- eventRestartShotGroupTargetPlaymate
+        #- eventDisableShotRolloverPlaymate
+        # SHOW PLAYMATE
+        - eventShowSlidePlayboyPlaymate3LRG
+        
+    shotRolloverPlaymate_litFlashFour_hit:
+        #- eventRestartShotGroupTargetPlaymate
+        #- eventDisableShotRolloverPlaymate
+        # SHOW PLAYMATE
+        - eventShowSlidePlayboyPlaymate4LRG
+        
+    shotRolloverPlaymate_litFlashFive_hit:
+        #- eventRestartShotGroupTargetPlaymate
+        #- eventDisableShotRolloverPlaymate
+        # SHOW PLAYMATE
+        - eventShowSlidePlayboyPlaymate5LRG
+        
+    #shotRolloverPlaymate_litFlashSix_hit:
+    #    - eventRestartShotGroupTargetPlaymate
+    #    - eventDisableShotRolloverPlaymate
+        
+    # ---------------------
+    # SHOW::PLAYMATE::CURRENT
+    # ---------------------
+    shotLaneRight_hit.1{current_player.shot_shotRolloverPlaymate==0}:
+        - eventShowSlidePlayboyPlaymatesA
+    shotLaneRight_hit.2{current_player.shot_shotRolloverPlaymate==1}:
+        - eventShowSlidePlayboyPlaymatesB
+    shotLaneRight_hit.3{current_player.shot_shotRolloverPlaymate==2}:
+        - eventShowSlidePlayboyPlaymatesC
+    shotLaneRight_hit.4{current_player.shot_shotRolloverPlaymate==3}:
+        - eventShowSlidePlayboyPlaymatesD
+    shotLaneRight_hit.5{current_player.shot_shotRolloverPlaymate==4}:
+        - eventShowSlidePlayboyPlaymatesE
+    shotLaneRight_hit.6{current_player.shot_shotRolloverPlaymate==5}:
+        - eventShowSlidePlayboyPlaymatesF
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # -----------
+  # KEY LANES
+  # -----------
+  shotGroupLaneKey_litFlash_hit:
+    score: 300 * current_player.multiPlayfield
+  shotGroupLaneKey_litSolid_hit:
+    score: 33 * current_player.multiPlayfield
+    
+  # -----------
+  # DROP::RIGHT
+  # -----------
+  shotGroupDropRight_litFlash_hit:
+    # SHOULD REALLY BE 500
+    score: 400 * current_player.multiPlayfield
+
+  # -----------
+  # PLAYMATES
+  # -----------
+  shotGroupTargetPlaymate_litFlash_hit:
+    score: 500 * current_player.multiPlayfield
+  shotGroupTargetPlaymate_litSolid_hit:
+    score: 55 * current_player.multiPlayfield
+    
+  # -----------
+  # GROTTO::REGULAR
+  # -----------
+  # 1000
+  ball_hold_ballHoldKickbackLeft_held_ball.1{current_player.shot_shotGrotto==0}:
+    score: 1000 * current_player.multiPlayfield
+  # 2000
+  ball_hold_ballHoldKickbackLeft_held_ball.2{current_player.shot_shotGrotto==1}:
+    score: 2000 * current_player.multiPlayfield
+  # 3000
+  ball_hold_ballHoldKickbackLeft_held_ball.3{current_player.shot_shotGrotto==2}:
+    score: 3000 * current_player.multiPlayfield
+  # 4000
+  ball_hold_ballHoldKickbackLeft_held_ball.4{current_player.shot_shotGrotto==3}:
+    score: 4000 * current_player.multiPlayfield
+  # 5000
+  ball_hold_ballHoldKickbackLeft_held_ball.5{current_player.shot_shotGrotto==4}:
+    score: 5000 * current_player.multiPlayfield
+    
+  # -----------
+  # GROTTO::SPECIAL
+  # -----------
+  # 25000
+  ball_hold_ballHoldKickbackLeft_held_ball.6{current_player.shot_shotGrotto==5}:
+    score: 25000 * current_player.multiPlayfield
+            
+  # -----------
+  # DROP SPECIAL
+  # -----------
+  shotDropRightSpecial_litFlash_hit:
+    score: 25000 * current_player.multiPlayfield
+  
+  # -----------
+  # OUTLANE SPECIAL
+  # -----------
+  shotGroupOutlaneSpecial_litFlash_hit:
+    score: 25000 * current_player.multiPlayfield
+    
+  # -----------
+  # ROLLOVER::SPECIAL EXTRA BALL 
+  # -----------
+  shotRolloverSpecialExtraBall_hit{current_player.shot_shotRolloverSpecialExtraBall>1}:
+    score: 25000 * current_player.multiPlayfield
+
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::GROTTO
+    # -----------------------------------
+    showLedShotGrotto:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1A)
+            (led1B): (color1B)
+            (led1C): (color1B)
+            # ----------------
+            (led2A): (color2A)
+            (led2B): (color2B)
+            (led2C): (color2B)
+            # ----------------
+            (led3A): (color3A)
+            (led3B): (color3B)
+            (led3C): (color3B)
+            # ----------------
+            (led4A): (color4A)
+            (led4B): (color4B)
+            (led4C): (color4B)
+            # ----------------
+            (led5A): (color5A)
+            (led5B): (color5B)
+            (led5C): (color5B)
+            # ----------------
+            (led6A): (color6A)
+            (led6B): (color6B)
+            (led6C): (color6B)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color1B)
+            (led1B): (color1A)
+            (led1C): (color1B)
+            # ----------------
+            (led2A): (color2B)
+            (led2B): (color2A)
+            (led2C): (color2B)
+            # ----------------
+            (led3A): (color3B)
+            (led3B): (color3A)
+            (led3C): (color3B)
+            # ----------------
+            (led4A): (color4B)
+            (led4B): (color4A)
+            (led4C): (color4B)
+            # ----------------
+            (led5A): (color5B)
+            (led5B): (color5A)
+            (led5C): (color5B)
+            # ----------------
+            (led6A): (color6B)
+            (led6B): (color6A)
+            (led6C): (color6B)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color1B)
+            (led1B): (color1B)
+            (led1C): (color1A)
+            # ----------------
+            (led2A): (color2B)
+            (led2B): (color2B)
+            (led2C): (color2A)
+            # ----------------
+            (led3A): (color3B)
+            (led3B): (color3B)
+            (led3C): (color3A)
+            # ----------------
+            (led4A): (color4B)
+            (led4B): (color4B)
+            (led4C): (color4A)
+            # ----------------
+            (led5A): (color5B)
+            (led5B): (color5B)
+            (led5C): (color5A)
+            # ----------------
+            (led6A): (color6B)
+            (led6B): (color6B)
+            (led6C): (color6A)
+            # ----------------
+        - time: "+1"
+
+    # -----------------------------------
+    # SHOW::LED::ADVANCE MULTIPLIER
+    # -----------------------------------
+    showLedShotAdvanceMultiplier:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1A)
+            (led1B): (color1B)
+            (led1C): (color1B)
+            # ----------------
+            (led2A): (color2A)
+            (led2B): (color2B)
+            (led2C): (color2B)
+            # ----------------
+            (led3A): (color3B)
+            (led3B): (color3A)
+            (led3C): (color3B)
+            (led3D): (color3B)
+            (led3E): (color3B)
+            (led3F): (color3B)
+            (led3G): (color3B)
+            # ----------------
+            
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color1B)
+            (led1B): (color1A)
+            (led1C): (color1B)
+            # ----------------
+            (led2A): (color2B)
+            (led2B): (color2A)
+            (led2C): (color2B)
+            # ----------------
+            (led3A): (color3B)
+            (led3B): (color3B)
+            (led3C): (color3A)
+            (led3D): (color3B)
+            (led3E): (color3B)
+            (led3F): (color3B)
+            (led3G): (color3B)
+            # ----------------
+            
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color1B)
+            (led1B): (color1B)
+            (led1C): (color1A)
+            # ----------------
+            (led2A): (color2B)
+            (led2B): (color2B)
+            (led2C): (color2A)
+            # ----------------
+            (led3A): (color3B)
+            (led3B): (color3B)
+            (led3C): (color3B)
+            (led3D): (color3A)
+            (led3E): (color3B)
+            (led3F): (color3B)
+            (led3G): (color3B)
+            # ----------------
+            
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color1A)
+            (led1B): (color1B)
+            (led1C): (color1B)
+            # ----------------
+            (led2A): (color2A)
+            (led2B): (color2B)
+            (led2C): (color2B)
+            # ----------------
+            (led3A): (color3B)
+            (led3B): (color3B)
+            (led3C): (color3B)
+            (led3D): (color3B)
+            (led3E): (color3A)
+            (led3F): (color3B)
+            (led3G): (color3B)
+            # ----------------
+            
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color1B)
+            (led1B): (color1A)
+            (led1C): (color1B)
+            # ----------------
+            (led2A): (color2B)
+            (led2B): (color2A)
+            (led2C): (color2B)
+            # ----------------
+            (led3A): (color3B)
+            (led3B): (color3B)
+            (led3C): (color3B)
+            (led3D): (color3B)
+            (led3E): (color3B)
+            (led3F): (color3A)
+            (led3G): (color3B)
+            # ----------------
+            
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color1B)
+            (led1B): (color1B)
+            (led1C): (color1A)
+            # ----------------
+            (led2A): (color2B)
+            (led2B): (color2B)
+            (led2C): (color2A)
+            # ----------------
+            (led3A): (color3B)
+            (led3B): (color3B)
+            (led3C): (color3B)
+            (led3D): (color3B)
+            (led3E): (color3B)
+            (led3F): (color3B)
+            (led3G): (color3A)
+            # ----------------
+        - time: "+1"
+
+    # -----------------------------------
+    # SHOW::LED::ROLLOVER::SPECIAL EXTRA BALL
+    # -----------------------------------
+    showLedShotRolloverSpecialExtraBall:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color1A)
+            (led2): (color2A)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color1B)
+            (led2): (color2B)
+            # ----------------
+        - time: "+1"
+            

@@ -1,0 +1,470 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:
+  
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::READY TO LAUNCH
+# ----------------------------------
+  voiceBuckRogersLaunch1:
+    file: voiceBuckRogers_Frozen500Years.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceBuckRogersLaunch2:
+    file: voiceBuckRogers_SouthSideChicago.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceBuckRogersLaunch3:
+    file: voiceBuckRogers_WereWastingTime.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceBuckRogersLaunch4:
+    file: voiceBuckRogers_YoureQuiteAMan.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::TWIKI
+# ----------------------------------
+  voiceBuckRogersTwiki1:
+    file: voiceBuckRogers_Twiki_BedeBede2.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceBuckRogersTwiki2:
+    file: voiceBuckRogers_Twiki_GoodnightTheo2.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceBuckRogersTwiki3:
+    file: voiceBuckRogers_Twiki_HesCrazy2.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceBuckRogersTwiki4:
+    file: voiceBuckRogers_Twiki_LetsGetOutOfHere2.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceBuckRogersTwiki5:
+    file: voiceBuckRogers_Twiki_WatchHerBuck2.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceBuckRogersTwiki6:
+    file: voiceBuckRogers_Twiki_YouDirty2.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::NEWSFLASH
+# ----------------------------------
+  voiceAnnouncerNewsFlash1:
+    file: announcer_A_NewsFlash_001.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    #events_when_stopped: voiceAnnouncerNewsFlashStopped
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerNewsFlash2:
+    file: announcer_A_NewsFlash_002.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    #events_when_stopped: voiceAnnouncerNewsFlashStopped
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::MESSAGE
+# ----------------------------------
+  voiceAnnouncerMessage1:
+    file: announcer_B_Message_001.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceAnnouncerMessage2:
+    file: announcer_B_Message_002.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceAnnouncerMessage3:
+    file: announcer_B_Message_003.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::ALIENS ATTACK
+# ----------------------------------
+  voiceAnnouncerAliensAttack1:
+    file: announcer_C_AliensAttack_001.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerAliensAttack2:
+    file: announcer_C_AliensAttack_002.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerAliensAttack3:
+    file: announcer_C_AliensAttack_003.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::QUEEN
+# ----------------------------------
+  voiceAnnouncerQueen1:
+    file: announcer_D_Queen_001.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerQueen2:
+    file: announcer_D_Queen_002.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::SPACE CADET
+# ----------------------------------
+  voiceAnnouncerSpaceCadet1:
+    file: announcer_E_SpaceCadet_001.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerSpaceCadet2:
+    file: announcer_E_SpaceCadet_002.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerSpaceCadet3:
+    file: announcer_E_SpaceCadet_003.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+# ---------------------
+# SOUNDS::POOLS::VOICE
+# ---------------------
+sound_pools:
+# ---------------------
+# SOUNDS::POOLS::VOICE::BUCK ROGERS
+# ---------------------
+  poolVoiceBuckRogersLaunch:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceBuckRogersLaunch1
+      - voiceBuckRogersLaunch2
+      - voiceBuckRogersLaunch3
+      - voiceBuckRogersLaunch4
+
+  poolVoiceBuckRogersTwiki:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceBuckRogersTwiki1
+      - voiceBuckRogersTwiki2
+      - voiceBuckRogersTwiki3
+      - voiceBuckRogersTwiki4
+      - voiceBuckRogersTwiki5
+      - voiceBuckRogersTwiki6
+      
+# ---------------------
+# SOUNDS::POOLS::VOICE::JUPITER CRUSH
+# ---------------------
+  poolVoiceAnnouncerNewsFlash:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceAnnouncerNewsFlash1
+      - voiceAnnouncerNewsFlash2
+    
+  poolVoiceAnnouncerMessage:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceAnnouncerMessage1
+      - voiceAnnouncerMessage2
+      - voiceAnnouncerMessage3
+      
+  poolVoiceAnnouncerAliensAttack:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceAnnouncerAliensAttack1
+      - voiceAnnouncerAliensAttack2
+      - voiceAnnouncerAliensAttack3
+      
+  poolVoiceAnnouncerQueen:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceAnnouncerQueen1
+      - voiceAnnouncerQueen2
+      
+  poolVoiceAnnouncerSpaceCadet:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceAnnouncerSpaceCadet1
+      - voiceAnnouncerSpaceCadet2
+      - voiceAnnouncerSpaceCadet3
+      
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+sound_player:
+
+# ---------------------
+# SOUNDS::PLAYER::BUCK ROGERS
+# ---------------------
+  playPoolVoiceBuckRogersLaunch:
+    poolVoiceBuckRogersLaunch:
+      loops: 0
+      volume: 0.9
+      
+  playPoolVoiceBuckRogersTwiki:
+    poolVoiceBuckRogersTwiki:
+      loops: 0
+      volume: 0.9
+      
+# ---------------------
+# SOUNDS::PLAYER::JUPITER CRUSH
+# ---------------------
+  playPoolVoiceAnnouncerNewsFlash:
+    poolVoiceAnnouncerNewsFlash:
+      loops: 0
+      volume: 0.9
+    
+  playPoolVoiceAnnouncerMessage:
+    poolVoiceAnnouncerMessage:
+      loops: 0
+      volume: 0.9
+      
+  playPoolVoiceAnnouncerAliensAttack:
+    poolVoiceAnnouncerAliensAttack:
+      loops: 0
+      volume: 0.9
+      
+  playPoolVoiceAnnouncerQueen:
+    poolVoiceAnnouncerQueen:
+      loops: 0
+      volume: 1.0
+      
+  playPoolVoiceAnnouncerSpaceCadet:
+    poolVoiceAnnouncerSpaceCadet:
+      loops: 0
+      volume: 0.9
+      
+
+# ---------------------
+# SOUNDS::PLAYLIST
+# ---------------------
+    
+playlists:
+  playlistIntro:
+    shuffle: false
+    repeat: false
+    sounds:
+      - voiceAnnouncerNewsFlash1
+      - voiceAnnouncerMessage1
+      - voiceAnnouncerAliensAttack1
+
+  playlistHighScore:
+    shuffle: true
+    #repeat: true
+    repeat: false
+    crossfade_mode: override
+    crossfade_time: 5s
+    sounds:
+      - soundHighScore001
+      - soundHighScore002
+      - soundHighScore003
+      - soundHighScore004

@@ -1,0 +1,99 @@
+#config_version=6
+
+config:
+- configPlayboy1955Slides.yaml
+#- configVoltanMercurySlides.yaml
+#- configVoltanMercuryShots.yaml
+#- configVoltanMercuryThumpers.yaml
+##- configVoltanMercuryMultiball.yaml
+
+mode:
+  start_events:
+    - eventStartModePlayboy1955
+  stop_events:
+    - eventStopModePlayboy1955
+    #- eventStopModeVoltanMercury
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  #mode_modeVoltanMercury_started:
+  mode_modePlayboy1955_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    #- eventShowSlideVoltanMercuryBase
+    - eventShowSlidePlayboy1955Base
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    #- eventPlaylistModeFlashGordonStart
+    - eventPlaylistModePlayboyStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    #- eventResetMultipliersVoltanMercury|1000ms
+    - eventResetMultipliersPlayboy1955|1000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  #mode_modeVoltanMercury_started:
+  mode_modePlayboy1955_started:
+    nameMoon:
+      string: "PLAYBOY"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  #eventResetMultipliersVoltanMercury:
+  eventResetMultipliersPlayboy1955:
+    ## -------------------------
+    ## RESET BONUS COUNT UPPER
+    #bonusUpper:
+    #  int: 0
+    #  action: set
+    ## -------------------------
+    ## RESET BONUS COUNT UPPER
+    #bonusMiniUpper:
+    #  #int: 50000
+    #  int: 0
+    #  action: set
+    ## -------------------------
+    ## RESET BONUS COUNT LOWER
+    #bonusLower:
+    #  int: 0
+    #  action: set
+    ## -------------------------
+    ## RESET BONUS COUNT UPPER
+    #bonusSuperLower:
+    #  #int: 100000
+    #  int: 0
+    #  action: set
+    # -------------------------
+    # RESET BONUS COUNT
+    totalBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET TOTAL BONUS SCORE
+    # (TOTAL BONUS X BONUS MULTIPLIER)
+    scoreBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set

@@ -1,0 +1,1043 @@
+#config_version=6
+
+shows:
+
+  traceEighteenLedTwoColor:
+    - time: 0
+# --------------------
+# BOARD ONE
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color2)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------
+# BOARD TWO
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color2)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------
+# BOARD THREE
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color2)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color2)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------
+# BOARD FOUR
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color2)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color2)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color2)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------
+# BOARD FIVE
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color2)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color2)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color2)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------
+# BOARD SIX
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color2)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color2)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color1)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color2)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------
+
+  chaseEighteenLedTwoColor:
+    - time: 0
+# --------------------
+# BOARD ONE
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color1)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color1)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color1)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------
+# BOARD TWO
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color1)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color1)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color1)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------
+# BOARD THREE
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color1)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color2)
+        (led3C): (color1)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color2)
+        (led3C): (color2)
+        # ----------------------
+        (led4A): (color1)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------
+# BOARD FOUR
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color2)
+        (led3C): (color2)
+        # ----------------------
+        (led4A): (color2)
+        (led4B): (color1)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color2)
+        (led3C): (color2)
+        # ----------------------
+        (led4A): (color2)
+        (led4B): (color2)
+        (led4C): (color1)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color2)
+        (led3C): (color2)
+        # ----------------------
+        (led4A): (color2)
+        (led4B): (color2)
+        (led4C): (color2)
+        # ----------------------
+        (led5A): (color1)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------
+# BOARD FIVE
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color2)
+        (led3C): (color2)
+        # ----------------------
+        (led4A): (color2)
+        (led4B): (color2)
+        (led4C): (color2)
+        # ----------------------
+        (led5A): (color2)
+        (led5B): (color1)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color2)
+        (led3C): (color2)
+        # ----------------------
+        (led4A): (color2)
+        (led4B): (color2)
+        (led4C): (color2)
+        # ----------------------
+        (led5A): (color2)
+        (led5B): (color2)
+        (led5C): (color1)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color2)
+        (led3C): (color2)
+        # ----------------------
+        (led4A): (color2)
+        (led4B): (color2)
+        (led4C): (color2)
+        # ----------------------
+        (led5A): (color2)
+        (led5B): (color2)
+        (led5C): (color2)
+        # ----------------------
+        (led6A): (color1)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------
+# BOARD SIX
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color2)
+        (led3C): (color2)
+        # ----------------------
+        (led4A): (color2)
+        (led4B): (color2)
+        (led4C): (color2)
+        # ----------------------
+        (led5A): (color2)
+        (led5B): (color2)
+        (led5C): (color2)
+        # ----------------------
+        (led6A): (color2)
+        (led6B): (color1)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color2)
+        (led3C): (color2)
+        # ----------------------
+        (led4A): (color2)
+        (led4B): (color2)
+        (led4C): (color2)
+        # ----------------------
+        (led5A): (color2)
+        (led5B): (color2)
+        (led5C): (color2)
+        # ----------------------
+        (led6A): (color2)
+        (led6B): (color2)
+        (led6C): (color1)
+        # ----------------------
+    - time: "+1"
+    
+      lights:
+        # ----------------------
+        (led1A): (color2)
+        (led1B): (color2)
+        (led1C): (color2)
+        # ----------------------
+        (led2A): (color2)
+        (led2B): (color2)
+        (led2C): (color2)
+        # ----------------------
+        (led3A): (color2)
+        (led3B): (color2)
+        (led3C): (color2)
+        # ----------------------
+        (led4A): (color2)
+        (led4B): (color2)
+        (led4C): (color2)
+        # ----------------------
+        (led5A): (color2)
+        (led5B): (color2)
+        (led5C): (color2)
+        # ----------------------
+        (led6A): (color2)
+        (led6B): (color2)
+        (led6C): (color2)
+        # ----------------------
+    - time: "+1"
+    
+# ----------------------

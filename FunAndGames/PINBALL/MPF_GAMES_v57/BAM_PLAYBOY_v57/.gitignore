@@ -1,0 +1,18 @@
+# MPF log and data folders
+data/
+logs/
+
+# MPF media, sounds, video folders
+sounds/
+videos/
+fonts/
+# PLAYBOY only
+images/
+
+# MISC files
+fcserver-osx
+get-pip.py
+
+# OS-specific files
+.DS_Store
+Thumbs.db

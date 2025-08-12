@@ -1,0 +1,95 @@
+#config_version=6
+
+modes:
+#-----------------
+# MODES::BASE
+#-----------------
+- modeBase
+- credits
+- bonus
+- high_score
+
+#-----------------
+# MODES::GENERIC
+#-----------------
+- modeBallSave
+- modeBallSavePlaymate
+
+#-----------------
+# MODES::GAME SPECIFIC
+#-----------------
+# CAROUSEL
+- modeCarousel
+
+#-----------------
+# MODES::PLAYBOY::BY YEAR
+#-----------------
+- modePlayboy1955
+#- modePlayboy1956
+#- modePlayboy1957
+#- modePlayboy1958
+#- modePlayboy1959
+
+  #-----------------
+  # YEAR 1960s
+  #-----------------
+#- modePlayboy1960
+#- modePlayboy1961
+#- modePlayboy1962
+#- modePlayboy1963
+#- modePlayboy1964
+#- modePlayboy1965
+#- modePlayboy1966
+#- modePlayboy1967
+- modePlayboy1968
+- modePlayboy1969
+
+  #-----------------
+  # YEAR 1970s
+  #-----------------
+- modePlayboy1970
+- modePlayboy1971
+- modePlayboy1972
+- modePlayboy1973
+- modePlayboy1974
+- modePlayboy1975
+- modePlayboy1976
+- modePlayboy1977
+- modePlayboy1978
+- modePlayboy1979
+
+  #-----------------
+  # YEAR 1980s
+  #-----------------
+- modePlayboy1980
+- modePlayboy1981
+- modePlayboy1982
+- modePlayboy1983
+- modePlayboy1984
+- modePlayboy1985
+- modePlayboy1986
+- modePlayboy1987
+- modePlayboy1988
+- modePlayboy1989
+
+  #-----------------
+  # YEAR 1990s
+  #-----------------
+- modePlayboy1990
+- modePlayboy1991
+- modePlayboy1992
+- modePlayboy1993
+#- modePlayboy1994
+#- modePlayboy1995
+#- modePlayboy1996
+#- modePlayboy1997
+#- modePlayboy1998
+#- modePlayboy1999
+
+#-----------------
+# MODES::GAME SPECIFIC
+#-----------------
+
+
+
+

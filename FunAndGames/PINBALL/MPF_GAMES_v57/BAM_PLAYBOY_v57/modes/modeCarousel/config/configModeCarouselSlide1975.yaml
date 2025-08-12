@@ -1,0 +1,121 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  modeCarousel_year1975_highlighted:
+    slideYear1975:
+      target: displayDMD
+
+slides:
+  slideYear1975:
+    widgets:
+      # ---------------
+      # INNER
+      # ---------------
+      - type: text
+        text: "1975"
+        y: middle
+        x: middle
+        style: font1975
+        color: colorFontYear1970sThree
+        z: 20
+      # ---------------
+      # OUTER ONE
+      # ---------------
+      - type: text
+        text: "1975"
+        y: middle + 1
+        x: middle + 1
+        style: font1975
+        color: black
+        z: 15
+      - type: text
+        text: "1975"
+        y: middle - 1
+        x: middle + 1
+        style: font1975
+        color: black
+        z: 15
+      - type: text
+        text: "1975"
+        y: middle + 1
+        x: middle - 1
+        style: font1975
+        color: black
+        z: 15
+      - type: text
+        text: "1975"
+        y: middle - 1
+        x: middle - 1
+        style: font1975
+        color: black
+        z: 15
+      # ---------------
+      # OUTER TWO
+      # ---------------
+      - type: text
+        text: "1975"
+        y: middle + 2
+        x: middle + 2
+        style: font1975
+        color: colorFontYear1970sTwo
+        z: 10
+      - type: text
+        text: "1975"
+        y: middle - 2
+        x: middle + 2
+        style: font1975
+        color: colorFontYear1970sTwo
+        z: 10
+      - type: text
+        text: "1975"
+        y: middle + 2
+        x: middle - 2
+        style: font1975
+        color: colorFontYear1970sTwo
+        z: 10
+      - type: text
+        text: "1975"
+        y: middle - 2
+        x: middle - 2
+        style: font1975
+        color: colorFontYear1970sTwo
+        z: 10
+        
+        # --------------------
+        # COLOR OUTLINE
+        # --------------------
+      - type: rectangle
+        color: colorBoxYear1970sOuter
+        width: 236
+        height: 130
+        x: 120
+        y: 67
+        z: 3
+      - type: rectangle
+        color: colorBoxYear1970sMiddle
+        width: 232
+        height: 126
+        x: 120
+        y: 67
+        z: 5
+      - type: rectangle
+        color: colorBoxYear1970sInner
+        width: 228
+        height: 122
+        x: 120
+        y: 67
+        z: 6
+        # --------------------
+        # BLACK INFILL
+        # --------------------
+      - type: rectangle
+        color: colorBoxYear1970sFill
+        width: 224
+        height: 118
+        x: 120
+        y: 67
+        z: 7
+        

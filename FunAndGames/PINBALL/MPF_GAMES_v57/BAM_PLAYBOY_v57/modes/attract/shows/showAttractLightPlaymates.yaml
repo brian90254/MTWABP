@@ -1,0 +1,110 @@
+#show_version=6
+
+- time: 0
+# -----------------------
+# RED
+# -----------------------
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledPlaymate5
+        led2: ledPlaymate4
+        led3: ledPlaymate3
+        led4: ledPlaymate2
+        led5: ledPlaymate1
+        
+- time: "+2"
+
+# -----------------------
+# YELLOW
+# -----------------------
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledPlaymate1
+        led2: ledPlaymate2
+        led3: ledPlaymate3
+        led4: ledPlaymate4
+        led5: ledPlaymate5
+        
+- time: "+2"
+
+# -----------------------
+# GREEN
+# -----------------------
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledPlaymate5
+        led2: ledPlaymate4
+        led3: ledPlaymate3
+        led4: ledPlaymate2
+        led5: ledPlaymate1
+        
+- time: "+2"
+
+# -----------------------
+# CYAN
+# -----------------------
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledPlaymate1
+        led2: ledPlaymate2
+        led3: ledPlaymate3
+        led4: ledPlaymate4
+        led5: ledPlaymate5
+        
+- time: "+2"
+
+# -----------------------
+# BLUE
+# -----------------------
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledPlaymate5
+        led2: ledPlaymate4
+        led3: ledPlaymate3
+        led4: ledPlaymate2
+        led5: ledPlaymate1
+        
+- time: "+2"
+
+# -----------------------
+# MAGENTA
+# -----------------------
+  shows:
+    traceFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledPlaymate1
+        led2: ledPlaymate2
+        led3: ledPlaymate3
+        led4: ledPlaymate4
+        led5: ledPlaymate5
+        
+- time: "+2"
