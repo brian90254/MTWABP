@@ -1,0 +1,138 @@
+#config_version=6
+
+mode:
+  start_events:
+    - eventStartBallSaveHidden
+  stop_events:
+    - eventStopBallSaveHidden
+    - ball_ending
+  priority: 6750
+
+ball_saves:    
+  bsHidden:
+    active_time: 30s
+    hurry_up_time: 10s
+    grace_period: 2s
+    enable_events: mode_modeBallSaveHidden_started
+    early_ball_save_events: sw_tagOutlane
+    auto_launch: true
+    balls_to_save: 1
+    debug: true
+    
+event_player:
+  ball_save_bsHidden_saving_ball:
+    - eventStopBallSaveHidden|3s
+    
+slide_player:
+  ball_save_bsHidden_saving_ball:
+    slideBallSaveHidden:
+      target: displayDMD
+  
+slides:
+  slideBallSaveHidden:
+    widgets:
+      # -------------------------------
+      # GREEN-YELLOW FORGROUND
+      # -------------------------------
+      - type: text
+        style: fontBallSaveHidden
+        #font_size: 32
+        color: colorFontBallSaveHiddenInner
+        text: BALL SAVED
+        y: middle
+        x: middle
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+      # -------------------------------
+      # -------------------------------
+      # BLUE-RED BACKGROUND
+      # -------------------------------
+      - type: text
+        style: fontBallSaveHidden
+        #font_size: 32
+        color: colorFontBallSaveHiddenOuter1
+        text: BALL SAVED
+        y: middle-1
+        x: middle+1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: fontBallSaveHidden
+        #font_size: 32
+        color: colorFontBallSaveHiddenOuter1
+        text: BALL SAVED
+        y: middle-1
+        x: middle-1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: fontBallSaveHidden
+        #font_size: 32
+        color: colorFontBallSaveHiddenOuter1
+        text: BALL SAVED
+        y: middle+1
+        x: middle+1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: fontBallSaveHidden
+        #font_size: 32
+        color: colorFontBallSaveHiddenOuter1
+        text: BALL SAVED
+        y: middle+1
+        x: middle-1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      # -------------------------------
+            
+    #expire: 2.0s
+    expire: 4.0s
+    
+    
+
+
+

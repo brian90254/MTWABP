@@ -1,0 +1,34 @@
+#config_version=6
+modes:
+- modeBase
+#-----------------
+# MODES::MOONS
+#-----------------
+- modeMoonJupiterOne
+- modeMoonEuropa
+- modeMoonCallisto
+- modeMoonGanymede
+#-----------------
+# MODES::SPECIAL
+#-----------------
+- modeBallSave
+- modeBallSaveOutlane
+- modeBallSaveHidden
+#- modeCollectBonus
+- modeCollectMidGameBonus
+- modeSkillShot
+- modeAwardWheel
+# REMOVE FOR TESTING
+- modeMultiball
+#-----------------
+# MODES::MUSIC
+#-----------------
+- modeMusicCallisto
+- modeMusicEuropa
+- modeMusicGanymede
+- modeMusicJupiterOne
+#-----------------
+# MODES::END OF GAME
+#-----------------
+- bonus
+- high_score

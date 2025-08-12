@@ -1,0 +1,422 @@
+#show_version=6
+
+- time: 0
+  lights:
+    # --------------------------
+    ledDropRight3: 'ff0080'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+2"
+  lights:
+    # --------------------------
+    ledDropRight3: 'ff0080'
+    ledDropRight2: 'ff0080'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+2"
+  lights:
+    # --------------------------
+    ledDropRight3: 'ff0080'
+    ledDropRight2: 'ff0080'
+    # --------------------------
+    ledDropRight1C: 'ff0080'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: 'ff0080'
+    ledDropRight2: 'ff0080'
+    # --------------------------
+    ledDropRight1C: 'ff0080'
+    ledDropRight1B: 'ff0080'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: 'ff0080'
+    ledDropRight2: 'ff0080'
+    # --------------------------
+    ledDropRight1C: 'ff0080'
+    ledDropRight1B: 'ff0080'
+    ledDropRight1A: 'ff0080'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: 'ff0080'
+    # --------------------------
+    ledDropRight1C: 'ff0080'
+    ledDropRight1B: 'ff0080'
+    ledDropRight1A: 'ff0080'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+2"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: 'ff0080'
+    ledDropRight1B: 'ff0080'
+    ledDropRight1A: 'ff0080'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+2"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: 'ff0080'
+    ledDropRight1A: 'ff0080'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: 'ff0080'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: 'ff0080'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: 'ff0080'
+    ledOrbitRight1B: 'ff0080'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: 'ff0080'
+    ledOrbitRight1B: 'ff0080'
+    ledOrbitRight1A: 'ff0080'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: 'ff0080'
+    ledOrbitRight1B: 'ff0080'
+    ledOrbitRight1A: 'ff0080'
+    # --------------------------
+    ledKickerWheel1C: 'ff0080'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: 'ff0080'
+    ledOrbitRight1B: 'ff0080'
+    ledOrbitRight1A: 'ff0080'
+    # --------------------------
+    ledKickerWheel1C: 'ff0080'
+    ledKickerWheel1B: 'ff0080'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: 'ff0080'
+    ledOrbitRight1B: 'ff0080'
+    ledOrbitRight1A: 'ff0080'
+    # --------------------------
+    ledKickerWheel1C: 'ff0080'
+    ledKickerWheel1B: 'ff0080'
+    ledKickerWheel1A: 'ff0080'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: 'ff0080'
+    ledOrbitRight1A: 'ff0080'
+    # --------------------------
+    ledKickerWheel1C: 'ff0080'
+    ledKickerWheel1B: 'ff0080'
+    ledKickerWheel1A: 'ff0080'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: 'ff0080'
+    # --------------------------
+    ledKickerWheel1C: 'ff0080'
+    ledKickerWheel1B: 'ff0080'
+    ledKickerWheel1A: 'ff0080'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: 'ff0080'
+    ledKickerWheel1B: 'ff0080'
+    ledKickerWheel1A: 'ff0080'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: 'ff0080'
+    ledKickerWheel1A: 'ff0080'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: 'ff0080'
+    # --------------------------
+    
+- time: "+1"
+  lights:
+    # --------------------------
+    ledDropRight3: '000000'
+    ledDropRight2: '000000'
+    # --------------------------
+    ledDropRight1C: '000000'
+    ledDropRight1B: '000000'
+    ledDropRight1A: '000000'
+    # --------------------------
+    ledOrbitRight1C: '000000'
+    ledOrbitRight1B: '000000'
+    ledOrbitRight1A: '000000'
+    # --------------------------
+    ledKickerWheel1C: '000000'
+    ledKickerWheel1B: '000000'
+    ledKickerWheel1A: '000000'
+    # --------------------------
+    
+- time: "+1"
+

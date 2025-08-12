@@ -1,0 +1,338 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:  
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::NEWSFLASH
+# ----------------------------------
+  voiceAnnouncerNewsFlash1:
+    file: announcer_A_NewsFlash_001.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    #events_when_stopped: voiceAnnouncerNewsFlashStopped
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerNewsFlash2:
+    file: announcer_A_NewsFlash_002.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    #events_when_stopped: voiceAnnouncerNewsFlashStopped
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::MESSAGE
+# ----------------------------------
+  voiceAnnouncerMessage1:
+    file: announcer_B_Message_001.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceAnnouncerMessage2:
+    file: announcer_B_Message_002.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+  voiceAnnouncerMessage3:
+    file: announcer_B_Message_003.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+      
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::ALIENS ATTACK
+# ----------------------------------
+  voiceAnnouncerAliensAttack1:
+    file: announcer_C_AliensAttack_001.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerAliensAttack2:
+    file: announcer_C_AliensAttack_002.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerAliensAttack3:
+    file: announcer_C_AliensAttack_003.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::QUEEN
+# ----------------------------------
+  voiceAnnouncerQueen1:
+    file: announcer_D_Queen_001.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerQueen2:
+    file: announcer_D_Queen_002.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+# ----------------------------------
+# SOUNDS::VOICE::CALLOUTS::SPACE CADET
+# ----------------------------------
+  voiceAnnouncerSpaceCadet1:
+    file: announcer_E_SpaceCadet_001.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerSpaceCadet2:
+    file: announcer_E_SpaceCadet_002.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+  voiceAnnouncerSpaceCadet3:
+    file: announcer_E_SpaceCadet_003.wav
+    track: voice
+    volume: 1.0
+    mode_end_action: stop
+    ducking:
+      target: music
+      delay: 0
+      attack: 1.0 sec
+      attenuation: -18db
+      release_point: 1.0 sec
+      release: 1.0 sec
+    
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolVoiceAnnouncerNewsFlash:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceAnnouncerNewsFlash1
+      - voiceAnnouncerNewsFlash2
+    
+  poolVoiceAnnouncerMessage:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceAnnouncerMessage1
+      - voiceAnnouncerMessage2
+      - voiceAnnouncerMessage3
+      
+  poolVoiceAnnouncerAliensAttack:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceAnnouncerAliensAttack1
+      - voiceAnnouncerAliensAttack2
+      - voiceAnnouncerAliensAttack3
+      
+  poolVoiceAnnouncerQueen:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceAnnouncerQueen1
+      - voiceAnnouncerQueen2
+      
+  poolVoiceAnnouncerSpaceCadet:
+    type: random_force_all
+    track: voice
+    sounds:
+      - voiceAnnouncerSpaceCadet1
+      - voiceAnnouncerSpaceCadet2
+      - voiceAnnouncerSpaceCadet3
+      
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+sound_player:
+
+  playPoolVoiceAnnouncerNewsFlash:
+    poolVoiceAnnouncerNewsFlash:
+      loops: 0
+      volume: 0.9
+    
+  playPoolVoiceAnnouncerMessage:
+    poolVoiceAnnouncerMessage:
+      loops: 0
+      volume: 0.9
+      
+  playPoolVoiceAnnouncerAliensAttack:
+    poolVoiceAnnouncerAliensAttack:
+      loops: 0
+      volume: 0.9
+      
+  playPoolVoiceAnnouncerQueen:
+    poolVoiceAnnouncerQueen:
+      loops: 0
+      volume: 1.0
+      
+  playPoolVoiceAnnouncerSpaceCadet:
+    poolVoiceAnnouncerSpaceCadet:
+      loops: 0
+      volume: 0.9
+      
+
+# ---------------------
+# SOUNDS::PLAYLIST
+# ---------------------
+
+#playlists:
+#  playlistIntro:
+#    shuffle: false
+#    repeat: false
+#    sounds:
+#      - poolVoiceAnnouncerNewsFlash
+#      - poolVoiceAnnouncerMessage
+#      - poolVoiceAnnouncerAliensAttack
+    
+playlists:
+  playlistIntro:
+    shuffle: false
+    repeat: false
+    sounds:
+      - voiceAnnouncerNewsFlash1
+      - voiceAnnouncerMessage1
+      - voiceAnnouncerAliensAttack1
+
+  playlistHighScore:
+    shuffle: true
+    repeat: true
+    crossfade_mode: override
+    crossfade_time: 5s
+    sounds:
+      - soundHighScore001
+      - soundHighScore002
+      - soundHighScore003
+      - soundHighScore004
+      
+  #playlistHighScore:
+  #  shuffle: true
+  #  repeat: true
+  #  crossfade_mode: override
+  #  crossfade_time: 1s
+  #  sounds:
+  #    - voiceAnnouncerNewsFlash1
+  #    - voiceAnnouncerMessage1
+  #    - voiceAnnouncerAliensAttack1
+      
+## ************************************
+## SOUND::PLAYER
+## ************************************
+# ---------------------
+# SOUNDS::PLAYER::ATTRACT
+# ---------------------    
+#sound_player:
+#
+#  mode_attract_started:
+#    poolMusicAttract:
+#      loops: 0
+#      volume: 0.8
+#      
+#  mode_attract_stopping:
+#    poolMusicAttract:
+#      action: stop
+
+  #mode_attract_started:
+  #  musicJupiterOneAttract:
+  #    loops: 0
+  #    volume: 0.8
+  #    
+  #mode_attract_stopping:
+  #  musicJupiterOneAttract:
+  #    action: stop
+      
+
+    

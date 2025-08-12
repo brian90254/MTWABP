@@ -1,0 +1,181 @@
+#config_version=6
+
+# ---------------------
+# SHOTS
+# ---------------------
+shots:
+  shotAlphaExtraBallJupiterOne:
+    switch: s_rollover_rt
+    enable_events: extra_ball_extraBallJupiterOne_lit
+  shotBetaExtraBallJupiterOne:
+    switch: s_kicker_upper
+    enable_events: extra_ball_extraBallJupiterOne_lit
+  
+# ---------------------
+# SEQUENCE::SHOTS
+# ---------------------
+sequence_shots:
+  sequenceShotExtraBallJupiterOne:
+    event_sequence:
+      - shotAlphaExtraBallJupiterOne_hit
+    #- shotBetaExtraBallJupiterOne_hit
+    sequence_timeout: 5s
+
+
+# ---------------------
+# EXTRA::BALLS
+# ---------------------
+extra_balls:
+  extraBallJupiterOne:
+    light_events: eventLightExtraBallJupiterOne
+    award_events: eventAwardExtraBallJupiterOne
+    max_per_game: 1
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # ----------------------------
+  # LIGHT EXTRA BALL
+  # ----------------------------
+  sgDropRtJupiterOne_lit_complete:
+    - eventLightExtraBallJupiterOne
+  # ----------------------------
+  # AWARD EXTRA BALL
+  # ----------------------------
+  sequenceShotExtraBallJupiterOne_hit:
+    - eventAwardExtraBallJupiterOne
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+  # ----------------------------
+  # SHOW::LIGHT EXTRA BALL
+  # ----------------------------
+  eventLightExtraBallJupiterOne:
+    showLightExtraBallJupiterOne:
+      loops: -1
+      speed: 24
+      key: keyLightExtraBall
+
+  # ----------------------------
+  # SHOW::AWARD EXTRA BALL
+  # ----------------------------
+  extra_ball_extraBallJupiterOne_awarded:
+    showAwardExtraBallJupiterOne:
+      loops: -1
+      speed: 8
+      key: keyAwardExtraBall
+
+    showLightExtraBallJupiterOne:
+      key: keyLightExtraBall
+      action: stop
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  extra_ball_extraBallJupiterOne_lit:
+    #slideLightExtraBallJupiterOne:
+    slideExtraBallJupiterCrushLit:
+      target: displayDMD
+      
+  extra_ball_extraBallJupiterOne_awarded:
+    #slideAwardExtraBallJupiterOne:
+    slideExtraBallJupiterCrushAward:
+      target: displayDMD
+
+# ---------------------
+# SLIDE::EXTRA BALL::LIGHT
+# ---------------------
+slides:
+  slideExtraBallJupiterCrushLit:
+    widgets:
+      # -------------------------------
+      # RED FORGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitInner
+        text: EXTRA BALL LIT
+        y: middle
+        x: middle
+
+      # -------------------------------
+      # YELLOW BACKGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle - 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle - 1
+        x: middle - 1
+
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle + 1
+        x: middle + 1
+
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: EXTRA BALL LIT
+        y: middle + 1
+        x: middle - 1
+      # -------------------------------
+    expire: 4.0s
+
+# ---------------------
+# SLIDE::EXTRA BALL::AWARD
+# ---------------------
+  slideExtraBallJupiterCrushAward:
+    widgets:
+      # BLUE FORGROUND
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardInner
+        text: EXTRA BALL
+        y: middle
+        x: middle
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle - 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle - 1
+        x: middle - 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle + 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: EXTRA BALL
+        y: middle + 1
+        x: middle - 1
+      # -------------------------------
+    expire: 4.0s
+    

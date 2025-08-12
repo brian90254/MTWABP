@@ -1,0 +1,111 @@
+#show_version=6
+
+- time: 0
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        
+- time: '+1'
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: '80ff00'
+        
+- time: '+1'
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+      
+- time: '+1'
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: '00ff80'
+
+- time: '+1'
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        
+- time: '+1'
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: '0080ff'
+        
+- time: '+1'
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+      
+- time: '+1'
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: '8000ff'
+       
+- time: '+1'
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        
+- time: '+1'
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0080'
+
+- time: '+1'
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+      
+- time: '+1'
+  shows:
+    flashShootAgain:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: 'ff8000'
+       
+- time: '+1'

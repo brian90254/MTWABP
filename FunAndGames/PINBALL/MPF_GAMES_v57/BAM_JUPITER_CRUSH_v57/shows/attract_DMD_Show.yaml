@@ -1,0 +1,17 @@
+#show_version=6
+- time: 0
+
+  slides:
+    attract_1:
+      widgets:    
+        - type: video
+          video: Video_1
+  
+          control_events:
+            - event: slide_play
+              action: seek
+              value: 0
+            - event: slide_play
+              action: play
+
+- time: '+69'

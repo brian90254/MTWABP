@@ -1,0 +1,84 @@
+#config_version=6
+
+#config:
+##- configShots.yaml
+#- configBaseAchievements.yaml
+#- configBaseScoring.yaml
+#- configBaseShows.yaml
+
+mode:
+  start_events: game_start
+  priority: 50
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  mode_modeBackground_started:
+    slideBaseBackglass:
+      target: displayBackglass
+      
+slides:
+  slideBaseBackglass:
+    widgets:
+    - type: image
+      image: imagebackglass
+    
+## ---------------------
+## EVENT::PLAYER::RANDOM
+## ---------------------
+#random_event_player:
+#  mode_modeBase_started:
+#    events:
+#      - startModeJupiterOne
+#      #- startModeEuropa
+#      #- startModeGanymede
+#      #- startModeCallisto
+#
+#    force_all: true
+
+## ---------------------
+## TIMERS
+## ---------------------
+#timers:
+#  # ----------------------------
+#  # FORCE AUTO PLUNGE EJECT
+#  # ----------------------------
+#    timerForceAutoEject:
+#        start_value: 20
+#        end_value: 0
+#        direction: down
+#        tick_interval: 1s
+#        start_running: no
+#        control_events:
+#            - event: mode_modeBase_started
+#              action: start
+#            - event: balldevice_plunger_lane_ball_eject_success
+#              action: stop
+#
+
+## ---------------------
+## EVENT::PLAYER
+## ---------------------
+#event_player:
+#  # ----------------------------
+#  # FORCE AUTO PLUNGE EJECT
+#  # ----------------------------
+#  timer_timerForceAutoEject_complete:
+#    eventForceAutoEject|1s
+#
+#  ball_started:
+#    eventResetMultipliers
+
+
+## ---------------------
+## COIL::PLAYER
+## ---------------------
+#coil_player:
+#  # ----------------------------
+#  # FORCE AUTO PLUNGE EJECT
+#  # ----------------------------
+#  eventForceAutoEject:
+#    c_plunger_lane:
+#      action: pulse
+

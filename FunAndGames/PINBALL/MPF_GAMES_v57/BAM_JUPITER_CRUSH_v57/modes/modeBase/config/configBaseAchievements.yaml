@@ -1,0 +1,134 @@
+#config_version=6
+
+# -----------------------------
+# ACHIEVEMENT::MODE::ADVANCE
+# -----------------------------
+achievements:
+  # -----------------------------
+  # ACHIEVEMENT::MODE::JUPITER ONE
+  # -----------------------------
+  achModeJupiterOne:
+    show_tokens:
+      led1: ledMoonModes1A
+      led2: ledMoonModes1B
+      led3: ledMoonModes1C
+      color1: 'cc00ff'
+      color2: '660088'
+    show_when_selected: pulseThreeLedTwoColor
+    show_when_started: pulseThreeLedTwoColor
+    show_when_stopped: offThreeLedTwoColor
+    show_when_completed: onThreeLedColorTwoColor
+    events_when_selected:
+      - startModeJupiterOne
+      - stopModeEuropa
+      - stopModeGanymede
+      - stopModeCallisto
+    events_when_completed: eventSelectNextMode
+    enable_events: mode_modeBase_started
+    select_events: startAchModeJupiterOne
+    stop_events: stopAchModeJupiterOne
+    complete_events: eventCompletedAchModeJupiterOne
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::MODE::EUROPA
+  # -----------------------------
+  achModeEuropa:
+    show_tokens:
+      led1: ledMoonModes2A
+      led2: ledMoonModes2B
+      led3: ledMoonModes2C
+      color1: 'cc00ff'
+      color2: '660088'
+    show_when_selected: pulseThreeLedTwoColor
+    show_when_started: pulseThreeLedTwoColor
+    show_when_stopped: offThreeLedTwoColor
+    show_when_completed: onThreeLedColorTwoColor
+    events_when_selected:
+      - stopModeJupiterOne
+      - startModeEuropa
+      - stopModeGanymede
+      - stopModeCallisto
+    events_when_completed: eventSelectNextMode
+    enable_events: mode_modeBase_started
+    select_events: startAchModeEuropa
+    stop_events: stopAchModeEuropa
+    complete_events: eventCompletedAchModeEuropa
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::MODE::GANYMEDE
+  # -----------------------------
+  achModeGanymede:
+    show_tokens:
+      led1: ledMoonModes3A
+      led2: ledMoonModes3B
+      led3: ledMoonModes3C
+      color1: 'cc00ff'
+      color2: '660088'
+    show_when_selected: pulseThreeLedTwoColor
+    show_when_started: pulseThreeLedTwoColor
+    show_when_stopped: offThreeLedTwoColor
+    show_when_completed: onThreeLedColorTwoColor
+    events_when_selected:
+      - stopModeJupiterOne
+      - stopModeEuropa
+      - startModeGanymede
+      - stopModeCallisto
+    events_when_completed: eventSelectNextMode
+    enable_events: mode_modeBase_started
+    select_events: startAchModeGanymede
+    stop_events: stopAchModeGanymede
+    complete_events: eventCompletedAchModeGanymede
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::MODE::CALLISTO
+  # -----------------------------
+  achModeCallisto:
+    show_tokens:
+      led1: ledMoonModes4A
+      led2: ledMoonModes4B
+      led3: ledMoonModes4C
+      color1: 'cc00ff'
+      color2: '660088'
+    show_when_selected: pulseThreeLedTwoColor
+    show_when_started: pulseThreeLedTwoColor
+    show_when_stopped: offThreeLedTwoColor
+    show_when_completed: onThreeLedColorTwoColor
+    events_when_selected:
+      - stopModeJupiterOne
+      - stopModeEuropa
+      - stopModeGanymede
+      - startModeCallisto
+    events_when_completed: eventSelectNextMode
+    enable_events: mode_modeBase_started
+    select_events: startAchModeCallisto
+    stop_events: stopAchModeCallisto
+    complete_events: eventCompletedAchModeCallisto
+    sync_ms: 1
+    restart_after_stop_possible: true
+
+# -----------------------------
+# ACHIEVEMENT::GROUPS
+# -----------------------------
+achievement_groups:
+  # -----------------------------
+  # KICKER::WHEEL
+  # -----------------------------
+  grpAchModes:
+    achievements:
+      - achModeJupiterOne
+      - achModeEuropa
+      - achModeGanymede
+      - achModeCallisto
+    enable_events: mode_modeBase_started
+    rotate_right_events: eventAdvanceModeLeft
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    

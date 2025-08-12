@@ -1,0 +1,1020 @@
+#config_version=6
+
+lights:
+# -------------------
+# STRING ONE
+# -------------------
+  ledHunterTargetT:
+    number: 0-0
+    type: grb
+  ledHunterTargetE:
+    number: 0-1
+    type: grb
+  ledHunterTargetR:
+    number: 0-2
+    type: grb
+# -------------------
+  ledBonusMultiplier2x:
+    number: 0-3
+    type: grb
+  ledBonusMultiplier4x:
+    number: 0-4
+    type: grb
+  ledBonusMultiplier8x:
+    number: 0-5
+    type: grb
+  ledBonusMultiplier16x:
+    number: 0-6
+    type: grb
+# -------------------
+  ledDropRight2:
+    number: 0-7
+    type: grb
+  ledDropRight3:
+    number: 0-8
+    type: grb
+# -------------------
+  ledTargetReverse2:
+    number: 0-9
+    type: grb
+# -------------------
+  ledAttackAdvance5:
+    number: 0-10
+    type: grb
+  ledAttackAdvance4:
+    number: 0-11
+    type: grb
+  ledAttackAdvance3:
+    number: 0-12
+    type: grb
+  ledAttackAdvance2:
+    number: 0-13
+    type: grb
+  ledAttackAdvance1:
+    number: 0-14
+    type: grb
+# -------------------
+  ledHunterBonusH:
+    number: 0-15
+    type: grb
+  ledHunterBonusU:
+    number: 0-16
+    type: grb
+  ledHunterBonusN:
+    number: 0-17
+    type: grb
+  ledHunterBonusT:
+    number: 0-18
+    type: grb
+  ledHunterBonusE:
+    number: 0-19
+    type: grb
+  ledHunterBonusR:
+    number: 0-20
+    type: grb
+# -------------------
+  ledReturnRight:
+    number: 0-21
+    type: grb
+  ledOutlaneRight:
+    number: 0-22
+    type: grb
+# -------------------
+  ledRolloverShooterLane2A:
+    number: 0-23
+    type: grb
+  ledRolloverShooterLane2B:
+    number: 0-24
+    type: grb
+  ledRolloverShooterLane2C:
+    number: 0-25
+    type: grb
+  ledRolloverShooterLane2D:
+    number: 0-26
+    type: grb
+  ledShooterLane1A:
+    number: 0-27
+    type: grb
+  ledShooterLane1B:
+    number: 0-28
+    type: grb
+  ledShooterLane1C:
+    number: 0-29
+    type: grb
+# -------------------
+  ledBonusMultiplier32x1:
+    number: 0-30
+    type: grb
+  ledBonusMultiplier32x2:
+    number: 0-31
+    type: grb
+  ledBonusMultiplier32x3:
+    number: 0-32
+    type: grb
+  ledBonusMultiplier32x4:
+    number: 0-33
+    type: grb
+  ledBonusMultiplier32x5:
+    number: 0-34
+    type: grb
+  ledBonusMultiplier32x6:
+    number: 0-35
+    type: grb
+# -------------------
+  ledTargetReverse1A:
+    number: 0-36
+    type: grb
+  ledTargetReverse1B:
+    number: 0-37
+    type: grb
+  ledTargetReverse1C:
+    number: 0-38
+    type: grb
+# -------------------
+  ledNewtonBall1A:
+    number: 0-39
+    type: grb
+  ledNewtonBall1B:
+    number: 0-40
+    type: grb
+  ledNewtonBall1C:
+    number: 0-41
+    type: grb
+# -------------------
+  ledDropRight1A:
+    number: 0-42
+    type: grb
+  ledDropRight1B:
+    number: 0-43
+    type: grb
+  ledDropRight1C:
+    number: 0-44
+    type: grb
+# -------------------
+  ledNewtonBall2:
+    number: 0-45
+    type: grb
+  ledNewtonBall3:
+    number: 0-46
+    type: grb
+  ledNewtonBall4:
+    number: 0-47
+    type: grb
+# -------------------
+  ledRolloverOrbitRight2A:
+    number: 0-48
+    type: grb
+  ledRolloverOrbitRight2B:
+    number: 0-49
+    type: grb
+  ledRolloverOrbitRight2C:
+    number: 0-50
+    type: grb
+  ledRolloverOrbitRight2D:
+    number: 0-51
+    type: grb
+  ledOrbitRight1A:
+    number: 0-52
+    type: grb
+  ledOrbitRight1B:
+    number: 0-53
+    type: grb
+  ledOrbitRight1C:
+    number: 0-54
+    type: grb
+# -------------------
+    
+# -------------------
+# STRING TWO
+# -------------------
+  ledKickerWheel1A:
+    number: 0-64
+    type: grb
+  ledKickerWheel1B:
+    number: 0-65
+    type: grb
+  ledKickerWheel1C:
+    number: 0-66
+    type: grb
+  ledKickerWheel2A:
+    number: 0-67
+    type: grb
+  ledKickerWheel2B:
+    number: 0-68
+    type: grb
+  ledKickerWheel2C:
+    number: 0-69
+    type: grb
+  ledKickerWheel3A:
+    number: 0-70
+    type: grb
+  ledKickerWheel3B:
+    number: 0-71
+    type: grb
+  ledKickerWheel3C:
+    number: 0-72
+    type: grb
+  ledKickerWheel4A:
+    number: 0-73
+    type: grb
+  ledKickerWheel4B:
+    number: 0-74
+    type: grb
+  ledKickerWheel4C:
+    number: 0-75
+    type: grb
+  ledKickerWheel5A:
+    number: 0-76
+    type: grb
+  ledKickerWheel5B:
+    number: 0-77
+    type: grb
+  ledKickerWheel5C:
+    number: 0-78
+    type: grb
+# -------------------
+  ledKickerMode1A:
+    number: 0-79
+    type: grb
+  ledKickerMode1B:
+    number: 0-80
+    type: grb
+  ledKickerMode1C:
+    number: 0-81
+    type: grb
+  ledKickerMode2A:
+    number: 0-82
+    type: grb
+  ledKickerMode2B:
+    number: 0-83
+    type: grb
+  ledKickerMode2C:
+    number: 0-84
+    type: grb
+  ledKickerMode3A:
+    number: 0-85
+    type: grb
+  ledKickerMode3B:
+    number: 0-86
+    type: grb
+  ledKickerMode3C:
+    number: 0-87
+    type: grb
+# -------------------
+  ledOrbitLeft2A:
+    number: 0-88
+    type: grb
+  ledOrbitLeft2B:
+    number: 0-89
+    type: grb
+  ledOrbitLeft2C:
+    number: 0-90
+    type: grb
+# -------------------
+  ledSpinnerMiddle1A:
+    number: 0-91
+    type: grb
+  ledSpinnerMiddle1B:
+    number: 0-92
+    type: grb
+  ledSpinnerMiddle1C:
+    number: 0-93
+    type: grb
+# -------------------
+  ledDropLeft1A:
+    number: 0-94
+    type: grb
+  ledDropLeft1B:
+    number: 0-95
+    type: grb
+  ledDropLeft1C:
+    number: 0-96
+    type: grb
+  ledDropLeft2A:
+    number: 0-97
+    type: grb
+  ledDropLeft2B:
+    number: 0-98
+    type: grb
+  ledDropLeft2C:
+    number: 0-99
+    type: grb
+  ledDropLeft3A:
+    number: 0-100
+    type: grb
+  ledDropLeft3B:
+    number: 0-101
+    type: grb
+  ledDropLeft3C:
+    number: 0-102
+    type: grb
+# -------------------
+  ledTurnAround1A:
+    number: 0-103
+    type: grb
+  ledTurnAround1B:
+    number: 0-104
+    type: grb
+  ledTurnAround1C:
+    number: 0-105
+    type: grb
+  ledTurnAround2A:
+    number: 0-106
+    type: grb
+  ledTurnAround2B:
+    number: 0-107
+    type: grb
+  ledTurnAround2C:
+    number: 0-108
+    type: grb
+# -------------------
+  ledVukLeft1A:
+    number: 0-109
+    type: grb
+  ledVukLeft1B:
+    number: 0-110
+    type: grb
+  ledVukLeft1C:
+    number: 0-111
+    type: grb
+# -------------------
+  ledMoonModes1A:
+    number: 0-112
+    type: grb
+  ledMoonModes1B:
+    number: 0-113
+    type: grb
+  ledMoonModes1C:
+    number: 0-114
+    type: grb
+  ledMoonModes2A:
+    number: 0-115
+    type: grb
+  ledMoonModes2B:
+    number: 0-116
+    type: grb
+  ledMoonModes2C:
+    number: 0-117
+    type: grb
+  ledMoonModes3A:
+    number: 0-118
+    type: grb
+  ledMoonModes3B:
+    number: 0-119
+    type: grb
+  ledMoonModes3C:
+    number: 0-120
+    type: grb
+  ledMoonModes4A:
+    number: 0-121
+    type: grb
+  ledMoonModes4B:
+    number: 0-122
+    type: grb
+  ledMoonModes4C:
+    number: 0-123
+    type: grb
+# -------------------
+
+# -------------------
+# STRING THREE
+# -------------------
+  ledHunterTargetN:
+    number: 0-128
+    type: grb
+# -------------------
+  ledRolloverOrbitLeft5A:
+    number: 0-129
+    type: grb
+  ledRolloverOrbitLeft5B:
+    number: 0-130
+    type: grb
+  ledRolloverOrbitLeft5C:
+    number: 0-131
+    type: grb
+  ledRolloverOrbitLeft5D:
+    number: 0-132
+    type: grb
+  ledOrbitLeft4:
+    number: 0-133
+    type: grb
+# -------------------
+  ledHunterTargetU:
+    number: 0-134
+    type: grb
+  ledHunterTargetH:
+    number: 0-135
+    type: grb
+# -------------------
+  ledOrbitLeft1A:
+    number: 0-136
+    type: grb
+  ledOrbitLeft1B:
+    number: 0-137
+    type: grb
+  ledOrbitLeft1C:
+    number: 0-138
+    type: grb
+  ledOrbitLeft3:
+    number: 0-139
+    type: grb
+# -------------------
+  ledSpinnerMiddle2:
+    number: 0-140
+    type: grb
+# -------------------
+  ledTurnAround3:
+    number: 0-141
+    type: grb
+  ledRolloverTurnAround4A:
+    number: 0-142
+    type: grb
+  ledRolloverTurnAround4B:
+    number: 0-143
+    type: grb
+  ledRolloverTurnAround4C:
+    number: 0-144
+    type: grb
+  ledRolloverTurnAround4D:
+    number: 0-145
+    type: grb
+# -------------------
+  ledOutlaneLeft:
+    number: 0-146
+    type: grb
+  ledReturnLeft:
+    number: 0-147
+    type: grb
+# -------------------
+  ledShootAgain2:
+    number: 0-148
+    type: grb
+  ledShootAgain3:
+    number: 0-149
+    type: grb
+  ledShootAgain4:
+    number: 0-150
+    type: grb
+  ledShootAgain5:
+    number: 0-151
+    type: grb
+  ledShootAgain6:
+    number: 0-152
+    type: grb
+  ledShootAgain7:
+    number: 0-153
+    type: grb
+  # DUMMY TO MATCH SEVEN STANDARD
+  ledShootAgain1:
+    number: 0-154
+    type: grb
+# -------------------
+
+  l_drop_rt_1_1:
+    number: 1-42
+    type: grb
+  l_drop_rt_1_2:
+    number: 1-43
+    type: grb
+  l_drop_rt_1_3:
+    number: 1-44
+    type: grb
+  l_drop_rt_2:
+    number: 1-7
+    type: grb
+  l_drop_rt_3:
+    number: 1-8
+    type: grb
+
+  l_drop_lf_1_1:
+    number: 1-94
+    type: grb
+    subtype: led
+  l_drop_lf_1_2:
+    number: 1-95
+    subtype: led
+    type: grb
+  l_drop_lf_1_3:
+    number: 1-96
+    subtype: led
+    type: grb
+  l_drop_lf_2_1:
+    number: 1-97
+    type: grb
+    subtype: led
+  l_drop_lf_2_2:
+    number: 1-98
+    type: grb
+    subtype: led
+  l_drop_lf_2_3:
+    number: 1-99
+    type: grb
+    subtype: led
+  l_drop_lf_3_1:
+    number: 1-100
+    type: grb
+    subtype: led
+  l_drop_lf_3_2:
+    number: 1-101
+    type: grb
+    subtype: led
+  l_drop_lf_3_3:
+    number: 1-102
+    type: grb
+    subtype: led
+
+  l_bonus_multi_1:
+    number: 1-3
+    type: grb
+  l_bonus_multi_2:
+    number: 1-4
+    type: grb
+  l_bonus_multi_3:
+    number: 1-5
+    type: grb
+  l_bonus_multi_4:
+    number: 1-6
+    type: grb
+  l_bonus_multi_5_1:
+    number: 1-30
+    type: grb
+  l_bonus_multi_5_2:
+    number: 1-31
+    type: grb
+  l_bonus_multi_5_3:
+    number: 1-32
+    type: grb
+  l_bonus_multi_5_4:
+    number: 1-33
+    type: grb
+  l_bonus_multi_5_5:
+    number: 1-34
+    type: grb
+  l_bonus_multi_5_6:
+    number: 1-35
+    type: grb
+
+  l_moon_modes_1_1:
+    number: 1-112
+    type: grb
+  l_moon_modes_1_2:
+    number: 1-113
+    type: grb
+  l_moon_modes_1_3:
+    number: 1-114
+    type: grb
+  l_moon_modes_2_1:
+    number: 1-115
+    type: grb
+  l_moon_modes_2_2:
+    number: 1-116
+    type: grb
+  l_moon_modes_2_3:
+    number: 1-117
+    type: grb
+  l_moon_modes_3_1:
+    number: 1-118
+    type: grb
+  l_moon_modes_3_2:
+    number: 1-119
+    type: grb
+  l_moon_modes_3_3:
+    number: 1-120
+    type: grb
+  l_moon_modes_4_1:
+    number: 1-121
+    type: grb
+  l_moon_modes_4_2:
+    number: 1-122
+    type: grb
+  l_moon_modes_4_3:
+    number: 1-123
+    type: grb
+
+  l_kicker_wheel_1_1:
+    number: 1-64
+    type: grb
+  l_kicker_wheel_1_2:
+    number: 1-65
+    type: grb
+  l_kicker_wheel_1_3:
+    number: 1-66
+    type: grb
+  l_kicker_wheel_2_1:
+    number: 1-67
+    type: grb
+  l_kicker_wheel_2_2:
+    number: 1-68
+    type: grb
+  l_kicker_wheel_2_3:
+    number: 1-69
+    type: grb
+  l_kicker_wheel_3_1:
+    number: 1-70
+    type: grb
+  l_kicker_wheel_3_2:
+    number: 1-71
+    type: grb
+  l_kicker_wheel_3_3:
+    number: 1-72
+    type: grb
+  l_kicker_wheel_4_1:
+    number: 1-73
+    type: grb
+  l_kicker_wheel_4_2:
+    number: 1-74
+    type: grb
+  l_kicker_wheel_4_3:
+    number: 1-75
+    type: grb
+  l_kicker_wheel_5_1:
+    number: 1-76
+    type: grb
+  l_kicker_wheel_5_2:
+    number: 1-77
+    type: grb
+  l_kicker_wheel_5_3:
+    number: 1-78
+    type: grb
+
+  l_hunter_target_1:
+    number: 1-132
+    type: grb
+  l_hunter_target_2:
+    number: 1-131
+    type: grb
+  l_hunter_target_3:
+    number: 1-128
+    type: grb
+  l_hunter_target_4:
+    number: 1-0
+    type: grb
+  l_hunter_target_5:
+    number: 1-1
+    type: grb
+  l_hunter_target_6:
+    number: 1-2
+    type: grb
+
+  l_hunter_bonus_1:
+    number: 1-15
+    type: grb
+  l_hunter_bonus_2:
+    number: 1-16
+    type: grb
+  l_hunter_bonus_3:
+    number: 1-17
+    type: grb
+  l_hunter_bonus_4:
+    number: 1-18
+    type: grb
+  l_hunter_bonus_5:
+    number: 1-19
+    type: grb
+  l_hunter_bonus_6:
+    number: 1-20
+    type: grb
+
+  l_attack_adv_1:
+    number: 1-14
+    type: grb
+  l_attack_adv_2:
+    number: 1-13
+    type: grb
+  l_attack_adv_3:
+    number: 1-12
+    type: grb
+  l_attack_adv_4:
+    number: 1-11
+    type: grb
+  l_attack_adv_5:
+    number: 1-10
+    type: grb
+
+  l_lane_outret_1:
+    number: 1-143
+    type: grb
+  l_lane_outret_2:
+    number: 1-144
+    type: grb
+  l_lane_outret_3:
+    number: 1-21
+    type: grb
+  l_lane_outret_4:
+    number: 1-22
+    type: grb
+
+  l_kicker_mode_1_1:
+    number: 1-79
+    type: grb
+  l_kicker_mode_1_2:
+    number: 1-80
+    type: grb
+  l_kicker_mode_1_3:
+    number: 1-81
+    type: grb
+  l_kicker_mode_2_1:
+    number: 1-82
+    type: grb
+  l_kicker_mode_2_2:
+    number: 1-83
+    type: grb
+  l_kicker_mode_2_3:
+    number: 1-84
+    type: grb
+  l_kicker_mode_3_1:
+    number: 1-85
+    type: grb
+  l_kicker_mode_3_2:
+    number: 1-86
+    type: grb
+  l_kicker_mode_3_3:
+    number: 1-87
+    type: grb
+
+  l_turn_around_1_1:
+    number: 1-103
+    type: grb
+  l_turn_around_1_2:
+    number: 1-104
+    type: grb
+  l_turn_around_1_3:
+    number: 1-105
+    type: grb
+  l_turn_around_2_1:
+    number: 1-106
+    type: grb
+  l_turn_around_2_2:
+    number: 1-107
+    type: grb
+  l_turn_around_2_3:
+    number: 1-108
+    type: grb
+  l_turn_around_3:
+    #number: 1-142
+    number: 1-138
+    type: grb
+  l_turn_around_4_1:
+    #number: 1-138
+    number: 1-139
+    type: grb
+  l_turn_around_4_2:
+    #number: 1-139
+    number: 1-140
+    type: grb
+  l_turn_around_4_3:
+    #number: 1-140
+    number: 1-141
+    type: grb
+  l_turn_around_4_4:
+    #number: 1-141
+    number: 1-142
+    type: grb
+
+  l_lane_shooter_1_1:
+    number: 1-27
+    type: grb
+  l_lane_shooter_1_2:
+    number: 1-28
+    type: grb
+  l_lane_shooter_1_3:
+    number: 1-29
+    type: grb
+  l_lane_shooter_2_1:
+    number: 1-23
+    type: grb
+  l_lane_shooter_2_2:
+    number: 1-24
+    type: grb
+  l_lane_shooter_2_3:
+    number: 1-25
+    type: grb
+  l_lane_shooter_2_4:
+    number: 1-26
+    type: grb
+  l_target_rev_1_1:
+    number: 1-36
+    type: grb
+  l_target_rev_1_2:
+    number: 1-37
+    type: grb
+  l_target_rev_1_3:
+    number: 1-38
+    type: grb
+  l_target_rev_2:
+    number: 1-9
+    type: grb
+
+  l_orbit_left_1_1:
+    number: 1-133
+    type: grb
+  l_orbit_left_1_2:
+    number: 1-134
+    type: grb
+  l_orbit_left_1_3:
+    number: 1-135
+    type: grb
+  l_orbit_left_2_1:
+    number: 1-88
+    type: grb
+  l_orbit_left_2_2:
+    number: 1-89
+    type: grb
+  l_orbit_left_2_3:
+    number: 1-90
+    type: grb
+  l_orbit_left_3:
+    number: 1-136
+    type: grb
+  l_orbit_left_4:
+    number: 1-130
+    type: grb
+  l_orbit_left_5:
+    number: 1-129
+    type: grb
+
+  l_spinner_mid_1_1:
+    number: 1-91
+    type: grb
+  l_spinner_mid_1_2:
+    number: 1-92
+    type: grb
+  l_spinner_mid_1_3:
+    number: 1-93
+    type: grb
+  l_spinner_mid_2:
+    number: 1-137
+    type: grb
+  l_newton_ball_1_1:
+    number: 1-39
+    type: grb
+  l_newton_ball_1_2:
+    number: 1-40
+    type: grb
+  l_newton_ball_1_3:
+    number: 1-41
+    type: grb
+  l_newton_ball_2:
+    number: 1-45
+    type: grb
+  l_newton_ball_3:
+    number: 1-46
+    type: grb
+  l_newton_ball_4:
+    number: 1-47
+    type: grb
+
+  l_orbit_right_1_1:
+    number: 1-49
+    type: grb
+  l_orbit_right_1_2:
+    number: 1-50
+    type: grb
+  l_orbit_right_1_3:
+    number: 1-51
+    type: grb
+  l_orbit_right_2:
+    number: 1-48
+    type: grb
+
+  l_vuk_left_1_1:
+    number: 1-109
+    type: grb
+  l_vuk_left_1_2:
+    number: 1-110
+    type: grb
+  l_vuk_left_1_3:
+    number: 1-111
+    type: grb
+
+  l_shoot_again_1_1:
+    number: 1-145
+    type: grb
+  l_shoot_again_1_2:
+    number: 1-146
+    type: grb
+  l_shoot_again_1_3:
+    number: 1-147
+    type: grb
+  l_shoot_again_1_4:
+    number: 1-148
+    type: grb
+  l_shoot_again_1_5:
+    number: 1-149
+    type: grb
+  l_shoot_again_1_6:
+    number: 1-150
+    type: grb
+
+  l_flying_saucer_1_1:
+    number: 1-192
+    type: grb
+  l_flying_saucer_1_2:
+    number: 1-193
+    type: grb
+  l_flying_saucer_1_3:
+    number: 1-194
+    type: grb
+  l_flying_saucer_1_4:
+    number: 1-195
+    type: grb
+  l_flying_saucer_1_5:
+    number: 1-196
+    type: grb
+  l_flying_saucer_1_6:
+    number: 1-197
+    type: grb
+  l_flying_saucer_1_7:
+    number: 1-198
+    type: grb
+  l_flying_saucer_1_8:
+    number: 1-199
+    type: grb
+  l_flying_saucer_1_9:
+    number: 1-200
+    type: grb
+  l_flying_saucer_1_10:
+    number: 1-201
+    type: grb
+  l_flying_saucer_1_11:
+    number: 1-202
+    type: grb
+  l_flying_saucer_1_12:
+    number: 1-203
+    type: grb
+  l_flying_saucer_1_13:
+    number: 1-204
+    type: grb
+  l_flying_saucer_1_14:
+    number: 1-205
+    type: grb
+  l_flying_saucer_1_15:
+    number: 1-206
+    type: grb
+  l_flying_saucer_1_16:
+    number: 1-207
+    type: grb
+
+  l_flying_saucer_1_17:
+    number: 1-208
+    type: grb
+  l_flying_saucer_1_18:
+    number: 1-209
+    type: grb
+  l_flying_saucer_1_19:
+    number: 1-210
+    type: grb
+  l_flying_saucer_1_20:
+    number: 1-211
+    type: grb
+  l_flying_saucer_1_21:
+    number: 1-212
+    type: grb
+  l_flying_saucer_1_22:
+    number: 1-213
+    type: grb
+  l_flying_saucer_1_23:
+    number: 1-214
+    type: grb
+  l_flying_saucer_1_24:
+    number: 1-215
+    type: grb
+
+  l_cabinet_button_1_1:
+    number: 1-256
+    type: grb
+  l_cabinet_button_1_2:
+    number: 1-257
+    type: grb
+  l_cabinet_button_1_3:
+    number: 1-258
+    type: grb
+  l_cabinet_button_1_4:
+    number: 1-259
+    type: grb
+  
+  l_cabinet_button_2_1:
+    number: 1-260
+    type: grb
+  l_cabinet_button_2_2:
+    number: 1-261
+    type: grb
+  l_cabinet_button_2_3:
+    number: 1-262
+    type: grb
+  l_cabinet_button_2_4:
+    number: 1-263
+    type: grb
+  
+  l_cabinet_button_3_1:
+    number: 1-264
+    type: grb
+  l_cabinet_button_3_2:
+    number: 1-265
+    type: grb
+  l_cabinet_button_3_3:
+    number: 1-266
+    type: grb
+  l_cabinet_button_3_4:
+    number: 1-267
+    type: grb

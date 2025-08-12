@@ -1,0 +1,141 @@
+#config_version=6
+
+config:
+- configBaseAchievements.yaml
+- configBaseShows.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 100
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  #ball_started:
+  #  - eventStartModeSkillShot
+  #  - eventResetMultipliers
+  #  # FLIPPERS
+  #  - eventEnableFlipperUpperLeft
+  #  - eventEnableFlipperUpperRight
+    
+  ball_will_end:
+    # FLIPPERS
+    - eventDisableFlipperUpperLeft
+    - eventDisableFlipperUpperRight
+    
+  # ----------------------------
+  # CONDITIONAL START MODE JUPITER ONE
+  # ----------------------------
+  mode_modeBase_started:
+  #ball_started:
+    - eventStartModeSkillShot
+    - eventResetMultipliers
+    # FLIPPERS
+    # TURNED OFF UPPER LEFT TEMP
+    #- eventEnableFlipperUpperLeft
+    - eventEnableFlipperUpperRight
+    
+    # SHOW DISPLAY BACKGLASS AND DMD
+    - eventShowSlideBaseShows
+    #- eventStartModeSkillShot
+    #- eventStartModeAwardWheel
+    - eventSelectNextMode|20ms
+    
+  eventSelectNextMode:
+    - startAchModeJupiterOne{device.achievements.achModeJupiterOne.state!="completed"}
+  eventSelectNextMode.2:
+    - startAchModeEuropa{device.achievements.achModeJupiterOne.state=="completed" and device.achievements.achModeEuropa.state!="completed"}
+  eventSelectNextMode.3:
+    - startAchModeGanymede{device.achievements.achModeJupiterOne.state=="completed" and device.achievements.achModeEuropa.state=="completed" and device.achievements.achModeGanymede.state!="completed"}
+  eventSelectNextMode.4:
+    - startAchModeCallisto{device.achievements.achModeJupiterOne.state=="completed" and device.achievements.achModeEuropa.state=="completed" and device.achievements.achModeGanymede.state=="completed" and device.achievements.achModeCallisto.state!="completed"}
+
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # ----------------------------
+  timer_timerForceAutoEject_complete:
+    eventForceAutoEject|1s
+
+
+  # ----------------------
+  # EVENT::ADVANCE::MOON
+  # ----------------------
+  logicblock_counterMoonJupiterOne_complete:
+    - eventCompletedAchModeJupiterOne|2s
+    
+  logicblock_counterMoonEuropa_complete:
+    - eventCompletedAchModeEuropa|2s
+    
+  logicblock_counterMoonGanymede_complete:
+    - eventCompletedAchModeGanymede|2s
+    
+  logicblock_counterMoonCallisto_complete:
+    - eventCompletedAchModeCallisto|2s
+
+# ---------------------
+# TIMERS
+# ---------------------
+timers:
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # ----------------------------
+    timerForceAutoEject:
+        start_value: 20
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: no
+        control_events:
+            - event: mode_modeBase_started
+              action: start
+            - event: balldevice_plunger_lane_ball_eject_success
+              action: stop
+              
+
+  
+
+# ---------------------
+# COIL::PLAYER
+# ---------------------
+coil_player:
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # ----------------------------
+  eventForceAutoEject:
+    c_plunger_lane:
+      action: pulse
+
+
+# ----------------------
+# COUNTER
+# ----------------------
+counters:
+  # ----------------------
+  # COUNTER::ADVANCE::MOON
+  # ----------------------
+  counterMoonJupiterOne:
+    count_events: eventAdvanceCounterMoonJupiterOne
+    starting_count: 0
+    count_interval: 1
+    count_complete_value: 2
+    persist_state: true
+  counterMoonEuropa:
+    count_events: eventAdvanceCounterMoonEuropa
+    starting_count: 0
+    count_interval: 1
+    count_complete_value: 2
+    persist_state: true
+  counterMoonGanymede:
+    count_events: eventAdvanceCounterMoonGanymede
+    starting_count: 0
+    count_interval: 1
+    count_complete_value: 2
+    persist_state: true
+  counterMoonCallisto:
+    count_events: eventAdvanceCounterMoonCallisto
+    starting_count: 0
+    count_interval: 1
+    count_complete_value: 2
+    persist_state: true

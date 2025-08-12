@@ -1,0 +1,75 @@
+#config_version=6
+
+mode:
+  start_events: eventStartModeMusicJupiterOne
+  stop_events: eventStopModeMusicJupiterOne
+  priority: 1000
+
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  mode_modeMusicJupiterOne_started:
+    musicJupiterOne001:
+      loops: -1
+      volume: 0.3
+      
+  mode_modeMusicJupiterOne_ending:
+    musicJupiterOne001:
+      action: stop
+  #---------------------
+  eventShotMusicHLoopOnHit:
+    musicJupiterOne002:
+      loops: -1
+      volume: 0.45
+      
+  eventShotMusicHLoopOffHit:
+    musicJupiterOne002:
+      action: stop
+  # ---------------------      
+  eventShotMusicULoopOnHit:
+    musicJupiterOne003:
+      loops: -1
+      volume: 0.25
+      
+  eventShotMusicULoopOffHit:
+    musicJupiterOne003:
+      action: stop
+  # ---------------------
+  eventShotMusicNLoopOnHit:
+    musicJupiterOne004:
+      loops: -1
+      volume: 0.6
+      
+  eventShotMusicNLoopOffHit:
+    musicJupiterOne004:
+      action: stop
+  # ---------------------
+  eventShotMusicTLoopOnHit:
+    musicJupiterOne005:
+      loops: -1
+      volume: 0.15
+      
+  eventShotMusicTLoopOffHit:
+    musicJupiterOne005:
+      action: stop
+  # ---------------------
+  eventShotMusicELoopOnHit:
+    musicJupiterOne006:
+      loops: -1
+      volume: 0.45
+      
+  eventShotMusicELoopOffHit:
+    musicJupiterOne006:
+      action: stop
+  # ---------------------
+  eventShotMusicRLoopOnHit:
+    musicJupiterOne007:
+      loops: -1
+      volume: 0.3
+      
+  eventShotMusicRLoopOffHit:
+    musicJupiterOne007:
+      action: stop
+  # ---------------------
+  

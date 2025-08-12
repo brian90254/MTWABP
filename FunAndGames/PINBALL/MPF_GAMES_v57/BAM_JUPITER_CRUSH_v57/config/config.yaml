@@ -1,0 +1,132 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+#mpf:
+#  #default_show_sync_ms: 1000
+#  default_show_sync_ms: 500
+  
+# ---------------
+# MODES
+# ---------------
+config:
+# -----------------
+# HARDWARE
+- configVirtual.yaml
+- configFastHardware.yaml
+# -----------------
+# GAME
+- configModes.yaml
+#- configScoring.yaml
+# -----------------
+# SHOWS
+- configLeds.yaml
+- configShows.yaml
+- configEvents.yaml
+- configDisplays.yaml
+# -----------------
+# SOUNDS
+- configMusic.yaml
+- configSFX.yaml
+- configVoice.yaml
+# -----------------
+
+# SOUNDS BY GAME
+#- configGames_SFX/configSFX_JupiterCrush.yaml
+# -----------------
+# FONT / COLOR BY GAME
+- configGames_FontColor/configFontColor_JupiterCrush.yaml
+# -----------------
+# MUSIC BY GAME
+#- configGames_Music/configMusic_JupiterCrush.yaml
+# -----------------
+# VOICE BY GAME
+#- configGames_Voice/configVoice_JupiterCrush.yaml
+
+# ---------------
+# CONFIG
+# ---------------
+game:
+  balls_per_game: 3
+  max_players: 1
+  allow_start_with_loose_balls: true
+
+machine:
+  # Standard FAST trough is six balls
+  #balls_installed: 1
+  #min_balls: 1
+  balls_installed: 3
+  min_balls: 3
+  
+## REMOVED 220716
+#widget_styles:
+#  text_default:
+#    font_name: DieNasty
+#    font_size: 10
+#    
+#  tall_title:
+#    font_name: FeedbackReg
+#    font_size: 10
+#    
+#  fontJupiterCrushAlternate:
+#    font_name: FontdinerSwanky
+#    font_size: 10
+#    
+#  fontJupiterCrush:
+#    font_name: starburstLanesTwinkle
+#    font_size: 10
+
+sound_system:
+  buffer: 4096
+  frequency: 44100
+  channels: 2
+  #master_volume: 1
+  tracks:
+    voice:
+      volume: 1.0
+      simultaneous_sounds: 1
+      preload: yes
+    sfx:
+      volume: 0.8
+      simultaneous_sounds: 8
+      preload: yes
+    music:
+      volume: 0.9
+      simultaneous_sounds: 8
+    # --------------------------
+    # THIS IS A BUG WORK-AROUND
+    use_sound_setting:
+      volume: 0.9
+      simultaneous_sounds: 8
+    # --------------------------
+    trackplaylist:
+      type: playlist
+      volume: 0.9
+      crossfade_time: 0.1s
+
+assets:
+  sounds:
+    default:
+      #load: on_demand
+      load: preload
+      #track: music
+    voice:
+      #load: on_demand
+      load: preload
+      track: voice
+    sfx:
+      #load: on_demand
+      load: preload
+      track: sfx
+    music:
+      #load: on_demand
+      load: preload
+      track: music
+  videos:
+    default:
+      #load: on_demand
+      load: preload
+  images:
+    default:
+      #load: on_demand
+      load: preload
