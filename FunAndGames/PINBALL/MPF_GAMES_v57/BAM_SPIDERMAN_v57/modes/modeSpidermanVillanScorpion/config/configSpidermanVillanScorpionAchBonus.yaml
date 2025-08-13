@@ -1,0 +1,335 @@
+#config_version=6
+
+  # EXAMPLE CONDITIONAL EVENT
+  # example conditional event
+  # mode_modeCollectBonus_started.2{current_player.multiHunter==6}:
+  #   - eventCompletedAchModeJupiterOne|6s
+  #
+  #   shotSpinnerLeft_hit.1{current_player.shot_shotSpinnerLeftAward==0}:
+  #     score: 10 * current_player.multiPlayfield
+
+# *****************************
+# ACHIEVEMENTS
+# *****************************
+achievements:
+# -----------------------------
+# ACHIEVEMENT::BONUS
+# -----------------------------
+  # -----------------------------
+  # BONUS::BY::ONES
+  # -----------------------------
+    achBonus0:
+        # --------------------------------
+        show_tokens:
+            ledA: ledDummyA
+            ledB: ledDummyB
+            ledC: ledDummyC
+        show_when_selected: showAchBonusAdvanceSelected
+        show_when_started: showAchBonusAdvanceStarted
+        show_when_completed: showAchBonusAdvanceCompleted
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusOnes
+        enable_events: eventEnableAchBonusOnes
+        start_events: eventStartAchBonus0
+        complete_events: eventCompleteAchBonusOnesPosted
+        events_when_completed: eventStartAchBonus1
+    
+    achBonus1:
+        # --------------------------------
+        show_tokens:
+            ledA: ledBonusAdvance1A
+            ledB: ledBonusAdvance1B
+            ledC: ledBonusAdvance1C
+        show_when_selected: showAchBonusAdvanceSelected
+        show_when_started: showAchBonusAdvanceStarted
+        show_when_completed: showAchBonusAdvanceCompleted
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusOnes
+        enable_events: eventEnableAchBonusOnes
+        start_events: eventStartAchBonus1
+        complete_events: eventCompleteAchBonusOnesPosted
+        events_when_completed: eventStartAchBonus2
+    
+    achBonus2:
+        # --------------------------------
+        show_tokens:
+            ledA: ledBonusAdvance2A
+            ledB: ledBonusAdvance2B
+            ledC: ledBonusAdvance2C
+        show_when_selected: showAchBonusAdvanceSelected
+        show_when_started: showAchBonusAdvanceStarted
+        show_when_completed: showAchBonusAdvanceCompleted
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusOnes
+        enable_events: eventEnableAchBonusOnes
+        start_events: eventStartAchBonus2
+        complete_events: eventCompleteAchBonusOnesPosted
+        events_when_completed: eventStartAchBonus3
+    
+    achBonus3:
+        # --------------------------------
+        show_tokens:
+            ledA: ledBonusAdvance3A
+            ledB: ledBonusAdvance3B
+            ledC: ledBonusAdvance3C
+        show_when_selected: showAchBonusAdvanceSelected
+        show_when_started: showAchBonusAdvanceStarted
+        show_when_completed: showAchBonusAdvanceCompleted
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusOnes
+        enable_events: eventEnableAchBonusOnes
+        start_events: eventStartAchBonus3
+        complete_events: eventCompleteAchBonusOnesPosted
+        events_when_completed: eventStartAchBonus4
+    
+    achBonus4:
+        # --------------------------------
+        show_tokens:
+            ledA: ledBonusAdvance4A
+            ledB: ledBonusAdvance4B
+            ledC: ledBonusAdvance4C
+        show_when_selected: showAchBonusAdvanceSelected
+        show_when_started: showAchBonusAdvanceStarted
+        show_when_completed: showAchBonusAdvanceCompleted
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusOnes
+        enable_events: eventEnableAchBonusOnes
+        start_events: eventStartAchBonus4
+        complete_events: eventCompleteAchBonusOnesPosted
+        events_when_completed: eventStartAchBonus5
+    
+    achBonus5:
+        # --------------------------------
+        show_tokens:
+            ledA: ledBonusAdvance5A
+            ledB: ledBonusAdvance5B
+            ledC: ledBonusAdvance5C
+        show_when_selected: showAchBonusAdvanceSelected
+        show_when_started: showAchBonusAdvanceStarted
+        show_when_completed: showAchBonusAdvanceCompleted
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusOnes
+        enable_events: eventEnableAchBonusOnes
+        start_events: eventStartAchBonus5
+        complete_events: eventCompleteAchBonusOnesPosted
+        events_when_completed: eventStartAchBonus6
+    
+    achBonus6:
+        # --------------------------------
+        show_tokens:
+            ledA: ledBonusAdvance6A
+            ledB: ledBonusAdvance6B
+            ledC: ledBonusAdvance6C
+        show_when_selected: showAchBonusAdvanceSelected
+        show_when_started: showAchBonusAdvanceStarted
+        show_when_completed: showAchBonusAdvanceCompleted
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusOnes
+        enable_events: eventEnableAchBonusOnes
+        start_events: eventStartAchBonus6
+        complete_events: eventCompleteAchBonusOnesPosted
+        events_when_completed: eventStartAchBonus7
+    
+    achBonus7:
+        # --------------------------------
+        show_tokens:
+            ledA: ledBonusAdvance7A
+            ledB: ledBonusAdvance7B
+            ledC: ledBonusAdvance7C
+        show_when_selected: showAchBonusAdvanceSelected
+        show_when_started: showAchBonusAdvanceStarted
+        show_when_completed: showAchBonusAdvanceCompleted
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusOnes
+        enable_events: eventEnableAchBonusOnes
+        start_events: eventStartAchBonus7
+        complete_events: eventCompleteAchBonusOnesPosted
+        events_when_completed: eventStartAchBonus8
+    
+    achBonus8:
+      # --------------------------------
+        show_tokens:
+            ledA: ledBonusAdvance8A
+            ledB: ledBonusAdvance8B
+            ledC: ledBonusAdvance8C
+        show_when_selected: showAchBonusAdvanceSelected
+        show_when_started: showAchBonusAdvanceStarted
+        show_when_completed: showAchBonusAdvanceCompleted
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusOnes
+        enable_events: eventEnableAchBonusOnes
+        start_events: eventStartAchBonus8
+        complete_events: eventCompleteAchBonusOnesPosted
+        events_when_completed: eventStartAchBonus9
+
+    achBonus9:
+      # --------------------------------
+        show_tokens:
+            ledA: ledBonusAdvance9A
+            ledB: ledBonusAdvance9B
+            ledC: ledBonusAdvance9C
+        show_when_selected: showAchBonusAdvanceSelected
+        show_when_started: showAchBonusAdvanceStarted
+        show_when_completed: showAchBonusAdvanceCompleted
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusOnes
+        enable_events: eventEnableAchBonusOnes
+        start_events: eventStartAchBonus9
+        complete_events: eventCompleteAchBonusOnesPosted
+        events_when_completed: eventStartAchBonusTens
+    
+    # -----------------------------
+    # BONUS::BY::TENS
+    # -----------------------------
+    achBonus10:
+        show_tokens:
+            ledA: ledBonusAdvance10A
+            ledB: ledBonusAdvance10B
+            ledC: ledBonusAdvance10C
+        show_when_selected: showAchBonusAdvanceSelected
+        show_when_started: showAchBonusAdvanceStarted
+        show_when_completed: showAchBonusAdvanceCompleted
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusTens
+        enable_events: eventEnableAchBonusTens
+        start_events: eventStartAchBonus10
+        complete_events: eventCompleteBonusTens
+        events_when_completed: eventStartAchBonus20
+  
+    achBonus20:
+        # --------------------------------
+        show_tokens:
+            ledA: ledBonusAdvance20A
+            ledB: ledBonusAdvance20B
+            ledC: ledBonusAdvance20C
+            ledD: ledBonusAdvance20D
+            ledE: ledBonusAdvance20E
+            ledF: ledBonusAdvance20F
+            ledG: ledBonusAdvance20G
+        show_when_selected: showAchBonusAdvanceSelected7leds
+        show_when_started: showAchBonusAdvanceStarted7leds
+        show_when_completed: showAchBonusAdvanceCompleted7leds
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusTens
+        enable_events: eventEnableAchBonusTens
+        start_events: eventStartAchBonus20
+        complete_events: eventCompleteBonusTens
+        events_when_completed: eventStartAchBonus30
+        
+    achBonus30:
+        # --------------------------------
+        show_tokens:
+            ledA: ledBonusAdvance20A
+            ledB: ledBonusAdvance20B
+            ledC: ledBonusAdvance20C
+            ledD: ledBonusAdvance20D
+            ledE: ledBonusAdvance20E
+            ledF: ledBonusAdvance20F
+            ledG: ledBonusAdvance20G
+            # ----------------------
+            ledH: ledBonusAdvance10A
+            ledI: ledBonusAdvance10B
+            ledJ: ledBonusAdvance10C
+            # ----------------------
+        show_when_selected: showAchBonus30Selected
+        show_when_started: showAchBonus30Started
+        show_when_completed: showAchBonus30Completed
+        # ---------------------------------
+        restart_after_stop_possible: true
+        reset_events: eventResetAchBonusTens
+        enable_events: eventEnableAchBonusTens
+        start_events: eventStartAchBonus30
+        complete_events: eventCompleteBonusTens
+        #events_when_completed: eventStartAchBonus40
+
+# *****************************
+# END ACHIEVEMENTS
+# *****************************
+
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    mode_modeSpidermanVillanScorpion_started:
+        # -----------------------------------
+        # ENABLE BONUS
+        # -----------------------------------
+        # ONES
+        - eventResetAchBonusOnes
+        - eventEnableAchBonusOnes
+        - eventStartAchBonus0
+        - eventCompleteAchBonusOnes|1s
+        # TENS
+        - eventResetAchBonusTens
+        - eventEnableAchBonusTens
+    
+    # -----------------------------------
+    # CONDITIONAL EVENT::DON'T GO OVER 19 TOTAL BONUS
+    # -----------------------------------
+    eventCompleteAchBonusOnes{current_player.totalBonus<39}:
+        - eventCompleteAchBonusOnesPosted
+
+    # -----------------------------------
+    # RESET ONES ONCE TEN IS ACTIVE
+    # -----------------------------------
+    eventStartAchBonusTens:
+        # RESET ONES
+        - eventResetAchBonusOnes
+        - eventEnableAchBonusOnes
+        - eventStartAchBonus0
+        # ACHIEVE BY TENS
+        - eventCompleteAchBonusTens
+        - eventStartAchBonus10
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersSpidermanVillanScorpion:
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    # REMOVE THIS RESET TO MAKE BONUS PERSISTANT
+    bonusScorpion:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT
+    totalBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set
+    # -------------------------
+    # RESET BONUS MULTIPLIER
+    multiBonus:
+      int: 1
+      action: set
+    bonus_multiplier:
+      int: 1
+      action: set
+  
+# ---------------
+# ADVANCE BONUS COUNT
+# ---------------
+  eventCompleteAchBonusOnesPosted:
+    bonusScorpion: 1

@@ -1,0 +1,111 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# **********************
+# CONFIG :: SYSTEM WIDE
+# **********************
+
+# ---------------------
+# MPf
+# ---------------------
+# mpf:
+#   default_light_hw_update_hz: 100
+
+# ---------------------
+# GAME
+# ---------------------
+game:
+  balls_per_game: 3
+  max_players: 1
+  allow_start_with_loose_balls: false
+
+# ---------------------
+# MACHINE
+# ---------------------
+machine:
+  balls_installed: 4
+  min_balls: 4
+
+# ---------------------
+# EVENT PLAYER
+# ---------------------
+event_player:
+  # ---------------------
+  # EVENT PLAYER :: CREDITS
+  # ---------------------
+  mode_credits_started:
+    - eventCreditStart|1000ms
+    
+# ---------------------
+# CREDITS
+# ---------------------
+credits:
+  max_credits: 99
+  free_play: false
+  #------------
+  events:
+    - event: eventCreditStart
+      type: creditsStart
+      credits: 50
+  free_play_string: FREE PLAY
+  credits_string: CREDITS
+
+# ---------------------
+# SOUND SYSTEM
+# ---------------------
+sound_system:
+  #buffer: 4096
+  buffer: 1024
+  #buffer: 16384
+  #buffer: 32768
+  frequency: 44100
+  #channels: 2
+  channels: 1
+  ##master_volume: 1
+  tracks:
+    voice:
+      volume: 0.8
+      simultaneous_sounds: 1
+      preload: yes
+    sfx:
+      volume: 0.8
+      simultaneous_sounds: 8
+      preload: yes
+    music:
+      volume: 0.8
+      simultaneous_sounds: 8
+    # --------------------------
+    # THIS IS A BUG WORK-AROUND
+    use_sound_setting:
+      volume: 0.3
+      simultaneous_sounds: 8
+    # --------------------------
+    trackplaylist:
+      type: playlist
+      volume: 0.8
+      crossfade_time: 3.0s
+
+# ---------------------
+# ASSETS
+# ---------------------
+assets:
+  sounds:
+    default:
+      load: preload
+    voice:
+      load: preload
+      track: voice
+    sfx:
+      load: preload
+      track: sfx
+    music:
+      load: preload
+      track: music
+  videos:
+    default:
+      #load: preload
+      load: on_demand
+  images:
+    default:
+      load: preload

@@ -1,0 +1,821 @@
+#config_version=6
+
+# **************
+# WIDGETS
+# **************
+widgets:
+# **************
+# WIDGETS::DROPS
+# **************
+# --------------
+# DROP::RIGHT::ONE
+# --------------
+  widgetDropOneGray:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 1
+      y: middle + 15
+      x: middle + 105
+      z: 4
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 1
+      y: middle + 16
+      x: middle + 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+    - type: text
+      text: 1
+      y: middle + 16
+      x: middle + 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+    - type: text
+      text: 1
+      y: middle + 14
+      x: middle + 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+    - type: text
+      text: 1
+      y: middle + 14
+      x: middle + 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+      # ------------
+      
+  widgetDropOneColor:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 1
+      y: middle + 15
+      x: middle + 105
+      z: 6
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 1
+      y: middle + 16
+      x: middle + 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+    - type: text
+      text: 1
+      y: middle + 16
+      x: middle + 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+    - type: text
+      text: 1
+      y: middle + 14
+      x: middle + 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+    - type: text
+      text: 1
+      y: middle + 14
+      x: middle + 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+      # ------------
+      
+  widgetDropOneX:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: x
+      y: middle + 15
+      x: middle + 105
+      z: 8
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: x
+      y: middle + 16
+      x: middle + 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+    - type: text
+      text: x
+      y: middle + 16
+      x: middle + 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+    - type: text
+      text: x
+      y: middle + 14
+      x: middle + 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+    - type: text
+      text: x
+      y: middle + 14
+      x: middle + 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+      # ------------
+      
+# --------------
+# DROP::RIGHT::TWO
+# --------------
+  widgetDropTwoGray:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 2
+      y: middle - 15
+      x: middle + 105
+      z: 4
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 2
+      y: middle - 16
+      x: middle + 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+    - type: text
+      text: 2
+      y: middle - 16
+      x: middle + 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+    - type: text
+      text: 2
+      y: middle - 14
+      x: middle + 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+    - type: text
+      text: 2
+      y: middle - 14
+      x: middle + 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+      # ------------
+      
+  widgetDropTwoColor:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 2
+      y: middle - 15
+      x: middle + 105
+      z: 6
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 2
+      y: middle - 16
+      x: middle + 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+    - type: text
+      text: 2
+      y: middle - 16
+      x: middle + 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+    - type: text
+      text: 2
+      y: middle - 14
+      x: middle + 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+    - type: text
+      text: 2
+      y: middle - 14
+      x: middle + 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+      # ------------
+      
+  widgetDropTwoX:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: x
+      y: middle - 15
+      x: middle + 105
+      z: 8
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: x
+      y: middle - 16
+      x: middle + 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+    - type: text
+      text: x
+      y: middle - 16
+      x: middle + 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+    - type: text
+      text: x
+      y: middle - 14
+      x: middle + 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+    - type: text
+      text: x
+      y: middle - 14
+      x: middle + 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+      # ------------
+      
+# --------------
+# DROP::RIGHT::THREE
+# --------------
+  widgetDropThreeGray:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 3
+      y: middle - 45
+      x: middle + 105
+      z: 4
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 3
+      y: middle - 46
+      x: middle + 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+    - type: text
+      text: 3
+      y: middle - 46
+      x: middle + 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+    - type: text
+      text: 3
+      y: middle - 44
+      x: middle + 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+    - type: text
+      text: 3
+      y: middle - 44
+      x: middle + 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropGrayOuter1
+      # ------------
+      
+  widgetDropThreeColor:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 3
+      y: middle - 45
+      x: middle + 105
+      z: 6
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 3
+      y: middle - 46
+      x: middle + 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+    - type: text
+      text: 3
+      y: middle - 46
+      x: middle + 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+    - type: text
+      text: 3
+      y: middle - 44
+      x: middle + 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+    - type: text
+      text: 3
+      y: middle - 44
+      x: middle + 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersDropColorOuter1
+      # ------------
+      
+  widgetDropThreeX:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: x
+      y: middle - 45
+      x: middle + 105
+      z: 8
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: x
+      y: middle - 46
+      x: middle + 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+    - type: text
+      text: x
+      y: middle - 46
+      x: middle + 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+    - type: text
+      text: x
+      y: middle - 44
+      x: middle + 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+    - type: text
+      text: x
+      y: middle - 44
+      x: middle + 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersDropXOuter1
+      # ------------
+
+# **************
+# WIDGETS::DROPS
+# **************
+# --------------
+# DROP::RIGHT::ONE
+# --------------
+  widgetSaucerOneGray:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 1
+      y: middle + 15
+      x: middle - 105
+      z: 4
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 1
+      y: middle + 16
+      x: middle - 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+    - type: text
+      text: 1
+      y: middle + 16
+      x: middle - 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+    - type: text
+      text: 1
+      y: middle + 14
+      x: middle - 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+    - type: text
+      text: 1
+      y: middle + 14
+      x: middle - 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+      # ------------
+      
+  widgetSaucerOneColor:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 1
+      y: middle + 15
+      x: middle - 105
+      z: 6
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 1
+      y: middle + 16
+      x: middle - 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+    - type: text
+      text: 1
+      y: middle + 16
+      x: middle - 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+    - type: text
+      text: 1
+      y: middle + 14
+      x: middle - 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+    - type: text
+      text: 1
+      y: middle + 14
+      x: middle - 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+      # ------------
+      
+  widgetSaucerOneX:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: x
+      y: middle + 15
+      x: middle - 105
+      z: 8
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: x
+      y: middle + 16
+      x: middle - 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+    - type: text
+      text: x
+      y: middle + 16
+      x: middle - 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+    - type: text
+      text: x
+      y: middle + 14
+      x: middle - 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+    - type: text
+      text: x
+      y: middle + 14
+      x: middle - 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+      # ------------
+      
+# --------------
+# DROP::RIGHT::TWO
+# --------------
+  widgetSaucerTwoGray:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 2
+      y: middle - 15
+      x: middle - 105
+      z: 4
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 2
+      y: middle - 16
+      x: middle - 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+    - type: text
+      text: 2
+      y: middle - 16
+      x: middle - 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+    - type: text
+      text: 2
+      y: middle - 14
+      x: middle - 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+    - type: text
+      text: 2
+      y: middle - 14
+      x: middle - 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+      # ------------
+      
+  widgetSaucerTwoColor:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 2
+      y: middle - 15
+      x: middle - 105
+      z: 6
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 2
+      y: middle - 16
+      x: middle - 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+    - type: text
+      text: 2
+      y: middle - 16
+      x: middle - 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+    - type: text
+      text: 2
+      y: middle - 14
+      x: middle - 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+    - type: text
+      text: 2
+      y: middle - 14
+      x: middle - 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+      # ------------
+      
+  widgetSaucerTwoX:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: x
+      y: middle - 15
+      x: middle - 105
+      z: 8
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: x
+      y: middle - 16
+      x: middle - 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+    - type: text
+      text: x
+      y: middle - 16
+      x: middle - 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+    - type: text
+      text: x
+      y: middle - 14
+      x: middle - 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+    - type: text
+      text: x
+      y: middle - 14
+      x: middle - 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+      # ------------
+      
+# --------------
+# DROP::RIGHT::THREE
+# --------------
+  widgetSaucerThreeGray:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 3
+      y: middle - 45
+      x: middle - 105
+      z: 4
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 3
+      y: middle - 46
+      x: middle - 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+    - type: text
+      text: 3
+      y: middle - 46
+      x: middle - 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+    - type: text
+      text: 3
+      y: middle - 44
+      x: middle - 104
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+    - type: text
+      text: 3
+      y: middle - 44
+      x: middle - 106
+      z: 3
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerGrayOuter1
+      # ------------
+      
+  widgetSaucerThreeColor:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: 3
+      y: middle - 45
+      x: middle - 105
+      z: 6
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: 3
+      y: middle - 46
+      x: middle - 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+    - type: text
+      text: 3
+      y: middle - 46
+      x: middle - 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+    - type: text
+      text: 3
+      y: middle - 44
+      x: middle - 104
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+    - type: text
+      text: 3
+      y: middle - 44
+      x: middle - 106
+      z: 5
+      style: fontSequenceNumber
+      color: colorFontSequenceNumbersSaucerColorOuter1
+      # ------------
+      
+  widgetSaucerThreeX:
+    # --------------
+    # INNER
+    # --------------
+    - type: text
+      text: x
+      y: middle - 45
+      x: middle - 105
+      z: 8
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXInner
+      # ------------
+      # OUTER 1
+      # ------------
+    - type: text
+      text: x
+      y: middle - 46
+      x: middle - 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+    - type: text
+      text: x
+      y: middle - 46
+      x: middle - 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+    - type: text
+      text: x
+      y: middle - 44
+      x: middle - 104
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+    - type: text
+      text: x
+      y: middle - 44
+      x: middle - 106
+      z: 7
+      style: fontSequenceNumberX
+      color: colorFontSequenceNumbersSaucerXOuter1
+      # ------------

@@ -1,0 +1,314 @@
+#config_version=6
+
+# ---------------------
+# SHOTS
+# ---------------------
+shots:
+    # -------------------
+    # SHOTS::DROP MIDDLE::ENABLE SAUCERS
+    # -------------------
+    shotKingPinSaucerMultiball1:
+        enable_events: eventEnableShotKingPinSaucerMultiball1
+        disable_events: eventDisableShotKingPinSaucerMultiball1
+        restart_events: eventRestartShotKingPinSaucerMultiball1
+        reset_events: eventResetShotKingPinSaucerMultiball1
+        hit_events: eventHitShotKingPinSaucerMultiball1
+        advance_events: eventAdvanceShotKingPinSaucerMultiball1
+        profile: spShotKingPinSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop1A
+            led2: ledSaucerTop1B
+            led3: ledSaucerTop1C
+            led4: ledSaucerTop1D
+            led5: ledSaucerTop1E
+            
+    shotKingPinSaucerMultiball2:
+        enable_events: eventEnableShotKingPinSaucerMultiball2
+        disable_events: eventDisableShotKingPinSaucerMultiball2
+        restart_events: eventRestartShotKingPinSaucerMultiball2
+        reset_events: eventResetShotKingPinSaucerMultiball2
+        hit_events: eventHitShotKingPinSaucerMultiball2
+        advance_events: eventAdvanceShotKingPinSaucerMultiball2
+        profile: spShotKingPinSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop2A
+            led2: ledSaucerTop2B
+            led3: ledSaucerTop2C
+            led4: ledSaucerTop2D
+            led5: ledSaucerTop2E
+            
+    shotKingPinSaucerMultiball3:
+        enable_events: eventEnableShotKingPinSaucerMultiball3
+        disable_events: eventDisableShotKingPinSaucerMultiball3
+        restart_events: eventRestartShotKingPinSaucerMultiball3
+        reset_events: eventResetShotKingPinSaucerMultiball3
+        hit_events: eventHitShotKingPinSaucerMultiball3
+        advance_events: eventAdvanceShotKingPinSaucerMultiball3
+        profile: spShotKingPinSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop3A
+            led2: ledSaucerTop3B
+            led3: ledSaucerTop3C
+            led4: ledSaucerTop3D
+            led5: ledSaucerTop3E
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::OUTLANE::SPECIAL
+    # -----------------------------
+    spShotKingPinSaucerMultiball:
+        states:
+          #- name: unlitSolid
+          #  show: ribbonFiveLedTwoColor
+          #  speed: 6
+          #  show_tokens:
+          #      color1: '000000'
+          #      color2: '000000'
+          - name: litFlashOne
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '000088'
+                color2: '00ffff'
+          #- name: litFlashTwo
+          #  show: ribbonFiveLedTwoColor
+          #  speed: 6
+          #  show_tokens:
+          #      color1: 'cc0000'
+          #      color2: 'ff00ff'
+          - name: litSolid
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '880000'
+                color2: 'ff00ff'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeSpidermanVillanKingPin_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballKingPinSaucerTop1
+    #- eventEnableMultiballKingPinSaucerTop2
+    #- eventEnableMultiballKingPinSaucerTop3
+    # ----------------------------------
+    # ENABLE LOCK
+    #- eventEnableMultiballLockKingPinSaucerTop1
+    #- eventEnableMultiballLockKingPinSaucerTop2
+    #- eventEnableMultiballLockKingPinSaucerTop3
+    # ----------------------------------
+    # SET WIDGETS TO GRAY
+    - eventAddWidgetSaucerOneGray
+    - eventAddWidgetSaucerTwoGray
+    - eventAddWidgetSaucerThreeGray
+
+# --------------
+# MULTIBALL
+# --------------
+  # ----------------------------------
+  # MULTIBALL ONE ENABLED
+  eventEnableMultiballKingPinSaucerTop1:
+    # ENABLE SAUCER SHOT ONE
+    - eventRestartShotKingPinSaucerMultiball1
+    # ENABLE LOCK ONE
+    - eventEnableMultiballLockKingPinSaucerTop1
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerOneColor
+  # ---------------------
+  # ENDING MULTIBALL ONE
+  # ---------------------
+  multiball_multiballKingPinSaucerTop1_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerOneX
+    # ENABLE NEXT MULTIBALL
+    - eventEnableMultiballKingPinSaucerTop2
+    #- eventEnableMultiballLockKingPinSaucerTop1
+    #- eventEnableMultiballLockKingPinSaucerTop2
+    #- eventEnableMultiballLockKingPinSaucerTop3
+    
+  # ----------------------------------
+  # MULTIBALL TWO ENABLED
+  eventEnableMultiballKingPinSaucerTop2:
+    # ENABLE SAUCER SHOT TWO
+    - eventRestartShotKingPinSaucerMultiball2
+    # ENABLE LOCK TWO
+    - eventEnableMultiballLockKingPinSaucerTop2
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerTwoColor
+  # ---------------------
+  # ENDING MULTIBALL TWO
+  # ---------------------
+  multiball_multiballKingPinSaucerTop2_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerTwoX
+    # ENABLE NEXT MULTIBALL
+    #- eventEnableMultiballLockKingPinSaucerTop3
+    - eventEnableMultiballKingPinSaucerTop3
+    
+  # ----------------------------------
+  # MULTIBALL THREE ENABLED
+  eventEnableMultiballKingPinSaucerTop3:
+    # ENABLE SAUCER SHOT THREE
+    - eventRestartShotKingPinSaucerMultiball3
+    # ENABLE LOCK THREE
+    - eventEnableMultiballLockKingPinSaucerTop3
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerThreeColor
+  # ---------------------
+  # ENDING MULTIBALL TWO
+  # ---------------------
+  multiball_multiballKingPinSaucerTop3_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerThreeX
+    # ENABLE NEXT LOCK
+    #- eventEnableMultiballLockKingPinSaucerTop1
+    
+  # ---------------------
+  # START MULTIBALL::SAUCER TOPS
+  # ---------------------
+  # TOP 1::THREE BALL
+  multiball_lock_multiballLockKingPinSaucerTop1_full:
+    # HIT SAUCER SHOT
+    - eventHitShotKingPinSaucerMultiball1
+    # START MULTIBALL
+    - eventStartMultiballKingPinSaucerTop1|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockKingPinSaucerTop1
+    - eventDisableMultiballLockKingPinSaucerTop2
+    - eventDisableMultiballLockKingPinSaucerTop3
+  # ---------------------
+  # TOP 2::THREE BALL
+  multiball_lock_multiballLockKingPinSaucerTop2_full:
+    # HIT SAUCER SHOT
+    - eventHitShotKingPinSaucerMultiball2
+    # START MULTIBALL
+    - eventStartMultiballKingPinSaucerTop2|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockKingPinSaucerTop1
+    - eventDisableMultiballLockKingPinSaucerTop2
+    - eventDisableMultiballLockKingPinSaucerTop3
+  # ---------------------
+  # TOP 3::THREE BALL
+  multiball_lock_multiballLockKingPinSaucerTop3_full:
+    # HIT SAUCER SHOT
+    - eventHitShotKingPinSaucerMultiball3
+    # START MULTIBALL
+    - eventStartMultiballKingPinSaucerTop3|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockKingPinSaucerTop1
+    - eventDisableMultiballLockKingPinSaucerTop2
+    - eventDisableMultiballLockKingPinSaucerTop3
+
+  ## ---------------------
+  ## ENDING MULTIBALL
+  ## ---------------------
+  ## LEFT
+  #multiball_multiballKingPinSaucerTop1_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockKingPinSaucerTop1
+  #  - eventEnableMultiballLockKingPinSaucerTop2
+  #  - eventEnableMultiballLockKingPinSaucerTop3
+  ## RIGHT
+  #multiball_multiballKingPinSaucerTop2_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockKingPinSaucerTop1
+  #  - eventEnableMultiballLockKingPinSaucerTop2
+  #  - eventEnableMultiballLockKingPinSaucerTop3
+  ## BOTH
+  #multiball_multiballKingPinSaucerTop3_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockKingPinSaucerTop1
+  #  - eventEnableMultiballLockKingPinSaucerTop2
+  #  - eventEnableMultiballLockKingPinSaucerTop3
+    
+  ball_will_end:
+    # ----------------------------
+    # REMOVE WIDGETS::GRAY
+    - eventRemoveWidgetSaucerOneGray
+    - eventRemoveWidgetSaucerTwoGray
+    - eventRemoveWidgetSaucerThreeGray
+    # REMOVE WIDGETS::COLOR
+    - eventRemoveWidgetSaucerOneColor
+    - eventRemoveWidgetSaucerTwoColor
+    - eventRemoveWidgetSaucerThreeColor
+    # REMOVE WIDGETS::X
+    - eventRemoveWidgetSaucerOneX
+    - eventRemoveWidgetSaucerTwoX
+    - eventRemoveWidgetSaucerThreeX
+    # DISABLE MULTIBALL SHOTS
+    - eventDisableShotKingPinSaucerMultiball1
+    - eventDisableShotKingPinSaucerMultiball2
+    - eventDisableShotKingPinSaucerMultiball3
+    
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballLockKingPinSaucerTop1:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop1
+    enable_events: eventEnableMultiballLockKingPinSaucerTop1
+    disable_events: eventDisableMultiballLockKingPinSaucerTop1
+    locked_ball_counting_strategy: physical_only
+    
+  multiballLockKingPinSaucerTop2:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop2
+    enable_events: eventEnableMultiballLockKingPinSaucerTop2
+    disable_events: eventDisableMultiballLockKingPinSaucerTop2
+    locked_ball_counting_strategy: physical_only
+    
+  multiballLockKingPinSaucerTop3:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop3
+    enable_events: eventEnableMultiballLockKingPinSaucerTop3
+    disable_events: eventDisableMultiballLockKingPinSaucerTop3
+    locked_ball_counting_strategy: physical_only
+    
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballKingPinSaucerTop1:
+    ball_locks:
+      - ballDeviceSaucerTop1
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKingPinSaucerTop1
+    disable_events: eventDisableMultiballKingPinSaucerTop1
+    start_events: eventStartMultiballKingPinSaucerTop1
+    stop_events: eventStopMultiballKingPinSaucerTop1
+    
+  multiballKingPinSaucerTop2:
+    ball_locks:
+      - ballDeviceSaucerTop2
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKingPinSaucerTop2
+    disable_events: eventDisableMultiballKingPinSaucerTop2
+    start_events: eventStartMultiballKingPinSaucerTop2
+    stop_events: eventStopMultiballKingPinSaucerTop2
+
+  multiballKingPinSaucerTop3:
+    ball_locks:
+      - ballDeviceSaucerTop3
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKingPinSaucerTop3
+    disable_events: eventDisableMultiballKingPinSaucerTop3
+    start_events: eventStartMultiballKingPinSaucerTop3
+    stop_events: eventStopMultiballKingPinSaucerTop3
+    

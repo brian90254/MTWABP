@@ -1,0 +1,118 @@
+#show_version=6
+
+- time: 0
+
+#-------------
+# BLUE
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedDropRightSpot4
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledDropRightSpot4A
+        led2: ledDropRightSpot4B
+        led3: ledDropRightSpot4C
+        led4: ledDropRightSpot4D
+        led5: ledDropRightSpot4E
+
+- time: "+2"
+
+#-------------
+# MAGENTA
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedDropRightSpot4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledDropRightSpot4A
+        led2: ledDropRightSpot4B
+        led3: ledDropRightSpot4C
+        led4: ledDropRightSpot4D
+        led5: ledDropRightSpot4E
+
+- time: "+2"
+
+#-------------
+# RED
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedDropRightSpot4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledDropRightSpot4A
+        led2: ledDropRightSpot4B
+        led3: ledDropRightSpot4C
+        led4: ledDropRightSpot4D
+        led5: ledDropRightSpot4E
+
+- time: "+2"
+
+#-------------
+# YELLOW
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedDropRightSpot4
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledDropRightSpot4A
+        led2: ledDropRightSpot4B
+        led3: ledDropRightSpot4C
+        led4: ledDropRightSpot4D
+        led5: ledDropRightSpot4E
+
+- time: "+2"
+
+#-------------
+# GREEN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedDropRightSpot4
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledDropRightSpot4A
+        led2: ledDropRightSpot4B
+        led3: ledDropRightSpot4C
+        led4: ledDropRightSpot4D
+        led5: ledDropRightSpot4E
+
+- time: "+2"
+
+#-------------
+# CYAN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedDropRightSpot4
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledDropRightSpot4A
+        led2: ledDropRightSpot4B
+        led3: ledDropRightSpot4C
+        led4: ledDropRightSpot4D
+        led5: ledDropRightSpot4E
+
+- time: "+2"
+

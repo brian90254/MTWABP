@@ -1,0 +1,336 @@
+#config_version=6
+
+# ---------------------
+# MODE :: SETTINGS
+# ---------------------
+mode:
+  start_events:
+    - ball_starting
+  stop_events:
+    - eventStopBallSave
+    - ball_ending
+  priority: 6000
+
+# ---------------------
+# BALL SAVES
+# ---------------------
+ball_saves:
+  default:
+    active_time: 30s
+    hurry_up_time: 7s
+    grace_period: 3s
+    enable_events: mode_modeBase_started
+    #timer_start_events: balldevice_plunger_lane_ball_eject_success
+    #timer_start_events: balldevice_plunger_lane_ejecting_ball
+    timer_start_events: balldevice_ballDeviceTrough_ball_eject_success
+    #auto_launch: true
+    balls_to_save: 1
+    #debug: true
+
+# ---------------------
+# EVENT PLAYER
+# ---------------------
+event_player:
+# ---------------------
+# EVENT::PLAYER::BALLSAVES
+# ---------------------
+  ball_save_default_saving_ball:
+    - eventStopBallSave|5s
+    - eventShowSlideBallSaved
+    
+  #ball_save_default_disabled:
+  #  #- eventStopBallSave
+  #  - eventStopBallSave|5s
+
+  # ---------------------
+  # BALLSAVES::DEFAULT::SHOWS
+  # ---------------------
+  ball_save_default_timer_start:
+    - playShowBallSaveStandard
+    
+  ball_save_default_hurry_up:
+    - playShowBallSaveHurryUp
+
+  ball_save_default_grace_period:
+    - stopShowBallSave
+    
+  ball_save_default_disabled:
+    - stopShowBallSave
+    - eventStopBallSave|5s
+    
+# ---------------------
+# SLIDE PLAYER
+# ---------------------
+slide_player:
+  #ball_save_default_saving_ball:
+  #  slide_2:
+  #    target: displayDMD
+  eventShowSlideBallSaved:
+    slideBallSaved:
+      target: displayDMD
+      
+
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  slideBallSaved:
+    widgets:
+      # -------------------------------
+      # TOP LETTERING
+      # -------------------------------
+      # BLUE FORGROUND
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveInner
+        text: BALL
+        y: middle + 30
+        x: middle
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: BALL
+        y: middle + 28
+        x: middle + 2
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: BALL
+        y: middle + 28
+        x: middle - 2
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: BALL
+        y: middle + 32
+        x: middle + 2
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: BALL
+        y: middle + 32
+        x: middle - 2
+      # -------------------------------
+      # LOWER LETTERING
+      # -------------------------------
+      # BLUE FORGROUND
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveInner
+        text: SAVED
+        y: middle - 30
+        x: middle
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: SAVED
+        y: middle - 28
+        x: middle + 2
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: SAVED
+        y: middle - 28
+        x: middle - 2
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: SAVED
+        y: middle - 32
+        x: middle + 2
+            
+      - type: text
+        style: fontBallSave
+        color: colorFontBallSaveOuter1
+        text: SAVED
+        y: middle - 32
+        x: middle - 2
+      # -------------------------------
+    expire: 4.0s
+    
+  #slide_2:
+  #slideBallSaved:
+  #  widgets:
+  #    # BLUE FORGROUND
+  #    - type: text
+  #      style: fontBallSave
+  #      color: colorFontBallSaveInner
+  #      text: BALL SAVED
+  #      y: middle
+  #      x: middle
+  #    # -------------------------------
+  #    # -------------------------------
+  #    # GREEN BACKGROUND
+  #    - type: text
+  #      style: fontBallSave
+  #      color: colorFontBallSaveOuter1
+  #      text: BALL SAVED
+  #      y: middle - 1
+  #      x: middle + 1
+  #          
+  #    - type: text
+  #      style: fontBallSave
+  #      color: colorFontBallSaveOuter1
+  #      text: BALL SAVED
+  #      y: middle - 1
+  #      x: middle - 1
+  #          
+  #    - type: text
+  #      style: fontBallSave
+  #      color: colorFontBallSaveOuter1
+  #      text: BALL SAVED
+  #      y: middle + 1
+  #      x: middle + 1
+  #          
+  #    - type: text
+  #      style: fontBallSave
+  #      color: colorFontBallSaveOuter1
+  #      text: BALL SAVED
+  #      y: middle + 1
+  #      x: middle - 1
+  #          
+  #    # -------------------------------
+  #  expire: 4.0s
+    
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+  # ---------------------
+  # SHOW::BALL SAVE::DEFAULT
+  # ---------------------
+  playShowBallSaveStandard:
+    #flashLedTwoColor:
+    #  speed: 2
+    #  action: play
+    #  key: showBallSaveStandard
+    #  show_tokens:
+    #    led: ledShootAgain
+    #    color1: '444400'
+    #    color2: 'ffff00'
+    traceSixLedTwoColor:
+      speed: 10
+      action: play
+      key: showBallSaveStandard
+      show_tokens:
+        led1: ledShootAgain2
+        led2: ledShootAgain3
+        led3: ledShootAgain4
+        led4: ledShootAgain5
+        led5: ledShootAgain6
+        led6: ledShootAgain7
+        #color1: '888800'
+        #color2: '444400'
+        color1: '000000'
+        color2: 'ffff00'
+        
+  playShowBallSaveHurryUp:
+    showBallSaveStandard:
+      action: stop
+      
+    #flashLedTwoColor:
+    #  speed: 4
+    #  action: play
+    #  key: showBallSaveHurryUp
+    #  show_tokens:
+    #    led: ledShootAgain
+    #    color1: '440000'
+    #    color2: 'ff0000'
+    traceSixLedTwoColor:
+      speed: 20
+      action: play
+      key: showBallSaveHurryUp
+      show_tokens:
+        led1: ledShootAgain2
+        led2: ledShootAgain3
+        led3: ledShootAgain4
+        led4: ledShootAgain5
+        led5: ledShootAgain6
+        led6: ledShootAgain7
+        #color1: '224400'
+        #color2: '448800'
+        #color1: '440000'
+        #color2: '880000'
+        color1: '000000'
+        color2: 'ff0000'
+
+
+  stopShowBallSave:
+    showBallSaveHurryUp:
+      action: stop
+    showBallSaveStandard:
+      action: stop
+
+  # ---------------------
+  # SHOW::BALL SAVE::HIDDEN
+  # ---------------------
+  playShowBallSaveHidden:
+    traceSixLedTwoColor:
+      speed: 10
+      action: play
+      key: showBallSaveHidden
+      show_tokens:
+        led1: ledShootAgain2
+        led2: ledShootAgain3
+        led3: ledShootAgain4
+        led4: ledShootAgain5
+        led5: ledShootAgain6
+        led6: ledShootAgain7
+        color1: '224400'
+        color2: '448800'
+        
+  playShowBallSaveHiddenHurryUp:
+    showBallSaveHidden:
+      action: stop
+      
+    traceSixLedTwoColor:
+      speed: 20
+      action: play
+      key: showBallSaveHiddenHurryUp
+      show_tokens:
+        led1: ledShootAgain2
+        led2: ledShootAgain3
+        led3: ledShootAgain4
+        led4: ledShootAgain5
+        led5: ledShootAgain6
+        led6: ledShootAgain7
+        color1: '224400'
+        color2: '448800'
+        
+  stopShowBallSaveHidden:
+    showBallSaveHiddenHurryUp:
+      action: stop
+    showBallSaveHidden:
+      action: stop
+
+  # ---------------------
+  # SHOW::BALL SAVE::OUTLANE
+  # ---------------------
+  playShowBallSaveOutlane:
+    traceSixLedTwoColor:
+      speed: 10
+      action: play
+      key: showballsaveoutlane
+      show_tokens:
+        led1: ledShootAgain2
+        led2: ledShootAgain3
+        led3: ledShootAgain4
+        led4: ledShootAgain5
+        led5: ledShootAgain6
+        led6: ledShootAgain7
+        color1: '000000'
+        color2: '008888'
+        
+  stopShowBallSaveOutlane:
+    showballsaveoutlane:
+      action: stop
+

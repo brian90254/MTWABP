@@ -1,0 +1,983 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ---------------------
+# SOUNDS::SFX
+# ---------------------
+sounds:
+  
+  soundTest001:
+    file: soundSpidermanTest_001.wav
+    track: sfx
+    volume: 0.2
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundTest002:
+    file: soundSpidermanTest_002.wav
+    track: sfx
+    volume: 0.4
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundTest003:
+    file: soundSpidermanTest_003.wav
+    track: sfx
+    volume: 0.6
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundTest004:
+    file: soundSpidermanTest_004.wav
+    track: sfx
+    volume: 0.8
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# PLAYBOY
+# ---------------------
+# ---------------------
+# SOUNDS::SFX::CRANK
+# ---------------------
+  soundScreamerReload001:
+    file: ScreamerReload001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundScreamerReload002:
+    file: ScreamerReload002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundScreamerReload003:
+    file: ScreamerReload003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundScreamerReload004:
+    file: ScreamerReload004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundScreamerReload005:
+    file: ScreamerReload005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# FLASH GORDON
+# ---------------------
+# ---------------------
+# SOUNDS::SFX::BLEEP
+# ---------------------
+  soundBleep001:
+    file: soundsFlashGordon_Bleeps_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundBleep002:
+    file: soundsFlashGordon_Bleeps_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# SOUNDS::SFX::ELECTRIC PISTOL
+# ---------------------
+  soundElectricPistol001:
+    file: soundsFlashGordon_Electrical_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundElectricPistol002:
+    file: soundsFlashGordon_Electrical_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundElectricPistol003:
+    file: soundsFlashGordon_Electrical_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundElectricPistol004:
+    file: soundsFlashGordon_Electrical_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundElectricPistol005:
+    file: soundsFlashGordon_Electrical_005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundElectricPistol006:
+    file: soundsFlashGordon_Electrical_006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundElectricPistol007:
+    file: soundsFlashGordon_Electrical_007.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundElectricPistol008:
+    file: soundsFlashGordon_Electrical_008.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundElectricPistol009:
+    file: soundsFlashGordon_Electrical_009.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundElectricPistol010:
+    file: soundsFlashGordon_Electrical_010.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundElectricPistol011:
+    file: soundsFlashGordon_Electrical_011.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundElectricPistol012:
+    file: soundsFlashGordon_Electrical_012.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# SOUNDS::SFX::MINE BLAST
+# ---------------------
+  soundMineBlast001:
+    file: soundsFlashGordon_Mine_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundMineBlast002:
+    file: soundsFlashGordon_Mine_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundMineBlast003:
+    file: soundsFlashGordon_Mine_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundMineBlast004:
+    file: soundsFlashGordon_Mine_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# SOUNDS::SFX::PLASMA RIFLE
+# ---------------------
+  soundPlasmaRifle001:
+    file: soundsFlashGordon_Plasma_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPlasmaRifle002:
+    file: soundsFlashGordon_Plasma_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPlasmaRifle003:
+    file: soundsFlashGordon_Plasma_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPlasmaRifle004:
+    file: soundsFlashGordon_Plasma_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# BALLY::STAR TREK
+# ---------------------
+# ---------------------
+# SOUNDS::SFX::ALERT
+# ---------------------
+  soundAlert001:
+    file: soundBallyStarTrek_Alert_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundAlert002:
+    file: soundBallyStarTrek_Alert_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundAlert003:
+    file: soundBallyStarTrek_Alert_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundAlert004:
+    file: soundBallyStarTrek_Alert_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundAlert005:
+    file: soundBallyStarTrek_Alert_005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundAlert006:
+    file: soundBallyStarTrek_Alert_006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundAlert007:
+    file: soundBallyStarTrek_Alert_007.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundAlert008:
+    file: soundBallyStarTrek_Alert_008.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundAlert009:
+    file: soundBallyStarTrek_Alert_009.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundAlert010:
+    file: soundBallyStarTrek_Alert_010.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundAlert011:
+    file: soundBallyStarTrek_Alert_011.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundAlert012:
+    file: soundBallyStarTrek_Alert_012.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# SOUNDS::SFX::COMPUTER
+# ---------------------
+  soundComputer001:
+    file: soundBallyStarTrek_Computer_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+
+  soundComputer002:
+    file: soundBallyStarTrek_Computer_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundComputer003:
+    file: soundBallyStarTrek_Computer_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundComputer004:
+    file: soundBallyStarTrek_Computer_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundComputer005:
+    file: soundBallyStarTrek_Computer_005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundComputer006:
+    file: soundBallyStarTrek_Computer_006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+
+# ---------------------
+# SOUNDS::SFX::EXPLOSION
+# ---------------------
+  soundExplosion001:
+    file: soundBallyStarTrek_Explosion_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundExplosion002:
+    file: soundBallyStarTrek_Explosion_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundExplosion003:
+    file: soundBallyStarTrek_Explosion_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundExplosion004:
+    file: soundBallyStarTrek_Explosion_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundExplosion005:
+    file: soundBallyStarTrek_Explosion_005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundExplosion006:
+    file: soundBallyStarTrek_Explosion_006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundExplosion007:
+    file: soundBallyStarTrek_Explosion_007.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# SOUNDS::SFX::PHASER
+# ---------------------
+  soundPhaser001:
+    file: soundBallyStarTrek_Phaser_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+
+  soundPhaser002:
+    file: soundBallyStarTrek_Phaser_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPhaser003:
+    file: soundBallyStarTrek_Phaser_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPhaser004:
+    file: soundBallyStarTrek_Phaser_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# SOUNDS::SFX::PHOTON TORPEDO
+# ---------------------
+  soundPhotonTorpedo001:
+    file: soundBallyStarTrek_PhotonTorpedo_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPhotonTorpedo002:
+    file: soundBallyStarTrek_PhotonTorpedo_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPhotonTorpedo003:
+    file: soundBallyStarTrek_PhotonTorpedo_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPhotonTorpedo004:
+    file: soundBallyStarTrek_PhotonTorpedo_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPhotonTorpedo005:
+    file: soundBallyStarTrek_PhotonTorpedo_005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPhotonTorpedo006:
+    file: soundBallyStarTrek_PhotonTorpedo_006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPhotonTorpedo007:
+    file: soundBallyStarTrek_PhotonTorpedo_007.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundPhotonTorpedo008:
+    file: soundBallyStarTrek_PhotonTorpedo_008.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# SOUNDS::SFX::TRANSPORTER
+# ---------------------
+  soundTransporter001:
+    file: soundBallyStarTrek_Transporter_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundTransporter002:
+    file: soundBallyStarTrek_Transporter_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundTransporter003:
+    file: soundBallyStarTrek_Transporter_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundTransporter004:
+    file: soundBallyStarTrek_Transporter_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundTransporter005:
+    file: soundBallyStarTrek_Transporter_005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundTransporter006:
+    file: soundBallyStarTrek_Transporter_006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# SOUNDS::SFX::SWOOSH
+# ---------------------
+  soundSwoosh001:
+    file: soundBallyStarTrek_Swoosh_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundSwoosh002:
+    file: soundBallyStarTrek_Swoosh_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundSwoosh003:
+    file: soundBallyStarTrek_Swoosh_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# SOUNDS::SFX::WARP
+# ---------------------
+  soundWarp001:
+    file: soundBallyStarTrek_Warp_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWarp002:
+    file: soundBallyStarTrek_Warp_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWarp003:
+    file: soundBallyStarTrek_Warp_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWarp004:
+    file: soundBallyStarTrek_Warp_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWarp005:
+    file: soundBallyStarTrek_Warp_005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWarp006:
+    file: soundBallyStarTrek_Warp_006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWarp007:
+    file: soundBallyStarTrek_Warp_007.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWarp008:
+    file: soundBallyStarTrek_Warp_008.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWarp009:
+    file: soundBallyStarTrek_Warp_009.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWarp010:
+    file: soundBallyStarTrek_Warp_010.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+# ---------------------
+# SOUNDS::SFX::WHISTLE
+# ---------------------
+  soundWhistle001:
+    file: soundBallyStarTrek_Whistle_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWhistle002:
+    file: soundBallyStarTrek_Whistle_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWhistle003:
+    file: soundBallyStarTrek_Whistle_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+    
+  soundWhistle004:
+    file: soundBallyStarTrek_Whistle_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 1
+
+# *********************
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+# *********************
+sound_pools:
+
+# ---------------------
+# POOLS::PLAYBOY
+# ---------------------
+  poolSoundTest:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundTest001
+      - soundTest002
+      - soundTest003
+      - soundTest004
+      
+# ---------------------
+# POOLS::PLAYBOY
+# ---------------------
+  poolSoundScreamerReload:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundScreamerReload001
+      - soundScreamerReload002
+      - soundScreamerReload003
+      - soundScreamerReload004
+      - soundScreamerReload005
+      
+# ---------------------
+# POOLS::FLASH GORDON
+# ---------------------
+  poolSoundBleep:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundBleep001
+      - soundBleep002
+
+  poolSoundElectricPistol:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundElectricPistol001
+      - soundElectricPistol002
+      - soundElectricPistol003
+      - soundElectricPistol004
+      - soundElectricPistol005
+      - soundElectricPistol006
+      - soundElectricPistol007
+      - soundElectricPistol008
+      - soundElectricPistol009
+      - soundElectricPistol010
+      - soundElectricPistol011
+      - soundElectricPistol012
+      
+  poolSoundMineBlast:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundMineBlast001
+      - soundMineBlast002
+      - soundMineBlast003
+      - soundMineBlast004
+      
+  poolSoundPlasmaRifle:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundPlasmaRifle001
+      - soundPlasmaRifle002
+      - soundPlasmaRifle003
+      - soundPlasmaRifle004
+      
+# ---------------------
+# POOLS::STAR TREK
+# ---------------------
+  poolSoundAlert:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundAlert001
+      - soundAlert002
+      - soundAlert003
+      - soundAlert004
+      - soundAlert005
+      - soundAlert006
+      - soundAlert007
+      - soundAlert008
+      - soundAlert009
+      - soundAlert010
+      - soundAlert011
+      - soundAlert012
+      
+  poolSoundComputer:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundComputer001
+      - soundComputer002
+      - soundComputer003
+      - soundComputer004
+      - soundComputer005
+      - soundComputer006
+      
+  poolSoundExplosion:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundExplosion001
+      - soundExplosion002
+      - soundExplosion003
+      - soundExplosion004
+      - soundExplosion005
+      - soundExplosion006
+      - soundExplosion007
+      
+  poolSoundPhaser:
+    #type: random_force_all
+    type: random_force_next
+    track: sfx
+    sounds:
+      - soundPhaser001
+      - soundPhaser002
+      - soundPhaser003
+      - soundPhaser004
+      
+  poolSoundPhotonTorpedo:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundPhotonTorpedo001
+      - soundPhotonTorpedo002
+      - soundPhotonTorpedo003
+      - soundPhotonTorpedo004
+      - soundPhotonTorpedo005
+      - soundPhotonTorpedo006
+      - soundPhotonTorpedo007
+      - soundPhotonTorpedo008
+      
+  poolSoundTransporter:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundTransporter001
+      - soundTransporter002
+      - soundTransporter003
+      - soundTransporter004
+      - soundTransporter005
+      - soundTransporter006
+      
+  poolSoundSwoosh:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundSwoosh001
+      - soundSwoosh002
+      - soundSwoosh003
+      
+  poolSoundWarp:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundWarp001
+      - soundWarp002
+      - soundWarp003
+      - soundWarp004
+      - soundWarp005
+      - soundWarp006
+      - soundWarp007
+      - soundWarp008
+      - soundWarp009
+      - soundWarp010
+      
+  poolSoundWhistle:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundWhistle001
+      - soundWhistle002
+      - soundWhistle003
+      - soundWhistle004
+      
+      
+# *********************
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+# *********************
+sound_player:
+
+  playPoolSoundTest:
+    poolSoundTest:
+      loops: 0
+      #volume: 1.0
+      
+# ---------------------
+# PLAYBOY
+# ---------------------
+  # ---------------------
+  # SOUNDS::PLAYER::SFX
+  # ---------------------
+  playPoolSoundScreamerReload:
+    poolSoundScreamerReload:
+      loops: 0
+      volume: 0.9
+      
+# ---------------------
+# FLASH GORDON
+# ---------------------
+  # ---------------------
+  # SOUNDS::PLAYER::SFX
+  # ---------------------
+  playPoolSoundBleep:
+    poolSoundBleep:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundElectricPistol:
+    poolSoundElectricPistol:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundMineBlast:
+    poolSoundMineBlast:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundPlasmaRifle:
+    poolSoundPlasmaRifle:
+      loops: 0
+      volume: 0.9
+
+# ---------------------
+# STAR TREK
+# ---------------------
+  # ---------------------
+  # SOUNDS::PLAYER::SFX
+  # ---------------------
+  playPoolSoundAlert:
+    poolSoundAlert:
+      loops: 0
+      volume: 0.9
+
+  playPoolSoundComputer:
+    poolSoundComputer:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundExplosion:
+    poolSoundExplosion:
+      loops: 0
+      volume: 0.6
+      
+  playPoolSoundPhaser:
+    poolSoundPhaser:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundPhotonTorpedo:
+    poolSoundPhotonTorpedo:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundTransporter:
+    poolSoundTransporter:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundSwoosh:
+    poolSoundSwoosh:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundWarp:
+    poolSoundWarp:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundWhistle:
+    poolSoundWhistle:
+      loops: 0
+      volume: 0.9

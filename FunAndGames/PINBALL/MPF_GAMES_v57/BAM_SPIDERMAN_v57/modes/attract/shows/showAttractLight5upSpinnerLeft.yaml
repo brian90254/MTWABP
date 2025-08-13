@@ -1,0 +1,118 @@
+#show_version=6
+
+- time: 0
+
+#-------------
+# MAGENTA
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpinnerLeft
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+2"
+
+#-------------
+# RED
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpinnerLeft
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+2"
+
+#-------------
+# YELLOW
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpinnerLeft
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+2"
+
+#-------------
+# GREEN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpinnerLeft
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+2"
+
+#-------------
+# CYAN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpinnerLeft
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+2"
+
+#-------------
+# BLUE
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpinnerLeft
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+2"
+

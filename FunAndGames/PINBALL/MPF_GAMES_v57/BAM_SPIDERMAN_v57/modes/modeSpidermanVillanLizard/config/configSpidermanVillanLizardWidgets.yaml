@@ -1,0 +1,402 @@
+#config_version=6
+      
+event_player:
+# --------------
+# RESET::ALL
+# --------------
+  mode_modeSpidermanVillanLizard_started:
+    - eventRestartDropMiddleComboShot
+    ## --------------
+    ## ADD::GRAY
+    ## --------------
+    #- eventAddWidgetDropOneGray
+    #- eventAddWidgetDropTwoGray
+    #- eventAddWidgetDropThreeGray
+    ## --------------
+    ## REMOVE::COLOR
+    ## --------------
+    #- eventRemoveWidgetDropOneColor
+    #- eventRemoveWidgetDropTwoColor
+    #- eventRemoveWidgetDropThreeColor
+    ## --------------
+    ## REMOVE::X
+    ## --------------
+    #- eventRemoveWidgetDropOneX
+    #- eventRemoveWidgetDropTwoX
+    #- eventRemoveWidgetDropThreeX
+
+  drop_target_bank_dropTargetBankMiddle_up:
+    #- eventRestartDropMiddleComboShot|2000ms
+    - eventRestartDropMiddleComboShot
+    ## --------------
+    ## ADD::GRAY
+    ## --------------
+    #- eventAddWidgetDropOneGray
+    #- eventAddWidgetDropTwoGray
+    #- eventAddWidgetDropThreeGray
+    ## --------------
+    ## REMOVE::COLOR
+    ## --------------
+    #- eventRemoveWidgetDropOneColor
+    #- eventRemoveWidgetDropTwoColor
+    #- eventRemoveWidgetDropThreeColor
+    ## --------------
+    ## REMOVE::X
+    ## --------------
+    #- eventRemoveWidgetDropOneX
+    #- eventRemoveWidgetDropTwoX
+    #- eventRemoveWidgetDropThreeX
+
+  eventRestartDropMiddleComboShot:
+    # --------------
+    # ADD::GRAY
+    # --------------
+    - eventAddWidgetDropOneGray
+    - eventAddWidgetDropTwoGray
+    - eventAddWidgetDropThreeGray
+    # --------------
+    # REMOVE::COLOR
+    # --------------
+    - eventRemoveWidgetDropOneColor
+    - eventRemoveWidgetDropTwoColor
+    - eventRemoveWidgetDropThreeColor
+    # --------------
+    # REMOVE::X
+    # --------------
+    - eventRemoveWidgetDropOneX
+    - eventRemoveWidgetDropTwoX
+    - eventRemoveWidgetDropThreeX
+    
+    # --------------
+    # ADD::GRAY
+    # --------------
+    #- eventAddWidgetSaucerOneGray
+    #- eventAddWidgetSaucerTwoGray
+    #- eventAddWidgetSaucerThreeGray
+    # --------------
+    # REMOVE::COLOR
+    # --------------
+    #- eventRemoveWidgetSaucerOneColor
+    #- eventRemoveWidgetSaucerTwoColor
+    #- eventRemoveWidgetSaucerThreeColor
+    # --------------
+    # REMOVE::X
+    # --------------
+    #- eventRemoveWidgetSaucerOneX
+    #- eventRemoveWidgetSaucerTwoX
+    #- eventRemoveWidgetSaucerThreeX
+    
+# --------------
+# SET::COLOR
+# --------------
+  # --------------
+  # SET::COLOR::ONE
+  # --------------
+  #shotLizardDropMiddle1_hit:
+  eventSuccessShotLizardDropMiddleSequence1:
+    - eventAddWidgetDropOneColor
+  eventFailShotLizardDropMiddleSequence1:
+    - eventAddWidgetDropOneColor
+    - eventAddWidgetDropOneX
+  # --------------
+  # SET::ONE::TWO
+  # --------------
+  #shotLizardDropMiddle2_hit:
+  #  - eventAddWidgetDropTwoColor
+  eventSuccessShotLizardDropMiddleSequence2:
+    - eventAddWidgetDropTwoColor
+  eventFailShotLizardDropMiddleSequence2:
+    - eventAddWidgetDropTwoColor
+    - eventAddWidgetDropTwoX
+  # --------------
+  # SET::ONE::THREE
+  # --------------
+  #shotLizardDropMiddle3_hit:
+  #  - eventAddWidgetDropThreeColor
+  eventSuccessShotLizardDropMiddleSequence3:
+    - eventAddWidgetDropThreeColor
+  eventFailShotLizardDropMiddleSequence3:
+    - eventAddWidgetDropThreeColor
+    - eventAddWidgetDropThreeX
+    
+  ## --------------
+  ## GRAY
+  ## --------------
+  #eventAddWidgetDropOneGray:
+  #  - eventAddWidgetDropTwoGray
+  #  - eventAddWidgetDropThreeGray
+  #eventRemoveWidgetDropOneGray:
+  #  - eventRemoveWidgetDropTwoGray
+  #  - eventRemoveWidgetDropThreeGray
+  ## --------------
+  ## COLOR
+  ## --------------
+  #eventAddWidgetDropOneColor:
+  #  - eventAddWidgetDropTwoColor
+  #  - eventAddWidgetDropThreeColor
+  #eventRemoveWidgetDropOneColor:
+  #  - eventRemoveWidgetDropTwoColor
+  #  - eventRemoveWidgetDropThreeColor
+  ## --------------
+  ## X
+  ## --------------
+  #eventAddWidgetDropOneX:
+  #  - eventAddWidgetDropTwoX
+  #  - eventAddWidgetDropThreeX
+  #eventRemoveWidgetDropOneX:
+  #  - eventRemoveWidgetDropTwoX
+  #  - eventRemoveWidgetDropThreeX
+    
+  ## --------------
+  ## GRAY
+  ## --------------
+  #eventAddWidgetSaucerOneGray:
+  #  - eventAddWidgetSaucerTwoGray
+  #  - eventAddWidgetSaucerThreeGray
+  #eventRemoveWidgetSaucerOneGray:
+  #  - eventRemoveWidgetSaucerTwoGray
+  #  - eventRemoveWidgetSaucerThreeGray
+  ## --------------
+  ## COLOR
+  ## --------------
+  #eventAddWidgetSaucerOneColor:
+  #  - eventAddWidgetSaucerTwoColor
+  #  - eventAddWidgetSaucerThreeColor
+  #eventRemoveWidgetSaucerOneColor:
+  #  - eventRemoveWidgetSaucerTwoColor
+  #  - eventRemoveWidgetSaucerThreeColor
+  ## --------------
+  ## X
+  ## --------------
+  #eventAddWidgetSaucerOneX:
+  #  - eventAddWidgetSaucerTwoX
+  #  - eventAddWidgetSaucerThreeX
+  #eventRemoveWidgetSaucerOneX:
+  #  - eventRemoveWidgetSaucerTwoX
+  #  - eventRemoveWidgetSaucerThreeX
+  
+# **************
+# WIDGET::PLAYER
+# **************
+widget_player:
+# --------------
+# DROP::RIGHT::ONE
+# --------------
+  # --------------
+  # GRAY
+  # --------------
+  eventAddWidgetDropOneGray:
+    widgetDropOneGray:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetDropOneGray:
+    widgetDropOneGray:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # COLOR
+  # --------------
+  eventAddWidgetDropOneColor:
+    widgetDropOneColor:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetDropOneColor:
+    widgetDropOneColor:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # X
+  # --------------
+  eventAddWidgetDropOneX:
+    widgetDropOneX:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetDropOneX:
+    widgetDropOneX:
+      slide: slideBaseDMDLizard
+      action: remove
+      
+# --------------
+# DROP::RIGHT::TWO
+# --------------
+  # --------------
+  # GRAY
+  # --------------
+  eventAddWidgetDropTwoGray:
+    widgetDropTwoGray:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetDropTwoGray:
+    widgetDropTwoGray:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # COLOR
+  # --------------
+  eventAddWidgetDropTwoColor:
+    widgetDropTwoColor:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetDropTwoColor:
+    widgetDropTwoColor:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # X
+  # --------------
+  eventAddWidgetDropTwoX:
+    widgetDropTwoX:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetDropTwoX:
+    widgetDropTwoX:
+      slide: slideBaseDMDLizard
+      action: remove
+      
+# --------------
+# DROP::RIGHT::THREE
+# --------------
+  # --------------
+  # GRAY
+  # --------------
+  eventAddWidgetDropThreeGray:
+    widgetDropThreeGray:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetDropThreeGray:
+    widgetDropThreeGray:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # COLOR
+  # --------------
+  eventAddWidgetDropThreeColor:
+    widgetDropThreeColor:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetDropThreeColor:
+    widgetDropThreeColor:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # X
+  # --------------
+  eventAddWidgetDropThreeX:
+    widgetDropThreeX:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetDropThreeX:
+    widgetDropThreeX:
+      slide: slideBaseDMDLizard
+      action: remove
+      
+# --------------
+# SAUCER::RIGHT::ONE
+# --------------
+  # --------------
+  # GRAY
+  # --------------
+  eventAddWidgetSaucerOneGray:
+    widgetSaucerOneGray:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetSaucerOneGray:
+    widgetSaucerOneGray:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # COLOR
+  # --------------
+  eventAddWidgetSaucerOneColor:
+    widgetSaucerOneColor:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetSaucerOneColor:
+    widgetSaucerOneColor:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # X
+  # --------------
+  eventAddWidgetSaucerOneX:
+    widgetSaucerOneX:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetSaucerOneX:
+    widgetSaucerOneX:
+      slide: slideBaseDMDLizard
+      action: remove
+      
+# --------------
+# DROP::RIGHT::TWO
+# --------------
+  # --------------
+  # GRAY
+  # --------------
+  eventAddWidgetSaucerTwoGray:
+    widgetSaucerTwoGray:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetSaucerTwoGray:
+    widgetSaucerTwoGray:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # COLOR
+  # --------------
+  eventAddWidgetSaucerTwoColor:
+    widgetSaucerTwoColor:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetSaucerTwoColor:
+    widgetSaucerTwoColor:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # X
+  # --------------
+  eventAddWidgetSaucerTwoX:
+    widgetSaucerTwoX:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetSaucerTwoX:
+    widgetSaucerTwoX:
+      slide: slideBaseDMDLizard
+      action: remove
+      
+# --------------
+# DROP::RIGHT::THREE
+# --------------
+  # --------------
+  # GRAY
+  # --------------
+  eventAddWidgetSaucerThreeGray:
+    widgetSaucerThreeGray:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetSaucerThreeGray:
+    widgetSaucerThreeGray:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # COLOR
+  # --------------
+  eventAddWidgetSaucerThreeColor:
+    widgetSaucerThreeColor:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetSaucerThreeColor:
+    widgetSaucerThreeColor:
+      slide: slideBaseDMDLizard
+      action: remove
+  # --------------
+  # X
+  # --------------
+  eventAddWidgetSaucerThreeX:
+    widgetSaucerThreeX:
+      slide: slideBaseDMDLizard
+      action: add
+  eventRemoveWidgetSaucerThreeX:
+    widgetSaucerThreeX:
+      slide: slideBaseDMDLizard
+      action: remove

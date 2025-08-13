@@ -1,0 +1,314 @@
+#config_version=6
+
+# ---------------------
+# SHOTS
+# ---------------------
+shots:
+    # -------------------
+    # SHOTS::DROP MIDDLE::ENABLE SAUCERS
+    # -------------------
+    shotScorpionSaucerMultiball1:
+        enable_events: eventEnableShotScorpionSaucerMultiball1
+        disable_events: eventDisableShotScorpionSaucerMultiball1
+        restart_events: eventRestartShotScorpionSaucerMultiball1
+        reset_events: eventResetShotScorpionSaucerMultiball1
+        hit_events: eventHitShotScorpionSaucerMultiball1
+        advance_events: eventAdvanceShotScorpionSaucerMultiball1
+        profile: spShotScorpionSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop1A
+            led2: ledSaucerTop1B
+            led3: ledSaucerTop1C
+            led4: ledSaucerTop1D
+            led5: ledSaucerTop1E
+            
+    shotScorpionSaucerMultiball2:
+        enable_events: eventEnableShotScorpionSaucerMultiball2
+        disable_events: eventDisableShotScorpionSaucerMultiball2
+        restart_events: eventRestartShotScorpionSaucerMultiball2
+        reset_events: eventResetShotScorpionSaucerMultiball2
+        hit_events: eventHitShotScorpionSaucerMultiball2
+        advance_events: eventAdvanceShotScorpionSaucerMultiball2
+        profile: spShotScorpionSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop2A
+            led2: ledSaucerTop2B
+            led3: ledSaucerTop2C
+            led4: ledSaucerTop2D
+            led5: ledSaucerTop2E
+            
+    shotScorpionSaucerMultiball3:
+        enable_events: eventEnableShotScorpionSaucerMultiball3
+        disable_events: eventDisableShotScorpionSaucerMultiball3
+        restart_events: eventRestartShotScorpionSaucerMultiball3
+        reset_events: eventResetShotScorpionSaucerMultiball3
+        hit_events: eventHitShotScorpionSaucerMultiball3
+        advance_events: eventAdvanceShotScorpionSaucerMultiball3
+        profile: spShotScorpionSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop3A
+            led2: ledSaucerTop3B
+            led3: ledSaucerTop3C
+            led4: ledSaucerTop3D
+            led5: ledSaucerTop3E
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::OUTLANE::SPECIAL
+    # -----------------------------
+    spShotScorpionSaucerMultiball:
+        states:
+          #- name: unlitSolid
+          #  show: ribbonFiveLedTwoColor
+          #  speed: 6
+          #  show_tokens:
+          #      color1: '000000'
+          #      color2: '000000'
+          - name: litFlashOne
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '000088'
+                color2: '00ffff'
+          #- name: litFlashTwo
+          #  show: ribbonFiveLedTwoColor
+          #  speed: 6
+          #  show_tokens:
+          #      color1: 'cc0000'
+          #      color2: 'ff00ff'
+          - name: litSolid
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '880000'
+                color2: 'ff00ff'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeSpidermanVillanScorpion_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballScorpionSaucerTop1
+    #- eventEnableMultiballScorpionSaucerTop2
+    #- eventEnableMultiballScorpionSaucerTop3
+    # ----------------------------------
+    # ENABLE LOCK
+    #- eventEnableMultiballLockScorpionSaucerTop1
+    #- eventEnableMultiballLockScorpionSaucerTop2
+    #- eventEnableMultiballLockScorpionSaucerTop3
+    # ----------------------------------
+    # SET WIDGETS TO GRAY
+    - eventAddWidgetSaucerOneGray
+    - eventAddWidgetSaucerTwoGray
+    - eventAddWidgetSaucerThreeGray
+
+# --------------
+# MULTIBALL
+# --------------
+  # ----------------------------------
+  # MULTIBALL ONE ENABLED
+  eventEnableMultiballScorpionSaucerTop1:
+    # ENABLE SAUCER SHOT ONE
+    - eventRestartShotScorpionSaucerMultiball1
+    # ENABLE LOCK ONE
+    - eventEnableMultiballLockScorpionSaucerTop1
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerOneColor
+  # ---------------------
+  # ENDING MULTIBALL ONE
+  # ---------------------
+  multiball_multiballScorpionSaucerTop1_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerOneX
+    # ENABLE NEXT MULTIBALL
+    - eventEnableMultiballScorpionSaucerTop2
+    #- eventEnableMultiballLockScorpionSaucerTop1
+    #- eventEnableMultiballLockScorpionSaucerTop2
+    #- eventEnableMultiballLockScorpionSaucerTop3
+    
+  # ----------------------------------
+  # MULTIBALL TWO ENABLED
+  eventEnableMultiballScorpionSaucerTop2:
+    # ENABLE SAUCER SHOT TWO
+    - eventRestartShotScorpionSaucerMultiball2
+    # ENABLE LOCK TWO
+    - eventEnableMultiballLockScorpionSaucerTop2
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerTwoColor
+  # ---------------------
+  # ENDING MULTIBALL TWO
+  # ---------------------
+  multiball_multiballScorpionSaucerTop2_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerTwoX
+    # ENABLE NEXT MULTIBALL
+    #- eventEnableMultiballLockScorpionSaucerTop3
+    - eventEnableMultiballScorpionSaucerTop3
+    
+  # ----------------------------------
+  # MULTIBALL THREE ENABLED
+  eventEnableMultiballScorpionSaucerTop3:
+    # ENABLE SAUCER SHOT THREE
+    - eventRestartShotScorpionSaucerMultiball3
+    # ENABLE LOCK THREE
+    - eventEnableMultiballLockScorpionSaucerTop3
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerThreeColor
+  # ---------------------
+  # ENDING MULTIBALL TWO
+  # ---------------------
+  multiball_multiballScorpionSaucerTop3_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerThreeX
+    # ENABLE NEXT LOCK
+    #- eventEnableMultiballLockScorpionSaucerTop1
+    
+  # ---------------------
+  # START MULTIBALL::SAUCER TOPS
+  # ---------------------
+  # TOP 1::THREE BALL
+  multiball_lock_multiballLockScorpionSaucerTop1_full:
+    # HIT SAUCER SHOT
+    - eventHitShotScorpionSaucerMultiball1
+    # START MULTIBALL
+    - eventStartMultiballScorpionSaucerTop1|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockScorpionSaucerTop1
+    - eventDisableMultiballLockScorpionSaucerTop2
+    - eventDisableMultiballLockScorpionSaucerTop3
+  # ---------------------
+  # TOP 2::THREE BALL
+  multiball_lock_multiballLockScorpionSaucerTop2_full:
+    # HIT SAUCER SHOT
+    - eventHitShotScorpionSaucerMultiball2
+    # START MULTIBALL
+    - eventStartMultiballScorpionSaucerTop2|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockScorpionSaucerTop1
+    - eventDisableMultiballLockScorpionSaucerTop2
+    - eventDisableMultiballLockScorpionSaucerTop3
+  # ---------------------
+  # TOP 3::THREE BALL
+  multiball_lock_multiballLockScorpionSaucerTop3_full:
+    # HIT SAUCER SHOT
+    - eventHitShotScorpionSaucerMultiball3
+    # START MULTIBALL
+    - eventStartMultiballScorpionSaucerTop3|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockScorpionSaucerTop1
+    - eventDisableMultiballLockScorpionSaucerTop2
+    - eventDisableMultiballLockScorpionSaucerTop3
+
+  ## ---------------------
+  ## ENDING MULTIBALL
+  ## ---------------------
+  ## LEFT
+  #multiball_multiballScorpionSaucerTop1_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockScorpionSaucerTop1
+  #  - eventEnableMultiballLockScorpionSaucerTop2
+  #  - eventEnableMultiballLockScorpionSaucerTop3
+  ## RIGHT
+  #multiball_multiballScorpionSaucerTop2_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockScorpionSaucerTop1
+  #  - eventEnableMultiballLockScorpionSaucerTop2
+  #  - eventEnableMultiballLockScorpionSaucerTop3
+  ## BOTH
+  #multiball_multiballScorpionSaucerTop3_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockScorpionSaucerTop1
+  #  - eventEnableMultiballLockScorpionSaucerTop2
+  #  - eventEnableMultiballLockScorpionSaucerTop3
+    
+  ball_will_end:
+    # ----------------------------
+    # REMOVE WIDGETS::GRAY
+    - eventRemoveWidgetSaucerOneGray
+    - eventRemoveWidgetSaucerTwoGray
+    - eventRemoveWidgetSaucerThreeGray
+    # REMOVE WIDGETS::COLOR
+    - eventRemoveWidgetSaucerOneColor
+    - eventRemoveWidgetSaucerTwoColor
+    - eventRemoveWidgetSaucerThreeColor
+    # REMOVE WIDGETS::X
+    - eventRemoveWidgetSaucerOneX
+    - eventRemoveWidgetSaucerTwoX
+    - eventRemoveWidgetSaucerThreeX
+    # DISABLE MULTIBALL SHOTS
+    - eventDisableShotScorpionSaucerMultiball1
+    - eventDisableShotScorpionSaucerMultiball2
+    - eventDisableShotScorpionSaucerMultiball3
+    
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballLockScorpionSaucerTop1:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop1
+    enable_events: eventEnableMultiballLockScorpionSaucerTop1
+    disable_events: eventDisableMultiballLockScorpionSaucerTop1
+    locked_ball_counting_strategy: physical_only
+    
+  multiballLockScorpionSaucerTop2:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop2
+    enable_events: eventEnableMultiballLockScorpionSaucerTop2
+    disable_events: eventDisableMultiballLockScorpionSaucerTop2
+    locked_ball_counting_strategy: physical_only
+    
+  multiballLockScorpionSaucerTop3:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop3
+    enable_events: eventEnableMultiballLockScorpionSaucerTop3
+    disable_events: eventDisableMultiballLockScorpionSaucerTop3
+    locked_ball_counting_strategy: physical_only
+    
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballScorpionSaucerTop1:
+    ball_locks:
+      - ballDeviceSaucerTop1
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballScorpionSaucerTop1
+    disable_events: eventDisableMultiballScorpionSaucerTop1
+    start_events: eventStartMultiballScorpionSaucerTop1
+    stop_events: eventStopMultiballScorpionSaucerTop1
+    
+  multiballScorpionSaucerTop2:
+    ball_locks:
+      - ballDeviceSaucerTop2
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballScorpionSaucerTop2
+    disable_events: eventDisableMultiballScorpionSaucerTop2
+    start_events: eventStartMultiballScorpionSaucerTop2
+    stop_events: eventStopMultiballScorpionSaucerTop2
+
+  multiballScorpionSaucerTop3:
+    ball_locks:
+      - ballDeviceSaucerTop3
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballScorpionSaucerTop3
+    disable_events: eventDisableMultiballScorpionSaucerTop3
+    start_events: eventStartMultiballScorpionSaucerTop3
+    stop_events: eventStopMultiballScorpionSaucerTop3
+    

@@ -1,0 +1,100 @@
+#config_version=6
+
+config:
+- configSpidermanVillanKravenSlides.yaml
+- configSpidermanVillanKravenShots.yaml
+- configSpidermanVillanKravenThumpers.yaml
+- configSpidermanVillanKravenMultiball.yaml
+- configSpidermanVillanKravenWidgets.yaml
+- configSpidermanVillanKravenDropMiddle.yaml
+- configSpidermanVillanKravenMultipliers.yaml
+# TEST
+#- configSpidermanVillanKravenAchBonus.yaml
+
+mode:
+  start_events:
+    - eventStartModeSpidermanVillanKraven
+  stop_events:
+    - eventStopModeSpidermanVillanKraven
+    - ball_will_end
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeSpidermanVillanKraven_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlideSpidermanVillanKravenBase
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeSpidermanStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersSpidermanVillanKraven|1000ms
+    # ---------------------
+    # ENABLE UPPER FLIPPERS
+    # ---------------------
+    - eventEnableFlipperUpperRight
+    - eventEnableFlipperUpperLeft
+    # ---------------------
+    # ADVANCE INITIAL BONUS
+    # ---------------------
+    - eventCompleteAchBonusOnes|1s
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  mode_modeSpidermanVillanKraven_started:
+    nameMoon:
+      string: "SPIDERMAN vs KRAVEN"
+      action: set
+
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersSpidermanVillanKraven:
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    # REMOVE THIS RESET TO MAKE BONUS PERSISTANT
+    bonusKraven:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT
+    totalBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set
+    # -------------------------
+    # RESET BONUS MULTIPLIER
+    multiBonus:
+      int: 1
+      action: set
+    bonus_multiplier:
+      int: 1
+      action: set
+      
+# ---------------
+# ADVANCE BONUS COUNT
+# ---------------
+  eventCompleteAchBonusOnesPosted.1:
+    bonusKraven: 1
+  eventCompleteAchBonusOnesPosted.2:
+    totalBonus: 1

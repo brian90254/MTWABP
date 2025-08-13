@@ -1,0 +1,594 @@
+#config_version=6
+
+# SPIDERMAN
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::MULTIPLIER
+    # -------------------
+    shotScorpionBonusMultiplier:
+        enable_events: eventEnableShotScorpionBonusMultiplier
+        disable_events: eventDisableShotScorpionBonusMultiplier
+        restart_events: eventRestartShotScorpionBonusMultiplier
+        reset_events: eventResetShotScorpionBonusMultiplier
+        hit_events: eventHitShotScorpionBonusMultiplier
+        advance_events: eventAdvanceShotScorpionBonusMultiplier
+        profile: spShotScorpionBonusMultiplier
+        show_tokens:
+            # ---------------------------
+            led2XA: ledBonusMultiplier2XA
+            led2XB: ledBonusMultiplier2XB
+            led2XC: ledBonusMultiplier2XC
+            led2XD: ledBonusMultiplier2XD
+            led2XE: ledBonusMultiplier2XE
+            # ---------------------------
+            led3XA: ledBonusMultiplier3XA
+            led3XB: ledBonusMultiplier3XB
+            led3XC: ledBonusMultiplier3XC
+            led3XD: ledBonusMultiplier3XD
+            led3XE: ledBonusMultiplier3XE
+            # ---------------------------
+            led4XA: ledBonusMultiplier4XA
+            led4XB: ledBonusMultiplier4XB
+            led4XC: ledBonusMultiplier4XC
+            led4XD: ledBonusMultiplier4XD
+            led4XE: ledBonusMultiplier4XE
+            # ---------------------------
+            led5XA: ledBonusMultiplier5XA
+            led5XB: ledBonusMultiplier5XB
+            led5XC: ledBonusMultiplier5XC
+            led5XD: ledBonusMultiplier5XD
+            led5XE: ledBonusMultiplier5XE
+
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::MULTIPLIERS
+    # -----------------------------
+    spShotScorpionBonusMultiplier:
+        states:
+          - name: litFlash2X
+            show: showScorpionBonusMultiplier
+            speed: 3
+            show_tokens:
+                # ---------------
+                color2X1: '000000'
+                color2X2: '000000'
+                # ---------------
+                color3X1: '000000'
+                color3X2: '000000'
+                # ---------------
+                color4X1: '000000'
+                color4X2: '000000'
+                # ---------------
+                color5X1: '000000'
+                color5X2: '000000'
+                # ---------------
+          - name: litFlash3X
+            show: showScorpionBonusMultiplier
+            speed: 3
+            show_tokens:
+                # ---------------
+                color2X1: '00cc66'
+                color2X2: '00ff00'
+                # ---------------
+                color3X1: '000000'
+                color3X2: '000000'
+                # ---------------
+                color4X1: '000000'
+                color4X2: '000000'
+                # ---------------
+                color5X1: '000000'
+                color5X2: '000000'
+                # ---------------
+          - name: litFlash4X
+            show: showScorpionBonusMultiplier
+            speed: 3
+            show_tokens:
+                # ---------------
+                color2X1: '00cc66'
+                color2X2: '00ff00'
+                # ---------------
+                color3X1: '6600cc'
+                color3X2: '0000ff'
+                # ---------------
+                color4X1: '000000'
+                color4X2: '000000'
+                # ---------------
+                color5X1: '000000'
+                color5X2: '000000'
+                # ---------------
+          - name: litFlash5X
+            show: showScorpionBonusMultiplier
+            speed: 3
+            show_tokens:
+                # ---------------
+                color2X1: '00cc66'
+                color2X2: '00ff00'
+                # ---------------
+                color3X1: '6600cc'
+                color3X2: '0000ff'
+                # ---------------
+                color4X1: 'cc3300'
+                color4X2: 'ffff00'
+                # ---------------
+                color5X1: '000000'
+                color5X2: '000000'
+                # ---------------
+          - name: litSolid
+            show: ribbonFiveLedTwoColor
+            speed: 3
+            show_tokens:
+                # ---------------
+                color2X1: '00cc66'
+                color2X2: '00ff00'
+                # ---------------
+                color3X1: '6600cc'
+                color3X2: '0000ff'
+                # ---------------
+                color4X1: 'cc3300'
+                color4X2: 'ffff00'
+                # ---------------
+                color5X1: 'cc0066'
+                color5X2: 'ff0088'
+                # ---------------
+        loop: false
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeSpidermanVillanScorpion_started:
+        # -----------
+        # BONUS MULTIPLIERS
+        # -----------
+        - eventRestartShotScorpionBonusMultiplier
+        
+    # -----------
+    # LANE TOP::BONUS MULTIPLIERS
+    # -----------
+    #shotScorpionLaneTopMultiBonus_litSolid_hit:
+    shotScorpionLaneTopMultiBonus_litFlashTwo_hit:
+        - eventHitShotScorpionBonusMultiplier
+    # -----------
+    # LANE LEFT::BONUS MULTIPLIERS
+    # -----------
+    #shotScorpionLaneLeftMultiBonus_litSolid_hit:
+    shotScorpionLaneLeftMultiBonus_litFlashTwo_hit:
+        - eventHitShotScorpionBonusMultiplier
+    # -----------
+    # LANE RIGHT::BONUS MULTIPLIERS
+    # -----------
+    #shotScorpionLaneRightMultiBonus_litSolid_hit:
+    shotScorpionLaneRightMultiBonus_litFlashTwo_hit:
+        - eventHitShotScorpionBonusMultiplier
+
+    ## -----------
+    ## LANES::DISABLE
+    ## -----------
+    #ball_will_end:
+    #    - eventDisableShotScorpionLaneTopMultiBonus
+    #    - eventDisableShotScorpionLaneRightMultiBonus
+    #    - eventDisableShotScorpionLaneLeftMultiBonus
+        
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------------
+    # BONUS MULTIPLIER
+    # ---------------------
+    shotScorpionBonusMultiplier_litFlash2X_hit:
+        multiBonus:
+            int: 2
+            action: set
+        bonus_multiplier:
+            int: 2
+            action: set
+
+    shotScorpionBonusMultiplier_litFlash3X_hit:
+        multiBonus:
+            int: 3
+            action: set
+        bonus_multiplier:
+            int: 3
+            action: set
+            
+    shotScorpionBonusMultiplier_litFlash4X_hit:
+        multiBonus:
+            int: 4
+            action: set
+        bonus_multiplier:
+            int: 4
+            action: set
+            
+    shotScorpionBonusMultiplier_litFlash5X_hit:
+        multiBonus:
+            int: 5
+            action: set
+        bonus_multiplier:
+            int: 5
+            action: set
+            
+        
+## ---------------------
+## SHOW::PLAYER::
+## ---------------------
+#show_player:
+#    # ---------------------
+#    # SHOW::DIAGONAL::LEFT
+#    # ---------------------
+#    playShowMatrixSpotThreeCompleteDiagonalLeft:
+#        showMatrixSpotScorpionThreeComplete:
+#            speed: 2
+#            loops: 3
+#            action: play
+#            key: showMatrixSpotScorpionThreeCompleteDiagonalLeft
+#            show_tokens:
+#                # --------------
+#                led1A: ledSpot1A
+#                led1B: ledSpot1B
+#                led1C: ledSpot1C
+#                led1D: ledSpot1D
+#                led1E: ledSpot1E
+#                # --------------
+#                led2A: ledSpot5A
+#                led2B: ledSpot5B
+#                led2C: ledSpot5C
+#                led2D: ledSpot5D
+#                led2E: ledSpot5E
+#                # --------------
+#                led3A: ledSpot9A
+#                led3B: ledSpot9B
+#                led3C: ledSpot9C
+#                led3D: ledSpot9D
+#                led3E: ledSpot9E
+#                # --------------
+#                color1: '440044'
+#                color2: 'ff00ff'
+        
+
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::BONUS MULTIPLIER
+    # -----------------------------------
+    showScorpionBonusMultiplier:
+        - time: 0
+          lights:
+            # ----------------
+            (led2XA): (color2X1)
+            (led2XB): (color2X1)
+            (led2XC): (color2X1)
+            (led2XD): (color2X1)
+            (led2XE): (color2X2)
+            # ----------------
+            (led3XA): (color3X1)
+            (led3XB): (color3X1)
+            (led3XC): (color3X1)
+            (led3XD): (color3X1)
+            (led3XE): (color3X2)
+            # ----------------
+            (led4XA): (color4X1)
+            (led4XB): (color4X1)
+            (led4XC): (color4X1)
+            (led4XD): (color4X1)
+            (led4XE): (color4X2)
+            # ----------------
+            (led5XA): (color5X1)
+            (led5XB): (color5X1)
+            (led5XC): (color5X1)
+            (led5XD): (color5X1)
+            (led5XE): (color5X2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led2XA): (color2X2)
+            (led2XB): (color2X1)
+            (led2XC): (color2X1)
+            (led2XD): (color2X1)
+            (led2XE): (color2X1)
+            # ----------------
+            (led3XA): (color3X2)
+            (led3XB): (color3X1)
+            (led3XC): (color3X1)
+            (led3XD): (color3X1)
+            (led3XE): (color3X1)
+            # ----------------
+            (led4XA): (color4X2)
+            (led4XB): (color4X1)
+            (led4XC): (color4X1)
+            (led4XD): (color4X1)
+            (led4XE): (color4X1)
+            # ----------------
+            (led5XA): (color5X2)
+            (led5XB): (color5X1)
+            (led5XC): (color5X1)
+            (led5XD): (color5X1)
+            (led5XE): (color5X1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led2XA): (color2X1)
+            (led2XB): (color2X1)
+            (led2XC): (color2X2)
+            (led2XD): (color2X1)
+            (led2XE): (color2X1)
+            # ----------------
+            (led3XA): (color3X1)
+            (led3XB): (color3X1)
+            (led3XC): (color3X2)
+            (led3XD): (color3X1)
+            (led3XE): (color3X1)
+            # ----------------
+            (led4XA): (color4X1)
+            (led4XB): (color4X1)
+            (led4XC): (color4X2)
+            (led4XD): (color4X1)
+            (led4XE): (color4X1)
+            # ----------------
+            (led5XA): (color5X1)
+            (led5XB): (color5X1)
+            (led5XC): (color5X2)
+            (led5XD): (color5X1)
+            (led5XE): (color5X1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led2XA): (color2X1)
+            (led2XB): (color2X1)
+            (led2XC): (color2X1)
+            (led2XD): (color2X2)
+            (led2XE): (color2X1)
+            # ----------------
+            (led3XA): (color3X1)
+            (led3XB): (color3X1)
+            (led3XC): (color3X1)
+            (led3XD): (color3X2)
+            (led3XE): (color3X1)
+            # ----------------
+            (led4XA): (color4X1)
+            (led4XB): (color4X1)
+            (led4XC): (color4X1)
+            (led4XD): (color4X2)
+            (led4XE): (color4X1)
+            # ----------------
+            (led5XA): (color5X1)
+            (led5XB): (color5X1)
+            (led5XC): (color5X1)
+            (led5XD): (color5X2)
+            (led5XE): (color5X1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led2XA): (color2X2)
+            (led2XB): (color2X1)
+            (led2XC): (color2X1)
+            (led2XD): (color2X1)
+            (led2XE): (color2X1)
+            # ----------------
+            (led3XA): (color3X2)
+            (led3XB): (color3X1)
+            (led3XC): (color3X1)
+            (led3XD): (color3X1)
+            (led3XE): (color3X1)
+            # ----------------
+            (led4XA): (color4X2)
+            (led4XB): (color4X1)
+            (led4XC): (color4X1)
+            (led4XD): (color4X1)
+            (led4XE): (color4X1)
+            # ----------------
+            (led5XA): (color5X2)
+            (led5XB): (color5X1)
+            (led5XC): (color5X1)
+            (led5XD): (color5X1)
+            (led5XE): (color5X1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led2XA): (color2X1)
+            (led2XB): (color2X2)
+            (led2XC): (color2X1)
+            (led2XD): (color2X1)
+            (led2XE): (color2X1)
+            # ----------------
+            (led3XA): (color3X1)
+            (led3XB): (color3X2)
+            (led3XC): (color3X1)
+            (led3XD): (color3X1)
+            (led3XE): (color3X1)
+            # ----------------
+            (led4XA): (color4X1)
+            (led4XB): (color4X2)
+            (led4XC): (color4X1)
+            (led4XD): (color4X1)
+            (led4XE): (color4X1)
+            # ----------------
+            (led5XA): (color5X1)
+            (led5XB): (color5X2)
+            (led5XC): (color5X1)
+            (led5XD): (color5X1)
+            (led5XE): (color5X1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led2XA): (color2X1)
+            (led2XB): (color2X1)
+            (led2XC): (color2X2)
+            (led2XD): (color2X1)
+            (led2XE): (color2X1)
+            # ----------------
+            (led3XA): (color3X1)
+            (led3XB): (color3X1)
+            (led3XC): (color3X2)
+            (led3XD): (color3X1)
+            (led3XE): (color3X1)
+            # ----------------
+            (led4XA): (color4X1)
+            (led4XB): (color4X1)
+            (led4XC): (color4X2)
+            (led4XD): (color4X1)
+            (led4XE): (color4X1)
+            # ----------------
+            (led5XA): (color5X1)
+            (led5XB): (color5X1)
+            (led5XC): (color5X2)
+            (led5XD): (color5X1)
+            (led5XE): (color5X1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led2XA): (color2X2)
+            (led2XB): (color2X1)
+            (led2XC): (color2X1)
+            (led2XD): (color2X1)
+            (led2XE): (color2X1)
+            # ----------------
+            (led3XA): (color3X2)
+            (led3XB): (color3X1)
+            (led3XC): (color3X1)
+            (led3XD): (color3X1)
+            (led3XE): (color3X1)
+            # ----------------
+            (led4XA): (color4X2)
+            (led4XB): (color4X1)
+            (led4XC): (color4X1)
+            (led4XD): (color4X1)
+            (led4XE): (color4X1)
+            # ----------------
+            (led5XA): (color5X2)
+            (led5XB): (color5X1)
+            (led5XC): (color5X1)
+            (led5XD): (color5X1)
+            (led5XE): (color5X1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led2XA): (color2X1)
+            (led2XB): (color2X1)
+            (led2XC): (color2X1)
+            (led2XD): (color2X1)
+            (led2XE): (color2X2)
+            # ----------------
+            (led3XA): (color3X1)
+            (led3XB): (color3X1)
+            (led3XC): (color3X1)
+            (led3XD): (color3X1)
+            (led3XE): (color3X2)
+            # ----------------
+            (led4XA): (color4X1)
+            (led4XB): (color4X1)
+            (led4XC): (color4X1)
+            (led4XD): (color4X1)
+            (led4XE): (color4X2)
+            # ----------------
+            (led5XA): (color5X1)
+            (led5XB): (color5X1)
+            (led5XC): (color5X1)
+            (led5XD): (color5X1)
+            (led5XE): (color5X2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led2XA): (color2X1)
+            (led2XB): (color2X2)
+            (led2XC): (color2X1)
+            (led2XD): (color2X1)
+            (led2XE): (color2X1)
+            # ----------------
+            (led3XA): (color3X1)
+            (led3XB): (color3X2)
+            (led3XC): (color3X1)
+            (led3XD): (color3X1)
+            (led3XE): (color3X1)
+            # ----------------
+            (led4XA): (color4X1)
+            (led4XB): (color4X2)
+            (led4XC): (color4X1)
+            (led4XD): (color4X1)
+            (led4XE): (color4X1)
+            # ----------------
+            (led5XA): (color5X1)
+            (led5XB): (color5X2)
+            (led5XC): (color5X1)
+            (led5XD): (color5X1)
+            (led5XE): (color5X1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led2XA): (color2X2)
+            (led2XB): (color2X1)
+            (led2XC): (color2X1)
+            (led2XD): (color2X1)
+            (led2XE): (color2X1)
+            # ----------------
+            (led3XA): (color3X2)
+            (led3XB): (color3X1)
+            (led3XC): (color3X1)
+            (led3XD): (color3X1)
+            (led3XE): (color3X1)
+            # ----------------
+            (led4XA): (color4X2)
+            (led4XB): (color4X1)
+            (led4XC): (color4X1)
+            (led4XD): (color4X1)
+            (led4XE): (color4X1)
+            # ----------------
+            (led5XA): (color5X2)
+            (led5XB): (color5X1)
+            (led5XC): (color5X1)
+            (led5XD): (color5X1)
+            (led5XE): (color5X1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led2XA): (color2X1)
+            (led2XB): (color2X1)
+            (led2XC): (color2X1)
+            (led2XD): (color2X2)
+            (led2XE): (color2X1)
+            # ----------------
+            (led3XA): (color3X1)
+            (led3XB): (color3X1)
+            (led3XC): (color3X1)
+            (led3XD): (color3X2)
+            (led3XE): (color3X1)
+            # ----------------
+            (led4XA): (color4X1)
+            (led4XB): (color4X1)
+            (led4XC): (color4X1)
+            (led4XD): (color4X2)
+            (led4XE): (color4X1)
+            # ----------------
+            (led5XA): (color5X1)
+            (led5XB): (color5X1)
+            (led5XC): (color5X1)
+            (led5XD): (color5X2)
+            (led5XE): (color5X1)
+            # ----------------
+        - time: "+1"
+        

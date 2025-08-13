@@ -1,0 +1,186 @@
+#config_version=6
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::ROLLOVER
+    # -------------------
+    shotKingPinRolloverTop:
+        switch: s_0_2
+        enable_events: eventEnableShotKingPinRolloverTop
+        disable_events: eventDisableShotKingPinRolloverTop
+        restart_events: eventRestartShotKingPinRolloverTop
+        reset_events: eventResetShotKingPinRolloverTop
+        profile: spShotKingPinRolloverTop
+            
+    shotKingPinThumperLeft:
+        switch: s_1_28
+        enable_events: eventEnableShotKingPinThumperLeft
+        disable_events: eventDisableShotKingPinThumperLeft
+        restart_events: eventRestartShotKingPinThumperLeft
+        reset_events: eventResetShotKingPinThumperLeft
+        profile: spShotKingPinThumper
+        show_tokens:
+            led1: ledThumperLeft1
+            led2: ledThumperLeft2
+            led3: ledThumperLeft3
+            led4: ledThumperLeft4
+            led5: ledThumperLeft5
+            led6: ledThumperLeft6
+            led7: ledThumperLeft7
+            led8: ledThumperLeft8
+            led9: ledThumperLeft9
+            led10: ledThumperLeft10
+            led11: ledThumperLeft11
+            led12: ledThumperLeft12
+            
+    shotKingPinThumperRight:
+        switch: s_1_8
+        enable_events: eventEnableShotKingPinThumperRight
+        disable_events: eventDisableShotKingPinThumperRight
+        restart_events: eventRestartShotKingPinThumperRight
+        reset_events: eventResetShotKingPinThumperRight
+        profile: spShotKingPinThumper
+        show_tokens:
+            led1: ledThumperRight1
+            led2: ledThumperRight2
+            led3: ledThumperRight3
+            led4: ledThumperRight4
+            led5: ledThumperRight5
+            led6: ledThumperRight6
+            led7: ledThumperRight7
+            led8: ledThumperRight8
+            led9: ledThumperRight9
+            led10: ledThumperRight10
+            led11: ledThumperRight11
+            led12: ledThumperRight12
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::ROLLOVER
+    # -----------------------------
+    spShotKingPinRolloverTop:
+        states:
+          - name: unlitFlash
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::BUMPER
+    # -----------------------------
+    spShotKingPinThumper:
+        states:
+          - name: litFlashYellow
+            show: showLedShotKingPinThumper
+            speed: 3
+            show_tokens:
+                color1: 'ffff00'
+                color2: '888800'
+          - name: litFlashMagenta
+            show: showLedShotKingPinThumper
+            speed: 3
+            show_tokens:
+                color1: 'ff00ff'
+                color2: '880088'
+        loop: true
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeSpidermanVillanKingPin_started:
+        - eventRestartShotKingPinRolloverTop
+    # -------------------
+    # ENABLE THUMPER SHOTS
+    # -------------------
+    # LEFT
+    shotKingPinRolloverTop_unlitFlash_hit:
+        - eventRestartShotKingPinThumperLeft
+    # RIGHT
+    shotKingPinRolloverTop_litFlash_hit:
+        - eventRestartShotKingPinThumperRight
+
+    ball_will_end:
+        - eventDisableShotKingPinThumperLeft
+        - eventDisableShotKingPinThumperRight
+        
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------
+    # SCORING::THUMPER
+    # ---------------
+    sw_tagThumper:
+        score: 10
+    # ---------------
+    shotKingPinThumperLeft_litFlashYellow_hit:
+        score: 5000 * current_player.multiPlayfield
+    shotKingPinThumperRight_litFlashYellow_hit:
+        score: 5000 * current_player.multiPlayfield
+    # ---------------------------------------------
+    shotKingPinThumperLeft_litFlashMagenta_hit:
+        score: 6000 * current_player.multiPlayfield
+    shotKingPinThumperRight_litFlashMagenta_hit:
+        score: 6000 * current_player.multiPlayfield
+        
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::BUMPERS
+    # -----------------------------------
+    showLedShotKingPinThumper:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color2)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color2)
+            (led11): (color1)
+            (led12): (color1)
+        - time: 1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color2)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color2)
+            (led12): (color1)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color2)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color2)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color2)
+        - time: 3

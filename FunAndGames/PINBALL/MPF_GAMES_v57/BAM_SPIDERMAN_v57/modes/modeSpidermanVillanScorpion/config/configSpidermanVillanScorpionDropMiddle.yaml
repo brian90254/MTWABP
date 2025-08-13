@@ -1,0 +1,487 @@
+#config_version=6
+
+# SPIDERMAN
+
+  # EXAMPLE CONDITIONAL EVENT
+  # example conditional event
+  # mode_modeCollectBonus_started.2{current_player.multiHunter==6}:
+  #   - eventCompletedAchModeJupiterOne|6s
+  #
+  #   shotSpinnerLeft_hit.1{current_player.shot_shotSpinnerLeftAward==0}:
+  #     score: 10 * current_player.multiPlayfield
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    # -----------
+    # BALL STARTING
+    # -----------
+    mode_modeSpidermanVillanScorpion_started:
+        # -----------
+        # DROP MIDDLE
+        # -----------
+        - eventRestartShotScorpionDropMiddle1
+        - eventRestartShotScorpionDropMiddle2
+        - eventRestartShotScorpionDropMiddle3
+        
+    # -----------
+    # DROP::MIDDLE::RESET::SEQUENCE
+    # -----------
+    eventRestartDropMiddleComboShot:
+        - eventRestartShotScorpionDropMiddleSequence123
+        - eventAdvanceShotScorpionDropMiddleSequence123
+        
+# -----------
+# ONE
+# -----------
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::ONE::HIT
+    # -----------
+    sequenceShotScorpionDropMiddle1_hit.1{current_player.shot_shotScorpionDropMiddleSequence123==1}:
+        - eventHitShotScorpionDropMiddleSequence123
+        - eventSuccessShotScorpionDropMiddleSequence1
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::ONE::MISS
+    # -----------
+    sequenceShotScorpionDropMiddle1_hit.2{current_player.shot_shotScorpionDropMiddleSequence123==2}:
+        - eventDisableShotScorpionDropMiddleSequence123
+        - eventResetShotScorpionDropMiddleSequence123
+        - eventFailShotScorpionDropMiddleSequence1
+    sequenceShotScorpionDropMiddle1_hit.3{current_player.shot_shotScorpionDropMiddleSequence123==3}:
+        - eventDisableShotScorpionDropMiddleSequence123
+        - eventResetShotScorpionDropMiddleSequence123
+        - eventFailShotScorpionDropMiddleSequence1
+
+# -----------
+# TWO
+# -----------
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::TWO::HIT
+    # -----------
+    sequenceShotScorpionDropMiddle2_hit.1{current_player.shot_shotScorpionDropMiddleSequence123==2}:
+        - eventHitShotScorpionDropMiddleSequence123
+        - eventSuccessShotScorpionDropMiddleSequence2
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::TWO::MISS
+    # -----------
+    sequenceShotScorpionDropMiddle2_hit.2{current_player.shot_shotScorpionDropMiddleSequence123==1}:
+        - eventDisableShotScorpionDropMiddleSequence123
+        - eventResetShotScorpionDropMiddleSequence123
+        - eventFailShotScorpionDropMiddleSequence2
+    sequenceShotScorpionDropMiddle2_hit.3{current_player.shot_shotScorpionDropMiddleSequence123==3}:
+        - eventDisableShotScorpionDropMiddleSequence123
+        - eventResetShotScorpionDropMiddleSequence123
+        - eventFailShotScorpionDropMiddleSequence2
+        
+# -----------
+# THREE
+# -----------
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::THREE::HIT
+    # -----------
+    sequenceShotScorpionDropMiddle3_hit.1{current_player.shot_shotScorpionDropMiddleSequence123==3}:
+        - eventHitShotScorpionDropMiddleSequence123
+        - eventSuccessShotScorpionDropMiddleSequence3
+        - eventCompleteShotScorpionDropMiddleSequence
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::THREE::MISS
+    # -----------
+    sequenceShotScorpionDropMiddle3_hit.2{current_player.shot_shotScorpionDropMiddleSequence123==1}:
+        - eventDisableShotScorpionDropMiddleSequence123
+        - eventResetShotScorpionDropMiddleSequence123
+        - eventFailShotScorpionDropMiddleSequence3
+    sequenceShotScorpionDropMiddle3_hit.3{current_player.shot_shotScorpionDropMiddleSequence123==2}:
+        - eventDisableShotScorpionDropMiddleSequence123
+        - eventResetShotScorpionDropMiddleSequence123
+        - eventFailShotScorpionDropMiddleSequence3
+        
+    # -----------
+    # DROP MIDDLE::ADVANCE BONUS
+    # -----------
+    shotGroupScorpionDropMiddle_hit:
+        - eventCompleteAchBonusOnes
+    # -----------
+    # FLIPPER BUTTON HIT
+    # -----------
+    sw_right_flipper:
+        - eventSequenceShotRightFlipperHit
+    # -----------
+    # DROP::MIDDLE::HIT
+    # -----------
+    shotScorpionDropMiddle1_hit:
+        - eventSequenceShotScorpionDropMiddle1Hit
+    shotScorpionDropMiddle2_hit:
+        - eventSequenceShotScorpionDropMiddle2Hit|250ms
+    shotScorpionDropMiddle3_hit:
+        - eventSequenceShotScorpionDropMiddle3Hit|500ms
+        
+# *****************************
+# SEQUENCE SHOTS
+# *****************************
+sequence_shots:
+    # -------------------
+    # SEQUENCE SHOTS::DROP MIDDLE::1
+    # -------------------
+    sequenceShotScorpionDropMiddle1:
+        event_sequence:
+            - eventSequenceShotRightFlipperHit
+            - eventSequenceShotScorpionDropMiddle1Hit
+        #cancel_events: playfield_active
+        sequence_timeout: 2000ms
+    # -------------------
+    # SEQUENCE SHOTS::DROP MIDDLE::2
+    # -------------------
+    sequenceShotScorpionDropMiddle2:
+        event_sequence:
+            - eventSequenceShotRightFlipperHit
+            - eventSequenceShotScorpionDropMiddle2Hit
+        #cancel_events: playfield_active
+        sequence_timeout: 2250ms
+    # -------------------
+    # SEQUENCE SHOTS::DROP MIDDLE::3
+    # -------------------
+    sequenceShotScorpionDropMiddle3:
+        event_sequence:
+            - eventSequenceShotRightFlipperHit
+            - eventSequenceShotScorpionDropMiddle3Hit
+        #cancel_events: playfield_active
+        sequence_timeout: 2500ms
+
+
+    #my_event_based_sequence_shot:
+    #    event_sequence:
+    #        - event1
+    #        - event2
+    #        - event3
+    #    cancel_events: cancel
+    #    delay_event_list:
+    #        delay1: 1s
+    #    sequence_timeout: 3s
+    
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::DROP MIDDLE
+    # -------------------
+    shotScorpionDropMiddle1:
+        switch: s_1_0
+        enable_events: eventEnableShotScorpionDropMiddle1
+        disable_events: eventDisableShotScorpionDropMiddle1
+        restart_events: eventRestartShotScorpionDropMiddle1
+        reset_events: eventResetShotScorpionDropMiddle1
+
+    shotScorpionDropMiddle2:
+        switch: s_1_15
+        enable_events: eventEnableShotScorpionDropMiddle2
+        disable_events: eventDisableShotScorpionDropMiddle2
+        restart_events: eventRestartShotScorpionDropMiddle2
+        reset_events: eventResetShotScorpionDropMiddle2
+        
+    shotScorpionDropMiddle3:
+        switch: s_1_1
+        enable_events: eventEnableShotScorpionDropMiddle3
+        disable_events: eventDisableShotScorpionDropMiddle3
+        restart_events: eventRestartShotScorpionDropMiddle3
+        reset_events: eventResetShotScorpionDropMiddle3
+            
+    # -------------------
+    # SHOTS::DROP MIDDLE::SEQUENCE
+    # -------------------
+    shotScorpionDropMiddleSequence123:
+        enable_events: eventEnableShotScorpionDropMiddleSequence123
+        disable_events: eventDisableShotScorpionDropMiddleSequence123
+        restart_events: eventRestartShotScorpionDropMiddleSequence123
+        reset_events: eventResetShotScorpionDropMiddleSequence123
+        hit_events: eventHitShotScorpionDropMiddleSequence123
+        advance_events: eventAdvanceShotScorpionDropMiddleSequence123
+        profile: spShotScorpionDropMiddleSequence123
+          
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::DROP RIGHT::SPOT
+    # -------------------
+    shotGroupScorpionDropMiddle:
+        shots:
+            - shotScorpionDropMiddle1
+            - shotScorpionDropMiddle2
+            - shotScorpionDropMiddle3
+        enable_events:
+            - eventEnableShotGroupScorpionDropMiddle
+        disable_events:
+            - eventDisableShotGroupScorpionDropMiddle
+        reset_events:
+            - eventResetShotGroupScorpionDropMiddle
+        restart_events:
+            - eventRestartShotGroupScorpionDropMiddle
+        #rotate_left_events:
+        #    - sw_right_flipper
+        #rotate_right_events:
+        #    - sw_left_flipper
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::SPINNER
+    # -----------------------------
+    spShotScorpionDropMiddleSequence123:
+        states:
+          - name: unlitDisabled
+          - name: unlitSolid
+          - name: litFlashOne
+          - name: litFlashTwo
+          - name: litFlashThree
+        loop: false
+        
+    ## -----------------------------
+    ## PROFILE::SPINNER
+    ## -----------------------------
+    #spShotScorpionSpinner:
+    #    states:
+    #      - name: litSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: 'ffff00'
+    #            color2: '888800'
+    #    loop: false
+    #
+    ## -----------------------------
+    ## PROFILE::OUTLANE::SPECIAL
+    ## -----------------------------
+    #spShotScorpionOutlaneReturnWhenLit:
+    #    states:
+    #      - name: unlitSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: '000000'
+    #      - name: litFlashOne
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            #color1: '440066'
+    #            #color2: '8800cc'
+    #            color1: '0000cc'
+    #            color2: '00ffff'
+    #      - name: litFlashTwo
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            #color1: 'cc00cc'
+    #            color1: 'cc0000'
+    #            color2: 'ff00ff'
+    #      - name: litSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            #color1: 'cc00cc'
+    #            color1: 'cccc00'
+    #            color2: 'ffff00'
+    #    loop: false
+    #    
+    #
+    ## -----------------------------
+    ## PROFILE::LANES::A-B
+    ## -----------------------------
+    #spShotScorpionLaneAB:
+    #    states:
+    #      - name: litFlashOne
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: 'ff0000'
+    #      - name: litFlashTwo
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: 'ffff00'
+    #      - name: litSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '00cc00'
+    #            color2: '00ff00'
+    #    loop: false
+    #    
+    ## -----------------------------
+    ## PROFILE::LANES::MULTI-BONUS
+    ## -----------------------------
+    #spShotScorpionLaneMultiBonus:
+    #    states:
+    #      - name: litFlashOne
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: 'ff0000'
+    #      - name: litFlashTwo
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: 'ffff00'
+    #      - name: litSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '00cc00'
+    #            color2: '00ff00'
+    #    loop: false
+    #    
+    ## -----------------------------
+    ## PROFILE::DROP RIGHT::SPOT
+    ## -----------------------------
+    #spShotScorpionDropRightSpot:
+    #    states:
+    #      - name: litFlashOne
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000088'
+    #            color2: '00ffff'
+    #      - name: litFlashTwo
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '880000'
+    #            color2: 'ff00ff'
+    #      - name: litSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: 'cccc00'
+    #            color2: 'ffff00'
+    #    loop: false
+        
+## ---------------------
+## EVENT::PLAYER
+## ---------------------
+#event_player:
+#    # -----------
+#    # BALL STARTING
+#    # -----------
+#    mode_modeSpidermanVillanScorpion_started:
+#        # -----------
+#        # DROP MIDDLE
+#        # -----------
+#        - eventRestartShotScorpionDropMiddle1
+#        - eventRestartShotScorpionDropMiddle2
+#        - eventRestartShotScorpionDropMiddle3
+#        
+#    # -----------
+#    # DROP MIDDLE::ADVANCE BONUS
+#    # -----------
+#    shotGroupScorpionDropMiddle_hit:
+#        - eventCompleteAchBonusOnes
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------------
+    # DROP::MIDDLE
+    # ---------------------
+    shotGroupScorpionDropMiddle_hit:
+        score: 1000 * current_player.multiPlayfield
+
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+    # ---------------------
+    # SHOW::VERTICAL::RIGHT
+    # ---------------------
+    playShowScorpionDropMiddleFiveLedTwoColor:
+        showScorpionDropMiddleFiveLedTwoColor:
+            speed: 2
+            loops: 3
+            action: play
+            #key: showScorpionDropMiddleFiveLedTwoColor
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot6A
+                led2B: ledSpot6B
+                led2C: ledSpot6C
+                led2D: ledSpot6D
+                led2E: ledSpot6E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showScorpionDropMiddleFiveLedTwoColor:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1)
+            (led1B): (color1)
+            (led1C): (color1)
+            (led1D): (color1)
+            (led1E): (color1)
+            # ----------------
+            (led2A): (color1)
+            (led2B): (color1)
+            (led2C): (color1)
+            (led2D): (color1)
+            (led2E): (color1)
+            # ----------------
+            (led3A): (color1)
+            (led3B): (color1)
+            (led3C): (color1)
+            (led3D): (color1)
+            (led3E): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color2)
+            (led1B): (color2)
+            (led1C): (color2)
+            (led1D): (color2)
+            (led1E): (color2)
+            # ----------------
+            (led2A): (color2)
+            (led2B): (color2)
+            (led2C): (color2)
+            (led2D): (color2)
+            (led2E): (color2)
+            # ----------------
+            (led3A): (color2)
+            (led3B): (color2)
+            (led3C): (color2)
+            (led3D): (color2)
+            (led3E): (color2)
+            # ----------------
+        - time: "+1"
