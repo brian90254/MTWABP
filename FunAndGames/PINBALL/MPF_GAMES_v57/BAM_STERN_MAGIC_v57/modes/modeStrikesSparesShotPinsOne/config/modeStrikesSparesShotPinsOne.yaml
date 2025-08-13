@@ -1,0 +1,413 @@
+#config_version=6
+
+#config:
+#- configShotsBallyStarTrek.yaml
+#- configAchBallyStarTrekBonus.yaml
+#- configShowsBallyStarTrek.yaml
+#- configShotGroupBallyStarTrekInlineDrop.yaml
+#- configShotGroupBallyStarTrekSpinner.yaml
+#- configShotGroupBallyStarTrekRightDrop.yaml
+
+# TEST
+#- configAchBallyStarTrekThumperSaucer.yaml
+
+#- configExtraBallBallyStarTrek.yaml
+#- configAchBallyStarTrekABLaneBonus.yaml
+#- configShotGroupSpotBallyStarTrek.yaml
+#- configBallyStarTrekThumper.yaml
+#- configShotsHyperSpaceBallyStarTrek.yaml
+
+
+mode:
+  start_events: eventStartModeStrikesSparesShotPinsOne
+  stop_events:
+    - eventStopModeStrikesSparesShotPinsOne
+    - ball_ending
+    
+  priority: 3000
+  
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::PIN::ONE
+    # -------------------
+    shotPin1:
+        switch: s_1_4
+        enable_events: eventEnableShotPin1
+        disable_events: eventDisableShotPin1
+        restart_events: eventRestartShotPin1
+        reset_events: eventResetShotPin1
+        profile: spShotPin
+        show_tokens:
+            led1: ledPin1A
+            led2: ledPin1B
+            led3: ledPin1C
+            led4: ledPin1D
+
+    # -------------------
+    # SHOTS::PIN::TWO
+    # -------------------
+    shotPin2:
+        switch: s_1_11
+        enable_events: eventEnableShotPin2
+        disable_events: eventDisableShotPin2
+        restart_events: eventRestartShotPin2
+        reset_events: eventResetShotPin2
+        profile: spShotPin
+        show_tokens:
+            led1: ledPin2A
+            led2: ledPin2B
+            led3: ledPin2C
+            led4: ledPin2D
+            
+    # -------------------
+    # SHOTS::PIN::THREE
+    # -------------------
+    shotPin3:
+        switch: s_1_5
+        enable_events: eventEnableShotPin3
+        disable_events: eventDisableShotPin3
+        restart_events: eventRestartShotPin3
+        reset_events: eventResetShotPin3
+        profile: spShotPin
+        show_tokens:
+            led1: ledPin3A
+            led2: ledPin3B
+            led3: ledPin3C
+            led4: ledPin3D
+            
+    # -------------------
+    # SHOTS::PIN::FOUR
+    # -------------------
+    shotPin4:
+        switch: s_1_8
+        enable_events: eventEnableShotPin4
+        disable_events: eventDisableShotPin4
+        restart_events: eventRestartShotPin4
+        reset_events: eventResetShotPin4
+        profile: spShotPin
+        show_tokens:
+            led1: ledPin4A
+            led2: ledPin4B
+            led3: ledPin4C
+            led4: ledPin4D
+            
+    # -------------------
+    # SHOTS::PIN::FIVE
+    # -------------------
+    shotPin5:
+        switch: s_1_6
+        enable_events: eventEnableShotPin5
+        disable_events: eventDisableShotPin5
+        restart_events: eventRestartShotPin5
+        reset_events: eventResetShotPin5
+        profile: spShotPin
+        show_tokens:
+            led1: ledPin5A
+            led2: ledPin5B
+            led3: ledPin5C
+            led4: ledPin5D
+            
+    # -------------------
+    # SHOTS::PIN::SIX
+    # -------------------
+    shotPin6:
+        switch: s_1_31
+        enable_events: eventEnableShotPin6
+        disable_events: eventDisableShotPin6
+        restart_events: eventRestartShotPin6
+        reset_events: eventResetShotPin6
+        profile: spShotPin
+        show_tokens:
+            led1: ledPin6A
+            led2: ledPin6B
+            led3: ledPin6C
+            led4: ledPin6D
+            
+    # -------------------
+    # SHOTS::PIN::SEVEN
+    # -------------------
+    shotPin7:
+        switch: s_1_7
+        enable_events: eventEnableShotPin7
+        disable_events: eventDisableShotPin7
+        restart_events: eventRestartShotPin7
+        reset_events: eventResetShotPin7
+        profile: spShotPin
+        show_tokens:
+            led1: ledPin7A
+            led2: ledPin7B
+            led3: ledPin7C
+            led4: ledPin7D
+            
+    # -------------------
+    # SHOTS::PIN::EIGHT
+    # -------------------
+    shotPin8:
+        switch: s_1_10
+        enable_events: eventEnableShotPin8
+        disable_events: eventDisableShotPin8
+        restart_events: eventRestartShotPin8
+        reset_events: eventResetShotPin8
+        profile: spShotPin
+        show_tokens:
+            led1: ledPin8A
+            led2: ledPin8B
+            led3: ledPin8C
+            led4: ledPin8D
+            
+    # -------------------
+    # SHOTS::PIN::NINE
+    # -------------------
+    shotPin9:
+        switch: s_1_9
+        enable_events: eventEnableShotPin9
+        disable_events: eventDisableShotPin9
+        restart_events: eventRestartShotPin9
+        reset_events: eventResetShotPin9
+        profile: spShotPin
+        show_tokens:
+            led1: ledPin9A
+            led2: ledPin9B
+            led3: ledPin9C
+            led4: ledPin9D
+            
+    # -------------------
+    # SHOTS::PIN::TEN
+    # -------------------
+    shotPin10:
+        switch: s_1_17
+        enable_events: eventEnableShotPin10
+        disable_events: eventDisableShotPin10
+        restart_events: eventRestartShotPin10
+        reset_events: eventResetShotPin10
+        profile: spShotPin
+        show_tokens:
+            led1: ledPin10A
+            led2: ledPin10B
+            led3: ledPin10C
+            led4: ledPin10D
+            
+        
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::PINS
+    # -------------------
+    shotGroupPins:
+        shots:
+            - shotPin1
+            - shotPin2
+            - shotPin3
+            - shotPin4
+            - shotPin5
+            - shotPin6
+            - shotPin7
+            - shotPin8
+            - shotPin9
+            - shotPin10
+        enable_events:
+            - eventEnableShotGroupPins
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupPins
+        reset_events:
+            - eventResetShotGroupPins
+        restart_events:
+            - eventRestartShotGroupPins
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::SHOT PIN
+    # -----------------------------
+    spShotPin:
+        states:
+          - name: litFlash
+            show: swirlFourLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '880000'
+                color2: 'ff0000'
+          - name: litSolid
+            show: swirlFourLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '00ff00'
+                color2: '00ff00'
+        loop: false
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    mode_modeStrikesSparesShotPinsOne_started:
+    #mode_modeBallyStarTrek_started:
+        - eventRestartShotPin1
+        - eventRestartShotPin2
+        - eventRestartShotPin3
+        - eventRestartShotPin4
+        - eventRestartShotPin5
+        - eventRestartShotPin6
+        - eventRestartShotPin7
+        - eventRestartShotPin8
+        - eventRestartShotPin9
+        - eventRestartShotPin10
+        - eventRestartShotGroupPins
+        ##- eventRestartShotGroupReturnLane
+        ##- eventRestartShotGroupLaneLeft
+        ## RETURN LANES
+        #- eventRestartShotReturnLaneLeft
+        #- eventRestartShotReturnLaneRight
+        ## LANES LEFT
+        #- eventRestartShotLaneLeft1
+        #- eventRestartShotLaneLeft2
+        ## TARGET MIDDLE
+        #- eventRestartShotTargetMiddle
+        
+    #mode_modeStrikesSparesShotPinsOne_ending:
+        #- eventDisableShotGroupPins
+        
+    #ball_ending:
+        #- eventDisableShotGroupPins
+        ## OUTLANES
+        #- eventDisableShotOutlaneLeftWhenLit
+        #- eventDisableShotOutlaneRightWhenLit
+        ## OUTLANES
+        #- eventResetShotOutlaneLeftWhenLit
+        #- eventResetShotOutlaneRightWhenLit
+
+    ## -------------------
+    ## RIGHT::LANE
+    ## -------------------
+    #shotRightLane_hit:
+    #    - eventCompleteBonusOnes
+    
+    ## -------------------
+    ## LANE:LEFT
+    ## -------------------
+    #shotGroupLaneLeft_hit:
+    ##shotGroupLaneLeft_litFlash_hit:
+    #    - eventCompleteBonusOnes
+    #
+    ## -------------------
+    ## RETURN::LANE
+    ## -------------------
+    #shotGroupReturnLane_hit:
+    ##shotGroupReturnLane_litFlash_hit:
+    #    - eventCompleteBonusOnes
+        
+    ## -------------------
+    ## TARGET MIDDLE
+    ## -------------------
+    #shotTargetMiddle_litFlash_hit:
+    ##shotGroupReturnLane_litFlash_hit:
+    #    - eventCompleteBonusOnes
+    #    - eventCompleteBonusOnes|1s
+    #    - eventCompleteBonusOnes|2s
+        
+## *********************
+## VARIABLE::PLAYER
+## *********************
+#variable_player:
+## ---------------
+## VARIABLE::PLAYER::SCORING
+## ---------------
+#    # ---------------
+#    # SCORING::OUTLANES
+#    # ---------------
+#    sw_tagOutlane:
+#        score: 1000
+#      
+#    #shotOutlaneRightWhenLit_unlitFlash_hit:
+#    #    score: 24000
+#    #shotOutlaneRightWhenLit_litFlash_hit:
+#    #    score: 24000
+#    #shotOutlaneLeftWhenLit_unlitFlash_hit:
+#    #    score: 24000
+#    #shotOutlaneLeftWhenLit_litFlash_hit:
+#    #    score: 24000
+#        
+#    shotGroupOutlaneWhenLit_litFlash_hit:
+#        score: 24000
+#        
+#    ### -------------------
+#    ### RIGHT::LANE
+#    ### -------------------
+#    #shotRightLane_hit:
+#    #    score: 1000
+#
+#    ## -------------------
+#    ## RIGHT::LANE
+#    ## -------------------
+#    shotGroupReturnLane_hit:
+#        score: 300
+#        
+#    # -------------------
+#    # TARGET MIDDLE
+#    # -------------------
+#    shotTargetMiddle_litFlash_hit:
+#        score: 3000
+#        
+#    shotTargetMiddle_litSolid_hit:
+#        score: 300
+        
+## *********************
+## SHOWS
+## *********************
+#shows:
+#  # -----------------------------------
+#  # SHOW::LED::SPOT::BALLY
+#  # -----------------------------------
+#    showLedSpotBally:
+#        - time: 0
+#          lights:
+#            (led1): (color1)
+#            (led2): (color3)
+#            (led3): (color4)
+#            (led4): (color4)
+#        - time: 1
+#          lights:
+#            (led1): (color2)
+#            (led2): (color4)
+#            (led3): (color3)
+#            (led4): (color4)
+#        - time: 2
+#          lights:
+#            (led1): (color1)
+#            (led2): (color4)
+#            (led3): (color4)
+#            (led4): (color3)
+#        - time: 3
+#          lights:
+#            (led1): (color2)
+#            (led2): (color3)
+#            (led3): (color4)
+#            (led4): (color4)
+#        - time: 4
+#          lights:
+#            (led1): (color1)
+#            (led2): (color4)
+#            (led3): (color3)
+#            (led4): (color4)
+#        - time: 5
+#          lights:
+#            (led1): (color2)
+#            (led2): (color4)
+#            (led3): (color4)
+#            (led4): (color3)
+#        - time: 6
+
+        

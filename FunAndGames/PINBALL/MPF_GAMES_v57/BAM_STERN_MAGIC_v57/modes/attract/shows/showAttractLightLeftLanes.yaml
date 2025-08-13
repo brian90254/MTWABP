@@ -1,0 +1,239 @@
+#show_version=6
+- time: 0
+# ----------------------
+# 4-LED CHASE BLUE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '0000ff'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '0000ff'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '0000ff'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '0000ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE MAGENTA
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: 'ff00ff'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: 'ff00ff'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: 'ff00ff'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: 'ff00ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE RED
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: 'ff0000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: 'ff0000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: 'ff0000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: 'ff0000'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE YELLOW
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: 'ffff00'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: 'ffff00'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: 'ffff00'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: 'ffff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE GREEN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '00ff00'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '00ff00'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '00ff00'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '00ff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE CYAN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '00ffff'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '00ffff'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '00ffff'
+    ledSpecialMagic: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneLeft8000: '000000'   
+    ledReturnLaneLeft6000: '000000'
+    ledReturnLaneLeft4000: '000000'
+    ledSpecialMagic: '00ffff'
+    # ---------------------- 
+- time: "+1"
+
+
+
+

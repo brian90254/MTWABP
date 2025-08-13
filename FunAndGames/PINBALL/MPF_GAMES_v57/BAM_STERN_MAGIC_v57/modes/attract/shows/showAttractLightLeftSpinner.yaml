@@ -1,0 +1,235 @@
+#show_version=6
+- time: 0
+# ----------------------
+# 4-LED CHASE GREEN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '00ff00'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '00ff00'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '00ff00'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '00ff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE CYAN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '00ffff'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '00ffff'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '00ffff'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '00ffff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE BLUE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '0000ff'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '0000ff'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '0000ff'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '0000ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE MAGENTA
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: 'ff00ff'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: 'ff00ff'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: 'ff00ff'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: 'ff00ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE RED
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: 'ff0000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: 'ff0000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: 'ff0000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: 'ff0000'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE YELLOW
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: 'ffff00'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: 'ffff00'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: 'ffff00'
+    ledExtraBall: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerLeft1000: '000000'   
+    ledSpinnerLeft400B: '000000'
+    ledSpinnerLeft400A: '000000'
+    ledExtraBall: 'ffff00'
+    # ---------------------- 
+- time: "+1"

@@ -1,0 +1,448 @@
+#config_version=6
+
+# STERN MAGIC
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::SLING SHOT
+    # -------------------
+    shotSlingShot:
+        switch: s_1_13
+        enable_events: eventEnableShotSlingShot
+        disable_events: eventDisableShotSlingShot
+        restart_events: eventRestartShotSlingShot
+        reset_events: eventResetShotSlingShot
+        #profile: spShotSlingShot
+        #show_tokens:
+        #    led: ledSpecialMagic
+        
+    # -------------------
+    # SHOTS::THUMPERS::100
+    # -------------------
+    shotThumperMiddle100:
+        switch: s_1_14
+        enable_events: eventEnableShotThumperMiddle100
+        disable_events: eventDisableShotThumperMiddle100
+        restart_events: eventRestartShotThumperMiddle100
+        reset_events: eventResetShotThumperMiddle100
+        profile: spShotThumper100
+        #show_tokens:
+        #    led: ledThumperMiddle
+        
+    shotThumperLeft100:
+        switch: s_1_12
+        enable_events: eventEnableShotThumperLeft100
+        disable_events: eventDisableShotThumperLeft100
+        restart_events: eventRestartShotThumperLeft100
+        reset_events: eventResetShotThumperLeft100
+        profile: spShotThumper100
+        #show_tokens:
+        #    led: ledThumperLeft
+        
+    shotThumperRight100:
+        switch: s_1_3
+        enable_events: eventEnableShotThumperRight100
+        disable_events: eventDisableShotThumperRight100
+        restart_events: eventRestartShotThumperRight100
+        reset_events: eventResetShotThumperRight100
+        profile: spShotThumper100
+        #show_tokens:
+        #    led: ledThumperRight
+
+    # -------------------
+    # SHOTS::RETURN LANE 
+    # -------------------
+    shotReturnLane2000:
+        switch: s_1_5
+        enable_events: eventEnableShotReturnLane2000
+        disable_events: eventDisableShotReturnLane2000
+        restart_events: eventRestartShotReturnLane2000
+        reset_events: eventResetShotReturnLane2000
+        profile: spShotReturnLane
+        show_tokens:
+            led1: ledDummy1
+            led2: ledDummy2
+            color1A: '000000'
+            color1B: '000000'
+            color2A: '000000'
+            color2B: '000000'
+            
+    shotReturnLane4000:
+        switch: s_1_5
+        enable_events: eventEnableShotReturnLane4000
+        disable_events: eventDisableShotReturnLane4000
+        restart_events: eventRestartShotReturnLane4000
+        reset_events: eventResetShotReturnLane4000
+        profile: spShotReturnLane
+        show_tokens:
+            led1: ledReturnLaneLeft4000
+            led2: ledReturnLaneRight4000
+            color1A: '00ff00'
+            color1B: '00ff00'
+            color2A: '00ff00'
+            color2B: '00ff00'
+            
+    shotReturnLane6000:
+        switch: s_1_5
+        enable_events: eventEnableShotReturnLane6000
+        disable_events: eventDisableShotReturnLane6000
+        restart_events: eventRestartShotReturnLane6000
+        reset_events: eventResetShotReturnLane2000
+        profile: spShotReturnLane
+        show_tokens:
+            led1: ledReturnLaneLeft6000
+            led2: ledReturnLaneRight6000
+            color1A: 'ffffff'
+            color1B: 'ffffff'
+            color2A: 'ffffff'
+            color2B: 'ffffff'
+            
+    shotReturnLane8000:
+        switch: s_1_5
+        enable_events: eventEnableShotReturnLane8000
+        disable_events: eventDisableShotReturnLane8000
+        restart_events: eventRestartShotReturnLane8000
+        reset_events: eventResetShotReturnLane8000
+        profile: spShotReturnLane
+        show_tokens:
+            led1: ledReturnLaneLeft8000
+            led2: ledReturnLaneRight8000
+            color1A: 'ffff00'
+            color1B: 'ffff00'
+            color2A: 'ffff00'
+            color2B: 'ffff00'
+            
+    # -------------------
+    # SHOTS::ROLLOVER ADVANCE
+    # -------------------
+    shotRolloverAdvance:
+        switch: s_1_11
+        enable_events: eventEnableShotRolloverAdvance
+        disable_events: eventDisableShotRolloverAdvance
+        restart_events: eventRestartShotRolloverAdvance
+        reset_events: eventResetShotRolloverAdvance
+        profile: spShotRolloverAdvance
+
+    # -------------------
+    # SHOTS::OUTLANES::WHEN-LIT
+    # -------------------
+    shotOutlaneLeft:
+        switch: s_1_23
+        enable_events: eventEnableShotOutlaneLeft
+        disable_events: eventDisableShotOutlaneLeft
+        restart_events: eventRestartShotOutlaneLeft
+        reset_events: eventResetShotOutlaneLeft
+        profile: spShotOutlane
+            
+    shotOutlaneRight:
+        switch: s_1_4
+        enable_events: eventEnableShotOutlaneRight
+        disable_events: eventDisableShotOutlaneRight
+        restart_events: eventRestartShotOutlaneRight
+        reset_events: eventResetShotOutlaneRight
+        profile: spShotOutlane
+
+    shotOutlaneRightWhenLit:
+        switch: s_1_4
+        enable_events: eventEnableShotOutlaneRightWhenLit
+        disable_events: eventDisableShotOutlaneRightWhenLit
+        restart_events: eventRestartShotOutlaneRightWhenLit
+        reset_events: eventResetShotOutlaneRightWhenLit
+        profile: spShotOutlaneWhenLit
+        show_tokens:
+            led: ledSpecialOutlane
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::SLING SHOT
+    # -----------------------------
+    spShotSlingShot:
+        states:
+          - name: litFlash
+            show: showFlashSlingShot
+            show_tokens:
+                color1: 'ff0000'
+                color2: '000000'
+            speed: 2
+            loops: 0
+        loop: true
+
+    # -----------------------------
+    # PROFILE::OUTLANE
+    # -----------------------------
+    spShotOutlane:
+        states:
+          - name: litSolid
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::OUTLANE WHEN LIT
+    # -----------------------------
+    spShotOutlaneWhenLit:
+        states:
+          - name: litSolid
+            show: flashLedTwoColor
+            show_tokens:
+                color1: 'ff0000'
+                color2: 'ff0000'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::ROLLOVER ADVANCE
+    # -----------------------------
+    spShotRolloverAdvance:
+        states:
+          # --------------
+          - name: litFlash4000
+          # --------------
+          - name: litFlash6000
+          # --------------
+          - name: litFlash8000
+          # --------------
+          - name: litSolid8000
+          # --------------
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::RETURN LANE
+    # -----------------------------
+    spShotReturnLane:
+        states:
+          - name: litSolid
+            show: showReturnLane
+            speed: 2
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::THUMPER::100
+    # -----------------------------
+    spShotThumper100:
+        states:
+          - name: litSolid
+        loop: false
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    # -------------------
+    # REGISTER SHOT::TRIGGER RANDOM EVENT
+    # -------------------
+    shotSlingShot_hit:
+        - randomEventMagnetSling
+    # -------------------
+    # PLAY SHOW WITH DIFFERENT DELAYS
+    # -------------------
+    eventCoilPlayerMagnetSling100:
+        - eventCoilPlayerMagnetSling|100ms
+    eventCoilPlayerMagnetSling200:
+        - eventCoilPlayerMagnetSling|200ms
+    eventCoilPlayerMagnetSling300:
+        - eventCoilPlayerMagnetSling|300ms
+    eventCoilPlayerMagnetSling400:
+        - eventCoilPlayerMagnetSling|400ms
+    eventCoilPlayerMagnetSling500:
+        - eventCoilPlayerMagnetSling|500ms
+
+    # -------------------
+    # STARTING
+    # -------------------
+    mode_modeMataHari_started:
+        # -----------------------------
+        # SLINGSHOT
+        #- eventRestartShotSlingShot
+        # -----------------------------
+        # THUMPERS
+        - eventRestartShotThumperMiddle100
+        - eventRestartShotThumperLeft100
+        - eventRestartShotThumperRight100
+        # -----------------------------
+        # RETURN LANES
+        - eventRestartShotReturnLane2000
+        # -----------------------------
+        # ROLLOVER ADVANCE
+        - eventRestartShotRolloverAdvance
+        # -----------------------------
+        # OUTLANES
+        - eventRestartShotOutlaneLeft
+        - eventRestartShotOutlaneRight
+        
+    # -------------------
+    # ENDING
+    # -------------------
+    ball_ending:
+        # RETURN LANES
+        - eventDisableShotReturnLane4000
+        - eventDisableShotReturnLane6000
+        - eventDisableShotReturnLane8000
+        # OUTLANES
+        - eventDisableShotOutlaneRightWhenLit
+
+    # -------------------
+    # ROLLOVER ADVANCE
+    # -------------------
+    shotRolloverAdvance_litFlash4000_hit:
+        - eventDisableShotReturnLane2000
+        - eventRestartShotReturnLane4000
+    shotRolloverAdvance_litFlash6000_hit:
+        - eventDisableShotReturnLane4000
+        - eventRestartShotReturnLane6000
+    shotRolloverAdvance_litFlash8000_hit:
+        - eventDisableShotReturnLane6000
+        - eventRestartShotReturnLane8000
+
+    shotRolloverAdvance_hit:
+        - eventCompleteBonusOnes
+        - eventCompleteBonusOnes|1000
+        - eventCompleteBonusOnes|2000
+        
+    # -------------------
+    # RETURN LANE
+    # -------------------
+    shotReturnLane2000_litSolid_hit:
+        - eventCompleteBonusOnes
+    shotReturnLane4000_litSolid_hit:
+        - eventCompleteBonusOnes
+    shotReturnLane6000_litSolid_hit:
+        - eventCompleteBonusOnes
+    shotReturnLane8000_litSolid_hit:
+        - eventCompleteBonusOnes
+
+    # ---------------
+    # OUTLANE
+    # ---------------
+    shotOutlaneLeft_litSolid_hit:
+        - eventCompleteBonusOnes
+        - eventCompleteBonusOnes|1000
+        - eventCompleteBonusOnes|2000
+    shotOutlaneRight_litSolid_hit:
+        - eventCompleteBonusOnes
+        - eventCompleteBonusOnes|1000
+        - eventCompleteBonusOnes|2000
+    # ---------------
+    # OUTLANE::WHEN LIT
+    # ---------------
+    shotDropRightAward_litFlashSpecial_hit:
+        - eventRestartShotOutlaneRightWhenLit
+        
+
+# *********************
+# RANDOM::EVENT::PLAYER
+# *********************
+random_event_player:
+    # -------------------
+    # MAGNET::RANDOM::TIME::SLING
+    # -------------------
+    randomEventMagnetSling:
+        scope: player
+        force_all: true
+        force_different: true
+        events:
+          - eventCoilPlayerMagnetSling100
+          - eventCoilPlayerMagnetSling200
+          - eventCoilPlayerMagnetSling300
+          - eventCoilPlayerMagnetSling400
+          - eventCoilPlayerMagnetSling500
+          
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------
+    # SCORING::SLING SHOT
+    # ---------------
+    sw_tagSlingShot:
+        score: 10
+        
+    # ---------------
+    # SCORING::ROLLOVER
+    # ---------------
+    shotRolloverAdvance_hit:
+        score: 3000
+        
+    # ---------------
+    # SCORING::OUTLANE
+    # ---------------
+    shotOutlaneLeft_litSolid_hit:
+        score: 5000
+    shotOutlaneRight_litSolid_hit:
+        score: 5000
+    shotOutlaneRightWhenLit_litSolid_hit:
+        score: 20000
+        
+    # ---------------
+    # SCORING::RETURN LANE
+    # ---------------
+    shotReturnLane2000_litSolid_hit:
+        score: 2000
+    shotReturnLane4000_litSolid_hit:
+        score: 4000
+    shotReturnLane6000_litSolid_hit:
+        score: 6000
+    shotReturnLane8000_litSolid_hit:
+        score: 8000
+        
+    # ---------------
+    # SCORING::THUMPERS
+    # ---------------
+    shotThumperMiddle100_litSolid_hit:
+        score: 100
+    shotThumperLeft100_litSolid_hit:
+        score: 100
+    shotThumperRight100_litSolid_hit:
+        score: 100
+
+# *********************
+# SHOW::PLAYER
+# *********************
+show_player:
+  # --------------------------
+  # MAGNET::SLING::TEST
+  # --------------------------
+  eventCoilPlayerMagnetSling:
+    showFlashSlingShot:
+      loops: 0
+      speed: 1
+      show_tokens:
+        led: ledSpecialMagic
+        color1: 'ff0000'
+        color2: '000000'
+        
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::FLASH::SLINGSHOT
+    # -----------------------------------
+    showFlashSlingShot:
+        - time: 0
+          lights:
+            (led): (color1)
+        - time: 1
+          lights:
+            (led): (color2)
+        - time: 2
+        
+    # -----------------------------------
+    # SHOW::LED::RETURN LANE
+    # -----------------------------------
+    showReturnLane:
+        - time: 0
+          lights:
+            (led1): (color1A)
+            (led2): (color2A)
+        - time: 1
+          lights:
+            (led1): (color1B)
+            (led2): (color2B)
+        - time: 2

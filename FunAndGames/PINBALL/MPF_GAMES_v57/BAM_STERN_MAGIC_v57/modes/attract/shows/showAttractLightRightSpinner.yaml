@@ -1,0 +1,237 @@
+#show_version=6
+- time: 0
+# ----------------------
+# 4-LED CHASE YELLOW
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: 'ffff00'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: 'ffff00'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: 'ffff00'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: 'ffff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE GREEN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '00ff00'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '00ff00'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '00ff00'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '00ff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE CYAN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '00ffff'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '00ffff'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '00ffff'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '00ffff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE BLUE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '0000ff'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '0000ff'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '0000ff'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '0000ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE MAGENTA
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: 'ff00ff'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: 'ff00ff'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: 'ff00ff'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: 'ff00ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE RED
+# ----------------------
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: 'ff0000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: 'ff0000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: 'ff0000'
+    ledDropRightSpecial: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledSpinnerRight1000: '000000'   
+    ledSpinnerRight400B: '000000'
+    ledSpinnerRight400A: '000000'
+    ledDropRightSpecial: 'ff0000'
+    # ---------------------- 
+- time: "+1"
+
+

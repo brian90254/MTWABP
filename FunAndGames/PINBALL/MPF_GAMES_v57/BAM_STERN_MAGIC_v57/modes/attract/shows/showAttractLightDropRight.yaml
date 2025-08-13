@@ -1,0 +1,40 @@
+#show_version=6
+- time: 0
+# ----------------------
+# 4-LED CHASE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledDropRight5k: '000000'   
+    ledDropRight10k: '000000'
+    ledDropRight20k: '000000'
+    ledDropRight30k: 'ff00ff'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledDropRight5k: '000000'   
+    ledDropRight10k: '000000'
+    ledDropRight20k: 'ffff00'
+    ledDropRight30k: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledDropRight5k: '000000'   
+    ledDropRight10k: '0000ff'
+    ledDropRight20k: '000000'
+    ledDropRight30k: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledDropRight5k: '00ff00'   
+    ledDropRight10k: '000000'
+    ledDropRight20k: '000000'
+    ledDropRight30k: '000000'
+    # ---------------------- 
+- time: "+1"

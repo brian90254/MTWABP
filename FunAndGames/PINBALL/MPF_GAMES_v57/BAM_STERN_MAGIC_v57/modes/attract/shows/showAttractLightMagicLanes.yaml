@@ -1,0 +1,237 @@
+#show_version=6
+- time: 0
+# ----------------------
+# 4-LED CHASE MAGENTA
+# ----------------------
+  lights:
+    # ----------------------  
+    ledLaneTopM: 'ff00ff'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: 'ff00ff'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: 'ff00ff'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: 'ff00ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE RED
+# ----------------------
+  lights:
+    # ----------------------  
+    ledLaneTopM: 'ff0000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: 'ff0000'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: 'ff0000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: 'ff0000'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE YELLOW
+# ----------------------
+  lights:
+    # ----------------------  
+    ledLaneTopM: 'ffff00'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: 'ffff00'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: 'ffff00'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: 'ffff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE GREEN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledLaneTopM: '00ff00'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '00ff00'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '00ff00'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: '00ff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE CYAN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledLaneTopM: '00ffff'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '00ffff'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '00ffff'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: '00ffff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE BLUE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledLaneTopM: '0000ff'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '0000ff'
+    ledLaneTopG: '000000'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '0000ff'
+    ledShootAgain: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledLaneTopM: '000000'   
+    ledLaneTopA: '000000'
+    ledLaneTopG: '000000'
+    ledShootAgain: '0000ff'
+    # ---------------------- 
+- time: "+1"
+
+

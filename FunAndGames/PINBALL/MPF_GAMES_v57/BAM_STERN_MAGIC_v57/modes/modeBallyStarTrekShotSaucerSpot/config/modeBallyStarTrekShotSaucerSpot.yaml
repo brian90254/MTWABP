@@ -1,0 +1,407 @@
+#config_version=6
+
+  # EXAMPLE CONDITIONAL EVENT
+  #mode_modeCollectBonus_started.2{current_player.multiHunter==6}:
+  #  - eventCompletedAchModeJupiterOne|6s
+  
+mode:
+    start_events:
+      - eventStartModeBallyStarTrekShotSaucerSpot
+    stop_events:
+      - eventStopModeBallyStarTrekShotSaucerSpot
+      - eventStopModeBallyStarTrek
+      - ball_ending
+      
+    priority: 3000
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::BUMPER::ROTATE::SAUCER::SPOT BALLY
+    # -------------------
+    shotBumper1:
+        switch: s_0_2
+        enable_events: eventEnableShotBumper1
+        disable_events: eventDisableShotBumper1
+        restart_events: eventRestartShotBumper1
+        reset_events: eventResetShotBumper1
+        advance_events: eventAdvanceShotBumper1
+        hit_events: eventHitShotBumper1
+
+    shotBumper2:
+        switch: s_0_1
+        enable_events: eventEnableShotBumper2
+        disable_events: eventDisableShotBumper2
+        restart_events: eventRestartShotBumper2
+        reset_events: eventResetShotBumper2
+        advance_events: eventAdvanceShotBumper2
+        hit_events: eventHitShotBumper2
+        
+    # -------------------
+    # SHOTS::SAUCER::SPOT::BALLY
+    # -------------------
+    shotSaucerSpotBally:
+        enable_events: eventEnableShotSaucerSpotBally
+        disable_events: eventDisableShotSaucerSpotBally
+        restart_events: eventRestartShotSaucerSpotBally
+        reset_events: eventResetShotSaucerSpotBally
+        advance_events: eventAdvanceShotSaucerSpotBally
+        hit_events: eventHitShotSaucerSpotBally
+        profile: spShotSaucerSpotBally
+        show_tokens:
+            led1: ledBallySaucerB
+            led2: ledBallySaucerA
+            led3: ledBallySaucerL1
+            led4: ledBallySaucerL2
+            led5: ledBallySaucerY
+        
+    # -------------------
+    # SAUCER::ADVANCE
+    # -------------------
+    shotSaucerAdvance:
+        enable_events: eventEnableShotSaucerAdvance
+        disable_events: eventDisableShotSaucerAdvance
+        restart_events: eventRestartShotSaucerAdvance
+        reset_events: eventResetShotSaucerAdvance
+        advance_events: eventAdvanceShotSaucerAdvance
+        hit_events: eventHitShotSaucerAdvance
+        profile: spShotSaucerAdvance
+            
+
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::SPOT::BALLY
+    # -------------------
+    shotGroupBumper:
+        shots:
+            - shotBumper1
+            - shotBumper2
+        enable_events:
+            - eventEnableShotGroupBumper
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupBumper
+        reset_events:
+            - eventResetShotGroupBumper
+        restart_events:
+            - eventRestartShotGroupBumper
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+# -----------------------------
+# SAUCER::ADVANCE::ACHIEVEMENTS
+# -----------------------------
+    # -----------------------------
+    # PROFILE::SAUCER::SPOT BALLY
+    # -----------------------------
+    spShotSaucerSpotBally:
+        states:
+          - name: stateOneSpShotSaucerSpotBally
+            show: showLedShotSaucerSpotBally
+            speed: 1
+            show_tokens:
+                color1: 'cccc00'
+                color2: '000000'
+                color3: '000000'
+                color4: '000000'
+                color5: '000000'
+                color6: 'ffff00'
+                color7: '000000'
+                color8: '000000'
+                color9: '000000'
+                color10: '000000'
+          - name: stateTwoSpShotSaucerSpotBally
+            show: showLedShotSaucerSpotBally
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: 'cccc00'
+                color3: '000000'
+                color4: '000000'
+                color5: '000000'
+                color6: '000000'
+                color7: 'ffff00'
+                color8: '000000'
+                color9: '000000'
+                color10: '000000'
+          - name: stateThreeSpShotSaucerSpotBally
+            show: showLedShotSaucerSpotBally
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+                color3: 'cccc00'
+                color4: '000000'
+                color5: '000000'
+                color6: '000000'
+                color7: '000000'
+                color8: 'ffff00'
+                color9: '000000'
+                color10: '000000'
+          - name: stateFourSpShotSaucerSpotBally
+            show: showLedShotSaucerSpotBally
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+                color3: '000000'
+                color4: 'cccc00'
+                color5: '000000'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+                color9: 'ffff00'
+                color10: '000000'
+          - name: stateFiveSpShotSaucerSpotBally
+            show: showLedShotSaucerSpotBally
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+                color3: '000000'
+                color4: '000000'
+                color5: 'cccc00'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+                color9: '000000'
+                color10: 'ffff00'
+        loop: true
+        
+    # -----------------------------
+    # PROFILE::SAUCER::ADVANCE
+    # -----------------------------
+    spShotSaucerAdvance:
+        states:
+          - name: stateOneSpShotSaucerAdvance
+            # -------------------------------
+          - name: stateTwoSpShotSaucerAdvance
+            # -------------------------------
+          - name: stateThreeSpShotSaucerAdvance
+            # -------------------------------
+
+# *********************
+# EVENT::PLAYER
+# *********************
+event_player:
+# -------------------
+# EVENTS::ON BALL STARTING
+# -------------------
+    #mode_modeBallyStarTrek_started:
+    mode_modeBallyStarTrekShotSaucerSpot_started:
+        - eventRestartShotSaucerAdvance
+        - eventRestartShotSaucerSpotBally
+        - eventRestartShotGroupBumper
+        
+# -------------------
+# EVENTS::BALL IN PLAY
+# -------------------
+    # -------------------
+    # EVENTS::SAUCER SHOT::HIT
+    # -------------------
+    ball_hold_ballHoldSaucerTop_held_ball:
+        # ADVANCE SAUCER ACHIEVEMENT
+        - eventHitShotSaucerAdvance
+        # ADVANCE BONUS BY THREE
+        - eventCompleteBonusOnes
+        - eventCompleteBonusOnes|1s
+        - eventCompleteBonusOnes|2s
+        # HIT SHOT SAUCER SPOT BALLY
+        #- eventCheckShotSaucerSpotBallyProfileState
+
+    # -------------------
+    # EVENTS::SAUCER SHOT::HIT
+    # -------------------
+    # DON'T SPOT UNTIL AFTER SHOW COMPLETE
+    releaseBallHoldSaucerTop:
+        # HIT SHOT SAUCER SPOT BALLY
+        - eventCheckShotSaucerSpotBallyProfileState
+        
+    # -------------------
+    # SPOT BALLY
+    # -------------------
+    eventCheckShotSaucerSpotBallyProfileState.1{current_player.shot_shotSaucerSpotBally==0}:
+        - eventHitShotSpotBallyB
+    eventCheckShotSaucerSpotBallyProfileState.2{current_player.shot_shotSaucerSpotBally==1}:
+        - eventHitShotSpotBallyA
+    eventCheckShotSaucerSpotBallyProfileState.3{current_player.shot_shotSaucerSpotBally==2}:
+        - eventHitShotSpotBallyL1
+    eventCheckShotSaucerSpotBallyProfileState.4{current_player.shot_shotSaucerSpotBally==3}:
+        - eventHitShotSpotBallyL2
+    eventCheckShotSaucerSpotBallyProfileState.5{current_player.shot_shotSaucerSpotBally==4}:
+        - eventHitShotSpotBallyY
+        
+    # -------------------
+    # ROTATE BALLY
+    # -------------------
+    shotGroupBumper_hit:
+        - eventAdvanceShotSaucerSpotBally
+    
+# *********************
+# TIMERS
+# *********************
+timers:
+  # ---------------------
+  # TIMERS::MODE
+  # ---------------------
+    timerThumperSuperLit:
+        start_value: 10
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        #start_running: yes
+        start_running: no
+        control_events:
+            -   event: eventRestartTimerThumperSuperLit
+                action: restart
+            -   event: eventAddValueTimerThumperSuperLit
+                action: add
+                value: 20
+
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+    # ---------------
+    # TOP::SAUCER::HIT
+    # ---------------
+    ball_hold_ballHoldSaucerTop_held_ball:
+        score: 3000
+
+# ---------------------
+# RANDOM::EVENT::PLAYER
+# ---------------------
+random_event_player:
+    # -------------------
+    # SAUCER::TOP::PLAY VIDEO
+    # -------------------
+    ball_hold_ballHoldSaucerTop_held_ball:
+      scope: player
+      events:
+        - eventShowVideoBallyStarTrekSaucerTop_Clip1
+        - eventShowVideoBallyStarTrekSaucerTop_Clip2
+        - eventShowVideoBallyStarTrekSaucerTop_Clip3
+        - eventShowVideoBallyStarTrekSaucerTop_Clip4
+        - eventShowVideoBallyStarTrekSaucerTop_Clip5
+        - eventShowVideoBallyStarTrekSaucerTop_Clip6
+        - eventShowVideoBallyStarTrekSaucerTop_Clip7
+        - eventShowVideoBallyStarTrekSaucerTop_Clip8
+        - eventShowVideoBallyStarTrekSaucerTop_Clip9
+        - eventShowVideoBallyStarTrekSaucerTop_Clip10
+        - eventShowVideoBallyStarTrekSaucerTop_Clip11
+        - eventShowVideoBallyStarTrekSaucerTop_Clip12
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+  
+# --------------------------
+# SHOW::PLAYER::VIDEO CLIPS::BALLY STAR TREK
+# --------------------------
+  # --------------------------
+  # SAUCER::TOP
+  # --------------------------
+  eventShowVideoBallyStarTrekSaucerTop_Clip1:
+    showVideoBallyStarTrekSaucerTop_Clip1:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+      
+  eventShowVideoBallyStarTrekSaucerTop_Clip2:
+    showVideoBallyStarTrekSaucerTop_Clip2:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+      
+  eventShowVideoBallyStarTrekSaucerTop_Clip3:
+    showVideoBallyStarTrekSaucerTop_Clip3:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+      
+  eventShowVideoBallyStarTrekSaucerTop_Clip4:
+    showVideoBallyStarTrekSaucerTop_Clip4:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+      
+  eventShowVideoBallyStarTrekSaucerTop_Clip5:
+    showVideoBallyStarTrekSaucerTop_Clip5:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+      
+  eventShowVideoBallyStarTrekSaucerTop_Clip6:
+    showVideoBallyStarTrekSaucerTop_Clip6:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+      
+  eventShowVideoBallyStarTrekSaucerTop_Clip7:
+    showVideoBallyStarTrekSaucerTop_Clip7:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+      
+  eventShowVideoBallyStarTrekSaucerTop_Clip8:
+    showVideoBallyStarTrekSaucerTop_Clip8:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+      
+  eventShowVideoBallyStarTrekSaucerTop_Clip9:
+    showVideoBallyStarTrekSaucerTop_Clip9:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+      
+  eventShowVideoBallyStarTrekSaucerTop_Clip10:
+    showVideoBallyStarTrekSaucerTop_Clip10:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+      
+  eventShowVideoBallyStarTrekSaucerTop_Clip11:
+    showVideoBallyStarTrekSaucerTop_Clip11:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+
+  eventShowVideoBallyStarTrekSaucerTop_Clip12:
+    showVideoBallyStarTrekSaucerTop_Clip12:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBallyStarTrek
+      
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOT::SAUCER::SPOT::BALLY
+    # -----------------------------------
+    showLedShotSaucerSpotBally:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color5)
+        - time: 1
+          lights:
+            (led1): (color6)
+            (led2): (color7)
+            (led3): (color8)
+            (led4): (color9)
+            (led5): (color10)
+        - time: 2

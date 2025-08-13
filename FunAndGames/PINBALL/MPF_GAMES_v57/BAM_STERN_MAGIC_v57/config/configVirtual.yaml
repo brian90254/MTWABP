@@ -1,0 +1,189 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+
+
+# ******************************************
+# ------------------------------------------
+# VIRTUAL
+# ------------------------------------------
+# ******************************************
+keyboard:
+    
+    #0:
+    #    event: debug_dump_stats
+      
+    z:
+        #switch: s_flipper_left_keyboard
+        event: eventFlipperLeftKeyboard
+        switch: s_0_9
+    /:
+        #switch: s_flipper_right_keyboard
+        event: eventFlipperRightKeyboard
+        switch: s_0_10
+
+    s:
+        #switch: s_start
+        switch: s_0_8
+        
+    1:
+        #switch: s_trough_1
+        #switch: s_1_27
+        #switch: s_0_0
+        #switch: s_2_0
+        switch: s_1_20
+        toggle: true
+
+# -------------------
+# DROPS TARGET BANKS
+# -------------------
+# DROP RIGHT
+    2:
+        # DROP RIGHT 1
+        event: eventShowVideoSternMagic_Clip1
+        # switch: s_1_28
+        # toggle: true
+    3:
+        # DROP RIGHT 2
+        event: eventShowVideoSternMagic_Clip2
+        #switch: s_1_18
+        #toggle: true
+    4:
+        # DROP RIGHT 3
+        event: eventShowVideoSternMagic_Clip3
+        #switch: s_1_19
+        #toggle: true
+        
+# -------------------
+# SPINNERS
+# -------------------
+    5:
+        # LEFT
+        switch: s_0_3
+        #toggle: true
+    6:
+        # RIGHT
+        switch: s_0_4
+        #toggle: true
+        
+# -------------------
+# ROLLOVER
+# -------------------
+    7:
+        # EXTRA BALL ROLLOVER
+        switch: s_1_11
+        #toggle: true
+
+# -------------------
+# SLINGSHOTS
+# -------------------
+    8:
+        # SLINGSHOT LEFT
+        switch: s_1_13
+        #toggle: true
+    9:
+        # SLINGSHOT RIGHT
+        switch: s_1_2
+        #toggle: true
+
+# -----------------------
+# OUTLANES - RETURN LANES
+# -----------------------
+    f:
+        # LEFT OUTLANE
+        switch: s_1_23
+    g:
+        # LEFT RETURN
+        switch: s_1_5
+    h:
+        # RIGHT RETURN
+        switch: s_1_5
+    j:
+        # RIGHT OUTLANE
+        switch: s_1_4
+        
+        
+    k:
+        # SAUCER_TOP
+        switch: s_1_31
+        toggle: true
+    l:
+        # SAUCER_LEFT
+        switch: s_1_31
+        toggle: true
+
+# -----------------------
+# LANES
+# -----------------------
+# TOP LANES / TARGETS
+    x:
+        # TOP M
+        switch: s_1_7
+    c:
+        # TOP A
+        switch: s_1_10
+    v:
+        # TOP G
+        switch: s_1_6
+    b:
+        # TARGET I
+        switch: s_1_8
+    n:
+        # TARGET C
+        switch: s_1_9
+        
+    #m:
+    #    # TARGET
+    #    switch: s_1_8
+
+# THUMPER
+    q:
+        # PIN 1
+        switch: s_1_4
+    w:
+        # PIN 2
+        switch: s_1_11
+    e:
+        # PIN 3
+        switch: s_1_5
+    r:
+        # PIN 4
+        switch: s_1_8
+    t:
+        # PIN 5
+        switch: s_1_6
+    y:
+        # PIN 6
+        switch: s_1_31
+    u:
+        # PIN 7
+        switch: s_1_7
+    i:
+        # PIN 8
+        switch: s_1_10
+    o:
+        # PIN 9
+        switch: s_1_9
+    p:
+        # PIN 10
+        switch: s_1_17
+        
+# BUMPERS
+    a:
+        # BUMPER 1
+        switch: s_0_1
+    d:
+        # BUMPER 2
+        switch: s_0_2
+
+virtual_platform_start_active_switches:
+    s_1_20
+    #s_2_0
+    #s_0_0
+    #s_trough_1
+    #s_trough_2
+    #s_trough_3
+    #s_trough_4
+    #s_trough_5
+    #s_trough_6
