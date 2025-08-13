@@ -1,0 +1,109 @@
+#config_version=6
+
+config:
+- configBallyStarTrekAchBonus.yaml
+- configBallyStarTrekExtraBall.yaml
+- configBallyStarTrekShotGroupSpotBally.yaml
+- configBallyStarTrekShots.yaml
+- configBallyStarTrekShotsHyperSpace.yaml
+- configBallyStarTrekShows.yaml
+- configBallyStarTrekThumper.yaml
+
+mode:
+  start_events: eventStartModeBallyStarTrek
+  stop_events:
+    - eventStopModeBallyStarTrek
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeBallyStarTrek_started:
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeBallyStarTrekStart
+    
+    # -----------------------------------
+    # ENABLE BONUS
+    # -----------------------------------
+    # ONES
+    - eventResetAchBonusOnes
+    - eventEnableAchBonusOnes
+    - eventStartAchBonus0
+    - eventCompleteBonusOnes|1s
+    # TENS
+    - eventResetAchBonusTens
+    - eventEnableAchBonusTens
+
+    - eventResetShotExtraBall
+    
+    - eventResetShotSaucerBonus
+    
+    - eventResetShotAdvanceMultipliers    
+    - eventEnableShotAdvanceMultipliers
+    
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersBallyStarTrek
+    
+    # ---------------------
+    # EVENT::START::MODES
+    # ---------------------
+    - eventStartModeBallyStarTrekShotSaucerSpot
+    # TEST
+    #- eventStartModeBallyStarTrekShotSaucerReset
+    
+
+  # ---------------------
+  # EVENT::SWITCH MODES
+  # ---------------------
+  eventSwitchModesShotSaucerResetToSpot:
+    - eventStopModeBallyStarTrekShotSaucerReset
+    - eventStartModeBallyStarTrekShotSaucerSpot
+    # RESET BALLY SPOT
+    - eventRestartShotGroupSpotBally
+
+  eventSwitchModesShotSaucerSpotToReset:
+    # MODE SWITCH
+    - eventStopModeBallyStarTrekShotSaucerSpot
+    - eventStartModeBallyStarTrekShotSaucerReset
+    # DISABLE BALLY SPOT
+    - eventResetShotGroupSpotBally
+    - eventDisableShotGroupSpotBally
+    
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  mode_modeBallyStarTrek_started:
+    nameMoon:
+      string: "STAR TREK"
+      action: set
+
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  #---------------------
+  # AMBIENCE
+  mode_modeBallyStarTrek_started:
+    musicAmbienceBallyStarTrek001:
+      loops: -1
+      volume: 0.7
+      
+  mode_modeBallyStarTrek_ending:
+    musicAmbienceBallyStarTrek001:
+      action: stop
+      
+  #---------------------
+  
+

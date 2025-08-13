@@ -1,0 +1,70 @@
+#show_version=6
+
+- time: 0
+
+  lights:
+    ledWarpDriveRight1: '000000'
+    ledWarpDriveRight2: 'ffff00'
+    ledWarpDriveRight3: '000000'
+    ledWarpDriveRight4: '000000'
+    ledWarpDriveRight5: '000000'
+    ledWarpDriveRight6: '000000'
+    ledWarpDriveRight7: '000000'
+           
+- time: 1
+
+  lights:
+    ledWarpDriveRight1: '000000'
+    ledWarpDriveRight2: '000000'
+    ledWarpDriveRight3: 'ffff00'
+    ledWarpDriveRight4: '000000'
+    ledWarpDriveRight5: '000000'
+    ledWarpDriveRight6: '000000'
+    ledWarpDriveRight7: '000000'
+    
+- time: 2
+
+  lights:
+    ledWarpDriveRight1: '000000'
+    ledWarpDriveRight2: '000000'
+    ledWarpDriveRight3: '000000'
+    ledWarpDriveRight4: 'ffff00'
+    ledWarpDriveRight5: '000000'
+    ledWarpDriveRight6: '000000'
+    ledWarpDriveRight7: '000000'
+    
+- time: 3
+
+  lights:
+    ledWarpDriveRight1: '000000'
+    ledWarpDriveRight2: '000000'
+    ledWarpDriveRight3: '000000'
+    ledWarpDriveRight4: '000000'
+    ledWarpDriveRight5: 'ffff00'
+    ledWarpDriveRight6: '000000'
+    ledWarpDriveRight7: '000000'
+    
+- time: 4
+
+  lights:
+    ledWarpDriveRight1: '000000'
+    ledWarpDriveRight2: '000000'
+    ledWarpDriveRight3: '000000'
+    ledWarpDriveRight4: '000000'
+    ledWarpDriveRight5: '000000'
+    ledWarpDriveRight6: 'ffff00'
+    ledWarpDriveRight7: '000000'
+    
+- time: 5
+
+  lights:
+    ledWarpDriveRight1: '000000'
+    ledWarpDriveRight2: '000000'
+    ledWarpDriveRight3: '000000'
+    ledWarpDriveRight4: '000000'
+    ledWarpDriveRight5: '000000'
+    ledWarpDriveRight6: '000000'
+    ledWarpDriveRight7: 'ffff00'
+    
+- time: 6
+

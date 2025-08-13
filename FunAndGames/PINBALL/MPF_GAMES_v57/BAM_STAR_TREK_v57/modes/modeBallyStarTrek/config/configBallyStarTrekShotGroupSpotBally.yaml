@@ -1,0 +1,379 @@
+#config_version=6
+
+# BALLY STAR TREK :: SPOT BALLY
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::SPOT::BALLY::AWARD
+    # -------------------
+    shotSpotBallyAward:
+        enable_events: eventEnableShotSpotBallyAward
+        disable_events: eventDisableShotSpotBallyAward
+        restart_events: eventRestartShotSpotBallyAward
+        reset_events: eventResetShotSpotBallyAward
+        advance_events: eventAdvanceShotSpotBallyAward
+        hit_events: eventHitShotSpotBallyAward
+        profile: spShotSpotBallyAward
+        show_tokens:
+            led1: ledBallyAwardValue10k
+            led2: ledBallyAwardValue25k
+            led3: ledBallyAwardValue50k
+            led4: ledBallyAwardValueSpecial
+            
+    # -------------------
+    # SHOTS::SPOT::BALLY
+    # -------------------
+    shotSpotBallyB:
+        switch: s_1_19
+        enable_events: eventEnableShotSpotBallyB
+        disable_events: eventDisableShotSpotBallyB
+        restart_events: eventRestartShotSpotBallyB
+        reset_events: eventResetShotSpotBallyB
+        hit_events: eventHitShotSpotBallyB
+        profile: spShotSpotBally
+        show_tokens:
+            led1: ledBallyTargetB
+            led2: ledBallyAwardB1
+            led3: ledBallyAwardB2
+            led4: ledBallyAwardB3
+            
+    shotSpotBallyA:
+        switch: s_1_29
+        enable_events: eventEnableShotSpotBallyA
+        disable_events: eventDisableShotSpotBallyA
+        restart_events: eventRestartShotSpotBallyA
+        reset_events: eventResetShotSpotBallyA
+        hit_events: eventHitShotSpotBallyA
+        profile: spShotSpotBally
+        show_tokens:
+            led1: ledBallyTargetA
+            led2: ledBallyAwardA1
+            led3: ledBallyAwardA2
+            led4: ledBallyAwardA3
+            
+    shotSpotBallyL1:
+        switch: s_1_30
+        enable_events: eventEnableShotSpotBallyL1
+        disable_events: eventDisableShotSpotBallyL1
+        restart_events: eventRestartShotSpotBallyL1
+        reset_events: eventResetShotSpotBallyL1
+        hit_events: eventHitShotSpotBallyL1
+        profile: spShotSpotBally
+        show_tokens:
+            led1: ledBallyTargetL1
+            led2: ledBallyAwardL1A
+            led3: ledBallyAwardL1B
+            led4: ledBallyAwardL1C
+            
+    shotSpotBallyL2:
+        switch: s_1_18
+        enable_events: eventEnableShotSpotBallyL2
+        disable_events: eventDisableShotSpotBallyL2
+        restart_events: eventRestartShotSpotBallyL2
+        reset_events: eventResetShotSpotBallyL2
+        hit_events: eventHitShotSpotBallyL2
+        profile: spShotSpotBally
+        show_tokens:
+            led1: ledBallyTargetL2
+            led2: ledBallyAwardL2A
+            led3: ledBallyAwardL2B
+            led4: ledBallyAwardL2C
+            
+    shotSpotBallyY:
+        switch: s_1_17
+        enable_events: eventEnableShotSpotBallyY
+        disable_events: eventDisableShotSpotBallyY
+        restart_events: eventRestartShotSpotBallyY
+        reset_events: eventResetShotSpotBallyY
+        hit_events: eventHitShotSpotBallyY
+        profile: spShotSpotBally
+        show_tokens:
+            led1: ledBallyTargetY
+            led2: ledBallyAwardY1
+            led3: ledBallyAwardY2
+            led4: ledBallyAwardY3
+
+
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::SPOT::BALLY
+    # -------------------
+    shotGroupSpotBally:
+        shots:
+            - shotSpotBallyB
+            - shotSpotBallyA
+            - shotSpotBallyL1
+            - shotSpotBallyL2
+            - shotSpotBallyY
+        enable_events:
+            - eventEnableShotGroupSpotBally
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupSpotBally
+        reset_events:
+            - eventResetShotGroupSpotBally
+        restart_events:
+            - eventRestartShotGroupSpotBally
+            
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    
+    # -----------------------------
+    # PROFILE::SPOT::BALLY::AWARD
+    # -----------------------------
+    spShotSpotBallyAward:
+        states:
+          - name: litFlash10k
+            show: showLedSpotBallyAward
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+                color3: '000000'
+                color4: '000000'
+                color5: '000000'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+          - name: litFlash25k
+            show: showLedSpotBallyAward
+            speed: 1
+            show_tokens:
+                color1: 'cccc00'
+                color2: '000000'
+                color3: '000000'
+                color4: '000000'
+                color5: 'ffff00'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+          - name: litFlash50k
+            show: showLedSpotBallyAward
+            speed: 1
+            show_tokens:
+                color1: 'cccc00'
+                color2: 'cccc00'
+                color3: '000000'
+                color4: '000000'
+                color5: 'ffff00'
+                color6: 'ffff00'
+                color7: '000000'
+                color8: '000000'
+          - name: litFlashSpecial
+            show: showLedSpotBallyAward
+            speed: 1
+            show_tokens:
+                color1: 'cccc00'
+                color2: 'cccc00'
+                color3: 'cccc00'
+                color4: '000000'
+                color5: 'ffff00'
+                color6: 'ffff00'
+                color7: 'ffff00'
+                color8: '000000'
+          - name: litSolid
+            show: showLedSpotBallyAward
+            speed: 1
+            show_tokens:
+                color1: 'cccc00'
+                color2: 'cccc00'
+                color3: 'cccc00'
+                color4: 'cc0000'
+                color5: 'ffff00'
+                color6: 'ffff00'
+                color7: 'ffff00'
+                color8: 'ff0000'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::SPOT::BALLY
+    # -----------------------------
+    spShotSpotBally:
+        states:
+          - name: unlitFlash
+            show: showLedSpotBally
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'cccc00'
+                color3: '880000'
+                color4: '660000'
+          - name: litFlash
+            show: showLedSpotBally
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+                color3: '008800'
+                color4: '00ff00'
+        loop: false
+        
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    mode_modeBallyStarTrek_started:
+        - eventRestartShotGroupSpotBally
+        - eventRestartShotSpotBallyAward
+        #- eventResetShotRightLane
+        #- eventEnableShotRightLane
+        
+    ball_ending:
+        - eventDisableShotGroupSpotBally
+        #- eventDisableShotLeftOutlaneWhenLit
+        #- eventDisableShotRightOutlaneWhenLit
+        #- eventResetShotLeftOutlaneWhenLit
+        #- eventResetShotRightOutlaneWhenLit
+
+    #shotGroupInlineDrop_complete:
+    #    - eventResetShotLeftOutlaneWhenLit
+    #    - eventResetShotRightOutlaneWhenLit
+    #    - eventEnableShotLeftOutlaneWhenLit
+    #    - eventEnableShotRightOutlaneWhenLit
+
+    # ---------------
+    # SCORING::SPOT BALLY
+    # ---------------
+    #shotGroupSpotBally_unlitFlash_hit:
+    shotGroupSpotBally_hit:
+        - eventCompleteBonusOnes
+
+    # ---------------
+    # SCORING::SPOT BALLY::AWARD
+    # ---------------
+    #shotGroupSpotBally_complete:
+    shotGroupSpotBally_litFlash_complete:
+        # GET AWARD
+        - eventHitShotSpotBallyAward
+        # SWITCH MODES TO RESET BALLY
+        - eventSwitchModesShotSaucerSpotToReset
+        # ENABLE COLLECT MID-GAME BONUS
+        - eventStartModeCollectMidGameBonus
+        
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------
+    # SCORING::SPOT BALLY
+    # ---------------
+    #shotGroupSpotBally_unlitFlash_hit:
+    shotGroupSpotBally_hit:
+        score: 300
+        
+    # ---------------
+    # SCORING::SPOT BALLY::AWARD
+    # ---------------
+    shotSpotBallyAward_litFlash10k_hit:
+        score: 10000
+        
+    shotSpotBallyAward_litFlash25k_hit:
+        score: 25000
+        
+    shotSpotBallyAward_litFlash50k_hit:
+        score: 50000
+        
+    shotSpotBallyAward_litSpecial_hit:
+        score: 50000
+        
+    ## ---------------
+    ## SCORING::OUTLANES
+    ## ---------------
+    #sw_tagOutlane:
+    #    score: 1000
+    #  
+    #shotRightOutlaneWhenLit_unlitFlash_hit:
+    #    score: 24000
+    #shotRightOutlaneWhenLit_litFlash_hit:
+    #    score: 24000
+    #shotLeftOutlaneWhenLit_unlitFlash_hit:
+    #    score: 24000
+    #shotLeftOutlaneWhenLit_litFlash_hit:
+    #    score: 24000
+    #
+    ### -------------------
+    ### RIGHT::LANE
+    ### -------------------
+    #shotRightLane_hit:
+    #    score: 1000
+
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showLedSpotBallyAward:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color3)
+            (led4): (color4)
+        - time: 1
+          lights:
+            (led1): (color5)
+            (led2): (color6)
+            (led3): (color7)
+            (led4): (color8)
+        - time: 2
+        
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showLedSpotBally:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color4)
+        - time: 1
+          lights:
+            (led1): (color2)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color4)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color4)
+            (led3): (color4)
+            (led4): (color3)
+        - time: 3
+          lights:
+            (led1): (color2)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color4)
+        - time: 4
+          lights:
+            (led1): (color1)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color4)
+        - time: 5
+          lights:
+            (led1): (color2)
+            (led2): (color4)
+            (led3): (color4)
+            (led4): (color3)
+        - time: 6
+
+        

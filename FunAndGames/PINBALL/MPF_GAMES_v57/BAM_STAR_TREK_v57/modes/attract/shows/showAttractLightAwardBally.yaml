@@ -1,0 +1,175 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceFifteenLedTwoColor:
+      loops: 0
+      speed: 19
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledBallyAwardB1
+        led2: ledBallyAwardB2
+        led3: ledBallyAwardB3
+        led4: ledBallyAwardA1
+        led5: ledBallyAwardA2
+        led6: ledBallyAwardA3
+        led7: ledBallyAwardL1A
+        led8: ledBallyAwardL1B
+        led9: ledBallyAwardL1C
+        led10: ledBallyAwardL2A
+        led11: ledBallyAwardL2B
+        led12: ledBallyAwardL2C
+        led13: ledBallyAwardY1
+        led14: ledBallyAwardY2
+        led15: ledBallyAwardY3
+- time: "+2"
+
+  shows:
+    traceFifteenLedTwoColor:
+      loops: 0
+      speed: 19
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledBallyAwardB1
+        led2: ledBallyAwardB2
+        led3: ledBallyAwardB3
+        led4: ledBallyAwardA1
+        led5: ledBallyAwardA2
+        led6: ledBallyAwardA3
+        led7: ledBallyAwardL1A
+        led8: ledBallyAwardL1B
+        led9: ledBallyAwardL1C
+        led10: ledBallyAwardL2A
+        led11: ledBallyAwardL2B
+        led12: ledBallyAwardL2C
+        led13: ledBallyAwardY1
+        led14: ledBallyAwardY2
+        led15: ledBallyAwardY3
+- time: "+2"
+
+  shows:
+    traceFifteenLedTwoColor:
+      loops: 0
+      speed: 19
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledBallyAwardB1
+        led2: ledBallyAwardB2
+        led3: ledBallyAwardB3
+        led4: ledBallyAwardA1
+        led5: ledBallyAwardA2
+        led6: ledBallyAwardA3
+        led7: ledBallyAwardL1A
+        led8: ledBallyAwardL1B
+        led9: ledBallyAwardL1C
+        led10: ledBallyAwardL2A
+        led11: ledBallyAwardL2B
+        led12: ledBallyAwardL2C
+        led13: ledBallyAwardY1
+        led14: ledBallyAwardY2
+        led15: ledBallyAwardY3
+- time: "+2"
+
+  shows:
+    traceFifteenLedTwoColor:
+      loops: 0
+      speed: 19
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledBallyAwardB1
+        led2: ledBallyAwardB2
+        led3: ledBallyAwardB3
+        led4: ledBallyAwardA1
+        led5: ledBallyAwardA2
+        led6: ledBallyAwardA3
+        led7: ledBallyAwardL1A
+        led8: ledBallyAwardL1B
+        led9: ledBallyAwardL1C
+        led10: ledBallyAwardL2A
+        led11: ledBallyAwardL2B
+        led12: ledBallyAwardL2C
+        led13: ledBallyAwardY1
+        led14: ledBallyAwardY2
+        led15: ledBallyAwardY3
+- time: "+2"
+
+#
+#  shows:
+#    traceFifteenLedTwoColor:
+#      loops: 0
+#      speed: 9
+#      show_tokens:
+#        color1: '000000'
+#        color2: '00ffff'
+#        led1: ledBallyAwardB1
+#        led2: ledBallyAwardB2
+#        led3: ledBallyAwardB3
+#        led4: ledBallyAwardA1
+#        led5: ledBallyAwardA2
+#        led6: ledBallyAwardA3
+#        led7: ledBallyAwardL1A
+#        led8: ledBallyAwardL1B
+#        led9: ledBallyAwardL1C
+#        led10: ledBallyAwardL2A
+#        led11: ledBallyAwardL2B
+#        led12: ledBallyAwardL2C
+#        led13: ledBallyAwardY1
+#        led14: ledBallyAwardY2
+#        led15: ledBallyAwardY3
+#
+#- time: "+2"
+#
+#  shows:
+#    traceFifteenLedTwoColor:
+#      loops: 0
+#      speed: 9
+#      show_tokens:
+#        color1: '000000'
+#        color2: '0000ff'
+#        led1: ledBallyAwardB1
+#        led2: ledBallyAwardB2
+#        led3: ledBallyAwardB3
+#        led4: ledBallyAwardA1
+#        led5: ledBallyAwardA2
+#        led6: ledBallyAwardA3
+#        led7: ledBallyAwardL1A
+#        led8: ledBallyAwardL1B
+#        led9: ledBallyAwardL1C
+#        led10: ledBallyAwardL2A
+#        led11: ledBallyAwardL2B
+#        led12: ledBallyAwardL2C
+#        led13: ledBallyAwardY1
+#        led14: ledBallyAwardY2
+#        led15: ledBallyAwardY3
+#
+#- time: "+2"
+#
+#  shows:
+#    traceFifteenLedTwoColor:
+#      loops: 0
+#      speed: 9
+#      show_tokens:
+#        color1: '000000'
+#        color2: 'ff00ff'
+#        led1: ledBallyAwardB1
+#        led2: ledBallyAwardB2
+#        led3: ledBallyAwardB3
+#        led4: ledBallyAwardA1
+#        led5: ledBallyAwardA2
+#        led6: ledBallyAwardA3
+#        led7: ledBallyAwardL1A
+#        led8: ledBallyAwardL1B
+#        led9: ledBallyAwardL1C
+#        led10: ledBallyAwardL2A
+#        led11: ledBallyAwardL2B
+#        led12: ledBallyAwardL2C
+#        led13: ledBallyAwardY1
+#        led14: ledBallyAwardY2
+#        led15: ledBallyAwardY3
+#
+#- time: "+2"

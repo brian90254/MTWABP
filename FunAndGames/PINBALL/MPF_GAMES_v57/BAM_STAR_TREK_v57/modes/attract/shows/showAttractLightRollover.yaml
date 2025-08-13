@@ -1,0 +1,242 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - SILVERBALL MANIA
+
+- time: 0
+# ----------------------
+# RED CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: 'ff0000'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: 'ff0000'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: 'ff0000'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: 'ff0000'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: 'ff0000'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: 'ff0000'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: 'ff0000'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: 'ff0000'
+    # ----------------------
+- time: "+1.5"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: 'ffff00'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: 'ffff00'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: 'ffff00'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: 'ffff00'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: 'ffff00'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: 'ffff00'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: 'ffff00'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: 'ffff00'
+    # ----------------------
+- time: "+1.5"
+
+# ----------------------
+# GREEN CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '00ff00'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: '00ff00'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: '00ff00'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: '00ff00'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: '00ff00'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: '00ff00'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: '00ff00'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: '00ff00'
+    # ----------------------
+- time: "+1.5"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: 'ffff00'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: 'ffff00'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: 'ffff00'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: 'ffff00'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: 'ffff00'
+    ledRolloverTopUpperD: '000000'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: 'ffff00'
+    ledRolloverTopLowerD: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledRolloverTopUpperA: '000000'
+    ledRolloverTopUpperB: '000000'
+    ledRolloverTopUpperC: '000000'
+    ledRolloverTopUpperD: 'ffff00'
+    # ----------------------    
+    ledRolloverTopLowerA: '000000'
+    ledRolloverTopLowerB: '000000'
+    ledRolloverTopLowerC: '000000'
+    ledRolloverTopLowerD: 'ffff00'
+    # ----------------------
+- time: "+1.5"

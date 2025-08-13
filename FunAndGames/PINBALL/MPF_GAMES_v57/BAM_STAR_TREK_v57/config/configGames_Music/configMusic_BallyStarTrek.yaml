@@ -1,0 +1,310 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:  
+# ---------------------
+# SOUNDS::AMBIENCE::BALLY STAR TREK
+# ---------------------    
+  musicAmbienceBallyStarTrek001:
+    file: soundBallyStarTrek_Ambiance_001.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+# ---------------------
+# MUSIC::AMBIENCE::BALLY STAR TREK
+# ---------------------
+  musicBallyStarTrekAmbient002:
+    file: musicBallyStarTrekAmbient_002.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient003:
+    file: musicBallyStarTrekAmbient_003.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient004:
+    file: musicBallyStarTrekAmbient_004.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient005:
+    file: musicBallyStarTrekAmbient_005.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient006:
+    file: musicBallyStarTrekAmbient_006.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient007:
+    file: musicBallyStarTrekAmbient_007.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient008:
+    file: musicBallyStarTrekAmbient_008.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient009:
+    file: musicBallyStarTrekAmbient_009.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient010:
+    file: musicBallyStarTrekAmbient_010.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient011:
+    file: musicBallyStarTrekAmbient_011.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient012:
+    file: musicBallyStarTrekAmbient_012.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient013:
+    file: musicBallyStarTrekAmbient_013.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient014:
+    file: musicBallyStarTrekAmbient_014.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient015:
+    file: musicBallyStarTrekAmbient_015.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient016:
+    file: musicBallyStarTrekAmbient_016.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient017:
+    file: musicBallyStarTrekAmbient_017.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient018:
+    file: musicBallyStarTrekAmbient_018.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient019:
+    file: musicBallyStarTrekAmbient_019.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient020:
+    file: musicBallyStarTrekAmbient_020.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient021:
+    file: musicBallyStarTrekAmbient_021.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient022:
+    file: musicBallyStarTrekAmbient_022.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrekAmbient023:
+    file: musicBallyStarTrekAmbient_023.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+  musicBallyStarTrekAmbient024:
+    file: musicBallyStarTrekAmbient_024.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::BALLY VIKING
+# ---------------------
+  musicBallyStarTrek001:
+    file: musicBallyStarTrekTheme_001.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+  musicBallyStarTrek002:
+    file: musicBallyStarTrekTheme_002.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrek003:
+    file: musicBallyStarTrekTheme_003.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrek004:
+    file: musicBallyStarTrekTheme_004.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+  musicBallyStarTrek005:
+    file: musicBallyStarTrekTheme_005.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrek006:
+    file: musicBallyStarTrekTheme_006.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicBallyStarTrek007:
+    file: musicBallyStarTrekTheme_007.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      # ---------------------
+      # SOUNDS::BALLY VIKING
+      # ---------------------
+      - musicBallyStarTrek001
+      - musicBallyStarTrek002
+      - musicBallyStarTrek003
+      - musicBallyStarTrek004
+      - musicBallyStarTrek005
+      - musicBallyStarTrek006
+      - musicBallyStarTrek007
+      #- musicBallyStarTrek008
+      #- musicBallyStarTrek009
+      #- musicBallyStarTrek010
+      #- musicBallyStarTrek011
+      #- musicBallyStarTrek012
+      #- musicBallyStarTrek013
+      #- musicBallyStarTrek014
+      #- musicBallyStarTrek015
+
+  poolMusicBaseMode:
+    track: music
+    type: random_force_all
+    volume: 0.80
+    sounds:
+      # ---------------------
+      # SOUNDS::BALLY VIKING
+      # ---------------------
+      #- musicBallyStarTrekAmbient001
+      - musicBallyStarTrekAmbient002
+      - musicBallyStarTrekAmbient003
+      - musicBallyStarTrekAmbient004
+      - musicBallyStarTrekAmbient005
+      - musicBallyStarTrekAmbient006
+      - musicBallyStarTrekAmbient007
+      - musicBallyStarTrekAmbient008
+      - musicBallyStarTrekAmbient009
+      - musicBallyStarTrekAmbient010
+      - musicBallyStarTrekAmbient011
+      - musicBallyStarTrekAmbient012
+      - musicBallyStarTrekAmbient013
+      - musicBallyStarTrekAmbient014
+      - musicBallyStarTrekAmbient015
+      - musicBallyStarTrekAmbient016
+      - musicBallyStarTrekAmbient017
+      - musicBallyStarTrekAmbient018
+      - musicBallyStarTrekAmbient019
+      - musicBallyStarTrekAmbient020
+      - musicBallyStarTrekAmbient021
+      - musicBallyStarTrekAmbient022
+      - musicBallyStarTrekAmbient023
+      - musicBallyStarTrekAmbient024
+
+# ---------------------
+# MUSIC::PLAYLISTS
+# ---------------------
+playlists:
+  
+  playlistModeBallyStarTrekMusic:
+    shuffle: true
+    repeat: true
+    sounds:
+      # ---------------------
+      # SOUNDS::BALLY STAR TREK
+      # ---------------------
+      #- musicBallyStarTrekAmbient001
+      - musicBallyStarTrekAmbient002
+      - musicBallyStarTrekAmbient003
+      - musicBallyStarTrekAmbient004
+      - musicBallyStarTrekAmbient005
+      - musicBallyStarTrekAmbient006
+      - musicBallyStarTrekAmbient007
+      - musicBallyStarTrekAmbient008
+      - musicBallyStarTrekAmbient009
+      - musicBallyStarTrekAmbient010
+      - musicBallyStarTrekAmbient011
+      - musicBallyStarTrekAmbient012
+      - musicBallyStarTrekAmbient013
+      - musicBallyStarTrekAmbient014
+      - musicBallyStarTrekAmbient015
+      - musicBallyStarTrekAmbient016
+      - musicBallyStarTrekAmbient017
+      - musicBallyStarTrekAmbient018
+      - musicBallyStarTrekAmbient019
+      - musicBallyStarTrekAmbient020
+      - musicBallyStarTrekAmbient021
+      - musicBallyStarTrekAmbient022
+      - musicBallyStarTrekAmbient023
+      - musicBallyStarTrekAmbient024
+
+  playlistHighScore:
+    shuffle: true
+    repeat: false
+    crossfade_mode: override
+    crossfade_time: 5s
+    sounds:
+      - soundHighScore001
+      - soundHighScore002
+      - soundHighScore003
+      - soundHighScore004

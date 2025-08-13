@@ -1,0 +1,22 @@
+#config_version=6
+
+modes:
+#-----------------
+# MODES::BASE
+#-----------------
+- modeBase
+- bonus
+- high_score
+
+#-----------------
+# MODES::GAME SPECIFIC
+#-----------------
+- modeBallyStarTrek
+- modeBallyStarTrekShotSaucerSpot
+- modeBallyStarTrekShotSaucerReset
+
+#-----------------
+# MODES::GENERIC
+#-----------------
+- modeBallSave
+- modeCollectMidGameBonus
