@@ -1,0 +1,135 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: '00ffff'
+        color2: '0000ff'
+        led1: ledBumperTop2A
+        led2: ledBumperTop2B
+        led3: ledBumperTop2C
+        led4: ledBumperTop2D
+        led5: ledBumperTop2E
+        led6: ledBumperTop2F
+        led7: ledBumperTop2G
+        led8: ledBumperTop2H
+        led9: ledBumperTop2I
+        led10: ledBumperTop2J
+        led11: ledBumperTop2K
+        led12: ledBumperTop2L
+        
+- time: "+3"
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: '0000ff'
+        color2: 'ff00ff'
+        led1: ledBumperTop2A
+        led2: ledBumperTop2B
+        led3: ledBumperTop2C
+        led4: ledBumperTop2D
+        led5: ledBumperTop2E
+        led6: ledBumperTop2F
+        led7: ledBumperTop2G
+        led8: ledBumperTop2H
+        led9: ledBumperTop2I
+        led10: ledBumperTop2J
+        led11: ledBumperTop2K
+        led12: ledBumperTop2L
+        
+- time: "+3"
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: 'ff00ff'
+        color2: 'ff0000'
+        led1: ledBumperTop2A
+        led2: ledBumperTop2B
+        led3: ledBumperTop2C
+        led4: ledBumperTop2D
+        led5: ledBumperTop2E
+        led6: ledBumperTop2F
+        led7: ledBumperTop2G
+        led8: ledBumperTop2H
+        led9: ledBumperTop2I
+        led10: ledBumperTop2J
+        led11: ledBumperTop2K
+        led12: ledBumperTop2L
+
+- time: "+3"
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: 'ff0000'
+        color2: 'ffff00'
+        led1: ledBumperTop2A
+        led2: ledBumperTop2B
+        led3: ledBumperTop2C
+        led4: ledBumperTop2D
+        led5: ledBumperTop2E
+        led6: ledBumperTop2F
+        led7: ledBumperTop2G
+        led8: ledBumperTop2H
+        led9: ledBumperTop2I
+        led10: ledBumperTop2J
+        led11: ledBumperTop2K
+        led12: ledBumperTop2L
+        
+- time: "+3"
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: 'ffff00'
+        color2: '00ff00'
+        led1: ledBumperTop2A
+        led2: ledBumperTop2B
+        led3: ledBumperTop2C
+        led4: ledBumperTop2D
+        led5: ledBumperTop2E
+        led6: ledBumperTop2F
+        led7: ledBumperTop2G
+        led8: ledBumperTop2H
+        led9: ledBumperTop2I
+        led10: ledBumperTop2J
+        led11: ledBumperTop2K
+        led12: ledBumperTop2L
+        
+- time: "+3"
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: '00ff00'
+        color2: '00ffff'
+        led1: ledBumperTop2A
+        led2: ledBumperTop2B
+        led3: ledBumperTop2C
+        led4: ledBumperTop2D
+        led5: ledBumperTop2E
+        led6: ledBumperTop2F
+        led7: ledBumperTop2G
+        led8: ledBumperTop2H
+        led9: ledBumperTop2I
+        led10: ledBumperTop2J
+        led11: ledBumperTop2K
+        led12: ledBumperTop2L
+        
+- time: "+3"

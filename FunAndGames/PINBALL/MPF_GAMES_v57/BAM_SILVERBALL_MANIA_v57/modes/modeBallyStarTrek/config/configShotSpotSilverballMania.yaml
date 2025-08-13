@@ -1,0 +1,902 @@
+#config_version=6
+
+# BALLY SILVERBALL MANIA
+
+# *****************************
+# SHOTS::SPOT::SILVERBALL MANIA
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::SPOT::SILVERBALL MANIA
+    # -------------------
+    shotSpotSilverballManiaS1:
+        switch: s_1_8
+        enable_events: eventEnableShotSpotSilverballManiaS1
+        disable_events: eventDisableShotSpotSilverballManiaS1
+        restart_events: eventRestartShotSpotSilverballManiaS1
+        reset_events: eventResetShotSpotSilverballManiaS1
+        hit_events: eventHitShotSpotSilverballManiaS1
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotSilverball
+        show_tokens:
+            led1: ledTargetSTop
+            led2: ledSpotSilverballS1
+            led3: ledSpotSilverballS2
+            led4: ledSpotSilverballS3
+            #led5: ledSpotSilverballS4
+
+    shotSpotSilverballManiaI1:
+        switch: s_1_7
+        enable_events: eventEnableShotSpotSilverballManiaI1
+        disable_events: eventDisableShotSpotSilverballManiaI1
+        restart_events: eventRestartShotSpotSilverballManiaI1
+        reset_events: eventResetShotSpotSilverballManiaI1
+        hit_events: eventHitShotSpotSilverballManiaI1
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotSilverball
+        show_tokens:
+            led1: ledTargetITop
+            led2: ledSpotSilverballIA1
+            led3: ledSpotSilverballIA2
+            led4: ledSpotSilverballIA3
+            #led5: ledSpotSilverballIA4
+            
+    shotSpotSilverballManiaL1:
+        switch: s_1_9
+        enable_events: eventEnableShotSpotSilverballManiaL1
+        disable_events: eventDisableShotSpotSilverballManiaL1
+        restart_events: eventRestartShotSpotSilverballManiaL1
+        reset_events: eventResetShotSpotSilverballManiaL1
+        hit_events: eventHitShotSpotSilverballManiaL1
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotSilverball
+        show_tokens:
+            led1: ledTargetLTop
+            led2: ledSpotSilverballLA1
+            led3: ledSpotSilverballLA2
+            led4: ledSpotSilverballLA3
+            #led5: ledSpotSilverballLA4
+            
+    shotSpotSilverballManiaV1:
+        switch: s_1_6
+        enable_events: eventEnableShotSpotSilverballManiaV1
+        disable_events: eventDisableShotSpotSilverballManiaV1
+        restart_events: eventRestartShotSpotSilverballManiaV1
+        reset_events: eventResetShotSpotSilverballManiaV1
+        hit_events: eventHitShotSpotSilverballManiaV1
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotSilverball
+        show_tokens:
+            led1: ledTargetVTop
+            led2: ledSpotSilverballV1
+            led3: ledSpotSilverballV2
+            led4: ledSpotSilverballV3
+            #led5: ledSpotSilverballV4
+            
+    shotSpotSilverballManiaE1:
+        switch: s_1_11
+        enable_events: eventEnableShotSpotSilverballManiaE1
+        disable_events: eventDisableShotSpotSilverballManiaE1
+        restart_events: eventRestartShotSpotSilverballManiaE1
+        reset_events: eventResetShotSpotSilverballManiaE1
+        hit_events: eventHitShotSpotSilverballManiaE1
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotSilverball
+        show_tokens:
+            led1: ledTargetELeft
+            led2: ledSpotSilverballE1
+            led3: ledSpotSilverballE2
+            led4: ledSpotSilverballE3
+            #led5: ledSpotSilverballE4
+            
+    shotSpotSilverballManiaR1:
+        switch: s_1_5
+        enable_events: eventEnableShotSpotSilverballManiaR1
+        disable_events: eventDisableShotSpotSilverballManiaR1
+        restart_events: eventRestartShotSpotSilverballManiaR1
+        reset_events: eventResetShotSpotSilverballManiaR1
+        hit_events: eventHitShotSpotSilverballManiaR1
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotSilverball
+        show_tokens:
+            led1: ledTargetRLeft
+            led2: ledSpotSilverballR1
+            led3: ledSpotSilverballR2
+            led4: ledSpotSilverballR3
+            #led5: ledSpotSilverballR4
+
+    shotSpotSilverballManiaB1:
+        switch: s_1_10
+        enable_events: eventEnableShotSpotSilverballManiaB1
+        disable_events: eventDisableShotSpotSilverballManiaB1
+        restart_events: eventRestartShotSpotSilverballManiaB1
+        reset_events: eventResetShotSpotSilverballManiaB1
+        hit_events: eventHitShotSpotSilverballManiaB1
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotSilverball
+        show_tokens:
+            led1: ledTargetBLeft
+            led2: ledSpotSilverballB1
+            led3: ledSpotSilverballB2
+            led4: ledSpotSilverballB3
+            #led5: ledSpotSilverballB4
+            
+    shotSpotSilverballManiaA1:
+        switch: s_1_4
+        enable_events: eventEnableShotSpotSilverballManiaA1
+        disable_events: eventDisableShotSpotSilverballManiaA1
+        restart_events: eventRestartShotSpotSilverballManiaA1
+        reset_events: eventResetShotSpotSilverballManiaA1
+        hit_events: eventHitShotSpotSilverballManiaA1
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotSilverball
+        show_tokens:
+            led1: ledTargetARight
+            led2: ledSpotSilverballAA1
+            led3: ledSpotSilverballAA2
+            led4: ledSpotSilverballAA3
+            #led5: ledSpotSilverballAA4
+            
+    shotSpotSilverballManiaL2:
+        switch: s_1_19
+        enable_events: eventEnableShotSpotSilverballManiaL2
+        disable_events: eventDisableShotSpotSilverballManiaL2
+        restart_events: eventRestartShotSpotSilverballManiaL2
+        reset_events: eventResetShotSpotSilverballManiaL2
+        hit_events: eventHitShotSpotSilverballManiaL2
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotSilverball
+        show_tokens:
+            led1: ledTargetL1Right
+            led2: ledSpotSilverballLB1
+            led3: ledSpotSilverballLB2
+            led4: ledSpotSilverballLB3
+            #led5: ledSpotSilverballLB4
+            
+    shotSpotSilverballManiaL3:
+        switch: s_1_28
+        enable_events: eventEnableShotSpotSilverballManiaL3
+        disable_events: eventDisableShotSpotSilverballManiaL3
+        restart_events: eventRestartShotSpotSilverballManiaL3
+        reset_events: eventResetShotSpotSilverballManiaL3
+        hit_events: eventHitShotSpotSilverballManiaL3
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotSilverball
+        show_tokens:
+            led1: ledTargetL2Right
+            led2: ledSpotSilverballLC1
+            led3: ledSpotSilverballLC2
+            led4: ledSpotSilverballLC3
+            #led5: ledSpotSilverballLC4
+            
+    shotSpotSilverballManiaM1:
+        switch: s_1_29
+        enable_events: eventEnableShotSpotSilverballManiaM1
+        disable_events: eventDisableShotSpotSilverballManiaM1
+        restart_events: eventRestartShotSpotSilverballManiaM1
+        reset_events: eventResetShotSpotSilverballManiaM1
+        hit_events: eventHitShotSpotSilverballManiaM1
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotMania
+        show_tokens:
+            led1: ledOutlaneMLeft
+            led2: ledSpotSilverballM1
+            led3: ledSpotSilverballM2
+            led4: ledSpotSilverballM3
+            #led5: ledSpotSilverballM4
+
+    shotSpotSilverballManiaA2:
+        switch: s_1_18
+        enable_events: eventEnableShotSpotSilverballManiaA2
+        disable_events: eventDisableShotSpotSilverballManiaA2
+        restart_events: eventRestartShotSpotSilverballManiaA2
+        reset_events: eventResetShotSpotSilverballManiaA2
+        hit_events: eventHitShotSpotSilverballManiaA2
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotMania
+        show_tokens:
+            led1: ledReturnALeft
+            led2: ledSpotSilverballAB1
+            led3: ledSpotSilverballAB2
+            led4: ledSpotSilverballAB3
+            #led5: ledSpotSilverballAB4
+            
+    shotSpotSilverballManiaN1:
+        switch: s_1_30
+        enable_events: eventEnableShotSpotSilverballManiaN1
+        disable_events: eventDisableShotSpotSilverballManiaN1
+        restart_events: eventRestartShotSpotSilverballManiaN1
+        reset_events: eventResetShotSpotSilverballManiaN1
+        hit_events: eventHitShotSpotSilverballManiaN1
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotMania
+        show_tokens:
+            led1: ledTargetNCenter
+            led2: ledSpotSilverballN1
+            led3: ledSpotSilverballN2
+            led4: ledSpotSilverballN3
+            #led5: ledSpotSilverballN4
+            
+    shotSpotSilverballManiaI2:
+        switch: s_1_17
+        enable_events: eventEnableShotSpotSilverballManiaI2
+        disable_events: eventDisableShotSpotSilverballManiaI2
+        restart_events: eventRestartShotSpotSilverballManiaI2
+        reset_events: eventResetShotSpotSilverballManiaI2
+        hit_events: eventHitShotSpotSilverballManiaI2
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotMania
+        show_tokens:
+            led1: ledReturnIRight
+            led2: ledSpotSilverballIB1
+            led3: ledSpotSilverballIB2
+            led4: ledSpotSilverballIB3
+            #led5: ledSpotSilverballIB4
+            
+    shotSpotSilverballManiaA3:
+        switch: s_1_31
+        enable_events: eventEnableShotSpotSilverballManiaA3
+        disable_events: eventDisableShotSpotSilverballManiaA3
+        restart_events: eventRestartShotSpotSilverballManiaA3
+        reset_events: eventResetShotSpotSilverballManiaA3
+        hit_events: eventHitShotSpotSilverballManiaA3
+        #profile: spShotSpotSilverballMania
+        profile: spShotSpotMania
+        show_tokens:
+            led1: ledOutlaneARight
+            led2: ledSpotSilverballAC1
+            led3: ledSpotSilverballAC2
+            led4: ledSpotSilverballAC3
+            #led5: ledSpotSilverballAC4
+            
+    # -------------------
+    # SHOTS::SILVERBALL MANIA::COMPLETE
+    # -------------------
+    shotSilverballManiaComplete:
+        enable_events: eventEnableShotSilverballManiaComplete
+        disable_events: eventDisableShotSilverballManiaComplete
+        restart_events: eventRestartShotSilverballManiaComplete
+        reset_events: eventResetShotSilverballManiaComplete
+        hit_events: eventHitShotSilverballManiaComplete
+        profile: spShotSilverballManiaComplete
+
+            
+    shotSilverballManiaSpecial:
+        enable_events: eventEnableShotSilverballManiaSpecial
+        disable_events: eventDisableShotSilverballManiaSpecial
+        restart_events: eventRestartShotSilverballManiaSpecial
+        reset_events: eventResetShotSilverballManiaSpecial
+        hit_events: eventHitShotSilverballManiaSpecial
+        profile: spShotSilverballManiaSpecial
+        show_tokens:
+            led1: ledSpecial1
+            led2: ledSpecial2
+            led3: ledSpecial3
+            
+    shotSilverballManiaKicker:
+        enable_events: eventEnableShotSilverballManiaKicker
+        disable_events: eventDisableShotSilverballManiaKicker
+        restart_events: eventRestartShotSilverballManiaKicker
+        reset_events: eventResetShotSilverballManiaKicker
+        hit_events: eventHitShotSilverballManiaKicker
+        profile: spShotSilverballManiaKicker
+        show_tokens:
+            led1: ledKicker1
+            led2: ledKicker2
+            led3: ledKicker3
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::LANES::LEFT
+    # -------------------
+    shotGroupSpotSilverballMania:
+        shots:
+            - shotSpotSilverballManiaS1
+            - shotSpotSilverballManiaI1
+            - shotSpotSilverballManiaL1
+            - shotSpotSilverballManiaV1
+            - shotSpotSilverballManiaE1
+            - shotSpotSilverballManiaR1
+            - shotSpotSilverballManiaB1
+            - shotSpotSilverballManiaA1
+            - shotSpotSilverballManiaL2
+            - shotSpotSilverballManiaL3
+            - shotSpotSilverballManiaM1
+            - shotSpotSilverballManiaA2
+            - shotSpotSilverballManiaN1
+            - shotSpotSilverballManiaI2
+            - shotSpotSilverballManiaA3
+        enable_events:
+            - eventEnableShotGroupSpotSilverballMania
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupSpotSilverballMania
+        reset_events:
+            - eventResetShotGroupSpotSilverballMania
+        restart_events:
+            - eventRestartShotGroupSpotSilverballMania
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::SPOT::SIVERBALL
+    # -----------------------------
+    spShotSpotSilverball:
+        states:
+          - name: unlitFlash
+            show: showLedShotSpotSilverballMania
+            speed: 3
+            show_tokens:
+                color1: 'ff00ff'
+                color2: 'cc00cc'
+                #color3: '000088'
+                #color4: '000066'
+                color3: '000000'
+                color4: '000088'
+          - name: litFlash
+            show: showLedShotSpotSilverballMania
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+                color3: '00ffff'
+                color4: '00ffff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::SPOT::MANIA
+    # -----------------------------
+    spShotSpotMania:
+        states:
+          - name: unlitFlash
+            show: showLedShotSpotSilverballMania
+            speed: 3
+            show_tokens:
+                color1: 'ff0000'
+                color2: 'cc0000'
+                #color3: '886600'
+                #color4: '664400'
+                color3: '000000'
+                color4: '664400'
+          - name: litFlash
+            show: showLedShotSpotSilverballMania
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+                color3: 'ffff00'
+                color4: 'ffff00'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::SILVERBALL MANIA::COMPLETE
+    # -----------------------------
+    spShotSilverballManiaComplete:
+        states:
+          - name: litFlash15K
+            show: showLedShotSilverballManiaComplete
+            speed: 3
+            show_tokens:
+                #color1: '660066'
+                color1: '000000'
+                color2: '440044'
+                color3: '000000'
+                color4: '000000'
+                color5: '000000'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+          - name: litFlash30K
+            show: showLedShotSilverballManiaComplete
+            speed: 3
+            show_tokens:
+                color1: 'ff00ff'
+                color2: 'cc00cc'
+                #color3: '660066'
+                color3: '000000'
+                color4: '440044'
+                color5: '000000'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+          - name: litFlashSpecial
+            show: showLedShotSilverballManiaComplete
+            speed: 3
+            show_tokens:
+                color1: 'ff00ff'
+                color2: 'cc00cc'
+                color3: 'ff00ff'
+                color4: 'cc00cc'
+                color5: '660000'
+                color6: '440000'
+                color7: '000000'
+                color8: '000000'
+          - name: litFlashKicker
+            show: showLedShotSilverballManiaComplete
+            speed: 3
+            show_tokens:
+                color1: 'ff00ff'
+                color2: 'cc00cc'
+                color3: 'ff00ff'
+                color4: 'cc00cc'
+                color5: 'ff0000'
+                color6: 'cc0000'
+                color7: '660000'
+                color8: '440000'
+          - name: litSolid
+            show: showLedShotSilverballManiaComplete
+            speed: 3
+            show_tokens:
+                color1: 'ff00ff'
+                color2: 'cc00cc'
+                color3: 'ff00ff'
+                color4: 'cc00cc'
+                color5: 'ff0000'
+                color6: 'cc0000'
+                color7: 'ff0000'
+                color8: 'cc0000'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::SILVERBALL MANIA::COMPLETE
+    # -----------------------------
+    #spShotSilverballManiaSpecial:
+    #    states:
+    #      - name: unlitFlash
+    #        show: showShotSilverballManiaSpecial
+    #        speed: 3
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: '000000'
+    #            color3: '000000'
+    #            color4: '000000'
+    #        # ----------------
+    #      - name: litFlashSpecial
+    #        show: showShotSilverballManiaSpecial
+    #        speed: 3
+    #        show_tokens:
+    #            color1: 'ff0000'
+    #            color2: '000000'
+    #            color3: '000000'
+    #            color4: '000000'
+    #        # ----------------
+    #      - name: litFlashKicker
+    #        show: showShotSilverballManiaSpecial
+    #        speed: 3
+    #        show_tokens:
+    #            color1: 'ffffff'
+    #            color2: 'ffffff'
+    #            color3: 'ff0000'
+    #            color4: '000000'
+    #        # ----------------
+    #      - name: litSolid
+    #        show: showShotSilverballManiaSpecial
+    #        speed: 3
+    #        show_tokens:
+    #            color1: 'ffffff'
+    #            color2: 'ffffff'
+    #            color3: 'ffffff'
+    #            color4: 'ffffff'
+    #        # ----------------
+    #    loop: false
+        
+    spShotSilverballManiaSpecial:
+        states:
+          - name: unlitFlashSpecial
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+            # ----------------
+          - name: litFlashSpecial
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: 'ffffff'
+                color2: '000000'
+            # ----------------
+          - name: litSolidSpecial
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: 'ffffff'
+                color2: 'ffffff'
+            # ----------------
+          #- name: litSolid
+          #  show: triangleThreeLedTwoColor
+          #  speed: 3
+          #  show_tokens:
+          #      color1: '000000'
+          #      color2: '000000'
+          #  # ----------------
+        loop: false
+        
+    spShotSilverballManiaKicker:
+        states:
+          #- name: unlitFlashKicker
+          #  show: triangleThreeLedTwoColor
+          #  speed: 3
+          #  show_tokens:
+          #      color1: '000000'
+          #      color2: '000000'
+            # ----------------
+          - name: litFlashKicker
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: 'ffffff'
+                color2: '000000'
+            # ----------------
+          - name: litSolidKicker
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: 'ffffff'
+                color2: 'ffffff'
+            # ----------------
+          #- name: litSolid
+          #  show: triangleThreeLedTwoColor
+          #  speed: 3
+          #  show_tokens:
+          #      color1: '000000'
+          #      color2: '000000'
+          #  # ----------------
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    mode_modeBallyStarTrek_started:
+        # RESTART SPOT SILVERBALL MANIA
+        - eventRestartShotGroupSpotSilverballMania
+        - eventRestartShotSilverballManiaComplete
+        # --------------------------------------
+        - eventRestartShotSilverballManiaSpecial
+        
+    ball_ending:
+        - eventDisableShotSilverballManiaKicker
+        
+    # COMPLETE SILVERBALL MANIA SPECIALS
+    shotGroupSpotSilverballMania_litFlash_complete:
+        - eventPlayShowSilverballManiaComplete|2s
+        # ---------------------------------------
+        - eventHitShotSilverballManiaSpecial|2s
+
+    # ONCE SPECIAL HIT, ENABLE KICKER SPECIAL
+    shotSilverballManiaSpecial_litSolidSpecial_hit:
+        - eventRestartShotSilverballManiaKicker|2s
+    # KICKER SPECIAL HIT WHEN BALL HELD (AFTER ENABLE)
+    ball_hold_ballHoldSaucerTop_held_ball:
+        - eventHitShotSilverballManiaKicker
+
+    # -------------------
+    # SPOT SILVERBALL MANIA
+    # -------------------
+    eventCheckShotSpotSilverballMania.1{current_player.shot_shotSpotSilverballManiaS1==0}:
+        - eventHitShotSpotSilverballManiaS1
+        
+    eventCheckShotSpotSilverballMania.2{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==0}:
+        - eventHitShotSpotSilverballManiaI1
+        
+    eventCheckShotSpotSilverballMania.3{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==0}:
+        - eventHitShotSpotSilverballManiaL1
+    
+    eventCheckShotSpotSilverballMania.4{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==0}:
+        - eventHitShotSpotSilverballManiaV1
+    
+    eventCheckShotSpotSilverballMania.5{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==1 and current_player.shot_shotSpotSilverballManiaE1==0}:
+        - eventHitShotSpotSilverballManiaE1
+    
+    eventCheckShotSpotSilverballMania.6{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==1 and current_player.shot_shotSpotSilverballManiaE1==1 and current_player.shot_shotSpotSilverballManiaR1==0}:
+        - eventHitShotSpotSilverballManiaR1
+    
+    eventCheckShotSpotSilverballMania.7{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==1 and current_player.shot_shotSpotSilverballManiaE1==1 and current_player.shot_shotSpotSilverballManiaR1==1 and current_player.shot_shotSpotSilverballManiaB1==0}:
+        - eventHitShotSpotSilverballManiaB1
+    
+    eventCheckShotSpotSilverballMania.8{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==1 and current_player.shot_shotSpotSilverballManiaE1==1 and current_player.shot_shotSpotSilverballManiaR1==1 and current_player.shot_shotSpotSilverballManiaB1==1 and current_player.shot_shotSpotSilverballManiaA1==0}:
+        - eventHitShotSpotSilverballManiaA1
+    
+    eventCheckShotSpotSilverballMania.9{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==1 and current_player.shot_shotSpotSilverballManiaE1==1 and current_player.shot_shotSpotSilverballManiaR1==1 and current_player.shot_shotSpotSilverballManiaB1==1 and current_player.shot_shotSpotSilverballManiaA1==1 and current_player.shot_shotSpotSilverballManiaL2==0}:
+        - eventHitShotSpotSilverballManiaL2
+    
+    eventCheckShotSpotSilverballMania.10{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==1 and current_player.shot_shotSpotSilverballManiaE1==1 and current_player.shot_shotSpotSilverballManiaR1==1 and current_player.shot_shotSpotSilverballManiaB1==1 and current_player.shot_shotSpotSilverballManiaA1==1 and current_player.shot_shotSpotSilverballManiaL2==1 and current_player.shot_shotSpotSilverballManiaL3==0}:
+        - eventHitShotSpotSilverballManiaL3
+    
+    eventCheckShotSpotSilverballMania.11{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==1 and current_player.shot_shotSpotSilverballManiaE1==1 and current_player.shot_shotSpotSilverballManiaR1==1 and current_player.shot_shotSpotSilverballManiaB1==1 and current_player.shot_shotSpotSilverballManiaA1==1 and current_player.shot_shotSpotSilverballManiaL2==1 and current_player.shot_shotSpotSilverballManiaL3==1 and current_player.shot_shotSpotSilverballManiaM1==0}:
+        - eventHitShotSpotSilverballManiaM1
+    
+    eventCheckShotSpotSilverballMania.12{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==1 and current_player.shot_shotSpotSilverballManiaE1==1 and current_player.shot_shotSpotSilverballManiaR1==1 and current_player.shot_shotSpotSilverballManiaB1==1 and current_player.shot_shotSpotSilverballManiaA1==1 and current_player.shot_shotSpotSilverballManiaL2==1 and current_player.shot_shotSpotSilverballManiaL3==1 and current_player.shot_shotSpotSilverballManiaM1==1 and current_player.shot_shotSpotSilverballManiaA2==0}:
+        - eventHitShotSpotSilverballManiaA2
+    
+    eventCheckShotSpotSilverballMania.13{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==1 and current_player.shot_shotSpotSilverballManiaE1==1 and current_player.shot_shotSpotSilverballManiaR1==1 and current_player.shot_shotSpotSilverballManiaB1==1 and current_player.shot_shotSpotSilverballManiaA1==1 and current_player.shot_shotSpotSilverballManiaL2==1 and current_player.shot_shotSpotSilverballManiaL3==1 and current_player.shot_shotSpotSilverballManiaM1==1 and current_player.shot_shotSpotSilverballManiaA2==1 and current_player.shot_shotSpotSilverballManiaN1==0}:
+        - eventHitShotSpotSilverballManiaN1
+    
+    eventCheckShotSpotSilverballMania.14{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==1 and current_player.shot_shotSpotSilverballManiaE1==1 and current_player.shot_shotSpotSilverballManiaR1==1 and current_player.shot_shotSpotSilverballManiaB1==1 and current_player.shot_shotSpotSilverballManiaA1==1 and current_player.shot_shotSpotSilverballManiaL2==1 and current_player.shot_shotSpotSilverballManiaL3==1 and current_player.shot_shotSpotSilverballManiaM1==1 and current_player.shot_shotSpotSilverballManiaA2==1 and current_player.shot_shotSpotSilverballManiaN1==1 and current_player.shot_shotSpotSilverballManiaI2==0}:
+        - eventHitShotSpotSilverballManiaI2
+    
+    eventCheckShotSpotSilverballMania.15{current_player.shot_shotSpotSilverballManiaS1==1 and current_player.shot_shotSpotSilverballManiaI1==1 and current_player.shot_shotSpotSilverballManiaL1==1 and current_player.shot_shotSpotSilverballManiaV1==1 and current_player.shot_shotSpotSilverballManiaE1==1 and current_player.shot_shotSpotSilverballManiaR1==1 and current_player.shot_shotSpotSilverballManiaB1==1 and current_player.shot_shotSpotSilverballManiaA1==1 and current_player.shot_shotSpotSilverballManiaL2==1 and current_player.shot_shotSpotSilverballManiaL3==1 and current_player.shot_shotSpotSilverballManiaM1==1 and current_player.shot_shotSpotSilverballManiaA2==1 and current_player.shot_shotSpotSilverballManiaN1==1 and current_player.shot_shotSpotSilverballManiaI2==1 and current_player.shot_shotSpotSilverballManiaA3==0}:
+        - eventHitShotSpotSilverballManiaA3
+        
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # --------------------------------------------
+    # HITTING INDIVIDUAL TARGETS
+    shotGroupSpotSilverballMania_unlitFlash_hit:
+        score: 1000
+        
+    shotGroupSpotSilverballMania_litFlash_hit:
+        score: 100
+
+    # --------------------------------------------
+    # SPECIAL SCORED ON SECOND COMPLETION
+    shotSilverballManiaSpecial_litFlashSpecial_hit:
+        score: 50000
+    shotSilverballManiaSpecial_litSolidSpecial_hit:
+        score: 25000
+
+    shotSilverballManiaKicker_litFlashKicker_hit:
+        score: 50000
+    shotSilverballManiaKicker_litSolidKicker_hit:
+        score: 25000
+        
+    # --------------------------------------------
+    # ENABLE KICKER SPECIAL
+    #shotSilverballManiaSpecial_litFlashKicker_hit:
+    #    score: 50000
+    
+    #ball_hold_ballHoldSaucerTop_held_ball.1{current_player.shot_shotSilverballManiaSpecial==2}:
+    #    score: 50000
+    #
+    #ball_hold_ballHoldSaucerTop_held_ball.2{current_player.shot_shotSilverballManiaSpecial==3}:
+    #    score: 25000
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+  # --------------------------
+  # SILVERBALL MANIA COMPLETE
+  # --------------------------
+  eventPlayShowSilverballManiaComplete:
+    showSilverballManiaComplete:
+      loops: 0
+      speed: 3
+      key: keyShowSilverballManiaComplete
+      
+# *********************
+# SHOWS
+# *********************
+shows:
+  # -----------------------------------
+  # SHOW::LED::LANE::TOP::ROTATE
+  # -----------------------------------
+    showLedShotSpotSilverballMania:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+        - time: 1
+          lights:
+            (led1): (color2)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+        - time: 3
+        
+  # -----------------------------------
+  # SHOW::LED::SILVERBALL MANIA::COMPLETE
+  # -----------------------------------
+    showLedShotSilverballManiaComplete:
+        - time: 0
+          lights:
+            # --------------------
+            ledBonus15K1: (color1)
+            ledBonus15K2: (color2)
+            ledBonus15K3: (color1)
+            ledBonus15K4: (color1)
+            ledBonus15K5: (color2)
+            ledBonus15K6: (color1)
+            ledBonus15K7: (color1)
+            # --------------------
+            ledBonus30K1: (color3)
+            ledBonus30K2: (color4)
+            ledBonus30K3: (color3)
+            ledBonus30K4: (color3)
+            ledBonus30K5: (color4)
+            ledBonus30K6: (color3)
+            ledBonus30K7: (color3)
+            # --------------------
+            ledSpecial1: (color6)
+            ledSpecial2: (color5)
+            ledSpecial3: (color5)
+            # --------------------
+            ledKicker1: (color8)
+            ledKicker2: (color7)
+            ledKicker3: (color7)
+            # --------------------
+        - time: 1
+          lights:
+            # --------------------
+            ledBonus15K1: (color1)
+            ledBonus15K2: (color1)
+            ledBonus15K3: (color2)
+            ledBonus15K4: (color1)
+            ledBonus15K5: (color1)
+            ledBonus15K6: (color2)
+            ledBonus15K7: (color1)
+            # --------------------
+            ledBonus30K1: (color3)
+            ledBonus30K2: (color3)
+            ledBonus30K3: (color4)
+            ledBonus30K4: (color3)
+            ledBonus30K5: (color3)
+            ledBonus30K6: (color4)
+            ledBonus30K7: (color3)
+            # --------------------
+            ledSpecial1: (color5)
+            ledSpecial2: (color6)
+            ledSpecial3: (color5)
+            # --------------------
+            ledKicker1: (color7)
+            ledKicker2: (color8)
+            ledKicker3: (color7)
+            # --------------------
+        - time: 2
+          lights:
+            # --------------------
+            ledBonus15K1: (color1)
+            ledBonus15K2: (color1)
+            ledBonus15K3: (color1)
+            ledBonus15K4: (color2)
+            ledBonus15K5: (color1)
+            ledBonus15K6: (color1)
+            ledBonus15K7: (color2)
+            # --------------------
+            ledBonus30K1: (color3)
+            ledBonus30K2: (color3)
+            ledBonus30K3: (color3)
+            ledBonus30K4: (color4)
+            ledBonus30K5: (color3)
+            ledBonus30K6: (color3)
+            ledBonus30K7: (color4)
+            # --------------------
+            ledSpecial1: (color5)
+            ledSpecial2: (color5)
+            ledSpecial3: (color6)
+            # --------------------
+            ledKicker1: (color7)
+            ledKicker2: (color7)
+            ledKicker3: (color8)
+            # --------------------
+        - time: 3
+          lights:
+            # --------------------
+            ledBonus15K1: (color1)
+            ledBonus15K2: (color2)
+            ledBonus15K3: (color1)
+            ledBonus15K4: (color1)
+            ledBonus15K5: (color2)
+            ledBonus15K6: (color1)
+            ledBonus15K7: (color1)
+            # --------------------
+            ledBonus30K1: (color3)
+            ledBonus30K2: (color4)
+            ledBonus30K3: (color3)
+            ledBonus30K4: (color3)
+            ledBonus30K5: (color4)
+            ledBonus30K6: (color3)
+            ledBonus30K7: (color3)
+            # --------------------
+            ledSpecial1: (color6)
+            ledSpecial2: (color5)
+            ledSpecial3: (color5)
+            # --------------------
+            ledKicker1: (color8)
+            ledKicker2: (color7)
+            ledKicker3: (color7)
+            # --------------------
+        - time: 4
+          lights:
+            # --------------------
+            ledBonus15K1: (color1)
+            ledBonus15K2: (color1)
+            ledBonus15K3: (color2)
+            ledBonus15K4: (color1)
+            ledBonus15K5: (color1)
+            ledBonus15K6: (color2)
+            ledBonus15K7: (color1)
+            # --------------------
+            ledBonus30K1: (color3)
+            ledBonus30K2: (color3)
+            ledBonus30K3: (color4)
+            ledBonus30K4: (color3)
+            ledBonus30K5: (color3)
+            ledBonus30K6: (color4)
+            ledBonus30K7: (color3)
+            # --------------------
+            ledSpecial1: (color5)
+            ledSpecial2: (color6)
+            ledSpecial3: (color5)
+            # --------------------
+            ledKicker1: (color7)
+            ledKicker2: (color8)
+            ledKicker3: (color7)
+            # --------------------
+        - time: 5
+          lights:
+            # --------------------
+            ledBonus15K1: (color1)
+            ledBonus15K2: (color1)
+            ledBonus15K3: (color1)
+            ledBonus15K4: (color2)
+            ledBonus15K5: (color1)
+            ledBonus15K6: (color1)
+            ledBonus15K7: (color2)
+            # --------------------
+            ledBonus30K1: (color3)
+            ledBonus30K2: (color3)
+            ledBonus30K3: (color3)
+            ledBonus30K4: (color4)
+            ledBonus30K5: (color3)
+            ledBonus30K6: (color3)
+            ledBonus30K7: (color4)
+            # --------------------
+            ledSpecial1: (color5)
+            ledSpecial2: (color5)
+            ledSpecial3: (color6)
+            # --------------------
+            ledKicker1: (color7)
+            ledKicker2: (color7)
+            ledKicker3: (color8)
+            # --------------------
+        - time: 6
+
+    showShotSilverballManiaSpecial:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color3)
+            (led5): (color4)
+            (led6): (color4)
+        - time: "+1"
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color4)
+            (led5): (color3)
+            (led6): (color4)
+        - time: "+1"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color4)
+            (led5): (color4)
+            (led6): (color3)
+        - time: "+1"

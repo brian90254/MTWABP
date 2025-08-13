@@ -1,0 +1,204 @@
+#config_version=6
+
+# ************************************
+# SHOW::PLAYER
+# ************************************
+show_player:
+
+# ---------------------
+# SHOW::VIDEO::TEST
+# ---------------------
+  #eventShowAttractVideoSlideTest:
+  #  showAttractVideoSlideTest:
+  #    loops: 0
+  #    speed: 1
+      
+# ---------------------
+# SHOW::PLAYER::ATTRACT
+# --------------------- 
+  mode_attract_started:
+
+# ------------------
+#   SILVERBALL MANIA
+# ------------------
+    #showAttractLightSilverballMania:
+    #  loops: -1
+    #  speed: 1
+
+    showAttractLightTargetSILVERBALLMANIA:
+      loops: -1
+      speed: 5
+
+    showAttractLight15K:
+      loops: -1
+      speed: 1
+
+    showAttractLight30K:
+      loops: -1
+      speed: 1
+
+    showAttractLightRollover:
+      loops: -1
+      speed: 4
+
+    showAttractLightSpinner:
+      loops: -1
+      speed: 1
+
+    showAttractLightSpecial:
+      loops: -1
+      speed: 1
+
+    showAttractLightKicker:
+      loops: -1
+      speed: 1
+
+    showAttractLightExtraBall:
+      loops: -1
+      speed: 1
+      
+    #showAttractLightTargetSILVE:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightTargetRBALL:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightTargetMANIA:
+    #  loops: -1
+    #  speed: 1
+      
+    #showAttractLightDropInlineTargetA:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightSaucerLeftCollectBonus:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightSaucerUpper:
+    #  loops: -1
+    #  speed: 1
+      
+    #showAttractLightThumperLowerRight:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperLowerLeft:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperUpperLeft:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperUpperRight:
+    #  loops: -1
+    #  speed: 1
+      
+# ------------------
+#   THUMPERS
+# ------------------
+    showAttractLightThumperLeft:
+      loops: -1
+      speed: 1
+    showAttractLightThumperMiddle:
+      loops: -1
+      speed: 1
+    showAttractLightThumperRight:
+      loops: -1
+      speed: 1
+
+# ------------------
+#   BUMPERS
+# ------------------
+    showAttractLightBumperTop1:
+      loops: -1
+      speed: 1
+
+    showAttractLightBumperTop2:
+      loops: -1
+      speed: 1
+
+    showAttractLightBumperTop3:
+      loops: -1
+      speed: 1
+
+    showAttractLightBumperTop4:
+      loops: -1
+      speed: 1
+      
+# ------------------
+#   SHOOT AGAIN
+# ------------------
+    showAttractLightShootAgain:
+      loops: -1
+      speed: 1
+      
+## ------------------
+##   WARP DRIVE
+## ------------------
+#    showAttractLightWarpDriveLeft:
+#      loops: -1
+#      speed: 6
+#    showAttractLightWarpDriveRight:
+#      loops: -1
+#      speed: 6
+#
+# ------------------
+#   BONUS MULTIPLIER
+# ------------------
+    showAttractLightMultiplier:
+      loops: -1
+      speed: 1
+
+#    showAttractLightBonusMultiplier2X:
+#      loops: -1
+#      speed: 1
+#    showAttractLightBonusMultiplier3X:
+#      loops: -1
+#      speed: 1
+#
+## ------------------
+##   BONUS ADVANCE
+## ------------------
+#    showAttractLightBonusAdvance20:
+#      loops: -1
+#      speed: 1
+#      
+## ------------------
+##   DROP LEFT
+## ------------------
+#    showAttractLightDropLeftSpecial:
+#      loops: -1
+#      speed: 1
+#      
+#
+#    showAttractLightSpinnerCount:
+#      loops: -1
+#      speed: 1
+#      
+#    showAttractLightBonus:
+#      loops: -1
+#      speed: 1
+#
+#    showAttractLightBonusCount:
+#      loops: -1
+#      speed: 1
+#      
+#    showAttractLightMultiplier:
+#      loops: -1
+#      speed: 1
+#      
+#    showAttractLightWhenLit:
+#      loops: -1
+#      speed: 1
+#
+#    showAttractLightExtraBall:
+#      loops: -1
+#      speed: 1
+#
+#    showAttractLightBUCK:
+#      loops: -1
+#      speed: 1

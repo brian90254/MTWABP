@@ -1,0 +1,555 @@
+#config_version=6
+
+# BALLY SILVERBALL MANIA
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    ## -------------------
+    ## SHOTS::LANE::TOP
+    ## -------------------
+    #shotLaneTopLeft:
+    #    switch: s_0_3
+    #    enable_events: eventEnableShotLaneTopLeft
+    #    disable_events: eventDisableShotLaneTopLeft
+    #    restart_events: eventRestartShotLaneTopLeft
+    #    reset_events: eventResetShotLaneTopLeft
+    #    profile: spShotLaneTop
+    #    show_tokens:
+    #        led1: ledLaneTopLeft1
+    #        led2: ledLaneTopLeft2
+    #        led3: ledLaneTopLeft3
+    #        
+    #shotLaneTopCenter:
+    #    switch: s_0_4
+    #    enable_events: eventEnableShotLaneTopCenter
+    #    disable_events: eventDisableShotLaneTopCenter
+    #    restart_events: eventRestartShotLaneTopCenter
+    #    reset_events: eventResetShotLaneTopCenter
+    #    profile: spShotLaneTop
+    #    show_tokens:
+    #        led1: ledLaneTopCenter1
+    #        led2: ledLaneTopCenter2
+    #        led3: ledLaneTopCenter3
+    #        
+    #shotLaneTopRight:
+    #    switch: s_0_5
+    #    enable_events: eventEnableShotLaneTopRight
+    #    disable_events: eventDisableShotLaneTopRight
+    #    restart_events: eventRestartShotLaneTopRight
+    #    reset_events: eventResetShotLaneTopRight
+    #    profile: spShotLaneTop
+    #    show_tokens:
+    #        led1: ledLaneTopRight1
+    #        led2: ledLaneTopRight2
+    #        led3: ledLaneTopRight3
+    #        
+    #shotLaneTopRotate:
+    #    enable_events: eventEnableShotLaneTopRotate
+    #    disable_events: eventDisableShotLaneTopRotate
+    #    restart_events: eventRestartShotLaneTopRotate
+    #    reset_events: eventResetShotLaneTopRotate
+    #    hit_events: eventResetShotLaneTopRotate
+
+
+        
+    # -------------------
+    # SHOTS::TARGET MIDDLE
+    # -------------------
+    shotTargetMiddle:
+        switch: s_1_8
+        enable_events: eventEnableShotTargetMiddle
+        disable_events: eventDisableShotTargetMiddle
+        restart_events: eventRestartShotTargetMiddle
+        reset_events: eventResetShotTargetMiddle
+        profile: spShotTargetMiddle
+        show_tokens:
+            led: ledTargetMiddle
+            
+    # -------------------
+    # SHOTS::LANE::LEFT::ONE
+    # -------------------
+    shotLaneLeft1:
+        switch: s_1_16
+        enable_events: eventEnableShotLaneLeft1
+        disable_events: eventDisableShotLaneLeft1
+        restart_events: eventRestartShotLaneLeft1
+        reset_events: eventResetShotLaneLeft1
+        profile: spShotLaneLeft
+        show_tokens:
+            led: ledLaneLeft1
+    
+    # -------------------
+    # SHOTS::LANE::LEFT::TWO
+    # -------------------
+    shotLaneLeft2:
+        switch: s_1_31
+        enable_events: eventEnableShotLaneLeft2
+        disable_events: eventDisableShotLaneLeft2
+        restart_events: eventRestartShotLaneLeft2
+        reset_events: eventResetShotLaneLeft2
+        profile: spShotLaneLeft
+        show_tokens:
+            led: ledLaneLeft2
+
+    # -------------------
+    # SHOTS::OUTLANES::WHEN-LIT
+    # -------------------
+    shotOutlaneLeftWhenLit:
+        switch: s_1_18
+        enable_events: eventEnableShotOutlaneLeftWhenLit
+        disable_events: eventDisableShotOutlaneLeftWhenLit
+        restart_events: eventRestartShotOutlaneLeftWhenLit
+        reset_events: eventResetShotOutlaneLeftWhenLit
+        profile: spShotOutlaneWhenLit
+        show_tokens:
+            led: ledLanesOutlaneLeft
+            
+    shotOutlaneRightWhenLit:
+        switch: s_1_31
+        enable_events: eventEnableShotOutlaneRightWhenLit
+        disable_events: eventDisableShotOutlaneRightWhenLit
+        restart_events: eventRestartShotOutlaneRightWhenLit
+        reset_events: eventResetShotOutlaneRightWhenLit
+        profile: spShotOutlaneWhenLit
+        show_tokens:
+            led: ledLanesOutlaneRight
+
+    shotReturnLaneRight:
+        switch: s_1_5
+        enable_events: eventEnableShotReturnLaneRight
+        disable_events: eventDisableShotReturnLaneRight
+        restart_events: eventRestartShotReturnLaneRight
+        reset_events: eventResetShotReturnLaneRight
+        profile: spShotReturnLane
+        show_tokens:
+            led: ledReturnLaneRight
+
+    shotReturnLaneLeft:
+        switch: s_1_10
+        enable_events: eventEnableShotReturnLaneLeft
+        disable_events: eventDisableShotReturnLaneLeft
+        restart_events: eventRestartShotReturnLaneLeft
+        reset_events: eventResetShotReturnLaneLeft
+        profile: spShotReturnLane
+        show_tokens:
+            led: ledReturnLaneLeft
+        
+## ***************************** 
+## SEQUENCE::SHOTS
+## ***************************** 
+#sequence_shots:
+#  sequenceShotInnerLoopClockwise:
+#    # LEFT THEN RIGHT
+#    switch_sequence: s_0_2, s_0_6
+#    sequence_timeout: 2s
+#
+#  sequenceShotInnerLoopCounterClockwise:
+#    # RIGHT THEN LEFT 
+#    switch_sequence: s_0_6, s_0_2
+#    sequence_timeout: 2s
+    
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::LANES::LEFT
+    # -------------------
+    shotGroupLaneLeft:
+        shots:
+            - shotLaneLeft1
+            - shotLaneLeft2
+        enable_events:
+            - eventEnableShotGroupLaneLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupLaneLeft
+        reset_events:
+            - eventResetShotGroupLaneLeft
+        restart_events:
+            - eventRestartShotGroupLaneLeft
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+            
+    # -------------------
+    # SHOTGROUP::RETURN::LANES
+    # -------------------
+    shotGroupReturnLane:
+        shots:
+            - shotReturnLaneRight
+            - shotReturnLaneLeft
+        enable_events:
+            - eventEnableShotGroupReturnLane
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupReturnLane
+        reset_events:
+            - eventResetShotGroupReturnLane
+        restart_events:
+            - eventRestartShotGroupReturnLane
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+            
+    # -------------------
+    # SHOTGROUP::Outlane
+    # -------------------
+    shotGroupOutlaneWhenLit:
+        shots:
+            - shotOutlaneRightWhenLit
+            - shotOutlaneLeftWhenLit
+        enable_events:
+            - eventEnableShotGroupOutlane
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupOutlane
+        reset_events:
+            - eventResetShotGroupOutlane
+        restart_events:
+            - eventRestartShotGroupOutlane
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+            
+    # -------------------
+    # SHOTGROUP::BUMPER::TOP
+    # -------------------
+    shotGroupBumperTop:
+        shots:
+            - shotBumperTop1
+            - shotBumperTop2
+            - shotBumperTop3
+            - shotBumperTop4
+        enable_events:
+            - eventEnableShotGroupBumperTop
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupBumperTop
+        reset_events:
+            - eventResetShotGroupBumperTop
+        restart_events:
+            - eventRestartShotGroupBumperTop
+        #rotate_left_events:
+        #    - sw_left_flipper
+        #rotate_right_events:
+        #    - sw_right_flipper
+            
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    ## -----------------------------
+    ## PROFILE::LANE::TOP
+    ## -----------------------------
+    #spShotLaneTop:
+    #    states:
+    #      - name: litCenter
+    #        show: showLedShotLaneTop
+    #        speed: 3
+    #        show_tokens:
+    #            color1: 'ffff00'
+    #            color2: '888800'
+    #    loop: false
+    #    
+    ## -----------------------------
+    ## PROFILE::LANE::TOP::ROTATE
+    ## -----------------------------
+    #spShotLaneTopRotate:
+    #    states:
+    #      - name: litCenter
+    #        show: showLedShotLaneTopRotate
+    #        speed: 3
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: '000000'
+    #            color3: 'ffffff'
+    #            color4: '888888'
+    #            color5: '000000'
+    #            color6: '000000'
+    #      - name: litOutside
+    #        show: showLedShotLaneTopRotate
+    #        speed: 3
+    #        show_tokens:
+    #            color1: 'ffffff'
+    #            color2: '888888'
+    #            color3: '000000'
+    #            color4: '000000'
+    #            color5: 'ffffff'
+    #            color6: '888888'
+    #    loop: true
+    #    
+    # -----------------------------
+    # PROFILE::TARGET MIDDLE
+    # -----------------------------
+    spShotTargetMiddle:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: 'cc00cc'
+                color2: '880088'
+          - name: litSolid
+            show: flashLedTwoColor
+            show_tokens:
+                color1: '0000ff'
+                color2: '0000ff'
+        loop: true
+        
+    # -----------------------------
+    # PROFILE::RETURN::LANES
+    # -----------------------------
+    spShotReturnLane:
+        states:
+          - name: unlitFlash
+            show: flashLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litFlash
+            show: flashLedTwoColor
+            show_tokens:
+                color1: 'cc00cc'
+                color2: '880088'
+          - name: litSolid
+            show: flashLedTwoColor
+            show_tokens:
+                color1: '0000ff'
+                color2: '0000ff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::LANES::LEFT
+    # -----------------------------
+    spShotLaneLeft:
+        states:
+          - name: unlitFlash
+            show: flashLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litFlash
+            show: flashLedTwoColor
+            show_tokens:
+                color1: 'cc00cc'
+                color2: '880088'
+          - name: litSolid
+            show: flashLedTwoColor
+            show_tokens:
+                color1: '0000ff'
+                color2: '0000ff'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::LANES::A-B
+    # -----------------------------
+    spShotOutlaneWhenLit:
+        states:
+          #- name: unlitFlash
+          #  show: flashLedTwoColor
+          #  speed: 1
+          #  show_tokens:
+          #      color1: '000000'
+          #      color2: '000000'
+          - name: litFlash
+            show: flashLedTwoColor
+            show_tokens:
+                color1: 'cc0000'
+                color2: '660000'
+          - name: litSolid
+            show: flashLedTwoColor
+            show_tokens:
+                color1: 'ff0000'
+                color2: 'ff0000'
+        loop: false
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    mode_modeBallyStarTrek_started:
+        ## RESTART TOP LANES 
+        #- eventRestartShotLaneTopOutside
+        #- eventRestartShotLaneTopCenter
+        #- eventRestartShotLaneTopRotate
+        # BUMPERS TOP
+        - eventRestartShotBumperTop1
+        - eventRestartShotBumperTop2
+        - eventRestartShotBumperTop3
+        - eventRestartShotBumperTop4
+        
+        #- eventRestartShotGroupReturnLane
+        #- eventRestartShotGroupLaneLeft
+        ## RETURN LANES
+        #- eventRestartShotReturnLaneLeft
+        #- eventRestartShotReturnLaneRight
+        ## LANES LEFT
+        #- eventRestartShotLaneLeft1
+        #- eventRestartShotLaneLeft2
+        ## TARGET MIDDLE
+        #- eventRestartShotTargetMiddle
+        
+    ball_ending:
+        # OUTLANES
+        - eventDisableShotOutlaneLeftWhenLit
+        - eventDisableShotOutlaneRightWhenLit
+        # OUTLANES
+        - eventResetShotOutlaneLeftWhenLit
+        - eventResetShotOutlaneRightWhenLit
+        
+    ## -------------------
+    ## RIGHT::LANE
+    ## -------------------
+    #shotRightLane_hit:
+    #    - eventCompleteBonusOnes
+    
+    # -------------------
+    # LANE:LEFT
+    # -------------------
+    shotGroupLaneLeft_hit:
+    #shotGroupLaneLeft_litFlash_hit:
+        - eventCompleteBonusOnes
+    
+    # -------------------
+    # RETURN::LANE
+    # -------------------
+    shotGroupReturnLane_hit:
+    #shotGroupReturnLane_litFlash_hit:
+        - eventCompleteBonusOnes
+        
+    # -------------------
+    # TARGET MIDDLE
+    # -------------------
+    shotTargetMiddle_litFlash_hit:
+    #shotGroupReturnLane_litFlash_hit:
+        - eventCompleteBonusOnes
+        - eventCompleteBonusOnes|1s
+        - eventCompleteBonusOnes|2s
+
+## *********************
+## COIL::PLAYER
+## *********************
+#coil_player:
+#  eventPulseKickerReset:
+#    c_1_1:
+#      action: pulse
+      
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------
+    # SCORING::OUTLANES
+    # ---------------
+    sw_tagOutlane:
+        score: 1000
+      
+    #shotOutlaneRightWhenLit_unlitFlash_hit:
+    #    score: 24000
+    #shotOutlaneRightWhenLit_litFlash_hit:
+    #    score: 24000
+    #shotOutlaneLeftWhenLit_unlitFlash_hit:
+    #    score: 24000
+    #shotOutlaneLeftWhenLit_litFlash_hit:
+    #    score: 24000
+        
+    shotGroupOutlaneWhenLit_litFlash_hit:
+        score: 24000
+        
+    ### -------------------
+    ### RIGHT::LANE
+    ### -------------------
+    #shotRightLane_hit:
+    #    score: 1000
+
+    ## -------------------
+    ## RIGHT::LANE
+    ## -------------------
+    shotGroupReturnLane_hit:
+        score: 300
+        
+    # -------------------
+    # TARGET MIDDLE
+    # -------------------
+    shotTargetMiddle_litFlash_hit:
+        score: 3000
+        
+    shotTargetMiddle_litSolid_hit:
+        score: 300
+        
+## *********************
+## SHOWS
+## *********************
+#shows:
+#  # -----------------------------------
+#  # SHOW::LED::LANE::TOP
+#  # -----------------------------------
+#    showLedShotLaneTop:
+#        - time: 0
+#          lights:
+#            (led1): (color2)
+#            (led2): (color1)
+#            (led3): (color1)
+#        - time: 1
+#          lights:
+#            (led1): (color1)
+#            (led2): (color2)
+#            (led3): (color1)
+#        - time: 2
+#          lights:
+#            (led1): (color1)
+#            (led2): (color1)
+#            (led3): (color2)
+#        - time: 3
+#        
+#  # -----------------------------------
+#  # SHOW::LED::LANE::TOP::ROTATE
+#  # -----------------------------------
+#    showLedShotLaneTopRotate:
+#        - time: 0
+#          lights:
+#            (led1): (color2)
+#            (led2): (color1)
+#            (led3): (color1)
+#            (led4): (color4)
+#            (led5): (color3)
+#            (led6): (color3)
+#            (led7): (color6)
+#            (led8): (color5)
+#            (led9): (color5)
+#        - time: 1
+#          lights:
+#            (led1): (color1)
+#            (led2): (color2)
+#            (led3): (color1)
+#            (led4): (color3)
+#            (led5): (color4)
+#            (led6): (color3)
+#            (led7): (color5)
+#            (led8): (color6)
+#            (led9): (color5)
+#        - time: 2
+#          lights:
+#            (led1): (color1)
+#            (led2): (color1)
+#            (led3): (color2)
+#            (led4): (color3)
+#            (led5): (color3)
+#            (led6): (color4)
+#            (led7): (color5)
+#            (led8): (color5)
+#            (led9): (color6)
+#        - time: 3
