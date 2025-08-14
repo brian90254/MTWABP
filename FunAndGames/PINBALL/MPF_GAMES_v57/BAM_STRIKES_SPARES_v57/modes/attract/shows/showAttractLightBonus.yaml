@@ -1,0 +1,249 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - STRIKES AND SPARES
+
+- time: 0
+# ----------------------
+# COLOR CHASE
+# ----------------------
+  lights:
+    # ----------------------    
+    ledBonus1: (color2)
+    ledBonus3: (color2)
+    ledBonus5: (color2)
+    ledBonus7: (color2)
+    ledBonus9: (color2)
+    # ----------------------
+    ledMultiplier5X: (color2)
+    # ----------------------
+    ledBonus10: (color2)
+    ledBonus8: (color2)
+    ledBonus6: (color2)
+    ledBonus4: (color2)
+    ledBonus2: (color2)
+    # ----------------------
+    ledBonus20: (color1)
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: (color1)
+    ledBonus3: (color2)
+    ledBonus5: (color2)
+    ledBonus7: (color2)
+    ledBonus9: (color2)
+    # ----------------------
+    ledMultiplier5X: (color2)
+    # ----------------------
+    ledBonus10: (color2)
+    ledBonus8: (color2)
+    ledBonus6: (color2)
+    ledBonus4: (color2)
+    ledBonus2: (color2)
+    # ----------------------
+    ledBonus20: (color2)
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: (color2)
+    ledBonus3: (color1)
+    ledBonus5: (color2)
+    ledBonus7: (color2)
+    ledBonus9: (color2)
+    # ----------------------
+    ledMultiplier5X: (color2)
+    # ----------------------
+    ledBonus10: (color2)
+    ledBonus8: (color2)
+    ledBonus6: (color2)
+    ledBonus4: (color2)
+    ledBonus2: (color2)
+    # ----------------------
+    ledBonus20: (color2)
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: (color2)
+    ledBonus3: (color2)
+    ledBonus5: (color1)
+    ledBonus7: (color2)
+    ledBonus9: (color2)
+    # ----------------------
+    ledMultiplier5X: (color2)
+    # ----------------------
+    ledBonus10: (color2)
+    ledBonus8: (color2)
+    ledBonus6: (color2)
+    ledBonus4: (color2)
+    ledBonus2: (color2)
+    # ----------------------
+    ledBonus20: (color2)
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: (color2)
+    ledBonus3: (color2)
+    ledBonus5: (color2)
+    ledBonus7: (color1)
+    ledBonus9: (color2)
+    # ----------------------
+    ledMultiplier5X: (color2)
+    # ----------------------
+    ledBonus10: (color2)
+    ledBonus8: (color2)
+    ledBonus6: (color2)
+    ledBonus4: (color2)
+    ledBonus2: (color2)
+    # ----------------------
+    ledBonus20: (color2)
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: (color2)
+    ledBonus3: (color2)
+    ledBonus5: (color2)
+    ledBonus7: (color2)
+    ledBonus9: (color1)
+    # ----------------------
+    ledMultiplier5X: (color2)
+    # ----------------------
+    ledBonus10: (color2)
+    ledBonus8: (color2)
+    ledBonus6: (color2)
+    ledBonus4: (color2)
+    ledBonus2: (color2)
+    # ----------------------
+    ledBonus20: (color2)
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: (color2)
+    ledBonus3: (color2)
+    ledBonus5: (color2)
+    ledBonus7: (color2)
+    ledBonus9: (color2)
+    # ----------------------
+    ledMultiplier5X: (color1)
+    # ----------------------
+    ledBonus10: (color2)
+    ledBonus8: (color2)
+    ledBonus6: (color2)
+    ledBonus4: (color2)
+    ledBonus2: (color2)
+    # ----------------------
+    ledBonus20: (color2)
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: (color2)
+    ledBonus3: (color2)
+    ledBonus5: (color2)
+    ledBonus7: (color2)
+    ledBonus9: (color2)
+    # ----------------------
+    ledMultiplier5X: (color2)
+    # ----------------------
+    ledBonus10: (color1)
+    ledBonus8: (color2)
+    ledBonus6: (color2)
+    ledBonus4: (color2)
+    ledBonus2: (color2)
+    # ----------------------
+    ledBonus20: (color2)
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: (color2)
+    ledBonus3: (color2)
+    ledBonus5: (color2)
+    ledBonus7: (color2)
+    ledBonus9: (color2)
+    # ----------------------
+    ledMultiplier5X: (color2)
+    # ----------------------
+    ledBonus10: (color2)
+    ledBonus8: (color1)
+    ledBonus6: (color2)
+    ledBonus4: (color2)
+    ledBonus2: (color2)
+    # ----------------------
+    ledBonus20: (color2)
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: (color2)
+    ledBonus3: (color2)
+    ledBonus5: (color2)
+    ledBonus7: (color2)
+    ledBonus9: (color2)
+    # ----------------------
+    ledMultiplier5X: (color2)
+    # ----------------------
+    ledBonus10: (color2)
+    ledBonus8: (color2)
+    ledBonus6: (color1)
+    ledBonus4: (color2)
+    ledBonus2: (color2)
+    # ----------------------
+    ledBonus20: (color2)
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: (color2)
+    ledBonus3: (color2)
+    ledBonus5: (color2)
+    ledBonus7: (color2)
+    ledBonus9: (color2)
+    # ----------------------
+    ledMultiplier5X: (color2)
+    # ----------------------
+    ledBonus10: (color2)
+    ledBonus8: (color2)
+    ledBonus6: (color2)
+    ledBonus4: (color1)
+    ledBonus2: (color2)
+    # ----------------------
+    ledBonus20: (color2)
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: (color2)
+    ledBonus3: (color2)
+    ledBonus5: (color2)
+    ledBonus7: (color2)
+    ledBonus9: (color2)
+    # ----------------------
+    ledMultiplier5X: (color2)
+    # ----------------------
+    ledBonus10: (color2)
+    ledBonus8: (color2)
+    ledBonus6: (color2)
+    ledBonus4: (color2)
+    ledBonus2: (color1)
+    # ----------------------
+    ledBonus20: (color2)
+    # ----------------------
+- time: "+1"

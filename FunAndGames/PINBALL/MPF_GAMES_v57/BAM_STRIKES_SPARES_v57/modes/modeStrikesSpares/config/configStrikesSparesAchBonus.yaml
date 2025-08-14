@@ -1,0 +1,445 @@
+#config_version=6
+
+# STRIKES SPARES ACHIEVEMENTS
+
+# *****************************
+# ACHIEVEMENTS
+# *****************************
+achievements:
+  
+# -----------------------------
+# ACHIEVEMENT::BONUS
+# -----------------------------
+  # -----------------------------
+  # BONUS::BY::ONES
+  # -----------------------------
+  
+  achBonus0:
+    # --------------------------------
+    show_tokens:
+      led: ledDummy1
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus0
+    complete_events: eventCompleteBonusOnesPosted
+    events_when_completed: eventStartAchBonus1
+    
+
+  achBonus1:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus1
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus1
+    complete_events: eventCompleteBonusOnesPosted
+    events_when_completed: eventStartAchBonus2
+    
+  achBonus2:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus2
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus2
+    complete_events: eventCompleteBonusOnesPosted
+    events_when_completed: eventStartAchBonus3
+    
+  achBonus3:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus3
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus3
+    complete_events: eventCompleteBonusOnesPosted
+    events_when_completed: eventStartAchBonus4
+    
+    
+  achBonus4:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus4
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus4
+    complete_events: eventCompleteBonusOnesPosted
+    events_when_completed: eventStartAchBonus5
+    
+    
+  achBonus5:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus5
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus5
+    complete_events: eventCompleteBonusOnesPosted
+    events_when_completed: eventStartAchBonus6
+    
+    
+  achBonus6:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus6
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus6
+    complete_events: eventCompleteBonusOnesPosted
+    events_when_completed: eventStartAchBonus7
+    
+    
+  achBonus7:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus7
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus7
+    complete_events: eventCompleteBonusOnesPosted
+    events_when_completed: eventStartAchBonus8
+    
+    
+  achBonus8:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus8
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus8
+    complete_events: eventCompleteBonusOnesPosted
+    events_when_completed: eventStartAchBonus9
+    
+
+  achBonus9:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus9
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    #show_when_completed: offLed
+    show_when_completed: onLedRed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus9
+    complete_events: eventCompleteBonusOnesPosted
+    events_when_completed: eventStartAchBonusTens
+    
+    
+  # -----------------------------
+  # BONUS::BY::TENS
+  # -----------------------------
+  
+  achBonus10:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus10
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus10
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus20
+  
+  achBonus20:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus20
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus20
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus30
+    
+  achBonus30:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus30
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus30
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus40
+    
+  achBonus40:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus40
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    #show_when_completed: offLed
+    show_when_completed: onLedCyan
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus40
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus50
+
+
+# *****************************
+# END ACHIEVEMENTS
+# *****************************
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  
+  # -----------------------------------
+  # HITTING GLOBE SAUCER ADVANCES BONUS
+  # -----------------------------------
+  ball_hold_blKickerUpper_held_ball:
+    - eventCompleteBonusOnes
+    
+  # -----------------------------------
+  # HITTING DROP RIGHT ADVANCES GLOBE SAUCER
+  # -----------------------------------
+  sgShotDropRight_hit:
+    #- eventCompletedAchGlobeSaucer
+    - eventCompleteNextAchGlobeAward
+    # THIS IS TO ADD TO BONUS ON INLINE DROP HIT
+    - eventCompleteBonusOnes
+    
+  ## -----------------------------------
+  ## THIS IS TO ADD TO BONUS ON INLINE DROP HIT
+  ## -----------------------------------
+  #sgShotDropRight_hit:
+  #  - eventCompleteBonusOnes
+    
+  # -----------------------------------
+  # BONUS LIGHTS
+  # -----------------------------------
+  shotSpinnerMiddle_spSpinner_litSolidFive_hit:
+    - eventCompleteBonusOnes
+  
+  shotSpinnerRight_spSpinner_litSolidFive_hit:
+    - eventCompleteBonusOnes
+
+  # -----------------------------------
+  # RESET ONES ONCE TEN IS ACTIVE
+  # -----------------------------------
+  eventStartAchBonusTens:
+    # RESET ONES
+    - eventResetAchBonusOnes
+    - eventEnableAchBonusOnes
+    - eventStartAchBonus0
+    # ACHIEVE BY TENS
+    - eventCompleteBonusTens
+    - eventStartAchBonus10
+    
+  # -----------------------------------
+  # CONDITIONAL EVENT::DON'T GO OVER 29 TOTAL BONUS
+  # -----------------------------------
+  eventCompleteBonusOnes{current_player.totalBonus<29}:
+    - eventCompleteBonusOnesPosted
+    
+# ---------------
+# ADVANCE MULTIPLIER
+# ---------------
+  ## ---------------
+  ## NO MULTIPLIER
+  ## ---------------
+  #shotDropRightA_unlitSolid_hit:
+  #  #- eventAdvanceBonusMultiplier
+  #  - eventCompleteBonusOnes
+  # ---------------
+  # MULTIPLIER::2X
+  # ---------------
+  shotDropRightB_unlitSolid_hit:
+    - eventAdvanceBonusMultiplier
+    #- eventCompleteBonusOnes
+  # ---------------
+  # MULTIPLIER::3X
+  # ---------------
+  shotDropRightC_unlitSolid_hit:
+    - eventAdvanceBonusMultiplier
+    #- eventCompleteBonusOnes
+  # ---------------
+  # MULTIPLIER::4X
+  # ---------------
+  shotDropRightD_unlitSolid_hit:
+    - eventAdvanceBonusMultiplier
+    #- eventCompleteBonusOnes
+  # ---------------
+  # MULTIPLIER::5X
+  # ---------------
+  shotSaucerRight_hit:
+    - eventAdvanceBonusMultiplier
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# INITIALIZE BONUS COUNT
+# ---------------
+  eventResetMultipliersStrikesSpares:
+    # -------------------------
+    # RESET BONUS COUNT
+    totalBonus:
+      #int: 1
+      int: 0
+      action: set
+    ## -------------------------
+    ## RESET BONUS MULTIPLIER
+    #multiBonus:
+    #  int: 1
+    #  action: set
+    #bonus_multiplier:
+    #  int: 1
+    #  action: set
+    # -------------------------
+    # RESET TOTAL BONUS SCORE
+    # (TOTAL BONUS X BONUS MULTIPLIER)
+    scoreBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set
+    # NOT USED YET, BUT IN PLACE FOR FUTURE APPLICATION
+    # -------------------------
+    
+
+    ## -------------------------
+    ## RESET BONUS COUNT
+    ## TEMP REMOVE FOR TEST
+    ##totalBonus:
+    ##  #int: 1
+    ##  int: 0
+    ##  action: set
+    ## LEAVE OUT TO ACCUMULATE BONUS BETWEEN BALLS
+    ## -------------------------
+    ## RESET BONUS MULTIPLIER
+    ##multiBonus:
+    ##  int: 1
+    ##  action: set
+    #bonus_multiplier:
+    #  int: 1
+    #  action: set
+    ## -------------------------
+    ## RESET TOTAL BONUS SCORE
+    ## (TOTAL BONUS X BONUS MULTIPLIER)
+    ## TEMP REMOVE FOR TEST
+    ##scoreBonus:
+    ##  int: 0
+    ##  action: set
+    ## LEAVE OUT TO ACCUMULATE BONUS BETWEEN BALLS
+    ## -------------------------
+    ## PLAYFIELD MULTIPLIER
+    #multiPlayfield:
+    #  int: 1
+    #  action: set
+    ## NOT USED YET, BUT IN PLACE FOR FUTURE APPLICATION
+    ## -------------------------
+    
+# ---------------
+# ADVANCE BONUS COUNT
+# ---------------
+  #eventCompleteBonusOnes:
+  eventCompleteBonusOnesPosted:
+    totalBonus: 1
+      
+# ---------------
+# ADVANCE MULTIPLIER
+# ---------------
+  eventAdvanceBonusMultiplier{current_player.bonus_multiplier<5}:
+    bonus_multiplier: 1
+  ## ---------------
+  ## MULTIPLIER::2X
+  ## ---------------
+  #shotDropRightB_unlitSolid_hit:
+  #  #multiBonus: 1
+  #  bonus_multiplier: 1
+  ## ---------------
+  ## MULTIPLIER::3X
+  ## ---------------
+  #shotDropRightC_unlitSolid_hit:
+  #  #multiBonus: 1
+  #  bonus_multiplier: 1
+  ## ---------------
+  ## MULTIPLIER::5X
+  ## ---------------
+  #shotDropRightD_unlitSolid_hit:
+  #  #multiBonus: 2
+  #  bonus_multiplier: 1
+    

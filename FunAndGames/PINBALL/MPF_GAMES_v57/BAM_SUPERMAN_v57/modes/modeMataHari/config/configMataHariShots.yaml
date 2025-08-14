@@ -1,0 +1,659 @@
+#config_version=6
+
+# MATA HARI
+
+# *****************************
+# SHOTS::LANES
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::AB::TOP LANES
+    # -------------------
+    shotLaneTopA:
+        switch: s_1_19
+        enable_events: eventEnableShotLaneTopA
+        disable_events: eventDisableShotLaneTopA
+        restart_events: eventRestartShotLaneTopA
+        reset_events: eventResetShotLaneTopA
+        #profile: spShotLaneTop
+        #show_tokens:
+        #    led: ledLaneTopA
+
+    shotLaneTopB:
+        switch: s_1_29
+        enable_events: eventEnableShotLaneTopB
+        disable_events: eventDisableShotLaneTopB
+        restart_events: eventRestartShotLaneTopB
+        reset_events: eventResetShotLaneTopB
+        #profile: spShotLaneTop
+        #show_tokens:
+        #    led: ledLaneTopB
+
+    # -------------------
+    # SHOTS::AB::SIDE LANES
+    # -------------------
+    shotLaneSideA:
+        switch: s_1_18
+        enable_events: eventEnableShotLaneSideA
+        disable_events: eventDisableShotLaneSideA
+        restart_events: eventRestartShotLaneSideA
+        reset_events: eventResetShotLaneSideA
+        #profile: spShotLaneSide
+        #show_tokens:
+        #    led: ledLaneSideA
+
+    shotLaneSideB:
+        switch: s_1_30
+        enable_events: eventEnableShotLaneSideB
+        disable_events: eventDisableShotLaneSideB
+        restart_events: eventRestartShotLaneSideB
+        reset_events: eventResetShotLaneSideB
+        #profile: spShotLaneSide
+        #show_tokens:
+        #    led: ledLaneSideB
+        
+    # -------------------
+    # SHOTS::AB::LANES
+    # -------------------
+    shotLaneA:
+        #switch: s_1_18
+        enable_events: eventEnableShotLaneA
+        disable_events: eventDisableShotLaneA
+        restart_events: eventRestartShotLaneA
+        reset_events: eventResetShotLaneA
+        hit_events: eventHitShotLaneA
+        profile: spShotLaneAB
+        show_tokens:
+            led1: ledLaneTopA
+            led2: ledLaneLeftA
+
+    shotLaneB:
+        #switch: s_1_30
+        enable_events: eventEnableShotLaneB
+        disable_events: eventDisableShotLaneB
+        restart_events: eventRestartShotLaneB
+        reset_events: eventResetShotLaneB
+        hit_events: eventHitShotLaneB
+        profile: spShotLaneAB
+        show_tokens:
+            led1: ledLaneTopB
+            led2: ledLaneRightB
+        
+    # -------------------
+    # SHOTS::AB::AWARD
+    # -------------------
+    shotABAward:
+        #switch: s_1_18
+        enable_events: eventEnableShotABAward
+        disable_events: eventDisableShotABAward
+        restart_events: eventRestartShotABAward
+        reset_events: eventResetShotABAward
+        hit_events: eventHitShotABAward
+        profile: spShotABAward
+        show_tokens:
+            led1: ledABAward1k
+            led2: ledABAward2k
+            led3: ledABAward3k
+            led4: ledABAward4k
+            led5: ledABAward5k
+            led6: ledABAwardExtraBall
+            led7: ledABAwardSpecial
+            #led8: ledShootAgain
+
+    # -------------------
+    # SHOTS::OUTLANES::WHEN-LIT
+    # -------------------
+    shotOutlaneLeftWhenLit:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlaneLeftWhenLit
+        disable_events: eventDisableShotOutlaneLeftWhenLit
+        restart_events: eventRestartShotOutlaneLeftWhenLit
+        reset_events: eventResetShotOutlaneLeftWhenLit
+        profile: spShotOutlaneWhenLit
+        show_tokens:
+            led: ledOutlane50kLeft
+            
+    shotOutlaneRightWhenLit:
+        switch: s_1_20
+        enable_events: eventEnableShotOutlaneRightWhenLit
+        disable_events: eventDisableShotOutlaneRightWhenLit
+        restart_events: eventRestartShotOutlaneRightWhenLit
+        reset_events: eventResetShotOutlaneRightWhenLit
+        profile: spShotOutlaneWhenLit
+        show_tokens:
+            led: ledOutlane50kRight
+
+    shotReturnLaneRight:
+        switch: s_1_16
+        enable_events: eventEnableShotReturnLaneRight
+        disable_events: eventDisableShotReturnLaneRight
+        restart_events: eventRestartShotReturnLaneRight
+        reset_events: eventResetShotReturnLaneRight
+        #profile: spShotReturnLane
+        #show_tokens:
+        #    led: ledReturnLaneRight
+    
+    shotReturnLaneLeft:
+        switch: s_1_31
+        enable_events: eventEnableShotReturnLaneLeft
+        disable_events: eventDisableShotReturnLaneLeft
+        restart_events: eventRestartShotReturnLaneLeft
+        reset_events: eventResetShotReturnLaneLeft
+        #profile: spShotReturnLane
+        #show_tokens:
+        #    led: ledReturnLaneLeft
+        
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::LANES::LEFT
+    # -------------------
+    shotGroupLaneAB:
+        shots:
+            - shotLaneA
+            - shotLaneB
+        enable_events:
+            - eventEnableShotGroupLaneAB
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupLaneAB
+        reset_events:
+            - eventResetShotGroupLaneAB
+        restart_events:
+            - eventRestartShotGroupLaneAB
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+
+    # -------------------
+    # SHOTGROUP::RETURN::LANES
+    # -------------------
+    shotGroupReturnLane:
+        shots:
+            - shotReturnLaneRight
+            - shotReturnLaneLeft
+        enable_events:
+            - eventEnableShotGroupReturnLane
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupReturnLane
+        reset_events:
+            - eventResetShotGroupReturnLane
+        restart_events:
+            - eventRestartShotGroupReturnLane
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+            
+    # -------------------
+    # SHOTGROUP::Outlane
+    # -------------------
+    shotGroupOutlaneWhenLit:
+        shots:
+            - shotOutlaneRightWhenLit
+            - shotOutlaneLeftWhenLit
+        enable_events:
+            - eventEnableShotGroupOutlane
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupOutlane
+        reset_events:
+            - eventResetShotGroupOutlane
+        restart_events:
+            - eventRestartShotGroupOutlane
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::LANES AB
+    # -----------------------------
+    spShotLaneAB:
+        states:
+          - name: litFlash
+            #show: flashLedTwoColor
+            show: showShotLaneAB
+            speed: 2
+            show_tokens:
+                color1: 'cc00cc'
+                color2: '880088'
+          - name: litSolid
+            #show: flashLedTwoColor
+            show: showShotLaneAB
+            show_tokens:
+                color1: '00ffff'
+                color2: '00ffff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::LANES AB::AWARD
+    # -----------------------------
+    spShotABAward:
+        states:
+          - name: litFlash1k
+            show: showShotABAward
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: '884400'
+                color2A: '000000'
+                color3A: '000000'
+                color4A: '000000'
+                color5A: '000000'
+                color6A: '000000'
+                color7A: '000000'
+                #color8A: '000000'
+                # --------------
+                color1B: 'cc6600'
+                color2B: '000000'
+                color3B: '000000'
+                color4B: '000000'
+                color5B: '000000'
+                color6B: '000000'
+                color7B: '000000'
+                #color8B: '000000'
+                # --------------
+          - name: litFlash2k
+            show: showShotABAward
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: 'ffff00'
+                color2A: '884400'
+                color3A: '000000'
+                color4A: '000000'
+                color5A: '000000'
+                color6A: '000000'
+                color7A: '000000'
+                #color8A: '000000'
+                # --------------
+                color1B: 'ffff00'
+                color2B: 'cc6600'
+                color3B: '000000'
+                color4B: '000000'
+                color5B: '000000'
+                color6B: '000000'
+                color7B: '000000'
+                #color8B: '000000'
+                # --------------
+          - name: litFlash3k
+            show: showShotABAward
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: 'ffff00'
+                color2A: 'ffff00'
+                color3A: '884400'
+                color4A: '000000'
+                color5A: '000000'
+                color6A: '000000'
+                color7A: '000000'
+                #color8A: '000000'
+                # --------------
+                color1B: 'ffff00'
+                color2B: 'ffff00'
+                color3B: 'cc6600'
+                color4B: '000000'
+                color5B: '000000'
+                color6B: '000000'
+                color7B: '000000'
+                #color8B: '000000'
+                # --------------
+          - name: litFlash4k
+            show: showShotABAward
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: 'ffff00'
+                color2A: 'ffff00'
+                color3A: 'ffff00'
+                color4A: '884400'
+                color5A: '000000'
+                color6A: '000000'
+                color7A: '000000'
+                #color8A: '000000'
+                # --------------
+                color1B: 'ffff00'
+                color2B: 'ffff00'
+                color3B: 'ffff00'
+                color4B: 'cc6600'
+                color5B: '000000'
+                color6B: '000000'
+                color7B: '000000'
+                #color8B: '000000'
+                # --------------
+          - name: litFlash5k
+            show: showShotABAward
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: 'ffff00'
+                color2A: 'ffff00'
+                color3A: 'ffff00'
+                color4A: 'ffff00'
+                color5A: '884400'
+                color6A: '000000'
+                color7A: '000000'
+                #color8A: '000000'
+                # --------------
+                color1B: 'ffff00'
+                color2B: 'ffff00'
+                color3B: 'ffff00'
+                color4B: 'ffff00'
+                color5B: 'cc6600'
+                color6B: '000000'
+                color7B: '000000'
+                #color8B: '000000'
+                # --------------
+          - name: litFlashExtraBall
+            show: showShotABAward
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: 'ffff00'
+                color2A: 'ffff00'
+                color3A: 'ffff00'
+                color4A: 'ffff00'
+                color5A: 'ffff00'
+                color6A: '884400'
+                color7A: '000000'
+                #color8A: '000000'
+                # --------------
+                color1B: 'ffff00'
+                color2B: 'ffff00'
+                color3B: 'ffff00'
+                color4B: 'ffff00'
+                color5B: 'ffff00'
+                color6B: 'cc6600'
+                color7B: '000000'
+                #color8B: '000000'
+                # --------------
+          - name: litFlashSpecial
+            show: showShotABAward
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: 'ffff00'
+                color2A: 'ffff00'
+                color3A: 'ffff00'
+                color4A: 'ffff00'
+                color5A: 'ffff00'
+                color6A: 'ffff00'
+                color7A: '884400'
+                # EXTRA BALL
+                #color8A: 'cc0000'
+                # --------------
+                color1B: 'ffff00'
+                color2B: 'ffff00'
+                color3B: 'ffff00'
+                color4B: 'ffff00'
+                color5B: 'ffff00'
+                color6B: 'ffff00'
+                color7B: 'cc6600'
+                # EXTRA BALL
+                #color8B: 'ff0000'
+                # --------------
+          - name: litSolid
+            show: showShotABAward
+            speed: 2
+            show_tokens:
+                # --------------
+                color1A: 'ffff00'
+                color2A: 'ffff00'
+                color3A: 'ffff00'
+                color4A: 'ffff00'
+                color5A: 'ffff00'
+                color6A: 'ffff00'
+                color7A: 'ffff00'
+                # EXTRA BALL
+                #color8A: 'cc0000'
+                # --------------
+                color1B: 'ffff00'
+                color2B: 'ffff00'
+                color3B: 'ffff00'
+                color4B: 'ffff00'
+                color5B: 'ffff00'
+                color6B: 'ffff00'
+                color7B: 'ffff00'
+                # EXTRA BALL
+                #color8B: 'ff0000'
+                # --------------
+        loop: false
+
+    # -----------------------------
+    # PROFILE::RETURN::LANES
+    # -----------------------------
+    spShotReturnLane:
+        states:
+          - name: unlitFlash
+            show: flashLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litFlash
+            show: flashLedTwoColor
+            show_tokens:
+                color1: 'cc00cc'
+                color2: '880088'
+          - name: litSolid
+            show: flashLedTwoColor
+            show_tokens:
+                color1: '0000ff'
+                color2: '0000ff'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::LANES::A-B
+    # -----------------------------
+    spShotOutlaneWhenLit:
+        states:
+          #- name: unlitFlash
+          #  show: flashLedTwoColor
+          #  speed: 1
+          #  show_tokens:
+          #      color1: '000000'
+          #      color2: '000000'
+          - name: litFlash
+            show: flashLedTwoColor
+            show_tokens:
+                color1: 'cc0000'
+                color2: '660000'
+          - name: litSolid
+            show: flashLedTwoColor
+            show_tokens:
+                color1: 'ff0000'
+                color2: 'ff0000'
+        loop: false
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    mode_modeMataHari_started:
+        # TOP
+        - eventRestartShotLaneTopA
+        - eventRestartShotLaneTopB
+        # SIDE
+        - eventRestartShotLaneSideA
+        - eventRestartShotLaneSideB
+        # COMBO
+        - eventRestartShotLaneA
+        - eventRestartShotLaneB
+        # GROUP
+        - eventRestartShotGroupLaneAB
+        # AWARD
+        - eventRestartShotABAward
+
+        # RETURN LANES
+        - eventRestartShotReturnLaneLeft
+        - eventRestartShotReturnLaneRight
+
+    ball_ending:
+        # OUTLANES
+        - eventDisableShotOutlaneLeftWhenLit
+        - eventDisableShotOutlaneRightWhenLit
+        # OUTLANES
+        - eventResetShotOutlaneLeftWhenLit
+        - eventResetShotOutlaneRightWhenLit
+
+
+    ## -------------------
+    ## AB::LANE
+    ## -------------------
+    shotLaneTopA_hit:
+        - eventHitShotLaneA
+        - eventCompleteBonusOnes
+
+    shotLaneSideA_hit:
+        - eventHitShotLaneA
+        - eventCompleteBonusOnes
+        
+    shotLaneTopB_hit:
+        - eventHitShotLaneB
+        - eventCompleteBonusOnes
+
+    shotLaneSideB_hit:
+        - eventHitShotLaneB
+        - eventCompleteBonusOnes
+        
+    shotGroupLaneAB_litSolid_complete:
+        # AWARD
+        - eventHitShotABAward
+        # RESTART
+        - eventRestartShotLaneA|2000
+        - eventRestartShotLaneB|2000
+        - eventRestartShotGroupLaneAB|2000
+        
+    ### -------------------
+    ### AB::LANE::LIT/AWARD EXTRA BALL
+    ### -------------------
+    #shotABAward_litFlash5k_hit:
+    #    - eventLightExtraBall
+    #shotABAward_litFlashExtraBall_hit:
+    #    - eventAwardExtraBall
+        
+    # -------------------
+    # LANE:LEFT
+    # -------------------
+    shotGroupLaneLeft_hit:
+    #shotGroupLaneLeft_litFlash_hit:
+        - eventCompleteBonusOnes
+    
+    # -------------------
+    # RETURN::LANE
+    # -------------------
+    shotGroupReturnLane_hit:
+    #shotGroupReturnLane_litFlash_hit:
+        - eventCompleteBonusOnes
+        
+    # -------------------
+    # TARGET MIDDLE
+    # -------------------
+    shotTargetMiddle_litFlash_hit:
+    #shotGroupReturnLane_litFlash_hit:
+        - eventCompleteBonusOnes
+        - eventCompleteBonusOnes|1s
+        - eventCompleteBonusOnes|2s
+        
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    shotABAward_litFlash1k_hit:
+        score: 1000
+    shotABAward_litFlash2k_hit:
+        score: 2000
+    shotABAward_litFlash3k_hit:
+        score: 3000
+    shotABAward_litFlash4k_hit:
+        score: 4000
+    shotABAward_litFlash5k_hit:
+        score: 5000
+    shotABAward_litFlashExtraBall_hit:
+        score: 1
+    shotABAward_litFlashSpecial_hit:
+        score: 25000
+    shotABAward_litSolid_hit:
+        score: 5000
+        
+    # ---------------
+    # SCORING::OUTLANES
+    # ---------------
+    sw_tagOutlane:
+        score: 1000
+
+    shotGroupOutlaneWhenLit_litFlash_hit:
+        score: 24000
+
+    ## -------------------
+    ## RIGHT::LANE
+    ## -------------------
+    shotGroupReturnLane_hit:
+        score: 300
+
+    # -------------------
+    # TARGET MIDDLE
+    # -------------------
+    shotTargetMiddle_litFlash_hit:
+        score: 3000
+        
+    shotTargetMiddle_litSolid_hit:
+        score: 300
+        
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showShotABAward:
+        - time: 0
+          lights:
+            (led1): (color1A)
+            (led2): (color2A)
+            (led3): (color3A)
+            (led4): (color4A)
+            (led5): (color5A)
+            (led6): (color6A)
+            (led7): (color7A)
+            #(led8): (color8A)
+        - time: 1
+          lights:
+            (led1): (color1B)
+            (led2): (color2B)
+            (led3): (color3B)
+            (led4): (color4B)
+            (led5): (color5B)
+            (led6): (color6B)
+            (led7): (color7B)
+            #(led8): (color8B)
+        - time: 2
+
+  # SHOW::LED::SPOT::BALLY
+  # -----------------------------------
+    showShotLaneAB:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+        - time: 1
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+        - time: 2
+        

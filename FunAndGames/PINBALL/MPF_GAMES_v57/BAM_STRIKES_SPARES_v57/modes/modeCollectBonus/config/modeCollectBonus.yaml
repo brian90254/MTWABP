@@ -1,0 +1,154 @@
+#config_version=6
+
+mode:
+  start_events: eventStartModeCollectBonus
+  stop_events: eventStopModeCollectBonus, ball_will_end
+  priority: 9000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # ----------------------------
+  mode_modeCollectBonus_started:
+    - eventShowSlideCollectBonusTitle
+    - eventShowSlideCollectBonusBase|1.5s
+    - eventShowSlideCollectBonusHunter|3s
+    - eventResetHunterMultiplier|6s
+    - eventStopModeCollectBonus|4.5s
+    # ----------------------------
+    # TESTING
+    #- eventCompletedAchModeJupiterOne|8s
+    # ----------------------------
+    #- eventCheckShotGroupCompleteJupiterOne{current_player.multiHunter==6}
+  
+  mode_modeCollectBonus_started.2{current_player.multiHunter==6}:
+    - eventCompletedAchModeJupiterOne|6s
+    
+  mode_modeCollectBonus_started.3{current_player.multiHunter==7}:
+    - eventCompletedAchModeEuropa|6s
+    
+  mode_modeCollectBonus_started.4{current_player.multiHunter==8}:
+    - eventCompletedAchModeGanymede|6s
+    
+  mode_modeCollectBonus_started.5{current_player.multiHunter==9}:
+    - eventCompletedAchModeCallisto|6s
+    
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  # ----------------------------
+  eventShowSlideCollectBonusTitle:
+    scoreHunterBonus:
+      int: 500 * 2**current_player.multiHunter
+      action: set
+    
+  eventShowSlideCollectBonusHunter:
+    score: current_player.scoreHunterBonus
+      
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  # ----------------------------
+  eventShowSlideCollectBonusTitle:
+    slideCollectBonusTitle:
+      target: displayDMD
+  # ----------------------------
+  eventShowSlideCollectBonusBase:
+    slideCollectBonusBase:
+      target: displayDMD
+  # ----------------------------
+  eventShowSlideCollectBonusHunter:
+    slideCollectBonusHunter:
+      target: displayDMD
+
+slides:
+  # ----------------------
+  # INTRO BONUS
+  # ----------------------
+  slideCollectBonusTitle:
+    widgets:
+    - type: text
+      text: COLLECT
+      style: tall_title
+      y: top-10.25
+      x: middle-.25
+      font_size: 16
+      color: '00ff00'
+      # ----------------
+    - type: text
+      text: BONUS
+      style: tall_title
+      y: middle+3
+      x: middle
+      font_size: 32
+      color: ff0000
+      # ----------------
+    expire: 2s
+    
+  # ----------------------
+  # BASE BONUS
+  # ----------------------
+  slideCollectBonusBase:
+    widgets:
+    - type: text
+      text: BONUS BASE
+      style: tall_title
+      y: top-10.25
+      x: middle-.25
+      font_size: 16
+      color: '00ff00'
+      # ----------------
+    - type: text
+      text: "500 pts"
+      style: tall_title
+      y: middle+3
+      x: middle
+      font_size: 32
+      color: ff0000
+      # ----------------
+    - type: text
+      text: BONUS COLLECTION
+      style: tall_title
+      font_size: 18
+      anchor_y: bottom
+      y: bottom+4
+      x: middle
+      color: 8000ff
+      # ----------------
+    expire: 2s
+    
+  # ----------------------
+  # HUNTER BONUS
+  # ----------------------
+  slideCollectBonusHunter:
+    widgets:
+    - type: text
+      text: BONUS HUNTER
+      style: tall_title
+      y: top-10.25
+      x: middle-.25
+      font_size: 16
+      color: '00ff00'
+      # ----------------
+    - type: text
+      text: "(player|multiHunter)x HUNTER"
+      style: tall_title
+      y: middle+3
+      x: middle
+      font_size: 32
+      color: ff0000
+      # ----------------
+    - type: text
+      text: "(player|scoreHunterBonus) pts"
+      style: tall_title
+      font_size: 18
+      anchor_y: bottom
+      y: bottom+4
+      x: middle
+      color: '00ffff'
+      # ----------------
+    expire: 2s
+    

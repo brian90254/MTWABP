@@ -1,0 +1,48 @@
+#show_version=6
+
+- time: 0
+# --------------------
+  lights:
+    ledLaneA: '888800'
+    ledLaneB: '888800'
+    ledLaneC: '888800'
+- time: 1
+  lights:
+    ledLaneA: 'ffff00'
+    ledLaneB: 'ffff00'
+    ledLaneC: 'ffff00'
+- time: 2
+# --------------------
+  lights:
+    ledLaneA: '888800'
+    ledLaneB: '888800'
+    ledLaneC: '888800'
+- time: 3
+  lights:
+    ledLaneA: 'ffff00'
+    ledLaneB: 'ffff00'
+    ledLaneC: 'ffff00'
+- time: 4
+# --------------------
+  lights:
+    ledLaneA: '888800'
+    ledLaneB: '888800'
+    ledLaneC: '888800'
+- time: 5
+  lights:
+    ledLaneA: 'ffff00'
+    ledLaneB: 'ffff00'
+    ledLaneC: 'ffff00'
+- time: 6
+# --------------------
+  lights:
+    ledLaneA: '888800'
+    ledLaneB: '888800'
+    ledLaneC: '888800'
+- time: 7
+  lights:
+    ledLaneA: 'ffff00'
+    ledLaneB: 'ffff00'
+    ledLaneC: 'ffff00'
+- time: 8
+# --------------------

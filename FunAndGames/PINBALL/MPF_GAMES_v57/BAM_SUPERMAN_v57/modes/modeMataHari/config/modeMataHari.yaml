@@ -1,0 +1,77 @@
+#config_version=6
+
+config:
+# MATA HARI
+- configMataHariAchBonus.yaml
+- configMataHariSaucer.yaml
+- configMataHariShots.yaml
+- configMataHariDrops.yaml
+- configMataHariExtraBall.yaml
+
+mode:
+  start_events: eventStartModeMataHari
+  stop_events:
+    - eventStopModeMataHari
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  
+  ball_started:
+    # RESET DROPS
+    - eventResetDropTargetBankLeft|500
+    - eventResetDropTargetBankRight|1000
+    
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeMataHari_started:
+    
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    #- eventPlaylistModeBallyStrikesSparesStart
+    #- eventPlaylistModeMataHariStart
+    - eventPlaylistMode6MDMStart
+    
+    # EXTRA BALL
+    - eventResetShotExtraBall
+    
+    # TODO check if this is still needed
+    - eventResetShotSaucerBonus
+
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersMataHari
+
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  mode_modeMataHari_started:
+    nameMoon:
+      #string: "MATA HARI"
+      string: "6MIL$MAN"
+      action: set
+
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  #---------------------
+  # AMBIENCE
+  mode_modeMataHari_started:
+    #musicBallyStrikesSpares012:
+    musicMataHari005:
+      loops: -1
+      volume: 0.8
+      
+  mode_modeMataHari_ending:
+    #musicBallyStrikesSpares012:
+    musicMataHari005:
+      action: stop

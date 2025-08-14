@@ -1,0 +1,361 @@
+#config_version=6
+
+# ************************************
+# SHOW::PLAYER
+# ************************************
+show_player:
+      
+# ---------------------
+# SHOW::PLAYER::ATTRACT
+# --------------------- 
+  mode_attract_started:
+
+    # ---------------------
+    # CENTER PIN TRIANGLE
+    # --------------------- 
+    showAttractLightPins:
+      loops: -1
+      speed: 4
+    
+    # ---------------------
+    # BONUS DRIVE COLOR
+    # --------------------- 
+    showAttractLightBonusColors:
+      loops: -1
+      speed: 1
+      
+    # ---------------------
+    # SPARE DRIVE COLOR
+    # --------------------- 
+    showAttractLightSpareColors:
+      loops: -1
+      speed: 1
+      
+    # ---------------------
+    # STRIKE VALUE::DRIVE COLOR
+    # --------------------- 
+    showAttractLightStrikeValueColors:
+      loops: -1
+      speed: 1
+      
+    # ---------------------
+    # STRIKE VALUE::DRIVE COLOR
+    # --------------------- 
+    showAttractLightReturnOutlanesColors:
+      loops: -1
+      speed: 1
+      
+  # ---------------------
+  # BONUS::INDIVIDUAL COLORS
+  # --------------------- 
+  eventShowAttractLightBonusRed:
+    showAttractLightBonus:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ff0000'
+        color2: '000000'
+        
+  eventShowAttractLightBonusYellow:
+    showAttractLightBonus:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ffff00'
+        color2: '000000'
+        
+  eventShowAttractLightBonusGreen:
+    showAttractLightBonus:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '00ff00'
+        color2: '000000'
+        
+  eventShowAttractLightBonusCyan:
+    showAttractLightBonus:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '00ffff'
+        color2: '000000'
+        
+  eventShowAttractLightBonusBlue:
+    showAttractLightBonus:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '0000ff'
+        color2: '000000'
+        
+  eventShowAttractLightBonusMagenta:
+    showAttractLightBonus:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ff00ff'
+        color2: '000000'
+        
+  # ---------------------
+  # SPARE::INDIVIDUAL COLORS
+  # --------------------- 
+  eventShowAttractLightSpareRed:
+    showAttractLightSpare:
+      loops: 0
+      speed: 5
+      show_tokens:
+        color1: 'ff0000'
+        color2: '000000'
+        
+  eventShowAttractLightSpareYellow:
+    showAttractLightSpare:
+      loops: 0
+      speed: 5
+      show_tokens:
+        color1: 'ffff00'
+        color2: '000000'
+        
+  eventShowAttractLightSpareGreen:
+    showAttractLightSpare:
+      loops: 0
+      speed: 5
+      show_tokens:
+        color1: '00ff00'
+        color2: '000000'
+        
+  eventShowAttractLightSpareCyan:
+    showAttractLightSpare:
+      loops: 0
+      speed: 5
+      show_tokens:
+        color1: '00ffff'
+        color2: '000000'
+        
+  eventShowAttractLightSpareBlue:
+    showAttractLightSpare:
+      loops: 0
+      speed: 5
+      show_tokens:
+        color1: '0000ff'
+        color2: '000000'
+        
+  eventShowAttractLightSpareMagenta:
+    showAttractLightSpare:
+      loops: 0
+      speed: 5
+      show_tokens:
+        color1: 'ff00ff'
+        color2: '000000'
+        
+  # ---------------------
+  # STRIKE VALUE::INDIVIDUAL COLORS
+  # --------------------- 
+  eventShowAttractLightStrikeValueRed:
+    showAttractLightStrikeValue:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: 'ff0000'
+        color2: '000000'
+        
+  eventShowAttractLightStrikeValueYellow:
+    showAttractLightStrikeValue:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: 'ffff00'
+        color2: '000000'
+        
+  eventShowAttractLightStrikeValueGreen:
+    showAttractLightStrikeValue:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '00ff00'
+        color2: '000000'
+        
+  eventShowAttractLightStrikeValueCyan:
+    showAttractLightStrikeValue:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '00ffff'
+        color2: '000000'
+        
+  eventShowAttractLightStrikeValueBlue:
+    showAttractLightStrikeValue:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '0000ff'
+        color2: '000000'
+        
+  eventShowAttractLightStrikeValueMagenta:
+    showAttractLightStrikeValue:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: 'ff00ff'
+        color2: '000000'
+        
+  # ---------------------
+  # STRIKE VALUE::INDIVIDUAL COLORS
+  # --------------------- 
+  eventShowAttractLightReturnOutlanesRed:
+    showAttractLightReturnOutlanes:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: 'ff0000'
+        color2: 'ff00ff'
+        
+  eventShowAttractLightReturnOutlanesYellow:
+    showAttractLightReturnOutlanes:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: 'ffff00'
+        color2: 'ff0000'
+        
+  eventShowAttractLightReturnOutlanesGreen:
+    showAttractLightReturnOutlanes:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '00ff00'
+        color2: 'ffff00'
+        
+  eventShowAttractLightReturnOutlanesCyan:
+    showAttractLightReturnOutlanes:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '00ffff'
+        color2: '00ff00'
+        
+  eventShowAttractLightReturnOutlanesBlue:
+    showAttractLightReturnOutlanes:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '0000ff'
+        color2: '00ffff'
+        
+  eventShowAttractLightReturnOutlanesMagenta:
+    showAttractLightReturnOutlanes:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: 'ff00ff'
+        color2: '0000ff'
+        
+    #showAttractLightDropInlineTargetA:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightSaucerLeftCollectBonus:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightSaucerUpper:
+    #  loops: -1
+    #  speed: 1
+      
+    #showAttractLightThumperLowerRight:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperLowerLeft:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperUpperLeft:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperUpperRight:
+    #  loops: -1
+    #  speed: 1
+      
+# ------------------
+#   THUMPERS
+# ------------------
+    showAttractLightThumperLeft:
+      loops: -1
+      speed: 1
+    showAttractLightThumperMiddle:
+      loops: -1
+      speed: 1
+    showAttractLightThumperRight:
+      loops: -1
+      speed: 1
+
+## ------------------
+##   SHOOT AGAIN
+## ------------------
+#    showAttractLightShootAgain:
+#      loops: -1
+#      speed: 1
+      
+## ------------------
+##   WARP DRIVE
+## ------------------
+#    showAttractLightWarpDriveLeft:
+#      loops: -1
+#      speed: 6
+#    showAttractLightWarpDriveRight:
+#      loops: -1
+#      speed: 6
+
+## ------------------
+##   BONUS MULTIPLIER
+## ------------------
+#    showAttractLightBonusMultiplier2X:
+#      loops: -1
+#      speed: 1
+#    showAttractLightBonusMultiplier3X:
+#      loops: -1
+#      speed: 1
+
+## ------------------
+##   BONUS ADVANCE
+## ------------------
+#    showAttractLightBonusAdvance20:
+#      loops: -1
+#      speed: 1
+      
+## ------------------
+##   DROP LEFT
+## ------------------
+#    showAttractLightDropLeftSpecial:
+#      loops: -1
+#      speed: 1
+#      
+#
+#    showAttractLightSpinnerCount:
+#      loops: -1
+#      speed: 1
+#      
+#    showAttractLightBonus:
+#      loops: -1
+#      speed: 1
+#
+#    showAttractLightBonusCount:
+#      loops: -1
+#      speed: 1
+#      
+#    showAttractLightMultiplier:
+#      loops: -1
+#      speed: 1
+#      
+#    showAttractLightWhenLit:
+#      loops: -1
+#      speed: 1
+#
+#    showAttractLightExtraBall:
+#      loops: -1
+#      speed: 1
+#
+#    showAttractLightBUCK:
+#      loops: -1
+#      speed: 1
