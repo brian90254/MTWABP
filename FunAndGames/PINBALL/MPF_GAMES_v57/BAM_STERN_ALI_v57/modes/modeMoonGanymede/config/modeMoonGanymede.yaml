@@ -1,0 +1,335 @@
+#config_version=6
+
+config:
+- configShotsGanymede.yaml
+- configAchievementsGanymede.yaml
+- configScoringGanymede.yaml
+- configSpecialShotsGanymede.yaml
+- configExtraBallGanymede.yaml
+
+mode:
+  start_events: startModeGanymede
+  stop_events: stopModeGanymede
+  priority: 4000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeMoonGanymede_started:
+    # ---------------------
+    # EVENT::START::SPECIAL MODES
+    # ---------------------
+    #- eventStartModeSkillShot
+    #- eventStartModeCollectMidGameBonus
+    - eventStartModeAwardWheel
+    # ---------------------
+    # START::LIGHT::SHOWS
+    # ---------------------
+    - showGanymedeStarShooterLane
+    - showGanymedeStarTurnAround
+    - showGanymedeStarOrbitLeft1
+    - showGanymedeStarOrbitLeft2
+    - showGanymedeStarOrbitRight
+    # ----------------------------
+    - eventResetMultipliersGanymede
+    # ----------------------------
+    # ---------------------
+    # EVENT::PLAYER::FLIPPERS
+    # ---------------------
+    - eventEnableFlipperGanymede|250ms
+    # ----------------------------
+    - eventDisableFlipperJupiterOne
+    - eventDisableFlipperEuropa
+    #- eventDisableFlipperGanymede
+    - eventDisableFlipperCallisto
+    # ---------------------
+    # EVENT::RESET::DROPS
+    # ---------------------
+    - eventResetDropTargetLeft|1.5s
+    - eventResetDropTargetRight|1s
+    # ---------------------
+    # EVENT::START::MULTIBALLS
+    # ---------------------
+    - eventStartModeMultiball
+    #- eventEnableMultiballUpperKicker
+    - eventDisableMultiballUpperKicker
+    - eventDisableShotStartMultiballVukGanymede
+    
+  # ----------------------------
+  # GANYMEDE::INCREASE::DIFFICULTY
+  shotReverseTargetGanymede_hit:
+    eventRotateDropTargetLeft
+  shotTurnAroundGanymede_hit:
+    eventResetDropTargetLeft
+  # ----------------------------
+
+  # ---------------------
+  # EVENT::START::WHEEL_ACHIEVEMENT
+  # ---------------------
+  multiball_multiballUpperKicker_ended:
+    - eventEnableMultiballVuk
+    - eventEnableAwardWheel
+    
+
+  # ---------------------
+  # COLLECT BONUS
+  # ---------------------
+  shotCollectMidGameBonusGanymede_hit:
+    - eventStartModeCollectMidGameBonus
+    - eventCollectMidGameBonus|1s
+    
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  mode_modeMoonGanymede_started:
+    nameMoon:
+      string: "Moon: Ganymede"
+      action: set
+      
+# ---------------------
+# COIL::PLAYER
+# ---------------------
+coil_player:  
+  # ----------------------------
+  # SAUCER MOTOR
+  # ----------------------------
+  eventStartSaucerVukShow:
+    c_spinner:
+      action: enable
+      
+  eventStopSaucerVukShow:
+    c_spinner:
+      action: disable
+      
+  eventStartSaucerKickerShow:
+    c_spinner:
+      action: enable
+      
+  eventStopSaucerKickerShow:
+    c_spinner:
+      action: disable
+      
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# ---------------------
+# SHOW::PLAYER::COILS
+# ---------------------
+  ball_lock_blVUK_locked_ball:
+    showBallLockVUK:
+      loops: 0
+      speed: 1
+
+  ball_lock_blKickerUpper_locked_ball:
+    showBallLockKickerUpper:
+      loops: 0
+      speed: 1
+
+  # ----------------------------
+  # VUK SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  eventStartSaucerVukShow:
+    showSaucerMotorLights:
+      loops: -1
+      speed: 16
+      show_tokens:
+        color1: '0080ff'
+        color2: '8000ff'
+        color3: '000000'
+        color4: '000000'
+      key: saucerVukShow
+      
+  eventStopSaucerVukShow:
+    saucerVukShow:
+      action: stop
+  # ----------------------------
+  
+  # ----------------------------
+  # KICKER SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  eventStartSaucerKickerShow:
+    showSaucerMotorLights:
+      loops: -1
+      speed: 16
+      show_tokens:
+        color1: 'ff8000'
+        color2: '80ff00'
+        color3: '000000'
+        color4: '000000'
+      key: saucerKickerShow
+      
+  eventStopSaucerKickerShow:
+    saucerKickerShow:
+      action: stop
+  # ----------------------------
+      
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------    
+  mode_modeMoonGanymede_started:
+    onThreeLedColor:
+      show_tokens:
+        led1: l_newton_ball_2
+        led2: l_newton_ball_3
+        led3: l_newton_ball_4
+        color: 'ffff88'
+      key: newtonBall
+            
+  showJupiterOneMoonMode:
+    onThreeLedColor:
+      show_tokens:
+        led1: l_moon_modes_1_1
+        led2: l_moon_modes_1_2
+        led3: l_moon_modes_1_3
+        color: 'cc00ff'
+      key: JupiterOne
+
+  showEuropaMoonMode:
+    onThreeLedColor:
+      show_tokens:
+        led1: l_moon_modes_2_1
+        led2: l_moon_modes_2_2
+        led3: l_moon_modes_2_3
+        color: 'cc00ff'
+      key: Europa
+
+  showGanymedeMoonMode:
+    pulseThreeLedTwoColor:
+      show_tokens:
+        led1: l_moon_modes_3_1
+        led2: l_moon_modes_3_2
+        led3: l_moon_modes_3_3
+        color1: 'cc00ff'
+        color2: '660088'
+      key: Ganymede
+            
+  # -------------------------------
+  
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------
+  # ---------------------
+  # MODE SPECIFIC::STAR::ROLLOVERS
+  # ---------------------
+  # GANYMEDE::YELLOW
+  # ---------------------
+  showGanymedeStarShooterLane:
+    swirlFourLedTwoColor:
+      show_tokens:
+        led1: l_lane_shooter_2_1
+        led2: l_lane_shooter_2_2
+        led3: l_lane_shooter_2_3
+        led4: l_lane_shooter_2_4
+        color1: '88cc00'
+        color2: '334400'
+      key: starShooterLane
+      
+  showGanymedeStarTurnAround:
+    swirlFourLedTwoColor:
+      show_tokens:
+        led1: l_turn_around_4_1
+        led2: l_turn_around_4_2
+        led3: l_turn_around_4_3
+        led4: l_turn_around_4_4
+        color1: '88cc00'
+        color2: '334400'
+      key: starTurnAround
+      
+  showGanymedeStarOrbitLeft1:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_left_4
+        color1: '66cc00'
+        color2: '448800'
+      key: starOrbitLeft1
+      
+  showGanymedeStarOrbitLeft2:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_left_5
+        color1: '66cc00'
+        color2: '448800'
+      key: starOrbitLeft2
+      
+  showGanymedeStarOrbitRight:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_right_2
+        color1: '66cc00'
+        color2: '448800'
+      key: starOrbitRight
+  # ---------------------
+  # END MODE SPECIFIC::GANYMEDE::YELLOW
+  # ---------------------
+      
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  mode_modeMoonGanymede_started:
+    musicGanymede001:
+      loops: -1
+      volume: 0.3
+      
+  mode_modeMoonGanymede_ending:
+    musicGanymede001:
+      action: stop
+  #---------------------
+  shotMusicHGanymede_loopOn_hit:
+    musicGanymede002:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicHGanymede_loopOff_hit:
+    musicGanymede002:
+      action: stop
+  # ---------------------      
+  shotMusicUGanymede_loopOn_hit:
+    musicGanymede003:
+      loops: -1
+      volume: 0.25
+      
+  shotMusicUGanymede_loopOff_hit:
+    musicGanymede003:
+      action: stop
+  # ---------------------
+  shotMusicNGanymede_loopOn_hit:
+    musicGanymede004:
+      loops: -1
+      volume: 0.6
+      
+  shotMusicNGanymede_loopOff_hit:
+    musicGanymede004:
+      action: stop
+  # ---------------------
+  shotMusicTGanymede_loopOn_hit:
+    musicGanymede005:
+      loops: -1
+      volume: 0.15
+      
+  shotMusicTGanymede_loopOff_hit:
+    musicGanymede005:
+      action: stop
+  # ---------------------
+  shotMusicEGanymede_loopOn_hit:
+    musicGanymede006:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicEGanymede_loopOff_hit:
+    musicGanymede006:
+      action: stop
+  # ---------------------
+  shotMusicRGanymede_loopOn_hit:
+    musicGanymede007:
+      loops: -1
+      volume: 0.3
+      
+  shotMusicRGanymede_loopOff_hit:
+    musicGanymede007:
+      action: stop
+  # ---------------------
+  

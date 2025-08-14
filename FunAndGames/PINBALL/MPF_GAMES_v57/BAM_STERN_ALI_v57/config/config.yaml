@@ -1,0 +1,121 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+mpf:
+  default_show_sync_ms: 500
+  
+# ---------------
+# MODES
+# ---------------
+config:
+# -----------------
+# HARDWARE
+- configVirtual.yaml
+- configFastHardware.yaml
+# -----------------
+# GAME
+- configModes.yaml
+#- configScoring.yaml
+# -----------------
+# SHOWS
+#- configLeds.yaml
+- configShows.yaml
+- configEvents.yaml
+- configDisplays.yaml
+# -----------------
+# SOUNDS
+- configMusic.yaml
+- configSFX.yaml
+- configVoice.yaml
+    
+# ---------------
+# CONFIG
+# ---------------
+game:
+  balls_per_game: 1
+  max_players: 1
+  allow_start_with_loose_balls: true
+
+machine:
+  # Standard FAST trough is six balls
+  balls_installed: 1
+  min_balls: 1
+  
+widget_styles:
+  text_default:
+    #font_name: DieNasty
+    font_name: Panther
+    #font_name: BLACK_PANTHER
+    font_size: 12
+    
+  tall_title:
+    font_name: FeedbackReg
+    font_size: 10
+    
+  fontJupiterCrushAlternate:
+    font_name: FontdinerSwanky
+    font_size: 10
+    
+  fontJupiterCrush:
+    font_name: starburstLanesTwinkle
+    font_size: 10
+    
+  fontTitle:
+    font_name: BLACK_PANTHER_2
+    font_size: 10
+    
+sound_system:
+  buffer: 4096
+  frequency: 44100
+  channels: 2
+  #master_volume: 1
+  tracks:
+    voice:
+      volume: 1.0
+      simultaneous_sounds: 1
+      preload: yes
+    sfx:
+      volume: 0.8
+      simultaneous_sounds: 8
+      preload: yes
+    music:
+      volume: 0.9
+      simultaneous_sounds: 8
+    # --------------------------
+    # THIS IS A BUG WORK-AROUND
+    use_sound_setting:
+      volume: 0.9
+      simultaneous_sounds: 8
+    # --------------------------
+    trackplaylist:
+      type: playlist
+      volume: 0.9
+      crossfade_time: 0.1s
+
+assets:
+  sounds:
+    default:
+      #load: on_demand
+      load: preload
+      #track: music
+    voice:
+      #load: on_demand
+      load: preload
+      track: voice
+    sfx:
+      #load: on_demand
+      load: preload
+      track: sfx
+    music:
+      #load: on_demand
+      load: preload
+      track: music
+  videos:
+    default:
+      #load: on_demand
+      load: preload
+  images:
+    default:
+      #load: on_demand
+      load: preload

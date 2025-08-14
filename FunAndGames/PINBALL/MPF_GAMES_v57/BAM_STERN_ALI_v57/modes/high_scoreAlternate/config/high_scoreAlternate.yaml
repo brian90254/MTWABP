@@ -1,0 +1,70 @@
+#config_version=6
+
+mode:
+ code: mpf.modes.high_score.code.high_score.HighScore
+ priority: 8000
+ start_events: game_ending, start_high_score
+ game_mode: False
+ use_wait_queue: true
+
+# Instructions on how to use this mode:
+# http://docs.missionpinball.org/en/latest/game_logic/high_scores/index.html
+
+high_score:
+ award_slide_display_time: 2s
+ categories: 
+   score:
+     - GRAND CHAMPION
+     - HIGH SCORE 1
+     - HIGH SCORE 2
+     - HIGH SCORE 3
+     - HIGH SCORE 4
+ defaults:
+   score:
+     - BRC: 4242
+     - GHK: 2323
+     - JK: 1337
+     - QC: 42
+     - MPF: 23
+     
+#     
+#slides:
+#  mode_high_score_started:
+#    high_scores_show_slide_3:
+#      widgets:        
+#        - type: text
+#          text: HIGH SCORES
+#          style: tall_title
+#          font_size: 18
+#          anchor_y: top
+#          y: 128
+#          color: FFFF00
+#        - type: text
+#          text: 1. (machine|score2_name) (machine|score2_value)
+#          style: tall_title
+#          font_size: 16
+#          y: 90
+#          number_grouping: true
+#          color: FFFF80          
+#        - type: text
+#          text: 2. (machine|score3_name) (machine|score3_value)
+#          style: tall_title
+#          font_size: 16
+#          y: 70
+#          number_grouping: true
+#          color: FFFF70
+#        - type: text
+#          text: 3. (machine|score4_name) (machine|score4_value)
+#          style: tall_title
+#          font_size: 16
+#          y: 50
+#          number_grouping: true
+#          color: FFFF60
+#        - type: text
+#          text: 4. (machine|score5_name) (machine|score5_value)
+#          style: tall_title
+#          font_size: 16
+#          y: 30
+#          number_grouping: true
+#          color: FFFF50
+#- time: '+4'

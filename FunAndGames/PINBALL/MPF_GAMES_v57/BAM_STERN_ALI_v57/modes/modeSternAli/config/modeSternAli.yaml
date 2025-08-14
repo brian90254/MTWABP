@@ -1,0 +1,312 @@
+#config_version=6
+
+config:
+#- configShotsSternAli.yaml
+#- configAchievementsSternAli.yaml
+- configScoringSternAli.yaml
+#- configExtraBallSternAli.yaml
+#- configSpecialShotsSternAli.yaml
+
+mode:
+  start_events: eventStartModeSternAli
+  stop_events: eventStopModeSternAli
+  priority: 2000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeSternAli_started:
+#    # ---------------------
+#    # EVENT::START::SPECIAL MODES
+#    # ---------------------
+#    #- eventStartModeSkillShot
+#    #- eventStartModeCollectMidGameBonus
+#    - eventStartModeAwardWheel
+#    # ---------------------
+#    # START::LIGHT::SHOWS
+#    # ---------------------
+#    - showSternAliStarShooterLane
+#    - showSternAliStarTurnAround
+#    - showSternAliStarOrbitLeft1
+#    - showSternAliStarOrbitLeft2
+#    - showSternAliStarOrbitRight
+#    # ---------------------
+#    # EVENT::RESET::MULTIPLIERS
+#    # ---------------------
+    - eventResetMultipliersSternAli
+#    # ---------------------
+#    # EVENT::PLAYER::FLIPPERS
+#    # ---------------------
+#    - eventEnableFlipperSternAli|250ms
+#    # ----------------------------
+#    #- eventDisableFlipperSternAli
+#    - eventDisableFlipperEuropa
+#    - eventDisableFlipperGanymede
+#    - eventDisableFlipperCallisto
+#    # ---------------------
+#    # EVENT::RESET::DROPS
+#    # ---------------------
+#    - eventResetDropTargetLeft|1.5s
+#    - eventResetDropTargetRight|1s
+#    # ---------------------
+#    # EVENT::START::MULTIBALLS
+#    # ---------------------
+#    - eventStartModeMultiball
+#    #- eventEnableMultiballUpperKicker
+#    - eventDisableMultiballUpperKicker
+#    - eventDisableShotStartMultiballVukSternAli
+#
+#  # ---------------------
+#  # EVENT::START::WHEEL_ACHIEVEMENT
+#  # ---------------------
+#  multiball_multiballUpperKicker_ended:
+#    - eventEnableMultiballVuk
+#    - eventEnableAwardWheel
+
+
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  mode_modeSternAli_started:
+    nameMoon:
+      string: "Stern: Ali"
+      action: set
+      
+# ---------------------
+# COIL::PLAYER
+# ---------------------
+#coil_player:
+#  # ----------------------------
+#  # SAUCER MOTOR
+#  # ----------------------------
+#  eventStartSaucerVukShow:
+#    c_spinner:
+#      action: enable
+#      
+#  eventStopSaucerVukShow:
+#    c_spinner:
+#      action: disable
+#      
+#  eventStartSaucerKickerShow:
+#    c_spinner:
+#      action: enable
+#      
+#  eventStopSaucerKickerShow:
+#    c_spinner:
+#      action: disable
+      
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# ---------------------
+# SHOW::PLAYER::COILS
+# ---------------------
+  #ball_lock_blVUK_locked_ball:
+  #  showBallLockVUK:
+  #    loops: 0
+  #    speed: 1
+
+  ball_lock_blKickerUpper_locked_ball:
+    showBallLockKickerUpper:
+      loops: 0
+      speed: 1
+
+  ball_lock_blKickerLower_locked_ball:
+    showBallLockKickerLower:
+      loops: 0
+      speed: 1
+      
+  # ----------------------------
+  # VUK SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  #eventStartSaucerVukShow:
+  #  showSaucerMotorLights:
+  #    loops: -1
+  #    speed: 16
+  #    show_tokens:
+  #      color1: '0000ff'
+  #      color2: '0000ff'
+  #      color3: '000000'
+  #      color4: '000000'
+  #    key: saucerVukShow
+  #    
+  #eventStopSaucerVukShow:
+  #  saucerVukShow:
+  #    action: stop
+  # ----------------------------
+  
+  # ----------------------------
+  # KICKER SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  #eventStartSaucerKickerShow:
+  #  showSaucerMotorLights:
+  #    loops: -1
+  #    speed: 16
+  #    show_tokens:
+  #      color1: 'ffff00'
+  #      color2: 'ffff00'
+  #      color3: '000000'
+  #      color4: '000000'
+  #    key: saucerKickerShow
+      
+  #eventStopSaucerKickerShow:
+  #  saucerKickerShow:
+  #    action: stop
+  # ----------------------------
+      
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------
+    
+  #mode_modeSternAli_started:      
+  #  onThreeLedColor:
+  #    show_tokens:
+  #      led1: l_newton_ball_2
+  #      led2: l_newton_ball_3
+  #      led3: l_newton_ball_4
+  #      color: 'ffff88'
+  #    key: newtonBall
+      
+  #showSternAliMode:
+  #  pulseThreeLedTwoColor:
+  #    show_tokens:
+  #      led1: l_moon_modes_1_1
+  #      led2: l_moon_modes_1_2
+  #      led3: l_moon_modes_1_3
+  #      color1: 'cc00ff'
+  #      color2: '660088'
+  #    key: SternAli
+            
+  # -------------------------------
+  
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------
+  # ---------------------
+  # MODE SPECIFIC::STAR::ROLLOVERS
+  # ---------------------
+  # JUPITER ONE::ORANGE
+  # ---------------------
+  #showSternAliStarShooterLane:
+  #  swirlFourLedTwoColor:
+  #    show_tokens:
+  #      led1: l_lane_shooter_2_1
+  #      led2: l_lane_shooter_2_2
+  #      led3: l_lane_shooter_2_3
+  #      led4: l_lane_shooter_2_4
+  #      color1: 'cc6600'
+  #      color2: '664400'
+  #    key: starShooterLane
+      
+  #showSternAliStarTurnAround:
+  #  swirlFourLedTwoColor:
+  #    show_tokens:
+  #      led1: l_turn_around_4_1
+  #      led2: l_turn_around_4_2
+  #      led3: l_turn_around_4_3
+  #      led4: l_turn_around_4_4
+  #      color1: 'cc6600'
+  #      color2: '664400'
+  #    key: starTurnAround
+      
+  #showSternAliStarOrbitLeft1:
+  #  flashLedTwoColor:
+  #    show_tokens:
+  #      led: l_orbit_left_4
+  #      color1: '885500'
+  #      color2: 'ffaa00'
+  #    key: starOrbitLeft1
+      
+  #showSternAliStarOrbitLeft2:
+  #  flashLedTwoColor:
+  #    show_tokens:
+  #      led: l_orbit_left_5
+  #      color1: '885500'
+  #      color2: 'ffaa00'
+  #    key: starOrbitLeft2
+      
+  #showSternAliStarOrbitRight:
+  #  flashLedTwoColor:
+  #    show_tokens:
+  #      led: l_orbit_right_2
+  #      color1: '885500'
+  #      color2: 'ffaa00'
+  #    key: starOrbitRight
+  
+  # ---------------------
+  # END MODE SPECIFIC::JUPITER ONE::ORANGE
+  # ---------------------
+      
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  mode_modeSternAli_started:
+    musicSternAli001:
+      loops: -1
+      volume: 0.3
+      
+  mode_modeSternAli_ending:
+    musicSternAli001:
+      action: stop
+  #---------------------
+  shotMusicHSternAli_loopOn_hit:
+    musicSternAli002:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicHSternAli_loopOff_hit:
+    musicSternAli002:
+      action: stop
+  # ---------------------      
+  shotMusicUSternAli_loopOn_hit:
+    musicSternAli003:
+      loops: -1
+      volume: 0.25
+      
+  shotMusicUSternAli_loopOff_hit:
+    musicSternAli003:
+      action: stop
+  # ---------------------
+  shotMusicNSternAli_loopOn_hit:
+    musicSternAli004:
+      loops: -1
+      volume: 0.6
+      
+  shotMusicNSternAli_loopOff_hit:
+    musicSternAli004:
+      action: stop
+  # ---------------------
+  shotMusicTSternAli_loopOn_hit:
+    musicSternAli005:
+      loops: -1
+      volume: 0.15
+      
+  shotMusicTSternAli_loopOff_hit:
+    musicSternAli005:
+      action: stop
+  # ---------------------
+  shotMusicESternAli_loopOn_hit:
+    musicSternAli006:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicESternAli_loopOff_hit:
+    musicSternAli006:
+      action: stop
+  # ---------------------
+  shotMusicRSternAli_loopOn_hit:
+    musicSternAli007:
+      loops: -1
+      volume: 0.3
+      
+  shotMusicRSternAli_loopOff_hit:
+    musicSternAli007:
+      action: stop
+  # ---------------------
+  
+
