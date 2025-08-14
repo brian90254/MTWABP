@@ -1,0 +1,1343 @@
+#config_version=6
+
+mode_settings:
+    display_delay_ms: 1500ms
+    hurry_up_delay_ms: 0
+    bonus_entries:
+        - event: bonus_base
+          score: 1000
+          # PLAYER SCORE ENTRY IS THE VARIABLE TRACKING BONUS COUNT
+          #player_score_entry: totalBonus * (current_player.multiPlayfield)
+          player_score_entry: totalBonus
+        #------------------------
+        - event: eventBonusMercury
+          score: 1000 * (current_player.bonusMercury)
+        #------------------------
+        - event: eventBonusVenus
+          score: 2000 * (current_player.bonusVenus)
+        #------------------------
+        - event: eventBonusEarth
+          score: 3000 * (current_player.bonusEarth)
+        #------------------------
+        - event: eventBonusMars
+          score: 4000 * (current_player.bonusMars)
+        #------------------------
+        - event: eventBonusJupiter
+          score: 5000 * (current_player.bonusJupiter)
+        #------------------------
+        - event: eventBonusSaturn
+          score: 6000 * (current_player.bonusSaturn)
+        #------------------------
+        - event: eventBonusNeptune
+          score: 7000 * (current_player.bonusNeptune)
+        #------------------------
+        - event: eventBonusUranus
+          score: 8000 * (current_player.bonusUranus)
+        #------------------------
+        - event: eventBonusPluto
+          score: 9000 * (current_player.bonusPluto)
+        #------------------------
+        #- event: bonus_total
+          #skip_if_zero: true
+        #------------------------
+        
+        ##------------------------
+        #- event: eventBonusBaseLower
+        #  score: 1000 * (current_player.bonusLower)
+        #  # PLAYER SCORE ENTRY IS THE VARIABLE TRACKING BONUS COUNT
+        #  #player_score_entry: bonusLower
+        ## -----------------------------------
+        #- event: eventBonusBaseUpper
+        #  score: 1000 * (current_player.bonusUpper)
+        #  # PLAYER SCORE ENTRY IS THE VARIABLE TRACKING BONUS COUNT
+        #  #player_score_entry: bonusUpper
+        ## -----------------------------------
+        #- event: eventBonusMiniUpper
+        #  score: (current_player.bonusMiniUpper)
+        #  # PLAYER SCORE ENTRY IS THE VARIABLE TRACKING BONUS COUNT
+        #  #player_score_entry: totalBonusUpper
+        ## -----------------------------------
+        #- event: eventBonusSuperLower
+        #  score: (current_player.bonusSuperLower)
+        #  # PLAYER SCORE ENTRY IS THE VARIABLE TRACKING BONUS COUNT
+        #  #player_score_entry: totalBonusUpper
+          
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+# ---------------------
+# EVENT::SOUNDS
+# ---------------------
+    # ---------------------
+    # SOUNDS::TART
+    # ---------------------
+    bonus_start:
+        - playPoolSoundDoor
+
+    # ---------------------
+    # SOUNDS::BASE
+    # ---------------------
+    bonus_base:
+        - playPoolSoundCompute
+        
+    # ---------------------
+    # SOUNDS::PLANETS
+    # ---------------------
+    eventBonusMercury:
+        - playPoolSoundCompute
+    eventBonusVenus:
+        - playPoolSoundCompute
+    eventBonusEarth:
+        - playPoolSoundCompute
+    eventBonusMars:
+        - playPoolSoundCompute
+    eventBonusJupiter:
+        - playPoolSoundCompute
+    eventBonusSaturn:
+        - playPoolSoundCompute
+    eventBonusNeptune:
+        - playPoolSoundCompute
+    eventBonusUranus:
+        - playPoolSoundCompute
+    eventBonusPluto:
+        - playPoolSoundCompute
+        
+    # ---------------------
+    # SOUNDS::SUBTOTAL
+    # ---------------------
+    bonus_subtotal:
+        - playPoolSoundCompute
+        
+    # ---------------------
+    # SOUNDS::MULTIPLIER
+    # ---------------------
+    bonus_multiplier:
+        - playPoolSoundCompute
+        
+    # ---------------------
+    # SOUNDS::TOTAL
+    # ---------------------
+    bonus_total:
+        - playPoolSoundCompute
+    
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+    # ----------------------------
+    # START
+    bonus_start:
+        slideCollectEndBallBonusTitle:
+            target: displayDMD
+    # ----------------------------
+    # ----------------------------
+    # BASE
+    bonus_base:
+        slideCollectEndBallBonusBase:
+            target: displayDMD
+    # ----------------------------
+# ---------------------
+# SLIDE::PLAYER::PLANETS
+# ---------------------
+    # MERCURY
+    eventBonusMercury:
+        slideCollectEndBallBonusMercury:
+            target: displayDMD
+    # ----------------------------
+    # VENUS
+    eventBonusVenus:
+        slideCollectEndBallBonusVenus:
+            target: displayDMD
+    # ----------------------------
+    # EARTH
+    eventBonusEarth:
+        slideCollectEndBallBonusEarth:
+            target: displayDMD
+    # ----------------------------
+    # MARS
+    eventBonusMars:
+        slideCollectEndBallBonusMars:
+            target: displayDMD
+    # ----------------------------
+    # JUPITER
+    eventBonusJupiter:
+        slideCollectEndBallBonusJupiter:
+            target: displayDMD
+    # ----------------------------
+    # SATURN
+    eventBonusSaturn:
+        slideCollectEndBallBonusSaturn:
+            target: displayDMD
+    # ----------------------------
+    # NEPTUNE
+    eventBonusNeptune:
+        slideCollectEndBallBonusNeptune:
+            target: displayDMD
+    # ----------------------------
+    # URANUS
+    eventBonusUranus:
+        slideCollectEndBallBonusUranus:
+            target: displayDMD
+    # ----------------------------
+    # PLUTO
+    eventBonusPluto:
+        slideCollectEndBallBonusPluto:
+            target: displayDMD
+    # ----------------------------
+    
+# ---------------------
+# SLIDE::PLAYER::SUBTOTAL AND MULTIPLIERS
+# ---------------------
+    # SUBTOTAL - SKIPPED IF NO MULTIPLIER
+    bonus_subtotal:
+        slideCollectEndBallBonusSubtotal:
+            target: displayDMD
+    # ----------------------------
+    # MULTIPLIER - SKIPPED IF NO MULTIPLIER
+    bonus_multiplier:
+        slideCollectEndBallBonusScore:
+            target: displayDMD
+    # ----------------------------
+    # TOTAL
+    bonus_total:
+        slideCollectEndBallBonusTotal:
+            target: displayDMD
+
+slides:
+# ----------------------
+# INTRO BONUS
+# ----------------------
+    slideCollectEndBallBonusTitle:
+        widgets:
+        # -------------------
+        # TITLE BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # TITLE BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            text: COLLECT
+            style: fontCollectBonusHeader
+            y: middle + 25
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+            # -------------------------
+            # TITLE BONUS::HEADER::OUTER::ONE
+            # -------------------------
+          - type: text
+            text: COLLECT
+            style: fontCollectBonusHeader
+            y: middle + 26
+            x: middle + 1
+            color: colorFontCollectBonusHeaderOuter1
+            # -------------------------
+          - type: text
+            text: COLLECT
+            style: fontCollectBonusHeader
+            y: middle + 24
+            x: middle + 1
+            color: colorFontCollectBonusHeaderOuter1
+            # -------------------------
+          - type: text
+            text: COLLECT
+            style: fontCollectBonusHeader
+            y: middle + 26
+            x: middle - 1
+            color: colorFontCollectBonusHeaderOuter1
+            # -------------------------
+          - type: text
+            text: COLLECT
+            style: fontCollectBonusHeader
+            y: middle + 24
+            x: middle - 1
+            color: colorFontCollectBonusHeaderOuter1
+        # -------------------
+        # TITLE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # TITLE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            text: BONUS
+            # DEVIATING - THIS IS HEADER STYLE TO MATCH
+            style: fontCollectBonusHeader
+            y: middle - 25
+            x: middle
+            # DEVIATING - THIS IS HEADER STYLE TO MATCH
+            color: colorFontCollectBonusHeaderInner
+            # -------------------------
+            # TITLE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            text: BONUS
+            # DEVIATING - THIS IS HEADER STYLE TO MATCH
+            style: fontCollectBonusHeader
+            y: middle - 26
+            x: middle + 1
+            # DEVIATING - THIS IS HEADER STYLE TO MATCH
+            color: colorFontCollectBonusHeaderOuter1
+            # -------------------------
+          - type: text
+            text: BONUS
+            # DEVIATING - THIS IS HEADER STYLE TO MATCH
+            style: fontCollectBonusHeader
+            y: middle - 24
+            x: middle + 1
+            # DEVIATING - THIS IS HEADER STYLE TO MATCH
+            color: colorFontCollectBonusHeaderOuter1
+            # -------------------------
+          - type: text
+            text: BONUS
+            # DEVIATING - THIS IS HEADER STYLE TO MATCH
+            style: fontCollectBonusHeader
+            y: middle - 26
+            x: middle - 1
+            # DEVIATING - THIS IS HEADER STYLE TO MATCH
+            color: colorFontCollectBonusHeaderOuter1
+            # -------------------------
+          - type: text
+            text: BONUS
+            # DEVIATING - THIS IS HEADER STYLE TO MATCH
+            style: fontCollectBonusHeader
+            y: middle - 24
+            x: middle - 1
+            # DEVIATING - THIS IS HEADER STYLE TO MATCH
+            color: colorFontCollectBonusHeaderOuter1
+            # -------------------------
+
+# ----------------------
+# BASE BONUS
+# ----------------------
+    slideCollectEndBallBonusBase:
+        widgets:
+        # -------------------
+        # BASE BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            #text: BONUS BASE
+            text: BASE
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # BASE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # BASE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            text: "(player|totalBonus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # BASE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            text: "(player|totalBonus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(player|totalBonus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(player|totalBonus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(player|totalBonus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # BASE BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            text: COLLECTION
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # ----------------
+            
+# ----------------------
+# BASE BONUS MERCURY
+# ----------------------
+    slideCollectEndBallBonusMercury:
+        widgets:
+        # -------------------
+        # BASE BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            text: MERCURY
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # BASE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # BASE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusMercury),000"
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # BASE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusMercury),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusMercury),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusMercury),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusMercury),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # BASE BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            #text: BONUS COLLECTION
+            text: COLLECTION
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # ----------------
+    
+# ----------------------
+# BASE BONUS VENUS
+# ----------------------
+    slideCollectEndBallBonusVenus:
+        widgets:
+        # -------------------
+        # BASE BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            text: VENUS
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # BASE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # BASE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusVenus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # BASE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusVenus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusVenus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusVenus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusVenus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # BASE BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            #text: BONUS COLLECTION
+            text: COLLECTION
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # ----------------
+            
+# ----------------------
+# BASE BONUS EARTH
+# ----------------------
+    slideCollectEndBallBonusEarth:
+        widgets:
+        # -------------------
+        # BASE BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            text: EARTH
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # BASE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # BASE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusEarth),000"
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # BASE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusEarth),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusEarth),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusEarth),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusEarth),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # BASE BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            #text: BONUS COLLECTION
+            text: COLLECTION
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # -------------------------
+
+# ----------------------
+# BASE BONUS MARS
+# ----------------------
+    slideCollectEndBallBonusMars:
+        widgets:
+        # -------------------
+        # BASE BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            text: MARS
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # BASE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # BASE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusMars),000"
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # BASE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusMars),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusMars),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusMars),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusMars),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # BASE BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            #text: BONUS COLLECTION
+            text: COLLECTION
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # -------------------------
+            
+# ----------------------
+# BASE BONUS JUPITER
+# ----------------------
+    slideCollectEndBallBonusJupiter:
+        widgets:
+        # -------------------
+        # BASE BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            text: JUPITER
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # BASE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # BASE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusJupiter),000"
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # BASE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusJupiter),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusJupiter),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusJupiter),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusJupiter),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # BASE BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            #text: BONUS COLLECTION
+            text: COLLECTION
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # -------------------------
+            
+# ----------------------
+# BASE BONUS SATURN
+# ----------------------
+    slideCollectEndBallBonusSaturn:
+        widgets:
+        # -------------------
+        # BASE BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            text: SATURN
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # BASE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # BASE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusSaturn),000"
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # BASE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusSaturn),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusSaturn),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusSaturn),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusSaturn),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # BASE BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            #text: BONUS COLLECTION
+            text: COLLECTION
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # -------------------------
+            
+# ----------------------
+# BASE BONUS NEPTUNE
+# ----------------------
+    slideCollectEndBallBonusNeptune:
+        widgets:
+        # -------------------
+        # BASE BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            text: NEPTUNE
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # BASE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # BASE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusNeptune),000"
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # BASE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusNeptune),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusNeptune),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusNeptune),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusNeptune),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # BASE BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            #text: BONUS COLLECTION
+            text: COLLECTION
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # -------------------------
+            
+# ----------------------
+# BASE BONUS URANUS
+# ----------------------
+    slideCollectEndBallBonusUranus:
+        widgets:
+        # -------------------
+        # BASE BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            text: URANUS
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # BASE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # BASE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusUranus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # BASE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusUranus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusUranus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusUranus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusUranus),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # BASE BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            #text: BONUS COLLECTION
+            text: COLLECTION
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # -------------------------
+            
+# ----------------------
+# BASE BONUS PLUTO
+# ----------------------
+    slideCollectEndBallBonusPluto:
+        widgets:
+        # -------------------
+        # BASE BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            text: PLUTO
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # BASE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # BASE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusPluto),000"
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # BASE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusPluto),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusPluto),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusPluto),000"
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            #text: "(player|totalBonusLower),000"
+            text: "(player|bonusPluto),000"
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # BASE BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # BASE BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            #text: BONUS COLLECTION
+            text: COLLECTION
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # -------------------------
+            
+# ----------------------
+# SUBTOTAL BONUS
+# ----------------------
+    slideCollectEndBallBonusSubtotal:
+        widgets:
+        # -------------------
+        # SUBTOTAL BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # SUBTOTAL BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            #text: SUB-TOTAL
+            text: SUBTOTAL
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # SUBTOTAL BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # SUBTOTAL BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            text: "(score)"
+            number_grouping: true
+            min_digits: 2
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # SUBTOTAL BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            text: "(score)"
+            number_grouping: true
+            min_digits: 2
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(score)"
+            number_grouping: true
+            min_digits: 2
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(score)"
+            number_grouping: true
+            min_digits: 2
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(score)"
+            number_grouping: true
+            min_digits: 2
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # SUBTOTAL BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # SUBTOTAL BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            #text: BONUS COLLECTION
+            text: COLLECTION
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # ----------------
+
+# -------------------
+# MULTIPLIER
+# -------------------
+    slideCollectEndBallBonusScore:
+        widgets:
+        # -------------------
+        # SCORE BONUS::HEADER
+        # -------------------
+          - type: text
+            #text: BONUS SCORE
+            text: SCORE
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+            # ----------------
+        # -------------------
+        # SCORE BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # SCORE BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            text: "(multiplier)X MULTI" 
+            style: fontCollectBonusMiddleText
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # SCORE BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            text: "(multiplier)X MULTI" 
+            style: fontCollectBonusMiddleText
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(multiplier)X MULTI" 
+            style: fontCollectBonusMiddleText
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(multiplier)X MULTI" 
+            style: fontCollectBonusMiddleText
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(multiplier)X MULTI" 
+            style: fontCollectBonusMiddleText
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # SCORE BONUS::FOOTER
+        # -------------------
+          - type: text
+            text: BONUS
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # ----------------
+
+
+# ----------------------
+# TOTAL BONUS
+# ----------------------
+    slideCollectEndBallBonusTotal:
+        widgets:
+        # -------------------
+        # TOTAL BONUS::HEADER
+        # -------------------
+            # -------------------------
+            # TOTAL BONUS::HEADER::INNER
+            # -------------------------
+          - type: text
+            text: TOTAL
+            style: fontCollectBonusHeader
+            y: top - 20
+            x: middle
+            color: colorFontCollectBonusHeaderInner
+        # -------------------
+        # TOTAL BONUS::MIDDLE
+        # -------------------
+            # -------------------------
+            # TOTAL BONUS::MIDDLE::INNER
+            # -------------------------
+          - type: text
+            text: "(score)"
+            number_grouping: true
+            min_digits: 2
+            style: fontCollectBonusMiddle
+            y: middle - 2
+            x: middle
+            color: colorFontCollectBonusMiddleInner
+            # -------------------------
+            # TOTAL BONUS::MIDDLE::OUTER::ONE
+            # -------------------------
+          - type: text
+            text: "(score)"
+            number_grouping: true
+            min_digits: 2
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(score)"
+            number_grouping: true
+            min_digits: 2
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle + 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(score)"
+            number_grouping: true
+            min_digits: 2
+            style: fontCollectBonusMiddle
+            y: middle - 3
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+            # --------------------------
+          - type: text
+            text: "(score)"
+            number_grouping: true
+            min_digits: 2
+            style: fontCollectBonusMiddle
+            y: middle - 1
+            x: middle - 1
+            color: colorFontCollectBonusMiddleOuter1
+        # -------------------
+        # TOTAL BONUS::FOOTER
+        # -------------------
+            # -------------------------
+            # TOTAL BONUS::FOOTER::INNER
+            # -------------------------
+          - type: text
+            text: BONUS
+            style: fontCollectBonusFooter
+            anchor_y: bottom
+            y: bottom
+            x: middle
+            color: colorFontCollectBonusFooterInner
+            # ----------------

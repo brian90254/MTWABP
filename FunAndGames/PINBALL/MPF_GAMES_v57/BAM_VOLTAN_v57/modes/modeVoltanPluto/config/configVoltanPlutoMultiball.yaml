@@ -1,0 +1,136 @@
+#config_version=6
+
+# VOLTAN
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeVoltanPluto_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballPlutoUpperKickerLeft
+    - eventEnableMultiballPlutoUpperKickerRight
+    - eventEnableMultiballPlutoUpperKickerBoth
+    # ----------------------------------
+    # ENABLE LOCK
+    - eventEnableMultiballPlutoLockSaucerTopRight
+    - eventEnableMultiballPlutoLockSaucerTopLeft
+    # ----------------------------------
+    
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::RIGHT
+  # ---------------------
+  # RIGHT::TWO BALL
+  multiball_lock_multiballPlutoLockSaucerTopRight_full.1{device.multiball_locks.multiballPlutoLockSaucerTopLeft.locked_balls==0}:
+    - eventStartMultiballPlutoUpperKickerRight|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballPlutoLockSaucerTopRight
+    - eventDisableMultiballPlutoLockSaucerTopLeft
+  # ---------------------
+  # RIGHT::THREE BALL
+  multiball_lock_multiballPlutoLockSaucerTopRight_full.2{device.multiball_locks.multiballPlutoLockSaucerTopLeft.locked_balls==1}:
+    - eventStartMultiballPlutoUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballPlutoLockSaucerTopRight|3500ms
+    - eventDisableMultiballPlutoLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::LEFT
+  # ---------------------
+  # LEFT::TWO BALL
+  multiball_lock_multiballPlutoLockSaucerTopLeft_full.1{device.multiball_locks.multiballPlutoLockSaucerTopRight.locked_balls==0}:
+    - eventStartMultiballPlutoUpperKickerLeft|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballPlutoLockSaucerTopRight
+    - eventDisableMultiballPlutoLockSaucerTopLeft
+  # ---------------------
+  # LEFT::THREE BALL
+  multiball_lock_multiballPlutoLockSaucerTopLeft_full.2{device.multiball_locks.multiballPlutoLockSaucerTopRight.locked_balls==1}:
+    - eventStartMultiballPlutoUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballPlutoLockSaucerTopRight|3500ms
+    - eventDisableMultiballPlutoLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # ENDING MULTIBALL
+  # ---------------------
+  # BOTH
+  multiball_multiballPlutoUpperKickerBoth_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballPlutoLockSaucerTopRight
+    - eventEnableMultiballPlutoLockSaucerTopLeft
+  # LEFT
+  multiball_multiballPlutoUpperKickerLeft_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballPlutoLockSaucerTopRight
+    - eventEnableMultiballPlutoLockSaucerTopLeft
+  # RIGHT
+  multiball_multiballPlutoUpperKickerRight_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballPlutoLockSaucerTopRight
+    - eventEnableMultiballPlutoLockSaucerTopLeft
+
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballPlutoLockSaucerTopRight:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopRight
+    enable_events: eventEnableMultiballPlutoLockSaucerTopRight
+    disable_events: eventDisableMultiballPlutoLockSaucerTopRight
+    locked_ball_counting_strategy: physical_only
+
+  multiballPlutoLockSaucerTopLeft:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopLeft
+    enable_events: eventEnableMultiballPlutoLockSaucerTopLeft
+    disable_events: eventDisableMultiballPlutoLockSaucerTopLeft
+    locked_ball_counting_strategy: physical_only
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballPlutoUpperKickerLeft:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballPlutoUpperKickerLeft
+    disable_events: eventDisableMultiballPlutoUpperKickerLeft
+    start_events: eventStartMultiballPlutoUpperKickerLeft
+    stop_events: eventStopMultiballPlutoUpperKickerLeft
+    
+  multiballPlutoUpperKickerRight:
+    ball_locks:
+      - ballDeviceSaucerTopRight
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballPlutoUpperKickerRight
+    disable_events: eventDisableMultiballPlutoUpperKickerRight
+    start_events: eventStartMultiballPlutoUpperKickerRight
+    stop_events: eventStopMultiballPlutoUpperKickerRight
+    
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::BOTH
+  # ----------------------------
+  multiballPlutoUpperKickerBoth:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+      - ballDeviceSaucerTopRight
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballPlutoUpperKickerBoth
+    disable_events: eventDisableMultiballPlutoUpperKickerBoth
+    start_events: eventStartMultiballPlutoUpperKickerBoth
+    stop_events: eventStopMultiballPlutoUpperKickerBoth
+    

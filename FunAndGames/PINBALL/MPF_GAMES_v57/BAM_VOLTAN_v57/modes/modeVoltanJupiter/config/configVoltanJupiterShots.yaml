@@ -1,0 +1,1018 @@
+#config_version=6
+
+# VOLTAN
+
+# *****************************
+# SHOTS::LANES
+# *****************************
+shots:
+    # -------------------
+    # MATRIX SPOT
+    # -------------------
+    shotMatrixSpotJupiter1:
+        switch: s_1_28
+        enable_events: eventEnableShotMatrixSpotJupiter1
+        disable_events: eventDisableShotMatrixSpotJupiter1
+        restart_events: eventRestartShotMatrixSpotJupiter1
+        reset_events: eventResetShotMatrixSpotJupiter1
+        profile: spShotMatrixSpotJupiter
+        show_tokens:
+            led1: ledSpot1A
+            led2: ledSpot1B
+            led3: ledSpot1C
+            led4: ledSpot1D
+            led5: ledSpot1E
+            led6: ledLane1
+           
+    shotMatrixSpotJupiter2:
+        switch: s_1_30
+        enable_events: eventEnableShotMatrixSpotJupiter2
+        disable_events: eventDisableShotMatrixSpotJupiter2
+        restart_events: eventRestartShotMatrixSpotJupiter2
+        reset_events: eventResetShotMatrixSpotJupiter2
+        profile: spShotMatrixSpotJupiter
+        show_tokens:
+            led1: ledSpot2A
+            led2: ledSpot2B
+            led3: ledSpot2C
+            led4: ledSpot2D
+            led5: ledSpot2E
+            led6: ledTarget2
+            
+    shotMatrixSpotJupiter3:
+        switch: s_1_19
+        enable_events: eventEnableShotMatrixSpotJupiter3
+        disable_events: eventDisableShotMatrixSpotJupiter3
+        restart_events: eventRestartShotMatrixSpotJupiter3
+        reset_events: eventResetShotMatrixSpotJupiter3
+        profile: spShotMatrixSpotJupiter
+        show_tokens:
+            led1: ledSpot3A
+            led2: ledSpot3B
+            led3: ledSpot3C
+            led4: ledSpot3D
+            led5: ledSpot3E
+            led6: ledLane3
+            
+    shotMatrixSpotJupiter4:
+        switch: s_1_17
+        enable_events: eventEnableShotMatrixSpotJupiter4
+        disable_events: eventDisableShotMatrixSpotJupiter4
+        restart_events: eventRestartShotMatrixSpotJupiter4
+        reset_events: eventResetShotMatrixSpotJupiter4
+        profile: spShotMatrixSpotJupiter
+        show_tokens:
+            led1: ledSpot4A
+            led2: ledSpot4B
+            led3: ledSpot4C
+            led4: ledSpot4D
+            led5: ledSpot4E
+            led6: ledLane4
+           
+    shotMatrixSpotJupiter5:
+        switch: s_1_9
+        enable_events: eventEnableShotMatrixSpotJupiter5
+        disable_events: eventDisableShotMatrixSpotJupiter5
+        restart_events: eventRestartShotMatrixSpotJupiter5
+        reset_events: eventResetShotMatrixSpotJupiter5
+        profile: spShotMatrixSpotJupiter
+        show_tokens:
+            led1: ledSpot5A
+            led2: ledSpot5B
+            led3: ledSpot5C
+            led4: ledSpot5D
+            led5: ledSpot5E
+            led6: ledTarget5
+            
+    shotMatrixSpotJupiter6:
+        switch: s_1_31
+        enable_events: eventEnableShotMatrixSpotJupiter6
+        disable_events: eventDisableShotMatrixSpotJupiter6
+        restart_events: eventRestartShotMatrixSpotJupiter6
+        reset_events: eventResetShotMatrixSpotJupiter6
+        profile: spShotMatrixSpotJupiter
+        show_tokens:
+            led1: ledSpot6A
+            led2: ledSpot6B
+            led3: ledSpot6C
+            led4: ledSpot6D
+            led5: ledSpot6E
+            led6: ledLane6
+            
+    shotMatrixSpotJupiter7:
+        switch: s_1_29
+        enable_events: eventEnableShotMatrixSpotJupiter7
+        disable_events: eventDisableShotMatrixSpotJupiter7
+        restart_events: eventRestartShotMatrixSpotJupiter7
+        reset_events: eventResetShotMatrixSpotJupiter7
+        profile: spShotMatrixSpotJupiter
+        show_tokens:
+            led1: ledSpot7A
+            led2: ledSpot7B
+            led3: ledSpot7C
+            led4: ledSpot7D
+            led5: ledSpot7E
+            led6: ledLane7
+           
+    shotMatrixSpotJupiter8:
+        switch: s_1_16
+        enable_events: eventEnableShotMatrixSpotJupiter8
+        disable_events: eventDisableShotMatrixSpotJupiter8
+        restart_events: eventRestartShotMatrixSpotJupiter8
+        reset_events: eventResetShotMatrixSpotJupiter8
+        profile: spShotMatrixSpotJupiter
+        show_tokens:
+            led1: ledSpot8A
+            led2: ledSpot8B
+            led3: ledSpot8C
+            led4: ledSpot8D
+            led5: ledSpot8E
+            led6: ledTarget8
+            
+    shotMatrixSpotJupiter9:
+        switch: s_1_18
+        enable_events: eventEnableShotMatrixSpotJupiter9
+        disable_events: eventDisableShotMatrixSpotJupiter9
+        restart_events: eventRestartShotMatrixSpotJupiter9
+        reset_events: eventResetShotMatrixSpotJupiter9
+        profile: spShotMatrixSpotJupiter
+        show_tokens:
+            led1: ledSpot9A
+            led2: ledSpot9B
+            led3: ledSpot9C
+            led4: ledSpot9D
+            led5: ledSpot9E
+            led6: ledLane9
+            
+    # -------------------
+    # MATRIX SPOT::GROUPS
+    # -------------------
+    # DIAGONAL
+    shotMatrixSpotJupiterDiagonalLeft:
+        enable_events: eventEnableShotMatrixSpotJupiterDiagonalLeft
+        disable_events: eventDisableShotMatrixSpotJupiterDiagonalLeft
+        restart_events: eventRestartShotMatrixSpotJupiterDiagonalLeft
+        reset_events: eventResetShotMatrixSpotJupiterDiagonalLeft
+        hit_events: eventHitShotMatrixSpotJupiterDiagonalLeft
+        profile: spShotMatrixSpotJupiterDiagonal
+            
+    shotMatrixSpotJupiterDiagonalRight:
+        enable_events: eventEnableShotMatrixSpotJupiterDiagonalRight
+        disable_events: eventDisableShotMatrixSpotJupiterDiagonalRight
+        restart_events: eventRestartShotMatrixSpotJupiterDiagonalRight
+        reset_events: eventResetShotMatrixSpotJupiterDiagonalRight
+        hit_events: eventHitShotMatrixSpotJupiterDiagonalRight
+        profile: spShotMatrixSpotJupiterDiagonal
+        
+    # VERTICAL
+    shotMatrixSpotJupiterVerticalLeft:
+        enable_events: eventEnableShotMatrixSpotJupiterVerticalLeft
+        disable_events: eventDisableShotMatrixSpotJupiterVerticalLeft
+        restart_events: eventRestartShotMatrixSpotJupiterVerticalLeft
+        reset_events: eventResetShotMatrixSpotJupiterVerticalLeft
+        hit_events: eventHitShotMatrixSpotJupiterVerticalLeft
+        profile: spShotMatrixSpotJupiterVertical
+            
+    shotMatrixSpotJupiterVerticalMiddle:
+        enable_events: eventEnableShotMatrixSpotJupiterVerticalMiddle
+        disable_events: eventDisableShotMatrixSpotJupiterVerticalMiddle
+        restart_events: eventRestartShotMatrixSpotJupiterVerticalMiddle
+        reset_events: eventResetShotMatrixSpotJupiterVerticalMiddle
+        hit_events: eventHitShotMatrixSpotJupiterVerticalMiddle
+        profile: spShotMatrixSpotJupiterVertical
+        
+    shotMatrixSpotJupiterVerticalRight:
+        enable_events: eventEnableShotMatrixSpotJupiterVerticalRight
+        disable_events: eventDisableShotMatrixSpotJupiterVerticalRight
+        restart_events: eventRestartShotMatrixSpotJupiterVerticalRight
+        reset_events: eventResetShotMatrixSpotJupiterVerticalRight
+        hit_events: eventHitShotMatrixSpotJupiterVerticalRight
+        profile: spShotMatrixSpotJupiterVertical
+        
+    # -------------------
+    # SHOTS::SPINNERS
+    # -------------------
+    shotSpinnerJupiterLeft:
+        switch: s_1_11
+        enable_events: eventEnableShotSpinnerJupiterLeft
+        disable_events: eventDisableShotSpinnerJupiterLeft
+        restart_events: eventRestartShotSpinnerJupiterLeft
+        reset_events: eventResetShotSpinnerJupiterLeft
+        profile: spShotSpinnerJupiter
+        show_tokens:
+            led1: ledSpinnerLeft1
+            led2: ledSpinnerLeft2
+            led3: ledSpinnerLeft3
+        
+    shotSpinnerJupiterRight:
+        switch: s_1_4
+        enable_events: eventEnableShotSpinnerJupiterRight
+        disable_events: eventDisableShotSpinnerJupiterRight
+        restart_events: eventRestartShotSpinnerJupiterRight
+        reset_events: eventResetShotSpinnerJupiterRight
+        profile: spShotSpinnerJupiter
+        show_tokens:
+            led1: ledSpinnerRight1
+            led2: ledSpinnerRight2
+            led3: ledSpinnerRight3
+        
+    # -------------------
+    # SHOTS::OUTLANES
+    # -------------------
+    shotOutlaneJupiterLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlaneJupiterLeft
+        disable_events: eventDisableShotOutlaneJupiterLeft
+        restart_events: eventRestartShotOutlaneJupiterLeft
+        reset_events: eventResetShotOutlaneJupiterLeft
+        profile: spShotOutlaneJupiter
+            
+    shotOutlaneJupiterRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlaneJupiterRight
+        disable_events: eventDisableShotOutlaneJupiterRight
+        restart_events: eventRestartShotOutlaneJupiterRight
+        reset_events: eventResetShotOutlaneJupiterRight
+        profile: spShotOutlaneJupiter
+            
+    # -------------------
+    # SHOTS::OUTLANE::SPECIAL
+    # -------------------
+    shotOutlaneJupiterSpecialLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlaneJupiterSpecialLeft
+        disable_events: eventDisableShotOutlaneJupiterSpecialLeft
+        restart_events: eventRestartShotOutlaneJupiterSpecialLeft
+        reset_events: eventResetShotOutlaneJupiterSpecialLeft
+        profile: spShotOutlaneJupiterSpecial
+        show_tokens:
+            led: ledOutlaneLeft
+            
+    shotOutlaneJupiterSpecialRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlaneJupiterSpecialRight
+        disable_events: eventDisableShotOutlaneJupiterSpecialRight
+        restart_events: eventRestartShotOutlaneJupiterSpecialRight
+        reset_events: eventResetShotOutlaneJupiterSpecialRight
+        profile: spShotOutlaneJupiterSpecial
+        show_tokens:
+            led: ledOutlaneRight
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotJupiterAll:
+        shots:
+            - shotMatrixSpotJupiter7
+            - shotMatrixSpotJupiter2
+            - shotMatrixSpotJupiter1
+            - shotMatrixSpotJupiter4
+            - shotMatrixSpotJupiter6
+            - shotMatrixSpotJupiter9
+            - shotMatrixSpotJupiter8
+            - shotMatrixSpotJupiter3
+            - shotMatrixSpotJupiter5
+        enable_events:
+            - eventEnableShotGroupMatrixSpotJupiterAll
+        disable_events:
+            - eventDisableShotGroupMatrixSpotJupiterAll
+        reset_events:
+            - eventResetShotGroupMatrixSpotJupiterAll
+        restart_events:
+            - eventRestartShotGroupMatrixSpotJupiterAll
+        rotate_left_events:
+            - sw_right_flipper
+        rotate_right_events:
+            - sw_left_flipper
+        
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotJupiterDiagonalLeft:
+        shots:
+            - shotMatrixSpotJupiter1
+            - shotMatrixSpotJupiter5
+            - shotMatrixSpotJupiter9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotJupiterDiagonalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotJupiterDiagonalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotJupiterDiagonalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotJupiterDiagonalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotJupiterDiagonalRight:
+        shots:
+            - shotMatrixSpotJupiter3
+            - shotMatrixSpotJupiter5
+            - shotMatrixSpotJupiter7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotJupiterDiagonalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotJupiterDiagonalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotJupiterDiagonalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotJupiterDiagonalRight
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotJupiterVerticalLeft:
+        shots:
+            - shotMatrixSpotJupiter1
+            - shotMatrixSpotJupiter4
+            - shotMatrixSpotJupiter7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotJupiterVerticalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotJupiterVerticalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotJupiterVerticalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotJupiterVerticalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotJupiterVerticalMiddle:
+        shots:
+            - shotMatrixSpotJupiter2
+            - shotMatrixSpotJupiter5
+            - shotMatrixSpotJupiter8
+        enable_events:
+            - eventEnableShotGroupMatrixSpotJupiterVerticalMiddle
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotJupiterVerticalMiddle
+        reset_events:
+            - eventResetShotGroupMatrixSpotJupiterVerticalMiddle
+        restart_events:
+            - eventRestartShotGroupMatrixSpotJupiterVerticalMiddle
+            
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotJupiterVerticalRight:
+        shots:
+            - shotMatrixSpotJupiter3
+            - shotMatrixSpotJupiter6
+            - shotMatrixSpotJupiter9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotJupiterVerticalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotJupiterVerticalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotJupiterVerticalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotJupiterVerticalRight
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::MARTIX::SPOT
+    # -----------------------------
+    spShotMatrixSpotJupiter:
+        states:
+          - name: litFlash2
+            show: showMatrixSpotJupiter
+            speed: 4
+            show_tokens:
+                color1: '880088'
+                color2: 'ff00ff'
+                color3: '000000'
+                color4: '000000'
+          - name: litFlash
+            show: showMatrixSpotJupiter
+            speed: 4
+            show_tokens:
+                color1: '888800'
+                color2: 'ffff00'
+                color3: '888800'
+                color4: 'ffff00'
+          - name: litSolid
+            show: showMatrixSpotJupiter
+            speed: 4
+            show_tokens:
+                #color1: '660088'
+                #color2: '660088'
+                color1: '0000cc'
+                color2: '0000cc'
+                color3: '008888'
+                color4: '00ffff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::MARTIX::GROUPS
+    # -----------------------------
+    spShotMatrixSpotJupiterDiagonal:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    spShotMatrixSpotJupiterVertical:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::SPINNER
+    # -----------------------------
+    spShotSpinnerJupiter:
+        states:
+          - name: litSolid
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: 'ffff00'
+                color2: '888800'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE
+    # -----------------------------
+    spShotOutlaneJupiter:
+        states:
+          #- name: litFlash
+          - name: litSolid
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE::SPECIAL
+    # -----------------------------
+    spShotOutlaneJupiterSpecial:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '440066'
+                color2: '8800cc'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: 'cc00ff'
+                color2: 'cc00ff'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeVoltanJupiter_started:
+        # -----------
+        # OUTLANES
+        # -----------
+        - eventEnableShotOutlaneJupiterLeft
+        - eventEnableShotOutlaneJupiterRight
+        # -----------
+        # MATRIX
+        # -----------
+        - eventEnableShotMatrixSpotJupiter1
+        - eventEnableShotMatrixSpotJupiter2
+        - eventEnableShotMatrixSpotJupiter3
+        - eventEnableShotMatrixSpotJupiter4
+        - eventEnableShotMatrixSpotJupiter5
+        - eventEnableShotMatrixSpotJupiter6
+        - eventEnableShotMatrixSpotJupiter7
+        - eventEnableShotMatrixSpotJupiter8
+        - eventEnableShotMatrixSpotJupiter9
+        # -----------
+        # MATRIX::GROUPS
+        # -----------
+        # DIAGONAL
+        # TODO reserve this for higher level modes past Jupiter
+        - eventEnableShotMatrixSpotJupiterDiagonalLeft
+        - eventEnableShotMatrixSpotJupiterDiagonalRight
+        #VERTICAL
+        - eventEnableShotMatrixSpotJupiterVerticalLeft
+        - eventEnableShotMatrixSpotJupiterVerticalMiddle
+        - eventEnableShotMatrixSpotJupiterVerticalRight
+        
+# -----------
+# MATRIX::GROUPS::COMPLETE
+# -----------
+# -----------
+# DIAGONAL
+# -----------
+    # TODO this is not enables in Jupiter
+    # -----------
+    # DIAGONAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotJupiterDiagonalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotJupiterDiagonalLeft
+        # -------------
+    shotMatrixSpotJupiterDiagonalLeft_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotJupiter1
+        #- eventDisableShotMatrixSpotJupiter5
+        #- eventDisableShotMatrixSpotJupiter9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalLeft
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotJupiter1|3000ms
+        #- eventRestartShotMatrixSpotJupiter5|3000ms
+        #- eventRestartShotMatrixSpotJupiter9|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerJupiterLeft
+    
+    # -----------
+    # DIAGONAL::RIGHT
+    # -----------
+    # TODO this is not enables in Jupiter
+    shotGroupMatrixSpotJupiterDiagonalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotJupiterDiagonalRight
+        # -------------
+    shotMatrixSpotJupiterDiagonalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotJupiter3
+        #- eventDisableShotMatrixSpotJupiter5
+        #- eventDisableShotMatrixSpotJupiter7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalRight
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotJupiter3|3000ms
+        #- eventRestartShotMatrixSpotJupiter5|3000ms
+        #- eventRestartShotMatrixSpotJupiter7|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerJupiterRight
+        
+    # -----------
+    # GROUP::ALL
+    # -----------
+    shotGroupMatrixSpotJupiterAll_litSolid_complete:
+        - eventVoltanJupiterComplete|3000ms
+    
+# -----------
+# VERTICAL
+# -----------
+    # -----------
+    # VERTICAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotJupiterVerticalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotJupiterVerticalLeft
+        # -------------
+    shotMatrixSpotJupiterVerticalLeft_litFlash_hit:
+        # TODO this is not enables in Jupiter
+        # -------------
+        # DISABLE SHOT
+        - eventDisableShotMatrixSpotJupiter1
+        - eventDisableShotMatrixSpotJupiter4
+        - eventDisableShotMatrixSpotJupiter7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalLeft
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Jupiter
+        - eventRestartShotMatrixSpotJupiter1|3000ms
+        - eventRestartShotMatrixSpotJupiter4|3000ms
+        - eventRestartShotMatrixSpotJupiter7|3000ms
+        
+    shotGroupMatrixSpotJupiterVerticalMiddle_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotJupiterVerticalMiddle
+        # -------------
+    shotMatrixSpotJupiterVerticalMiddle_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in Jupiter
+        - eventDisableShotMatrixSpotJupiter2
+        - eventDisableShotMatrixSpotJupiter5
+        - eventDisableShotMatrixSpotJupiter8
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalMiddle
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Jupiter
+        - eventRestartShotMatrixSpotJupiter2|3000ms
+        - eventRestartShotMatrixSpotJupiter5|3000ms
+        - eventRestartShotMatrixSpotJupiter8|3000ms
+        
+    shotGroupMatrixSpotJupiterVerticalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotJupiterVerticalRight
+        # -------------
+    shotMatrixSpotJupiterVerticalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in Jupiter
+        - eventDisableShotMatrixSpotJupiter3
+        - eventDisableShotMatrixSpotJupiter6
+        - eventDisableShotMatrixSpotJupiter9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalRight
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Jupiter
+        - eventRestartShotMatrixSpotJupiter3|3000ms
+        - eventRestartShotMatrixSpotJupiter6|3000ms
+        - eventRestartShotMatrixSpotJupiter9|3000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------------
+    # SPINNERS
+    # ---------------------
+    shotSpinnerJupiterLeft_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotSpinnerJupiterRight_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    sw_tagSpinner:
+      score: 1 * current_player.multiPlayfield
+
+    # ---------------------
+    # OUTLANES
+    # ---------------------
+    # STANDARD
+    shotOutlaneJupiterLeft_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    shotOutlaneJupiterRight_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    # SPECIAL
+    shotOutlaneJupiterSpecialLeft_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+    shotOutlaneJupiterSpecialRight_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+
+    # ---------------------
+    # TARGETS AND LANES
+    # ---------------------
+    shotGroupMatrixSpotJupiterAll_litFlash_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotGroupMatrixSpotJupiterAll_litSolid_hit:
+        score: 10 * current_player.multiPlayfield
+      
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+    # ---------------------
+    # SHOW::DIAGONAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalLeft:
+        showMatrixSpotJupiterThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotJupiterThreeCompleteDiagonalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+        
+    # ---------------------
+    # SHOW::DIAGONAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalRight:
+        showMatrixSpotJupiterThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotJupiterThreeCompleteDiagonalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalLeft:
+        showMatrixSpotJupiterThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotJupiterThreeCompleteVerticalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot4A
+                led2B: ledSpot4B
+                led2C: ledSpot4C
+                led2D: ledSpot4D
+                led2E: ledSpot4E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::MIDDLE
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalMiddle:
+        showMatrixSpotJupiterThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotJupiterThreeCompleteVerticalMiddle
+            show_tokens:
+                # --------------
+                led1A: ledSpot2A
+                led1B: ledSpot2B
+                led1C: ledSpot2C
+                led1D: ledSpot2D
+                led1E: ledSpot2E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot8A
+                led3B: ledSpot8B
+                led3C: ledSpot8C
+                led3D: ledSpot8D
+                led3E: ledSpot8E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalRight:
+        showMatrixSpotJupiterThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotJupiterThreeCompleteVerticalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot6A
+                led2B: ledSpot6B
+                led2C: ledSpot6C
+                led2D: ledSpot6D
+                led2E: ledSpot6E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotJupiter:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotJupiterThreeComplete:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1)
+            (led1B): (color1)
+            (led1C): (color1)
+            (led1D): (color1)
+            (led1E): (color1)
+            # ----------------
+            (led2A): (color1)
+            (led2B): (color1)
+            (led2C): (color1)
+            (led2D): (color1)
+            (led2E): (color1)
+            # ----------------
+            (led3A): (color1)
+            (led3B): (color1)
+            (led3C): (color1)
+            (led3D): (color1)
+            (led3E): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color2)
+            (led1B): (color2)
+            (led1C): (color2)
+            (led1D): (color2)
+            (led1E): (color2)
+            # ----------------
+            (led2A): (color2)
+            (led2B): (color2)
+            (led2C): (color2)
+            (led2D): (color2)
+            (led2E): (color2)
+            # ----------------
+            (led3A): (color2)
+            (led3B): (color2)
+            (led3C): (color2)
+            (led3D): (color2)
+            (led3E): (color2)
+            # ----------------
+        - time: "+1"
