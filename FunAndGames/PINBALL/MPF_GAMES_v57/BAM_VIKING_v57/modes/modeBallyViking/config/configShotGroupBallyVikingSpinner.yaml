@@ -1,0 +1,553 @@
+#config_version=6
+
+# BALLY VIKING
+
+# *****************************
+# ACHIEVEMENTS
+# *****************************
+achievements:
+  
+# -----------------------------
+# ACHIEVEMENT::SPINNER
+# -----------------------------
+  # -----------------------------
+  # SPINNER::MULTI::10X
+  # -----------------------------
+  achSpinnerMulti10x:
+    # --------------------------------
+    show_tokens:
+        led1: ledSpinnerCount100A
+        led2: ledSpinnerCount100B
+        led3: ledSpinnerCount100C
+        led4: ledSpinnerCount100D
+        led5: ledSpinnerCount100E
+        led6: ledSpinnerCount100F
+        led7: ledSpinnerCount100G
+        color1: 'ffff00'
+        color2: '888800'
+        # ---------------
+        led8: ledDummy1
+        led9: ledDummy2
+        # ---------------
+    show_when_selected: showAchSpinnerMultiSelected
+    show_when_started: showAchSpinnerMultiStarted
+    show_when_completed: showAchSpinnerMultiCompleted
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchSpinnerMulti10x
+    enable_events: eventEnableAchSpinnerMulti10x
+    start_events: eventStartAchSpinnerMulti10x
+    complete_events: eventCompleteAchSpinnerMulti
+    events_when_completed: eventAchSpinnerMulti10xCompleted
+    
+  # -----------------------------
+  # SPINNER::MULTI::100X
+  # -----------------------------
+  achSpinnerMulti100x:
+    # --------------------------------
+    show_tokens:
+        led1: ledSpinnerCount1000A
+        led2: ledSpinnerCount1000B
+        led3: ledSpinnerCount1000C
+        led4: ledSpinnerCount1000D
+        led5: ledSpinnerCount1000E
+        led6: ledSpinnerCount1000F
+        led7: ledSpinnerCount1000G
+        color1: 'ffff00'
+        color2: '888800'
+        # ---------------
+        led8: ledDummy1
+        led9: ledDummy2
+        # ---------------
+    show_when_selected: showAchSpinnerMultiSelected
+    show_when_started: showAchSpinnerMultiStarted
+    show_when_completed: showAchSpinnerMultiCompleted
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchSpinnerMulti100x
+    enable_events: eventEnableAchSpinnerMulti100x
+    start_events: eventStartAchSpinnerMulti100x
+    complete_events: eventCompleteAchSpinnerMulti
+    events_when_completed: eventAchSpinnerMulti100xCompleted
+
+# ---------------------
+# TIMERS
+# ---------------------
+timers:
+  # ---------------------
+  # TIMERS::MODE
+  # ---------------------
+    timerSpinner:
+        start_value: 10
+        #start_value: 8
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: yes
+        control_events:
+            -   event: eventRestartSpinnerTimer
+                action: restart
+            -   event: eventAddValueTimerSpinner
+                action: add
+                value: 20
+        
+shots:
+    # -------------------
+    # SHOTS::INLINE DROPS
+    # -------------------
+    shotSpinner:
+        switch: s_1_13
+        enable_events: eventEnableShotSpinner
+        disable_events: eventDisableShotSpinner
+        restart_events: eventRestartShotSpinner
+        reset_events: eventResetShotSpinner
+        profile: spShotSpinner
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::INLINE DROP
+    # -----------------------------
+    spShotSpinner:
+        states:
+          #- name: shotSpinnerZero
+          #  show: showShotSpinner
+          #  speed: 1
+          #  show_tokens:
+          #      color1: '000000'
+          #      color2: '000000'
+          #      color3: '000000'
+          #      color4: '000000'
+          #      color5: '000000'
+          #      color6: '000000'
+          #      color7: '000000'
+          #      color8: '000000'
+          #      color9: '000000'
+          #      color10: '000000'
+          - name: shotSpinnerOne
+            show: showShotSpinner
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: '000000'
+                color3: '000000'
+                color4: '000000'
+                color5: '000000'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+                color9: '000000'
+                color10: '000000'
+          - name: shotSpinnerTwo
+            show: showShotSpinner
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: '000000'
+                color4: '000000'
+                color5: '000000'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+                color9: '000000'
+                color10: '000000'
+          - name: shotSpinnerThree
+            show: showShotSpinner
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: '000000'
+                color5: '000000'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+                color9: '000000'
+                color10: '000000'
+          - name: shotSpinnerFour
+            show: showShotSpinner
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: '000000'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+                color9: '000000'
+                color10: '000000'
+          - name: shotSpinnerFive
+            show: showShotSpinner
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: 'ffff00'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+                color9: '000000'
+                color10: '000000'
+          - name: shotSpinnerSix
+            show: showShotSpinner
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: 'ffff00'
+                color6: 'ffff00'
+                color7: '000000'
+                color8: '000000'
+                color9: '000000'
+                color10: '000000'
+          - name: shotSpinnerSeven
+            show: showShotSpinner
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: 'ffff00'
+                color6: 'ffff00'
+                color7: 'ffff00'
+                color8: '000000'
+                color9: '000000'
+                color10: '000000'
+          - name: shotSpinnerEight
+            show: showShotSpinner
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: 'ffff00'
+                color6: 'ffff00'
+                color7: 'ffff00'
+                color8: 'ffff00'
+                color9: '000000'
+                color10: '000000'
+          - name: shotSpinnerNine
+            show: showShotSpinner
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: 'ffff00'
+                color6: 'ffff00'
+                color7: 'ffff00'
+                color8: 'ffff00'
+                color9: 'ffff00'
+                color10: '000000'
+          - name: shotSpinnerTen
+            show: showShotSpinner
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: 'ffff00'
+                color6: 'ffff00'
+                color7: 'ffff00'
+                color8: 'ffff00'
+                color9: 'ffff00'
+                color10: 'ffff00'
+        loop: false
+
+# *********************
+# EVENT::PLAYER
+# *********************
+event_player:
+
+    # MODE STARTUP
+    mode_modeBallyViking_started:
+        # TIMER
+        - eventRestartSpinnerTimer
+        # SHOT
+        - eventResetShotSpinner
+        - eventEnableShotSpinner
+        # SCORING
+        - eventResetMultiSpinner
+        # ACHIEVEMENTS
+        - eventResetAchSpinnerMulti10x
+        - eventEnableAchSpinnerMulti10x
+        - eventResetAchSpinnerMulti100x
+        - eventEnableAchSpinnerMulti100x
+        # SELECT-START ACHIEVEMENTS
+        - eventSelectAchSpinnerMulti10x
+        - eventStartAchSpinnerMulti10x
+        
+    # SPINNER HIT
+    shotSpinner_hit:
+        eventRestartSpinnerTimer
+        
+    # ALL TEN SPINNER HITS MADE
+    shotSpinner_shotSpinnerTen_hit:
+        # COMPLETE ACHEIVEMENT
+        - eventCompleteAchSpinnerMulti
+        # RESET SPINNER SHOT
+        - eventRestartShotSpinner
+        
+    # FIRST ACHIEVEMENT COMPLETED
+    eventAchSpinnerMulti10xCompleted:
+        # SELECT-START NEXT ACHIEVEMENT
+        - eventSelectAchSpinnerMulti100x
+        - eventStartAchSpinnerMulti100x
+        # ADVANCE MULTIPLIER
+        - eventSetMultiSpinner10X
+
+    # SECOND ACHIEVEMENT COMPLETED
+    eventAchSpinnerMulti100xCompleted:
+        # ADVANCE MULTIPLIER
+        - eventSetMultiSpinner100X
+        # RESET 10X - KILL 10X SHOW
+        - eventResetAchSpinnerMulti10x
+        - eventEnableAchSpinnerMulti10x|10ms
+        
+    # TIMER EXPIRED - RESET ALL
+    timer_timerSpinner_complete:
+        # RESET SHOT
+        - eventRestartShotSpinner
+        # RESET FIRST ACHIEVEMENT
+        - eventResetAchSpinnerMulti10x
+        - eventEnableAchSpinnerMulti10x|10ms
+        # SELECT-START FIRST ACHIEVEMENT
+        - eventSelectAchSpinnerMulti10x|20ms
+        - eventStartAchSpinnerMulti10x|30ms
+        # RESET SECOND ACHIEVEMENT
+        - eventResetAchSpinnerMulti100x|40ms
+        - eventEnableAchSpinnerMulti100x|50ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SPINNER
+# ---------------
+
+    # SET INITIAL MULTIPLYER
+    eventResetMultiSpinner:
+        multiSpinner:
+            int: 1
+            action: set
+
+    # ADVANCE MULTIPLIER 10X
+    eventSetMultiSpinner10X:
+        multiSpinner:
+            int: 10
+            action: set
+    
+    # ADVANCE MULTIPLIER 100X
+    eventSetMultiSpinner100X:
+        multiSpinner:
+            int: 100
+            action: set
+    
+    # SCORE HIT X MULTIPLIER
+    shotSpinner_hit:
+        score: 10 * current_player.multiSpinner
+        
+    # RESET MULTIPLIER WHEN TIMER EXPIRED
+    timer_timerSpinner_complete:
+        multiSpinner:
+            int: 1
+            action: set
+
+# *********************
+# SHOWS
+# *********************
+shows:
+  # -----------------------------------
+  # ACHIEVEMENT::SPINNER::MULTI
+  # -----------------------------------
+    showAchSpinnerMultiStarted:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            (led7): '000000'
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 1.0s
+        
+    showAchSpinnerMultiSelected:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            (led7): '000000'
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 1.0s
+        
+    #showAchSpinnerMultiCompleted:
+    #    - time: 0
+    #      lights:
+    #        (led1): (color1)
+    #        (led2): '000000'
+    #        (led3): '000000'
+    #        (led4): '000000'
+    #        (led5): '000000'
+    #        (led6): '000000'
+    #        (led7): '000000'
+    #        # --------------
+    #        (led8): (color1)
+    #        (led9): (color2)
+    #    - time: 0.33s
+    #      lights:
+    #        (led1): (color2)
+    #        (led2): '000000'
+    #        (led3): '000000'
+    #        (led4): '000000'
+    #        (led5): '000000'
+    #        (led6): '000000'
+    #        (led7): '000000'
+    #        # --------------
+    #        (led8): (color1)
+    #        (led9): (color2)
+    #    - time: 0.66s
+    #      lights:
+    #        (led1): (color2)
+    #        (led2): (color1)
+    #        (led3): (color1)
+    #        (led4): (color1)
+    #        (led5): (color1)
+    #        (led6): (color1)
+    #        (led7): (color1)
+    #        # --------------
+    #        (led8): (color1)
+    #        (led9): (color2)
+    #    - time: 1.0s
+    #      lights:
+    #        (led1): (color2)
+    #        (led2): (color2)
+    #        (led3): (color2)
+    #        (led4): (color2)
+    #        (led5): (color2)
+    #        (led6): (color2)
+    #        (led7): (color2)
+    #        # --------------
+    #        (led8): (color1)
+    #        (led9): (color2)
+    #    - time: 1.33s
+    #      lights:
+    #        (led1): (color1)
+    #        (led2): (color2)
+    #        (led3): (color2)
+    #        (led4): (color2)
+    #        (led5): (color2)
+    #        (led6): (color2)
+    #        (led7): (color2)
+    #        # --------------
+    #        (led8): (color1)
+    #        (led9): (color2)
+    #    - time: 1.66s
+    #      lights:
+    #        (led1): (color1)
+    #        (led2): (color1)
+    #        (led3): (color1)
+    #        (led4): (color1)
+    #        (led5): (color1)
+    #        (led6): (color1)
+    #        (led7): (color1)
+    #        # --------------
+    #        (led8): (color1)
+    #        (led9): (color2)
+    #    - time: 2.0s
+
+    showAchSpinnerMultiCompleted:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 0.25s
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 0.5s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 0.75s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 1.0s
+
+  # -----------------------------------
+  # SHOW SHOT SPINNER
+  # -----------------------------------
+    showShotSpinner:
+        - time: 0
+          lights:
+            ledSpinnerCount1: (color1)
+            ledSpinnerCount2: (color2)
+            ledSpinnerCount3: (color3)
+            ledSpinnerCount4: (color4)
+            ledSpinnerCount5: (color5)
+            ledSpinnerCount6: (color6)
+            ledSpinnerCount7: (color7)
+            ledSpinnerCount8: (color8)
+            ledSpinnerCount9: (color9)
+            ledSpinnerCount10: (color10)
+        - time: 1.0s
+        

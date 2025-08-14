@@ -1,0 +1,239 @@
+#config_version=6
+
+## ---------------------
+## SHOTS
+## ---------------------
+#shots:
+#    shotAlphaExtraBallJupiterOne:
+#        switch: s_rollover_rt
+#        enable_events: extra_ball_extraBallJupiterOne_lit
+#    shotBetaExtraBallJupiterOne:
+#        switch: s_kicker_upper
+#        enable_events: extra_ball_extraBallJupiterOne_lit
+    
+## ---------------------
+## SEQUENCE::SHOTS
+## ---------------------
+#sequence_shots:
+#    sequenceShotExtraBallJupiterOne:
+#        event_sequence:
+#        - shotAlphaExtraBallJupiterOne_hit
+#        #- shotBetaExtraBallJupiterOne_hit
+#        sequence_timeout: 5s
+
+
+# ---------------------
+# EXTRA::BALLS
+# ---------------------
+extra_balls:
+    extraBallBallyViking:
+        light_events: eventExtraBallBallyVikingLit
+        award_events: eventExtraBallBallyVikingAward
+        max_per_game: 3
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    shotLeftRollover_stateSpShotLeftRolloverOne_hit:
+        eventExtraBallBallyVikingLit
+    
+    shotLeftRollover_stateSpShotLeftRolloverTwo_hit:
+        eventExtraBallBallyVikingAward
+
+
+## ---------------------
+## SHOW::PLAYER
+## ---------------------
+#show_player:
+#  # ----------------------------
+#  # LIGHT EXTRA BALL
+#  # ----------------------------
+#  eventExtraBallBallyVikingLit:
+#    showExtraBallBallyVikingLit:
+#      loops: -1
+#      speed: 24
+#      key: keyExtraBallLit
+#
+#  # ----------------------------
+#  # AWARD EXTRA BALL
+#  # ----------------------------
+#  extra_ball_extraBallBallyViking_awarded:
+#    showExtraBallBallyVikingAward:
+#      loops: -1
+#      speed: 8
+#      key: keyExtraBallAward
+#
+#    keyExtraBallLit:
+#      action: stop
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  extra_ball_extraBallBallyViking_lit:
+    slideExtraBallBallyVikingLit:
+      target: displayDMD
+      
+  extra_ball_extraBallBallyViking_awarded:
+    slideExtraBallBallyVikingAward:
+      target: displayDMD
+
+# ---------------------
+# SLIDE::EXTRA BALL::LIGHT
+# ---------------------
+slides:
+  slideExtraBallBallyVikingLit:
+    widgets:
+      # -------------------------------
+      # RED FORGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLit
+        #font_size: 24
+        color: colorFontExtraBallLitInner
+        text: Extra Ball Lit
+        y: middle
+        x: middle
+
+      # -------------------------------
+      # YELLOW BACKGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLit
+        #font_size: 24
+        color: colorFontExtraBallLitOuter1
+        text: Extra Ball Lit
+        y: middle - 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallLit
+        #font_size: 24
+        color: colorFontExtraBallLitOuter1
+        text: Extra Ball Lit
+        y: middle - 1
+        x: middle - 1
+
+      - type: text
+        style: fontExtraBallLit
+        #font_size: 24
+        color: colorFontExtraBallLitOuter1
+        text: Extra Ball Lit
+        y: middle + 1
+        x: middle + 1
+
+      - type: text
+        style: fontExtraBallLit
+        #font_size: 24
+        color: colorFontExtraBallLitOuter1
+        text: Extra Ball Lit
+        y: middle + 1
+        x: middle - 1
+
+      # -------------------------------
+    expire: 4.0s
+
+# ---------------------
+# SLIDE::EXTRA BALL::AWARD
+# ---------------------
+
+  slideExtraBallBallyVikingAward:
+    widgets:
+      # BLUE FORGROUND
+      - type: text
+        style: fontExtraBallAward
+        #font_size: 32
+        color: colorFontExtraBallAwardInner
+        text: Extra Ball!
+        y: middle
+        x: middle
+        #animations: 
+        #  entrance:
+        #  - property: font_size
+        #    value: 32
+        #    duration: 2000ms
+        #    timing: with_previous
+        #  - property: opacity
+        #    value: 0
+        #    duration: 1000ms
+        #    timing: after_previous
+      # -------------------------------
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: fontExtraBallAward
+        #font_size: 32
+        color: colorFontExtraBallAwardOuter1
+        text: Extra Ball!
+        y: middle - 1
+        x: middle + 1
+        #animations: 
+        #  entrance:
+        #  - property: font_size
+        #    value: 32
+        #    duration: 2000ms
+        #    timing: with_previous
+        #  - property: opacity
+        #    value: 0
+        #    duration: 1000ms
+        #    timing: after_previous
+            
+      - type: text
+        style: fontExtraBallAward
+        #font_size: 32
+        color: colorFontExtraBallAwardOuter1
+        text: Extra Ball!
+        y: middle - 1
+        x: middle - 1
+        #animations: 
+        #  entrance:
+        #  - property: font_size
+        #    value: 32
+        #    duration: 2000ms
+        #    timing: with_previous
+        #  - property: opacity
+        #    value: 0
+        #    duration: 1000ms
+        #    timing: after_previous
+            
+      - type: text
+        style: fontExtraBallAward
+        #font_size: 32
+        color: colorFontExtraBallAwardOuter1
+        text: Extra Ball!
+        y: middle + 1
+        x: middle + 1
+        #animations: 
+        #  entrance:
+        #  - property: font_size
+        #    value: 32
+        #    duration: 2000ms
+        #    timing: with_previous
+        #  - property: opacity
+        #    value: 0
+        #    duration: 1000ms
+        #    timing: after_previous
+            
+      - type: text
+        style: fontExtraBallAward
+        #font_size: 32
+        color: colorFontExtraBallAwardOuter1
+        text: Extra Ball!
+        y: middle + 1
+        x: middle - 1
+        #animations: 
+        #  entrance:
+        #  - property: font_size
+        #    value: 32
+        #    duration: 2000ms
+        #    timing: with_previous
+        #  - property: opacity
+        #    value: 0
+        #    duration: 1000ms
+        #    timing: after_previous
+            
+      # -------------------------------
+    expire: 4.0s
+
+

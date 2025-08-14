@@ -1,0 +1,111 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceEightFlashLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledBuckUpperB
+        led2: ledBuckLowerB
+        led3: ledBuckUpperU
+        led4: ledBonusReturn
+        led5: ledBuckUpperC
+        led6: ledBonusBase
+        led7: ledBuckUpperK
+        led8: ledBuckLowerK
+
+- time: '+2'
+
+  shows:
+    traceEightFlashLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledBuckUpperB
+        led2: ledBuckLowerB
+        led3: ledBuckUpperU
+        led4: ledBonusReturn
+        led5: ledBuckUpperC
+        led6: ledBonusBase
+        led7: ledBuckUpperK
+        led8: ledBuckLowerK
+
+- time: '+2'
+
+  shows:
+    traceEightFlashLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledBuckUpperB
+        led2: ledBuckLowerB
+        led3: ledBuckUpperU
+        led4: ledBonusReturn
+        led5: ledBuckUpperC
+        led6: ledBonusBase
+        led7: ledBuckUpperK
+        led8: ledBuckLowerK
+
+- time: '+2'
+
+  shows:
+    traceEightFlashLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledBuckUpperB
+        led2: ledBuckLowerB
+        led3: ledBuckUpperU
+        led4: ledBonusReturn
+        led5: ledBuckUpperC
+        led6: ledBonusBase
+        led7: ledBuckUpperK
+        led8: ledBuckLowerK
+
+- time: '+2'
+
+  shows:
+    traceEightFlashLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledBuckUpperB
+        led2: ledBuckLowerB
+        led3: ledBuckUpperU
+        led4: ledBonusReturn
+        led5: ledBuckUpperC
+        led6: ledBonusBase
+        led7: ledBuckUpperK
+        led8: ledBuckLowerK
+
+- time: '+2'
+
+  shows:
+    traceEightFlashLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledBuckUpperB
+        led2: ledBuckLowerB
+        led3: ledBuckUpperU
+        led4: ledBonusReturn
+        led5: ledBuckUpperC
+        led6: ledBonusBase
+        led7: ledBuckUpperK
+        led8: ledBuckLowerK
+
+- time: '+2'

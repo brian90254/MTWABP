@@ -1,0 +1,788 @@
+#config_version=6
+
+# BALLY VIKING
+
+# *****************************
+# ACHIEVEMENTS
+# *****************************
+achievements:
+
+# -----------------------------
+# ACHIEVEMENT::BONUS
+# -----------------------------
+  # -----------------------------
+  # BONUS::BY::ONES
+  # -----------------------------
+  
+  achBonus0:
+    # --------------------------------
+    show_tokens:
+      led: ledDummy1
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus0
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus1
+    
+
+  achBonus1:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus1000
+      led: ledBonusAdvance1
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus1
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus2
+    
+  achBonus2:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus2000
+      led: ledBonusAdvance2
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus2
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus3
+    
+  achBonus3:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus3000
+      led: ledBonusAdvance3
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus3
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus4
+    
+    
+  achBonus4:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus4000
+      led: ledBonusAdvance4
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus4
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus5
+    
+    
+  achBonus5:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus5000
+      led: ledBonusAdvance5
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus5
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus6
+    
+    
+  achBonus6:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus6000
+      led: ledBonusAdvance6
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus6
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus7
+    
+    
+  achBonus7:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus7000
+      led: ledBonusAdvance7
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus7
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus8
+    
+    
+  achBonus8:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus8000
+      led: ledBonusAdvance8
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus8
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus9
+    
+
+  achBonus9:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus9000
+      led: ledBonusAdvance9
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    #show_when_completed: offLed
+    show_when_completed: onLedRed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus9
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonusTens
+    
+    
+  # -----------------------------
+  # BONUS::BY::TENS
+  # -----------------------------
+  
+  achBonus10:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus10k
+      led1: ledBonusAdvance10A
+      led2: ledBonusAdvance10B
+      led3: ledBonusAdvance10C
+      led4: ledBonusAdvance10D
+      led5: ledBonusAdvance10E
+      led6: ledBonusAdvance10F
+      led7: ledBonusAdvance10G
+      color1: '00ffff'
+      color2: '008888'
+      # ---------------
+      led8: ledDummy1
+      led9: ledDummy2
+      # ---------------
+    #show_when_selected: onLedCyan
+    #show_when_started: onLedCyan
+    #show_when_completed: offLed
+    show_when_selected: showAchBonusSelected
+    show_when_started: showAchBonusStarted
+    show_when_completed: showAchBonusCompleted
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus10
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus20
+  
+  achBonus20:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus20k
+      led1: ledBonusAdvance20A
+      led2: ledBonusAdvance20B
+      led3: ledBonusAdvance20C
+      led4: ledBonusAdvance20D
+      led5: ledBonusAdvance20E
+      led6: ledBonusAdvance20F
+      led7: ledBonusAdvance20G
+      color1: '00ffff'
+      color2: '008888'
+      # ---------------
+      led8: ledDummy1
+      led9: ledDummy2
+      # ---------------
+    #show_when_selected: onLedCyan
+    #show_when_started: onLedCyan
+    #show_when_completed: offLed
+    show_when_selected: showAchBonusSelected
+    show_when_started: showAchBonusStarted
+    show_when_completed: showAchBonusCompleted
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus20
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus30
+    
+  achBonus30:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus30k
+      led1: ledBonusAdvance10A
+      led2: ledBonusAdvance10B
+      led3: ledBonusAdvance10C
+      led4: ledBonusAdvance10D
+      led5: ledBonusAdvance10E
+      led6: ledBonusAdvance10F
+      led7: ledBonusAdvance10G
+      color1: '00ffff'
+      color2: '008888'
+      # ---------------
+      led8: ledDummy1
+      led9: ledDummy2
+      # ---------------
+      led10: ledBonusAdvance20A
+      led11: ledBonusAdvance20B
+      led12: ledBonusAdvance20C
+      led13: ledBonusAdvance20D
+      led14: ledBonusAdvance20E
+      led15: ledBonusAdvance20F
+      led16: ledBonusAdvance20G
+    #show_when_selected: onLedCyan
+    #show_when_started: onLedCyan
+    #show_when_completed: offLed
+    show_when_selected: showAchBonusSelectedDouble
+    show_when_started: showAchBonusStartedDouble
+    show_when_completed: showAchBonusCompletedDouble
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus30
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus40
+    
+  achBonus40:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus40k
+      led1: ledBonusAdvance40A
+      led2: ledBonusAdvance40B
+      led3: ledBonusAdvance40C
+      led4: ledBonusAdvance40D
+      led5: ledBonusAdvance40E
+      led6: ledBonusAdvance40F
+      led7: ledBonusAdvance40G
+      color1: '00ffff'
+      color2: '008888'
+      # ---------------
+      led8: ledDummy1
+      led9: ledDummy2
+      # ---------------
+    #show_when_selected: onLedCyan
+    #show_when_started: onLedCyan
+    #show_when_completed: offLed
+    show_when_selected: showAchBonusSelected
+    show_when_started: showAchBonusStarted
+    show_when_completed: showAchBonusCompleted
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus40
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus50
+
+  achBonus50:
+    # --------------------------------
+    show_tokens:
+      #led: ledBonus30k
+      led1: ledBonusAdvance10A
+      led2: ledBonusAdvance10B
+      led3: ledBonusAdvance10C
+      led4: ledBonusAdvance10D
+      led5: ledBonusAdvance10E
+      led6: ledBonusAdvance10F
+      led7: ledBonusAdvance10G
+      color1: '00ffff'
+      color2: '008888'
+      # ---------------
+      led8: ledDummy1
+      led9: ledDummy2
+      # ---------------
+      led10: ledBonusAdvance40A
+      led11: ledBonusAdvance40B
+      led12: ledBonusAdvance40C
+      led13: ledBonusAdvance40D
+      led14: ledBonusAdvance40E
+      led15: ledBonusAdvance40F
+      led16: ledBonusAdvance40G
+    #show_when_selected: onLedCyan
+    #show_when_started: onLedCyan
+    #show_when_completed: offLed
+    show_when_selected: showAchBonusSelectedDouble
+    show_when_started: showAchBonusStartedDouble
+    show_when_completed: showAchBonusCompletedDouble
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus50
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus60
+    
+    # --------------------------------------------------
+    # TODO: ADD "SHOW WHEN STOPPED" TO FINAL ACHIEVEMENT
+    #       ADD STOP EVENT TO ALL OTHER ACHIEVMENTS
+    #       THIS WILL "FREEZE" BONUS AT 59,000 MAXIMUM
+    # --------------------------------------------------
+
+# *****************************
+# END ACHIEVEMENTS
+# *****************************
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  
+  ## -----------------------------------
+  ## INCREMENT BONUS FOR LANES A-B
+  ## -----------------------------------
+  #shotTopLaneA_hit:
+  #  - eventCompleteBonusOnes
+  #  
+  #shotTopLaneB_hit:
+  #  - eventCompleteBonusOnes
+  # -----------------------------------
+  # THIS IS TO ADD TO BONUS ON INLINE DROP HIT
+  # -----------------------------------
+  shotGroupRightDrop_hit:
+    - eventCompleteBonusOnes
+
+  ## -----------------------------------
+  ## BONUS LIGHTS
+  ## -----------------------------------
+  #shotGroupTopLanes_hit:
+  #  - eventCompleteBonusOnes
+    
+  #shotRightLane:
+  #shotRightLane_hit:
+  #  - eventCompleteBonusOnes
+    
+  #sw_tagDropYellow:
+  #  - eventCompleteBonusOnes
+  #  
+  #sw_tagStandupTarget:
+  #  - eventCompleteBonusOnes
+    
+    
+  # -----------------------------------
+  # RESET ONES ONCE TEN IS ACTIVE
+  # -----------------------------------
+  eventStartAchBonusTens:
+    # RESET ONES
+    - eventResetAchBonusOnes
+    - eventEnableAchBonusOnes
+    - eventStartAchBonus0
+    # ACHIEVE BY TENS
+    - eventCompleteBonusTens
+    - eventStartAchBonus10
+    
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# INITIALIZE BONUS COUNT
+# ---------------
+  eventResetMultipliersBallyViking:
+    # -------------------------
+    # RESET BONUS COUNT
+    totalBonus:
+      #int: 1
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MULTIPLIER
+    multiBonus:
+      int: 1
+      action: set
+    bonus_multiplier:
+      int: 1
+      action: set
+    # -------------------------
+    # RESET TOTAL BONUS SCORE
+    # (TOTAL BONUS X BONUS MULTIPLIER)
+    scoreBonus:
+      int: 0
+      action: set
+    # -------------------------
+
+# ---------------
+# ADVANCE BONUS COUNT
+# ---------------
+  eventCompleteBonusOnes:
+    totalBonus: 1
+      
+      
+# *********************
+# SHOWS
+# *********************
+shows:
+# -----------------------------------
+# ACHIEVEMENT::BONUS::10-20-40
+# -----------------------------------
+    #showAchBonusStarted:
+    showAchBonusCompleted:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            (led7): '000000'
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 1.0s
+    # -----------------------   
+    showAchBonusSelected:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 0.25s
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 0.5s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 0.75s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 1.0s
+        
+    # ----------------------- 
+    #showAchBonusCompleted:
+    showAchBonusStarted:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 0.25s
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 0.5s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 0.75s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+        - time: 1.0s
+    # -----------------------
+    
+# -----------------------------------
+# ACHIEVEMENT::BONUS::DOUBLES::30-50
+# -----------------------------------
+    showAchBonusCompletedDouble:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): '000000'
+            (led3): '000000'
+            (led4): '000000'
+            (led5): '000000'
+            (led6): '000000'
+            (led7): '000000'
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+            # --------------
+            (led10): '000000'
+            (led11): '000000'
+            (led12): '000000'
+            (led13): '000000'
+            (led14): '000000'
+            (led15): '000000'
+            (led16): '000000'
+        - time: 1.0s
+    # ----------------------- 
+    showAchBonusSelectedDouble:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+            # --------------
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+            (led16): (color1)
+        - time: 0.25s
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+            # --------------
+            (led10): (color2)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+            (led16): (color1)
+        - time: 0.5s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+            # --------------
+            (led10): (color2)
+            (led11): (color2)
+            (led12): (color2)
+            (led13): (color2)
+            (led14): (color2)
+            (led15): (color2)
+            (led16): (color2)
+        - time: 0.75s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+            # --------------
+            (led10): (color1)
+            (led11): (color2)
+            (led12): (color2)
+            (led13): (color2)
+            (led14): (color2)
+            (led15): (color2)
+            (led16): (color2)
+        - time: 1.0s
+    # ----------------------- 
+    showAchBonusStartedDouble:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+            # --------------
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+            (led16): (color1)
+        - time: 0.25s
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+            # --------------
+            (led10): (color2)
+            (led11): (color1)
+            (led12): (color1)
+            (led13): (color1)
+            (led14): (color1)
+            (led15): (color1)
+            (led16): (color1)
+        - time: 0.5s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+            # --------------
+            (led10): (color2)
+            (led11): (color2)
+            (led12): (color2)
+            (led13): (color2)
+            (led14): (color2)
+            (led15): (color2)
+            (led16): (color2)
+        - time: 0.75s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+            # --------------
+            (led8): (color1)
+            (led9): (color2)
+            # --------------
+            (led10): (color1)
+            (led11): (color2)
+            (led12): (color2)
+            (led13): (color2)
+            (led14): (color2)
+            (led15): (color2)
+            (led16): (color2)
+        - time: 1.0s
+    # ----------------------- 

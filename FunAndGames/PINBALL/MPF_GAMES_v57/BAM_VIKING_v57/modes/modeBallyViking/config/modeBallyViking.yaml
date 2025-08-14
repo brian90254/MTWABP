@@ -1,0 +1,146 @@
+#config_version=6
+
+config:
+- configShotsBallyViking.yaml
+#- configAchievementsBallyViking.yaml
+#- configAchBallyVikingGlobeAward.yaml
+- configAchBallyVikingBonus.yaml
+#- configScoringBallyViking.yaml
+- configShowsBallyViking.yaml
+#- configAchBallyVikingVariTarget.yaml
+#- configShowsBallyVikingVariTarget.yaml
+# -----------------------------------------
+- configShotGroupBallyVikingInlineDrop.yaml
+- configShotGroupBallyVikingSpinner.yaml
+- configShotGroupBallyVikingRightDrop.yaml
+- configAchBallyVikingThumperSaucer.yaml
+- configExtraBallBallyViking.yaml
+#- configSpecialShotsBallyViking.yaml
+- configAchBallyVikingABLaneBonus.yaml
+
+mode:
+  start_events: eventStartModeBallyViking
+  stop_events:
+    - eventStopModeBallyViking
+    - ball_ending
+    
+  priority: 2000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+  # -----------------------------------
+  # VOICE CALLOUT TWIKI
+  # -----------------------------------
+  sgVariTarget_unlitVariTarget_hit:
+    - playPoolVoiceBallyVikingTwiki
+
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeBallyViking_started:
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeBallyVikingStart
+    
+    # -----------------------------------
+    # ENABLE BONUS
+    # -----------------------------------
+    # ONES
+    - eventResetAchBonusOnes
+    - eventEnableAchBonusOnes
+    - eventStartAchBonus0
+    - eventCompleteBonusOnes|1s
+    # TENS
+    - eventResetAchBonusTens
+    - eventEnableAchBonusTens
+
+    # -----------------------------------
+    # RESET BUCK ROGERS SHOTS (RESET BEFORE ENABLE)
+    # -----------------------------------
+    - eventResetShotTopLaneB
+    - eventResetShotTopLaneU
+    - eventResetShotTopLaneC
+    - eventResetShotTopLaneK
+    - eventResetShotGroupTopLanes
+    
+    - eventResetAchVariTarget
+    - eventResetShotVariTarget
+    - eventResetShotGroupVariTarget
+  
+    - eventResetShotExtraBall
+    - eventResetShotSaucerBonus
+    - eventResetShotAdvanceMultipliers
+    
+    # -----------------------------------
+    # ENABLE BUCK ROGERS SHOTS (ENABLE AFTER RESET)
+    # -----------------------------------
+    - eventEnableShotTopLaneB
+    - eventEnableShotTopLaneU
+    - eventEnableShotTopLaneC
+    - eventEnableShotTopLaneK
+    - eventEnableShotGroupTopLanes
+
+    - eventEnableShotVariTarget
+    - eventEnableShotGroupVariTarget
+    - eventEnableAgAchVariTarget
+    
+    - eventEnableShotAdvanceMultipliers
+    
+    # -----------------------------------
+    # START BUCK ROGERS SHOTS
+    # -----------------------------------
+    - eventEnableAchVariTarget1
+    - eventSelectAchVariTarget1
+    - eventStartAchVariTarget1
+    
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersBallyViking
+
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  mode_modeBallyViking_started:
+    nameMoon:
+      #string: "BUCK ROGERS"
+      string: "THE VIKINGS"
+      action: set
+
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  #---------------------
+  # AMBIENCE
+  mode_modeBallyViking_started:
+    #musicGlobetrotters012:
+    #poolMusicAmbienceGlobetrotters:
+    musicAmbienceBallyViking001:
+      loops: -1
+      volume: 0.3
+      
+  mode_modeBallyViking_ending:
+    #musicGlobetrotters012:
+    #poolMusicAmbienceGlobetrotters:
+    musicAmbienceBallyViking001:
+      action: stop
+  #---------------------
+  
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+#show_player:
+# ---------------------
+# SHOW::PLAYER::COILS
+# ---------------------
+
+  #ball_hold_ballHoldSaucer_held_ball:
+  #  showBallHoldSaucer:
+  #    loops: 0
+  #    speed: 1
