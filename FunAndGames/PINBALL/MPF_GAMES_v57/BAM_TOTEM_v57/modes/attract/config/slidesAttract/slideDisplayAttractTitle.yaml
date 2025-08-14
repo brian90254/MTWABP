@@ -1,0 +1,194 @@
+#config_version=6
+
+# *********************
+# CHARLIE'S TOTEM
+# *********************
+
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  # *************************
+  # CHARLIE'S TOTEM TITLE :: ONE
+  # *************************
+  slideDisplayAttractTitle:
+    target: displayDMD
+    widgets:
+    #   # --------------------
+    #   # IRON - CENTER TEXT
+    #   # --------------------
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 25
+    #   x: middle
+    #   style: fontAttractTitleTotemHeader
+    #   color: colorFontAttractTitleTotemHeaderInner
+    #   z: 20
+    #   # --------------------
+    #   # IRON - OUTLINE
+    #   # --------------------
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 26
+    #   x: middle + 1
+    #   style: fontAttractTitleTotemHeader
+    #   color: colorFontAttractTitleTotemHeaderOuter1
+    #   z: 15
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 26
+    #   x: middle - 1
+    #   style: fontAttractTitleTotemHeader
+    #   color: colorFontAttractTitleTotemHeaderOuter1
+    #   z: 15
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 24
+    #   x: middle + 1
+    #   style: fontAttractTitleTotemHeader
+    #   color: colorFontAttractTitleTotemHeaderOuter1
+    #   z: 15
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 24
+    #   x: middle - 1
+    #   style: fontAttractTitleTotemHeader
+    #   color: colorFontAttractTitleTotemHeaderOuter1
+    #   z: 15
+    #   # --------------------
+    #   # IRON - DOUBLE _ OUTLINE
+    #   # --------------------
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 27
+    #   x: middle + 2
+    #   style: fontAttractTitleTotemHeader
+    #   color: colorFontAttractTitleTotemHeaderOuter2
+    #   z: 10
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 27
+    #   x: middle - 2
+    #   style: fontAttractTitleTotemHeader
+    #   color: colorFontAttractTitleTotemHeaderOuter2
+    #   z: 10
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 23
+    #   x: middle + 2
+    #   style: fontAttractTitleTotemHeader
+    #   color: colorFontAttractTitleTotemHeaderOuter2
+    #   z: 10
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 23
+    #   x: middle - 2
+    #   style: fontAttractTitleTotemHeader
+    #   color: colorFontAttractTitleTotemHeaderOuter2
+    #   z: 10
+      # --------------------
+      # TOTEM - CENTER TEXT
+      # --------------------
+    - type: text
+      text: TOTEM
+      y: middle
+      x: middle
+      style: fontAttractTitleTotemMiddle
+      color: colorFontAttractTitleTotemMiddleInner
+      z: 20
+      # --------------------
+      # MAIDEN - OUTLINE
+      # --------------------
+    - type: text
+      text: TOTEM
+      y: middle - 2
+      x: middle - 2
+      style: fontAttractTitleTotemMiddle
+      color: colorFontAttractTitleTotemMiddleOuter1
+      z: 15
+    - type: text
+      text: TOTEM
+      y: middle - 2
+      x: middle + 2
+      style: fontAttractTitleTotemMiddle
+      color: colorFontAttractTitleTotemMiddleOuter1
+      z: 15
+    - type: text
+      text: TOTEM
+      y: middle + 2
+      x: middle - 2
+      style: fontAttractTitleTotemMiddle
+      color: colorFontAttractTitleTotemMiddleOuter1
+      z: 15
+    - type: text
+      text: TOTEM
+      y: middle + 2
+      x: middle + 2
+      style: fontAttractTitleTotemMiddle
+      color: colorFontAttractTitleTotemMiddleOuter1
+      z: 15
+      # --------------------
+      # MAIDEN - DOUBLE - OUTLINE
+      # --------------------
+    - type: text
+      text: TOTEM
+      y: middle - 4
+      x: middle - 4
+      style: fontAttractTitleTotemMiddle
+      color: colorFontAttractTitleTotemMiddleOuter2
+      z: 10
+    - type: text
+      text: TOTEM
+      y: middle - 4
+      x: middle + 4
+      style: fontAttractTitleTotemMiddle
+      color: colorFontAttractTitleTotemMiddleOuter2
+      z: 10
+    - type: text
+      text: TOTEM
+      y: middle + 4
+      x: middle - 4
+      style: fontAttractTitleTotemMiddle
+      color: colorFontAttractTitleTotemMiddleOuter2
+      z: 10
+    - type: text
+      text: TOTEM
+      y: middle + 4
+      x: middle + 4
+      style: fontAttractTitleTotemMiddle
+      color: colorFontAttractTitleTotemMiddleOuter2
+      z: 10
+      # --------------------
+      # COLOR OUTLINE
+      # --------------------
+    - type: rectangle
+      color: colorBoxAttractTitleTotemOuter
+      width: 236
+      height: 130
+      x: 120
+      y: 67
+      z: 3
+    - type: rectangle
+      color: colorBoxAttractTitleTotemMiddle
+      width: 232
+      height: 126
+      x: 120
+      y: 67
+      z: 5
+    - type: rectangle
+      color: colorBoxAttractTitleTotemInner
+      width: 228
+      height: 122
+      x: 120
+      y: 67
+      z: 6
+      # --------------------
+      # BLACK INFILL
+      # --------------------
+    - type: rectangle
+      color: colorBoxAttractTitleTotemFill
+      width: 224
+      height: 118
+      x: 120
+      y: 67
+      z: 7

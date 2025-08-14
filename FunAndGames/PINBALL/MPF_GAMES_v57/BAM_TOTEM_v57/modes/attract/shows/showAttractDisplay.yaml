@@ -1,0 +1,89 @@
+#show_version=6
+
+# ---------------------
+# SLIDES::TESTING
+# ---------------------
+- time: 0
+
+  events:
+    eventShowDisplayAttractTitle
+- time: '+6'
+
+# ----------------------------------
+
+# # COLLECT BONUS :: BASE
+#   events:
+#     eventShowDisplayAttractCollectBonusBase
+# - time: '+3'
+
+# # COLLECT BONUS :: SCORE
+#   events:
+#     eventShowDisplayAttractCollectBonusScore
+# - time: '+3'
+
+# # COLLECT BONUS :: SUB TOTAL
+#   events:
+#     eventShowDisplayAttractCollectBonusSubTotal
+# - time: '+3'
+
+# # COLLECT BONUS :: TITLE
+#   events:
+#     eventShowDisplayAttractCollectBonusTitle
+# - time: '+3'
+
+# # COLLECT BONUS :: TOTAL
+#   events:
+#     eventShowDisplayAttractCollectBonusTotal
+# - time: '+3'
+
+# ----------------------
+
+# BALL SAVED
+  events:
+    eventShowDisplayAttractBallSaved
+- time: '+3'
+
+# EXTRA BALL LIT
+  events:
+    eventShowDisplayAttractExtraBallLit
+- time: '+3'
+
+# EXTRA BALL AWARD
+  events:
+    eventShowDisplayAttractExtraBallAward
+- time: '+3'
+
+# ---------------------
+# SLIDES::TattooMystique
+# ---------------------
+  events:
+    eventShowDisplayAttractLast
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractTitle
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractGrandChampion
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractFirstHighScore
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractSecondHighScore
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractTitle
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractThirdHighScore
+- time: '+3'
+
+  events:
+    eventShowDisplayAttractFourthHighScore
+- time: '+3'
