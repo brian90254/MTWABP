@@ -90,6 +90,18 @@ LAYER_COLORS = [
 ]
 
 # ---------------------------
+# KEY helpers
+# ---------------------------
+def layer_idx_from_key(key: int, bank: int) -> int:
+    """Map number keys to a layer index within the current 10-layer bank.
+       1–9 => slots 0–8, 0 => slot 9. Returns -1 if not a number key."""
+    if ord('1') <= key <= ord('9'):
+        return bank * 10 + (key - ord('1'))
+    if key == ord('0'):
+        return bank * 10 + 9
+    return -1
+
+# ---------------------------
 # ARC helpers
 # ---------------------------
 def ccw_sweep_deg(start_deg: float, end_deg: float) -> np.ndarray:
@@ -500,6 +512,9 @@ def main():
 
     print("Hotkeys: A=Add DXF (picker), 1–9 toggle layers, L=list layers, F/0=fit, +/-=zoom, arrows=pan, Esc=quit")
 
+    # INIT STARTING LAYER BANK
+    layer_bank = 0  # which group of 10 layers the number keys operate on
+
     while True:
         frame = renderer.draw()
         cv2.imshow(WINDOW_NAME, frame)
@@ -544,11 +559,33 @@ def main():
                 if added:
                     print(f"Added {added} layer(s). Press 'L' to list and 1–9 to toggle visibility.")
 
-        # Toggle visibility of layers 1..9
-        elif key in range(ord('1'), ord('9') + 1):
-            idx = key - ord('1')  # 0-based
+        # # Toggle visibility of layers 1..9
+        # elif key in range(ord('1'), ord('9') + 1):
+        #     idx = key - ord('1')  # 0-based
+        #     if 0 <= idx < len(renderer.layers):
+        #         renderer.layers[idx].visible = not renderer.layers[idx].visible
+
+        # Change the active bank (10 layers per bank)
+        elif key in (ord(','), ord('<')):  # prev bank
+            max_bank = max(0, (len(renderer.layers) - 1) // 10)
+            layer_bank = max(0, layer_bank - 1)
+            print(f"Layer bank: {layer_bank+1}/{max_bank+1}  "
+                  f"(layers {layer_bank*10+1}-{min((layer_bank+1)*10, len(renderer.layers))})")
+
+        elif key in (ord('.'), ord('>')):  # next bank
+            max_bank = max(0, (len(renderer.layers) - 1) // 10)
+            layer_bank = min(max_bank, layer_bank + 1)
+            print(f"Layer bank: {layer_bank+1}/{max_bank+1}  "
+                  f"(layers {layer_bank*10+1}-{min((layer_bank+1)*10, len(renderer.layers))})")
+
+        # Toggle visibility using number keys within the current bank
+        elif key in (*range(ord('1'), ord('9') + 1), ord('0')):
+            idx = layer_idx_from_key(key, layer_bank)
             if 0 <= idx < len(renderer.layers):
-                renderer.layers[idx].visible = not renderer.layers[idx].visible
+                lay = renderer.layers[idx]
+                lay.visible = not lay.visible
+                state = "ON" if lay.visible else "OFF"
+                print(f"Toggled layer {idx+1} [{lay.name}] -> {state}")
 
         # List layers
         elif key in (ord('l'), ord('L')):
