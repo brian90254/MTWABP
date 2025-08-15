@@ -646,7 +646,8 @@ def load_layer_from_path(path: str, color_idx: int) -> DXFLayer:
     doc = ezdxf.readfile(path)
     msp = doc.modelspace()
     color = LAYER_COLORS[color_idx % len(LAYER_COLORS)]
-    return DXFLayer(path=path, doc=doc, msp=msp, color_override=color, visible=True)
+    #return DXFLayer(path=path, doc=doc, msp=msp, color_override=color, visible=True)
+    return DXFLayer(path=path, doc=doc, msp=msp, color_override=None, visible=True)
 
 # def main():
 #     ap = argparse.ArgumentParser(description="Display a DXF file with OpenCV (pan/zoom).")
