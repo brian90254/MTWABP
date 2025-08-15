@@ -359,13 +359,21 @@ def main():
             renderer.scale /= 1.2
         elif key == ord('0'):
             renderer._fit_to_view()
-        elif key == 81:  # Left arrow
+        # elif key == 81:  # Left arrow
+        #     renderer.pan = (renderer.pan[0] - 20, renderer.pan[1])
+        # elif key == 83:  # Right arrow
+        #     renderer.pan = (renderer.pan[0] + 20, renderer.pan[1])
+        # elif key == 82:  # Up arrow
+        #     renderer.pan = (renderer.pan[0], renderer.pan[1] - 20)
+        # elif key == 84:  # Down arrow
+        #     renderer.pan = (renderer.pan[0], renderer.pan[1] + 20)
+        elif key == 3:  # Left arrow
             renderer.pan = (renderer.pan[0] - 20, renderer.pan[1])
-        elif key == 83:  # Right arrow
+        elif key == 2:  # Right arrow
             renderer.pan = (renderer.pan[0] + 20, renderer.pan[1])
-        elif key == 82:  # Up arrow
+        elif key == 1:  # Up arrow
             renderer.pan = (renderer.pan[0], renderer.pan[1] - 20)
-        elif key == 84:  # Down arrow
+        elif key == 0:  # Down arrow
             renderer.pan = (renderer.pan[0], renderer.pan[1] + 20)
 
     cv2.destroyAllWindows()
