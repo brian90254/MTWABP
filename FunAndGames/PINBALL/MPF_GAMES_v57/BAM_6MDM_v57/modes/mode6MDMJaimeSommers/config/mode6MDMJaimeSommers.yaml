@@ -1,0 +1,64 @@
+#config_version=6
+
+config:
+- config6MDMJaimeSommersQualifiers.yaml
+
+mode:
+  start_events: eventStartMode6MDMJaimeSommers
+  stop_events:
+    - eventStopMode6MDMJaimeSommers
+    - ball_ending
+    
+  priority: 3000
+  
+## ---------------------
+## EVENT::PLAYER
+## ---------------------
+#event_player:    
+#  # -----------------------------------
+#  # MODE SPECIFIC EVENTS
+#  # -----------------------------------
+#  mode_mode6MDMJaimeSommers_started:
+
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  # -----------------------
+  # BASE MODE STARTED
+  # -----------------------
+  mode_mode6MDMJaimeSommers_started:
+    # SET NAME FOR DMD
+    nameMoon:
+      #string: "JAIME SOMMERS"
+      string: "BIONIC WOMAN"
+      action: set
+    # SET PLAYFIELD MULTIPLIER
+    multiplierPlayfield:
+      int: 2
+      action: set
+
+## ---------------------
+## SOUND::PLAYER
+## ---------------------
+#sound_player:
+#  #---------------------
+#  # AMBIENCE
+#  mode_mode6MDMJaimeSommers_started:
+#    music6MDMJaimeSommers005:
+#      loops: -1
+#      #volume: 0.4
+#      volume: 0.2
+#  mode_mode6MDMJaimeSommers_ending:
+#    music6MDMJaimeSommers005:
+#      action: stop
+#  #---------------------
+#  # PAUSE AMBIENCE FOR VIDEO SHOW
+#  eventResumeTrackPlaylist:
+#    music6MDMJaimeSommers005:
+#      loops: -1
+#      #volume: 0.4
+#      volume: 0.2
+#  eventPauseTrackPlaylist:
+#    music6MDMJaimeSommers005:
+#      action: stop

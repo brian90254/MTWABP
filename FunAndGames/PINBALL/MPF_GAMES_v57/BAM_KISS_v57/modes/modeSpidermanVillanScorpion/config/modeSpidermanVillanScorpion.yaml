@@ -1,0 +1,97 @@
+#config_version=6
+
+config:
+- configSpidermanVillanScorpionSlides.yaml
+- configSpidermanVillanScorpionShots.yaml
+- configSpidermanVillanScorpionThumpers.yaml
+#- configSpidermanVillanScorpionMultiball.yaml
+
+mode:
+  start_events:
+    - eventStartModeSpidermanVillanScorpion
+  stop_events:
+    - eventStopModeSpidermanVillanScorpion
+    - eventStopModeSpidermanVillanScorpion
+    #- ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  #mode_modeSpidermanVillanScorpion_started:
+  mode_modeSpidermanVillanScorpion_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlideSpidermanVillanScorpionBase
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeKissStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersSpidermanVillanScorpion|1000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  #mode_modeSpidermanVillanScorpion_started:
+  mode_modeSpidermanVillanScorpion_started:
+    nameMoon:
+      #string: "PLAYBOY"
+      #string: "SPIDERMAN"
+      #string: "SPIDERMAN vs SCORPION"
+      string: "ACE FREHLEY"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersSpidermanVillanScorpion:
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusUpper:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusMiniUpper:
+      #int: 50000
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT LOWER
+    bonusLower:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusSuperLower:
+      #int: 100000
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT
+    totalBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET TOTAL BONUS SCORE
+    # (TOTAL BONUS X BONUS MULTIPLIER)
+    scoreBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set

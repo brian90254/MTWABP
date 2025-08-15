@@ -1,0 +1,141 @@
+#show_version=6
+
+- time: 0
+  # ------------------------
+  # GREEN
+  shows:
+    targetTwelveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledLane1A
+        led2: ledLane1B
+        led3: ledLane1C
+        led4: ledLane2A
+        led5: ledLane2B
+        led6: ledLane2C
+        led7: ledLane3A
+        led8: ledLane3B
+        led9: ledLane3C
+        led10: ledLane4A
+        led11: ledLane4B
+        led12: ledLane4C
+
+- time: '+3'
+  # ------------------------
+  # CYAN
+  shows:
+    targetTwelveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledLane1A
+        led2: ledLane1B
+        led3: ledLane1C
+        led4: ledLane2A
+        led5: ledLane2B
+        led6: ledLane2C
+        led7: ledLane3A
+        led8: ledLane3B
+        led9: ledLane3C
+        led10: ledLane4A
+        led11: ledLane4B
+        led12: ledLane4C
+
+- time: '+3'
+  # ------------------------
+  # BLUE
+  shows:
+    targetTwelveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledLane1A
+        led2: ledLane1B
+        led3: ledLane1C
+        led4: ledLane2A
+        led5: ledLane2B
+        led6: ledLane2C
+        led7: ledLane3A
+        led8: ledLane3B
+        led9: ledLane3C
+        led10: ledLane4A
+        led11: ledLane4B
+        led12: ledLane4C
+
+- time: '+3'
+  # ------------------------
+  # MAGENTA
+  shows:
+    targetTwelveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledLane1A
+        led2: ledLane1B
+        led3: ledLane1C
+        led4: ledLane2A
+        led5: ledLane2B
+        led6: ledLane2C
+        led7: ledLane3A
+        led8: ledLane3B
+        led9: ledLane3C
+        led10: ledLane4A
+        led11: ledLane4B
+        led12: ledLane4C
+
+- time: '+3'
+  # ------------------------
+  # RED
+  shows:
+    targetTwelveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledLane1A
+        led2: ledLane1B
+        led3: ledLane1C
+        led4: ledLane2A
+        led5: ledLane2B
+        led6: ledLane2C
+        led7: ledLane3A
+        led8: ledLane3B
+        led9: ledLane3C
+        led10: ledLane4A
+        led11: ledLane4B
+        led12: ledLane4C
+
+- time: '+3'
+  # ------------------------
+  # YELLOW
+  shows:
+    targetTwelveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledLane1A
+        led2: ledLane1B
+        led3: ledLane1C
+        led4: ledLane2A
+        led5: ledLane2B
+        led6: ledLane2C
+        led7: ledLane3A
+        led8: ledLane3B
+        led9: ledLane3C
+        led10: ledLane4A
+        led11: ledLane4B
+        led12: ledLane4C
+
+- time: '+3'

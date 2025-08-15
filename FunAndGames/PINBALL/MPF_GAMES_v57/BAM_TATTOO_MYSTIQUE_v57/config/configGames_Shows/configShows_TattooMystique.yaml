@@ -1,0 +1,1590 @@
+#config_version=6
+
+shows:
+# --------------------------------
+# DISC SPINNER :: 24-UP :: REVERSE CHASE
+# --------------------------------
+  reverseChaseDiscSpinnerTwentyfourLedTwoColor:
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: REVERSE CHASE
+    - time: 0
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color2)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color2)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color2)
+        (led19): (color1)
+        (led20): (color1)
+        (led21): (color1)
+        (led22): (color1)
+        (led23): (color1)
+        (led24): (color2)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: REVERSE CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color2)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color2)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color2)
+        (led18): (color1)
+        (led19): (color1)
+        (led20): (color1)
+        (led21): (color1)
+        (led22): (color1)
+        (led23): (color2)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: REVERSE CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color2)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color2)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color2)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color1)
+        (led20): (color1)
+        (led21): (color1)
+        (led22): (color2)
+        (led23): (color1)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: REVERSE CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color2)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color2)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color2)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color1)
+        (led20): (color1)
+        (led21): (color2)
+        (led22): (color1)
+        (led23): (color1)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: REVERSE CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color2)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color2)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color2)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color1)
+        (led20): (color2)
+        (led21): (color1)
+        (led22): (color1)
+        (led23): (color1)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: REVERSE CHASE
+    - time: '+1'
+      lights:
+        (led1): (color2)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color2)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color2)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color2)
+        (led20): (color1)
+        (led21): (color1)
+        (led22): (color1)
+        (led23): (color1)
+        (led24): (color1)
+
+    - time: '+1'
+# --------------------------------
+
+
+# --------------------------------
+# DISC SPINNER :: 24-UP :: CHASE
+# --------------------------------
+  chaseDiscSpinnerTwentyfourLedTwoColor:
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: CHASE
+    - time: 0
+      lights:
+        (led1): (color2)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color2)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color2)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color2)
+        (led20): (color1)
+        (led21): (color1)
+        (led22): (color1)
+        (led23): (color1)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color2)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color2)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color2)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color1)
+        (led20): (color2)
+        (led21): (color1)
+        (led22): (color1)
+        (led23): (color1)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color2)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color2)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color2)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color1)
+        (led20): (color1)
+        (led21): (color2)
+        (led22): (color1)
+        (led23): (color1)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color2)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color2)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color2)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color1)
+        (led20): (color1)
+        (led21): (color1)
+        (led22): (color2)
+        (led23): (color1)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color2)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color2)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color2)
+        (led18): (color1)
+        (led19): (color1)
+        (led20): (color1)
+        (led21): (color1)
+        (led22): (color1)
+        (led23): (color2)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color2)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color2)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color2)
+        (led19): (color1)
+        (led20): (color1)
+        (led21): (color1)
+        (led22): (color1)
+        (led23): (color1)
+        (led24): (color2)
+
+    - time: '+1'
+# --------------------------------
+
+# --------------------------------
+# DISC SPINNER :: 24-UP :: TRACE
+# --------------------------------
+  traceDiscSpinnerTwentyfourLedTwoColor:
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: TRACE
+    - time: 0
+      lights:
+        (led1): (color2)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color2)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color2)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color2)
+        (led20): (color1)
+        (led21): (color1)
+        (led22): (color1)
+        (led23): (color1)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: TRACE
+    - time: '+1'
+      lights:
+        (led1): (color2)
+        (led2): (color2)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color2)
+        (led8): (color2)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color2)
+        (led14): (color2)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color2)
+        (led20): (color2)
+        (led21): (color1)
+        (led22): (color1)
+        (led23): (color1)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: TRACE
+    - time: '+1'
+      lights:
+        (led1): (color2)
+        (led2): (color2)
+        (led3): (color2)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color2)
+        (led8): (color2)
+        (led9): (color2)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color2)
+        (led14): (color2)
+        (led15): (color2)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color2)
+        (led20): (color2)
+        (led21): (color2)
+        (led22): (color1)
+        (led23): (color1)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: TRACE
+    - time: '+1'
+      lights:
+        (led1): (color2)
+        (led2): (color2)
+        (led3): (color2)
+        (led4): (color2)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color2)
+        (led8): (color2)
+        (led9): (color2)
+        (led10): (color2)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color2)
+        (led14): (color2)
+        (led15): (color2)
+        (led16): (color2)
+        (led17): (color1)
+        (led18): (color1)
+        (led19): (color2)
+        (led20): (color2)
+        (led21): (color2)
+        (led22): (color2)
+        (led23): (color1)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: TRACE
+    - time: '+1'
+      lights:
+        (led1): (color2)
+        (led2): (color2)
+        (led3): (color2)
+        (led4): (color2)
+        (led5): (color2)
+        (led6): (color1)
+        (led7): (color2)
+        (led8): (color2)
+        (led9): (color2)
+        (led10): (color2)
+        (led11): (color2)
+        (led12): (color1)
+        (led13): (color2)
+        (led14): (color2)
+        (led15): (color2)
+        (led16): (color2)
+        (led17): (color2)
+        (led18): (color1)
+        (led19): (color2)
+        (led20): (color2)
+        (led21): (color2)
+        (led22): (color2)
+        (led23): (color2)
+        (led24): (color1)
+    # --------------------
+    # STEP 1 :: DISC SPINNER :: TRACE
+    - time: '+1'
+      lights:
+        (led1): (color2)
+        (led2): (color2)
+        (led3): (color2)
+        (led4): (color2)
+        (led5): (color2)
+        (led6): (color2)
+        (led7): (color2)
+        (led8): (color2)
+        (led9): (color2)
+        (led10): (color2)
+        (led11): (color2)
+        (led12): (color2)
+        (led13): (color2)
+        (led14): (color2)
+        (led15): (color2)
+        (led16): (color2)
+        (led17): (color2)
+        (led18): (color2)
+        (led19): (color2)
+        (led20): (color2)
+        (led21): (color2)
+        (led22): (color2)
+        (led23): (color2)
+        (led24): (color2)
+
+    - time: '+1'
+
+# --------------------------------
+# THUMPER :: 14-UP :: PULSE
+# --------------------------------
+  pulseThumperFourteenLedTwoColor:
+    # --------------------
+    # STEP 1 :: THUMPER :: PULSE
+    - time: 0
+      lights:
+        (led1): (color2)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+    # --------------------
+    # STEP 2 :: THUMPER :: PULSE
+    - time: '+1'
+      lights:
+        (led1): (color2)
+        (led2): (color2)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color2)
+        (led13): (color2)
+        (led14): (color2)
+    # --------------------
+    # STEP 3 :: THUMPER :: PULSE
+    - time: '+1'
+      lights:
+        (led1): (color2)
+        (led2): (color2)
+        (led3): (color2)
+        (led4): (color2)
+        (led5): (color2)
+        (led6): (color2)
+        (led7): (color2)
+        (led8): (color2)
+        (led9): (color2)
+        (led10): (color2)
+        (led11): (color2)
+        (led12): (color2)
+        (led13): (color2)
+        (led14): (color2)
+
+    - time: '+1'
+
+# --------------------------------
+# SOLID :: DIAMOND :: THREE
+# --------------------------------
+  solidDiamondThreeLedTwoColor:
+    # --------------------
+    # STEP 1 :: DIAMOND :: THREE
+    - time: 0
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+    # --------------------
+    # STEP 2 :: DIAMOND :: THREE   
+    - time: '+2'
+      lights:
+        (led1): (color1)
+        (led2): (color2)
+        (led3): (color1)
+    # --------------------
+    # STEP 3 :: DIAMOND :: THREE    
+    - time: '+2'
+      lights:
+        (led1): (color2)
+        (led2): (color1)
+        (led3): (color2)
+    # --------------------
+    # STEP 4 :: DIAMOND :: THREE   
+    - time: '+2'
+
+# --------------------------------
+# FLASH :: DIAMOND :: THREE
+# --------------------------------
+  flashDiamondThreeLedTwoColor:
+    # --------------------
+    # STEP 1 :: DIAMOND :: THREE
+    - time: 0
+      lights:
+        (led1): (color2)
+        (led2): (color1)
+        (led3): (color1)
+    # --------------------
+    # STEP 2 :: DIAMOND :: THREE   
+    - time: '+2'
+      lights:
+        (led1): (color1)
+        (led2): (color2)
+        (led3): (color1)
+    # --------------------
+    # STEP 3 :: DIAMOND :: THREE    
+    - time: '+2'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color2)
+    # --------------------
+    # STEP 4 :: DIAMOND :: THREE   
+    - time: '+2'
+
+# --------------------------------
+# SOLID :: DIAMOND :: SIX
+# --------------------------------
+  solidDiamondSixLedTwoColor:
+    # --------------------
+    # STEP 1 :: DIAMOND :: SIX
+    - time: 0
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color2)
+        (led4): (color2)
+        (led5): (color1)
+        (led6): (color1)
+    # --------------------
+    # STEP 2 :: DIAMOND :: SIX    
+    - time: '+2'
+      lights:
+        (led1): (color1)
+        (led2): (color2)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color2)
+        (led6): (color1)
+    # --------------------
+    # STEP 3 :: DIAMOND :: SIX    
+    - time: '+2'
+      lights:
+        (led1): (color2)
+        (led2): (color1)
+        (led3): (color2)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color2)
+   
+    - time: '+2'
+
+# --------------------------------
+# FLASH :: DIAMOND :: SIX
+# --------------------------------
+  flashDiamondSixLedTwoColor:
+    # --------------------
+    # STEP 1 :: DIAMOND :: SIX
+    - time: 0
+      lights:
+        (led1): (color2)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+    # --------------------
+    # STEP 2 :: DIAMOND :: SIX    
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color2)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+    # --------------------
+    # STEP 3 :: DIAMOND :: SIX    
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color2)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+    # --------------------
+    # STEP 4 :: DIAMOND :: SIX    
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color2)
+        (led5): (color1)
+        (led6): (color1)
+    # --------------------
+    # STEP 5 :: DIAMOND :: SIX    
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color2)
+        (led6): (color1)
+    # --------------------
+    # STEP 6 :: DIAMOND :: SIX    
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color2)
+  
+    - time: '+1'
+
+
+# --------------------------------
+# ORBITS :: CHASE
+# --------------------------------
+  arrowFifteenLedTwoColor:
+    # --------------------
+    # STEP 1 :: ORBITS :: CHASE
+    - time: 0
+      lights:
+        (led1): (color1)
+        (led2): (color2)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+    # --------------------
+    # STEP 2 :: ORBITS :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color2)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+    # --------------------
+    # STEP 3 :: ORBITS :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color2)
+        (led6): (color1)
+        (led7): (color2)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+    # --------------------
+    # STEP 4 :: ORBITS :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color2)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+    # --------------------
+    # STEP 5 :: ORBITS :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color2)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+    # --------------------
+    # STEP 6 :: ORBITS :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color2)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+    # --------------------
+    # STEP 7 :: ORBITS :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color2)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color2)
+    # --------------------
+    # STEP 8 :: ORBITS :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color2)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color2)
+        (led15): (color1)
+    # --------------------
+    # STEP 9 :: ORBITS :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color2)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+    # --------------------
+    # STEP 10 :: ORBITS :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color2)
+        (led12): (color1)
+        (led13): (color2)
+        (led14): (color1)
+        (led15): (color1)
+    # --------------------
+    # STEP 11 :: ORBITS :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color2)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+    # --------------------
+    # STEP 12 :: ORBITS :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+    - time: '+1'
+
+# --------------------------------
+# DROP TARGET BANK :: CHASE
+# --------------------------------
+  dropEighteenLedTwoColor:
+    # --------------------
+    # STEP 1 :: DROP TARGET BANK :: CHASE
+    - time: 0
+      lights:
+        (led1): (color2)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 2 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color2)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 3 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color2)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 4 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color2)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 5 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color2)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 6 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color2)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 7 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color2)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 8 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color2)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 9 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color2)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 10 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color2)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 11 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color2)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 12 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color2)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 13 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color2)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 14 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color2)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 15 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color2)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 16 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color2)
+        (led17): (color1)
+        (led18): (color1)
+    # --------------------
+    # STEP 17 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color2)
+        (led18): (color1)
+    # --------------------
+    # STEP 18 :: DROP TARGET BANK :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+        (led13): (color1)
+        (led14): (color1)
+        (led15): (color1)
+        (led16): (color1)
+        (led17): (color1)
+        (led18): (color2)
+    - time: '+1'
+    
+# --------------------------------
+# TARGETS / LANES :: CHASE
+# --------------------------------
+  targetTwelveLedTwoColor:
+    # --------------------
+    # STEP 1 :: TARGETS / LANES :: CHASE
+    - time: 0
+      lights:
+        (led1): (color2)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+    # --------------------
+    # STEP 2 :: TARGETS / LANES :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color2)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+    # --------------------
+    # STEP 3 :: TARGETS / LANES :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color2)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+    # --------------------
+    # STEP 4 :: TARGETS / LANES :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color2)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+    # --------------------
+    # STEP 5 :: TARGETS / LANES :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color2)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+    # --------------------
+    # STEP 6 :: TARGETS / LANES :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color2)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+    # --------------------
+    # STEP 7 :: TARGETS / LANES :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color2)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+    # --------------------
+    # STEP 8 :: TARGETS / LANES :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color2)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+    # --------------------
+    # STEP 9 :: TARGETS / LANES :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color2)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color1)
+    # --------------------
+    # STEP 10 :: TARGETS / LANES :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color2)
+        (led11): (color1)
+        (led12): (color1)
+    # --------------------
+    # STEP 11 :: TARGETS / LANES :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color2)
+        (led12): (color1)
+    # --------------------
+    # STEP 12 :: TARGETS / LANES :: CHASE
+    - time: '+1'
+      lights:
+        (led1): (color1)
+        (led2): (color1)
+        (led3): (color1)
+        (led4): (color1)
+        (led5): (color1)
+        (led6): (color1)
+        (led7): (color1)
+        (led8): (color1)
+        (led9): (color1)
+        (led10): (color1)
+        (led11): (color1)
+        (led12): (color2)
+
+
+    - time: '+1'

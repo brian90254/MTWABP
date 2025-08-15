@@ -1,0 +1,60 @@
+#config_version=6
+
+slides:
+  # -------------------
+  # OUTLINE YELLOW
+  # -------------------
+  #showGameOver_slide_1:
+  slideGameOverTattooMystiquePurpleYellow1:
+    target: displayDMD
+    widgets:
+      # -------------------
+      # INSIDE PURPLE
+      # -------------------
+      - type: text
+        text: GAME OVER
+        style: fontGameOverTattooMystique
+        x: middle
+        y: middle
+        z: 30
+        color: colorFontGameOverFirstTattooMystique
+      # -------------------
+      # OUTSIDE YELLOW
+      # -------------------
+      - type: text
+        text: GAME OVER
+        style: fontGameOverTattooMystique
+        x: middle + 1
+        y: middle + 1
+        z: 20
+        color: colorFontGameOverSecondTattooMystique
+      # -------------------
+      # OUTSIDE YELLOW
+      # -------------------
+      - type: text
+        text: GAME OVER
+        style: fontGameOverTattooMystique
+        x: middle + 1
+        y: middle - 1
+        z: 20
+        color: colorFontGameOverSecondTattooMystique
+      # -------------------
+      # OUTSIDE YELLOW
+      # -------------------
+      - type: text
+        text: GAME OVER
+        style: fontGameOverTattooMystique
+        x: middle - 1
+        y: middle + 1
+        z: 20
+        color: colorFontGameOverSecondTattooMystique
+      # -------------------
+      # OUTSIDE YELLOW
+      # -------------------
+      - type: text
+        text: GAME OVER
+        style: fontGameOverTattooMystique
+        x: middle - 1
+        y: middle - 1
+        z: 20
+        color: colorFontGameOverSecondTattooMystique

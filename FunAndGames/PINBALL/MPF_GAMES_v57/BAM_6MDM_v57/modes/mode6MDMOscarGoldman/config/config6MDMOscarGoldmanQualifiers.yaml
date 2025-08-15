@@ -1,0 +1,227 @@
+#config_version=6
+
+# 6MDM
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+# -------------------
+# SHOTS::SPINNERS
+# -------------------
+    # -------------------
+    # SHOTS::QUALIFY::SPINNERS
+    # -------------------
+    shotQualifySpinnerLeftOscarGoldman:
+        #switch: s_1_6
+        enable_events: eventEnableShotQualifySpinnerLeft
+        disable_events: eventDisableShotQualifySpinnerLeft
+        restart_events: eventRestartShotQualifySpinnerLeft
+        reset_events: eventResetShotQualifySpinnerLeft
+        hit_events: eventHitShotQualifySpinnerLeft
+        advance_events: eventAdvanceShotQualifySpinnerLeft
+        profile: spShotQualifySpinnerOscarGoldman
+        show_tokens:
+            led1: ledSpinnerLeftA
+            led2: ledSpinnerLeftB
+            led3: ledSpinnerLeftC
+            led4: ledSpinnerLeftD
+            led5: ledSpinnerLeftE
+            # -------------
+    
+    # -------------------
+    # SHOTS::QUALIFY::SPINNERS::RIGHT
+    # -------------------
+    shotQualifySpinnerRightOscarGoldman:
+        #switch: s_1_10
+        enable_events: eventEnableShotQualifySpinnerRight
+        disable_events: eventDisableShotQualifySpinnerRight
+        restart_events: eventRestartShotQualifySpinnerRight
+        reset_events: eventResetShotQualifySpinnerRight
+        hit_events: eventHitShotQualifySpinnerRight
+        advance_events: eventAdvanceShotQualifySpinnerRight
+        profile: spShotQualifySpinnerOscarGoldman
+        show_tokens:
+            led1: ledSpinnerRightA
+            led2: ledSpinnerRightB
+            led3: ledSpinnerRightC
+            led4: ledSpinnerRightD
+            led5: ledSpinnerRightE
+    
+    # -------------------
+    # SHOTS::50k::02
+    # -------------------
+    shotTargetLeft3OscarGoldman:
+        switch: s_1_8
+        enable_events: eventEnableShotTargetLeft3
+        disable_events: eventDisableShotTargetLeft3
+        restart_events: eventRestartShotTargetLeft3
+        reset_events: eventResetShotTargetLeft3
+        profile: spShotTargetLeftOscarGoldman
+
+    # -------------------
+    # SHOTS::TARGET LEFT::2
+    # -------------------
+    shotTargetLeft2OscarGoldman:
+        switch: s_1_7
+        enable_events: eventEnableShotTargetLeft2
+        disable_events: eventDisableShotTargetLeft2
+        restart_events: eventRestartShotTargetLeft2
+        reset_events: eventResetShotTargetLeft2
+        profile: spShotTargetLeftOscarGoldman
+
+    # -------------------
+    # SHOTS::TARGET LEFT::1
+    # -------------------
+    shotTargetLeft1OscarGoldman:
+        switch: s_1_9
+        enable_events: eventEnableShotTargetLeft1
+        disable_events: eventDisableShotTargetLeft1
+        restart_events: eventRestartShotTargetLeft1
+        reset_events: eventResetShotTargetLeft1
+        profile: spShotTargetLeftOscarGoldman
+        
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::LANES::LEFT
+    # -------------------
+    shotGroupTargetLeftOscarGoldman:
+        shots:
+            - shotTargetLeft1OscarGoldman
+            - shotTargetLeft2OscarGoldman
+            - shotTargetLeft3OscarGoldman
+        enable_events:
+            - eventEnableShotGroupTargetLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupTargetLeft
+        reset_events:
+            - eventResetShotGroupTargetLeft
+        restart_events:
+            - eventRestartShotGroupTargetLeft
+        #rotate_left_events:
+        #    - sw_left_flipper
+        #rotate_right_events:
+        #    - sw_right_flipper
+
+    # -------------------
+    # SHOTGROUP::QUALIFY::SPINNER
+    # -------------------
+    shotGroupQualifySpinnerOscarGoldman:
+        shots:
+            - shotQualifySpinnerLeftOscarGoldman
+            - shotQualifySpinnerRightOscarGoldman
+        enable_events:
+            - eventEnableShotGroupQualifySpinner
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupQualifySpinner
+        reset_events:
+            - eventResetShotGroupQualifySpinner
+        restart_events:
+            - eventRestartShotGroupQualifySpinner
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::TARGET LEFT
+    # -----------------------------
+    spShotTargetLeftOscarGoldman:
+        states:
+            - name: litFlash
+            - name: litSolid
+        loop: false
+
+    # -----------------------------
+    # PROFILE::QUALIFY::SPINNER
+    # -----------------------------
+    spShotQualifySpinnerOscarGoldman:
+        states:
+            - name: unlitFlash
+              show: rotateFiveLedTwoColor
+              speed: 4
+              show_tokens:
+                  color1: '000000'
+                  color2: '000000'
+                  # ---------------
+            #- name: litFlashOne
+            #  show: rotateFiveLedTwoColor
+            #  speed: 4
+            #  show_tokens:
+            #      color1: 'ff0000'
+            #      color2: '880000'
+            #      # ---------------
+            #- name: litFlashTwo
+            #  show: rotateFiveLedTwoColor
+            #  speed: 4
+            #  show_tokens:
+            #      color1: 'ffff00'
+            #      color2: '888800'
+                  # ---------------
+            - name: litFlashThree
+              show: rotateFiveLedTwoColor
+              speed: 4
+              show_tokens:
+                  color1: '00ff00'
+                  color2: '008800'
+                  # ---------------
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    # -----------------------
+    # BALL STARTING
+    # -----------------------
+    mode_mode6MDMOscarGoldman_started:
+        # SHOT TARGET LEFT
+        - eventRestartShotGroupTargetLeft
+        # SHOT QUALIFY SPINNER
+        - eventRestartShotGroupQualifySpinner
+        
+    # -----------------------
+    # BALL ENDING
+    # -----------------------
+    ball_ending:
+        # SHOT TARGET LEFT
+        - eventDisableShotGroupTargetLeft
+        - eventDisableShotGroupQualifySpinner
+        
+    # -----------------------
+    # SPINNERS
+    # -----------------------
+    # FIVE SPINNERS HIT LEFT
+    shotSpinnerLeftOscarGoldman_litFlashFiveA_hit:
+        - eventHitShotQualifySpinnerLeft
+    # FIVE SPINNERS HIT RIGHT
+    shotSpinnerRightOscarGoldman_litFlashFiveA_hit:
+        - eventHitShotQualifySpinnerRight
+        
+    # -----------------------
+    # QUALIFY BATTLE
+    # -----------------------
+    # SPINNER GROUP COMPLETE
+    shotGroupQualifySpinnerOscarGoldman_litFlashThree_complete:
+        - eventQualifyBattleBigfoot
+    # THUMPER GROUP COMPLETE
+    #shotGroupThumper_stateThirteenSpShotThumper_complete:
+    #    - eventQualifyBattleBigfoot
+
+
+## *********************
+## VARIABLE::PLAYER
+## *********************
+#variable_player:
+## ---------------
+## VARIABLE::PLAYER::SCORING
+## ---------------

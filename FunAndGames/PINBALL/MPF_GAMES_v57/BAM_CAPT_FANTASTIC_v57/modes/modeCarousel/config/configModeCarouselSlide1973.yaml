@@ -1,0 +1,85 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  modeCarousel_year1973_highlighted:
+    slideYear1973:
+      target: displayDMD
+
+slides:
+  slideYear1973:
+    widgets:
+      # ---------------
+      # INNER
+      # ---------------
+      - type: text
+        text: "1973"
+        y: middle
+        x: middle
+        style: font1973
+        color: colorFontYear1970sOne
+        z: 20
+      # ---------------
+      # OUTER ONE
+      # ---------------
+      - type: text
+        text: "1973"
+        y: middle + 1
+        x: middle + 1
+        style: font1973
+        color: black
+        z: 15
+      - type: text
+        text: "1973"
+        y: middle - 1
+        x: middle + 1
+        style: font1973
+        color: black
+        z: 15
+      - type: text
+        text: "1973"
+        y: middle + 1
+        x: middle - 1
+        style: font1973
+        color: black
+        z: 15
+      - type: text
+        text: "1973"
+        y: middle - 1
+        x: middle - 1
+        style: font1973
+        color: black
+        z: 15
+      # ---------------
+      # OUTER TWO
+      # ---------------
+      - type: text
+        text: "1973"
+        y: middle + 2
+        x: middle + 2
+        style: font1973
+        color: colorFontYear1970sThree
+        z: 10
+      - type: text
+        text: "1973"
+        y: middle - 2
+        x: middle + 2
+        style: font1973
+        color: colorFontYear1970sThree
+        z: 10
+      - type: text
+        text: "1973"
+        y: middle + 2
+        x: middle - 2
+        style: font1973
+        color: colorFontYear1970sThree
+        z: 10
+      - type: text
+        text: "1973"
+        y: middle - 2
+        x: middle - 2
+        style: font1973
+        color: colorFontYear1970sThree
+        z: 10

@@ -1,0 +1,267 @@
+#show_version=6
+
+- time: 0
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color1)
+    ledOrbitLeftArrowhead2: (color1)
+    ledOrbitLeftArrowhead3: (color1)
+    ledOrbitLeftArrowhead4: (color1)
+    ledOrbitLeftArrowhead5: (color1)
+    ledOrbitLeftArrowhead6: (color1)
+    ledOrbitLeftArrowhead7: (color1)
+    ledOrbitLeftArrowhead8: (color1)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color1)
+    ledOrbitLeftLargeTriangle2: (color1)
+    ledOrbitLeftLargeTriangle3: (color1)
+    ledOrbitLeftLargeTriangle4: (color1)
+    ledOrbitLeftLargeTriangle5: (color1)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color1)
+    ledOrbitLeftSmallTriangle2: (color2)
+    # ------------------------
+
+- time: '+1'
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color1)
+    ledOrbitLeftArrowhead2: (color1)
+    ledOrbitLeftArrowhead3: (color1)
+    ledOrbitLeftArrowhead4: (color1)
+    ledOrbitLeftArrowhead5: (color1)
+    ledOrbitLeftArrowhead6: (color1)
+    ledOrbitLeftArrowhead7: (color1)
+    ledOrbitLeftArrowhead8: (color1)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color1)
+    ledOrbitLeftLargeTriangle2: (color1)
+    ledOrbitLeftLargeTriangle3: (color1)
+    ledOrbitLeftLargeTriangle4: (color1)
+    ledOrbitLeftLargeTriangle5: (color1)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color2)
+    ledOrbitLeftSmallTriangle2: (color2)
+    # ------------------------
+
+- time: '+1'
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color1)
+    ledOrbitLeftArrowhead2: (color1)
+    ledOrbitLeftArrowhead3: (color1)
+    ledOrbitLeftArrowhead4: (color1)
+    ledOrbitLeftArrowhead5: (color1)
+    ledOrbitLeftArrowhead6: (color1)
+    ledOrbitLeftArrowhead7: (color1)
+    ledOrbitLeftArrowhead8: (color1)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color1)
+    ledOrbitLeftLargeTriangle2: (color1)
+    ledOrbitLeftLargeTriangle3: (color2)
+    ledOrbitLeftLargeTriangle4: (color2)
+    ledOrbitLeftLargeTriangle5: (color2)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color2)
+    ledOrbitLeftSmallTriangle2: (color2)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color1)
+    ledOrbitLeftArrowhead2: (color1)
+    ledOrbitLeftArrowhead3: (color1)
+    ledOrbitLeftArrowhead4: (color1)
+    ledOrbitLeftArrowhead5: (color1)
+    ledOrbitLeftArrowhead6: (color1)
+    ledOrbitLeftArrowhead7: (color1)
+    ledOrbitLeftArrowhead8: (color1)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color2)
+    ledOrbitLeftLargeTriangle2: (color2)
+    ledOrbitLeftLargeTriangle3: (color2)
+    ledOrbitLeftLargeTriangle4: (color2)
+    ledOrbitLeftLargeTriangle5: (color2)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color2)
+    ledOrbitLeftSmallTriangle2: (color2)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color1)
+    ledOrbitLeftArrowhead2: (color2)
+    ledOrbitLeftArrowhead3: (color2)
+    ledOrbitLeftArrowhead4: (color1)
+    ledOrbitLeftArrowhead5: (color1)
+    ledOrbitLeftArrowhead6: (color1)
+    ledOrbitLeftArrowhead7: (color2)
+    ledOrbitLeftArrowhead8: (color2)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color2)
+    ledOrbitLeftLargeTriangle2: (color2)
+    ledOrbitLeftLargeTriangle3: (color2)
+    ledOrbitLeftLargeTriangle4: (color2)
+    ledOrbitLeftLargeTriangle5: (color2)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color2)
+    ledOrbitLeftSmallTriangle2: (color2)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color2)
+    ledOrbitLeftArrowhead2: (color2)
+    ledOrbitLeftArrowhead3: (color2)
+    ledOrbitLeftArrowhead4: (color2)
+    ledOrbitLeftArrowhead5: (color2)
+    ledOrbitLeftArrowhead6: (color2)
+    ledOrbitLeftArrowhead7: (color2)
+    ledOrbitLeftArrowhead8: (color2)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color2)
+    ledOrbitLeftLargeTriangle2: (color2)
+    ledOrbitLeftLargeTriangle3: (color2)
+    ledOrbitLeftLargeTriangle4: (color2)
+    ledOrbitLeftLargeTriangle5: (color2)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color2)
+    ledOrbitLeftSmallTriangle2: (color2)
+    # ------------------------
+
+- time: '+1'
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color2)
+    ledOrbitLeftArrowhead2: (color2)
+    ledOrbitLeftArrowhead3: (color2)
+    ledOrbitLeftArrowhead4: (color2)
+    ledOrbitLeftArrowhead5: (color2)
+    ledOrbitLeftArrowhead6: (color2)
+    ledOrbitLeftArrowhead7: (color2)
+    ledOrbitLeftArrowhead8: (color2)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color2)
+    ledOrbitLeftLargeTriangle2: (color2)
+    ledOrbitLeftLargeTriangle3: (color2)
+    ledOrbitLeftLargeTriangle4: (color2)
+    ledOrbitLeftLargeTriangle5: (color2)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color2)
+    ledOrbitLeftSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color2)
+    ledOrbitLeftArrowhead2: (color2)
+    ledOrbitLeftArrowhead3: (color2)
+    ledOrbitLeftArrowhead4: (color2)
+    ledOrbitLeftArrowhead5: (color2)
+    ledOrbitLeftArrowhead6: (color2)
+    ledOrbitLeftArrowhead7: (color2)
+    ledOrbitLeftArrowhead8: (color2)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color2)
+    ledOrbitLeftLargeTriangle2: (color2)
+    ledOrbitLeftLargeTriangle3: (color2)
+    ledOrbitLeftLargeTriangle4: (color2)
+    ledOrbitLeftLargeTriangle5: (color2)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color1)
+    ledOrbitLeftSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color2)
+    ledOrbitLeftArrowhead2: (color2)
+    ledOrbitLeftArrowhead3: (color2)
+    ledOrbitLeftArrowhead4: (color2)
+    ledOrbitLeftArrowhead5: (color2)
+    ledOrbitLeftArrowhead6: (color2)
+    ledOrbitLeftArrowhead7: (color2)
+    ledOrbitLeftArrowhead8: (color2)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color2)
+    ledOrbitLeftLargeTriangle2: (color2)
+    ledOrbitLeftLargeTriangle3: (color1)
+    ledOrbitLeftLargeTriangle4: (color1)
+    ledOrbitLeftLargeTriangle5: (color1)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color1)
+    ledOrbitLeftSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color2)
+    ledOrbitLeftArrowhead2: (color2)
+    ledOrbitLeftArrowhead3: (color2)
+    ledOrbitLeftArrowhead4: (color2)
+    ledOrbitLeftArrowhead5: (color2)
+    ledOrbitLeftArrowhead6: (color2)
+    ledOrbitLeftArrowhead7: (color2)
+    ledOrbitLeftArrowhead8: (color2)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color1)
+    ledOrbitLeftLargeTriangle2: (color1)
+    ledOrbitLeftLargeTriangle3: (color1)
+    ledOrbitLeftLargeTriangle4: (color1)
+    ledOrbitLeftLargeTriangle5: (color1)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color1)
+    ledOrbitLeftSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color2)
+    ledOrbitLeftArrowhead2: (color1)
+    ledOrbitLeftArrowhead3: (color1)
+    ledOrbitLeftArrowhead4: (color2)
+    ledOrbitLeftArrowhead5: (color2)
+    ledOrbitLeftArrowhead6: (color2)
+    ledOrbitLeftArrowhead7: (color1)
+    ledOrbitLeftArrowhead8: (color1)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color1)
+    ledOrbitLeftLargeTriangle2: (color1)
+    ledOrbitLeftLargeTriangle3: (color1)
+    ledOrbitLeftLargeTriangle4: (color1)
+    ledOrbitLeftLargeTriangle5: (color1)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color1)
+    ledOrbitLeftSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledOrbitLeftArrowhead1: (color1)
+    ledOrbitLeftArrowhead2: (color1)
+    ledOrbitLeftArrowhead3: (color1)
+    ledOrbitLeftArrowhead4: (color1)
+    ledOrbitLeftArrowhead5: (color1)
+    ledOrbitLeftArrowhead6: (color1)
+    ledOrbitLeftArrowhead7: (color1)
+    ledOrbitLeftArrowhead8: (color1)
+    # ------------------------
+    ledOrbitLeftLargeTriangle1: (color1)
+    ledOrbitLeftLargeTriangle2: (color1)
+    ledOrbitLeftLargeTriangle3: (color1)
+    ledOrbitLeftLargeTriangle4: (color1)
+    ledOrbitLeftLargeTriangle5: (color1)
+    # ------------------------
+    ledOrbitLeftSmallTriangle1: (color1)
+    ledOrbitLeftSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'

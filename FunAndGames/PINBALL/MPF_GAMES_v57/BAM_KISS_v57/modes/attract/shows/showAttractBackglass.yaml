@@ -1,0 +1,725 @@
+#show_version=6
+
+# *************************
+# BACKGLASS ANIMATION::ALL LETTERS
+# *************************
+
+# -----------------------------
+# HIGH SCORES
+# -----------------------------
+- time: 0
+  #events:
+  #  eventShowAttractBackglass1A
+  slides:
+    showAttractBackglass1A:
+      target: displayBackglass
+      widgets:
+        # LETTERS
+      #- type: image
+      #  image: imageKissLetterK
+      #  z: 50
+      - type: image
+        image: imageKissLetterI
+        z: 50
+      - type: image
+        image: imageKissLetterS1
+        z: 50
+      - type: image
+        image: imageKissLetterS2
+        z: 50
+        # BACKGLASS IMAGE
+      - type: image
+        image: imagebackglass
+        z: 40
+        # --------------------
+        # BITMAP FONT TEST
+        # --------------------
+      - type: text
+        text: (machine|player1_score)
+        z: 30
+        x: left + 735
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player2_score)
+        z: 30
+        x: left + 1412
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player3_score)
+        z: 30
+        x: left + 734
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player4_score)
+        z: 30
+        x: left + 1412
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (player|ball)
+        min_digits: 2
+        z: 30
+        x: left + 1478
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+  # -----------------------
+  # ADDED 200507
+      - type: text
+        text: (machine|credits_string)
+        min_digits: 1
+        z: 30
+        x: left + 1364
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      
+- time: '+1'
+  #events:
+  #  eventShowAttractBackglass1B
+  slides:
+    showAttractBackglass1B:
+      target: displayBackglass
+      widgets:
+        # LETTERS
+      - type: image
+        image: imageKissLetterK
+        z: 50
+      #- type: image
+      #  image: imageKissLetterI
+      #  z: 50
+      - type: image
+        image: imageKissLetterS1
+        z: 50
+      - type: image
+        image: imageKissLetterS2
+        z: 50
+        # BACKGLASS IMAGE
+      - type: image
+        image: imagebackglass
+        z: 40
+        # --------------------
+        # BITMAP FONT TEST
+        # --------------------
+      - type: text
+        text: (machine|player1_score)
+        z: 30
+        x: left + 735
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player2_score)
+        z: 30
+        x: left + 1412
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player3_score)
+        z: 30
+        x: left + 734
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player4_score)
+        z: 30
+        x: left + 1412
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (player|ball)
+        min_digits: 2
+        z: 30
+        x: left + 1478
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+  # -----------------------
+  # ADDED 200507
+      - type: text
+        text: (machine|credits_string)
+        min_digits: 1
+        z: 30
+        x: left + 1364
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      
+- time: '+1'
+  #events:
+  #  eventShowAttractBackglass1C
+  slides:
+    showAttractBackglass1C:
+      target: displayBackglass
+      widgets:
+        # LETTERS
+      - type: image
+        image: imageKissLetterK
+        z: 50
+      - type: image
+        image: imageKissLetterI
+        z: 50
+      #- type: image
+      #  image: imageKissLetterS1
+      #  z: 50
+      - type: image
+        image: imageKissLetterS2
+        z: 50
+        # BACKGLASS IMAGE
+      - type: image
+        image: imagebackglass
+        z: 40
+        # --------------------
+        # BITMAP FONT TEST
+        # --------------------
+      - type: text
+        text: (machine|player1_score)
+        z: 30
+        x: left + 735
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player2_score)
+        z: 30
+        x: left + 1412
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player3_score)
+        z: 30
+        x: left + 734
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player4_score)
+        z: 30
+        x: left + 1412
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (player|ball)
+        min_digits: 2
+        z: 30
+        x: left + 1478
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+  # -----------------------
+  # ADDED 200507
+      - type: text
+        text: (machine|credits_string)
+        min_digits: 1
+        z: 30
+        x: left + 1364
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      
+- time: '+1'
+  #events:
+  #  eventShowAttractBackglass1D
+  slides:
+    showAttractBackglass1D:
+      target: displayBackglass
+      widgets:
+        # LETTERS
+      - type: image
+        image: imageKissLetterK
+        z: 50
+      - type: image
+        image: imageKissLetterI
+        z: 50
+      - type: image
+        image: imageKissLetterS1
+        z: 50
+      #- type: image
+      #  image: imageKissLetterS2
+      #  z: 50
+        # BACKGLASS IMAGE
+      - type: image
+        image: imagebackglass
+        z: 40
+        # --------------------
+        # BITMAP FONT TEST
+        # --------------------
+      - type: text
+        text: (machine|player1_score)
+        z: 30
+        x: left + 735
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player2_score)
+        z: 30
+        x: left + 1412
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player3_score)
+        z: 30
+        x: left + 734
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|player4_score)
+        z: 30
+        x: left + 1412
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (player|ball)
+        min_digits: 2
+        z: 30
+        x: left + 1478
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+  # -----------------------
+  # ADDED 200507
+      - type: text
+        text: (machine|credits_string)
+        min_digits: 1
+        z: 30
+        x: left + 1364
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      
+# -----------------------------
+# LAST GAME
+# -----------------------------
+- time: '+1'
+  #events:
+  #  eventShowAttractBackglass2A
+  slides:
+  # -----------------------------
+  # LAST GAME
+  # -----------------------------
+    showAttractBackglass2A:
+      target: displayBackglass
+      widgets:
+        # LETTERS
+      #- type: image
+      #  image: imageKissLetterK
+      #  z: 50
+      - type: image
+        image: imageKissLetterI
+        z: 50
+      - type: image
+        image: imageKissLetterS1
+        z: 50
+      - type: image
+        image: imageKissLetterS2
+        z: 50
+        # BACKGLASS IMAGE
+      - type: image
+        image: imagebackglass
+        z: 40
+        # --------------------
+        # BITMAP FONT TEST
+        # --------------------
+        # (machine|score1_value)
+      - type: text
+        text: (machine|score1_value)
+        z: 30
+        x: left + 735
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score2_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 1412
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score3_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 734
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score4_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 1412
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        #text: '78 99'
+        text: (player|ball)
+        min_digits: 2
+        z: 30
+        x: left + 1478
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+  # -----------------------
+  # ADDED 200507
+      - type: text
+        text: (machine|credits_string)
+        min_digits: 1
+        z: 30
+        x: left + 1364
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      
+- time: '+1'
+  #events:
+  #  eventShowAttractBackglass2B
+  slides:
+    showAttractBackglass2B:
+      target: displayBackglass
+      widgets:
+        # LETTERS
+      - type: image
+        image: imageKissLetterK
+        z: 50
+      #- type: image
+      #  image: imageKissLetterI
+      #  z: 50
+      - type: image
+        image: imageKissLetterS1
+        z: 50
+      - type: image
+        image: imageKissLetterS2
+        z: 50
+        # BACKGLASS IMAGE
+      - type: image
+        image: imagebackglass
+        z: 40
+        # --------------------
+        # BITMAP FONT TEST
+        # --------------------
+        # (machine|score1_value)
+      - type: text
+        text: (machine|score1_value)
+        z: 30
+        x: left + 735
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score2_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 1412
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score3_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 734
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score4_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 1412
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        #text: '78 99'
+        text: (player|ball)
+        min_digits: 2
+        z: 30
+        x: left + 1478
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+  # -----------------------
+  # ADDED 200507
+      - type: text
+        text: (machine|credits_string)
+        min_digits: 1
+        z: 30
+        x: left + 1364
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      
+- time: '+1'
+  #events:
+  #  eventShowAttractBackglass2C
+  slides:
+    showAttractBackglass2C:
+      target: displayBackglass
+      widgets:
+        # LETTERS
+      - type: image
+        image: imageKissLetterK
+        z: 50
+      - type: image
+        image: imageKissLetterI
+        z: 50
+      #- type: image
+      #  image: imageKissLetterS1
+      #  z: 50
+      - type: image
+        image: imageKissLetterS2
+        z: 50
+        # BACKGLASS IMAGE
+      - type: image
+        image: imagebackglass
+        z: 40
+        # --------------------
+        # BITMAP FONT TEST
+        # --------------------
+        # (machine|score1_value)
+      - type: text
+        text: (machine|score1_value)
+        z: 30
+        x: left + 735
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score2_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 1412
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score3_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 734
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score4_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 1412
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        #text: '78 99'
+        text: (player|ball)
+        min_digits: 2
+        z: 30
+        x: left + 1478
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+  # -----------------------
+  # ADDED 200507
+      - type: text
+        text: (machine|credits_string)
+        min_digits: 1
+        z: 30
+        x: left + 1364
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      
+- time: '+1'
+  #events:
+  #  eventShowAttractBackglass2D
+  slides:
+    showAttractBackglass2D:
+      target: displayBackglass
+      widgets:
+        # LETTERS
+      - type: image
+        image: imageKissLetterK
+        z: 50
+      - type: image
+        image: imageKissLetterI
+        z: 50
+      - type: image
+        image: imageKissLetterS1
+        z: 50
+      #- type: image
+      #  image: imageKissLetterS2
+      #  z: 50
+        # BACKGLASS IMAGE
+      - type: image
+        image: imagebackglass
+        z: 40
+        # --------------------
+        # BITMAP FONT TEST
+        # --------------------
+        # (machine|score1_value)
+      - type: text
+        text: (machine|score1_value)
+        z: 30
+        x: left + 735
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score2_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 1412
+        y: bottom + 788
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score3_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 734
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        text: (machine|score4_value)
+        #text: (machine|score1_value)
+        z: 30
+        x: left + 1412
+        y: bottom + 200
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      - type: text
+        #text: '78 99'
+        text: (player|ball)
+        min_digits: 2
+        z: 30
+        x: left + 1478
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+  # -----------------------
+  # ADDED 200507
+      - type: text
+        text: (machine|credits_string)
+        min_digits: 1
+        z: 30
+        x: left + 1364
+        y: bottom + 578
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment5
+        bitmap_font: true
+      
+- time: '+1'
+

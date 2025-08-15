@@ -1,0 +1,308 @@
+#config_version=6
+
+# BASE::KISS
+
+# *****************************
+# SHOTS::LANES
+# *****************************
+shots:
+    # -------------------
+    # LANES::TOP
+    # -------------------
+    shotMatrixK:
+        enable_events: eventEnableShotMatrixK
+        disable_events: eventDisableShotMatrixK
+        restart_events: eventRestartShotMatrixK
+        reset_events: eventResetShotMatrixK
+        advance_events: eventAdvanceShotMatrixK
+        hit_events: eventHitShotMatrixK
+        profile: spShotMatrix
+        show_tokens:
+            # -----------------
+            led1A: ledMatrix11A
+            led1B: ledMatrix11B
+            led1C: ledMatrix11C
+            # -----------------
+            led2A: ledMatrix21A
+            led2B: ledMatrix21B
+            led2C: ledMatrix21C
+            # -----------------
+            led3A: ledMatrix31A
+            led3B: ledMatrix31B
+            led3C: ledMatrix31C
+            # -----------------
+            led4A: ledMatrix41A
+            led4B: ledMatrix41B
+            led4C: ledMatrix41C
+            # -----------------
+           
+    shotMatrixI:
+        enable_events: eventEnableShotMatrixI
+        disable_events: eventDisableShotMatrixI
+        restart_events: eventRestartShotMatrixI
+        reset_events: eventResetShotMatrixI
+        advance_events: eventAdvanceShotMatrixI
+        hit_events: eventHitShotMatrixI
+        profile: spShotMatrix
+        show_tokens:
+            # -----------------
+            led1A: ledMatrix12A
+            led1B: ledMatrix12B
+            led1C: ledMatrix12C
+            # -----------------
+            led2A: ledMatrix22A
+            led2B: ledMatrix22B
+            led2C: ledMatrix22C
+            # -----------------
+            led3A: ledMatrix32A
+            led3B: ledMatrix32B
+            led3C: ledMatrix32C
+            # -----------------
+            led4A: ledMatrix42A
+            led4B: ledMatrix42B
+            led4C: ledMatrix42C
+            # -----------------
+            
+    shotMatrixS1:
+        enable_events: eventEnableShotMatrixS1
+        disable_events: eventDisableShotMatrixS1
+        restart_events: eventRestartShotMatrixS1
+        reset_events: eventResetShotMatrixS1
+        advance_events: eventAdvanceShotMatrixS1
+        hit_events: eventHitShotMatrixS1
+        profile: spShotMatrix
+        show_tokens:
+            # -----------------
+            led1A: ledMatrix13A
+            led1B: ledMatrix13B
+            led1C: ledMatrix13C
+            # -----------------
+            led2A: ledMatrix23A
+            led2B: ledMatrix23B
+            led2C: ledMatrix23C
+            # -----------------
+            led3A: ledMatrix33A
+            led3B: ledMatrix33B
+            led3C: ledMatrix33C
+            # -----------------
+            led4A: ledMatrix43A
+            led4B: ledMatrix43B
+            led4C: ledMatrix43C
+            # -----------------
+            
+    shotMatrixS2:
+        enable_events: eventEnableShotMatrixS2
+        disable_events: eventDisableShotMatrixS2
+        restart_events: eventRestartShotMatrixS2
+        reset_events: eventResetShotMatrixS2
+        advance_events: eventAdvanceShotMatrixS2
+        hit_events: eventHitShotMatrixS2
+        profile: spShotMatrix
+        show_tokens:
+            # -----------------
+            led1A: ledMatrix14A
+            led1B: ledMatrix14B
+            led1C: ledMatrix14C
+            # -----------------
+            led2A: ledMatrix24A
+            led2B: ledMatrix24B
+            led2C: ledMatrix24C
+            # -----------------
+            led3A: ledMatrix34A
+            led3B: ledMatrix34B
+            led3C: ledMatrix34C
+            # -----------------
+            led4A: ledMatrix44A
+            led4B: ledMatrix44B
+            led4C: ledMatrix44C
+            # -----------------
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::LANE::TOP
+    # -----------------------------
+    spShotMatrix:
+        states:
+          - name: litFlashRowOne
+            show: showShotMatrix
+            speed: 6
+            show_tokens:
+                # --------------
+                color1A: '330000'
+                color1B: '000000'
+                # --------------
+                color2A: '000000'
+                color2B: '000000'
+                # --------------
+                color3A: '000000'
+                color3B: '000000'
+                # --------------
+                color4A: '000000'
+                color4B: '000000'
+                # --------------
+          - name: litFlashRowTwo
+            show: showShotMatrix
+            speed: 6
+            show_tokens:
+                # --------------
+                color1A: '000000'
+                color1B: '000000'
+                # --------------
+                color2A: '003333'
+                color2B: '000000'
+                # --------------
+                color3A: '000000'
+                color3B: '000000'
+                # --------------
+                color4A: '000000'
+                color4B: '000000'
+                # --------------
+          - name: litFlashRowThree
+            show: showShotMatrix
+            speed: 6
+            show_tokens:
+                # --------------
+                color1A: '000000'
+                color1B: '000000'
+                # --------------
+                color2A: '000000'
+                color2B: '000000'
+                # --------------
+                color3A: '333300'
+                color3B: '000000'
+                # --------------
+                color4A: '000000'
+                color4B: '000000'
+                # --------------
+          - name: litFlashRowFour
+            show: showShotMatrix
+            speed: 6
+            show_tokens:
+                # --------------
+                color1A: '000000'
+                color1B: '000000'
+                # --------------
+                color2A: '000000'
+                color2B: '000000'
+                # --------------
+                color3A: '000000'
+                color3B: '000000'
+                # --------------
+                color4A: '003300'
+                color4B: '000000'
+                # --------------
+        loop: true
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeBase_started:
+        # -----------
+        # MATRIX
+        # -----------
+        - eventRestartShotMatrixK
+        - eventRestartShotMatrixI
+        - eventRestartShotMatrixS1
+        - eventRestartShotMatrixS2
+        #- eventEnableShotMatrixK
+        #- eventEnableShotMatrixI
+        #- eventEnableShotMatrixS1
+        #- eventEnableShotMatrixS2
+        
+    shotGroupLaneTop_hit:
+        - eventHitShotMatrixK|300
+        - eventHitShotMatrixI|300
+        - eventHitShotMatrixS1|300
+        - eventHitShotMatrixS2|300
+        - eventHitShotMatrixRow|300
+        
+    shotGroupTarget_hit:
+        - eventHitShotMatrixK|300
+        - eventHitShotMatrixI|300
+        - eventHitShotMatrixS1|300
+        - eventHitShotMatrixS2|300
+        - eventHitShotMatrixRow|300
+
+      
+## *********************
+## VARIABLE::PLAYER
+## *********************
+#variable_player:
+
+      
+## ---------------------
+## SHOW::PLAYER::
+## ---------------------
+#show_player:
+
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showShotMatrix:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1A)
+            (led1B): (color1B)
+            (led1C): (color1B)
+            # ----------------
+            (led2A): (color2A)
+            (led2B): (color2B)
+            (led2C): (color2B)
+            # ----------------
+            (led3A): (color3A)
+            (led3B): (color3B)
+            (led3C): (color3B)
+            # ----------------
+            (led4A): (color4A)
+            (led4B): (color4B)
+            (led4C): (color4B)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color1B)
+            (led1B): (color1A)
+            (led1C): (color1B)
+            # ----------------
+            (led2A): (color2B)
+            (led2B): (color2A)
+            (led2C): (color2B)
+            # ----------------
+            (led3A): (color3B)
+            (led3B): (color3A)
+            (led3C): (color3B)
+            # ----------------
+            (led4A): (color4B)
+            (led4B): (color4A)
+            (led4C): (color4B)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color1B)
+            (led1B): (color1B)
+            (led1C): (color1A)
+            # ----------------
+            (led2A): (color2B)
+            (led2B): (color2B)
+            (led2C): (color2A)
+            # ----------------
+            (led3A): (color3B)
+            (led3B): (color3B)
+            (led3C): (color3A)
+            # ----------------
+            (led4A): (color4B)
+            (led4B): (color4B)
+            (led4C): (color4A)
+            # ----------------
+        - time: "+1"

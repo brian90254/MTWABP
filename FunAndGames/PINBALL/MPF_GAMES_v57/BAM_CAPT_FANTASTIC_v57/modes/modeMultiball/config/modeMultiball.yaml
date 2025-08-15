@@ -1,0 +1,109 @@
+#config_version=6
+
+mode:
+  start_events: eventStartModeMultiball
+  stop_events: eventStopModeMultiball
+#  priority: 1000
+  priority: 3000
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeMultiball_started:
+    # ----------------------------------
+    # ENABLE MULTIBALL
+    - eventEnableMultiballUpperKickerBoth
+    # ----------------------------------
+    # ENABLE LOCK
+    - eventEnableMultiballLockSaucerTopRight
+    - eventEnableMultiballLockSaucerTopLeft
+    # ----------------------------------
+    #- eventStartMultiballUpperKickerBoth|1000ms
+    
+  # ---------------------
+  # START MULTIBALL
+  # ---------------------
+  multiball_lock_multiballLockSaucerTopRight_full{device.multiball_locks.multiballLockSaucerTopLeft.locked_balls==1}:
+    - eventStartMultiballUpperKickerBoth|3000ms
+    
+  multiball_lock_multiballLockSaucerTopLeft_full{device.multiball_locks.multiballLockSaucerTopRight.locked_balls==1}:
+    - eventStartMultiballUpperKickerBoth|3000ms
+
+
+#  # ----------------------------
+#  # EVENTS ON MODE START
+#  # ----------------------------
+#  multiball_multiballUpperKicker_ended:
+#    - eventDisableMultiballUpperKicker
+#
+#  multiball_multiballVuk_ended:
+#    - eventDisableMultiballVuk
+
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballLockSaucerTopRight:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopRight
+    enable_events: eventEnableMultiballLockSaucerTopRight
+    locked_ball_counting_strategy: physical_only
+    #enable_events: mode_modeBase_started
+    #release_one_events: releaseMultiballLockSaucerTopRight
+
+  multiballLockSaucerTopLeft:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopLeft
+    enable_events: eventEnableMultiballLockSaucerTopLeft
+    locked_ball_counting_strategy: physical_only
+    #enable_events: mode_modeBase_started
+    #release_one_events: releaseMultiballLockSaucerTopLeft
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::BOTH
+  # ----------------------------
+  multiballUpperKickerBoth:
+    #multiball_locks:
+    ball_locks:
+      #- multiballLockSaucerTopLeft
+      #- multiballLockSaucerTopRight
+      - ballDeviceSaucerTopLeft
+      - ballDeviceSaucerTopRight
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 20s
+    enable_events: eventEnableMultiballUpperKickerBoth
+    disable_events: eventDisableMultiballUpperKickerBoth
+    start_events: eventStartMultiballUpperKickerBoth
+    stop_events: eventStopMultiballUpperKickerBoth
+
+
+  ## ----------------------------
+  ## MULTIBALL::UPPER KICKER
+  ## ----------------------------
+  #multiballUpperKicker:
+  #  ball_count: 2
+  #  ball_count_type: total
+  #  shoot_again: 20s
+  #  enable_events: eventEnableMultiballUpperKicker
+  #  disable_events: eventDisableMultiballUpperKicker
+  #  start_events: eventStartMultiballUpperKicker
+  #  stop_events: eventStopMultiballUpperKicker
+  #
+  ## ----------------------------
+  ## MULTIBALL::VUK
+  ## ----------------------------
+  #multiballVuk:
+  #  ball_count: 3
+  #  ball_count_type: total
+  #  shoot_again: 20s
+  #  enable_events: eventEnableMultiballVuk
+  #  disable_events: eventDisableMultiballVuk
+  #  start_events: eventStartMultiballVuk
+  #  stop_events: eventStopMultiballVuk
+    

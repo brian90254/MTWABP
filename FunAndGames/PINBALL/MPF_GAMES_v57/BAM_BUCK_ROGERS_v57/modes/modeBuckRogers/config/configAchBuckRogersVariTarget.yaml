@@ -1,0 +1,377 @@
+#config_version=6
+
+# *****************************
+# ACHIEVEMENT::GROUPS
+# *****************************
+achievement_groups:
+  agAchVariTarget:
+    achievements:
+        - achVariTarget1
+        - achVariTarget2
+        - achVariTarget3
+        - achVariTarget4
+        - achVariTarget5
+        - achVariTarget6
+    events_when_all_completed: eventAgAchVariTargetCompleted
+    enable_while_no_achievement_started: yes
+    disable_while_achievement_started: no
+    enable_events: eventEnableAgAchVariTarget
+    disable_events: eventDisableAgAchVariTarget
+
+# *****************************
+# ACHIEVEMENTS
+# *****************************
+achievements:
+  
+# -----------------------------
+# ACHIEVEMENT::GLOBE::AWARD
+# -----------------------------
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::AWARED::ONE
+  # -----------------------------
+  achVariTarget1:
+    show_tokens:
+      led7: ledBonusReturn
+      led6: ledBonusCount5
+      led5: ledBonusCount4
+      led4: ledBonusCount3
+      led3: ledBonusCount2
+      led2: ledBonusCount1
+      led1: ledBonusBase
+      color1: 'ffff00'
+      color2: '808000'
+      led8: ledDummy1
+      led9: ledDummy2
+    show_when_selected: showAchVariTarget1
+    show_when_started: showAchVariTarget1
+    #show_when_stopped: showAchVariTarget1
+    #show_when_completed: showAchVariTarget1
+    #events_when_selected:
+    #events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchVariTarget1
+    select_events: eventSelectAchVariTarget1
+    start_events: eventStartAchVariTarget1
+    stop_events: eventStopAchVariTarget1
+    complete_events: eventCompletedAchVariTarget1
+    reset_events: eventResetAchVariTarget
+    sync_ms: 1
+    restart_after_stop_possible: true
+
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::AWARED::TWO
+  # -----------------------------
+  achVariTarget2:
+    show_tokens:
+      led7: ledBonusReturn
+      led6: ledBonusCount5
+      led5: ledBonusCount4
+      led4: ledBonusCount3
+      led3: ledBonusCount2
+      led2: ledBonusCount1
+      led1: ledBonusBase
+      color1: 'ffff00'
+      color2: '808000'
+      led8: ledDummy1
+      led9: ledDummy2
+    show_when_selected: showAchVariTarget2
+    show_when_started: showAchVariTarget2
+    #show_when_stopped: showAchVariTarget2
+    #show_when_completed: showAchVariTarget2
+    #events_when_selected:
+    #events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchVariTarget2
+    select_events: eventSelectAchVariTarget2
+    start_events: eventStartAchVariTarget2
+    stop_events: eventStopAchVariTarget2
+    complete_events: eventCompletedAchVariTarget2
+    reset_events: eventResetAchVariTarget
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::AWARED::THREE
+  # -----------------------------
+  achVariTarget3:
+    show_tokens:
+      led7: ledBonusReturn
+      led6: ledBonusCount5
+      led5: ledBonusCount4
+      led4: ledBonusCount3
+      led3: ledBonusCount2
+      led2: ledBonusCount1
+      led1: ledBonusBase
+      color1: 'ffff00'
+      color2: '808000'
+      led8: ledDummy1
+      led9: ledDummy2
+    show_when_selected: showAchVariTarget3
+    show_when_started: showAchVariTarget3
+    #show_when_stopped: showAchVariTarget3
+    #show_when_completed: showAchVariTarget3
+    #events_when_selected:
+    #events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchVariTarget3
+    select_events: eventSelectAchVariTarget3
+    start_events: eventStartAchVariTarget3
+    stop_events: eventStopAchVariTarget3
+    complete_events: eventCompletedAchVariTarget3
+    reset_events: eventResetAchVariTarget
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::AWARED::FOUR
+  # -----------------------------
+  achVariTarget4:
+    show_tokens:
+      led7: ledBonusReturn
+      led6: ledBonusCount5
+      led5: ledBonusCount4
+      led4: ledBonusCount3
+      led3: ledBonusCount2
+      led2: ledBonusCount1
+      led1: ledBonusBase
+      color1: 'ffff00'
+      color2: '808000'
+      led8: ledDummy1
+      led9: ledDummy2
+    show_when_selected: showAchVariTarget4
+    show_when_started: showAchVariTarget4
+    #show_when_stopped: showAchVariTarget4
+    #show_when_completed: showAchVariTarget4
+    #events_when_selected:
+    #events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchVariTarget4
+    select_events: eventSelectAchVariTarget4
+    start_events: eventStartAchVariTarget4
+    stop_events: eventStopAchVariTarget4
+    complete_events: eventCompletedAchVariTarget4
+    reset_events: eventResetAchVariTarget
+    sync_ms: 1
+    restart_after_stop_possible: true
+
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::AWARED::FIVE
+  # -----------------------------
+  achVariTarget5:
+    show_tokens:
+      led7: ledBonusReturn
+      led6: ledBonusCount5
+      led5: ledBonusCount4
+      led4: ledBonusCount3
+      led3: ledBonusCount2
+      led2: ledBonusCount1
+      led1: ledBonusBase
+      color1: 'ffff00'
+      color2: '808000'
+      led8: ledDummy1
+      led9: ledDummy2
+    show_when_selected: showAchVariTarget5
+    show_when_started: showAchVariTarget5
+    #show_when_stopped: showAchVariTarget5
+    #show_when_completed: showAchVariTarget5
+    #events_when_selected:
+    #events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchVariTarget5
+    select_events: eventSelectAchVariTarget5
+    start_events: eventStartAchVariTarget5
+    stop_events: eventStopAchVariTarget5
+    complete_events: eventCompletedAchVariTarget5
+    reset_events: eventResetAchVariTarget
+    sync_ms: 1
+    restart_after_stop_possible: true
+
+  # -----------------------------
+  # ACHIEVEMENT::GLOBE::AWARED::SIX
+  # -----------------------------
+  achVariTarget6:
+    show_tokens:
+      led7: ledBonusReturn
+      led6: ledBonusCount5
+      led5: ledBonusCount4
+      led4: ledBonusCount3
+      led3: ledBonusCount2
+      led2: ledBonusCount1
+      led1: ledBonusBase
+      color1: 'ffff00'
+      color2: '808000'
+      led8: ledDummy1
+      led9: ledDummy2
+    show_when_selected: showAchVariTarget6
+    show_when_started: showAchVariTarget6
+    #show_when_stopped: showAchVariTarget6
+    show_when_completed: showCompletedAchVariTarget
+    #events_when_selected:
+    #events_when_completed: eventSelectNextMode
+    enable_events: eventEnableAchVariTarget6
+    select_events: eventSelectAchVariTarget6
+    start_events: eventStartAchVariTarget6
+    stop_events: eventStopAchVariTarget6
+    complete_events: eventCompletedAchVariTarget6
+    reset_events: eventResetAchVariTarget
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+## *****************************
+## END ACHIEVEMENTS
+## *****************************
+
+# *****************************      
+# SHOTS
+# *****************************
+shots:
+    shotVariTarget1:
+        switch: s_0_6
+        enable_events: eventEnableShotVariTarget
+        disable_events: eventDisableShotVariTarget
+        restart_events: eventRestartShotVariTarget
+        reset_events: eventResetShotVariTarget
+        profile: spVariTarget
+        advance_events: eventAdvanceShotVariTarget1
+            
+    shotVariTarget2:
+        switch: s_0_5
+        enable_events: eventEnableShotVariTarget
+        disable_events: eventDisableShotVariTarget
+        restart_events: eventRestartShotVariTarget
+        reset_events: eventResetShotVariTarget
+        profile: spVariTarget
+        advance_events: eventAdvanceShotVariTarget2
+            
+    shotVariTarget3:
+        switch: s_0_4
+        enable_events: eventEnableShotVariTarget
+        disable_events: eventDisableShotVariTarget
+        restart_events: eventRestartShotVariTarget
+        reset_events: eventResetShotVariTarget
+        profile: spVariTarget
+        advance_events: eventAdvanceShotVariTarget3
+            
+    shotVariTarget4:
+        switch: s_0_3
+        enable_events: eventEnableShotVariTarget
+        disable_events: eventDisableShotVariTarget
+        restart_events: eventRestartShotVariTarget
+        reset_events: eventResetShotVariTarget
+        profile: spVariTarget
+        advance_events: eventAdvanceShotVariTarget4
+            
+    shotVariTarget5:
+        switch: s_0_2
+        enable_events: eventEnableShotVariTarget
+        disable_events: eventDisableShotVariTarget
+        restart_events: eventRestartShotVariTarget
+        reset_events: eventResetShotVariTarget
+        profile: spVariTarget
+        advance_events: eventAdvanceShotVariTarget5
+            
+    shotVariTarget6:
+        switch: s_0_1
+        enable_events: eventEnableShotVariTarget
+        disable_events: eventDisableShotVariTarget
+        restart_events: eventRestartShotVariTarget
+        reset_events: eventResetShotVariTarget
+        profile: spVariTarget
+        advance_events: eventAdvanceShotVariTarget6
+        
+# *****************************      
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::VARI::TARGET
+    # -----------------------------
+    spVariTarget:
+        states:
+          - name: unlitVariTarget
+          - name: litVariTarget
+        loop: false
+  
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::TARGET::PLAYER
+    # -------------------
+    sgVariTarget:
+        shots:
+            - shotVariTarget1
+            - shotVariTarget2
+            - shotVariTarget3
+            - shotVariTarget4
+            - shotVariTarget5
+            - shotVariTarget6
+        #rotate_left_events: s_flipper_left_active
+        #rotate_right_events: s_flipper_right_active
+        #rotate_right_events: eventRotateRightShotGroupVariTarget
+        enable_events:
+            - eventEnableShotGroupVariTarget
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupVariTarget
+        reset_events:
+            - ball_started
+            - mode_modeBuckRogers_started
+            - eventResetShotGroupVariTarget
+            
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # ----------------------------
+  # TIMER TO ROTATE SHOT
+  # ----------------------------
+  timer_timerRotateRightShotGroupVariTarget_complete:
+    - eventAdvanceShotVariTarget
+    
+  # ----------------------------
+  # COMPLETE ACHIEVEMENTS
+  # ----------------------------
+  shotVariTarget1_unlitVariTarget_hit:
+    - eventCompletedAchVariTarget1
+    - eventEnableAchVariTarget2
+    - eventSelectAchVariTarget2
+    - eventStartAchVariTarget2
+
+  shotVariTarget2_unlitVariTarget_hit:
+    - eventCompletedAchVariTarget1
+    - eventCompletedAchVariTarget2
+    - eventEnableAchVariTarget3
+    - eventSelectAchVariTarget3
+    - eventStartAchVariTarget3
+    
+  shotVariTarget3_unlitVariTarget_hit:
+    - eventCompletedAchVariTarget1
+    - eventCompletedAchVariTarget2
+    - eventCompletedAchVariTarget3
+    - eventEnableAchVariTarget4
+    - eventSelectAchVariTarget4
+    - eventStartAchVariTarget4
+    
+  shotVariTarget4_unlitVariTarget_hit:
+    - eventCompletedAchVariTarget1
+    - eventCompletedAchVariTarget2
+    - eventCompletedAchVariTarget3
+    - eventCompletedAchVariTarget4
+    - eventEnableAchVariTarget5
+    - eventSelectAchVariTarget5
+    - eventStartAchVariTarget5
+    
+  shotVariTarget5_unlitVariTarget_hit:
+    - eventCompletedAchVariTarget1
+    - eventCompletedAchVariTarget2
+    - eventCompletedAchVariTarget3
+    - eventCompletedAchVariTarget4
+    - eventCompletedAchVariTarget5
+    - eventEnableAchVariTarget6
+    - eventSelectAchVariTarget6
+    - eventStartAchVariTarget6
+    
+  shotVariTarget6_unlitVariTarget_hit:
+    - eventCompletedAchVariTarget1
+    - eventCompletedAchVariTarget2
+    - eventCompletedAchVariTarget3
+    - eventCompletedAchVariTarget4
+    - eventCompletedAchVariTarget5
+    - eventCompletedAchVariTarget6

@@ -1,0 +1,251 @@
+#config_version=6
+
+# BASE::KISS
+
+# *****************************
+# SHOTS::LANES
+# *****************************
+shots:
+    # -------------------
+    # ARROWS::ROWS
+    # -------------------
+    shotArrowRow1:
+        enable_events: eventEnableShotArrowRow1
+        disable_events: eventDisableShotArrowRow1
+        restart_events: eventRestartShotArrowRow1
+        reset_events: eventResetShotArrowRow1
+        advance_events: eventAdvanceShotArrowRow1
+        hit_events: eventHitShotArrowRow1
+        profile: spShotArrow
+        show_tokens:
+            led: ledArrowsRight4
+
+    shotArrowRow2:
+        enable_events: eventEnableShotArrowRow2
+        disable_events: eventDisableShotArrowRow2
+        restart_events: eventRestartShotArrowRow2
+        reset_events: eventResetShotArrowRow2
+        advance_events: eventAdvanceShotArrowRow2
+        hit_events: eventHitShotArrowRow2
+        profile: spShotArrow
+        show_tokens:
+            led: ledArrowsRight3
+            
+    shotArrowRow3:
+        enable_events: eventEnableShotArrowRow3
+        disable_events: eventDisableShotArrowRow3
+        restart_events: eventRestartShotArrowRow3
+        reset_events: eventResetShotArrowRow3
+        advance_events: eventAdvanceShotArrowRow3
+        hit_events: eventHitShotArrowRow3
+        profile: spShotArrow
+        show_tokens:
+            led: ledArrowsRight2
+            
+    shotArrowRow4:
+        enable_events: eventEnableShotArrowRow4
+        disable_events: eventDisableShotArrowRow4
+        restart_events: eventRestartShotArrowRow4
+        reset_events: eventResetShotArrowRow4
+        advance_events: eventAdvanceShotArrowRow4
+        hit_events: eventHitShotArrowRow4
+        profile: spShotArrow
+        show_tokens:
+            led: ledArrowsRight1
+            
+    # -------------------
+    # ARROWS::COLUMN
+    # -------------------
+    shotArrowColumn1:
+        enable_events: eventEnableShotArrowColumn1
+        disable_events: eventDisableShotArrowColumn1
+        restart_events: eventRestartShotArrowColumn1
+        reset_events: eventResetShotArrowColumn1
+        advance_events: eventAdvanceShotArrowColumn1
+        hit_events: eventHitShotArrowColumn1
+        profile: spShotArrow
+        show_tokens:
+            led: ledArrowsBottom1
+
+    shotArrowColumn2:
+        enable_events: eventEnableShotArrowColumn2
+        disable_events: eventDisableShotArrowColumn2
+        restart_events: eventRestartShotArrowColumn2
+        reset_events: eventResetShotArrowColumn2
+        advance_events: eventAdvanceShotArrowColumn2
+        hit_events: eventHitShotArrowColumn2
+        profile: spShotArrow
+        show_tokens:
+            led: ledArrowsBottom2
+            
+    shotArrowColumn3:
+        enable_events: eventEnableShotArrowColumn3
+        disable_events: eventDisableShotArrowColumn3
+        restart_events: eventRestartShotArrowColumn3
+        reset_events: eventResetShotArrowColumn3
+        advance_events: eventAdvanceShotArrowColumn3
+        hit_events: eventHitShotArrowColumn3
+        profile: spShotArrow
+        show_tokens:
+            led: ledArrowsBottom3
+            
+    shotArrowColumn4:
+        enable_events: eventEnableShotArrowColumn4
+        disable_events: eventDisableShotArrowColumn4
+        restart_events: eventRestartShotArrowColumn4
+        reset_events: eventResetShotArrowColumn4
+        advance_events: eventAdvanceShotArrowColumn4
+        hit_events: eventHitShotArrowColumn4
+        profile: spShotArrow
+        show_tokens:
+            led: ledArrowsBottom4
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::ARROW::ROW
+    # -------------------
+    shotGroupArrowRow:
+        shots:
+            - shotArrowRow1
+            - shotArrowRow2
+            - shotArrowRow3
+            - shotArrowRow4
+        enable_events:
+            - eventEnableShotGroupArrowRow
+        disable_events:
+            - eventDisableShotGroupArrowRow
+        reset_events:
+            - eventResetShotGroupArrowRow
+        restart_events:
+            - eventRestartShotGroupArrowRow
+        #rotate_left_events:
+        #    - sw_right_flipper
+        #rotate_right_events:
+        #    - sw_left_flipper
+        
+    # -------------------
+    # SHOTGROUP::ARROW::COLUMN
+    # -------------------
+    shotGroupArrowColumn:
+        shots:
+            - shotArrowColumn1
+            - shotArrowColumn2
+            - shotArrowColumn3
+            - shotArrowColumn4
+        enable_events:
+            - eventEnableShotGroupArrowColumn
+        disable_events:
+            - eventDisableShotGroupArrowColumn
+        reset_events:
+            - eventResetShotGroupArrowColumn
+        restart_events:
+            - eventRestartShotGroupArrowColumn
+        #rotate_left_events:
+        #    - sw_right_flipper
+        #rotate_right_events:
+        #    - sw_left_flipper
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::LANE::TOP
+    # -----------------------------
+    spShotArrow:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: 'ffcc00'
+                color2: 'cc8800'
+        loop: false
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeBaseKissMatrix_started:
+        # -----------
+        # ROWS START
+        # -----------
+        - eventRestartShotArrowRow1
+        - eventRestartShotArrowRow2
+        - eventRestartShotArrowRow3
+        - eventRestartShotArrowRow4
+        # -----------
+        # COLUMN START
+        # -----------
+        - eventRestartShotArrowColumn1
+        - eventRestartShotArrowColumn2
+        - eventRestartShotArrowColumn3
+        - eventRestartShotArrowColumn4
+        ## -----------
+        ## TEST 220514 TRY ENABLE VS RESTART TO MAINTAIN PROGRESS BETWEEN BALLS
+        ## -----------
+        ## ROWS START
+        ## -----------
+        #- eventEnableShotArrowRow1
+        #- eventEnableShotArrowRow2
+        #- eventEnableShotArrowRow3
+        #- eventEnableShotArrowRow4
+        ## -----------
+        ## COLUMN START
+        ## -----------
+        #- eventEnableShotArrowColumn1
+        #- eventEnableShotArrowColumn2
+        #- eventEnableShotArrowColumn3
+        #- eventEnableShotArrowColumn4
+        
+    # -----------
+    # ROWS HIT
+    # -----------
+    eventAchGroupKissMatrix10Complete:
+        - eventHitShotArrowRow1
+    eventAchGroupKissMatrix20Complete:
+        - eventHitShotArrowRow2
+    eventAchGroupKissMatrix30Complete:
+        - eventHitShotArrowRow3
+    eventAchGroupKissMatrix40Complete:
+        - eventHitShotArrowRow4
+
+    # -----------
+    # COLUMNS HIT
+    # -----------
+    eventAchGroupKissMatrix01Complete:
+        - eventHitShotArrowColumn1
+    eventAchGroupKissMatrix02Complete:
+        - eventHitShotArrowColumn2
+    eventAchGroupKissMatrix03Complete:
+        - eventHitShotArrowColumn3
+    eventAchGroupKissMatrix04Complete:
+        - eventHitShotArrowColumn4
+        
+
+## *********************
+## VARIABLE::PLAYER
+## *********************
+#variable_player:
+
+      
+## ---------------------
+## SHOW::PLAYER::
+## ---------------------
+#show_player:
+
+                
+## *********************
+## SHOWS
+## *********************
+#shows:
+

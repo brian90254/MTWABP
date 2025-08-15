@@ -1,0 +1,85 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  modeCarousel_year1976_highlighted:
+    slideYear1976:
+      target: displayDMD
+
+slides:
+  slideYear1976:
+    widgets:
+      # ---------------
+      # INNER
+      # ---------------
+      - type: text
+        text: "1976"
+        y: middle
+        x: middle
+        style: font1976
+        color: colorFontYear1970sTwo
+        z: 20
+      # ---------------
+      # OUTER ONE
+      # ---------------
+      - type: text
+        text: "1976"
+        y: middle + 1
+        x: middle + 1
+        style: font1976
+        color: black
+        z: 15
+      - type: text
+        text: "1976"
+        y: middle - 1
+        x: middle + 1
+        style: font1976
+        color: black
+        z: 15
+      - type: text
+        text: "1976"
+        y: middle + 1
+        x: middle - 1
+        style: font1976
+        color: black
+        z: 15
+      - type: text
+        text: "1976"
+        y: middle - 1
+        x: middle - 1
+        style: font1976
+        color: black
+        z: 15
+      # ---------------
+      # OUTER TWO
+      # ---------------
+      - type: text
+        text: "1976"
+        y: middle + 2
+        x: middle + 2
+        style: font1976
+        color: colorFontYear1970sThree
+        z: 10
+      - type: text
+        text: "1976"
+        y: middle - 2
+        x: middle + 2
+        style: font1976
+        color: colorFontYear1970sThree
+        z: 10
+      - type: text
+        text: "1976"
+        y: middle + 2
+        x: middle - 2
+        style: font1976
+        color: colorFontYear1970sThree
+        z: 10
+      - type: text
+        text: "1976"
+        y: middle - 2
+        x: middle - 2
+        style: font1976
+        color: colorFontYear1970sThree
+        z: 10

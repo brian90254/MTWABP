@@ -1,0 +1,1008 @@
+#config_version=6
+
+# VOLTAN
+
+# *****************************
+# SHOTS::LANES
+# *****************************
+shots:
+    # -------------------
+    # MATRIX SPOT
+    # -------------------
+    shotMatrixSpotPaulStanley1:
+        switch: s_1_28
+        enable_events: eventEnableShotMatrixSpotPaulStanley1
+        disable_events: eventDisableShotMatrixSpotPaulStanley1
+        restart_events: eventRestartShotMatrixSpotPaulStanley1
+        reset_events: eventResetShotMatrixSpotPaulStanley1
+        profile: spShotMatrixSpotPaulStanley
+        show_tokens:
+            led1: ledSpot1A
+            led2: ledSpot1B
+            led3: ledSpot1C
+            led4: ledSpot1D
+            led5: ledSpot1E
+            led6: ledLane1
+           
+    shotMatrixSpotPaulStanley2:
+        switch: s_1_30
+        enable_events: eventEnableShotMatrixSpotPaulStanley2
+        disable_events: eventDisableShotMatrixSpotPaulStanley2
+        restart_events: eventRestartShotMatrixSpotPaulStanley2
+        reset_events: eventResetShotMatrixSpotPaulStanley2
+        profile: spShotMatrixSpotPaulStanley
+        show_tokens:
+            led1: ledSpot2A
+            led2: ledSpot2B
+            led3: ledSpot2C
+            led4: ledSpot2D
+            led5: ledSpot2E
+            led6: ledTarget2
+            
+    shotMatrixSpotPaulStanley3:
+        switch: s_1_19
+        enable_events: eventEnableShotMatrixSpotPaulStanley3
+        disable_events: eventDisableShotMatrixSpotPaulStanley3
+        restart_events: eventRestartShotMatrixSpotPaulStanley3
+        reset_events: eventResetShotMatrixSpotPaulStanley3
+        profile: spShotMatrixSpotPaulStanley
+        show_tokens:
+            led1: ledSpot3A
+            led2: ledSpot3B
+            led3: ledSpot3C
+            led4: ledSpot3D
+            led5: ledSpot3E
+            led6: ledLane3
+            
+    shotMatrixSpotPaulStanley4:
+        switch: s_1_17
+        enable_events: eventEnableShotMatrixSpotPaulStanley4
+        disable_events: eventDisableShotMatrixSpotPaulStanley4
+        restart_events: eventRestartShotMatrixSpotPaulStanley4
+        reset_events: eventResetShotMatrixSpotPaulStanley4
+        profile: spShotMatrixSpotPaulStanley
+        show_tokens:
+            led1: ledSpot4A
+            led2: ledSpot4B
+            led3: ledSpot4C
+            led4: ledSpot4D
+            led5: ledSpot4E
+            led6: ledLane4
+           
+    shotMatrixSpotPaulStanley5:
+        switch: s_1_9
+        enable_events: eventEnableShotMatrixSpotPaulStanley5
+        disable_events: eventDisableShotMatrixSpotPaulStanley5
+        restart_events: eventRestartShotMatrixSpotPaulStanley5
+        reset_events: eventResetShotMatrixSpotPaulStanley5
+        profile: spShotMatrixSpotPaulStanley
+        show_tokens:
+            led1: ledSpot5A
+            led2: ledSpot5B
+            led3: ledSpot5C
+            led4: ledSpot5D
+            led5: ledSpot5E
+            led6: ledTarget5
+            
+    shotMatrixSpotPaulStanley6:
+        switch: s_1_31
+        enable_events: eventEnableShotMatrixSpotPaulStanley6
+        disable_events: eventDisableShotMatrixSpotPaulStanley6
+        restart_events: eventRestartShotMatrixSpotPaulStanley6
+        reset_events: eventResetShotMatrixSpotPaulStanley6
+        profile: spShotMatrixSpotPaulStanley
+        show_tokens:
+            led1: ledSpot6A
+            led2: ledSpot6B
+            led3: ledSpot6C
+            led4: ledSpot6D
+            led5: ledSpot6E
+            led6: ledLane6
+            
+    shotMatrixSpotPaulStanley7:
+        switch: s_1_29
+        enable_events: eventEnableShotMatrixSpotPaulStanley7
+        disable_events: eventDisableShotMatrixSpotPaulStanley7
+        restart_events: eventRestartShotMatrixSpotPaulStanley7
+        reset_events: eventResetShotMatrixSpotPaulStanley7
+        profile: spShotMatrixSpotPaulStanley
+        show_tokens:
+            led1: ledSpot7A
+            led2: ledSpot7B
+            led3: ledSpot7C
+            led4: ledSpot7D
+            led5: ledSpot7E
+            led6: ledLane7
+           
+    shotMatrixSpotPaulStanley8:
+        switch: s_1_16
+        enable_events: eventEnableShotMatrixSpotPaulStanley8
+        disable_events: eventDisableShotMatrixSpotPaulStanley8
+        restart_events: eventRestartShotMatrixSpotPaulStanley8
+        reset_events: eventResetShotMatrixSpotPaulStanley8
+        profile: spShotMatrixSpotPaulStanley
+        show_tokens:
+            led1: ledSpot8A
+            led2: ledSpot8B
+            led3: ledSpot8C
+            led4: ledSpot8D
+            led5: ledSpot8E
+            led6: ledTarget8
+            
+    shotMatrixSpotPaulStanley9:
+        switch: s_1_18
+        enable_events: eventEnableShotMatrixSpotPaulStanley9
+        disable_events: eventDisableShotMatrixSpotPaulStanley9
+        restart_events: eventRestartShotMatrixSpotPaulStanley9
+        reset_events: eventResetShotMatrixSpotPaulStanley9
+        profile: spShotMatrixSpotPaulStanley
+        show_tokens:
+            led1: ledSpot9A
+            led2: ledSpot9B
+            led3: ledSpot9C
+            led4: ledSpot9D
+            led5: ledSpot9E
+            led6: ledLane9
+            
+    # -------------------
+    # MATRIX SPOT::GROUPS
+    # -------------------
+    # DIAGONAL
+    shotMatrixSpotPaulStanleyDiagonalLeft:
+        enable_events: eventEnableShotMatrixSpotPaulStanleyDiagonalLeft
+        disable_events: eventDisableShotMatrixSpotPaulStanleyDiagonalLeft
+        restart_events: eventRestartShotMatrixSpotPaulStanleyDiagonalLeft
+        reset_events: eventResetShotMatrixSpotPaulStanleyDiagonalLeft
+        hit_events: eventHitShotMatrixSpotPaulStanleyDiagonalLeft
+        profile: spShotMatrixSpotPaulStanleyDiagonal
+            
+    shotMatrixSpotPaulStanleyDiagonalRight:
+        enable_events: eventEnableShotMatrixSpotPaulStanleyDiagonalRight
+        disable_events: eventDisableShotMatrixSpotPaulStanleyDiagonalRight
+        restart_events: eventRestartShotMatrixSpotPaulStanleyDiagonalRight
+        reset_events: eventResetShotMatrixSpotPaulStanleyDiagonalRight
+        hit_events: eventHitShotMatrixSpotPaulStanleyDiagonalRight
+        profile: spShotMatrixSpotPaulStanleyDiagonal
+        
+    # VERTICAL
+    shotMatrixSpotPaulStanleyVerticalLeft:
+        enable_events: eventEnableShotMatrixSpotPaulStanleyVerticalLeft
+        disable_events: eventDisableShotMatrixSpotPaulStanleyVerticalLeft
+        restart_events: eventRestartShotMatrixSpotPaulStanleyVerticalLeft
+        reset_events: eventResetShotMatrixSpotPaulStanleyVerticalLeft
+        hit_events: eventHitShotMatrixSpotPaulStanleyVerticalLeft
+        profile: spShotMatrixSpotPaulStanleyVertical
+            
+    shotMatrixSpotPaulStanleyVerticalMiddle:
+        enable_events: eventEnableShotMatrixSpotPaulStanleyVerticalMiddle
+        disable_events: eventDisableShotMatrixSpotPaulStanleyVerticalMiddle
+        restart_events: eventRestartShotMatrixSpotPaulStanleyVerticalMiddle
+        reset_events: eventResetShotMatrixSpotPaulStanleyVerticalMiddle
+        hit_events: eventHitShotMatrixSpotPaulStanleyVerticalMiddle
+        profile: spShotMatrixSpotPaulStanleyVertical
+        
+    shotMatrixSpotPaulStanleyVerticalRight:
+        enable_events: eventEnableShotMatrixSpotPaulStanleyVerticalRight
+        disable_events: eventDisableShotMatrixSpotPaulStanleyVerticalRight
+        restart_events: eventRestartShotMatrixSpotPaulStanleyVerticalRight
+        reset_events: eventResetShotMatrixSpotPaulStanleyVerticalRight
+        hit_events: eventHitShotMatrixSpotPaulStanleyVerticalRight
+        profile: spShotMatrixSpotPaulStanleyVertical
+        
+    # -------------------
+    # SHOTS::SPINNERS
+    # -------------------
+    shotSpinnerPaulStanleyLeft:
+        switch: s_1_11
+        enable_events: eventEnableShotSpinnerPaulStanleyLeft
+        disable_events: eventDisableShotSpinnerPaulStanleyLeft
+        restart_events: eventRestartShotSpinnerPaulStanleyLeft
+        reset_events: eventResetShotSpinnerPaulStanleyLeft
+        profile: spShotSpinnerPaulStanley
+        show_tokens:
+            led1: ledSpinnerLeft1
+            led2: ledSpinnerLeft2
+            led3: ledSpinnerLeft3
+        
+    shotSpinnerPaulStanleyRight:
+        switch: s_1_4
+        enable_events: eventEnableShotSpinnerPaulStanleyRight
+        disable_events: eventDisableShotSpinnerPaulStanleyRight
+        restart_events: eventRestartShotSpinnerPaulStanleyRight
+        reset_events: eventResetShotSpinnerPaulStanleyRight
+        profile: spShotSpinnerPaulStanley
+        show_tokens:
+            led1: ledSpinnerRight1
+            led2: ledSpinnerRight2
+            led3: ledSpinnerRight3
+        
+    # -------------------
+    # SHOTS::OUTLANES
+    # -------------------
+    shotOutlanePaulStanleyLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlanePaulStanleyLeft
+        disable_events: eventDisableShotOutlanePaulStanleyLeft
+        restart_events: eventRestartShotOutlanePaulStanleyLeft
+        reset_events: eventResetShotOutlanePaulStanleyLeft
+        profile: spShotOutlanePaulStanley
+            
+    shotOutlanePaulStanleyRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlanePaulStanleyRight
+        disable_events: eventDisableShotOutlanePaulStanleyRight
+        restart_events: eventRestartShotOutlanePaulStanleyRight
+        reset_events: eventResetShotOutlanePaulStanleyRight
+        profile: spShotOutlanePaulStanley
+            
+    # -------------------
+    # SHOTS::OUTLANE::SPECIAL
+    # -------------------
+    shotOutlanePaulStanleySpecialLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlanePaulStanleySpecialLeft
+        disable_events: eventDisableShotOutlanePaulStanleySpecialLeft
+        restart_events: eventRestartShotOutlanePaulStanleySpecialLeft
+        reset_events: eventResetShotOutlanePaulStanleySpecialLeft
+        profile: spShotOutlanePaulStanleySpecial
+        show_tokens:
+            led: ledOutlaneLeft
+            
+    shotOutlanePaulStanleySpecialRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlanePaulStanleySpecialRight
+        disable_events: eventDisableShotOutlanePaulStanleySpecialRight
+        restart_events: eventRestartShotOutlanePaulStanleySpecialRight
+        reset_events: eventResetShotOutlanePaulStanleySpecialRight
+        profile: spShotOutlanePaulStanleySpecial
+        show_tokens:
+            led: ledOutlaneRight
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotPaulStanleyAll:
+        shots:
+            - shotMatrixSpotPaulStanley7
+            - shotMatrixSpotPaulStanley2
+            - shotMatrixSpotPaulStanley1
+            - shotMatrixSpotPaulStanley4
+            - shotMatrixSpotPaulStanley6
+            - shotMatrixSpotPaulStanley9
+            - shotMatrixSpotPaulStanley8
+            - shotMatrixSpotPaulStanley3
+            - shotMatrixSpotPaulStanley5
+        enable_events:
+            - eventEnableShotGroupMatrixSpotPaulStanleyAll
+        disable_events:
+            - eventDisableShotGroupMatrixSpotPaulStanleyAll
+        reset_events:
+            - eventResetShotGroupMatrixSpotPaulStanleyAll
+        restart_events:
+            - eventRestartShotGroupMatrixSpotPaulStanleyAll
+        rotate_left_events:
+            - sw_right_flipper
+        rotate_right_events:
+            - sw_left_flipper
+        
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotPaulStanleyDiagonalLeft:
+        shots:
+            - shotMatrixSpotPaulStanley1
+            - shotMatrixSpotPaulStanley5
+            - shotMatrixSpotPaulStanley9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotPaulStanleyDiagonalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotPaulStanleyDiagonalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotPaulStanleyDiagonalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotPaulStanleyDiagonalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotPaulStanleyDiagonalRight:
+        shots:
+            - shotMatrixSpotPaulStanley3
+            - shotMatrixSpotPaulStanley5
+            - shotMatrixSpotPaulStanley7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotPaulStanleyDiagonalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotPaulStanleyDiagonalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotPaulStanleyDiagonalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotPaulStanleyDiagonalRight
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotPaulStanleyVerticalLeft:
+        shots:
+            - shotMatrixSpotPaulStanley1
+            - shotMatrixSpotPaulStanley4
+            - shotMatrixSpotPaulStanley7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotPaulStanleyVerticalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotPaulStanleyVerticalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotPaulStanleyVerticalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotPaulStanleyVerticalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotPaulStanleyVerticalMiddle:
+        shots:
+            - shotMatrixSpotPaulStanley2
+            - shotMatrixSpotPaulStanley5
+            - shotMatrixSpotPaulStanley8
+        enable_events:
+            - eventEnableShotGroupMatrixSpotPaulStanleyVerticalMiddle
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotPaulStanleyVerticalMiddle
+        reset_events:
+            - eventResetShotGroupMatrixSpotPaulStanleyVerticalMiddle
+        restart_events:
+            - eventRestartShotGroupMatrixSpotPaulStanleyVerticalMiddle
+            
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotPaulStanleyVerticalRight:
+        shots:
+            - shotMatrixSpotPaulStanley3
+            - shotMatrixSpotPaulStanley6
+            - shotMatrixSpotPaulStanley9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotPaulStanleyVerticalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotPaulStanleyVerticalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotPaulStanleyVerticalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotPaulStanleyVerticalRight
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::MARTIX::SPOT
+    # -----------------------------
+    spShotMatrixSpotPaulStanley:
+        states:
+          - name: litFlash
+            show: showMatrixSpotPaulStanley
+            speed: 4
+            show_tokens:
+                color1: '880088'
+                color2: 'ff00ff'
+                color3: '000000'
+                color4: '000000'
+          - name: litSolid
+            show: showMatrixSpotPaulStanley
+            speed: 4
+            show_tokens:
+                color1: '660088'
+                color2: '660088'
+                color3: '008888'
+                color4: '00ffff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::MARTIX::GROUPS
+    # -----------------------------
+    spShotMatrixSpotPaulStanleyDiagonal:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    spShotMatrixSpotPaulStanleyVertical:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::SPINNER
+    # -----------------------------
+    spShotSpinnerPaulStanley:
+        states:
+          - name: litSolid
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: 'ffff00'
+                color2: '888800'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE
+    # -----------------------------
+    spShotOutlanePaulStanley:
+        states:
+          #- name: litFlash
+          - name: litSolid
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE::SPECIAL
+    # -----------------------------
+    spShotOutlanePaulStanleySpecial:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '440066'
+                color2: '8800cc'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: 'cc00ff'
+                color2: 'cc00ff'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeVoltanPaulStanley_started:
+        # -----------
+        # OUTLANES
+        # -----------
+        - eventEnableShotOutlanePaulStanleyLeft
+        - eventEnableShotOutlanePaulStanleyRight
+        # -----------
+        # MATRIX
+        # -----------
+        - eventEnableShotMatrixSpotPaulStanley1
+        - eventEnableShotMatrixSpotPaulStanley2
+        - eventEnableShotMatrixSpotPaulStanley3
+        - eventEnableShotMatrixSpotPaulStanley4
+        - eventEnableShotMatrixSpotPaulStanley5
+        - eventEnableShotMatrixSpotPaulStanley6
+        - eventEnableShotMatrixSpotPaulStanley7
+        - eventEnableShotMatrixSpotPaulStanley8
+        - eventEnableShotMatrixSpotPaulStanley9
+        # -----------
+        # MATRIX::GROUPS
+        # -----------
+        # DIAGONAL
+        # TODO reserve this for higher level modes past PaulStanley
+        - eventEnableShotMatrixSpotPaulStanleyDiagonalLeft
+        - eventEnableShotMatrixSpotPaulStanleyDiagonalRight
+        #VERTICAL
+        - eventEnableShotMatrixSpotPaulStanleyVerticalLeft
+        - eventEnableShotMatrixSpotPaulStanleyVerticalMiddle
+        - eventEnableShotMatrixSpotPaulStanleyVerticalRight
+        
+# -----------
+# MATRIX::GROUPS::COMPLETE
+# -----------
+# -----------
+# DIAGONAL
+# -----------
+    # TODO this is not enables in PaulStanley
+    # -----------
+    # DIAGONAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotPaulStanleyDiagonalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotPaulStanleyDiagonalLeft
+        # -------------
+    shotMatrixSpotPaulStanleyDiagonalLeft_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotPaulStanley1
+        #- eventDisableShotMatrixSpotPaulStanley5
+        #- eventDisableShotMatrixSpotPaulStanley9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalLeft
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotPaulStanley1|3000ms
+        #- eventRestartShotMatrixSpotPaulStanley5|3000ms
+        #- eventRestartShotMatrixSpotPaulStanley9|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerPaulStanleyLeft
+    
+    # -----------
+    # DIAGONAL::RIGHT
+    # -----------
+    # TODO this is not enables in PaulStanley
+    shotGroupMatrixSpotPaulStanleyDiagonalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotPaulStanleyDiagonalRight
+        # -------------
+    shotMatrixSpotPaulStanleyDiagonalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotPaulStanley3
+        #- eventDisableShotMatrixSpotPaulStanley5
+        #- eventDisableShotMatrixSpotPaulStanley7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalRight
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotPaulStanley3|3000ms
+        #- eventRestartShotMatrixSpotPaulStanley5|3000ms
+        #- eventRestartShotMatrixSpotPaulStanley7|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerPaulStanleyRight
+        
+    # -----------
+    # GROUP::ALL
+    # -----------
+    shotGroupMatrixSpotPaulStanleyAll_litSolid_complete:
+        - eventVoltanPaulStanleyComplete|3000ms
+    
+# -----------
+# VERTICAL
+# -----------
+    # -----------
+    # VERTICAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotPaulStanleyVerticalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotPaulStanleyVerticalLeft
+        # -------------
+    shotMatrixSpotPaulStanleyVerticalLeft_litFlash_hit:
+        # TODO this is not enables in PaulStanley
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotPaulStanley1
+        #- eventDisableShotMatrixSpotPaulStanley4
+        #- eventDisableShotMatrixSpotPaulStanley7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalLeft
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in PaulStanley
+        #- eventRestartShotMatrixSpotPaulStanley1|3000ms
+        #- eventRestartShotMatrixSpotPaulStanley4|3000ms
+        #- eventRestartShotMatrixSpotPaulStanley7|3000ms
+        
+    shotGroupMatrixSpotPaulStanleyVerticalMiddle_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotPaulStanleyVerticalMiddle
+        # -------------
+    shotMatrixSpotPaulStanleyVerticalMiddle_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in PaulStanley
+        #- eventDisableShotMatrixSpotPaulStanley2
+        #- eventDisableShotMatrixSpotPaulStanley5
+        #- eventDisableShotMatrixSpotPaulStanley8
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalMiddle
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in PaulStanley
+        #- eventRestartShotMatrixSpotPaulStanley2|3000ms
+        #- eventRestartShotMatrixSpotPaulStanley5|3000ms
+        #- eventRestartShotMatrixSpotPaulStanley8|3000ms
+        
+    shotGroupMatrixSpotPaulStanleyVerticalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotPaulStanleyVerticalRight
+        # -------------
+    shotMatrixSpotPaulStanleyVerticalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in PaulStanley
+        #- eventDisableShotMatrixSpotPaulStanley3
+        #- eventDisableShotMatrixSpotPaulStanley6
+        #- eventDisableShotMatrixSpotPaulStanley9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalRight
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in PaulStanley
+        #- eventRestartShotMatrixSpotPaulStanley3|3000ms
+        #- eventRestartShotMatrixSpotPaulStanley6|3000ms
+        #- eventRestartShotMatrixSpotPaulStanley9|3000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------------
+    # SPINNERS
+    # ---------------------
+    shotSpinnerPaulStanleyLeft_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotSpinnerPaulStanleyRight_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    sw_tagSpinner:
+      score: 1 * current_player.multiPlayfield
+
+    # ---------------------
+    # OUTLANES
+    # ---------------------
+    # STANDARD
+    shotOutlanePaulStanleyLeft_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    shotOutlanePaulStanleyRight_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    # SPECIAL
+    shotOutlanePaulStanleySpecialLeft_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+    shotOutlanePaulStanleySpecialRight_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+
+    # ---------------------
+    # TARGETS AND LANES
+    # ---------------------
+    shotGroupMatrixSpotPaulStanleyAll_litFlash_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotGroupMatrixSpotPaulStanleyAll_litSolid_hit:
+        score: 10 * current_player.multiPlayfield
+      
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+    # ---------------------
+    # SHOW::DIAGONAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalLeft:
+        showMatrixSpotPaulStanleyThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotPaulStanleyThreeCompleteDiagonalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+        
+    # ---------------------
+    # SHOW::DIAGONAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalRight:
+        showMatrixSpotPaulStanleyThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotPaulStanleyThreeCompleteDiagonalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalLeft:
+        showMatrixSpotPaulStanleyThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotPaulStanleyThreeCompleteVerticalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot4A
+                led2B: ledSpot4B
+                led2C: ledSpot4C
+                led2D: ledSpot4D
+                led2E: ledSpot4E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::MIDDLE
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalMiddle:
+        showMatrixSpotPaulStanleyThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotPaulStanleyThreeCompleteVerticalMiddle
+            show_tokens:
+                # --------------
+                led1A: ledSpot2A
+                led1B: ledSpot2B
+                led1C: ledSpot2C
+                led1D: ledSpot2D
+                led1E: ledSpot2E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot8A
+                led3B: ledSpot8B
+                led3C: ledSpot8C
+                led3D: ledSpot8D
+                led3E: ledSpot8E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalRight:
+        showMatrixSpotPaulStanleyThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotPaulStanleyThreeCompleteVerticalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot6A
+                led2B: ledSpot6B
+                led2C: ledSpot6C
+                led2D: ledSpot6D
+                led2E: ledSpot6E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotPaulStanley:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotPaulStanleyThreeComplete:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1)
+            (led1B): (color1)
+            (led1C): (color1)
+            (led1D): (color1)
+            (led1E): (color1)
+            # ----------------
+            (led2A): (color1)
+            (led2B): (color1)
+            (led2C): (color1)
+            (led2D): (color1)
+            (led2E): (color1)
+            # ----------------
+            (led3A): (color1)
+            (led3B): (color1)
+            (led3C): (color1)
+            (led3D): (color1)
+            (led3E): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color2)
+            (led1B): (color2)
+            (led1C): (color2)
+            (led1D): (color2)
+            (led1E): (color2)
+            # ----------------
+            (led2A): (color2)
+            (led2B): (color2)
+            (led2C): (color2)
+            (led2D): (color2)
+            (led2E): (color2)
+            # ----------------
+            (led3A): (color2)
+            (led3B): (color2)
+            (led3C): (color2)
+            (led3D): (color2)
+            (led3E): (color2)
+            # ----------------
+        - time: "+1"

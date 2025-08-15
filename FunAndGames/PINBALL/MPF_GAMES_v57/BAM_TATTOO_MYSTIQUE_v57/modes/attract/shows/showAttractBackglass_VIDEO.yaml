@@ -1,0 +1,18 @@
+#show_version=6
+
+# ---------------------
+# SLIDES::TattooMystique
+# ---------------------
+- time: 0
+
+#   events:
+#     eventShowAttractBackglassTattooMystique2
+# - time: '+3'
+
+#   events:
+#     eventShowAttractBackglassTattooMystique3
+# - time: '+3'
+
+  events:
+    eventShowAttractBackglassTattooMystique4
+- time: '+30'

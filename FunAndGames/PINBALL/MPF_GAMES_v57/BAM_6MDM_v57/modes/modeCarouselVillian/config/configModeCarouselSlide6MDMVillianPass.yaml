@@ -1,0 +1,199 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  modeCarouselVillian_6MDMVillianPass_highlighted:
+    slide6MDMVillianPass:
+      target: displayDMD
+
+slides:
+  slide6MDMVillianPass:
+    widgets:
+      - type: image
+        image: image6MDMVillianPass
+        y: middle + 15
+        x: middle
+        z: 30
+      # ---------------
+      - type: image
+        image: image6MDMVillianBigFoot
+        y: middle + 15
+        x: middle - 110
+        z: 30
+      # ---------------
+      - type: image
+        image: image6MDMVillian7MDM
+        y: middle + 15
+        x: middle + 110
+        z: 30
+      
+      ## ---------------
+      ## INNER
+      ## ---------------
+      #- type: text
+      #  text: "PASS"
+      #  y: middle + 15
+      #  x: middle
+      #  style: fontCarouselVillianMiddle
+      #  color: colorFontCarouselVillianMiddleInner
+      #  z: 20
+      ## ---------------
+      ## OUTER ONE
+      ## ---------------
+      #- type: text
+      #  text: "PASS"
+      #  y: middle + 16
+      #  x: middle + 1
+      #  style: fontCarouselVillianMiddle
+      #  color: colorFontCarouselVillianMiddleOuter1
+      #  z: 15
+      #- type: text
+      #  text: "PASS"
+      #  y: middle + 14
+      #  x: middle + 1
+      #  style: fontCarouselVillianMiddle
+      #  color: colorFontCarouselVillianMiddleOuter1
+      #  z: 15
+      #- type: text
+      #  text: "PASS"
+      #  y: middle + 16
+      #  x: middle - 1
+      #  style: fontCarouselVillianMiddle
+      #  color: colorFontCarouselVillianMiddleOuter1
+      #  z: 15
+      #- type: text
+      #  text: "PASS"
+      #  y: middle + 14
+      #  x: middle - 1
+      #  style: fontCarouselVillianMiddle
+      #  color: colorFontCarouselVillianMiddleOuter1
+      #  z: 15
+      ## ---------------
+      ## OUTER TWO
+      ## ---------------
+      #- type: text
+      #  text: "PASS"
+      #  y: middle + 17
+      #  x: middle + 2
+      #  style: fontCarouselVillianMiddle
+      #  color: colorFontCarouselVillianMiddleOuter2
+      #  z: 10
+      #- type: text
+      #  text: "PASS"
+      #  y: middle + 13
+      #  x: middle + 2
+      #  style: fontCarouselVillianMiddle
+      #  color: colorFontCarouselVillianMiddleOuter2
+      #  z: 10
+      #- type: text
+      #  text: "PASS"
+      #  y: middle + 17
+      #  x: middle - 2
+      #  style: fontCarouselVillianMiddle
+      #  color: colorFontCarouselVillianMiddleOuter2
+      #  z: 10
+      #- type: text
+      #  text: "PASS"
+      #  y: middle + 13
+      #  x: middle - 2
+      #  style: fontCarouselVillianMiddle
+      #  color: colorFontCarouselVillianMiddleOuter2
+      #  z: 10
+        
+      # ---------------
+      # INNER
+      # ---------------
+      - type: text
+        text: "PASS"
+        y: bottom + 18
+        x: middle
+        style: fontCarouselVillianFooter
+        color: colorFontCarouselVillianFooterInner
+        z: 20
+      # ---------------
+      # OUTER ONE
+      # ---------------
+      - type: text
+        text: "PASS"
+        y: bottom + 19
+        x: middle + 1
+        style: fontCarouselVillianFooter
+        color: colorFontCarouselVillianFooterOuter1
+        z: 15
+      - type: text
+        text: "PASS"
+        y: bottom + 17
+        x: middle + 1
+        style: fontCarouselVillianFooter
+        color: colorFontCarouselVillianFooterOuter1
+        z: 15
+      - type: text
+        text: "PASS"
+        y: bottom + 19
+        x: middle - 1
+        style: fontCarouselVillianFooter
+        color: colorFontCarouselVillianFooterOuter1
+        z: 15
+      - type: text
+        text: "PASS"
+        y: bottom + 17
+        x: middle - 1
+        style: fontCarouselVillianFooter
+        color: colorFontCarouselVillianFooterOuter1
+        z: 15
+      # ---------------
+      # OUTER TWO
+      # ---------------
+      - type: text
+        text: "PASS"
+        y: bottom + 20
+        x: middle + 2
+        style: fontCarouselVillianFooter
+        color: colorFontCarouselVillianFooterOuter2
+        z: 10
+      - type: text
+        text: "PASS"
+        y: bottom + 16
+        x: middle + 2
+        style: fontCarouselVillianFooter
+        color: colorFontCarouselVillianFooterOuter2
+        z: 10
+      - type: text
+        text: "PASS"
+        y: bottom + 20
+        x: middle - 2
+        style: fontCarouselVillianFooter
+        color: colorFontCarouselVillianFooterOuter2
+        z: 10
+      - type: text
+        text: "PASS"
+        y: bottom + 16
+        x: middle - 2
+        style: fontCarouselVillianFooter
+        color: colorFontCarouselVillianFooterOuter2
+        z: 10
+        
+      # --------------------
+      # COLOR IMAGE
+      # --------------------
+      - type: image
+        #image: imageJamesBondFrameRed2
+        #image: image6MDMFrameOrange
+        image: image6MDMFramePurple
+        y: middle
+        x: middle
+        z: 8
+        # --------------------
+        # WHITE INFILL
+        # --------------------
+      - type: rectangle
+        color: colorBoxCarouselFill
+        width: 240
+        height: 136
+        x: 120
+        y: 68
+        z: 7
+      ## ---------------
+      

@@ -1,0 +1,1416 @@
+#config_version=6
+
+# -------------------------------------
+# SIX MILLION DOLLAR MAN
+# -------------------------------------
+
+    #type: rgbw
+    
+lights:
+# -------------------------------------
+# FADECANDY - BOARD ZERO - CHANNEL ONE
+# -------------------------------------
+  # ---------------------
+  # LANE::50K::5
+  # ---------------------
+  led50k5A:
+    number: 0-0
+    type: grb
+    subtype: led
+  led50k5B:
+    number: 0-1
+    type: grb
+    subtype: led
+  led50k5C:
+    number: 0-2
+    type: grb
+    subtype: led
+  led50k5D:
+    number: 0-3
+    type: grb
+    subtype: led
+  led50k5E:
+    number: 0-4
+    type: grb
+    subtype: led
+    
+  # ---------------------
+  # SAUCER::SINGLES
+  # ---------------------
+  ledSaucer3k:
+    number: 0-5
+    type: grb
+    subtype: led
+  ledSaucer5k:
+    number: 0-6
+    type: grb
+    subtype: led
+  ledSaucer2X:
+    number: 0-7
+    type: grb
+    subtype: led
+  ledSaucer3X:
+    number: 0-8
+    type: grb
+    subtype: led
+  ledSaucer5X:
+    number: 0-9
+    type: grb
+    subtype: led
+    
+  # ---------------------
+  # TARGET::LEFT::50K::04
+  # ---------------------
+  led50k04A:
+    number: 0-10
+    type: grb
+    subtype: led
+  led50k04B:
+    number: 0-11
+    type: grb
+    subtype: led
+  led50k04C:
+    number: 0-12
+    type: grb
+    subtype: led
+  led50k04D:
+    number: 0-13
+    type: grb
+    subtype: led
+  led50k04E:
+    number: 0-14
+    type: grb
+    subtype: led
+    
+  # ---------------------
+  # SAUCER::10k
+  # ---------------------
+  ledSaucer10kA:
+    number: 0-15
+    type: grb
+    subtype: led
+  ledSaucer10kB:
+    number: 0-16
+    type: grb
+    subtype: led
+  ledSaucer10kC:
+    number: 0-17
+    type: grb
+    subtype: led
+  ledSaucer10kD:
+    number: 0-18
+    type: grb
+    subtype: led
+  ledSaucer10kE:
+    number: 0-19
+    type: grb
+    subtype: led
+    
+  # ---------------------
+  # SPINNER::LEFT
+  # ---------------------
+  ledSpinnerLeftA:
+    number: 0-20
+    type: grb
+  ledSpinnerLeftB:
+    number: 0-21
+    type: grb
+  ledSpinnerLeftC:
+    number: 0-22
+    type: grb
+  ledSpinnerLeftD:
+    number: 0-23
+    type: grb
+  ledSpinnerLeftE:
+    number: 0-24
+    type: grb
+    
+  # ---------------------
+  # SPINNER::BONUS::LEFT
+  # ---------------------
+  ledSpinnerBonusLeft5A:
+    number: 0-25
+    type: grb
+  ledSpinnerBonusLeft5B:
+    number: 0-26
+    type: grb
+  ledSpinnerBonusLeft5C:
+    number: 0-27
+    type: grb
+  # ---------------------
+  ledSpinnerBonusLeft4A:
+    number: 0-28
+    type: grb
+  ledSpinnerBonusLeft4B:
+    number: 0-29
+    type: grb
+  ledSpinnerBonusLeft4C:
+    number: 0-30
+    type: grb
+  # ---------------------
+  ledSpinnerBonusLeft3A:
+    number: 0-31
+    type: grb
+  ledSpinnerBonusLeft3B:
+    number: 0-32
+    type: grb
+  ledSpinnerBonusLeft3C:
+    number: 0-33
+    type: grb
+  # ---------------------
+  ledSpinnerBonusLeft2A:
+    number: 0-34
+    type: grb
+  ledSpinnerBonusLeft2B:
+    number: 0-35
+    type: grb
+  ledSpinnerBonusLeft2C:
+    number: 0-36
+    type: grb
+  # ---------------------
+  ledSpinnerBonusLeft1A:
+    number: 0-37
+    type: grb
+  ledSpinnerBonusLeft1B:
+    number: 0-38
+    type: grb
+  ledSpinnerBonusLeft1C:
+    number: 0-39
+    type: grb
+  # ---------------------
+
+  # ---------------------
+  # SPINNER::BONUS::LEFT
+  # ---------------------
+  ledSpinnerBonusRight1A:
+    number: 0-40
+    type: grb
+  ledSpinnerBonusRight1B:
+    number: 0-41
+    type: grb
+  ledSpinnerBonusRight1C:
+    number: 0-42
+    type: grb
+  # ---------------------
+  ledSpinnerBonusRight2A:
+    number: 0-43
+    type: grb
+  ledSpinnerBonusRight2B:
+    number: 0-44
+    type: grb
+  ledSpinnerBonusRight2C:
+    number: 0-45
+    type: grb
+  # ---------------------
+  ledSpinnerBonusRight3A:
+    number: 0-46
+    type: grb
+  ledSpinnerBonusRight3B:
+    number: 0-47
+    type: grb
+  ledSpinnerBonusRight3C:
+    number: 0-48
+    type: grb
+  # ---------------------
+  ledSpinnerBonusRight4A:
+    number: 0-49
+    type: grb
+  ledSpinnerBonusRight4B:
+    number: 0-50
+    type: grb
+  ledSpinnerBonusRight4C:
+    number: 0-51
+    type: grb
+  # ---------------------
+  ledSpinnerBonusRight5A:
+    number: 0-52
+    type: grb
+  ledSpinnerBonusRight5B:
+    number: 0-53
+    type: grb
+  ledSpinnerBonusRight5C:
+    number: 0-54
+    type: grb
+  # ---------------------
+  
+  # ---------------------
+  # SPINNER::RIGHT
+  # ---------------------
+  ledSpinnerRightA:
+    number: 0-55
+    type: grb
+  ledSpinnerRightB:
+    number: 0-56
+    type: grb
+  ledSpinnerRightC:
+    number: 0-57
+    type: grb
+  ledSpinnerRightD:
+    number: 0-58
+    type: grb
+  ledSpinnerRightE:
+    number: 0-59
+    type: grb
+    
+# -------------------------------------
+# FADECANDY - BOARD ZERO - CHANNEL TWO
+# -------------------------------------
+  # ---------------------
+  # TARGET::LEFT::50K::03
+  # ---------------------
+  led50k03A:
+    number: 0-64
+    type: grb
+    subtype: led
+  led50k03B:
+    number: 0-65
+    type: grb
+    subtype: led
+  led50k03C:
+    number: 0-66
+    type: grb
+    subtype: led
+  led50k03D:
+    number: 0-67
+    type: grb
+    subtype: led
+  led50k03E:
+    number: 0-68
+    type: grb
+    subtype: led
+    
+  # ---------------------
+  # TARGET::LEFT::50K::02
+  # ---------------------
+  led50k02A:
+    number: 0-69
+    type: grb
+    subtype: led
+  led50k02B:
+    number: 0-70
+    type: grb
+    subtype: led
+  led50k02C:
+    number: 0-71
+    type: grb
+    subtype: led
+  led50k02D:
+    number: 0-72
+    type: grb
+    subtype: led
+  led50k02E:
+    number: 0-73
+    type: grb
+    subtype: led
+    
+  # ---------------------
+  # TARGET::LEFT::50K::01
+  # ---------------------
+  led50k01A:
+    number: 0-74
+    type: grb
+    subtype: led
+  led50k01B:
+    number: 0-75
+    type: grb
+    subtype: led
+  led50k01C:
+    number: 0-76
+    type: grb
+    subtype: led
+  led50k01D:
+    number: 0-77
+    type: grb
+    subtype: led
+  led50k01E:
+    number: 0-78
+    type: grb
+    subtype: led
+
+  # ---------------------
+  # OUTLANE::LEFT
+  # ---------------------
+  ledOutlaneLeftA:
+    number: 0-79
+    type: grb
+    subtype: led
+  ledOutlaneLeftB:
+    number: 0-80
+    type: grb
+    subtype: led
+  ledOutlaneLeftC:
+    number: 0-81
+    type: grb
+    subtype: led
+  ledOutlaneLeftD:
+    number: 0-82
+    type: grb
+    subtype: led
+  ledOutlaneLeftE:
+    number: 0-83
+    type: grb
+    subtype: led
+    
+  # ---------------------
+  # BONUS COUNT 
+  # ---------------------
+  ledBonusAdvance10:
+    number: 0-84
+    type: grb
+    subtype: led
+  ledBonusAdvance1:
+    number: 0-85
+    type: grb
+    subtype: led
+  # ---------------------
+  ledBonusAdvance20A:
+    number: 0-86
+    type: grb
+    subtype: led
+  ledBonusAdvance20B:
+    number: 0-87
+    type: grb
+    subtype: led
+  ledBonusAdvance20C:
+    number: 0-88
+    type: grb
+    subtype: led
+  ledBonusAdvance20D:
+    number: 0-89
+    type: grb
+    subtype: led
+  ledBonusAdvance20E:
+    number: 0-90
+    type: grb
+    subtype: led
+  # ---------------------
+  ledBonusAdvance2:
+    number: 0-91
+    type: grb
+    subtype: led
+  ledBonusAdvance3:
+    number: 0-92
+    type: grb
+    subtype: led
+  ledBonusAdvance4:
+    number: 0-93
+    type: grb
+    subtype: led
+  ledBonusAdvance5:
+    number: 0-94
+    type: grb
+    subtype: led
+  ledBonusAdvance6:
+    number: 0-95
+    type: grb
+    subtype: led
+  ledBonusAdvance7:
+    number: 0-96
+    type: grb
+    subtype: led
+  ledBonusAdvance8:
+    number: 0-97
+    type: grb
+    subtype: led
+  ledBonusAdvance9:
+    number: 0-98
+    type: grb
+    subtype: led
+    
+  # ---------------------
+  # BONUS MULTIPLIERS
+  # ---------------------
+  ledBonusMultiplier2XA:
+    number: 0-99
+    type: grb
+  ledBonusMultiplier2XB:
+    number: 0-100
+    type: grb
+  ledBonusMultiplier2XC:
+    number: 0-101
+    type: grb
+  # ---------------------
+  ledBonusMultiplier3XA:
+    number: 0-102
+    type: grb
+  ledBonusMultiplier3XB:
+    number: 0-103
+    type: grb
+  ledBonusMultiplier3XC:
+    number: 0-104
+    type: grb
+  # ---------------------
+  ledBonusMultiplier5XA:
+    number: 0-105
+    type: grb
+  ledBonusMultiplier5XB:
+    number: 0-106
+    type: grb
+  ledBonusMultiplier5XC:
+    number: 0-107
+    type: grb
+
+  # ---------------------
+  # OUTLANE::RIGHT
+  # ---------------------
+  ledOutlaneRightA:
+    number: 0-108
+    type: grb
+    subtype: led
+  ledOutlaneRightB:
+    number: 0-109
+    type: grb
+    subtype: led
+  ledOutlaneRightC:
+    number: 0-110
+    type: grb
+    subtype: led
+  ledOutlaneRightD:
+    number: 0-111
+    type: grb
+    subtype: led
+  ledOutlaneRightE:
+    number: 0-112
+    type: grb
+    subtype: led
+
+  # ---------------------
+  # SPECIAL WHEN LIT
+  # ---------------------
+  ledSpecialwhenLitA:
+    number: 0-113
+    type: grb
+    subtype: led
+  ledSpecialwhenLitB:
+    number: 0-114
+    type: grb
+    subtype: led
+  ledSpecialwhenLitC:
+    number: 0-115
+    type: grb
+    subtype: led
+  ledSpecialwhenLitD:
+    number: 0-116
+    type: grb
+    subtype: led
+  ledSpecialwhenLitE:
+    number: 0-117
+    type: grb
+    subtype: led
+    
+  # ---------------------
+  # DROP::RIGHT::AWARDS
+  # ---------------------
+  ledDropRightExtraBall:
+    number: 0-118
+    type: grb
+    subtype: led
+  ledDropRightSpinners:
+    number: 0-119
+    type: grb
+    subtype: led
+  ledDropRightSpecial:
+    number: 0-120
+    type: grb
+    subtype: led
+  
+  # ---------------------
+  # DUMMY
+  # ---------------------
+  ledDummy:
+    number: 0-127
+    type: grb
+    subtype: led
+    
+# -------------------------------------
+# FADECANDY - BOARD ZERO - CHANNEL THREE
+# -------------------------------------
+  # ---------------------
+  # ROLLOVER::TOP::RIGHT
+  # ---------------------
+  ledRolloverTopRightA:
+    #number: 0-128
+    previous: ledDummy
+    type: grbw
+    subtype: led
+  ledRolloverTopRightB:
+    #number: 0-129
+    previous: ledRolloverTopRightA
+    type: grbw
+    subtype: led
+  ledRolloverTopRightC:
+    #number: 0-130
+    previous: ledRolloverTopRightB
+    type: grbw
+    subtype: led
+  ledRolloverTopRightD:
+    #number: 0-131
+    previous: ledRolloverTopRightC
+    type: grbw
+    subtype: led
+    
+  # ---------------------
+  # LANE::50k::AWARD::5
+  # ---------------------
+  led50kAward5A:
+    #number: 0-132
+    previous: ledRolloverTopRightD
+    type: grbw
+    subtype: led
+  led50kAward5B:
+    #number: 0-133
+    previous: led50kAward5A
+    type: grbw
+    subtype: led
+  led50kAward5C:
+    #number: 0-134
+    previous: led50kAward5B
+    type: grbw
+    subtype: led
+  led50kAward5D:
+    #number: 0-135
+    previous: led50kAward5C
+    type: grbw
+    subtype: led
+  led50kAward5E:
+    #number: 0-136
+    previous: led50kAward5D
+    type: grbw
+    subtype: led
+    
+  # ---------------------
+  # LANE::50k::AWARD::04
+  # ---------------------
+  led50kAward04A:
+    #number: 0-137
+    previous: led50kAward5E
+    type: grbw
+    subtype: led
+  led50kAward04B:
+    #number: 0-138
+    previous: led50kAward04A
+    type: grbw
+    subtype: led
+  led50kAward04C:
+    #number: 0-139
+    previous: led50kAward04B
+    type: grbw
+    subtype: led
+  led50kAward04D:
+    #number: 0-140
+    previous: led50kAward04C
+    type: grbw
+    subtype: led
+  led50kAward04E:
+    #number: 0-141
+    previous: led50kAward04D
+    type: grbw
+    subtype: led
+    
+  # ---------------------
+  # LANE::50k::AWARD::03
+  # ---------------------
+  led50kAward03A:
+    #number: 0-142
+    previous: led50kAward04E
+    type: grbw
+    subtype: led
+  led50kAward03B:
+    #number: 0-143
+    previous: led50kAward03A
+    type: grbw
+    subtype: led
+  led50kAward03C:
+    #number: 0-144
+    previous: led50kAward03B
+    type: grbw
+    subtype: led
+  led50kAward03D:
+    #number: 0-145
+    previous: led50kAward03C
+    type: grbw
+    subtype: led
+  led50kAward03E:
+    #number: 0-146
+    previous: led50kAward03D
+    type: grbw
+    subtype: led
+    
+  # ---------------------
+  # LANE::50k::AWARD::02
+  # ---------------------
+  led50kAward02A:
+    #number: 0-147
+    previous: led50kAward03E
+    type: grbw
+    subtype: led
+  led50kAward02B:
+    #number: 0-148
+    previous: led50kAward02A
+    type: grbw
+    subtype: led
+  led50kAward02C:
+    #number: 0-149
+    previous: led50kAward02B
+    type: grbw
+    subtype: led
+  led50kAward02D:
+    #number: 0-150
+    previous: led50kAward02C
+    type: grbw
+    subtype: led
+  led50kAward02E:
+    #number: 0-151
+    previous: led50kAward02D
+    type: grbw
+    subtype: led
+    
+  # ---------------------
+  # LANE::50k::AWARD::01
+  # ---------------------
+  led50kAward01A:
+    #number: 0-152
+    previous: led50kAward02E
+    type: grbw
+    subtype: led
+  led50kAward01B:
+    #number: 0-153
+    previous: led50kAward01A
+    type: grbw
+    subtype: led
+  led50kAward01C:
+    #number: 0-154
+    previous: led50kAward01B
+    type: grbw
+    subtype: led
+  led50kAward01D:
+    #number: 0-155
+    previous: led50kAward01C
+    type: grbw
+    subtype: led
+  led50kAward01E:
+    #number: 0-156
+    previous: led50kAward01D
+    type: grbw
+    subtype: led
+    
+  # ---------------------
+  # ROLLOVER::MID::RIGHT
+  # ---------------------
+  ledRolloverMidRightA:
+    #number: 0-157
+    previous: led50kAward01E
+    type: grbw
+    subtype: led
+  ledRolloverMidRightB:
+    #number: 0-158
+    previous: ledRolloverMidRightA
+    type: grbw
+    subtype: led
+  ledRolloverMidRightC:
+    #number: 0-159
+    previous: ledRolloverMidRightB
+    type: grbw
+    subtype: led
+  ledRolloverMidRightD:
+    #number: 0-160
+    previous: ledRolloverMidRightC
+    type: grbw
+    subtype: led
+    
+  # ---------------------
+  # ROLLOVER::MID::LEFT
+  # ---------------------
+  ledRolloverMidLeftA:
+    #number: 0-161
+    previous: ledRolloverMidRightD
+    type: grbw
+    subtype: led
+  ledRolloverMidLeftB:
+    #number: 0-162
+    previous: ledRolloverMidLeftA
+    type: grbw
+    subtype: led
+  ledRolloverMidLeftC:
+    #number: 0-163
+    previous: ledRolloverMidLeftB
+    type: grbw
+    subtype: led
+  ledRolloverMidLeftD:
+    #number: 0-164
+    previous: ledRolloverMidLeftC
+    type: grbw
+    subtype: led
+    
+  # ---------------------
+  # ROLLOVER::MID::LEFT
+  # ---------------------
+  ledShootAgain1:
+    #number: 0-165
+    previous: ledRolloverMidLeftD
+    type: grb
+    subtype: led
+  ledShootAgain2:
+    #number: 0-166
+    previous: ledShootAgain1
+    type: grb
+    subtype: led
+  ledShootAgain3:
+    #number: 0-167
+    previous: ledShootAgain2
+    type: grb
+    subtype: led
+  ledShootAgain4:
+    #number: 0-168
+    previous: ledShootAgain3
+    type: grb
+    subtype: led
+  ledShootAgain5:
+    #number: 0-169
+    previous: ledShootAgain4
+    type: grb
+    subtype: led
+  ledShootAgain6:
+    #number: 0-170
+    previous: ledShootAgain5
+    type: grb
+    subtype: led
+  ledShootAgain7:
+    #number: 0-171
+    previous: ledShootAgain6
+    type: grb
+    subtype: led
+    
+# ---------------------
+# NEOPIXEL CIRCLE 12-UP
+# ---------------------
+  # -------------------------------------
+  # THUMPER LEFT
+  # -------------------------------------
+  ledThumperLeft1:
+    number: 0-192
+    type: grb
+    subtype: led
+  ledThumperLeft2:
+    number: 0-193
+    type: grb
+    subtype: led
+  ledThumperLeft3:
+    number: 0-194
+    type: grb
+    subtype: led
+  ledThumperLeft4:
+    number: 0-195
+    type: grb
+    subtype: led
+  ledThumperLeft5:
+    number: 0-196
+    type: grb
+    subtype: led
+  ledThumperLeft6:
+    number: 0-197
+    type: grb
+    subtype: led
+  ledThumperLeft7:
+    number: 0-198
+    type: grb
+    subtype: led
+  ledThumperLeft8:
+    number: 0-199
+    type: grb
+    subtype: led
+  ledThumperLeft9:
+    number: 0-200
+    type: grb
+    subtype: led
+  ledThumperLeft10:
+    number: 0-201
+    type: grb
+    subtype: led
+  ledThumperLeft11:
+    number: 0-202
+    type: grb
+    subtype: led
+  ledThumperLeft12:
+    number: 0-203
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # THUMPER MIDDLE
+  # -------------------------------------
+  ledThumperMiddle1:
+    number: 0-256
+    type: grb
+    subtype: led
+  ledThumperMiddle2:
+    number: 0-257
+    type: grb
+    subtype: led
+  ledThumperMiddle3:
+    number: 0-258
+    type: grb
+    subtype: led
+  ledThumperMiddle4:
+    number: 0-259
+    type: grb
+    subtype: led
+  ledThumperMiddle5:
+    number: 0-260
+    type: grb
+    subtype: led
+  ledThumperMiddle6:
+    number: 0-261
+    type: grb
+    subtype: led
+  ledThumperMiddle7:
+    number: 0-262
+    type: grb
+    subtype: led
+  ledThumperMiddle8:
+    number: 0-263
+    type: grb
+    subtype: led
+  ledThumperMiddle9:
+    number: 0-264
+    type: grb
+    subtype: led
+  ledThumperMiddle10:
+    number: 0-265
+    type: grb
+    subtype: led
+  ledThumperMiddle11:
+    number: 0-266
+    type: grb
+    subtype: led
+  ledThumperMiddle12:
+    number: 0-267
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # THUMPER RIGHT
+  # -------------------------------------
+  ledThumperRight1:
+    number: 0-320
+    type: grb
+    subtype: led
+  ledThumperRight2:
+    number: 0-321
+    type: grb
+    subtype: led
+  ledThumperRight3:
+    number: 0-322
+    type: grb
+    subtype: led
+  ledThumperRight4:
+    number: 0-323
+    type: grb
+    subtype: led
+  ledThumperRight5:
+    number: 0-324
+    type: grb
+    subtype: led
+  ledThumperRight6:
+    number: 0-325
+    type: grb
+    subtype: led
+  ledThumperRight7:
+    number: 0-326
+    type: grb
+    subtype: led
+  ledThumperRight8:
+    number: 0-327
+    type: grb
+    subtype: led
+  ledThumperRight9:
+    number: 0-328
+    type: grb
+    subtype: led
+  ledThumperRight10:
+    number: 0-329
+    type: grb
+    subtype: led
+  ledThumperRight11:
+    number: 0-330
+    type: grb
+    subtype: led
+  ledThumperRight12:
+    number: 0-331
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # THUMPER RIGHT
+  # -------------------------------------
+  ledUpPost1:
+    number: 0-384
+    type: grb
+    subtype: led
+  ledUpPost2:
+    number: 0-385
+    type: grb
+    subtype: led
+  ledUpPost3:
+    number: 0-386
+    type: grb
+    subtype: led
+  ledUpPost4:
+    number: 0-387
+    type: grb
+    subtype: led
+  ledUpPost5:
+    number: 0-388
+    type: grb
+    subtype: led
+  ledUpPost6:
+    number: 0-389
+    type: grb
+    subtype: led
+  ledUpPost7:
+    number: 0-390
+    type: grb
+    subtype: led
+  ledUpPost8:
+    number: 0-391
+    type: grb
+    subtype: led
+  ledUpPost9:
+    number: 0-392
+    type: grb
+    subtype: led
+  ledUpPost10:
+    number: 0-393
+    type: grb
+    subtype: led
+  ledUpPost11:
+    number: 0-394
+    type: grb
+    subtype: led
+  ledUpPost12:
+    number: 0-395
+    type: grb
+    subtype: led
+    
+# -------------------------------------
+# FADECANDY - BOARD ONE - CHANNEL ONE
+# -------------------------------------
+# ---------------------
+# TOP LANES
+# ---------------------
+  ledLaneTopA:
+    number: 1-0
+    type: grb
+    subtype: led
+    
+  ledLaneTopB:
+    number: 1-1
+    type: grb
+    subtype: led
+    
+# ---------------------
+# SAUCER SHOT
+# ---------------------
+  #ledSaucer5X:
+  #  number: 1-2
+  #  type: grb
+  #  subtype: led
+    
+  #ledSaucer3X:
+  #  number: 1-3
+  #  type: grb
+  #  subtype: led
+    
+  #ledSaucer2X:
+  #  number: 1-4
+  #  type: grb
+  #  subtype: led
+    
+  ledSaucer3000:
+    number: 1-5
+    type: grb
+    subtype: led
+    
+# ---------------------
+# SPECIAL WHEN LIT
+# ---------------------
+  ledSpecialWhenLit:
+    number: 1-6
+    type: grb
+    subtype: led
+    
+# ---------------------
+# A-B LANES SIDE
+# ---------------------
+  ledLaneLeftA:
+    number: 1-7
+    type: grb
+    subtype: led
+    
+  ledLaneRightB:
+    number: 1-8
+    type: grb
+    subtype: led
+    
+# ---------------------
+# A-B LANES SHOT ADVANCE
+# ---------------------
+  ledABAward1k:
+    number: 1-9
+    type: grb
+    subtype: led
+    
+  ledABAward2k:
+    number: 1-10
+    type: grb
+    subtype: led
+    
+  ledABAward3k:
+    number: 1-11
+    type: grb
+    subtype: led
+    
+  ledABAward4k:
+    number: 1-12
+    type: grb
+    subtype: led
+    
+  ledABAward5k:
+    number: 1-13
+    type: grb
+    subtype: led
+    
+  ledABAwardExtraBall:
+    number: 1-14
+    type: grb
+    subtype: led
+    
+  ledABAwardSpecial:
+    number: 1-15
+    type: grb
+    subtype: led
+    
+# ---------------------
+# BONUS MULTIPLIERS
+# ---------------------
+  ledBonusMultiplier2X:
+    number: 1-16
+    type: grb
+    subtype: led
+    
+  ledBonusMultiplier3X:
+    number: 1-17
+    type: grb
+    subtype: led
+    
+  ledBonusMultiplier5X:
+    number: 1-18
+    type: grb
+    subtype: led
+    
+  ledShootAgain:
+    number: 1-19
+    type: grb
+    subtype: led
+    
+# ---------------------
+# BONUS ADVANCE
+# ---------------------
+  ledBonusAdvance20:
+    number: 1-20
+    type: grb
+    subtype: led
+  #  
+  #ledBonusAdvance10:
+  #  number: 1-21
+  #  type: grb
+  #  subtype: led
+  #  
+  #ledBonusAdvance9:
+  #  number: 1-22
+  #  type: grb
+  #  subtype: led
+  #  
+  #ledBonusAdvance8:
+  #  number: 1-23
+  #  type: grb
+  #  subtype: led
+  #  
+  #ledBonusAdvance7:
+  #  number: 1-24
+  #  type: grb
+  #  subtype: led
+  #  
+  #ledBonusAdvance6:
+  #  number: 1-25
+  #  type: grb
+  #  subtype: led
+  #  
+  #ledBonusAdvance5:
+  #  number: 1-26
+  #  type: grb
+  #  subtype: led
+  #  
+  #ledBonusAdvance4:
+  #  number: 1-27
+  #  type: grb
+  #  subtype: led
+  #  
+  #ledBonusAdvance3:
+  #  number: 1-28
+  #  type: grb
+  #  subtype: led
+  #  
+  #ledBonusAdvance2:
+  #  number: 1-29
+  #  type: grb
+  #  subtype: led
+  #  
+  #ledBonusAdvance1:
+  #  number: 1-30
+  #  type: grb
+  #  subtype: led
+    
+  ledOutlane50kLeft:
+    number: 1-31
+    type: grb
+    subtype: led
+    
+  ledOutlane50kRight:
+    number: 1-32
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # THUMPER BOTTOM LEFT
+  # -------------------------------------
+  ledThumperBottomLeft1:
+    number: 1-64
+    type: grb
+    subtype: led
+  ledThumperBottomLeft2:
+    number: 1-65
+    type: grb
+    subtype: led
+  ledThumperBottomLeft3:
+    number: 1-66
+    type: grb
+    subtype: led
+  ledThumperBottomLeft4:
+    number: 1-67
+    type: grb
+    subtype: led
+  ledThumperBottomLeft5:
+    number: 1-68
+    type: grb
+    subtype: led
+  ledThumperBottomLeft6:
+    number: 1-69
+    type: grb
+    subtype: led
+  ledThumperBottomLeft7:
+    number: 1-70
+    type: grb
+    subtype: led
+  ledThumperBottomLeft8:
+    number: 1-71
+    type: grb
+    subtype: led
+  ledThumperBottomLeft9:
+    number: 1-72
+    type: grb
+    subtype: led
+  ledThumperBottomLeft10:
+    number: 1-73
+    type: grb
+    subtype: led
+  ledThumperBottomLeft11:
+    number: 1-74
+    type: grb
+    subtype: led
+  ledThumperBottomLeft12:
+    number: 1-75
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # THUMPER BOTTOM LEFT
+  # -------------------------------------
+  ledThumperTopLeft1:
+    number: 1-128
+    type: grb
+    subtype: led
+  ledThumperTopLeft2:
+    number: 1-129
+    type: grb
+    subtype: led
+  ledThumperTopLeft3:
+    number: 1-130
+    type: grb
+    subtype: led
+  ledThumperTopLeft4:
+    number: 1-131
+    type: grb
+    subtype: led
+  ledThumperTopLeft5:
+    number: 1-132
+    type: grb
+    subtype: led
+  ledThumperTopLeft6:
+    number: 1-133
+    type: grb
+    subtype: led
+  ledThumperTopLeft7:
+    number: 1-134
+    type: grb
+    subtype: led
+  ledThumperTopLeft8:
+    number: 1-135
+    type: grb
+    subtype: led
+  ledThumperTopLeft9:
+    number: 1-136
+    type: grb
+    subtype: led
+  ledThumperTopLeft10:
+    number: 1-137
+    type: grb
+    subtype: led
+  ledThumperTopLeft11:
+    number: 1-138
+    type: grb
+    subtype: led
+  ledThumperTopLeft12:
+    number: 1-139
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # THUMPER BOTTOM LEFT
+  # -------------------------------------
+  ledThumperTopRight1:
+    number: 1-192
+    type: grb
+    subtype: led
+  ledThumperTopRight2:
+    number: 1-193
+    type: grb
+    subtype: led
+  ledThumperTopRight3:
+    number: 1-194
+    type: grb
+    subtype: led
+  ledThumperTopRight4:
+    number: 1-195
+    type: grb
+    subtype: led
+  ledThumperTopRight5:
+    number: 1-196
+    type: grb
+    subtype: led
+  ledThumperTopRight6:
+    number: 1-197
+    type: grb
+    subtype: led
+  ledThumperTopRight7:
+    number: 1-198
+    type: grb
+    subtype: led
+  ledThumperTopRight8:
+    number: 1-199
+    type: grb
+    subtype: led
+  ledThumperTopRight9:
+    number: 1-200
+    type: grb
+    subtype: led
+  ledThumperTopRight10:
+    number: 1-201
+    type: grb
+    subtype: led
+  ledThumperTopRight11:
+    number: 1-202
+    type: grb
+    subtype: led
+  ledThumperTopRight12:
+    number: 1-203
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # THUMPER BOTTOM LEFT
+  # -------------------------------------
+  ledThumperBottomRight1:
+    number: 1-256
+    type: grb
+    subtype: led
+  ledThumperBottomRight2:
+    number: 1-257
+    type: grb
+    subtype: led
+  ledThumperBottomRight3:
+    number: 1-258
+    type: grb
+    subtype: led
+  ledThumperBottomRight4:
+    number: 1-259
+    type: grb
+    subtype: led
+  ledThumperBottomRight5:
+    number: 1-260
+    type: grb
+    subtype: led
+  ledThumperBottomRight6:
+    number: 1-261
+    type: grb
+    subtype: led
+  ledThumperBottomRight7:
+    number: 1-262
+    type: grb
+    subtype: led
+  ledThumperBottomRight8:
+    number: 1-263
+    type: grb
+    subtype: led
+  ledThumperBottomRight9:
+    number: 1-264
+    type: grb
+    subtype: led
+  ledThumperBottomRight10:
+    number: 1-265
+    type: grb
+    subtype: led
+  ledThumperBottomRight11:
+    number: 1-266
+    type: grb
+    subtype: led
+  ledThumperBottomRight12:
+    number: 1-267
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # DUMMY LIGHTS FOR SHOW PURPOSES
+  # -------------------------------------
+  ledDummy1:
+    number: 4-0
+    type: grb
+  ledDummy2:
+    number: 4-1
+    type: grb
+  ledDummy3:
+    number: 4-2
+    type: grb
+  ledDummy4:
+    number: 4-3
+    type: grb
+  ledDummy5:
+    number: 4-4
+    type: grb
+  ledDummy6:
+    number: 4-5
+    type: grb
+  ledDummy7:
+    number: 4-6
+    type: grb
+    

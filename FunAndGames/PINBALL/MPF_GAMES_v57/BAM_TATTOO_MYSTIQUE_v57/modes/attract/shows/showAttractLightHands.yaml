@@ -1,0 +1,42 @@
+#show_version=6
+
+- time: 0
+  # ------------------------
+  # BLUE :: LEFT
+  shows:
+    pulseFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        # -------------
+        led1: ledMagnetSlingLeft1
+        led2: ledMagnetSlingLeft2
+        led3: ledMagnetSlingLeft3
+        led4: ledMagnetSlingLeft4
+        led5: ledMagnetSlingLeft5
+        # -------------
+        color1: '000000'
+        color2: 'ff0000'
+        # -------------
+
+- time: '+10'
+
+  # ------------------------
+  # BLUE :: RIGHT
+  shows:
+    pulseFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        # -------------
+        led1: ledMagnetSlingRight1
+        led2: ledMagnetSlingRight2
+        led3: ledMagnetSlingRight3
+        led4: ledMagnetSlingRight4
+        led5: ledMagnetSlingRight5
+        # -------------
+        color1: '000000'
+        color2: 'ff0000'
+        # -------------
+
+- time: '+10'

@@ -1,0 +1,81 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceThreeLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledBonusMulti2x
+        led2: ledBonusMulti3x
+        led3: ledBonusMulti5x
+
+- time: "+2"
+
+  shows:
+    traceThreeLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledBonusMulti2x
+        led2: ledBonusMulti3x
+        led3: ledBonusMulti5x
+
+- time: "+2"
+
+  shows:
+    traceThreeLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledBonusMulti2x
+        led2: ledBonusMulti3x
+        led3: ledBonusMulti5x
+
+- time: "+2"
+
+  shows:
+    traceThreeLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledBonusMulti2x
+        led2: ledBonusMulti3x
+        led3: ledBonusMulti5x
+
+- time: "+2"
+
+  shows:
+    traceThreeLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledBonusMulti2x
+        led2: ledBonusMulti3x
+        led3: ledBonusMulti5x
+
+- time: "+2"
+
+  shows:
+    traceThreeLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledBonusMulti2x
+        led2: ledBonusMulti3x
+        led3: ledBonusMulti5x
+
+- time: "+2"

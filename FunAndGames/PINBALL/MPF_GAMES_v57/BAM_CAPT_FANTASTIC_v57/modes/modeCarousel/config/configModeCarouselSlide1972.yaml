@@ -1,0 +1,85 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  modeCarousel_year1972_highlighted:
+    slideYear1972:
+      target: displayDMD
+
+slides:
+  slideYear1972:
+    widgets:
+      # ---------------
+      # INNER
+      # ---------------
+      - type: text
+        text: "1972"
+        y: middle
+        x: middle
+        style: font1972
+        color: colorFontYear1970sThree
+        z: 20
+      # ---------------
+      # OUTER ONE
+      # ---------------
+      - type: text
+        text: "1972"
+        y: middle + 1
+        x: middle + 1
+        style: font1972
+        color: black
+        z: 15
+      - type: text
+        text: "1972"
+        y: middle - 1
+        x: middle + 1
+        style: font1972
+        color: black
+        z: 15
+      - type: text
+        text: "1972"
+        y: middle + 1
+        x: middle - 1
+        style: font1972
+        color: black
+        z: 15
+      - type: text
+        text: "1972"
+        y: middle - 1
+        x: middle - 1
+        style: font1972
+        color: black
+        z: 15
+      # ---------------
+      # OUTER TWO
+      # ---------------
+      - type: text
+        text: "1972"
+        y: middle + 2
+        x: middle + 2
+        style: font1972
+        color: colorFontYear1970sOne
+        z: 10
+      - type: text
+        text: "1972"
+        y: middle - 2
+        x: middle + 2
+        style: font1972
+        color: colorFontYear1970sOne
+        z: 10
+      - type: text
+        text: "1972"
+        y: middle + 2
+        x: middle - 2
+        style: font1972
+        color: colorFontYear1970sOne
+        z: 10
+      - type: text
+        text: "1972"
+        y: middle - 2
+        x: middle - 2
+        style: font1972
+        color: colorFontYear1970sOne
+        z: 10

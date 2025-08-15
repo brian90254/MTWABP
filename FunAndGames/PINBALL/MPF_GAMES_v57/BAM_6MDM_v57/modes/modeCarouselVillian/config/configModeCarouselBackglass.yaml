@@ -1,0 +1,97 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  eventShowSlideCarouselBackglass:
+    slideCarouselBackglass:
+      target: displayBackglass
+
+slides:
+  slideCarouselBackglass:
+    widgets:
+    - type: image
+      image: imagebackglass
+      z: 40
+    - type: text
+      text: (player1|score)
+      z: 30
+      x: left + 743
+      y: bottom + 790
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+    - type: text
+      text: (player2|score)
+      z: 30
+      x: left + 743
+      y: bottom + 597
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+    - type: text
+      text: (player3|score)
+      z: 30
+      x: left + 743
+      y: bottom + 408
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+    - type: text
+      text: (player4|score)
+      z: 30
+      x: left + 743
+      y: bottom + 216
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+    - type: text
+      text: (player|ball)
+      #min_digits: 2
+      z: 30
+      x: left + 1457
+      y: bottom + 586
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+# -----------------------
+# ADDED 200507
+    - type: text
+      text: (machine|credits_string)
+      #min_digits: 2
+      z: 30
+      x: left + 1346
+      y: bottom + 586
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+# -----------------------
+# ADDED 210731
+    - type: text
+      text: (player5|score)
+      #min_digits: 2
+      z: 30
+      x: left + 1400
+      y: bottom + 790
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true
+      
+    - type: text
+      text: (player6|score)
+      #min_digits: 2
+      z: 30
+      x: left + 1400
+      y: bottom + 218
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment5
+      bitmap_font: true

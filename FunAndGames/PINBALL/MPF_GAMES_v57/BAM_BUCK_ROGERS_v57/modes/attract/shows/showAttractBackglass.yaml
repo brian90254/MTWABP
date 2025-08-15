@@ -1,0 +1,15 @@
+#show_version=6
+
+# *************************
+# BACKGLASS ANIMATION::ALL LETTERS
+# *************************
+- time: 0
+  events:
+    eventShowAttractBackglass1
+        
+- time: '+4'
+
+  events:
+    eventShowAttractBackglass2
+        
+- time: '+4'

@@ -1,0 +1,40 @@
+#config_version=6
+
+modes:
+#-----------------
+# MODES::BASE
+#-----------------
+- modeBase
+- credits
+- bonus
+- high_score
+#- carousel
+
+#-----------------
+# MODES::GAME SPECIFIC
+#-----------------
+# CAROUSEL
+#- modeCarousel
+
+#-----------------
+# MODES::CAPT FANTASTIC
+#-----------------
+- modeCaptFantastic
+
+#-----------------
+# MODES::GAME SPECIFIC
+#-----------------
+
+
+#-----------------
+# MODES::GENERIC
+#-----------------
+- modeBallSave
+#- modeBallSaveOutlane
+#- modeBallSaveHidden
+#- modeCollectBonus
+#- modeCollectMidGameBonus
+#- modeSkillShot
+#- modeAwardWheel
+#- modeMultiball
+

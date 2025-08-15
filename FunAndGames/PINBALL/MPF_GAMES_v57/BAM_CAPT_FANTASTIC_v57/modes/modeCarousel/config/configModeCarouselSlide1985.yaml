@@ -1,0 +1,85 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  modeCarousel_year1985_highlighted:
+    slideYear1985:
+      target: displayDMD
+
+slides:
+  slideYear1985:
+    widgets:
+      # ---------------
+      # INNER
+      # ---------------
+      - type: text
+        text: "1985"
+        y: middle
+        x: middle
+        style: font1985
+        color: colorFontYear1980sThree
+        z: 20
+      # ---------------
+      # OUTER ONE
+      # ---------------
+      - type: text
+        text: "1985"
+        y: middle + 1
+        x: middle + 1
+        style: font1985
+        color: black
+        z: 15
+      - type: text
+        text: "1985"
+        y: middle - 1
+        x: middle + 1
+        style: font1985
+        color: black
+        z: 15
+      - type: text
+        text: "1985"
+        y: middle + 1
+        x: middle - 1
+        style: font1985
+        color: black
+        z: 15
+      - type: text
+        text: "1985"
+        y: middle - 1
+        x: middle - 1
+        style: font1985
+        color: black
+        z: 15
+      # ---------------
+      # OUTER TWO
+      # ---------------
+      - type: text
+        text: "1985"
+        y: middle + 2
+        x: middle + 2
+        style: font1985
+        color: colorFontYear1980sTwo
+        z: 10
+      - type: text
+        text: "1985"
+        y: middle - 2
+        x: middle + 2
+        style: font1985
+        color: colorFontYear1980sTwo
+        z: 10
+      - type: text
+        text: "1985"
+        y: middle + 2
+        x: middle - 2
+        style: font1985
+        color: colorFontYear1980sTwo
+        z: 10
+      - type: text
+        text: "1985"
+        y: middle - 2
+        x: middle - 2
+        style: font1985
+        color: colorFontYear1980sTwo
+        z: 10

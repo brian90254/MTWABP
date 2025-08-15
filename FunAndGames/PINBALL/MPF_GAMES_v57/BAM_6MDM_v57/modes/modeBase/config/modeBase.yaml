@@ -1,0 +1,109 @@
+#config_version=6
+
+config:
+- configBaseShows.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 100
+
+# ---------------------
+# SWITCHES::COMBO
+# ---------------------
+combo_switches:
+  comboSwitchEndGame:
+    switches_1: s_0_10
+    switches_2: s_0_8
+    hold_time: 2s
+    events_when_both: end_game
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  ball_started:
+    - eventResetMultipliers
+    - eventShowSlideBaseShows
+
+  # ----------------------------
+  # START MODE BALLY VIKING
+  # ----------------------------
+  mode_modeBase_started:
+    - eventStartMode6MDM
+    - playPoolSoundHorn
+    - eventEnableBallHoldSaucerTop
+    #- playVoicePlayer(current_player.number)
+
+  mode_modeBase_started{game.num_players>0}:
+    - playVoicePlayer(current_player.number)|1000ms
+  
+# ---------------------
+# PLAYLIST::PLAYER
+# ---------------------
+playlist_player:
+
+  eventPauseTrackPlaylist:
+    trackplaylist:
+      action: stop
+      
+  eventResumeTrackPlaylist:
+    trackplaylist:
+      playlist: playlistMode6MDMMusic
+      action: play
+
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+sound_player:
+# ---------------------
+# SOUNDS::PLAYER::STARTING
+# ---------------------
+  playVoicePlayer1:
+    voice6MDM_PlayerOne:
+      loops: 0
+      volume: 0.8
+      
+  playVoicePlayer2:
+    voice6MDM_PlayerTwo:
+      loops: 0
+      volume: 0.8
+      
+  playVoicePlayer3:
+    voice6MDM_PlayerThree:
+      loops: 0
+      volume: 0.8
+      
+  playVoicePlayer4:
+    voice6MDM_PlayerFour:
+      loops: 0
+      volume: 0.8
+      
+  playVoicePlayer5:
+    voice6MDM_PlayerFive:
+      loops: 0
+      volume: 0.8
+      
+  playVoicePlayer6:
+    voice6MDM_PlayerSix:
+      loops: 0
+      volume: 0.8
+      
+# ---------------------
+# SOUNDS::BATTLE::STARTING
+# ---------------------
+  #playVoice7MDMActivated:
+  #  voice6MDM_7MDMActivated:
+  #    loops: 0
+  #    volume: 0.8
+      
+  playVoiceJohnSaxonActivated:
+    voice6MDM_JohnSaxonActivated:
+      loops: 0
+      volume: 1.0
+      
+  playVoiceBigfootActivated:
+    voice6MDM_BigfootActivated:
+      loops: 0
+      volume: 1.0
+      

@@ -1,0 +1,610 @@
+#config_version=6
+
+# TATTOO MYSTIQUE :: ORANGE
+
+mode:
+  start_events: eventSwapModeTattooMystiquePurple2Orange
+  stop_events:
+    - eventSwapModeTattooMystiqueOrange2Purple
+    - eventEndModeTattooMystiqueOrange
+    - ball_ending
+
+  priority: 2100
+
+# *********************
+# EVENT::PLAYER
+# *********************
+event_player:
+  # RELAY EVENT FOR MODE STARTED
+  mode_modeTattooMystiqueOrange_started:
+    - eventSetResetTattooMystiqueShotsOrange
+
+  # RELAY EVENT FOR RESET SHOTS ON MID GAME BONUS COLLECT
+  eventRestartTattooMystiqueBaseShots:
+    - eventSetResetTattooMystiqueShotsOrange|100ms
+
+# ---------------------
+# MODE START
+# ---------------------
+# SHOTS 1~7
+# ---------------------
+  # ------------------
+  # TEST SHOT 1
+  eventSetResetTattooMystiqueShotsOrange.1:
+    - eventResetOrangeTM1{current_player.varShotTM1 == 0}
+  eventSetResetTattooMystiqueShotsOrange.2:
+    - eventSetOrangeTM1{current_player.varShotTM1 == 1}
+  # ------------------
+  # TEST SHOT 2
+  eventSetResetTattooMystiqueShotsOrange.3:
+    - eventResetOrangeTM2{current_player.varShotTM2 == 0}
+  eventSetResetTattooMystiqueShotsOrange.4:
+    - eventSetOrangeTM2{current_player.varShotTM2 == 1}
+  # ------------------
+  # TEST SHOT 3
+  eventSetResetTattooMystiqueShotsOrange.5:
+    - eventResetOrangeTM3{current_player.varShotTM3 == 0}
+  eventSetResetTattooMystiqueShotsOrange.6:
+    - eventSetOrangeTM3{current_player.varShotTM3 == 1}
+  # ------------------
+  # TEST SHOT 4
+  eventSetResetTattooMystiqueShotsOrange.7:
+    - eventResetOrangeTM4{current_player.varShotTM4 == 0}
+  eventSetResetTattooMystiqueShotsOrange.8:
+    - eventSetOrangeTM4{current_player.varShotTM4 == 1}
+  # ------------------
+  # TEST SHOT 5
+  eventSetResetTattooMystiqueShotsOrange.9:
+    - eventResetOrangeTM5{current_player.varShotTM5 == 0}
+  eventSetResetTattooMystiqueShotsOrange.10:
+    - eventSetOrangeTM5{current_player.varShotTM5 == 1}
+  # ------------------
+  # TEST SHOT 6
+  eventSetResetTattooMystiqueShotsOrange.11:
+    - eventResetOrangeTM6{current_player.varShotTM6 == 0}
+  eventSetResetTattooMystiqueShotsOrange.12:
+    - eventSetOrangeTM6{current_player.varShotTM6 == 1}
+  # ------------------
+  # TEST SHOT 7
+  eventSetResetTattooMystiqueShotsOrange.13:
+    - eventResetOrangeTM7{current_player.varShotTM7 == 0}
+  eventSetResetTattooMystiqueShotsOrange.14:
+    - eventSetOrangeTM7{current_player.varShotTM7 == 1}
+
+# ---------------------
+# SHOTS 8~14
+# ---------------------
+  # ------------------
+  # TEST SHOT 8
+  eventSetResetTattooMystiqueShotsOrange.15:
+    - eventResetOrangeTM8{current_player.varShotTM8 == 0}
+  eventSetResetTattooMystiqueShotsOrange.16:
+    - eventSetOrangeTM8{current_player.varShotTM8 == 1}
+  # ------------------
+  # TEST SHOT 9
+  eventSetResetTattooMystiqueShotsOrange.17:
+    - eventResetOrangeTM9{current_player.varShotTM9 == 0}
+  eventSetResetTattooMystiqueShotsOrange.18:
+    - eventSetOrangeTM9{current_player.varShotTM9 == 1}
+  # ------------------
+  # TEST SHOT 10
+  eventSetResetTattooMystiqueShotsOrange.19:
+    - eventResetOrangeTM10{current_player.varShotTM10 == 0}
+  eventSetResetTattooMystiqueShotsOrange.20:
+    - eventSetOrangeTM10{current_player.varShotTM10 == 1}
+  # ------------------
+  # TEST SHOT 11
+  eventSetResetTattooMystiqueShotsOrange.21:
+    - eventResetOrangeTM11{current_player.varShotTM11 == 0}
+  eventSetResetTattooMystiqueShotsOrange.22:
+    - eventSetOrangeTM11{current_player.varShotTM11 == 1}
+  # ------------------
+  # TEST SHOT 12
+  eventSetResetTattooMystiqueShotsOrange.23:
+    - eventResetOrangeTM12{current_player.varShotTM12 == 0}
+  eventSetResetTattooMystiqueShotsOrange.24:
+    - eventSetOrangeTM12{current_player.varShotTM12 == 1}
+  # ------------------
+  # TEST SHOT 13
+  eventSetResetTattooMystiqueShotsOrange.25:
+    - eventResetOrangeTM13{current_player.varShotTM13 == 0}
+  eventSetResetTattooMystiqueShotsOrange.26:
+    - eventSetOrangeTM13{current_player.varShotTM13 == 1}
+  # ------------------
+  # TEST SHOT 14
+  eventSetResetTattooMystiqueShotsOrange.27:
+    - eventResetOrangeTM14{current_player.varShotTM14 == 0}
+  eventSetResetTattooMystiqueShotsOrange.28:
+    - eventSetOrangeTM14{current_player.varShotTM14 == 1}
+
+  # ------------------
+  # SWITCH THE JACKPOT SHOT COLOR
+  eventSetResetTattooMystiqueShotsOrange.29:
+    - eventChooseShowJackpot
+    - eventChooseShowLeftOrbit
+    - eventChooseShowRightOrbit
+
+# ---------------------
+# SHOTS 1~7 :: SET
+# ---------------------
+  # SHOT 1
+  shotTM1_hit:
+    eventResetOrangeTM1
+  # SHOT 2
+  shotTM2_hit:
+    eventResetOrangeTM2
+  # SHOT 3
+  shotTM3_hit:
+    eventResetOrangeTM3
+  # SHOT 4
+  shotTM4_hit:
+    eventResetOrangeTM4
+  # SHOT 5
+  shotTM5_hit:
+    eventResetOrangeTM5
+  # SHOT 6
+  shotTM6_hit:
+    eventResetOrangeTM6
+  # SHOT 7
+  shotTM7_hit:
+    eventResetOrangeTM7
+
+# ---------------------
+# SHOTS 8~14 :: RESET
+# ---------------------
+  # SHOT 8
+  shotTM8_hit:
+    eventSetOrangeTM8
+  # SHOT 9
+  shotTM9_hit:
+    eventSetOrangeTM9
+  # SHOT 10
+  shotTM10_hit:
+    eventSetOrangeTM10
+  # SHOT 11
+  shotTM11_hit:
+    eventSetOrangeTM11
+  # SHOT 12
+  shotTM12_hit:
+    eventSetOrangeTM12
+  # SHOT 13
+  shotTM13_hit:
+    eventSetOrangeTM13
+  # SHOT 14
+  shotTM14_hit:
+    eventSetOrangeTM14
+
+# ---------------------
+# CHOOSE JACKPOT SHOW
+# ---------------------
+  eventChooseShowJackpot:
+    # ----------------------
+    # NONE
+    - eventShowLedJackpotNoneOrange{current_player.bonusCount==0}
+    - eventShowLedJackpotNoneOrange{current_player.bonusCount==1}
+    - eventShowLedJackpotNoneOrange{current_player.bonusCount==2}
+    # LOW
+    - eventShowLedJackpotLowOrange{current_player.bonusCount==3}
+    - eventShowLedJackpotLowOrange{current_player.bonusCount==4}
+    - eventShowLedJackpotLowOrange{current_player.bonusCount==5}
+    # MEDIUM
+    - eventShowLedJackpotMediumOrange{current_player.bonusCount==6}
+    - eventShowLedJackpotMediumOrange{current_player.bonusCount==7}
+    - eventShowLedJackpotMediumOrange{current_player.bonusCount==8}
+    - eventShowLedJackpotMediumOrange{current_player.bonusCount==9}
+    # HIGH
+    - eventShowLedJackpotHighOrange{current_player.bonusCount==10}
+    - eventShowLedJackpotHighOrange{current_player.bonusCount==11}
+    - eventShowLedJackpotHighOrange{current_player.bonusCount==12}
+    - eventShowLedJackpotHighOrange{current_player.bonusCount==13}
+    - eventShowLedJackpotHighOrange{current_player.bonusCount==14}
+    # MID
+    - eventShowLedJackpotMediumOrange{current_player.bonusCount>14}
+# ---------------------
+# CHOOSE LEFT ORBIT SHOW
+# ---------------------
+  eventChooseShowLeftOrbit:
+    # ----------------------
+    # NONE
+    - eventShowLedLeftOrbitNoneOrange{current_player.bonusCountOrange==0}
+    - eventShowLedLeftOrbitNoneOrange{current_player.bonusCountOrange==1}
+    # LOW
+    - eventShowLedLeftOrbitLowOrange{current_player.bonusCountOrange==2}
+    - eventShowLedLeftOrbitLowOrange{current_player.bonusCountOrange==3}
+    # MEDIUM
+    - eventShowLedLeftOrbitMediumOrange{current_player.bonusCountOrange==4}
+    - eventShowLedLeftOrbitMediumOrange{current_player.bonusCountOrange==5}
+    # HIGH
+    - eventShowLedLeftOrbitHighOrange{current_player.bonusCountOrange==6}
+    - eventShowLedLeftOrbitHighOrange{current_player.bonusCountOrange==7}
+    # MID
+    - eventShowLedLeftOrbitMediumOrange{current_player.bonusCountOrange>7}
+# ---------------------
+# CHOOSE RIGHT ORBIT SHOW
+# ---------------------
+  eventChooseShowRightOrbit:
+    # ----------------------
+    # NONE
+    - eventShowLedRightOrbitNonePurple
+
+# ---------------------
+# THUMPERS
+# ---------------------
+  eventSetResetTattooMystiqueShotsOrange.30:
+  #   # SET LIGHTS
+  #   # MIDDLE
+  #   - eventShowLedShotThumperMiddleLitFlashMagenta
+  #   - eventShowLedShotThumperMiddleLitSolidMagenta|500ms
+  #   # LEFT
+  #   - eventShowLedShotThumperLeftLitFlashMagenta|1000ms
+  #   - eventShowLedShotThumperLeftLitSolidMagenta|1500ms
+  #   # LOWER LEFT
+  #   - eventShowLedShotThumperLowerLeftLitFlashYellow|2000ms
+  #   - eventShowLedShotThumperLowerLeftLitSolidYellow|2500ms
+
+  # shotThumperMiddle_hit:
+  #   - eventShowLedShotThumperMiddleLitFlashMagenta
+  #   - eventShowLedShotThumperMiddleLitSolidMagenta|500ms
+  # shotThumperLeft_hit:
+  #   - eventShowLedShotThumperLeftLitFlashMagenta
+  #   - eventShowLedShotThumperLeftLitSolidMagenta|500ms
+  # shotThumperLowerLeft_hit:
+  #   - eventShowLedShotThumperLowerLeftLitFlashYellow
+  #   - eventShowLedShotThumperLowerLeftLitSolidYellow|500ms
+
+   # SET LIGHTS
+    # MIDDLE
+    - eventShowLedShotThumperMiddleLitFlashCyan
+    - eventShowLedShotThumperMiddleLitSolidCyan|500ms
+    # LEFT
+    - eventShowLedShotThumperLeftLitFlashCyan|1000ms
+    - eventShowLedShotThumperLeftLitSolidCyan|1500ms
+    # LOWER LEFT
+    - eventShowLedShotThumperLowerLeftLitFlashYellow|2000ms
+    - eventShowLedShotThumperLowerLeftLitSolidYellow|2500ms
+
+  shotThumperMiddle_hit:
+    - eventShowLedShotThumperMiddleLitFlashCyan
+    - eventShowLedShotThumperMiddleLitSolidCyan|500ms
+  shotThumperLeft_hit:
+    - eventShowLedShotThumperLeftLitFlashCyan
+    - eventShowLedShotThumperLeftLitSolidCyan|500ms
+  shotThumperLowerLeft_hit:
+    # LIGHT SHOW
+    - eventShowLedShotThumperLowerLeftLitFlashYellow
+    - eventShowLedShotThumperLowerLeftLitSolidYellow|500ms
+    # SOUND
+    - playPoolSoundThunder
+    
+# ---------------------
+# NEWTON BALL :: GYPSY EYES
+# ---------------------
+  sw_tagNewtonBall:
+    - eventShowLedGypsyEyesCyan
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------------
+# SHOTS 1~7
+# ---------------------
+  # SHOT 1
+  # -----------------
+  # RESET
+  eventResetOrangeTM1:
+    varShotTM1:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM1:
+    varShotTM1:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 2
+  # -----------------
+  # RESET
+  eventResetOrangeTM2:
+    varShotTM2:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM2:
+    varShotTM2:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 3
+  # -----------------
+  # RESET
+  eventResetOrangeTM3:
+    varShotTM3:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM3:
+    varShotTM3:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 4
+  # -----------------
+  # RESET
+  eventResetOrangeTM4:
+    varShotTM4:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM4:
+    varShotTM4:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 5
+  # -----------------
+  # RESET
+  eventResetOrangeTM5:
+    varShotTM5:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM5:
+    varShotTM5:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 6
+  # -----------------
+  # RESET
+  eventResetOrangeTM6:
+    varShotTM6:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM6:
+    varShotTM6:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 7
+  # -----------------
+  # RESET
+  eventResetOrangeTM7:
+    varShotTM7:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM7:
+    varShotTM7:
+      int: 1
+      action: set
+
+# ---------------------
+# SHOTS 8~14
+# ---------------------
+  # SHOT 8
+  # -----------------
+  # RESET
+  eventResetOrangeTM8:
+    varShotTM8:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM8:
+    varShotTM8:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 9
+  # -----------------
+  # RESET
+  eventResetOrangeTM9:
+    varShotTM9:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM9:
+    varShotTM9:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 10
+  # -----------------
+  # RESET
+  eventResetOrangeTM10:
+    varShotTM10:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM10:
+    varShotTM10:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 11
+  # -----------------
+  # RESET
+  eventResetOrangeTM11:
+    varShotTM11:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM11:
+    varShotTM11:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 12
+  # -----------------
+  # RESET
+  eventResetOrangeTM12:
+    varShotTM12:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM12:
+    varShotTM12:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 13
+  # -----------------
+  # RESET
+  eventResetOrangeTM13:
+    varShotTM13:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM13:
+    varShotTM13:
+      int: 1
+      action: set
+  # ---------------------
+  # SHOT 14
+  # -----------------
+  # RESET
+  eventResetOrangeTM14:
+    varShotTM14:
+      int: 0
+      action: set
+  # -----------------
+  # SET     
+  eventSetOrangeTM14:
+    varShotTM14:
+      int: 1
+      action: set
+
+
+# *********************
+# SHOW::PLAYER
+# *********************
+show_player:
+# ---------------------
+# MODE ORANGE STARTING
+# -----------------
+  eventSetResetTattooMystiqueShotsOrange:
+    # # ----------------------------
+    # # ILLUMINATION::BACK
+    # showBaseLightBackIlluminationPurple2Orange:
+    #   loops: 0
+    #   speed: 2
+    # # ----------------------------
+    # # ILLUMINATION::APRON
+    # showBaseLightApronIlluminationPurple2Orange:
+    #   loops: 0
+    #   speed: 2
+
+    # ----------------------------
+    # ILLUMINATION::BACK
+    showBaseLightBackIlluminationMagenta2Cyan:
+      loops: 0
+      speed: 2
+    # ----------------------------
+    # ILLUMINATION::APRON
+    showBaseLightApronIlluminationMagenta2Cyan:
+      loops: 0
+      speed: 2
+
+    # ----------------------------
+    # SPINNER::ROTATION::CYAN
+    chaseDiscSpinnerTwentyfourLedTwoColor:
+      loops: 4
+      speed: 12
+      show_tokens:
+        #color1: 'ff0000'
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledDiscSpinner1
+        led2: ledDiscSpinner2
+        led3: ledDiscSpinner3
+        led4: ledDiscSpinner4
+        led5: ledDiscSpinner5
+        led6: ledDiscSpinner6
+        led7: ledDiscSpinner7
+        led8: ledDiscSpinner8
+        led9: ledDiscSpinner9
+        led10: ledDiscSpinner10
+        led11: ledDiscSpinner11
+        led12: ledDiscSpinner12
+        led13: ledDiscSpinner13
+        led14: ledDiscSpinner14
+        led15: ledDiscSpinner15
+        led16: ledDiscSpinner16
+        led17: ledDiscSpinner17
+        led18: ledDiscSpinner18
+        led19: ledDiscSpinner19
+        led20: ledDiscSpinner20
+        led21: ledDiscSpinner21
+        led22: ledDiscSpinner22
+        led23: ledDiscSpinner23
+        led24: ledDiscSpinner24
+
+# ---------------------
+# ROLLOVERS::SHOOTER
+# ---------------------
+  # SHOOTER 1
+  shotRolloverLower1_litFlash_hit:
+    swirlFourLedTwoColor:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledShooterLaneRollover1A
+        led2: ledShooterLaneRollover1B
+        led3: ledShooterLaneRollover1C
+        led4: ledShooterLaneRollover1D
+  # SHOOTER 2
+  shotRolloverLower2_litFlash_hit:
+    swirlFourLedTwoColor:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledShooterLaneRollover2A
+        led2: ledShooterLaneRollover2B
+        led3: ledShooterLaneRollover2C
+        led4: ledShooterLaneRollover2D
+
+# ---------------------
+# ROLLOVERS::LEFT
+# ---------------------
+  # LEFT ORBIT 1
+  shotRolloverLeft1_litFlash_hit:
+    swirlFourLedTwoColor:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledOrbitLeftRollover1A
+        led2: ledOrbitLeftRollover1B
+        led3: ledOrbitLeftRollover1C
+        led4: ledOrbitLeftRollover1D
+  # LEFT ORBIT 2
+  shotRolloverLeft2_litFlash_hit:
+    swirlFourLedTwoColor:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledOrbitLeftRollover2A
+        led2: ledOrbitLeftRollover2B
+        led3: ledOrbitLeftRollover2C
+        led4: ledOrbitLeftRollover2D

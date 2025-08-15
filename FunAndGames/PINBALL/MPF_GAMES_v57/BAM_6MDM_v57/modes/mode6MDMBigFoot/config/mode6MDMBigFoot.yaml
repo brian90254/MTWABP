@@ -1,0 +1,63 @@
+#config_version=6
+
+config:
+- config6MDMBigFootQualifiers.yaml
+
+mode:
+  start_events: eventStartMode6MDMBigFoot
+  stop_events:
+    - eventStopMode6MDMBigFoot
+    - ball_ending
+    
+  priority: 3000
+  
+## ---------------------
+## EVENT::PLAYER
+## ---------------------
+#event_player:    
+#  # -----------------------------------
+#  # MODE SPECIFIC EVENTS
+#  # -----------------------------------
+#  mode_mode6MDMBigFoot_started:
+
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  # -----------------------
+  # BASE MODE STARTED
+  # -----------------------
+  mode_mode6MDMBigFoot_started:
+    # SET NAME FOR DMD
+    nameMoon:
+      string: "SASQUATCH"
+      action: set
+    # SET PLAYFIELD MULTIPLIER
+    multiplierPlayfield:
+      int: 3
+      action: set
+
+## ---------------------
+## SOUND::PLAYER
+## ---------------------
+#sound_player:
+#  #---------------------
+#  # AMBIENCE
+#  mode_mode6MDMBigFoot_started:
+#    music6MDMBigFoot005:
+#      loops: -1
+#      #volume: 0.4
+#      volume: 0.2
+#  mode_mode6MDMBigFoot_ending:
+#    music6MDMBigFoot005:
+#      action: stop
+#  #---------------------
+#  # PAUSE AMBIENCE FOR VIDEO SHOW
+#  eventResumeTrackPlaylist:
+#    music6MDMBigFoot005:
+#      loops: -1
+#      #volume: 0.4
+#      volume: 0.2
+#  eventPauseTrackPlaylist:
+#    music6MDMBigFoot005:
+#      action: stop

@@ -1,0 +1,238 @@
+#show_version=6
+
+- time: 0
+# ----------------------
+# RED CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverRight1A: 'ff00ff'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: 'ff00ff'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: 'ff00ff'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: 'ff00ff'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: 'ff00ff'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: 'ff00ff'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: 'ff00ff'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: 'ff00ff'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '00ff00'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: '00ff00'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: '00ff00'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: '00ff00'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: '00ff00'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: '00ff00'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: '00ff00'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: '00ff00'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# GREEN CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverRight1A: 'ffff00'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: 'ffff00'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: 'ffff00'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: 'ffff00'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: 'ffff00'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: 'ffff00'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: 'ffff00'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: 'ffff00'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '00ff00'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: '00ff00'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: '00ff00'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: '00ff00'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: '00ff00'
+    ledRolloverRight1D: '000000'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: '00ff00'
+    ledRolloverLeft1D: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverRight1A: '000000'
+    ledRolloverRight1B: '000000'
+    ledRolloverRight1C: '000000'
+    ledRolloverRight1D: '00ff00'
+    # ----------------------    
+    ledRolloverLeft1A: '000000'
+    ledRolloverLeft1B: '000000'
+    ledRolloverLeft1C: '000000'
+    ledRolloverLeft1D: '00ff00'
+    # ----------------------
+- time: "+1"

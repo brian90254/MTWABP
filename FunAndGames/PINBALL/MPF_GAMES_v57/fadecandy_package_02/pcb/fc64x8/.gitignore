@@ -1,0 +1,6 @@
+eagle.epf
+*.pro
+*.dri
+*.gpi
+*.s#*
+*.b#*

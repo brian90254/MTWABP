@@ -1,0 +1,96 @@
+#config_version=6
+
+config:
+- configBaseShows.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 100
+
+# ---------------------
+# SWITCHES::COMBO
+# ---------------------
+combo_switches:
+  
+  comboSwitchEndGame:
+    # FLIPPER::RIGHT
+    switches_1: s_0_10
+    # START
+    switches_2: s_0_8
+    hold_time: 2s
+    events_when_both: end_game
+    
+  comboSwitchStartModeSandbox:
+    # FLIPPER::RIGHT
+    switches_1: s_0_10
+    # FLIPPER::LEFT
+    switches_2: s_0_9
+    hold_time: 3s
+    events_when_both: eventStartModeTattooMystiqueSandbox
+
+  # mode_attract_started{device.switches.s_1_29.state == 1 and device.switches.s_1_19.state == 1}:
+  #   - eventShowCoilEjectVUK
+
+  # comboSwitchEjectVuk:
+  #   # VUK::UPPER RIGHT::1
+  #   switches_1: s_1_29
+  #   # VUK::UPPER RIGHT::2
+  #   switches_2: s_1_19
+  #   hold_time: 5s
+  #   events_when_both: eventPulseCoilUpperRight2Vuk
+
+  # comboSwitchEnableAutofireKickerLeft:
+  #   switches_1: s_0_10
+  #   switches_2: s_0_9
+  #   hold_time: 2s
+  #   events_when_both: eventEnableAutofireKickerLeft
+    
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  #ball_started:
+    # - eventStartModeSkillShot
+    # - eventResetMultipliers
+    # NEW
+    #- eventShowSlideBaseShows
+    #- eventMakeVisibleTigerHeadPurple|1000ms
+    
+  # ----------------------------
+  # START MODE GLOBETROTTERS
+  # ----------------------------
+  mode_modeBase_started:
+    - eventShowSlideBaseShows
+    - eventStartModeTattooMystiqueBase
+
+  # ball_hold_blKickerUpper_held_ball:
+  #   - eventCompletedAchGlobeSaucer
+
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # # ----------------------------
+  # timer_timerRotateRightGrpAchGlobeSaucer_complete:
+  #   - eventRotateRightGrpAchGlobeSaucer
+  #   #- eventStartTimerRotateRightGrpAchGlobeSaucer
+
+# # ---------------------
+# # TIMERS
+# # ---------------------
+# timers:
+#   # ----------------------------
+#   # FORCE AUTO PLUNGE EJECT
+#   # ----------------------------
+#     timerRotateRightGrpAchGlobeSaucer:
+#         start_value: 4
+#         end_value: 0
+#         direction: down
+#         tick_interval: 1s
+#         #start_running: no
+#         start_running: true
+#         restart_on_complete: true
+#         #control_events:
+#         #    - event: eventStartTimerRotateRightGrpAchGlobeSaucer
+#         #      action: start
+#             #- event: balldevice_plunger_lane_ball_eject_success
+#             #  action: stop
