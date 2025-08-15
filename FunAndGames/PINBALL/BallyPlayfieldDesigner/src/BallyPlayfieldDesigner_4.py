@@ -56,7 +56,8 @@ INITIAL_H = 800
 LINE_THICKNESS = 1
 
 # Arrow keycodes after & 0xFF (on most platforms)
-KEY_LEFT, KEY_UP, KEY_RIGHT, KEY_DOWN = 81, 82, 83, 84
+#KEY_LEFT, KEY_UP, KEY_RIGHT, KEY_DOWN = 81, 82, 83, 84
+KEY_LEFT, KEY_UP, KEY_RIGHT, KEY_DOWN = 3, 2, 1, 0
 
 # Basic AutoCAD ACI -> BGR mapping
 ACI_TO_BGR = {
@@ -383,7 +384,8 @@ def load_layer_from_path(path: str, color_idx: int) -> DXFLayer:
     doc = ezdxf.readfile(path)
     msp = doc.modelspace()
     color = LAYER_COLORS[color_idx % len(LAYER_COLORS)]
-    return DXFLayer(path=path, doc=doc, msp=msp, color_override=color, visible=True)
+    #return DXFLayer(path=path, doc=doc, msp=msp, color_override=color, visible=True)
+    return DXFLayer(path=path, doc=doc, msp=msp, color_override=None, visible=True)
 
 # ---------------------------
 # Main
