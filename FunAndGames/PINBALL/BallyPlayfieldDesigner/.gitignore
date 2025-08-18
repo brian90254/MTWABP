@@ -4,6 +4,9 @@ venv/
 venv39/
 .venv39/
 
+# ARCHIVES
+DXF/ARCHIVE/
+
 # Python cache
 __pycache__/
 *.pyc
