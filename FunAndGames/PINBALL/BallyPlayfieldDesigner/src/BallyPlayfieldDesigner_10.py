@@ -265,18 +265,40 @@ class LayerPanel(QWidget):
 
         self.rebuild()
 
+    # def rebuild(self):
+    #     # Clear all items except the trailing stretch
+    #     while self.body_layout.count() > 1:
+    #         item = self.body_layout.takeAt(0)
+    #         w = item.widget()
+    #         if w: w.deleteLater()
+    #     # Add a checkbox per layer
+    #     for i, L in enumerate(self.renderer.layers):
+    #         cb = QCheckBox(f"{i+1:02d}  {L.name}")
+    #         cb.setChecked(L.visible)
+    #         cb.toggled.connect(lambda state, idx=i: self.on_toggle(idx, state))
+    #         self.body_layout.insertWidget(i, cb)
+
     def rebuild(self):
         # Clear all items except the trailing stretch
         while self.body_layout.count() > 1:
             item = self.body_layout.takeAt(0)
             w = item.widget()
-            if w: w.deleteLater()
-        # Add a checkbox per layer
-        for i, L in enumerate(self.renderer.layers):
-            cb = QCheckBox(f"{i+1:02d}  {L.name}")
+            if w:
+                w.deleteLater()
+
+        # Sort by file name (case-insensitive), with absolute path as a tie-breaker
+        sorted_pairs = sorted(
+            enumerate(self.renderer.layers),
+            key=lambda p: (p[1].name.lower(), str(Path(p[1].path).resolve()).lower())
+        )
+
+        # Build checkboxes in sorted (UI) order, but wire actions to the original layer indices
+        for row, (idx, L) in enumerate(sorted_pairs):
+            cb = QCheckBox(f"{row+1:02d}  {L.name}")
             cb.setChecked(L.visible)
-            cb.toggled.connect(lambda state, idx=i: self.on_toggle(idx, state))
-            self.body_layout.insertWidget(i, cb)
+            cb.toggled.connect(lambda state, idx=idx: self.on_toggle(idx, state))  # capture idx!
+            self.body_layout.insertWidget(row, cb)
+
 
     def on_toggle(self, idx: int, state: bool):
         if 0 <= idx < len(self.renderer.layers):
