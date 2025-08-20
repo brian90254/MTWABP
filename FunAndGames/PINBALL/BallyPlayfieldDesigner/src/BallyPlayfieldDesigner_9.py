@@ -311,6 +311,74 @@ class LayerPanel(QWidget):
             QMessageBox.critical(self, "Export CSV", f"Failed to export:\n{ex}")
 
     # ----- NEW: Import layer list from CSV (replaces current stack) -----
+    # def on_import_csv(self):
+    #     path, _ = QFileDialog.getOpenFileName(
+    #         self,
+    #         "Import Visible Layers CSV",
+    #         str(Path.cwd()),
+    #         "CSV Files (*.csv)"
+    #     )
+    #     if not path:
+    #         return
+    #     try:
+    #         imported_paths: List[str] = []
+
+    #         with open(path, "r", newline="") as f:
+    #             reader = csv.reader(f)
+    #             rows = list(reader)
+
+    #         if not rows:
+    #             QMessageBox.warning(self, "Import CSV", "CSV is empty.")
+    #             return
+
+    #         # Accept either headered (path) or single-column paths
+    #         if len(rows[0]) == 1 and rows[0][0].strip().lower() == "path":
+    #             data_rows = rows[1:]
+    #         else:
+    #             data_rows = rows
+
+    #         for r in data_rows:
+    #             if not r: continue
+    #             p = r[0].strip()
+    #             if p:
+    #                 imported_paths.append(p)
+
+    #         if not imported_paths:
+    #             QMessageBox.warning(self, "Import CSV", "No paths found in CSV.")
+    #             return
+
+    #         resp = QMessageBox.question(
+    #             self, "Import CSV",
+    #             f"Load {len(imported_paths)} file(s) from CSV and REPLACE current layers?",
+    #             QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes
+    #         )
+    #         if resp != QMessageBox.Yes:
+    #             return
+
+    #         new_layers: List[DXFLayer] = []
+    #         failures: List[str] = []
+    #         for i, p in enumerate(imported_paths):
+    #             try:
+    #                 color = PALETTE[(len(new_layers)) % len(PALETTE)]
+    #                 new_layers.append(load_layer(p, color))
+    #             except Exception as ex:
+    #                 failures.append(f"{p}  ({ex})")
+
+    #         self.renderer.layers[:] = new_layers
+    #         self.renderer._update_bbox()
+    #         self.renderer.fit()
+    #         self.rebuild()
+
+    #         msg = f"Loaded {len(new_layers)} layer(s)."
+    #         if failures:
+    #             msg += f"\nFailed ({len(failures)}):\n" + "\n".join(failures[:10])
+    #             if len(failures) > 10:
+    #                 msg += f"\n… and {len(failures)-10} more."
+    #         QMessageBox.information(self, "Import CSV", msg)
+
+    #     except Exception as ex:
+    #         QMessageBox.critical(self, "Import CSV", f"Failed to import:\n{ex}")
+
     def on_import_csv(self):
         path, _ = QFileDialog.getOpenFileName(
             self,
@@ -320,56 +388,58 @@ class LayerPanel(QWidget):
         )
         if not path:
             return
-        try:
-            imported_paths: List[str] = []
 
+        try:
+            # --- read CSV (accepts single-column with or without header 'path') ---
             with open(path, "r", newline="") as f:
-                reader = csv.reader(f)
-                rows = list(reader)
+                rows = [r for r in csv.reader(f)]
 
             if not rows:
                 QMessageBox.warning(self, "Import CSV", "CSV is empty.")
                 return
 
-            # Accept either headered (path) or single-column paths
             if len(rows[0]) == 1 and rows[0][0].strip().lower() == "path":
-                data_rows = rows[1:]
-            else:
-                data_rows = rows
+                rows = rows[1:]  # drop header
 
-            for r in data_rows:
-                if not r: continue
+            imported_paths: List[str] = []
+            for r in rows:
+                if not r:
+                    continue
                 p = r[0].strip()
                 if p:
-                    imported_paths.append(p)
+                    imported_paths.append(str(Path(p).expanduser().resolve()))
 
             if not imported_paths:
                 QMessageBox.warning(self, "Import CSV", "No paths found in CSV.")
                 return
 
-            resp = QMessageBox.question(
-                self, "Import CSV",
-                f"Load {len(imported_paths)} file(s) from CSV and REPLACE current layers?",
-                QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes
-            )
-            if resp != QMessageBox.Yes:
-                return
-
-            new_layers: List[DXFLayer] = []
+            # --- append (no replacement) with dedup by absolute path ---
+            existing = {str(Path(L.path).resolve()) for L in self.renderer.layers}
+            added = 0
+            skipped: List[str] = []
             failures: List[str] = []
-            for i, p in enumerate(imported_paths):
+
+            for p in imported_paths:
+                if p in existing:
+                    skipped.append(p)
+                    continue
                 try:
-                    color = PALETTE[(len(new_layers)) % len(PALETTE)]
-                    new_layers.append(load_layer(p, color))
+                    # Use native DXF colors (no override). If you want per-file colors,
+                    # pass a color: load_layer(p, PALETTE[(len(self.renderer.layers)) % len(PALETTE)])
+                    self.renderer.layers.append(load_layer(p))
+                    existing.add(p)
+                    added += 1
                 except Exception as ex:
                     failures.append(f"{p}  ({ex})")
 
-            self.renderer.layers[:] = new_layers
+            # Update view; keep current zoom/pan (no auto-fit)
             self.renderer._update_bbox()
-            self.renderer.fit()
             self.rebuild()
 
-            msg = f"Loaded {len(new_layers)} layer(s)."
+            # Summary
+            msg = f"Added {added} layer(s)."
+            if skipped:
+                msg += f"\nSkipped duplicates: {len(skipped)}"
             if failures:
                 msg += f"\nFailed ({len(failures)}):\n" + "\n".join(failures[:10])
                 if len(failures) > 10:
@@ -378,6 +448,7 @@ class LayerPanel(QWidget):
 
         except Exception as ex:
             QMessageBox.critical(self, "Import CSV", f"Failed to import:\n{ex}")
+
 
 class MainWindow(QMainWindow):
     def __init__(self, renderer: DXFRenderer):

@@ -21,6 +21,7 @@ import cv2
 import numpy as np
 import ezdxf
 from ezdxf.colors import int2rgb
+from ezdxf.addons import Importer  # NEW
 from PySide6.QtCore import Qt, QTimer
 from PySide6.QtGui import QImage, QPixmap, QAction
 from PySide6.QtWidgets import (
@@ -245,8 +246,15 @@ class LayerPanel(QWidget):
         import_btn = QPushButton("Import CSV")
         import_btn.clicked.connect(self.on_import_csv)
 
-        for w in (add_btn, fit_btn, export_btn, import_btn):
+        export_dxf_btn = QPushButton("Export DXF")        # NEW
+        export_dxf_btn.clicked.connect(self.on_export_dxf)  # NEW
+
+        # for w in (add_btn, fit_btn, export_btn, import_btn):
+        #     top.addWidget(w)
+
+        for w in (add_btn, fit_btn, export_btn, import_btn, export_dxf_btn):  # UPDATED
             top.addWidget(w)
+        
         top.addStretch(1)
         self.v.addLayout(top)
 
@@ -311,6 +319,74 @@ class LayerPanel(QWidget):
             QMessageBox.critical(self, "Export CSV", f"Failed to export:\n{ex}")
 
     # ----- NEW: Import layer list from CSV (replaces current stack) -----
+    # def on_import_csv(self):
+    #     path, _ = QFileDialog.getOpenFileName(
+    #         self,
+    #         "Import Visible Layers CSV",
+    #         str(Path.cwd()),
+    #         "CSV Files (*.csv)"
+    #     )
+    #     if not path:
+    #         return
+    #     try:
+    #         imported_paths: List[str] = []
+
+    #         with open(path, "r", newline="") as f:
+    #             reader = csv.reader(f)
+    #             rows = list(reader)
+
+    #         if not rows:
+    #             QMessageBox.warning(self, "Import CSV", "CSV is empty.")
+    #             return
+
+    #         # Accept either headered (path) or single-column paths
+    #         if len(rows[0]) == 1 and rows[0][0].strip().lower() == "path":
+    #             data_rows = rows[1:]
+    #         else:
+    #             data_rows = rows
+
+    #         for r in data_rows:
+    #             if not r: continue
+    #             p = r[0].strip()
+    #             if p:
+    #                 imported_paths.append(p)
+
+    #         if not imported_paths:
+    #             QMessageBox.warning(self, "Import CSV", "No paths found in CSV.")
+    #             return
+
+    #         resp = QMessageBox.question(
+    #             self, "Import CSV",
+    #             f"Load {len(imported_paths)} file(s) from CSV and REPLACE current layers?",
+    #             QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes
+    #         )
+    #         if resp != QMessageBox.Yes:
+    #             return
+
+    #         new_layers: List[DXFLayer] = []
+    #         failures: List[str] = []
+    #         for i, p in enumerate(imported_paths):
+    #             try:
+    #                 color = PALETTE[(len(new_layers)) % len(PALETTE)]
+    #                 new_layers.append(load_layer(p, color))
+    #             except Exception as ex:
+    #                 failures.append(f"{p}  ({ex})")
+
+    #         self.renderer.layers[:] = new_layers
+    #         self.renderer._update_bbox()
+    #         self.renderer.fit()
+    #         self.rebuild()
+
+    #         msg = f"Loaded {len(new_layers)} layer(s)."
+    #         if failures:
+    #             msg += f"\nFailed ({len(failures)}):\n" + "\n".join(failures[:10])
+    #             if len(failures) > 10:
+    #                 msg += f"\n… and {len(failures)-10} more."
+    #         QMessageBox.information(self, "Import CSV", msg)
+
+    #     except Exception as ex:
+    #         QMessageBox.critical(self, "Import CSV", f"Failed to import:\n{ex}")
+
     def on_import_csv(self):
         path, _ = QFileDialog.getOpenFileName(
             self,
@@ -320,56 +396,58 @@ class LayerPanel(QWidget):
         )
         if not path:
             return
-        try:
-            imported_paths: List[str] = []
 
+        try:
+            # --- read CSV (accepts single-column with or without header 'path') ---
             with open(path, "r", newline="") as f:
-                reader = csv.reader(f)
-                rows = list(reader)
+                rows = [r for r in csv.reader(f)]
 
             if not rows:
                 QMessageBox.warning(self, "Import CSV", "CSV is empty.")
                 return
 
-            # Accept either headered (path) or single-column paths
             if len(rows[0]) == 1 and rows[0][0].strip().lower() == "path":
-                data_rows = rows[1:]
-            else:
-                data_rows = rows
+                rows = rows[1:]  # drop header
 
-            for r in data_rows:
-                if not r: continue
+            imported_paths: List[str] = []
+            for r in rows:
+                if not r:
+                    continue
                 p = r[0].strip()
                 if p:
-                    imported_paths.append(p)
+                    imported_paths.append(str(Path(p).expanduser().resolve()))
 
             if not imported_paths:
                 QMessageBox.warning(self, "Import CSV", "No paths found in CSV.")
                 return
 
-            resp = QMessageBox.question(
-                self, "Import CSV",
-                f"Load {len(imported_paths)} file(s) from CSV and REPLACE current layers?",
-                QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes
-            )
-            if resp != QMessageBox.Yes:
-                return
-
-            new_layers: List[DXFLayer] = []
+            # --- append (no replacement) with dedup by absolute path ---
+            existing = {str(Path(L.path).resolve()) for L in self.renderer.layers}
+            added = 0
+            skipped: List[str] = []
             failures: List[str] = []
-            for i, p in enumerate(imported_paths):
+
+            for p in imported_paths:
+                if p in existing:
+                    skipped.append(p)
+                    continue
                 try:
-                    color = PALETTE[(len(new_layers)) % len(PALETTE)]
-                    new_layers.append(load_layer(p, color))
+                    # Use native DXF colors (no override). If you want per-file colors,
+                    # pass a color: load_layer(p, PALETTE[(len(self.renderer.layers)) % len(PALETTE)])
+                    self.renderer.layers.append(load_layer(p))
+                    existing.add(p)
+                    added += 1
                 except Exception as ex:
                     failures.append(f"{p}  ({ex})")
 
-            self.renderer.layers[:] = new_layers
+            # Update view; keep current zoom/pan (no auto-fit)
             self.renderer._update_bbox()
-            self.renderer.fit()
             self.rebuild()
 
-            msg = f"Loaded {len(new_layers)} layer(s)."
+            # Summary
+            msg = f"Added {added} layer(s)."
+            if skipped:
+                msg += f"\nSkipped duplicates: {len(skipped)}"
             if failures:
                 msg += f"\nFailed ({len(failures)}):\n" + "\n".join(failures[:10])
                 if len(failures) > 10:
@@ -378,6 +456,56 @@ class LayerPanel(QWidget):
 
         except Exception as ex:
             QMessageBox.critical(self, "Import CSV", f"Failed to import:\n{ex}")
+
+    # Export DXF file of visible layers
+    def on_export_dxf(self):
+        # Collect visible source documents
+        visible_layers = [L for L in self.renderer.layers if L.visible]
+        if not visible_layers:
+            QMessageBox.information(self, "Export DXF", "No visible layers to export.")
+            return
+
+        # Ask where to save
+        out_path, _ = QFileDialog.getSaveFileName(
+            self,
+            "Export Combined DXF",
+            str(Path.cwd() / "combined.dxf"),
+            "DXF Files (*.dxf)"
+        )
+        if not out_path:
+            return
+
+        try:
+            # Create a fresh DXF (R2018 is a good default; change if you need older)
+            out_doc = ezdxf.new(dxfversion="R2018", setup=True)
+            out_msp = out_doc.modelspace()
+
+            # Import each visible file into the output
+            imported_from = 0
+            for L in visible_layers:
+                src_doc = L.doc
+                src_msp = src_doc.modelspace()
+
+                # Importer moves entities + required table resources (layers, linetypes, blocks, etc.)
+                imp = Importer(src_doc, out_doc)
+                imp.import_entities(list(src_msp), out_msp)
+                imp.finalize()
+                imported_from += 1
+
+            # Save
+            out_doc.saveas(out_path)
+            QMessageBox.information(
+                self, "Export DXF",
+                f"Exported entities from {imported_from} visible file(s) into:\n{out_path}\n\n"
+                "Notes:\n"
+                "• Original layer names and colors are preserved.\n"
+                "• If multiple inputs define the SAME layer name with different properties, "
+                "  the first imported definition is kept for that name."
+            )
+
+        except Exception as ex:
+            QMessageBox.critical(self, "Export DXF", f"Failed to export:\n{ex}")
+
 
 class MainWindow(QMainWindow):
     def __init__(self, renderer: DXFRenderer):
@@ -396,7 +524,12 @@ class MainWindow(QMainWindow):
         add_act = QAction("&Add DXF…", self); add_act.triggered.connect(self.panel.on_add)
         import_act = QAction("&Import CSV…", self); import_act.triggered.connect(self.panel.on_import_csv)
         export_act = QAction("E&xport CSV…", self); export_act.triggered.connect(self.panel.on_export_csv)
-        file_menu.addActions([add_act, import_act, export_act])
+
+        export_dxf_act = QAction("Export &DXF…", self)              # NEW
+        export_dxf_act.triggered.connect(self.panel.on_export_dxf)  # NEW
+
+        # file_menu.addActions([add_act, import_act, export_act])
+        file_menu.addActions([add_act, import_act, export_act, export_dxf_act])  # UPDATED
 
         view_menu = self.menuBar().addMenu("&View")
         fit_act = QAction("&Fit", self); fit_act.setShortcut("F"); fit_act.triggered.connect(lambda: (renderer._update_bbox(), renderer.fit()))
