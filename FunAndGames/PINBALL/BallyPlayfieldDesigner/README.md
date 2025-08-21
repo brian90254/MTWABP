@@ -1,32 +1,23 @@
-# Parametric Patterning
- Parametric Knit Glove Pattern coding in Python with OpenCV visualization
+NAVIGATION > MTWABP > FUN AND GAMES > PINBALL > BALLY PLAYFIELD DESIGNER
+© 2025 BRIAN COX. All Rights Reserved
+Contact: brian90254 at gmail dot com
+Bally Playfield Designer
+   
+OVERVIEW:
+If you’re familiar with the pantheon of Bally SS games from the late 70’s and early 80’s, you’ve probably realized that there are a lot of similarities in playfield layouts between popular games. Because these machines are of a certain era, we know there will never be more to discover than what’s already made. We can, though, imagine novel game designs that have the same feel by distilling the common layout elements, and use software to explore various combinations that “could have been” but never actually existed.   
 
- 1. Clone the repro
- 2. Make sure you have Python 3.9 available
- 3. Create a venv in the project folder using the terminal command "python3.9 -m venv venv39"
- 4. Activate the venv with "source venv39/bin/activate" from the project folder
- 5. If OpenCV is not installed, type "pip3 install opencv-python" in the active environment.
- 6. Run the example python script from the terminal with "python src/ParametricPattern_KnitGlove_1.py 39 52"
- 7. By default, because Python 3.9 was used to create the venv, using "python" should equate to "python3.9".
- 8. Check the output file, a BMP which should end up in your project directory
+ STEP ONE: Process starts with a library of component parts in specific locations that are generalized from the pantheon of classic Bally SS designs.
+ STEP TWO: Python code for visualizing DXF files is created, with the ability to toggle various components on-and-off until you have the desired design.
+ STEP THREE: The code has the ability to export and import CSV files of component lists, as a way of documenting the playfield design.
+ STEP FOUR: The final layout can be exported as a combined DXF for use in other workflows, like importing into VCarve for CNC cutting of playfield, or importing into Inkscape for creating registered vector artwork that seamlessly integrates into the overall design. 
 
-Example to run this code:
-- Terminal:
-- - Navigate to the project folder
-- - Activate venv
-- - - "source venv39/bin/activate"
-- - Run script, passing arguments (S==snake, B==braid, L==left, R==right)
-- - - "python src/ParametricPattern_KnitGlove_2.py 11.5 23 S L"
-- - Output should be a BMP 
-
-The ChatGPT convo that created the above example file can be found here:
-https://chatgpt.com/share/683e01f7-d0bc-8004-9f1a-12d07fe473d0
-
-With rib for wrist and fingers here:
-https://chatgpt.com/share/683e01f7-d0bc-8004-9f1a-12d07fe473d0
-
-Scaling up to a printable version with annotations:
-https://chatgpt.com/share/683f9fd5-b194-8004-a6ae-31c484fe4a4a
+RESOURCES:
+HOW-TO INSTRUCTIONS:
+ YOUTUBE
+HOW-TO::BALLY PLAYFIELD DESIGNER:PART ONE
+SOFTWARE:
+ GITHUB
+PYTHON CODE: BALLY PLAYFIELD DESIGNER
 
 
 

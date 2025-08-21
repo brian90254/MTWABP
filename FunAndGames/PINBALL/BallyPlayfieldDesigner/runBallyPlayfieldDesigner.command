@@ -5,4 +5,4 @@ source venv39/bin/activate
 
 # python src/BallyPlayfieldDesigner_1.py DXF/250814_ModularPlayfield_9A.dxf --width 500 --height 1000
 # python src/BallyPlayfieldDesigner_7.py
-python src/BallyPlayfieldDesigner_10.py
+python src/BallyPlayfieldDesigner_12.py
