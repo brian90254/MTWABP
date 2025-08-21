@@ -41,10 +41,8 @@ window:
   # --------------------------
   width: 3840
   height: 1080
-  #fullscreen: true
-  fullscreen: false
-  #fullscreen: fake
-  #fullscreen: auto
+  fullscreen: true
+  #fullscreen: false
   ## --------------------------
   # DISPLAYS::WINDOWS::LAPTOP
   # --------------------------

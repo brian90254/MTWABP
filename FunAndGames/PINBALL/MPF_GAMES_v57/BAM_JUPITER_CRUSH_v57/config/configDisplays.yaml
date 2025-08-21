@@ -40,17 +40,12 @@ window:
   width: 3840
   height: 1080
   fullscreen: true
-  # --------------------------
+  #fullscreen: false
+  ## --------------------------
   # DISPLAYS::WINDOWS::LAPTOP
   # --------------------------
   #width: 1920
   #height: 540
-  #fullscreen: false
-  # --------------------------
-  # DISPLAYS::WINDOWS::LAPTOP::WIDE
-  # --------------------------
-  #width: 2880
-  #height: 810
   #fullscreen: false
   # --------------------------
   title: My first FAST game

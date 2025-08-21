@@ -39,14 +39,14 @@ window:
   # --------------------------
   width: 3840
   height: 1080
-  #fullscreen: true
-  fullscreen: false
+  fullscreen: true
+  #fullscreen: false
   ## --------------------------
   # DISPLAYS::WINDOWS::LAPTOP
   # --------------------------
-  # width: 1920
-  # height: 540
-  # fullscreen: false
+  #width: 1920
+  #height: 540
+  #fullscreen: false
   # --------------------------
   title: My first FAST game
   resizable: true

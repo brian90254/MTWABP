@@ -37,15 +37,16 @@ window:
   # --------------------------
   # DISPLAYS::WINDOWS::BOOMBOX
   # --------------------------
-  #width: 3840
-  #height: 1080
-  #fullscreen: true
+  width: 3840
+  height: 1080
+  fullscreen: true
+  #fullscreen: false
   ## --------------------------
   # DISPLAYS::WINDOWS::LAPTOP
   # --------------------------
-  width: 1920
-  height: 540
-  fullscreen: false
+  #width: 1920
+  #height: 540
+  #fullscreen: false
   # --------------------------
   title: My first FAST game
   resizable: true
