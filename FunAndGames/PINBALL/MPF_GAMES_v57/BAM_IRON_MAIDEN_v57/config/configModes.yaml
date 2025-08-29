@@ -9,7 +9,8 @@ modes:
 #-----------------
 # MODES::GAME
 #-----------------
-- modeEightBall
+#- modeEightBall
+- modeIronMaiden
 
 #-----------------
 # MODES::BUILT-IN

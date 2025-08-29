@@ -1,21 +1,21 @@
 #config_version=6
 
 config:
-- configEightBallAchBonus.yaml
-- configEightBallAchGlobeAward.yaml
-- configEightBallAchievements.yaml
-- configEightBallExtraBall.yaml
-- configEightBallSaucerRight.yaml
-- configEightBallScoring.yaml
-- configEightBallShots.yaml
-#- configEightBallShotsSpecial.yaml
-- configEightBallShows.yaml
-- configEightBallThumpers.yaml
+- configIronMaidenAchBonus.yaml
+- configIronMaidenAchGlobeAward.yaml
+- configIronMaidenAchievements.yaml
+- configIronMaidenExtraBall.yaml
+- configIronMaidenSaucerRight.yaml
+- configIronMaidenScoring.yaml
+- configIronMaidenShots.yaml
+#- configIronMaidenShotsSpecial.yaml
+- configIronMaidenShows.yaml
+- configIronMaidenThumpers.yaml
 
 mode:
-  start_events: eventStartModeEightBall
+  start_events: eventStartModeIronMaiden
   stop_events:
-    - eventStopModeEightBall
+    - eventStopModeIronMaiden
     - ball_ending
     
   priority: 2000
@@ -116,11 +116,11 @@ event_player:
   # -----------------------------------
   # MODE SPECIFIC EVENTS
   # -----------------------------------
-  mode_modeEightBall_started.1:
+  mode_modeIronMaiden_started.1:
     # -----------------------------------
     # MUSIC
     # -----------------------------------
-    - eventPlaylistModeEightBallStart
+    - eventPlaylistModeIronMaidenStart
 
     # -----------------------------------
     # RESET SHOTS (RESET BEFORE ENABLE)
@@ -167,9 +167,9 @@ event_player:
     # EVENT::RESET::MULTIPLIERS
     # ---------------------
     # THIS HAPPENS BEFORE 1000MS DELAY THAT ADDS ONE TOTAL BONUS TO START
-    - eventResetMultipliersEightBall
+    - eventResetMultipliersIronMaiden
 
-  mode_modeEightBall_started.2:
+  mode_modeIronMaiden_started.2:
     #-----------------------------------
     #ENABLE BONUS
     #-----------------------------------
@@ -183,7 +183,7 @@ event_player:
     - eventEnableAchBonusTens
 
 
-  mode_modeEightBall_started.3:
+  mode_modeIronMaiden_started.3:
     #-----------------------------------
     #ENABLE BONUS
     #-----------------------------------
@@ -205,7 +205,7 @@ variable_player:
 # ---------------
 # INITIALIZE MODE
 # ---------------
-  mode_modeEightBall_started:
+  mode_modeIronMaiden_started:
     nameMoon:
       string: "Eight Ball"
       action: set
@@ -302,16 +302,16 @@ show_player:
 sound_player:
   #---------------------
   # AMBIENCE
-  mode_modeEightBall_started:
-    #musicAmbienceEightBall005:
-    #poolMusicAmbienceEightBall:
+  mode_modeIronMaiden_started:
+    #musicAmbienceIronMaiden005:
+    #poolMusicAmbienceIronMaiden:
     poolMusicAmbienceIronMaiden:
       loops: -1
       volume: 0.5
       
-  mode_modeEightBall_ending:
-    #musicAmbienceEightBall005:
-    #poolMusicAmbienceEightBall:
+  mode_modeIronMaiden_ending:
+    #musicAmbienceIronMaiden005:
+    #poolMusicAmbienceIronMaiden:
     poolMusicAmbienceIronMaiden:
       action: stop
   #---------------------
