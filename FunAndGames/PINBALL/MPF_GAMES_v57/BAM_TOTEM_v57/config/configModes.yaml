@@ -9,7 +9,6 @@ modes:
 #-----------------
 # MODES::GAME
 #-----------------
-#- modeEightBall
 - modeTotem
 
 #-----------------
