@@ -32,36 +32,15 @@ config:
 - configSFX.yaml
 # -----------------
 # SOUNDS BY GAME
-#- configGames_SFX/configSFX_BallyViking.yaml
-#- configGames_SFX/configSFX_Globetrotters.yaml
-#- configGames_SFX/configSFX_Bowling.yaml
-#- configGames_SFX/configSFX_BallyStarTrek.yaml
-#- configGames_SFX/configSFX_BallyStrikesSpares.yaml
-#- configGames_SFX/configSFX_MataHari.yaml
-#- configGames_SFX/configSFX_6MDM.yaml
 - configGames_SFX/configSFX_FlashGordon.yaml
 # -----------------
 # FONT / COLOR BY GAME
-#- configGames_FontColor/configFontColor_BallyViking.yaml
-#- configGames_FontColor/configFontColor_BallyStarTrek.yaml
-#- configGames_FontColor/configFontColor_BallyStrikesSpares.yaml
-#- configGames_FontColor/configFontColor_MataHari.yaml
-#- configGames_FontColor/configFontColor_6MDM.yaml
-#- configGames_FontColor/configFontColor_FlashGordon.yaml
 - configGames_FontColor/configFontColor_Voltan.yaml
 # -----------------
 # MUSIC BY GAME
-#- configGames_Music/configMusic_BallyViking.yaml
-#- configGames_Music/configMusic_BallyStarTrek.yaml
-#- configGames_Music/configMusic_BallyStrikesSpares.yaml
-#- configGames_Music/configMusic_MataHari.yaml
-#- configGames_Music/configMusic_6MDM.yaml
 - configGames_Music/configMusic_FlashGordon.yaml
 # -----------------
 # VOICE BY GAME
-#- configGames_Voice/configVoice_BallyStarTrek.yaml
-#- configGames_Voice/configVoice_BallyStrikesSpares.yaml
-#- configGames_Voice/configVoice_MataHari.yaml
 - configGames_Voice/configVoice_FlashGordon.yaml
 
 # ---------------
