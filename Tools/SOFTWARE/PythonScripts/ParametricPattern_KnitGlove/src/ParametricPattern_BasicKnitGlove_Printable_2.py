@@ -911,14 +911,32 @@ if handedness == 'L':
 
 
 
+# # === OUTPUT ===
+# os.makedirs("images", exist_ok=True)
+# timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+# filename = f"ParametricPattern_KnitGlove_{timestamp}_Cable{patternType}_{handedness}.bmp"
+# filepath = os.path.join("images", filename)
+# cv2.imwrite(filepath, image)
+
 # === OUTPUT ===
 os.makedirs("images", exist_ok=True)
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-filename = f"ParametricPattern_KnitGlove_{timestamp}_Cable{patternType}_{handedness}.bmp"
-filepath = os.path.join("images", filename)
-cv2.imwrite(filepath, image)
 
-print(f"Saved {filepath} with size {width}x{height}")
+# BMP filename
+bmp_filename = f"ParametricPattern_KnitGlove_{timestamp}_Cable{patternType}_{handedness}.bmp"
+bmp_filepath = os.path.join("images", bmp_filename)
+cv2.imwrite(bmp_filepath, image)
+
+# PNG filename
+png_filename = f"ParametricPattern_KnitGlove_{timestamp}_Cable{patternType}_{handedness}.png"
+png_filepath = os.path.join("images", png_filename)
+cv2.imwrite(png_filepath, image)
+
+
+# === STATS ===
+# print(f"Saved {filepath} with size {width}x{height}")
+print(f"Saved BMP {bmp_filepath} with size {width}x{height}")
+print(f"Saved PNG {png_filepath} with size {width}x{height}")
 print(f"  palmWidth:        {palmWidth} (odd)")
 print(f"  thumbWidth:       {thumbWidth} (even)")
 print(f"  palmHeight:       {palmHeight} (even)")
@@ -948,7 +966,7 @@ print(f"  THUMB DROP:       {num_thumb_drops} stacked rectangles")
 # Automatically generate output path by changing extension to .png
 #output_path = os.path.splitext(input_path)[0] + '.png'
 input_path = f"images/ParametricPattern_KnitGlove_{timestamp}_Cable{patternType}_{handedness}.bmp"
-output_path = f"images/ParametricPattern_KnitGlove_{timestamp}_Cable{patternType}_{handedness}.png"
+output_path = f"images/ParametricPattern_KnitGlove_{timestamp}_Cable{patternType}_{handedness}_SCALED.png"
 
 # === CONFIGURATION ===
 scale_factor = 100
