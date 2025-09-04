@@ -11,7 +11,13 @@
 # IF NEEDED, COMMAND TO DOWNLOAD ALL REQS FOR THIS PROJECT:
 #   pip3 install -r requirements.txt
 # THEN RUN THE CODE IN "src"
-#   python src/ParametricPattern_KnitGlove_19.py configs/BasicGlove_v40_LARGE_Rios.txt
+#   python src/ParametricPattern_BasicKnitGlove_Printable_2.py
+# THE SCRIPT WILL PROMT YOU TO SELECT A CONFIG BY NUMBER, FOR EXAMPLE...
+#   TYPE "2" THEN ENTER
+# THE SCRIPT WILL OUTPUT THREE FILES:
+#   A PIXEL-PER-STITCH VERSION IN BMP FORMAT
+#   A PIXEL-PER-STITCH VERSION IN PNG FORMAT
+#   A SCALED AND ANNOTATED VERSION FOR PRINTING IN PNG FORMAT
 
 import cv2
 import numpy as np
