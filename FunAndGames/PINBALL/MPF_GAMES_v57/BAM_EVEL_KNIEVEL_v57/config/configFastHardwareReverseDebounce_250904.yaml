@@ -46,43 +46,49 @@ switches:
   # ------------- BANK 0-7 ---------------
   s_0_0:
     number: fastBoard_0-0
-    #N/A
+    tags: sTopLaneB, tagLane
+    platform_settings:
+      debounce_open: 0
+      debounce_close: 250
   s_0_1:
     number: fastBoard_0-1
-    #N/A
+    tags: s10pts, tagBumper
+    platform_settings:
+      debounce_open: 0
+      debounce_close: 250
   s_0_2:
     number: fastBoard_0-2
-    #N/A
+    tags: sRolloverRight2, tagRollover
+    platform_settings:
+      debounce_open: 0
+      debounce_close: 250
   s_0_3:
     number: fastBoard_0-3
-    tags: sDropLeft5, tagDropTarget
+    tags: sRolloverRight1, tagRollover
     platform_settings:
-      debounce_open: 100
-      debounce_close: 100
+      debounce_open: 0
+      debounce_close: 250
   s_0_4:
     number: fastBoard_0-4
-    tags: sDropLeft4, tagDropTarget
+    tags: sDropMid4, tagDropTarget
     platform_settings:
       debounce_open: 100
       debounce_close: 100
   s_0_5:
     number: fastBoard_0-5
-    tags: sDropLeft3, tagDropTarget
+    tags: sDropMid2, tagDropTarget
     platform_settings:
       debounce_open: 100
       debounce_close: 100
   s_0_6:
     number: fastBoard_0-6
-    tags: sDropLeft2, tagDropTarget
+    tags: sReturnLeft, tagReturn
     platform_settings:
-      debounce_open: 100
-      debounce_close: 100
+      debounce_open: 0
+      debounce_close: 250
   s_0_7:
     number: fastBoard_0-7
-    tags: sDropLeft1, tagDropTarget
-    platform_settings:
-      debounce_open: 100
-      debounce_close: 100
+    #N/A
     
   # ------------- BANK 8-15 ---------------
   s_0_8:
@@ -134,34 +140,37 @@ switches:
     #N/A
   s_1_1:
     number: fastBoard_1-1
-    #N/A
+    tags: sDropMid3, tagDropTarget
+    platform_settings:
+      debounce_open: 100
+      debounce_close: 100
   s_1_2:
     number: fastBoard_1-2
-    #N/A
+    tags: sKickout, tagSaucer
+    platform_settings:
+      debounce_open: 100
+      debounce_close: 100
   s_1_3:
     number: fastBoard_1-3
-    #N/A
+    tags: sGate, tagGate
+    platform_settings:
+      debounce_open: 0
+      debounce_close: 250
   s_1_4:
     number: fastBoard_1-4
-    tags: sTargetRight1, tagTarget
-    platform_settings:
-      debounce_open: 0
-      debounce_close: 250
+    #N/A
   s_1_5:
     number: fastBoard_1-5
-    tags: sTargetRight3, tagTarget
-    platform_settings:
-      debounce_open: 0
-      debounce_close: 250
+    #N/A
   s_1_6:
     number: fastBoard_1-6
-    tags: sLaneTop1, tagLane
+    tags: sVariTarget12, tagVariTarget
     platform_settings:
-      debounce_open: 0
-      debounce_close: 250
+      debounce_open: 100
+      debounce_close: 100
   s_1_7:
     number: fastBoard_1-7
-    tags: sOutlaneRight, tagOutlane
+    tags: sBumperDrops, tagBumper
     platform_settings:
       debounce_open: 0
       debounce_close: 250
@@ -169,66 +178,63 @@ switches:
   # ------------- BANK 8-15 ---------------
   s_1_8:
     number: fastBoard_1-8
-    tags: sOutlaneLeft, tagOutlane
+    tags: sTopLaneD, tagLane
     platform_settings:
       debounce_open: 0
       debounce_close: 250
   s_1_9:
     number: fastBoard_1-9
-    tags: sTargetCenter, tagTarget
+    tags: sVariTarget34, tagVariTarget
     platform_settings:
-      debounce_open: 0
-      debounce_close: 250
+      debounce_open: 100
+      debounce_close: 100
   s_1_10:
     number: fastBoard_1-10
-    tags: sLaneTop2, tagLane
-    platform_settings:
-      debounce_open: 0
-      debounce_close: 250
+    #N/A
   s_1_11:
     number: fastBoard_1-11
-    tags: sTargetRight2, tagTarget
+    #N/A
+  s_1_12:
+    number: fastBoard_1-12
+    tags: sTopLaneC, tagLane
     platform_settings:
       debounce_open: 0
       debounce_close: 250
-  s_1_12:
-    number: fastBoard_1-12
-    #N/A
   s_1_13:
     number: fastBoard_1-13
-    #N/A
+    tags: sOutlanes, tagOutlane
+    platform_settings:
+      debounce_open: 0
+      debounce_close: 250
   s_1_14:
     number: fastBoard_1-14
-    #N/A
+    tags: sDropMid5, tagDropTarget
+    platform_settings:
+      debounce_open: 100
+      debounce_close: 100
   s_1_15:
     number: fastBoard_1-15
-    #N/A
+    tags: sReturnRight, tagReturn
+    platform_settings:
+      debounce_open: 0
+      debounce_close: 250
 
   # ------------- BANK 16-23 ---------------
   s_1_16:
     number: fastBoard_1-16
-    tags: sBumperTop1, tagBumper
-    platform_settings:
-      debounce_open: 0
-      debounce_close: 250
+    #N/A
   s_1_17:
     number: fastBoard_1-17
     #N/A
   s_1_18:
     number: fastBoard_1-18
-    tags: sSaucerTop, tagSaucer
-    platform_settings:
-      debounce_open: 100
-      debounce_close: 100
+    #N/A
   s_1_19:
     number: fastBoard_1-19
     #N/A
   s_1_20:
     number: fastBoard_1-20
-    tags: sBumperTop2, tagBumper
-    platform_settings:
-      debounce_open: 0
-      debounce_close: 250
+    #N/A
   s_1_21:
     number: fastBoard_1-21
     tags: sDropMid1, tagDropTarget
