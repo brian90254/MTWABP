@@ -1,0 +1,204 @@
+#config_version=6
+
+slides:
+  # ----------------------
+  # INTRO BONUS
+  # ----------------------
+  slideCollectEndBallBonusTitle:
+    widgets:
+    # -------------------
+    # TITLE BONUS::HEADER
+    # -------------------
+      # -------------------------
+      # TITLE BONUS::HEADER::INNER
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle + 25
+      x: middle
+      z: 40
+      color: colorFontCollectBonusTitleEvelKnievelHeaderInner
+      # -------------------------
+      # TITLE BONUS::HEADER::OUTER::ONE
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle + 26
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle + 24
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle + 26
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle + 24
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter1
+      # -------------------------
+      # TITLE BONUS::HEADER::OUTER::TWO
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle + 27
+      x: middle + 2
+      z: 20
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle + 23
+      x: middle + 2
+      z: 20
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle + 27
+      x: middle - 2
+      z: 20
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle + 23
+      x: middle - 2
+      z: 20
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter2
+
+    # -------------------
+    # TITLE BONUS::MIDDLE
+    # -------------------
+      # -------------------------
+      # TITLE BONUS::MIDDLE::INNER
+      # -------------------------
+    - type: text
+      text: BONUS
+      #style: fontCollectBonusTitleEvelKnievelMiddle
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleEvelKnievelHeader
+      #y: middle + 3
+      #x: middle
+      y: middle - 25
+      x: middle
+      z: 40
+      #font_size: 32
+      #color: colorFontCollectBonusTitleEvelKnievelMiddleInner
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleEvelKnievelHeaderInner
+      # -------------------------
+      # TITLE BONUS::MIDDLE::OUTER::ONE
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle - 26
+      x: middle + 1
+      z: 30
+      #color: colorFontCollectBonusTitleEvelKnievelMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle - 24
+      x: middle + 1
+      z: 30
+      #color: colorFontCollectBonusTitleEvelKnievelMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle - 26
+      x: middle - 1
+      z: 30
+      #color: colorFontCollectBonusTitleEvelKnievelMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle - 24
+      x: middle - 1
+      z: 30
+      #color: colorFontCollectBonusTitleEvelKnievelMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter1
+      # -------------------------
+      # -------------------------
+      # TITLE BONUS::MIDDLE::OUTER::TWO
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle - 27
+      x: middle + 2
+      z: 20
+      #color: colorFontCollectBonusTitleEvelKnievelMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle - 23
+      x: middle + 2
+      z: 20
+      #color: colorFontCollectBonusTitleEvelKnievelMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle - 27
+      x: middle - 2
+      z: 20
+      #color: colorFontCollectBonusTitleEvelKnievelMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleEvelKnievelHeader
+      y: middle - 23
+      x: middle - 2
+      z: 20
+      #color: colorFontCollectBonusTitleEvelKnievelMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleEvelKnievelHeaderOuter2
+      # -------------------------

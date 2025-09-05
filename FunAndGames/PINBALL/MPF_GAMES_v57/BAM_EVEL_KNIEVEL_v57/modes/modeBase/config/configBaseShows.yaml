@@ -1,0 +1,277 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  eventShowSlideBaseShows:
+    slideBaseDMD:
+      target: displayDMD
+    slideBaseBackglass:
+      target: displayBackglass
+
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  # ---------------------
+  # SLIDES::BACKGLASS 
+  # ---------------------
+  slideBaseBackglass:
+    widgets:
+    - type: image
+      image: imageBackglass
+      #z: 3
+      z: 40
+      # --------------------
+      # BITMAP FONT TEST
+      # --------------------
+      # (player1|score)
+    - type: text
+      text: (player1|score)
+      z: 30
+      x: left + 728
+      y: bottom + 872
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment11
+      bitmap_font: true
+    - type: text
+      text: (player2|score)
+      z: 30
+      x: left + 1422
+      y: bottom + 872
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment11
+      bitmap_font: true
+    - type: text
+      text: (player3|score)
+      z: 30
+      x: left + 728
+      y: bottom + 279
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment11
+      bitmap_font: true
+    - type: text
+      text: (player4|score)
+      z: 30
+      x: left + 1419
+      y: bottom + 283
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment11
+      bitmap_font: true
+    - type: text
+      #text: '78 99'
+      text: (player|ball)
+      min_digits: 2
+      z: 30
+      x: left + 1010
+      y: bottom + 156
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment7sm
+      bitmap_font: true
+# -----------------------
+# ADDED 200507
+    - type: text
+      text: (machine|credits_string)
+      min_digits: 2
+      z: 30
+      x: left + 948
+      y: bottom + 156
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment7sm
+      bitmap_font: true
+
+  # ---------------------
+  # SLIDES::BACKGLASS 
+  # ---------------------
+  slideBaseDMD:
+    widgets:
+      # -------------------------------------------------
+      #                       TOP
+      # -------------------------------------------------
+      # -----------------
+      # MOON NAME, CENTER ORANGE
+      # -----------------
+    - type: text
+      text: "(player|nameMoon)"
+      y: top - 23
+      x: middle
+      style: fontBaseMainEvelKnievelHeader
+      color: colorfontBaseMainEvelKnievelHeaderInner
+      
+      # -----------------
+      # MOON NAME, OUTLINE ONE
+      # -----------------
+    - type: text
+      text: (player|nameMoon)
+      y: top - 24
+      x: middle - 1
+      style: fontBaseMainEvelKnievelHeader
+      color: colorfontBaseMainEvelKnievelHeaderOuter1
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 24
+      x: middle + 1
+      style: fontBaseMainEvelKnievelHeader
+      color: colorfontBaseMainEvelKnievelHeaderOuter1
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 22
+      x: middle - 1
+      style: fontBaseMainEvelKnievelHeader
+      color: colorfontBaseMainEvelKnievelHeaderOuter1
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 22
+      x: middle + 1
+      style: fontBaseMainEvelKnievelHeader
+      color: colorfontBaseMainEvelKnievelHeaderOuter1
+      # -------------------------------------------------
+
+      # -----------------
+      # MOON NAME, OUTLINE TWO
+      # -----------------
+    - type: text
+      text: (player|nameMoon)
+      y: top - 25
+      x: middle - 2
+      style: fontBaseMainEvelKnievelHeader
+      color: colorfontBaseMainEvelKnievelHeaderOuter2
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 25
+      x: middle + 2
+      style: fontBaseMainEvelKnievelHeader
+      color: colorfontBaseMainEvelKnievelHeaderOuter2
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 21
+      x: middle - 1
+      style: fontBaseMainEvelKnievelHeader
+      color: colorfontBaseMainEvelKnievelHeaderOuter2
+      
+    - type: text
+      text: (player|nameMoon)
+      y: top - 21
+      x: middle + 2
+      style: fontBaseMainEvelKnievelHeader
+      color: colorfontBaseMainEvelKnievelHeaderOuter2
+      # -------------------------------------------------
+
+
+      # -------------------------------------------------
+      #                       MIDDLE
+      # -------------------------------------------------
+      # -----------------
+      # RED CENTER
+      # -----------------
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 5
+      x: middle
+      style: fontBaseMainEvelKnievelMiddle
+      color: colorfontBaseMainEvelKnievelMiddleInner
+      
+      # -----------------
+      # OUTLINE CYAN
+      # -----------------
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 4
+      x: middle - 1
+      style: fontBaseMainEvelKnievelMiddle
+      color: colorfontBaseMainEvelKnievelMiddleOuter1
+      
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 4
+      x: middle + 1
+      style: fontBaseMainEvelKnievelMiddle
+      color: colorfontBaseMainEvelKnievelMiddleOuter1
+      
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 6
+      x: middle + 1
+      style: fontBaseMainEvelKnievelMiddle
+      color: colorfontBaseMainEvelKnievelMiddleOuter1
+      
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 6
+      x: middle - 1
+      style: fontBaseMainEvelKnievelMiddle
+      color: colorfontBaseMainEvelKnievelMiddleOuter1
+      # -------------------------------------------------
+
+
+      # -------------------------------------------------
+      #                       BOTTOM
+      # -------------------------------------------------
+      # -----------------
+      # CENTER YELLOW
+      # -----------------
+    - type: text
+      text: Player (player|number)    Ball (player|ball)
+      anchor_y: bottom
+      y: bottom + 5
+      x: middle
+      style: fontBaseMainEvelKnievelFooter
+      color: colorfontBaseMainEvelKnievelFooterInner
+      
+      # -----------------
+      # OUTLINE GREEN
+      # -----------------
+    - type: text
+      text: Player (player|number)    Ball (player|ball)
+      anchor_y: bottom
+      y: bottom + 6
+      x: middle - 1
+      style: fontBaseMainEvelKnievelFooter
+      color: colorfontBaseMainEvelKnievelFooterOuter1
+      
+    - type: text
+      text: Player (player|number)    Ball (player|ball)
+      anchor_y: bottom
+      y: bottom + 6
+      x: middle + 1
+      style: fontBaseMainEvelKnievelFooter
+      color: colorfontBaseMainEvelKnievelFooterOuter1
+      
+    - type: text
+      text: Player (player|number)    Ball (player|ball)
+      anchor_y: bottom
+      y: bottom + 4
+      x: middle + 1
+      style: fontBaseMainEvelKnievelFooter
+      color: colorfontBaseMainEvelKnievelFooterOuter1
+      
+    - type: text
+      text: Player (player|number)    Ball (player|ball)
+      anchor_y: bottom
+      y: bottom + 4
+      x: middle - 1
+      style: fontBaseMainEvelKnievelFooter
+      color: colorfontBaseMainEvelKnievelFooterOuter1
+      # -------------------------------------------------

@@ -1,0 +1,116 @@
+#config_version=6
+
+config:
+- configShotsEvelKnievel.yaml
+- configAchEvelKnievelBonus.yaml
+- configScoringEvelKnievel.yaml
+- configShowsEvelKnievel.yaml
+- configAchEvelKnievelVariTarget.yaml
+- configShowsEvelKnievelVariTarget.yaml
+- configEvelKnievelExtraBall.yaml
+
+mode:
+  start_events: eventStartModeEvelKnievel
+  stop_events:
+    - eventStopModeEvelKnievel
+    - ball_ending
+    
+  priority: 2000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+  # -----------------------------------
+  # VOICE CALLOUT TWIKI
+  # -----------------------------------
+  sgVariTarget_unlitVariTarget_hit:
+    - playPoolVoiceEvelKnievelTwiki
+
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeEvelKnievel_started:
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeEvelKnievelStart
+    
+    # -----------------------------------
+    # ENABLE BONUS
+    # -----------------------------------
+    # ONES
+    - eventResetAchBonusOnes
+    - eventEnableAchBonusOnes
+    - eventStartAchBonus0
+    - eventCompleteBonusOnes|1s
+    # TENS
+    - eventResetAchBonusTens
+    - eventEnableAchBonusTens
+
+    # -----------------------------------
+    # RESET BUCK ROGERS SHOTS (RESET BEFORE ENABLE)
+    # -----------------------------------
+    #- eventResetShotTopLaneB
+    #- eventResetShotTopLaneU
+    #- eventResetShotTopLaneC
+    #- eventResetShotTopLaneK
+    #- eventResetShotGroupTopLanes
+    
+    - eventResetAchVariTarget
+    - eventResetShotVariTarget
+    - eventResetShotGroupVariTarget
+  
+    #- eventResetShotExtraBall
+    #- eventResetShotSaucerBonus
+    #- eventResetShotAdvanceMultipliers
+    
+    # -----------------------------------
+    # ENABLE BUCK ROGERS SHOTS (ENABLE AFTER RESET)
+    # -----------------------------------
+    - eventEnableShotTopLaneB
+    - eventEnableShotTopLaneU
+    - eventEnableShotTopLaneC
+    - eventEnableShotTopLaneK
+    - eventEnableShotGroupTopLanes
+
+    - eventEnableShotVariTarget
+    - eventEnableShotGroupVariTarget
+    - eventEnableAgAchVariTarget
+    
+    #- eventEnableShotAdvanceMultipliers
+    
+    # -----------------------------------
+    # START BUCK ROGERS SHOTS
+    # -----------------------------------
+    - eventEnableAchVariTarget1
+    - eventSelectAchVariTarget1
+    - eventStartAchVariTarget1
+    
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersEvelKnievel
+
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  mode_modeEvelKnievel_started:
+    nameMoon:
+      string: "EvelKnievel"
+      action: set
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+#show_player:
+# ---------------------
+# SHOW::PLAYER::COILS
+# ---------------------
+
+  #ball_hold_ballHoldSaucer_held_ball:
+  #  showBallHoldSaucer:
+  #    loops: 0
+  #    speed: 1

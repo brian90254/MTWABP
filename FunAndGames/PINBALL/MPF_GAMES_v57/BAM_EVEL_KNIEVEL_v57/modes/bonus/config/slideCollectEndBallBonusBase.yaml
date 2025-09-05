@@ -1,0 +1,244 @@
+#config_version=6
+
+slides:
+  # ----------------------
+  # BASE BONUS
+  # ----------------------
+  slideCollectEndBallBonusBase:
+    widgets:
+    # -------------------
+    # BASE BONUS::HEADER
+    # -------------------
+      # -------------------------
+      # BASE BONUS::HEADER::INNER
+      # -------------------------
+    - type: text
+      text: BONUS BASE
+      style: fontCollectBonusEvelKnievelHeader
+      y: top - 17
+      x: middle
+      z: 40
+      color: colorFontCollectBonusEvelKnievelHeaderInner
+      # -------------------------
+      # BASE BONUS::HEADER::OUTER::ONE
+      # -------------------------
+    - type: text
+      text: BONUS BASE
+      style: fontCollectBonusEvelKnievelHeader
+      y: top - 18
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusEvelKnievelHeaderOuter1
+      # --------------------------
+    - type: text
+      text: BONUS BASE
+      style: fontCollectBonusEvelKnievelHeader
+      y: top - 18
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusEvelKnievelHeaderOuter1
+      # --------------------------
+    - type: text
+      text: BONUS BASE
+      style: fontCollectBonusEvelKnievelHeader
+      y: top - 16
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusEvelKnievelHeaderOuter1
+      # --------------------------
+    - type: text
+      text: BONUS BASE
+      style: fontCollectBonusEvelKnievelHeader
+      y: top - 16
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusEvelKnievelHeaderOuter1
+      # -------------------------
+      # BASE BONUS::HEADER::OUTER::TWO
+      # -------------------------
+    - type: text
+      text: BONUS BASE
+      style: fontCollectBonusEvelKnievelHeader
+      y: top - 19
+      x: middle + 2
+      z: 30
+      color: colorFontCollectBonusEvelKnievelHeaderOuter2
+      # --------------------------
+    - type: text
+      text: BONUS BASE
+      style: fontCollectBonusEvelKnievelHeader
+      y: top - 19
+      x: middle - 2
+      z: 30
+      color: colorFontCollectBonusEvelKnievelHeaderOuter2
+      # --------------------------
+    - type: text
+      text: BONUS BASE
+      style: fontCollectBonusEvelKnievelHeader
+      y: top - 15
+      x: middle + 2
+      z: 30
+      color: colorFontCollectBonusEvelKnievelHeaderOuter2
+      # --------------------------
+    - type: text
+      text: BONUS BASE
+      style: fontCollectBonusEvelKnievelHeader
+      y: top - 15
+      x: middle - 2
+      z: 30
+      color: colorFontCollectBonusEvelKnievelHeaderOuter2
+
+  # -------------------
+  # BASE BONUS::MIDDLE
+  # -------------------
+      # -------------------------
+      # BASE BONUS::MIDDLE::INNER
+      # -------------------------
+    - type: text
+      text: "(player|totalBonus),000"
+      style: fontCollectBonusEvelKnievelMiddle
+      y: middle - 3
+      x: middle
+      color: colorFontCollectBonusEvelKnievelMiddleInner
+      # -------------------------
+      # BASE BONUS::MIDDLE::OUTER::ONE
+      # -------------------------
+    - type: text
+      text: "(player|totalBonus),000"
+      style: fontCollectBonusEvelKnievelMiddle
+      y: middle - 4
+      x: middle + 1
+      color: colorFontCollectBonusEvelKnievelMiddleOuter1
+      # --------------------------
+    - type: text
+      text: "(player|totalBonus),000"
+      style: fontCollectBonusEvelKnievelMiddle
+      y: middle - 2
+      x: middle + 1
+      color: colorFontCollectBonusEvelKnievelMiddleOuter1
+      # --------------------------
+    - type: text
+      text: "(player|totalBonus),000"
+      style: fontCollectBonusEvelKnievelMiddle
+      y: middle - 4
+      x: middle - 1
+      color: colorFontCollectBonusEvelKnievelMiddleOuter1
+      # --------------------------
+    - type: text
+      text: "(player|totalBonus),000"
+      style: fontCollectBonusEvelKnievelMiddle
+      y: middle - 2
+      x: middle - 1
+      color: colorFontCollectBonusEvelKnievelMiddleOuter1
+      # -------------------------
+      # BASE BONUS::MIDDLE::OUTER::TWO
+      # -------------------------
+    - type: text
+      text: "(player|totalBonus),000"
+      style: fontCollectBonusEvelKnievelMiddle
+      y: middle - 5
+      x: middle + 2
+      color: colorFontCollectBonusEvelKnievelMiddleOuter2
+      # --------------------------
+    - type: text
+      text: "(player|totalBonus),000"
+      style: fontCollectBonusEvelKnievelMiddle
+      y: middle - 1
+      x: middle + 2
+      color: colorFontCollectBonusEvelKnievelMiddleOuter2
+      # --------------------------
+    - type: text
+      text: "(player|totalBonus),000"
+      style: fontCollectBonusEvelKnievelMiddle
+      y: middle - 5
+      x: middle - 2
+      color: colorFontCollectBonusEvelKnievelMiddleOuter2
+      # --------------------------
+    - type: text
+      text: "(player|totalBonus),000"
+      style: fontCollectBonusEvelKnievelMiddle
+      y: middle - 1
+      x: middle - 2
+      color: colorFontCollectBonusEvelKnievelMiddleOuter2
+
+  # -------------------
+  # BASE BONUS::FOOTER
+  # -------------------
+      # -------------------------
+      # BASE BONUS::FOOTER::INNER
+      # -------------------------
+    - type: text
+      text: BONUS COLLECTION
+      style: fontCollectBonusEvelKnievelFooter
+      anchor_y: bottom
+      y: bottom + 5
+      x: middle
+      color: colorFontCollectBonusEvelKnievelFooterInner
+      # -------------------
+      # SCORE BONUS::FOOTER::OUTER ONE
+      # -------------------
+    - type: text
+      text: BONUS COLLECTION
+      style: fontCollectBonusEvelKnievelFooter
+      anchor_y: bottom
+      y: bottom + 6
+      x: middle + 1
+      color: colorFontCollectBonusEvelKnievelFooterOuter1
+      # ----------------
+    - type: text
+      text: BONUS COLLECTION
+      style: fontCollectBonusEvelKnievelFooter
+      anchor_y: bottom
+      y: bottom + 6
+      x: middle - 1
+      color: colorFontCollectBonusEvelKnievelFooterOuter1
+      # ----------------
+    - type: text
+      text: BONUS COLLECTION
+      style: fontCollectBonusEvelKnievelFooter
+      anchor_y: bottom
+      y: bottom + 4
+      x: middle + 1
+      color: colorFontCollectBonusEvelKnievelFooterOuter1
+      # ----------------
+    - type: text
+      text: BONUS COLLECTION
+      style: fontCollectBonusEvelKnievelFooter
+      anchor_y: bottom
+      y: bottom + 4
+      x: middle - 1
+      color: colorFontCollectBonusEvelKnievelFooterOuter1
+      # -------------------
+      # SCORE BONUS::FOOTER::OUTER TWO
+      # -------------------
+    - type: text
+      text: BONUS COLLECTION
+      style: fontCollectBonusEvelKnievelFooter
+      anchor_y: bottom
+      y: bottom + 7
+      x: middle + 2
+      color: colorFontCollectBonusEvelKnievelFooterOuter2
+      # ----------------
+    - type: text
+      text: BONUS COLLECTION
+      style: fontCollectBonusEvelKnievelFooter
+      anchor_y: bottom
+      y: bottom + 7
+      x: middle - 2
+      color: colorFontCollectBonusEvelKnievelFooterOuter2
+      # ----------------
+    - type: text
+      text: BONUS COLLECTION
+      style: fontCollectBonusEvelKnievelFooter
+      anchor_y: bottom
+      y: bottom + 3
+      x: middle + 2
+      color: colorFontCollectBonusEvelKnievelFooterOuter2
+      # ----------------
+    - type: text
+      text: BONUS COLLECTION
+      style: fontCollectBonusEvelKnievelFooter
+      anchor_y: bottom
+      y: bottom + 3
+      x: middle - 2
+      color: colorFontCollectBonusEvelKnievelFooterOuter2

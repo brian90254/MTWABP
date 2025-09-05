@@ -1,0 +1,233 @@
+#config_version=6
+
+config:
+- configBaseShows.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 100
+
+# ---------------------
+# SWITCHES::COMBO
+# ---------------------
+combo_switches:
+  
+  comboSwitchEndGame:
+    # FLIPPER::RIGHT
+    switches_1: s_0_10
+    # START
+    switches_2: s_0_8
+    hold_time: 2s
+    events_when_both: end_game
+    
+  comboSwitchEnableAutofireKickerLeft:
+    switches_1: s_0_10
+    switches_2: s_0_9
+    hold_time: 2s
+    events_when_both: eventEnableAutofireKickerLeft
+
+# ---------------------
+# RANDOM::EVENT::PLAYER
+# ---------------------
+random_event_player:
+    eventShowSlideVideoTest1:
+      scope: player
+      events:
+        #- eventShowVideoBuckRogersTest
+        - eventShowVideoBuckRogers_WouldYouLikeToDance
+        - eventShowVideoBuckRogers_WhatsHappened
+        - eventShowVideoBuckRogers_ThankGoodness
+        - eventShowVideoBuckRogers_PreflightedYourShip
+        - eventShowVideoBuckRogers_DinnerDate
+        - eventShowVideoBuckRogers_ReallyOutstanding
+        - eventShowVideoBuckRogers_MakingDinnerTonight
+        - eventShowVideoBuckRogers_ImNotYourMother
+        - eventShowVideoBuckRogers_HopingYoudSayThat
+        - eventShowVideoBuckRogers_GotAnyPlansTonight
+        - eventShowVideoBuckRogers_FatChanceBub
+        - eventShowVideoBuckRogers_BuckCanBePersuasive
+        - eventShowVideoBuckRogers_BeThereTonight
+        - eventShowVideoBuckRogers_HowsThat
+        
+    ball_hold_ballHoldSaucer_held_ball:
+      scope: player
+      events:
+        - eventShowVideoBuckRogers_WouldYouLikeToDance
+        - eventShowVideoBuckRogers_WhatsHappened
+        - eventShowVideoBuckRogers_ThankGoodness
+        - eventShowVideoBuckRogers_PreflightedYourShip
+        - eventShowVideoBuckRogers_DinnerDate
+        - eventShowVideoBuckRogers_ReallyOutstanding
+        - eventShowVideoBuckRogers_MakingDinnerTonight
+        - eventShowVideoBuckRogers_ImNotYourMother
+        - eventShowVideoBuckRogers_HopingYoudSayThat
+        - eventShowVideoBuckRogers_GotAnyPlansTonight
+        - eventShowVideoBuckRogers_FatChanceBub
+        - eventShowVideoBuckRogers_BuckCanBePersuasive
+        - eventShowVideoBuckRogers_BeThereTonight
+        - eventShowVideoBuckRogers_HowsThat
+        
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  ball_started:
+    - eventStartModeSkillShot
+    - eventResetMultipliers
+    # NEW
+    - eventShowSlideBaseShows
+    #- eventResetVariTarget
+    - eventEnableCoilVariTarget
+    - eventDisableCoilVariTarget|1000ms
+    
+  # ----------------------------
+  # START MODE GLOBETROTTERS
+  # ----------------------------
+  mode_modeBase_started:
+    #- eventStartModeBuckRogers
+    - eventStartModeEvelKnievel
+    # VOICE CALLOUT ON BALL LAUNCH
+    - playPoolVoiceBuckRogersLaunch
+
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+      
+  eventShowVideoBuckRogersTest:
+    showVideoBuckRogersTest:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_WouldYouLikeToDance:
+    showVideoBuckRogers_WouldYouLikeToDance:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_WhatsHappened:
+    showVideoBuckRogers_WhatsHappened:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_ThankGoodness:
+    showVideoBuckRogers_ThankGoodness:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_PreflightedYourShip:
+    showVideoBuckRogers_PreflightedYourShip:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_HopingYoudSayThat:
+    showVideoBuckRogers_HopingYoudSayThat:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_DinnerDate:
+    showVideoBuckRogers_DinnerDate:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_ReallyOutstanding:
+    showVideoBuckRogers_ReallyOutstanding:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_MakingDinnerTonight:
+    showVideoBuckRogers_MakingDinnerTonight:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+
+  eventShowVideoBuckRogers_ImNotYourMother:
+    showVideoBuckRogers_ImNotYourMother:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_GotAnyPlansTonight:
+    showVideoBuckRogers_GotAnyPlansTonight:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_FatChanceBub:
+    showVideoBuckRogers_FatChanceBub:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_BuckCanBePersuasive:
+    showVideoBuckRogers_BuckCanBePersuasive:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_BeThereTonight:
+    showVideoBuckRogers_BeThereTonight:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+      
+  eventShowVideoBuckRogers_HowsThat:
+    showVideoBuckRogers_HowsThat:
+      loops: 0
+      speed: 1
+      key: keyShowVideoBuckRogers
+
+# ---------------------
+# PLAYLIST::PLAYER
+# ---------------------
+playlist_player:
+
+  eventPauseTrackPlaylist:
+    trackplaylist:
+      action: stop
+      
+  eventResumeTrackPlaylist:
+    trackplaylist:
+      playlist: playlistModeBuckRogersMusic
+      action: play
+      
+# ---------------------
+# COIL::PLAYER
+# ---------------------
+coil_player:
+  # ----------------------------
+  # RESET VARI-TARGET
+  # ----------------------------
+  eventEnableCoilVariTarget:
+    # VARI-TARGET COIL
+    #c_1_1:
+    c_1_6:
+      action: enable
+
+  eventDisableCoilVariTarget:
+    # VARI-TARGET COIL
+    #c_1_1:
+    c_1_6:
+      action: disable
+      
+  sw_tagLaunch:
+    # VARI-TARGET COIL
+    #c_1_1:
+    c_1_6:
+      action: pulse
+      
+  eventPulseCoilVariTarget:
+    # VARI-TARGET COIL
+    #c_1_1:
+    c_1_6:
+      action: pulse

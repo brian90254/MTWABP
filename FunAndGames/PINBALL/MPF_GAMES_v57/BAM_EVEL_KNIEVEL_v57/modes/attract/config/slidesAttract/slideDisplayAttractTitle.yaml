@@ -1,0 +1,194 @@
+#config_version=6
+
+# *********************
+# CHARLIE'S EvelKnievel
+# *********************
+
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  # *************************
+  # CHARLIE'S EvelKnievel TITLE :: ONE
+  # *************************
+  slideDisplayAttractTitle:
+    target: displayDMD
+    widgets:
+    #   # --------------------
+    #   # IRON - CENTER TEXT
+    #   # --------------------
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 25
+    #   x: middle
+    #   style: fontAttractTitleEvelKnievelHeader
+    #   color: colorFontAttractTitleEvelKnievelHeaderInner
+    #   z: 20
+    #   # --------------------
+    #   # IRON - OUTLINE
+    #   # --------------------
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 26
+    #   x: middle + 1
+    #   style: fontAttractTitleEvelKnievelHeader
+    #   color: colorFontAttractTitleEvelKnievelHeaderOuter1
+    #   z: 15
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 26
+    #   x: middle - 1
+    #   style: fontAttractTitleEvelKnievelHeader
+    #   color: colorFontAttractTitleEvelKnievelHeaderOuter1
+    #   z: 15
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 24
+    #   x: middle + 1
+    #   style: fontAttractTitleEvelKnievelHeader
+    #   color: colorFontAttractTitleEvelKnievelHeaderOuter1
+    #   z: 15
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 24
+    #   x: middle - 1
+    #   style: fontAttractTitleEvelKnievelHeader
+    #   color: colorFontAttractTitleEvelKnievelHeaderOuter1
+    #   z: 15
+    #   # --------------------
+    #   # IRON - DOUBLE _ OUTLINE
+    #   # --------------------
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 27
+    #   x: middle + 2
+    #   style: fontAttractTitleEvelKnievelHeader
+    #   color: colorFontAttractTitleEvelKnievelHeaderOuter2
+    #   z: 10
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 27
+    #   x: middle - 2
+    #   style: fontAttractTitleEvelKnievelHeader
+    #   color: colorFontAttractTitleEvelKnievelHeaderOuter2
+    #   z: 10
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 23
+    #   x: middle + 2
+    #   style: fontAttractTitleEvelKnievelHeader
+    #   color: colorFontAttractTitleEvelKnievelHeaderOuter2
+    #   z: 10
+    # - type: text
+    #   text: CHARLIE'S
+    #   y: middle + 23
+    #   x: middle - 2
+    #   style: fontAttractTitleEvelKnievelHeader
+    #   color: colorFontAttractTitleEvelKnievelHeaderOuter2
+    #   z: 10
+      # --------------------
+      # EvelKnievel - CENTER TEXT
+      # --------------------
+    - type: text
+      text: EvelKnievel
+      y: middle
+      x: middle
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleInner
+      z: 20
+      # --------------------
+      # MAIDEN - OUTLINE
+      # --------------------
+    - type: text
+      text: EvelKnievel
+      y: middle - 2
+      x: middle - 2
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter1
+      z: 15
+    - type: text
+      text: EvelKnievel
+      y: middle - 2
+      x: middle + 2
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter1
+      z: 15
+    - type: text
+      text: EvelKnievel
+      y: middle + 2
+      x: middle - 2
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter1
+      z: 15
+    - type: text
+      text: EvelKnievel
+      y: middle + 2
+      x: middle + 2
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter1
+      z: 15
+      # --------------------
+      # MAIDEN - DOUBLE - OUTLINE
+      # --------------------
+    - type: text
+      text: EvelKnievel
+      y: middle - 4
+      x: middle - 4
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter2
+      z: 10
+    - type: text
+      text: EvelKnievel
+      y: middle - 4
+      x: middle + 4
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter2
+      z: 10
+    - type: text
+      text: EvelKnievel
+      y: middle + 4
+      x: middle - 4
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter2
+      z: 10
+    - type: text
+      text: EvelKnievel
+      y: middle + 4
+      x: middle + 4
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter2
+      z: 10
+      # --------------------
+      # COLOR OUTLINE
+      # --------------------
+    - type: rectangle
+      color: colorBoxAttractTitleEvelKnievelOuter
+      width: 236
+      height: 130
+      x: 120
+      y: 67
+      z: 3
+    - type: rectangle
+      color: colorBoxAttractTitleEvelKnievelMiddle
+      width: 232
+      height: 126
+      x: 120
+      y: 67
+      z: 5
+    - type: rectangle
+      color: colorBoxAttractTitleEvelKnievelInner
+      width: 228
+      height: 122
+      x: 120
+      y: 67
+      z: 6
+      # --------------------
+      # BLACK INFILL
+      # --------------------
+    - type: rectangle
+      color: colorBoxAttractTitleEvelKnievelFill
+      width: 224
+      height: 118
+      x: 120
+      y: 67
+      z: 7
