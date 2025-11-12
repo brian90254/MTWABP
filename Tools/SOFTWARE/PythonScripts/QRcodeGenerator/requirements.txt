@@ -1,0 +1,9 @@
+# requirements.txt
+qrcode==7.4.2
+Pillow==10.0.0
+# Optional
+colorama==0.4.6     # for colored console messages
+termcolor==2.4.0    # for styled terminal output
+# OPEN CV and NumPy for image processing
+opencv-python>=4.8.0
+numpy>=1.24.0
