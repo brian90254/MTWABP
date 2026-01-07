@@ -22,7 +22,9 @@ import qrcode
 # url = "https://bit.ly/MTWABP1"  # use shortened URL
 # http://www.space-eight.com/PortalMindMap_MTWABP_1.html
 # url = "https://www.space-eight.com/PINBALL.html"  # use shortened URL
-url = "http://www.space-eight.com/PortalMindMap_MTWABP_1.html"
+# url = "http://www.space-eight.com/PortalMindMap_MTWABP_1.html"
+# url = "https://www.youtube.com/playlist?list=PLdSfbvcZ5Bcb5yycEkbfaCs9yi-xZtaS0"
+url = "https://www.youtube.com/playlist?list=PLdSfbvcZ5BcacgBrc7qFDFsXvZhY3QDL0"
 
 qr = qrcode.QRCode(
     version=1,  # smallest grid size
