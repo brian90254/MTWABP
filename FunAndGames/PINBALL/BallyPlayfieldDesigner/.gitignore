@@ -24,3 +24,7 @@ __pycache__/
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+# VECTOR FILES
+OUTPUT/*.svg
+OUTPUT/*.pdf
