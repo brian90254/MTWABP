@@ -15,6 +15,16 @@ config:
 mode:
   priority: 10000
 
+# ---------------------
+# SWITCHES::COMBO
+# ---------------------
+combo_switches:
+  comboSwitchStartGame:
+    switches_1: s_0_0
+    switches_2: s_0_7
+    hold_time: 2s
+    events_when_both: start_game
+
 # ************************************
 # SOUND::PLAYER
 # ************************************
