@@ -54,6 +54,9 @@ game:
   max_players: 4
   allow_start_with_loose_balls: true
 
+start_game_event:
+  - eventStartGame
+
 machine:
   # Standard FAST trough is six balls
   balls_installed: 1

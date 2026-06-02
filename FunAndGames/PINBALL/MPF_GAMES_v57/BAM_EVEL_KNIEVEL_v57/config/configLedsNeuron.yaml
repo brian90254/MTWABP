@@ -611,17 +611,17 @@ lights:
   # -------------------------------------
   # STANDUP :: CYCLE 1C
   # -------------------------------------
-  ledStandupCycle1C1:
+  ledTopLaneCycle1C1:
     number: expPlayfield_0-4-11
     type: grb
     subtype: led
 
-  ledStandupCycle1C2:
+  ledTopLaneCycle1C2:
     number: expPlayfield_0-4-12
     type: grb
     subtype: led
 
-  ledStandupCycle1C3:
+  ledTopLaneCycle1C3:
     number: expPlayfield_0-4-13
     type: grb
     subtype: led
@@ -719,17 +719,17 @@ lights:
   # -------------------------------------
   # STANDUP :: CYCLE Y
   # -------------------------------------
-  ledStandupCycleY1:
+  ledTopLaneCycleY1:
     number: expPlayfield_0-4-29
     type: grb
     subtype: led
 
-  ledStandupCycleY2:
+  ledTopLaneCycleY2:
     number: expPlayfield_0-4-30
     type: grb
     subtype: led
 
-  ledStandupCycleY3:
+  ledTopLaneCycleY3:
     number: expPlayfield_0-4-31
     type: grb
     subtype: led

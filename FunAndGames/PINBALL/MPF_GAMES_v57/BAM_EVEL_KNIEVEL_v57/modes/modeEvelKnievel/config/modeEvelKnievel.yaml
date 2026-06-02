@@ -1,13 +1,13 @@
 #config_version=6
 
 config:
-- configShotsEvelKnievel.yaml
-- configAchEvelKnievelBonus.yaml
-- configScoringEvelKnievel.yaml
-- configShowsEvelKnievel.yaml
-- configAchEvelKnievelVariTarget.yaml
-- configShowsEvelKnievelVariTarget.yaml
-- configEvelKnievelExtraBall.yaml
+ - configShotsEvelKnievel.yaml
+ - configAchEvelKnievelBonus.yaml
+ - configScoringEvelKnievel.yaml
+ - configShowsEvelKnievel.yaml
+ - configAchEvelKnievelVariTarget.yaml
+ - configShowsEvelKnievelVariTarget.yaml
+ - configEvelKnievelExtraBall.yaml
 
 mode:
   start_events: eventStartModeEvelKnievel
@@ -22,11 +22,11 @@ mode:
 # ---------------------
 event_player:
 
-  # -----------------------------------
-  # VOICE CALLOUT TWIKI
-  # -----------------------------------
-  sgVariTarget_unlitVariTarget_hit:
-    - playPoolVoiceEvelKnievelTwiki
+  # # -----------------------------------
+  # # VOICE CALLOUT TWIKI
+  # # -----------------------------------
+  # sgVariTarget_unlitVariTarget_hit:
+  #   - playPoolVoiceEvelKnievelTwiki
 
   # -----------------------------------
   # MODE SPECIFIC EVENTS
@@ -58,35 +58,35 @@ event_player:
     #- eventResetShotTopLaneK
     #- eventResetShotGroupTopLanes
     
-    - eventResetAchVariTarget
-    - eventResetShotVariTarget
-    - eventResetShotGroupVariTarget
+    # - eventResetAchVariTarget
+    # - eventResetShotVariTarget
+    # - eventResetShotGroupVariTarget
   
     #- eventResetShotExtraBall
     #- eventResetShotSaucerBonus
     #- eventResetShotAdvanceMultipliers
     
-    # -----------------------------------
-    # ENABLE BUCK ROGERS SHOTS (ENABLE AFTER RESET)
-    # -----------------------------------
-    - eventEnableShotTopLaneB
-    - eventEnableShotTopLaneU
-    - eventEnableShotTopLaneC
-    - eventEnableShotTopLaneK
-    - eventEnableShotGroupTopLanes
+    # # -----------------------------------
+    # # ENABLE BUCK ROGERS SHOTS (ENABLE AFTER RESET)
+    # # -----------------------------------
+    # - eventEnableShotTopLaneB
+    # - eventEnableShotTopLaneU
+    # - eventEnableShotTopLaneC
+    # - eventEnableShotTopLaneK
+    # - eventEnableShotGroupTopLanes
 
-    - eventEnableShotVariTarget
-    - eventEnableShotGroupVariTarget
-    - eventEnableAgAchVariTarget
+    # - eventEnableShotVariTarget
+    # - eventEnableShotGroupVariTarget
+    # - eventEnableAgAchVariTarget
     
     #- eventEnableShotAdvanceMultipliers
     
-    # -----------------------------------
-    # START BUCK ROGERS SHOTS
-    # -----------------------------------
-    - eventEnableAchVariTarget1
-    - eventSelectAchVariTarget1
-    - eventStartAchVariTarget1
+    # # -----------------------------------
+    # # START BUCK ROGERS SHOTS
+    # # -----------------------------------
+    # - eventEnableAchVariTarget1
+    # - eventSelectAchVariTarget1
+    # - eventStartAchVariTarget1
     
     # ---------------------
     # EVENT::RESET::MULTIPLIERS

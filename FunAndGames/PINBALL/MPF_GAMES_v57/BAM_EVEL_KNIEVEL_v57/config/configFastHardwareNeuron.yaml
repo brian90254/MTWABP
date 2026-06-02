@@ -84,20 +84,12 @@ switches:
       debounce_close: 0
   s_0_5:
     number: fastBoard_0-5
-    tags: sTargetRight3, tagTarget
-    platform_settings:
-      debounce_open: 250
-      debounce_close: 0
     tags: sReturnLeft, tagReturn
     platform_settings:
       debounce_open: 250
       debounce_close: 0
   s_0_6:
     number: fastBoard_0-6
-    tags: sLaneTop1, tagLane
-    platform_settings:
-      debounce_open: 250
-      debounce_close: 0
     tags: sOutlaneLeft, tagOutlane
     platform_settings:
       debounce_open: 250
@@ -123,10 +115,6 @@ switches:
       debounce_close: 0
   s_0_10:
     number: fastBoard_0-10
-    tags: sLaneTop2, tagLane
-    platform_settings:
-      debounce_open: 250
-      debounce_close: 0
     tags: sTargetRight3, tagTarget
     platform_settings:
       debounce_open: 250

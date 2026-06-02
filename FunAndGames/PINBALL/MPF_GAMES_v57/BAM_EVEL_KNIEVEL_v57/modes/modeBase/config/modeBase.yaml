@@ -201,33 +201,33 @@ playlist_player:
       playlist: playlistModeBuckRogersMusic
       action: play
       
-# ---------------------
-# COIL::PLAYER
-# ---------------------
-coil_player:
-  # ----------------------------
-  # RESET VARI-TARGET
-  # ----------------------------
-  eventEnableCoilVariTarget:
-    # VARI-TARGET COIL
-    #c_1_1:
-    c_1_6:
-      action: enable
+# # ---------------------
+# # COIL::PLAYER
+# # ---------------------
+# coil_player:
+#   # ----------------------------
+#   # RESET VARI-TARGET
+#   # ----------------------------
+#   eventEnableCoilVariTarget:
+#     # VARI-TARGET COIL
+#     #c_1_1:
+#     c_1_6:
+#       action: enable
 
-  eventDisableCoilVariTarget:
-    # VARI-TARGET COIL
-    #c_1_1:
-    c_1_6:
-      action: disable
+#   eventDisableCoilVariTarget:
+#     # VARI-TARGET COIL
+#     #c_1_1:
+#     c_1_6:
+#       action: disable
       
-  sw_tagLaunch:
-    # VARI-TARGET COIL
-    #c_1_1:
-    c_1_6:
-      action: pulse
+#   sw_tagLaunch:
+#     # VARI-TARGET COIL
+#     #c_1_1:
+#     c_1_6:
+#       action: pulse
       
-  eventPulseCoilVariTarget:
-    # VARI-TARGET COIL
-    #c_1_1:
-    c_1_6:
-      action: pulse
+#   eventPulseCoilVariTarget:
+#     # VARI-TARGET COIL
+#     #c_1_1:
+#     c_1_6:
+#       action: pulse
