@@ -7,7 +7,58 @@
 # ************************************
 sounds:
 # ---------------------
-# SOUNDS::MUSIC::THEME
+# SOUNDS::MUSIC::THEME::EVEL KNIEVEL
+# ---------------------
+  musicEvelKnievelTheme001:
+    file: musicEvelKnievelTheme_GhostRider_001.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicEvelKnievelTheme002:
+    file: musicEvelKnievelTheme_HighwayStar_002.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicEvelKnievelTheme003:
+    file: musicEvelKnievelTheme_HocusPokus_003.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicEvelKnievelTheme004:
+    file: musicEvelKnievelTheme_AceOfSpades_004.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicEvelKnievelTheme005:
+    file: musicEvelKnievelTheme_Paranoid_005.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicEvelKnievelTheme006:
+    file: musicEvelKnievelTheme_YYZ_006.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicEvelKnievelTheme007:
+    file: musicEvelKnievelTheme_KickstartMyHeart_007.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicEvelKnievelTheme008:
+    file: musicEvelKnievelTheme_MotorcycleDriver_008.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+# ---------------------
+# SOUNDS::MUSIC::THEME::PLAYBOY
 # ---------------------
   musicPlayboyTheme001:
     file: musicPlayboyTheme_RunningFast_001.wav
@@ -164,30 +215,38 @@ sound_pools:
     track: music
     type: random_force_all
     sounds:
-      - musicPlayboyTheme001
-      #- musicPlayboyTheme002
-      #- musicPlayboyTheme003
-      - musicPlayboyTheme004
-      #- musicPlayboyTheme005
-      #- musicPlayboyTheme006
-      #- musicPlayboyTheme007
-      - musicPlayboyTheme008
-      #- musicPlayboyTheme009
-      #- musicPlayboyTheme010
-      #- musicPlayboyTheme011
-      #- musicPlayboyTheme012
-      #- musicPlayboyTheme013
-      #- musicPlayboyTheme014
-      #- musicPlayboyTheme015
-      #- musicPlayboyTheme016
-      #- musicPlayboyTheme017
-      #- musicPlayboyTheme018
-      - musicPlayboyTheme019
-      #- musicPlayboyTheme020
-      #- musicPlayboyTheme021
-      - musicPlayboyTheme022
-      - musicPlayboyTheme023
-      #- musicPlayboyTheme024
+      - musicEvelKnievelTheme001
+      - musicEvelKnievelTheme002
+      - musicEvelKnievelTheme003
+      - musicEvelKnievelTheme004
+      - musicEvelKnievelTheme005
+      - musicEvelKnievelTheme006
+      - musicEvelKnievelTheme007
+      - musicEvelKnievelTheme008
+      # - musicPlayboyTheme001
+      # #- musicPlayboyTheme002
+      # #- musicPlayboyTheme003
+      # - musicPlayboyTheme004
+      # #- musicPlayboyTheme005
+      # #- musicPlayboyTheme006
+      # #- musicPlayboyTheme007
+      # - musicPlayboyTheme008
+      # #- musicPlayboyTheme009
+      # #- musicPlayboyTheme010
+      # #- musicPlayboyTheme011
+      # #- musicPlayboyTheme012
+      # #- musicPlayboyTheme013
+      # #- musicPlayboyTheme014
+      # #- musicPlayboyTheme015
+      # #- musicPlayboyTheme016
+      # #- musicPlayboyTheme017
+      # #- musicPlayboyTheme018
+      # - musicPlayboyTheme019
+      # #- musicPlayboyTheme020
+      # #- musicPlayboyTheme021
+      # - musicPlayboyTheme022
+      # - musicPlayboyTheme023
+      # #- musicPlayboyTheme024
 
   poolMusicBaseMode:
     track: music

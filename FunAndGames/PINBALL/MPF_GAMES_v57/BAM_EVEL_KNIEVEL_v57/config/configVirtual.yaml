@@ -106,7 +106,7 @@ keyboard:
         
     c:
         #switch: s_kicker_upper
-        switch: s_0_8
+        switch: s_0_1
         toggle: true
         
         
@@ -121,7 +121,7 @@ keyboard:
         switch: s_0_9
     m:
         #switch: s_outlane_right
-        switch: s_0_7
+        switch: s_0_6
 
     q:
         #THUMPER

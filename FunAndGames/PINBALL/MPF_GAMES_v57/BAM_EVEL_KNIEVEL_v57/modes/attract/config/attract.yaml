@@ -20,10 +20,12 @@ mode:
 # ---------------------
 combo_switches:
   comboSwitchStartGame:
-    switches_1: s_0_0
-    switches_2: s_0_7
+    # switches_1: s_0_0
+    # switches_2: s_0_7
+    switches_1: s_0_1
+    switches_2: s_0_6
     hold_time: 2s
-    events_when_both: start_game
+    events_when_both: eventStartGame
 
 # ************************************
 # SOUND::PLAYER

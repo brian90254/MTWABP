@@ -29,6 +29,4 @@ cd Dropbox/GitHub/MTWABP/FunAndGames/PINBALL/MPF_GAMES_v57/BAM_EVEL_KNIEVEL_v57/
 #cd Dropbox/GitHub/MTWABP/FunAndGames/PINBALL/MPF_GAMES_v57/BAM_VOLTAN_v57/
 
 sleep 2s
-mpf both -xvVaA
-#mpf both -vVaA
-#mpf both
+mpf monitor
