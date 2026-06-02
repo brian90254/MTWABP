@@ -33,7 +33,7 @@ fast:
     boards:  
       # neuron:
       #   model: FP-EXP-2000 
-      expPlayfield_0:
+      expplayfield:
         model: FP-EXP-0081
       # topper:
       #   model: FP-EXP-0081

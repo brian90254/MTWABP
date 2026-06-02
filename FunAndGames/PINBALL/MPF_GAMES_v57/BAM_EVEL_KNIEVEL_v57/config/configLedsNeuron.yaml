@@ -15,17 +15,17 @@ lights:
   # BONUS AWARD :: 9000
   # -------------------------------------
   ledBonus9000A:
-    number: expPlayfield_0-1-1
+    number: expplayfield-1-1
     type: grb
     subtype: led
     
   ledBonus9000B:
-    number: expPlayfield_0-1-2
+    number: expplayfield-1-2
     type: grb
     subtype: led
 
   ledBonus9000C:
-    number: expPlayfield_0-1-3
+    number: expplayfield-1-3
     type: grb
     subtype: led
 
@@ -33,17 +33,17 @@ lights:
   # BONUS AWARD :: 7000
   # -------------------------------------
   ledBonus7000A:
-    number: expPlayfield_0-1-4
+    number: expplayfield-1-4
     type: grb
     subtype: led
     
   ledBonus7000B:
-    number: expPlayfield_0-1-5
+    number: expplayfield-1-5
     type: grb
     subtype: led
 
   ledBonus7000C:
-    number: expPlayfield_0-1-6
+    number: expplayfield-1-6
     type: grb
     subtype: led
 
@@ -51,17 +51,17 @@ lights:
   # BONUS AWARD :: 5000
   # -------------------------------------
   ledBonus5000A:
-    number: expPlayfield_0-1-7
+    number: expplayfield-1-7
     type: grb
     subtype: led
     
   ledBonus5000B:
-    number: expPlayfield_0-1-8
+    number: expplayfield-1-8
     type: grb
     subtype: led
 
   ledBonus5000C:
-    number: expPlayfield_0-1-9
+    number: expplayfield-1-9
     type: grb
     subtype: led
 
@@ -69,17 +69,17 @@ lights:
   # BONUS AWARD :: 3000
   # -------------------------------------
   ledBonus3000A:
-    number: expPlayfield_0-1-10
+    number: expplayfield-1-10
     type: grb
     subtype: led
     
   ledBonus3000B:
-    number: expPlayfield_0-1-11
+    number: expplayfield-1-11
     type: grb
     subtype: led
 
   ledBonus3000C:
-    number: expPlayfield_0-1-12
+    number: expplayfield-1-12
     type: grb
     subtype: led
 
@@ -87,17 +87,17 @@ lights:
   # BONUS AWARD :: 1000
   # -------------------------------------
   ledBonus1000A:
-    number: expPlayfield_0-1-13
+    number: expplayfield-1-13
     type: grb
     subtype: led
     
   ledBonus1000B:
-    number: expPlayfield_0-1-14
+    number: expplayfield-1-14
     type: grb
     subtype: led
 
   ledBonus1000C:
-    number: expPlayfield_0-1-15
+    number: expplayfield-1-15
     type: grb
     subtype: led
 
@@ -105,17 +105,17 @@ lights:
   # BONUS AWARD :: 2000
   # -------------------------------------
   ledBonus2000A:
-    number: expPlayfield_0-1-16
+    number: expplayfield-1-16
     type: grb
     subtype: led
     
   ledBonus2000B:
-    number: expPlayfield_0-1-17
+    number: expplayfield-1-17
     type: grb
     subtype: led
 
   ledBonus2000C:
-    number: expPlayfield_0-1-18
+    number: expplayfield-1-18
     type: grb
     subtype: led
 
@@ -123,17 +123,17 @@ lights:
   # BONUS AWARD :: 4000
   # -------------------------------------
   ledBonus4000A:
-    number: expPlayfield_0-1-19
+    number: expplayfield-1-19
     type: grb
     subtype: led
     
   ledBonus4000B:
-    number: expPlayfield_0-1-20
+    number: expplayfield-1-20
     type: grb
     subtype: led
 
   ledBonus4000C:
-    number: expPlayfield_0-1-21
+    number: expplayfield-1-21
     type: grb
     subtype: led
 
@@ -141,17 +141,17 @@ lights:
   # BONUS AWARD :: 6000
   # -------------------------------------
   ledBonus6000A:
-    number: expPlayfield_0-1-22
+    number: expplayfield-1-22
     type: grb
     subtype: led
     
   ledBonus6000B:
-    number: expPlayfield_0-1-23
+    number: expplayfield-1-23
     type: grb
     subtype: led
 
   ledBonus6000C:
-    number: expPlayfield_0-1-24
+    number: expplayfield-1-24
     type: grb
     subtype: led
 
@@ -159,17 +159,17 @@ lights:
   # BONUS AWARD :: 8000
   # -------------------------------------
   ledBonus8000A:
-    number: expPlayfield_0-1-25
+    number: expplayfield-1-25
     type: grb
     subtype: led
     
   ledBonus8000B:
-    number: expPlayfield_0-1-26
+    number: expplayfield-1-26
     type: grb
     subtype: led
 
   ledBonus8000C:
-    number: expPlayfield_0-1-27
+    number: expplayfield-1-27
     type: grb
     subtype: led
 
@@ -177,17 +177,17 @@ lights:
   # BONUS AWARD :: 10000
   # -------------------------------------
   ledBonus10000A:
-    number: expPlayfield_0-1-28
+    number: expplayfield-1-28
     type: grb
     subtype: led
   
   ledBonus10000B:
-    number: expPlayfield_0-1-29
+    number: expplayfield-1-29
     type: grb
     subtype: led
 
   ledBonus10000C:
-    number: expPlayfield_0-1-30
+    number: expplayfield-1-30
     type: grb
     subtype: led
 
@@ -199,17 +199,17 @@ lights:
   # SUPER LOW :: R
   # -------------------------------------
   ledSuperLowR1:
-    number: expPlayfield_0-2-1
+    number: expplayfield-2-1
     type: grb
     subtype: led
 
   ledSuperLowR2:
-    number: expPlayfield_0-2-2
+    number: expplayfield-2-2
     type: grb
     subtype: led
 
   ledSuperLowR3:
-    number: expPlayfield_0-2-3
+    number: expplayfield-2-3
     type: grb
     subtype: led
 
@@ -217,17 +217,17 @@ lights:
   # SUPER LOW :: E
   # -------------------------------------
   ledSuperLowE1:
-    number: expPlayfield_0-2-4
+    number: expplayfield-2-4
     type: grb
     subtype: led
 
   ledSuperLowE2:
-    number: expPlayfield_0-2-5
+    number: expplayfield-2-5
     type: grb
     subtype: led
 
   ledSuperLowE3:
-    number: expPlayfield_0-2-6
+    number: expplayfield-2-6
     type: grb
     subtype: led
 
@@ -235,17 +235,17 @@ lights:
   # SUPER LOW :: P
   # -------------------------------------
   ledSuperLowP1:
-    number: expPlayfield_0-2-7
+    number: expplayfield-2-7
     type: grb
     subtype: led
 
   ledSuperLowP2:
-    number: expPlayfield_0-2-8
+    number: expplayfield-2-8
     type: grb
     subtype: led
 
   ledSuperLowP3:
-    number: expPlayfield_0-2-9
+    number: expplayfield-2-9
     type: grb
     subtype: led
 
@@ -253,17 +253,17 @@ lights:
   # SUPER LOW :: U
   # -------------------------------------
   ledSuperLowU1:
-    number: expPlayfield_0-2-10
+    number: expplayfield-2-10
     type: grb
     subtype: led
 
   ledSuperLowU2:
-    number: expPlayfield_0-2-11
+    number: expplayfield-2-11
     type: grb
     subtype: led
 
   ledSuperLowU3:
-    number: expPlayfield_0-2-12
+    number: expplayfield-2-12
     type: grb
     subtype: led
 
@@ -271,17 +271,17 @@ lights:
   # SUPER LOW :: S
   # -------------------------------------
   ledSuperLowS1:
-    number: expPlayfield_0-2-13
+    number: expplayfield-2-13
     type: grb
     subtype: led
 
   ledSuperLowS2:
-    number: expPlayfield_0-2-14
+    number: expplayfield-2-14
     type: grb
     subtype: led
 
   ledSuperLowS3:
-    number: expPlayfield_0-2-15
+    number: expplayfield-2-15
     type: grb
     subtype: led
 
@@ -292,27 +292,27 @@ lights:
   # DROP TARGETS :: DOUBLE BONUS LIT
   # -------------------------------------
   ledDoubleBonusLit1:
-    number: expPlayfield_0-2-16
+    number: expplayfield-2-16
     type: grb
     subtype: led
 
   ledDoubleBonusLit2:
-    number: expPlayfield_0-2-17
+    number: expplayfield-2-17
     type: grb
     subtype: led
 
   ledDoubleBonusLit3:
-    number: expPlayfield_0-2-18
+    number: expplayfield-2-18
     type: grb
     subtype: led
 
   ledDoubleBonusLit4:
-    number: expPlayfield_0-2-19
+    number: expplayfield-2-19
     type: grb
     subtype: led
 
   ledDoubleBonusLit5:
-    number: expPlayfield_0-2-20
+    number: expplayfield-2-20
     type: grb
     subtype: led
 
@@ -320,27 +320,27 @@ lights:
   # DROP TARGETS :: EXTRA BALL LIT
   # -------------------------------------
   ledExtraBallLit1:
-    number: expPlayfield_0-2-21
+    number: expplayfield-2-21
     type: grb
     subtype: led
 
   ledExtraBallLit2:
-    number: expPlayfield_0-2-22
+    number: expplayfield-2-22
     type: grb
     subtype: led
 
   ledExtraBallLit3:
-    number: expPlayfield_0-2-23
+    number: expplayfield-2-23
     type: grb
     subtype: led
 
   ledExtraBallLit4:
-    number: expPlayfield_0-2-24
+    number: expplayfield-2-24
     type: grb
     subtype: led
 
   ledExtraBallLit5:
-    number: expPlayfield_0-2-25
+    number: expplayfield-2-25
     type: grb
     subtype: led
 
@@ -348,27 +348,27 @@ lights:
   # DROP TARGETS :: SPECIAL LIT
   # -------------------------------------
   ledSpecialLit1:
-    number: expPlayfield_0-2-26
+    number: expplayfield-2-26
     type: grb
     subtype: led
 
   ledSpecialLit2:
-    number: expPlayfield_0-2-27
+    number: expplayfield-2-27
     type: grb
     subtype: led
 
   ledSpecialLit3:
-    number: expPlayfield_0-2-28
+    number: expplayfield-2-28
     type: grb
     subtype: led
 
   ledSpecialLit4:
-    number: expPlayfield_0-2-29
+    number: expplayfield-2-29
     type: grb
     subtype: led
 
   ledSpecialLit5:
-    number: expPlayfield_0-2-30
+    number: expplayfield-2-30
     type: grb
     subtype: led
 
@@ -379,27 +379,27 @@ lights:
   # SPINNER :: SPINNER RIGHT
   # -------------------------------------
   ledSpinnerRight1:
-    number: expPlayfield_0-3-1
+    number: expplayfield-3-1
     type: grb
     subtype: led
 
   ledSpinnerRight2:
-    number: expPlayfield_0-3-2
+    number: expplayfield-3-2
     type: grb
     subtype: led
 
   ledSpinnerRight3:
-    number: expPlayfield_0-3-3
+    number: expplayfield-3-3
     type: grb
     subtype: led
 
   ledSpinnerRight4:
-    number: expPlayfield_0-3-4
+    number: expplayfield-3-4
     type: grb
     subtype: led
 
   ledSpinnerRight5:
-    number: expPlayfield_0-3-5
+    number: expplayfield-3-5
     type: grb
     subtype: led
 
@@ -407,17 +407,17 @@ lights:
   # STANDUP :: CYCLE 2C
   # -------------------------------------
   ledStandupCycle2C1:
-    number: expPlayfield_0-3-6
+    number: expplayfield-3-6
     type: grb
     subtype: led
 
   ledStandupCycle2C2:
-    number: expPlayfield_0-3-7
+    number: expplayfield-3-7
     type: grb
     subtype: led
 
   ledStandupCycle2C3:
-    number: expPlayfield_0-3-8
+    number: expplayfield-3-8
     type: grb
     subtype: led
 
@@ -425,17 +425,17 @@ lights:
   # STANDUP :: CYCLE L
   # -------------------------------------
   ledStandupCycleL1:
-    number: expPlayfield_0-3-9
+    number: expplayfield-3-9
     type: grb
     subtype: led
 
   ledStandupCycleL2:
-    number: expPlayfield_0-3-10
+    number: expplayfield-3-10
     type: grb
     subtype: led
 
   ledStandupCycleL3:
-    number: expPlayfield_0-3-11
+    number: expplayfield-3-11
     type: grb
     subtype: led
 
@@ -443,17 +443,17 @@ lights:
   # STANDUP :: CYCLE E
   # -------------------------------------
   ledStandupCycleE1:
-    number: expPlayfield_0-3-12
+    number: expplayfield-3-12
     type: grb
     subtype: led
 
   ledStandupCycleE2:
-    number: expPlayfield_0-3-13
+    number: expplayfield-3-13
     type: grb
     subtype: led
 
   ledStandupCycleE3:
-    number: expPlayfield_0-3-14
+    number: expplayfield-3-14
     type: grb
     subtype: led
 
@@ -461,17 +461,17 @@ lights:
   # OUTLANE :: RIGHT
   # -------------------------------------
   ledOutlaneRight1:
-    number: expPlayfield_0-3-15
+    number: expplayfield-3-15
     type: grb
     subtype: led
 
   ledOutlaneRight2:
-    number: expPlayfield_0-3-16
+    number: expplayfield-3-16
     type: grb
     subtype: led
 
   ledOutlaneRight3:
-    number: expPlayfield_0-3-17
+    number: expplayfield-3-17
     type: grb
     subtype: led
 
@@ -479,27 +479,27 @@ lights:
   # AWARD :: EXTRA BALL
   # -------------------------------------
   ledAwardExtraBallAward1:
-    number: expPlayfield_0-3-18
+    number: expplayfield-3-18
     type: grb
     subtype: led
 
   ledAwardExtraBallAward2:
-    number: expPlayfield_0-3-19
+    number: expplayfield-3-19
     type: grb
     subtype: led
 
   ledAwardExtraBallAward3:
-    number: expPlayfield_0-3-20
+    number: expplayfield-3-20
     type: grb
     subtype: led
 
   ledAwardExtraBallAward4:
-    number: expPlayfield_0-3-21
+    number: expplayfield-3-21
     type: grb
     subtype: led
 
   ledAwardExtraBallAward5:
-    number: expPlayfield_0-3-22
+    number: expplayfield-3-22
     type: grb
     subtype: led
 
@@ -507,27 +507,27 @@ lights:
   # AWARD :: DOUBLE BONUS
   # -------------------------------------
   ledAwardDoubleBonusAward1:
-    number: expPlayfield_0-3-23
+    number: expplayfield-3-23
     type: grb
     subtype: led
 
   ledAwardDoubleBonusAward2:
-    number: expPlayfield_0-3-24
+    number: expplayfield-3-24
     type: grb
     subtype: led
 
   ledAwardDoubleBonusAward3:
-    number: expPlayfield_0-3-25
+    number: expplayfield-3-25
     type: grb
     subtype: led
 
   ledAwardDoubleBonusAward4:
-    number: expPlayfield_0-3-26
+    number: expplayfield-3-26
     type: grb
     subtype: led
 
   ledAwardDoubleBonusAward5:
-    number: expPlayfield_0-3-27
+    number: expplayfield-3-27
     type: grb
     subtype: led
 
@@ -535,17 +535,17 @@ lights:
   # OUTLANE :: LEFT
   # -------------------------------------
   ledOutlaneLeft1:
-    number: expPlayfield_0-3-28
+    number: expplayfield-3-28
     type: grb
     subtype: led
 
   ledOutlaneLeft2:
-    number: expPlayfield_0-3-29
+    number: expplayfield-3-29
     type: grb
     subtype: led
 
   ledOutlaneLeft3:
-    number: expPlayfield_0-3-30
+    number: expplayfield-3-30
     type: grb
     subtype: led
 
@@ -556,27 +556,27 @@ lights:
   # ARROWS
   # -------------------------------------
   ledSuperArrow1:
-    number: expPlayfield_0-4-1
+    number: expplayfield-4-1
     type: grb
     subtype: led
 
   ledSuperArrow2:
-    number: expPlayfield_0-4-2
+    number: expplayfield-4-2
     type: grb
     subtype: led
 
   ledSuperArrow3:
-    number: expPlayfield_0-4-3
+    number: expplayfield-4-3
     type: grb
     subtype: led
   
   ledSuperArrow4:
-    number: expPlayfield_0-4-4
+    number: expplayfield-4-4
     type: grb
     subtype: led
 
   ledSuperArrow5:
-    number: expPlayfield_0-4-5
+    number: expplayfield-4-5
     type: grb
     subtype: led
 
@@ -584,27 +584,27 @@ lights:
   # SPINNER :: LEFT
   # -------------------------------------
   ledSpinnerLeft1:
-    number: expPlayfield_0-4-6
+    number: expplayfield-4-6
     type: grb
     subtype: led
 
   ledSpinnerLeft2:
-    number: expPlayfield_0-4-7
+    number: expplayfield-4-7
     type: grb
     subtype: led
 
   ledSpinnerLeft3:
-    number: expPlayfield_0-4-8
+    number: expplayfield-4-8
     type: grb
     subtype: led
   
   ledSpinnerLeft4:
-    number: expPlayfield_0-4-9
+    number: expplayfield-4-9
     type: grb
     subtype: led
 
   ledSpinnerLeft5:
-    number: expPlayfield_0-4-10
+    number: expplayfield-4-10
     type: grb
     subtype: led
 
@@ -612,17 +612,17 @@ lights:
   # STANDUP :: CYCLE 1C
   # -------------------------------------
   ledTopLaneCycle1C1:
-    number: expPlayfield_0-4-11
+    number: expplayfield-4-11
     type: grb
     subtype: led
 
   ledTopLaneCycle1C2:
-    number: expPlayfield_0-4-12
+    number: expplayfield-4-12
     type: grb
     subtype: led
 
   ledTopLaneCycle1C3:
-    number: expPlayfield_0-4-13
+    number: expplayfield-4-13
     type: grb
     subtype: led
 
@@ -630,17 +630,17 @@ lights:
   # SUPER TOP :: S
   # -------------------------------------
   ledSuperTopS1:
-    number: expPlayfield_0-4-14
+    number: expplayfield-4-14
     type: grb
     subtype: led
 
   ledSuperTopS2:
-    number: expPlayfield_0-4-15
+    number: expplayfield-4-15
     type: grb
     subtype: led
 
   ledSuperTopS3:
-    number: expPlayfield_0-4-16
+    number: expplayfield-4-16
     type: grb
     subtype: led
 
@@ -648,17 +648,17 @@ lights:
   # SUPER TOP :: U
   # -------------------------------------
   ledSuperTopU1:
-    number: expPlayfield_0-4-17
+    number: expplayfield-4-17
     type: grb
     subtype: led
 
   ledSuperTopU2:
-    number: expPlayfield_0-4-18
+    number: expplayfield-4-18
     type: grb
     subtype: led
 
   ledSuperTopU3:
-    number: expPlayfield_0-4-19
+    number: expplayfield-4-19
     type: grb
     subtype: led
 
@@ -666,17 +666,17 @@ lights:
   # SUPER TOP :: P
   # -------------------------------------
   ledSuperTopP1:
-    number: expPlayfield_0-4-20
+    number: expplayfield-4-20
     type: grb
     subtype: led
 
   ledSuperTopP2:
-    number: expPlayfield_0-4-21
+    number: expplayfield-4-21
     type: grb
     subtype: led
 
   ledSuperTopP3:
-    number: expPlayfield_0-4-22
+    number: expplayfield-4-22
     type: grb
     subtype: led
 
@@ -684,17 +684,17 @@ lights:
   # SUPER TOP :: E
   # -------------------------------------
   ledSuperTopE1:
-    number: expPlayfield_0-4-23
+    number: expplayfield-4-23
     type: grb
     subtype: led
 
   ledSuperTopE2:
-    number: expPlayfield_0-4-24
+    number: expplayfield-4-24
     type: grb
     subtype: led
 
   ledSuperTopE3:
-    number: expPlayfield_0-4-25
+    number: expplayfield-4-25
     type: grb
     subtype: led
 
@@ -702,17 +702,17 @@ lights:
   # SUPER TOP :: R
   # -------------------------------------
   ledSuperTopR1:
-    number: expPlayfield_0-4-26
+    number: expplayfield-4-26
     type: grb
     subtype: led
 
   ledSuperTopR2:
-    number: expPlayfield_0-4-27
+    number: expplayfield-4-27
     type: grb
     subtype: led
 
   ledSuperTopR3:
-    number: expPlayfield_0-4-28
+    number: expplayfield-4-28
     type: grb
     subtype: led
 
@@ -720,17 +720,17 @@ lights:
   # STANDUP :: CYCLE Y
   # -------------------------------------
   ledTopLaneCycleY1:
-    number: expPlayfield_0-4-29
+    number: expplayfield-4-29
     type: grb
     subtype: led
 
   ledTopLaneCycleY2:
-    number: expPlayfield_0-4-30
+    number: expplayfield-4-30
     type: grb
     subtype: led
 
   ledTopLaneCycleY3:
-    number: expPlayfield_0-4-31
+    number: expplayfield-4-31
     type: grb
     subtype: led
 
