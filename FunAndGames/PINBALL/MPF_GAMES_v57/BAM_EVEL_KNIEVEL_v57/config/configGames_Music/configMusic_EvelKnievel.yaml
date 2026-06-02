@@ -294,7 +294,8 @@ playlists:
       #- musicPlayboyTheme024
 
   #playlistModePlayboyMusic:
-  playlistModeTotemMusic:
+  #playlistModeTotemMusic:
+  playlistModeEvelKnievelMusic:
     shuffle: true
     repeat: true
     sounds:

@@ -292,13 +292,13 @@ shot_profiles:
     spDropMiddle:
         states:
           - name: unlitFlash
-            show: flashTwoLedTwoColor
+            show: flashThreeLedTwoColor
             speed: 1
             show_tokens:
                 color1: 'ccff00'
                 color2: '88cc00'
           - name: litFlash
-            show: flashTwoLedTwoColor
+            show: flashThreeLedTwoColor
             show_tokens:
                color1: 'ff00ff'
                color2: 'ff00ff'
@@ -384,14 +384,14 @@ shot_profiles:
         states:
           - name: unlitFlash
             #show: flashTwoLedTwoColor
-            show: flashThreeLedTwoColor
+            show: traceThreeLedTwoColor
             speed: 1
             show_tokens:
                 color1: '000066'
                 color2: '000088'
           - name: litFlash
             #show: flashTwoLedTwoColor
-            show: flashThreeLedTwoColor
+            show: traceThreeLedTwoColor
             show_tokens:
                 color1: 'ff00ff'
                 color2: 'ff00ff'

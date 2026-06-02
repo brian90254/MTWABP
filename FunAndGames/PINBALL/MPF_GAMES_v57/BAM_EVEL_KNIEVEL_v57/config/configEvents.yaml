@@ -162,9 +162,11 @@ playlist_player:
       playlist: playlistModeIronMaidenMusic
       action: play
 
-  eventPlaylistModeTotemStart:
+  eventPlaylistModeEvelKnievelStart:
+  #eventPlaylistModeTotemStart:
     trackplaylist:
-      playlist: playlistModeTotemMusic
+      #playlist: playlistModeTotemMusic
+      playlist: playlistModeEvelKnievelMusic
       action: play
 
   eventPauseTrackPlaylist:
@@ -176,7 +178,7 @@ playlist_player:
       #playlist: playlistModeEightBallMusic
       #playlist: playlistModeEightBallMusic
       #playlist: playlistModeIronMaidenMusic
-      playlist: playlistModeTotemMusic
+      playlist: playlistModeEvelKnievelMusic
       action: play
       
   ball_ending:
