@@ -433,12 +433,21 @@ coils:
     
   c_1_3:
     number: fastBoard_1-3
-    # SAUCER
+    # # SAUCER
+    # default_pulse_ms: 250
+    # max_pulse_ms: 250
+    # default_pulse_power: 1.0
+    # max_pulse_power: 1.0
+    # GI LAMPS
     default_pulse_ms: 250
     max_pulse_ms: 250
     default_pulse_power: 1.0
     max_pulse_power: 1.0
-
+    default_hold_power: 1.0
+    max_hold_power: 1.0
+    allow_enable: true
+    enable_events: mode_attract_started
+    
 ## ---------------------
 ## DROP::TARGETS
 ## ---------------------

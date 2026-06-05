@@ -1,0 +1,393 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '00ffff'
+        led1: ledTopLaneCycle1C1
+        led2: ledTopLaneCycle1C2
+        led3: ledTopLaneCycle1C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '00ffff'
+        led1: ledTopLaneCycleY1
+        led2: ledTopLaneCycleY2
+        led3: ledTopLaneCycleY3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '00ffff'
+        led1: ledStandupCycle2C1
+        led2: ledStandupCycle2C2
+        led3: ledStandupCycle2C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '00ffff'
+        led1: ledStandupCycleL1
+        led2: ledStandupCycleL2
+        led3: ledStandupCycleL3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '00ffff'
+        led1: ledStandupCycleE1
+        led2: ledStandupCycleE2
+        led3: ledStandupCycleE3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '0000ff'
+        led1: ledTopLaneCycle1C1
+        led2: ledTopLaneCycle1C2
+        led3: ledTopLaneCycle1C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '0000ff'
+        led1: ledTopLaneCycleY1
+        led2: ledTopLaneCycleY2
+        led3: ledTopLaneCycleY3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '0000ff'
+        led1: ledStandupCycle2C1
+        led2: ledStandupCycle2C2
+        led3: ledStandupCycle2C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '0000ff'
+        led1: ledStandupCycleL1
+        led2: ledStandupCycleL2
+        led3: ledStandupCycleL3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '0000ff'
+        led1: ledStandupCycleE1
+        led2: ledStandupCycleE2
+        led3: ledStandupCycleE3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ff00ff'
+        led1: ledTopLaneCycle1C1
+        led2: ledTopLaneCycle1C2
+        led3: ledTopLaneCycle1C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ff00ff'
+        led1: ledTopLaneCycleY1
+        led2: ledTopLaneCycleY2
+        led3: ledTopLaneCycleY3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ff00ff'
+        led1: ledStandupCycle2C1
+        led2: ledStandupCycle2C2
+        led3: ledStandupCycle2C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ff00ff'
+        led1: ledStandupCycleL1
+        led2: ledStandupCycleL2
+        led3: ledStandupCycleL3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ff00ff'
+        led1: ledStandupCycleE1
+        led2: ledStandupCycleE2
+        led3: ledStandupCycleE3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ff0000'
+        led1: ledTopLaneCycle1C1
+        led2: ledTopLaneCycle1C2
+        led3: ledTopLaneCycle1C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ff0000'
+        led1: ledTopLaneCycleY1
+        led2: ledTopLaneCycleY2
+        led3: ledTopLaneCycleY3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ff0000'
+        led1: ledStandupCycle2C1
+        led2: ledStandupCycle2C2
+        led3: ledStandupCycle2C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ff0000'
+        led1: ledStandupCycleL1
+        led2: ledStandupCycleL2
+        led3: ledStandupCycleL3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ff0000'
+        led1: ledStandupCycleE1
+        led2: ledStandupCycleE2
+        led3: ledStandupCycleE3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ffff00'
+        led1: ledTopLaneCycle1C1
+        led2: ledTopLaneCycle1C2
+        led3: ledTopLaneCycle1C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ffff00'
+        led1: ledTopLaneCycleY1
+        led2: ledTopLaneCycleY2
+        led3: ledTopLaneCycleY3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ffff00'
+        led1: ledStandupCycle2C1
+        led2: ledStandupCycle2C2
+        led3: ledStandupCycle2C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ffff00'
+        led1: ledStandupCycleL1
+        led2: ledStandupCycleL2
+        led3: ledStandupCycleL3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ffff00'
+        led1: ledStandupCycleE1
+        led2: ledStandupCycleE2
+        led3: ledStandupCycleE3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '00ff00'
+        led1: ledTopLaneCycle1C1
+        led2: ledTopLaneCycle1C2
+        led3: ledTopLaneCycle1C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '00ff00'
+        led1: ledTopLaneCycleY1
+        led2: ledTopLaneCycleY2
+        led3: ledTopLaneCycleY3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '00ff00'
+        led1: ledStandupCycle2C1
+        led2: ledStandupCycle2C2
+        led3: ledStandupCycle2C3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '00ff00'
+        led1: ledStandupCycleL1
+        led2: ledStandupCycleL2
+        led3: ledStandupCycleL3
+
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: '00ff00'
+        led1: ledStandupCycleE1
+        led2: ledStandupCycleE2
+        led3: ledStandupCycleE3
+
+- time: "+0.5"

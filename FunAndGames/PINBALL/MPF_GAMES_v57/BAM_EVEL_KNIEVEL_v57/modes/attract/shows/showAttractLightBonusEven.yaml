@@ -5,389 +5,389 @@
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ff0000'
-        led1: ledSuperLowS1
-        led2: ledSuperLowS2
-        led3: ledSuperLowS3
+        led1: ledBonus2000A
+        led2: ledBonus2000B
+        led3: ledBonus2000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ff0000'
-        led1: ledSuperLowU1
-        led2: ledSuperLowU2
-        led3: ledSuperLowU3
+        led1: ledBonus4000A
+        led2: ledBonus4000B
+        led3: ledBonus4000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ff0000'
-        led1: ledSuperLowP1
-        led2: ledSuperLowP2
-        led3: ledSuperLowP3
+        led1: ledBonus6000A
+        led2: ledBonus6000B
+        led3: ledBonus6000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ff0000'
-        led1: ledSuperLowE1
-        led2: ledSuperLowE2
-        led3: ledSuperLowE3
+        led1: ledBonus8000A
+        led2: ledBonus8000B
+        led3: ledBonus8000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ff0000'
-        led1: ledSuperLowR1
-        led2: ledSuperLowR2
-        led3: ledSuperLowR3
+        led1: ledBonus10000A
+        led2: ledBonus10000B
+        led3: ledBonus10000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ffff00'
-        led1: ledSuperLowS1
-        led2: ledSuperLowS2
-        led3: ledSuperLowS3
+        led1: ledBonus2000A
+        led2: ledBonus2000B
+        led3: ledBonus2000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ffff00'
-        led1: ledSuperLowU1
-        led2: ledSuperLowU2
-        led3: ledSuperLowU3
+        led1: ledBonus4000A
+        led2: ledBonus4000B
+        led3: ledBonus4000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ffff00'
-        led1: ledSuperLowP1
-        led2: ledSuperLowP2
-        led3: ledSuperLowP3
+        led1: ledBonus6000A
+        led2: ledBonus6000B
+        led3: ledBonus6000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ffff00'
-        led1: ledSuperLowE1
-        led2: ledSuperLowE2
-        led3: ledSuperLowE3
+        led1: ledBonus8000A
+        led2: ledBonus8000B
+        led3: ledBonus8000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ffff00'
-        led1: ledSuperLowR1
-        led2: ledSuperLowR2
-        led3: ledSuperLowR3
+        led1: ledBonus10000A
+        led2: ledBonus10000B
+        led3: ledBonus10000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '00ff00'
-        led1: ledSuperLowS1
-        led2: ledSuperLowS2
-        led3: ledSuperLowS3
+        led1: ledBonus2000A
+        led2: ledBonus2000B
+        led3: ledBonus2000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '00ff00'
-        led1: ledSuperLowU1
-        led2: ledSuperLowU2
-        led3: ledSuperLowU3
+        led1: ledBonus4000A
+        led2: ledBonus4000B
+        led3: ledBonus4000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '00ff00'
-        led1: ledSuperLowP1
-        led2: ledSuperLowP2
-        led3: ledSuperLowP3
+        led1: ledBonus6000A
+        led2: ledBonus6000B
+        led3: ledBonus6000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '00ff00'
-        led1: ledSuperLowE1
-        led2: ledSuperLowE2
-        led3: ledSuperLowE3
+        led1: ledBonus8000A
+        led2: ledBonus8000B
+        led3: ledBonus8000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '00ff00'
-        led1: ledSuperLowR1
-        led2: ledSuperLowR2
-        led3: ledSuperLowR3
+        led1: ledBonus10000A
+        led2: ledBonus10000B
+        led3: ledBonus10000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '00ffff'
-        led1: ledSuperLowS1
-        led2: ledSuperLowS2
-        led3: ledSuperLowS3
+        led1: ledBonus2000A
+        led2: ledBonus2000B
+        led3: ledBonus2000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '00ffff'
-        led1: ledSuperLowU1
-        led2: ledSuperLowU2
-        led3: ledSuperLowU3
+        led1: ledBonus4000A
+        led2: ledBonus4000B
+        led3: ledBonus4000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '00ffff'
-        led1: ledSuperLowP1
-        led2: ledSuperLowP2
-        led3: ledSuperLowP3
+        led1: ledBonus6000A
+        led2: ledBonus6000B
+        led3: ledBonus6000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '00ffff'
-        led1: ledSuperLowE1
-        led2: ledSuperLowE2
-        led3: ledSuperLowE3
+        led1: ledBonus8000A
+        led2: ledBonus8000B
+        led3: ledBonus8000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '00ffff'
-        led1: ledSuperLowR1
-        led2: ledSuperLowR2
-        led3: ledSuperLowR3
+        led1: ledBonus10000A
+        led2: ledBonus10000B
+        led3: ledBonus10000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '0000ff'
-        led1: ledSuperLowS1
-        led2: ledSuperLowS2
-        led3: ledSuperLowS3
+        led1: ledBonus2000A
+        led2: ledBonus2000B
+        led3: ledBonus2000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '0000ff'
-        led1: ledSuperLowU1
-        led2: ledSuperLowU2
-        led3: ledSuperLowU3
+        led1: ledBonus4000A
+        led2: ledBonus4000B
+        led3: ledBonus4000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '0000ff'
-        led1: ledSuperLowP1
-        led2: ledSuperLowP2
-        led3: ledSuperLowP3
+        led1: ledBonus6000A
+        led2: ledBonus6000B
+        led3: ledBonus6000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '0000ff'
-        led1: ledSuperLowE1
-        led2: ledSuperLowE2
-        led3: ledSuperLowE3
+        led1: ledBonus8000A
+        led2: ledBonus8000B
+        led3: ledBonus8000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: '0000ff'
-        led1: ledSuperLowR1
-        led2: ledSuperLowR2
-        led3: ledSuperLowR3
+        led1: ledBonus10000A
+        led2: ledBonus10000B
+        led3: ledBonus10000C
 
-- time: "+1"
-
-  shows:
-    triangleThreeLedTwoColor:
-      loops: -1
-      speed: 1
-      show_tokens:
-        color2: '000000'
-        color1: 'ff00ff'
-        led1: ledSuperLowS1
-        led2: ledSuperLowS2
-        led3: ledSuperLowS3
-
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ff00ff'
-        led1: ledSuperLowU1
-        led2: ledSuperLowU2
-        led3: ledSuperLowU3
+        led1: ledBonus2000A
+        led2: ledBonus2000B
+        led3: ledBonus2000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ff00ff'
-        led1: ledSuperLowP1
-        led2: ledSuperLowP2
-        led3: ledSuperLowP3
+        led1: ledBonus4000A
+        led2: ledBonus4000B
+        led3: ledBonus4000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ff00ff'
-        led1: ledSuperLowE1
-        led2: ledSuperLowE2
-        led3: ledSuperLowE3
+        led1: ledBonus6000A
+        led2: ledBonus6000B
+        led3: ledBonus6000C
 
-- time: "+1"
+- time: "+0.5"
 
   shows:
     triangleThreeLedTwoColor:
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         color2: '000000'
         color1: 'ff00ff'
-        led1: ledSuperLowR1
-        led2: ledSuperLowR2
-        led3: ledSuperLowR3
+        led1: ledBonus8000A
+        led2: ledBonus8000B
+        led3: ledBonus8000C
 
-- time: "+1"
+- time: "+0.5"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 2
+      show_tokens:
+        color2: '000000'
+        color1: 'ff00ff'
+        led1: ledBonus10000A
+        led2: ledBonus10000B
+        led3: ledBonus10000C
+
+- time: "+0.5"

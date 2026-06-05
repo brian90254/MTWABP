@@ -20,6 +20,42 @@ show_player:
       loops: -1
       speed: 1
 
+    showAttractLightSuperTop:
+      loops: -1
+      speed: 1
+
+    showAttractLightSuperArrows:
+      loops: -1
+      speed: 1
+
+    showAttractLightBonusOdd:
+      loops: -1
+      speed: 1
+
+    showAttractLightBonusEven:
+      loops: -1
+      speed: 1
+
+    showAttractLightCycle:
+      loops: -1
+      speed: 1
+
+    showAttractLightDropTargets:
+      loops: -1
+      speed: 1
+
+    showAttractLightSpinners:
+      loops: -1
+      speed: 1
+
+    showAttractLightAwards:
+      loops: -1
+      speed: 1
+
+    showAttractLightOutlanes:
+      loops: -1
+      speed: 1
+
     # showAttractLightAwardGlobe:
     #   loops: -1
     #   speed: 1

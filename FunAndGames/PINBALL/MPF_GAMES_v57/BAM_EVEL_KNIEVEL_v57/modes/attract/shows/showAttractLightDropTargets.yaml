@@ -1,0 +1,93 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ff0000'
+        led1: ledDoubleBonusLit1
+        led2: ledDoubleBonusLit2
+        led3: ledDoubleBonusLit3
+        led4: ledDoubleBonusLit4
+        led5: ledDoubleBonusLit5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ff0000'
+        led1: ledExtraBallLit1
+        led2: ledExtraBallLit2
+        led3: ledExtraBallLit3
+        led4: ledExtraBallLit4
+        led5: ledExtraBallLit5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ff0000'
+        led1: ledSpecialLit1
+        led2: ledSpecialLit2
+        led3: ledSpecialLit3
+        led4: ledSpecialLit4
+        led5: ledSpecialLit5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ffff00'
+        led1: ledDoubleBonusLit1
+        led2: ledDoubleBonusLit2
+        led3: ledDoubleBonusLit3
+        led4: ledDoubleBonusLit4
+        led5: ledDoubleBonusLit5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ffff00'
+        led1: ledExtraBallLit1
+        led2: ledExtraBallLit2
+        led3: ledExtraBallLit3
+        led4: ledExtraBallLit4
+        led5: ledExtraBallLit5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ffff00'
+        led1: ledSpecialLit1
+        led2: ledSpecialLit2
+        led3: ledSpecialLit3
+        led4: ledSpecialLit4
+        led5: ledSpecialLit5
+
+- time: "+0.5"

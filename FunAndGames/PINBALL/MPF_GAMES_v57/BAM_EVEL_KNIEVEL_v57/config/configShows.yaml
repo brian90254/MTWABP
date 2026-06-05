@@ -776,6 +776,36 @@ shows:
             (led5): (color2)
         - time: "8.0"
         
+    pulseFiveLedTwoColor:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color2)
+            (led5): (color2)
+        - time: "+1"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+        - time: "+1"
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+        - time: "+1"
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+        - time: "+1"
     # ----------------------
     # USED FOR:
     #   - Globetrotters - AttractBonus

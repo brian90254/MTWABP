@@ -99,7 +99,7 @@ event_player:
 variable_player:
   mode_modeEvelKnievel_started:
     nameMoon:
-      string: "EvelKnievel"
+      string: "Evel Knievel"
       action: set
 
 # ---------------------

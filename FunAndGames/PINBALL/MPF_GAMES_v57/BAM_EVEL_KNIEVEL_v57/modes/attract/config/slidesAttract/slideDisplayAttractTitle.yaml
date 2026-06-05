@@ -14,147 +14,151 @@ slides:
   slideDisplayAttractTitle:
     target: displayDMD
     widgets:
-    #   # --------------------
-    #   # IRON - CENTER TEXT
-    #   # --------------------
-    # - type: text
-    #   text: CHARLIE'S
-    #   y: middle + 25
-    #   x: middle
-    #   style: fontAttractTitleEvelKnievelHeader
-    #   color: colorFontAttractTitleEvelKnievelHeaderInner
-    #   z: 20
-    #   # --------------------
-    #   # IRON - OUTLINE
-    #   # --------------------
-    # - type: text
-    #   text: CHARLIE'S
-    #   y: middle + 26
-    #   x: middle + 1
-    #   style: fontAttractTitleEvelKnievelHeader
-    #   color: colorFontAttractTitleEvelKnievelHeaderOuter1
-    #   z: 15
-    # - type: text
-    #   text: CHARLIE'S
-    #   y: middle + 26
-    #   x: middle - 1
-    #   style: fontAttractTitleEvelKnievelHeader
-    #   color: colorFontAttractTitleEvelKnievelHeaderOuter1
-    #   z: 15
-    # - type: text
-    #   text: CHARLIE'S
-    #   y: middle + 24
-    #   x: middle + 1
-    #   style: fontAttractTitleEvelKnievelHeader
-    #   color: colorFontAttractTitleEvelKnievelHeaderOuter1
-    #   z: 15
-    # - type: text
-    #   text: CHARLIE'S
-    #   y: middle + 24
-    #   x: middle - 1
-    #   style: fontAttractTitleEvelKnievelHeader
-    #   color: colorFontAttractTitleEvelKnievelHeaderOuter1
-    #   z: 15
-    #   # --------------------
-    #   # IRON - DOUBLE _ OUTLINE
-    #   # --------------------
-    # - type: text
-    #   text: CHARLIE'S
-    #   y: middle + 27
-    #   x: middle + 2
-    #   style: fontAttractTitleEvelKnievelHeader
-    #   color: colorFontAttractTitleEvelKnievelHeaderOuter2
-    #   z: 10
-    # - type: text
-    #   text: CHARLIE'S
-    #   y: middle + 27
-    #   x: middle - 2
-    #   style: fontAttractTitleEvelKnievelHeader
-    #   color: colorFontAttractTitleEvelKnievelHeaderOuter2
-    #   z: 10
-    # - type: text
-    #   text: CHARLIE'S
-    #   y: middle + 23
-    #   x: middle + 2
-    #   style: fontAttractTitleEvelKnievelHeader
-    #   color: colorFontAttractTitleEvelKnievelHeaderOuter2
-    #   z: 10
-    # - type: text
-    #   text: CHARLIE'S
-    #   y: middle + 23
-    #   x: middle - 2
-    #   style: fontAttractTitleEvelKnievelHeader
-    #   color: colorFontAttractTitleEvelKnievelHeaderOuter2
-    #   z: 10
       # --------------------
       # EvelKnievel - CENTER TEXT
       # --------------------
+    # - type: text
+    #   text: EvelKnievel
+    #   y: middle
+    #   x: middle
+    #   style: fontAttractTitleEvelKnievelMiddle
+    #   color: colorFontAttractTitleEvelKnievelMiddleInner
+    #   z: 20
     - type: text
-      text: EvelKnievel
-      y: middle
-      x: middle
+      text: Evel
+      y: middle + 20
+      x: middle - 50
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleInner
+      z: 20
+    - type: text
+      text: Knievel
+      y: middle - 20
+      x: middle + 10
       style: fontAttractTitleEvelKnievelMiddle
       color: colorFontAttractTitleEvelKnievelMiddleInner
       z: 20
       # --------------------
-      # MAIDEN - OUTLINE
+      # Evel Knievel - OUTLINE
       # --------------------
     - type: text
-      text: EvelKnievel
-      y: middle - 2
-      x: middle - 2
+      text: Evel
+      y: middle + 18
+      x: middle - 52
       style: fontAttractTitleEvelKnievelMiddle
       color: colorFontAttractTitleEvelKnievelMiddleOuter1
       z: 15
     - type: text
-      text: EvelKnievel
-      y: middle - 2
-      x: middle + 2
-      style: fontAttractTitleEvelKnievelMiddle
-      color: colorFontAttractTitleEvelKnievelMiddleOuter1
-      z: 15
-    - type: text
-      text: EvelKnievel
-      y: middle + 2
-      x: middle - 2
-      style: fontAttractTitleEvelKnievelMiddle
-      color: colorFontAttractTitleEvelKnievelMiddleOuter1
-      z: 15
-    - type: text
-      text: EvelKnievel
-      y: middle + 2
-      x: middle + 2
+      text: Knievel
+      y: middle - 22
+      x: middle + 8
       style: fontAttractTitleEvelKnievelMiddle
       color: colorFontAttractTitleEvelKnievelMiddleOuter1
       z: 15
       # --------------------
-      # MAIDEN - DOUBLE - OUTLINE
+    - type: text
+      text: Evel
+      y: middle + 18
+      x: middle - 48
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter1
+      z: 15
+    - type: text
+      text: Knievel
+      y: middle - 22
+      x: middle + 12
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter1
+      z: 15
       # --------------------
     - type: text
-      text: EvelKnievel
-      y: middle - 4
-      x: middle - 4
+      text: Evel
+      y: middle + 22
+      x: middle - 52
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter1
+      z: 15
+    - type: text
+      text: Knievel
+      y: middle - 18
+      x: middle + 8
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter1
+      z: 15
+      # --------------------
+    - type: text
+      text: Evel
+      y: middle + 22
+      x: middle - 48
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter1
+      z: 15
+    - type: text
+      text: Knievel
+      y: middle - 18
+      x: middle + 12
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter1
+      z: 15
+      # --------------------
+      # Evel Knievel - DOUBLE - OUTLINE
+      # --------------------
+    - type: text
+      text: Evel
+      y: middle + 16
+      x: middle - 54
       style: fontAttractTitleEvelKnievelMiddle
       color: colorFontAttractTitleEvelKnievelMiddleOuter2
       z: 10
     - type: text
-      text: EvelKnievel
-      y: middle - 4
-      x: middle + 4
+      text: Knievel
+      y: middle - 24
+      x: middle + 6
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter2
+      z: 10
+      # --------------------
+    - type: text
+      text: Evel
+      y: middle + 16
+      x: middle - 46
       style: fontAttractTitleEvelKnievelMiddle
       color: colorFontAttractTitleEvelKnievelMiddleOuter2
       z: 10
     - type: text
-      text: EvelKnievel
-      y: middle + 4
-      x: middle - 4
+      text: Knievel
+      y: middle - 24
+      x: middle + 14
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter2
+      z: 10
+      # --------------------
+    - type: text
+      text: Evel
+      y: middle + 24
+      x: middle - 54
       style: fontAttractTitleEvelKnievelMiddle
       color: colorFontAttractTitleEvelKnievelMiddleOuter2
       z: 10
     - type: text
-      text: EvelKnievel
-      y: middle + 4
-      x: middle + 4
+      text: Knievel
+      y: middle - 16
+      x: middle + 6
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter2
+      z: 10
+      # --------------------
+    - type: text
+      text: Evel
+      y: middle + 24
+      x: middle - 46
+      style: fontAttractTitleEvelKnievelMiddle
+      color: colorFontAttractTitleEvelKnievelMiddleOuter2
+      z: 10
+    - type: text
+      text: Knievel
+      y: middle - 16
+      x: middle + 14
       style: fontAttractTitleEvelKnievelMiddle
       color: colorFontAttractTitleEvelKnievelMiddleOuter2
       z: 10

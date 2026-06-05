@@ -1,0 +1,48 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceFiveLedTwoColor:
+      loops: -1
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledSuperArrow1
+        led2: ledSuperArrow2
+        led3: ledSuperArrow3
+        led4: ledSuperArrow4
+        led5: ledSuperArrow5
+
+- time: "+2"
+
+  shows:
+    traceFiveLedTwoColor:
+      loops: -1
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledSuperArrow1
+        led2: ledSuperArrow2
+        led3: ledSuperArrow3
+        led4: ledSuperArrow4
+        led5: ledSuperArrow5
+
+- time: "+2"
+
+  shows:
+    traceFiveLedTwoColor:
+      loops: -1
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledSuperArrow1
+        led2: ledSuperArrow2
+        led3: ledSuperArrow3
+        led4: ledSuperArrow4
+        led5: ledSuperArrow5
+
+- time: "+2"

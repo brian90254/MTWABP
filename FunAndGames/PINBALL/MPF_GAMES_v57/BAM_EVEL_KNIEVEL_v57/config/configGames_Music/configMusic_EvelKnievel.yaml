@@ -22,7 +22,7 @@ sounds:
     mode_end_action: stop
 
   musicEvelKnievelTheme003:
-    file: musicEvelKnievelTheme_HocusPokus_003.wav
+    file: musicEvelKnievelTheme_HocusPocus_003.wav
     track: music
     volume: 0.7
     mode_end_action: stop
@@ -53,6 +53,12 @@ sounds:
 
   musicEvelKnievelTheme008:
     file: musicEvelKnievelTheme_MotorcycleDriver_008.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicEvelKnievelTheme009:
+    file: musicEvelKnievelTheme_BadMotorScooter_009.wav
     track: music
     volume: 0.7
     mode_end_action: stop
@@ -223,6 +229,7 @@ sound_pools:
       - musicEvelKnievelTheme006
       - musicEvelKnievelTheme007
       - musicEvelKnievelTheme008
+      - musicEvelKnievelTheme009
       # - musicPlayboyTheme001
       # #- musicPlayboyTheme002
       # #- musicPlayboyTheme003
@@ -252,59 +259,43 @@ sound_pools:
     track: music
     type: random_force_all
     sounds:
-      - musicPlayboyTheme001
-      #- musicPlayboyTheme002
-      #- musicPlayboyTheme003
-      - musicPlayboyTheme004
-      #- musicPlayboyTheme005
-      #- musicPlayboyTheme006
-      #- musicPlayboyTheme007
-      - musicPlayboyTheme008
-      #- musicPlayboyTheme009
-      #- musicPlayboyTheme010
-      #- musicPlayboyTheme011
-      #- musicPlayboyTheme012
-      #- musicPlayboyTheme013
-      #- musicPlayboyTheme014
-      #- musicPlayboyTheme015
-      #- musicPlayboyTheme016
-      #- musicPlayboyTheme017
-      #- musicPlayboyTheme018
-      - musicPlayboyTheme019
-      #- musicPlayboyTheme020
-      #- musicPlayboyTheme021
-      - musicPlayboyTheme022
-      - musicPlayboyTheme023
-      #- musicPlayboyTheme024
+      - musicEvelKnievelTheme001
+      - musicEvelKnievelTheme002
+      - musicEvelKnievelTheme003
+      - musicEvelKnievelTheme004
+      - musicEvelKnievelTheme005
+      - musicEvelKnievelTheme006
+      - musicEvelKnievelTheme007
+      - musicEvelKnievelTheme008
+      - musicEvelKnievelTheme009
 
   poolMusicAmbienceCharliesAngels:
     track: music
     type: random_force_all
     sounds:
-      - musicPlayboyTheme001
-      #- musicPlayboyTheme002
-      #- musicPlayboyTheme003
-      - musicPlayboyTheme004
-      #- musicPlayboyTheme005
-      #- musicPlayboyTheme006
-      #- musicPlayboyTheme007
-      - musicPlayboyTheme008
-      #- musicPlayboyTheme009
-      #- musicPlayboyTheme010
-      #- musicPlayboyTheme011
-      #- musicPlayboyTheme012
-      #- musicPlayboyTheme013
-      #- musicPlayboyTheme014
-      #- musicPlayboyTheme015
-      #- musicPlayboyTheme016
-      #- musicPlayboyTheme017
-      #- musicPlayboyTheme018
-      - musicPlayboyTheme019
-      #- musicPlayboyTheme020
-      #- musicPlayboyTheme021
-      - musicPlayboyTheme022
-      - musicPlayboyTheme023
-      #- musicPlayboyTheme024
+      - musicEvelKnievelTheme001
+      - musicEvelKnievelTheme002
+      - musicEvelKnievelTheme003
+      - musicEvelKnievelTheme004
+      - musicEvelKnievelTheme005
+      - musicEvelKnievelTheme006
+      - musicEvelKnievelTheme007
+      - musicEvelKnievelTheme008
+      - musicEvelKnievelTheme009
+
+  poolMusicAmbienceEvelKnievel:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicEvelKnievelTheme001
+      - musicEvelKnievelTheme002
+      - musicEvelKnievelTheme003
+      - musicEvelKnievelTheme004
+      - musicEvelKnievelTheme005
+      - musicEvelKnievelTheme006
+      - musicEvelKnievelTheme007
+      - musicEvelKnievelTheme008
+      - musicEvelKnievelTheme009
 
 # ---------------------
 # SOUNDS::PLAYER
@@ -358,29 +349,13 @@ playlists:
     shuffle: true
     repeat: true
     sounds:
-      - musicPlayboyTheme001
-      #- musicPlayboyTheme002
-      #- musicPlayboyTheme003
-      - musicPlayboyTheme004
-      #- musicPlayboyTheme005
-      #- musicPlayboyTheme006
-      #- musicPlayboyTheme007
-      - musicPlayboyTheme008
-      #- musicPlayboyTheme009
-      #- musicPlayboyTheme010
-      #- musicPlayboyTheme011
-      #- musicPlayboyTheme012
-      #- musicPlayboyTheme013
-      #- musicPlayboyTheme014
-      #- musicPlayboyTheme015
-      #- musicPlayboyTheme016
-      #- musicPlayboyTheme017
-      #- musicPlayboyTheme018
-      - musicPlayboyTheme019
-      #- musicPlayboyTheme020
-      #- musicPlayboyTheme021
-      - musicPlayboyTheme022
-      - musicPlayboyTheme023
-      #- musicPlayboyTheme024
-      
+      - musicEvelKnievelTheme001
+      - musicEvelKnievelTheme002
+      - musicEvelKnievelTheme003
+      - musicEvelKnievelTheme004
+      - musicEvelKnievelTheme005
+      - musicEvelKnievelTheme006
+      - musicEvelKnievelTheme007
+      - musicEvelKnievelTheme008
+      - musicEvelKnievelTheme009
 
