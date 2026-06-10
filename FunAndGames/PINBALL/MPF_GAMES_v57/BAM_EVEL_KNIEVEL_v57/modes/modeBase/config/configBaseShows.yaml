@@ -30,49 +30,50 @@ slides:
     - type: text
       text: (player1|score)
       z: 30
-      x: left + 728
-      y: bottom + 872
+      x: left + 753
+      y: bottom + 780
       anchor_x: right
       anchor_y: middle
-      font_name: bitmapFontBallySevenSegment11
+      font_name: bitmapFontBallySevenSegment6
       bitmap_font: true
     - type: text
       text: (player2|score)
       z: 30
-      x: left + 1422
-      y: bottom + 872
+      x: left + 1416
+      y: bottom + 780
       anchor_x: right
       anchor_y: middle
-      font_name: bitmapFontBallySevenSegment11
+      font_name: bitmapFontBallySevenSegment6
       bitmap_font: true
     - type: text
       text: (player3|score)
       z: 30
-      x: left + 728
-      y: bottom + 279
+      x: left + 753
+      y: bottom + 201
       anchor_x: right
       anchor_y: middle
-      font_name: bitmapFontBallySevenSegment11
+      font_name: bitmapFontBallySevenSegment6
       bitmap_font: true
     - type: text
       text: (player4|score)
       z: 30
-      x: left + 1419
-      y: bottom + 283
+      x: left + 1416
+      y: bottom + 201
       anchor_x: right
       anchor_y: middle
-      font_name: bitmapFontBallySevenSegment11
+      font_name: bitmapFontBallySevenSegment6
       bitmap_font: true
     - type: text
       #text: '78 99'
       text: (player|ball)
       min_digits: 2
       z: 30
-      x: left + 1010
-      y: bottom + 156
+      x: left + 1477
+      y: bottom + 570
       anchor_x: right
       anchor_y: middle
-      font_name: bitmapFontBallySevenSegment7sm
+      #font_name: bitmapFontBallySevenSegment7sm
+      font_name: bitmapFontBallySevenSegment6
       bitmap_font: true
 # -----------------------
 # ADDED 200507
@@ -80,11 +81,12 @@ slides:
       text: (machine|credits_string)
       min_digits: 2
       z: 30
-      x: left + 948
-      y: bottom + 156
+      x: left + 1354
+      y: bottom + 570
       anchor_x: right
       anchor_y: middle
-      font_name: bitmapFontBallySevenSegment7sm
+      #font_name: bitmapFontBallySevenSegment7sm
+      font_name: bitmapFontBallySevenSegment6
       bitmap_font: true
 
   # ---------------------

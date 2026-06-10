@@ -20,48 +20,48 @@
       - type: text
         text: (machine|player1_score)
         z: 30
-        x: left + 728
-        y: bottom + 872
+        x: left + 753
+        y: bottom + 780
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
       - type: text
         text: (machine|player2_score)
         z: 30
-        x: left + 1422
-        y: bottom + 872
+        x: left + 1416
+        y: bottom + 780
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
       - type: text
         text: (machine|player3_score)
         z: 30
-        x: left + 728
-        y: bottom + 279
+        x: left + 753
+        y: bottom + 201
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
       - type: text
         text: (machine|player4_score)
         z: 30
-        x: left + 1419
-        y: bottom + 283
+        x: left + 1416
+        y: bottom + 201
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
       - type: text
         text: (player|ball)
         min_digits: 2
         z: 30
-        x: left + 1010
-        y: bottom + 156
+        x: left + 1477
+        y: bottom + 570
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7sm
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
   # -----------------------
   # ADDED 200507
@@ -69,11 +69,11 @@
         text: (machine|credits_string)
         min_digits: 1
         z: 30
-        x: left + 948
-        y: bottom + 156
+        x: left + 1354
+        y: bottom + 570
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7sm
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
       
 # -----------------------------
@@ -99,48 +99,48 @@
       - type: text
         text: (machine|score1_value)
         z: 30
-        x: left + 728
-        y: bottom + 872
+        x: left + 753
+        y: bottom + 780
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
       - type: text
         text: (machine|score2_value)
         z: 30
-        x: left + 1422
-        y: bottom + 872
+        x: left + 1416
+        y: bottom + 780
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
       - type: text
         text: (machine|score3_value)
         z: 30
-        x: left + 728
-        y: bottom + 279
+        x: left + 753
+        y: bottom + 201
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
       - type: text
         text: (machine|score4_value)
         z: 30
-        x: left + 1419
-        y: bottom + 283
+        x: left + 1416
+        y: bottom + 201
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
       - type: text
         text: (player|ball)
         min_digits: 2
         z: 30
-        x: left + 1010
-        y: bottom + 156
+        x: left + 1477
+        y: bottom + 570
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7sm
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
   # -----------------------
   # ADDED 200507
@@ -148,11 +148,11 @@
         text: (machine|credits_string)
         min_digits: 1
         z: 30
-        x: left + 948
-        y: bottom + 156
+        x: left + 1354
+        y: bottom + 570
         anchor_x: right
         anchor_y: middle
-        font_name: bitmapFontBallySevenSegment7sm
+        font_name: bitmapFontBallySevenSegment6
         bitmap_font: true
       
 - time: '+4'
