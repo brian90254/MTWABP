@@ -1,0 +1,211 @@
+# INSTALLATION OF MPF V0.57.0 ON A LINUX MACHINE
+
+# *******************************************
+# TERMINAL COMMANDS :: COPY AND PASTE THESE INTO A TERMINAL WINDOW
+# *******************************************
+
+# ------------------------------
+# UNPDATE APT-GET
+# ------------------------------
+sudo apt-get update
+
+# ------------------------------
+# INSTALL GRAPHICS DEPENDENCIES
+# ------------------------------
+sudo apt-get install -y \
+  build-essential git curl \
+  libsqlite3-dev zlib1g-dev \
+  libjpeg-dev libtiff5-dev \
+  libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev \
+  gstreamer1.0-plugins-base gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly \
+  libgstreamer1.0-dev \
+  libswscale-dev libavformat-dev libavcodec-dev libavfilter-dev libavdevice-dev \
+  libgl1-mesa-dev libgles2-mesa-dev libgl1-mesa-dri \
+  pulseaudio libportaudio2 dbus-x11 libasound-dev \
+  libunwind-dev lsb-release
+
+# ------------------------------
+# INSTALL PYENV
+# ------------------------------
+curl https://pyenv.run | bash
+
+# ------------------------------
+# ADD PYENV TO SHELL CONFIG
+# ------------------------------
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+
+# ------------------------------
+# INSTALL PYTHON
+# ------------------------------
+pyenv install 3.11.8
+
+# ------------------------------
+# CREATE A CLEAN PYTHON ENVIRONMENT
+# ------------------------------
+pyenv shell 3.11.8
+python -m venv ~/venvs/PY311_MPF057
+source ~/venvs/PY311_MPF057/bin/activate
+
+
+# ------------------------------
+# INSTALL DEPENDENCIES SPECIFIC TO V0.57.0
+# ------------------------------
+
+# SETUP TOOLS
+pip install 'setuptools==69.1.0'
+
+# CYTHON
+pip install Cython==0.29.36
+
+# RUAML.YAML
+pip install 'ruamel.yaml==0.18.6'
+
+# RUAML.YAML.CLIB
+pip install 'ruamel.yaml.clib==0.2.8'
+
+# PILLOW
+pip install pillow==9.5.0
+
+# STABLE VERSION OF V0.57.0
+pip install mpf==0.57.0.dev41
+
+# STABLE VERSION OF MPF-MC
+pip install mpf-mc==0.57.0.dev14
+
+# STABLE VERSION OF MONITOR
+pip install mpf-monitor==0.57.0.dev3
+
+
+# ------------------------------
+# VERIFY INSTALL
+# ------------------------------
+mpf --version
+
+
+# ------------------------------
+# SET PERMISSIONS TO ACCESS COMM PORTS
+# ------------------------------
+
+
+
+
+# ------------------------------
+# END
+# ------------------------------
+
+
+briancox@Brians-Mac-mini ~ % build --version
+zsh: command not found: build
+briancox@Brians-Mac-mini ~ % pip list          
+Package            Version
+------------------ ------------
+asciimatics        1.15.0
+certifi            2024.2.2
+charset-normalizer 3.3.2
+docutils           0.20.1
+ffpyplayer         4.5.1
+future             1.0.0
+idna               3.6
+Kivy               2.2.1
+Kivy-Garden        0.1.5
+mpf                0.57.0.dev41
+mpf-mc             0.57.0.dev14
+mpf-monitor        0.57.0.dev3
+numpy              1.26.4
+packaging          23.2
+Pillow             9.5.0
+pip                24.0
+prompt-toolkit     3.0.43
+psutil             5.9.8
+pycairo            1.26.0
+pyfiglet           1.0.2
+Pygments           2.16.1
+PyGObject          3.46.0
+PyQt6              6.6.1
+PyQt6-Qt6          6.6.2
+PyQt6-sip          13.6.0
+pyserial           3.5
+pyserial-asyncio   0.6
+requests           2.31.0
+ruamel.yaml        0.18.6
+ruamel.yaml.clib   0.2.8
+setuptools         69.1.0
+sortedcontainers   2.4.0
+style              1.1.0
+terminaltables     3.1.10
+update             0.0.1
+urllib3            2.2.1
+wcwidth            0.2.13
+wheel              0.42.0
+
+[notice] A new release of pip is available: 24.0 -> 26.1.2
+[notice] To update, run: python3.11 -m pip install --upgrade pip
+briancox@Brians-Mac-mini ~ % python --version
+Python 3.11.8
+briancox@Brians-Mac-mini ~ % 
+
+
+pip install 'setuptools==69.1.0'
+pip install Cython==0.29.36
+pip install 'ruamel.yaml==0.18.6'
+pip install 'ruamel.yaml.clib==0.2.8'
+pip install 'pillow==9.5.0’
+pip install mpf==0.57.0.dev41
+pip install mpf-mc==0.57.0.dev14
+pip install mpf-monitor==0.57.0.dev3
+
+
+Yes — for a normal Linux install, the relevant parts are basically:
+
+sudo apt-get update
+
+sudo apt-get install -y \
+  build-essential git curl \
+  libsqlite3-dev zlib1g-dev \
+  libjpeg-dev libtiff5-dev \
+  libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev \
+  gstreamer1.0-plugins-base gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly \
+  libgstreamer1.0-dev \
+  libswscale-dev libavformat-dev libavcodec-dev libavfilter-dev libavdevice-dev \
+  libgl1-mesa-dev libgles2-mesa-dev libgl1-mesa-dri \
+  pulseaudio libportaudio2 dbus-x11 libasound-dev \
+  libunwind-dev lsb-release
+
+Then install Python 3.10.15 using pyenv:
+
+curl https://pyenv.run | bash
+
+Add PyEnv to your shell config:
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+
+Install and select Python:
+
+pyenv install 3.10.15
+pyenv global 3.10.15
+
+Then create a clean virtual environment:
+
+python -m venv ~/venvs/mpf57
+source ~/venvs/mpf57/bin/activate
+
+Install the pinned/stable package versions:
+
+pip install --upgrade pip 'setuptools<73' wheel build
+pip install 'pillow<10' 'packaging<24'
+pip install Cython==0.29.36
+pip install mpf==0.57.4
+pip install mpf-mc==0.57.1
+
+Verify:
+
+mpf --version
+mpf both --version
+
+
