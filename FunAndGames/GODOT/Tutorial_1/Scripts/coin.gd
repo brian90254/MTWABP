@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var game_manager: Node = %GameManager
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 ## Called when the node enters the scene tree for the first time.
 #func _ready() -> void:
@@ -17,5 +18,7 @@ func _on_body_entered(body: Node2D) -> void:
 	#pass # Replace with function body.
 	game_manager.add_point()
 	print ("+1 coin")
-	queue_free()
+	#queue_free()
+	animation_player.play("pickupCoin")
+	
 	
