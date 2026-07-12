@@ -1,0 +1,1 @@
+Package target: macos (RID osx-x64), built with Godot.NET.Sdk/4.1.1 / net6.0.
