@@ -1,0 +1,16 @@
+<Project Sdk="Godot.NET.Sdk/4.1.1">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+
+<ItemGroup>
+  <Reference Include="FastHardwareRuntime">
+    <HintPath>$(MSBuildProjectDirectory)/addons/FastHardwareRuntime/FastHardwareRuntime.dll</HintPath>
+    <Private>true</Private>
+  </Reference>
+
+  <PackageReference Include="System.IO.Ports" Version="7.0.0" />
+</ItemGroup>
+
+</Project>

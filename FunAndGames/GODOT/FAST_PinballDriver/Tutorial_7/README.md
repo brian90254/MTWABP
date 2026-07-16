@@ -17,7 +17,11 @@ Download the single package that matches **your development machine's OS**:
 
 You do **not** need all three — exporting to a different OS is handled in section 4.
 
- 
+## 2. Requirements
+
+- A Godot **4.1.x** project with **.NET / C# support** (the C# / "Mono" editor build). This is a
+  compiled C# assembly; it will not load in a GDScript-only build of Godot.
+- Your project is a C# project (it has a `.csproj`).
 
 ## 3. Install
 
