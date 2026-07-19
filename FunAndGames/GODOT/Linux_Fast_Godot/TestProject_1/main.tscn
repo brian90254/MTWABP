@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c06crsdfqa2vt"]
+
+[ext_resource type="Script" path="res://main.cs" id="1_l21v4"]
+[ext_resource type="Script" path="res://TestMain.cs" id="2_dq4qa"]
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_l21v4")
+
+[node name="FAST" type="Node3D" parent="."]
+script = ExtResource("2_dq4qa")
