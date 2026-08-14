@@ -26,6 +26,8 @@ cd fadecandyserver
 # ------------------------------
 # MAKE THE FADE CANDY SERVER
 # ------------------------------
+
+# Note, this might return "Nothing to be done"
 make submodules
 
 make

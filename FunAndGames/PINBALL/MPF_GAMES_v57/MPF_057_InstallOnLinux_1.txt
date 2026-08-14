@@ -38,9 +38,11 @@ echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source ~/.bashrc
 
 # ------------------------------
-# INSTALL PYTHON
+# INSTALL PYTHON AND MAKE THIS VERSION GLOBAL
 # ------------------------------
 pyenv install 3.11.8
+pyenv global 3.11.8
+
 
 # ------------------------------
 # CREATE A CLEAN PYTHON ENVIRONMENT
