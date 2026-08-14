@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=LaunchMPF
+Comment=Desktop Launcher for MPF in Terminal
+
+Exec=/home/briancox/Linux_BAM_GITHUB_v57_Both.sh
+
+Icon=applications-games
+Terminal=true
+
+Catagories=Game; 
+Name[en_US]=LaunchMPFv57

@@ -44,14 +44,17 @@ pyenv install 3.11.8
 
 # ------------------------------
 # CREATE A CLEAN PYTHON ENVIRONMENT
+# The name "Py311_MPF057" is arbitrary, but keep it consistant
 # ------------------------------
 pyenv shell 3.11.8
-python -m venv ~/venvs/PY311_MPF057
-source ~/venvs/PY311_MPF057/bin/activate
+python -m venv ~/venvs/Py311_MPF057
+source ~/venvs/Py311_MPF057/bin/activate
 
 
 # ------------------------------
 # INSTALL DEPENDENCIES SPECIFIC TO V0.57.0
+# ------------------------------
+# This step need to be done while in the named venv created above
 # ------------------------------
 
 # SETUP TOOLS
@@ -84,9 +87,14 @@ pip install mpf-monitor==0.57.0.dev3
 # ------------------------------
 mpf --version
 
+# ------------------------------
+# ...OR
+# ------------------------------
+pip list
 
 # ------------------------------
 # SET PERMISSIONS TO ACCESS COMM PORTS
+# ...TBD
 # ------------------------------
 
 
