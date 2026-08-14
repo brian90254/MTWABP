@@ -92,18 +92,87 @@ mpf --version
 # ------------------------------
 pip list
 
+
+# ------------------------------
+# CREATE A SHELL SCRIPT TO RUN THE GAME
+# Copy the text below into a file called "Linux_BAM_GITHUB_v57_Both.sh"
+# ------------------------------
+
+#!/bin/bash
+
+#ACTIVATE VIRTUAL ENVIRONMENT
+source ~/venvs/PY311_MPF057/bin/activate
+
+# SET MAIN GAME DIRECTORY
+cd Dropbox/GitHub/MTWABP/FunAndGames/PINBALL/MPF_GAMES_v57/
+
+# GOTO SPECIFIC GAME FOLDER
+cd BAM_TOTEM_v57/
+
+sleep 2s
+mpf both -xvVaA
+
+
+# ------------------------------
+# ADD AUTO-LAUNCH ON POWERUP
+# ------------------------------
+
+1) Goto Menu > Search Bar > Startup Applications
+
+2) Click "+" > Custom Command
+
+3) Add Startup Program
+    Name > LaunchMPFv57
+    Command > gnome-terminal --title="MPFv57" -- bash -c "cd ~ && ./Linux_BAM_GITHUB_v57_Both.sh; exec bash"
+    Comment > none
+    Startup Delay > 2
+    Click "Add"
+
+4) Test the function of the startup command
+    Highlight the newly created command
+    Click the ">" play button
+
+
+# ------------------------------
+# BUILD A LINUX VERSION OF THE FADECANDY SERVER
+# ...TBD
+# ------------------------------
+
 # ------------------------------
 # SET PERMISSIONS TO ACCESS COMM PORTS
 # ...TBD
 # ------------------------------
 
+# ------------------------------
+# AUTO-LAUNCH FCSERVER ON POWERUP
+# ------------------------------
 
+1) Goto Menu > Search Bar > Startup Applications
 
+2) Click "+" > Custom Command
+
+3) Add Startup Program
+    Name > LaunchFadeCandy
+    Command > gnome-terminal --title="FadeCandy" -- bash -c "cd ~/fadecandyserver && ./fcserver; exec bash"
+    Comment > none
+    Startup Delay > 0
+    Click "Add"
+
+4) Test the function of the startup command
+    Highlight the newly created command
+    Click the ">" play button
 
 # ------------------------------
 # END
 # ------------------------------
 
+
+
+
+
+# ------------------------------
+# APPENDIX / REFERENCE NOTES BELOW
+# ------------------------------
 
 briancox@Brians-Mac-mini ~ % build --version
 zsh: command not found: build
@@ -166,7 +235,7 @@ pip install mpf-mc==0.57.0.dev14
 pip install mpf-monitor==0.57.0.dev3
 
 
-Yes — for a normal Linux install, the relevant parts are basically:
+For a normal Linux install, the relevant parts are basically:
 
 sudo apt-get update
 
