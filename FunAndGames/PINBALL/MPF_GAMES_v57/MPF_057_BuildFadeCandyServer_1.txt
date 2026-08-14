@@ -1,0 +1,59 @@
+# BUILD FADE CANDY SERVER ON A LINUX MACHINE
+
+# *******************************************
+# TERMINAL COMMANDS :: COPY AND PASTE THESE INTO A TERMINAL WINDOW
+# *******************************************
+
+# ------------------------------
+# UPDATE APT
+# ------------------------------
+sudo apt update
+
+# ------------------------------
+# INSTALL BUILD PACKAGES
+# ------------------------------
+sudo apt install -y git build-essential cmake pkg-config libudev-dev
+
+# ------------------------------
+# CLONE THE FADE CANDY REPOSITORY
+# ------------------------------
+cd ~
+
+git clone https://github.com/bluewavenet/fadecandyserver.git
+
+cd fadecandyserver
+
+# ------------------------------
+# MAKE THE FADE CANDY SERVER
+# ------------------------------
+make submodules
+
+make
+
+# ------------------------------
+# CHECK THE BUILD
+# This should open a session and listen for connections on port 7890
+# ------------------------------
+cd ~/fadecandyserver
+
+./fcserver
+
+# ------------------------------
+# MODIFY UDEV RULES
+# Create a new file called 99-fadecandy.rules in /etc/udev/rules.d/ and add the following line to it:
+# SUBSYSTEM=="usb", ATTR{idVendor}=="1d50", ATTR{idProduct}=="607f", MODE="0666"
+# ------------------------------
+# In Terminal, type the following command to open the nano text editor and create the file:
+sudo nano /etc/udev/rules.d/99-fadecandy.rules
+
+# In Nano, add the following line to the file:
+SUBSYSTEM=="usb", ATTR{idVendor}=="1d50", ATTR{idProduct}=="607f", MODE="0666"
+
+# After adding the line, press Ctrl+O to save the file, then press Enter to confirm the filename. Finally, press Ctrl+X to exit Nano.
+
+# Reset the udev rules by running the following command:
+sudo udevadm control --reload-rules
+
+
+
+
