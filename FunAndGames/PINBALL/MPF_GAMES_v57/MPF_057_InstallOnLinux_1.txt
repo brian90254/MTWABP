@@ -101,7 +101,7 @@ pip list
 #!/bin/bash
 
 #ACTIVATE VIRTUAL ENVIRONMENT
-source ~/venvs/PY311_MPF057/bin/activate
+source ~/venvs/Py311_MPF057/bin/activate
 
 # SET MAIN GAME DIRECTORY
 cd Dropbox/GitHub/MTWABP/FunAndGames/PINBALL/MPF_GAMES_v57/
