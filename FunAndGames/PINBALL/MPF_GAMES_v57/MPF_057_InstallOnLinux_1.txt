@@ -295,4 +295,6 @@ mpf both --version
 
 needs xcb-cursor0 or libxcb-cursor0
 
+    sudo apt install libxcb-cursor0
+
 
