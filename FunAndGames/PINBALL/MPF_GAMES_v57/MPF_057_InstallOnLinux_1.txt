@@ -5,7 +5,7 @@
 # *******************************************
 
 # ------------------------------
-# UNPDATE APT-GET
+# UPDATE APT-GET
 # ------------------------------
 sudo apt-get update
 
@@ -286,5 +286,13 @@ Verify:
 
 mpf --version
 mpf both --version
+
+
+
+# --------------------------
+# MPF MONITOR TROUBLESHOOTING
+# --------------------------
+
+needs xcb-cursor0 or libxcb-cursor0
 
 
