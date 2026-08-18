@@ -74,15 +74,11 @@ pip install 'ruamel.yaml.clib==0.2.8'
 # PILLOW
 pip install pillow==9.5.0
 
-# STABLE VERSION OF V0.57.0
+# STABLE VERSION OF MPF V0.57.0
 pip install mpf==0.57.0.dev41
 
 # STABLE VERSION OF MPF-MC
 pip install mpf-mc==0.57.0.dev14
-
-# STABLE VERSION OF MONITOR
-pip install mpf-monitor==0.57.0.dev3
-
 
 # ------------------------------
 # VERIFY INSTALL
@@ -133,6 +129,47 @@ mpf both -xvVaA
 4) Test the function of the startup command
     Highlight the newly created command
     Click the ">" play button
+
+
+# ------------------------------
+# INSTALL "MONITOR" IN SEPARATE PYTHON ENVIRONMENT
+# The name "Py311_MPF057_monitor" is arbitrary, but keep it consistant
+# ------------------------------
+
+# CREATE NEW CLEAN ENVIRONMENT
+python -m venv ~/venvs/Py311_MPF057_monitor
+source ~/venvs/Py311_MPF057_monitor/bin/activate
+
+# INSTALL ARBITRARY MPF VERSION
+# Only needed so that you can run the command "mpf monitor"
+pip install mpf==0.57.0.dev41
+
+# INSTALL NEWEST VERSION OF MONITOR
+# This will overwrite some previous dependency versions
+# Which is why we're in a separate venv
+pip install mpf-monitor==1.0.0.dev1
+
+# Test by running:
+mpf monitor
+
+# ------------------------------
+# CREATE A SHELL SCRIPT TO RUN "monitor"
+# Copy the text below into a file called "Linux_BAM_GITHUB_v57_monitor.sh"
+# ------------------------------
+
+#!/bin/bash
+
+#ACTIVATE VIRTUAL ENVIRONMENT
+source ~/venvs/Py311_MPF057_monitor/bin/activate
+
+# SET MAIN GAME DIRECTORY
+cd Dropbox/GitHub/MTWABP/FunAndGames/PINBALL/MPF_GAMES_v57/
+
+# GOTO SPECIFIC GAME FOLDER
+cd BAM_TOTEM_v57/
+
+sleep 2s
+mpf monitor
 
 
 # ------------------------------
