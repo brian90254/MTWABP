@@ -1,0 +1,12 @@
+credit_units:
+  expire: 1733287755.188898
+  expire_secs: 3600.0
+  value: 49
+free_play:
+  expire: null
+  expire_secs: null
+  value: false
+master_volume:
+  expire: null
+  expire_secs: null
+  value: 0.5
