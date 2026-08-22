@@ -1,0 +1,322 @@
+#config_version=6
+
+# STERN MAGIC
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SAUCER::SPARE
+    # -------------------
+    shotSaucerAdvance:
+        enable_events: eventEnableShotSaucerAdvance
+        disable_events: eventDisableShotSaucerAdvance
+        restart_events: eventRestartShotSaucerAdvance
+        reset_events: eventResetShotSaucerAdvance
+        #advance_events: eventAdvanceSaucerAdvance
+        hit_events: eventHitShotSaucerAdvance
+        profile: spShotSaucerAdvance
+        show_tokens:
+            led1: ledSaucer3000
+            led2: ledSaucer2X
+            led3: ledSaucer3X
+            led4: ledSaucer5X
+            # ------------------------
+            led5: ledDummy1
+            led6: ledDummy2
+            led7: ledDummy3
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+# -----------------------------
+# SAUCER::ADVANCE::ACHIEVEMENTS
+# -----------------------------
+    # -----------------------------
+    # PROFILE::SAUCER::ADVANCE
+    # -----------------------------
+    spShotSaucerAdvance:
+        states:
+          - name: litFlashSaucer3000
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: '0000cc'
+                color2A: '000000'
+                color3A: '000000'
+                color4A: '000000'
+                # --------------
+                color5A: '000000'
+                color6A: '000000'
+                color7A: '000000'
+                # --------------
+                # --------------
+                color1B: '000066'
+                color2B: '000000'
+                color3B: '000000'
+                color4B: '000000'
+                # --------------
+                color5B: '000000'
+                color6B: '000000'
+                color7B: '000000'
+            # -------------------------------
+          - name: litFlashSaucer2X
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: '0000ff'
+                color2A: '00cc00'
+                color3A: '000000'
+                color4A: '000000'
+                # --------------
+                color5A: '000000'
+                color6A: '000000'
+                color7A: '000000'
+                # --------------
+                # --------------
+                color1B: '0000cc'
+                color2B: '006600'
+                color3B: '000000'
+                color4B: '000000'
+                # --------------
+                color5B: '000000'
+                color6B: '000000'
+                color7B: '000000'
+            # -------------------------------
+          - name: litFlashSaucer3X
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: '0000ff'
+                color2A: '00ff00'
+                color3A: 'cccc00'
+                color4A: '000000'
+                # --------------
+                color5A: '00ff00'
+                color6A: '000000'
+                color7A: '000000'
+                # --------------
+                # --------------
+                color1B: '0000cc'
+                color2B: '00cc00'
+                color3B: '666600'
+                color4B: '000000'
+                # --------------
+                color5B: '00cc00'
+                color6B: '000000'
+                color7B: '000000'
+            # -------------------------------
+          - name: litFlashSaucer5X
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: '0000ff'
+                color2A: '00ff00'
+                color3A: 'ffff00'
+                color4A: 'cc00cc'
+                # --------------
+                color5A: '00ff00'
+                color6A: 'ffff00'
+                color7A: '000000'
+                # --------------
+                # --------------
+                color1B: '0000cc'
+                color2B: '00cc00'
+                color3B: 'cccc00'
+                color4B: '660066'
+                # --------------
+                color5B: '00cc00'
+                color6B: 'cccc00'
+                color7B: '000000'
+            # -------------------------------
+          - name: litSolid
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: '0000ff'
+                color2A: '00ff00'
+                color3A: 'ffff00'
+                color4A: 'ff00ff'
+                # --------------
+                color5A: '00ff00'
+                color6A: 'ffff00'
+                color7A: 'ff00ff'
+                # --------------
+                # --------------
+                color1B: '0000cc'
+                color2B: '00cc00'
+                color3B: 'cccc00'
+                color4B: 'cc00cc'
+                # --------------
+                color5B: '00cc00'
+                color6B: 'cccc00'
+                color7B: 'cc00cc'
+            # -------------------------------
+        loop: false
+            
+# *********************
+# EVENT::PLAYER
+# *********************
+event_player:
+# -------------------
+# EVENTS::ON BALL STARTING
+# -------------------
+    mode_modeMataHari_started:
+        # -------------------------
+        # RESET / ENABLE EVERYTHING FROM SCRATCH
+        - eventRestartShotSaucerAdvance
+
+    shotSaucerAdvance_hit:
+        #- randomEventShowVideoStrikesSparesAd
+        - randomEventShowVideoSternMagic
+
+# -------------------
+# EVENTS::BALL IN PLAY
+# -------------------
+    # -------------------
+    # EVENTS::SAUCER SHOT::HIT
+    # -------------------
+    ball_hold_ballHoldSaucerTop_held_ball:
+        # ADVANCE SAUCER ACHIEVEMENT
+        - eventHitShotSaucerAdvance
+        # ADVANCE BONUS BY THREE
+        - eventCompleteBonusOnes
+        - eventCompleteBonusOnes|1s
+        - eventCompleteBonusOnes|2s
+
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# ADVANCE MULTIPLIER ON SAUCER HIT
+# ---------------
+    # SPECIAL
+    shotSaucerAdvance_litFlashSaucer3000_hit:
+        score: 3000
+        
+    # 2X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer2X_hit:
+        score: 3000
+        
+    # 3X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer3X_hit:
+        score: 3000
+        
+    # 5X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer5X_hit:
+        score: 3000
+        
+# ---------------------
+# RANDOM::EVENT::PLAYER
+# ---------------------
+random_event_player:
+# ---------------------
+# PLAY VIDEO::SAUCER::SPARE
+# ---------------------
+    # -------------------
+    # PLAY VIDEO::SAUCER::SPARE::CELEB
+    # -------------------
+    randomEventShowVideoSternMagic:
+        scope: player
+        events:
+          - eventShowVideoSternMagic_Clip1
+          - eventShowVideoSternMagic_Clip2
+          - eventShowVideoSternMagic_Clip3
+          - eventShowVideoSternMagic_Clip4
+          - eventShowVideoSternMagic_Clip5
+          - eventShowVideoSternMagic_Clip6
+          - eventShowVideoSternMagic_Clip7
+          - eventShowVideoSternMagic_Clip8
+
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# --------------------------
+# SHOW::PLAYER::VIDEO CLIPS::SAUCER
+# --------------------------
+    # --------------------------
+    # SAUCER::VIDEO
+    # --------------------------
+    eventShowVideoSternMagic_Clip1:
+        showVideoSternMagic_Clip1:
+            loops: 0
+            speed: 1
+            key: keyShowVideoSternMagic
+      
+    eventShowVideoSternMagic_Clip2:
+        showVideoSternMagic_Clip2:
+            loops: 0
+            speed: 1
+            key: keyShowVideoSternMagic
+            
+    eventShowVideoSternMagic_Clip3:
+        showVideoSternMagic_Clip3:
+            loops: 0
+            speed: 1
+            key: keyShowVideoSternMagic
+      
+    eventShowVideoSternMagic_Clip4:
+        showVideoSternMagic_Clip4:
+            loops: 0
+            speed: 1
+            key: keyShowVideoSternMagic
+      
+    eventShowVideoSternMagic_Clip5:
+        showVideoSternMagic_Clip5:
+            loops: 0
+            speed: 1
+            key: keyShowVideoSternMagic
+            
+    eventShowVideoSternMagic_Clip6:
+        showVideoSternMagic_Clip6:
+            loops: 0
+            speed: 1
+            key: keyShowVideoSternMagic
+            
+    eventShowVideoSternMagic_Clip7:
+        showVideoSternMagic_Clip7:
+            loops: 0
+            speed: 1
+            key: keyShowVideoSternMagic
+      
+    eventShowVideoSternMagic_Clip8:
+        showVideoSternMagic_Clip8:
+            loops: 0
+            speed: 1
+            key: keyShowVideoSternMagic
+ 
+
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showShotSaucerAdvance:
+        - time: 0
+          lights:
+            (led1): (color1A)
+            (led2): (color2A)
+            (led3): (color3A)
+            (led4): (color4A)
+            (led5): (color5A)
+            (led6): (color6A)
+            (led7): (color7A)
+        - time: 1
+          lights:
+            (led1): (color1B)
+            (led2): (color2B)
+            (led3): (color3B)
+            (led4): (color4B)
+            (led5): (color5B)
+            (led6): (color6B)
+            (led7): (color7B)
+        - time: 2
+            

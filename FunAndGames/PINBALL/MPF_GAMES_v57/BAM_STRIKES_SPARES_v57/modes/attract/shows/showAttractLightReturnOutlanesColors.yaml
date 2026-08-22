@@ -1,0 +1,24 @@
+#show_version=6
+
+# *************************
+# BACKGLASS ANIMATION::ALL LETTERS
+# *************************
+- time: 0
+  events:
+    eventShowAttractLightReturnOutlanesRed
+- time: '+4'
+  events:
+    eventShowAttractLightReturnOutlanesYellow
+- time: '+4'
+  events:
+    eventShowAttractLightReturnOutlanesGreen
+- time: '+4'
+  events:
+    eventShowAttractLightReturnOutlanesCyan
+- time: '+4'
+  events:
+    eventShowAttractLightReturnOutlanesBlue
+- time: '+4'
+  events:
+    eventShowAttractLightReturnOutlanesMagenta
+- time: '+4'

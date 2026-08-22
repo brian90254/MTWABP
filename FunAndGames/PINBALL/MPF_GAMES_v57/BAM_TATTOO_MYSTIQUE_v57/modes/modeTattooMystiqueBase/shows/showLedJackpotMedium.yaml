@@ -1,0 +1,268 @@
+#show_version=6
+
+- time: 0
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color1)
+    ledVukLowerRightLargeTriangle2: (color1)
+    ledVukLowerRightLargeTriangle3: (color1)
+    ledVukLowerRightLargeTriangle4: (color1)
+    ledVukLowerRightLargeTriangle5: (color1)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color1)
+    ledVukLowerRightSmallTriangle2: (color2)
+    # ------------------------
+
+- time: '+1'
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color1)
+    ledVukLowerRightLargeTriangle2: (color1)
+    ledVukLowerRightLargeTriangle3: (color1)
+    ledVukLowerRightLargeTriangle4: (color1)
+    ledVukLowerRightLargeTriangle5: (color1)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color2)
+    ledVukLowerRightSmallTriangle2: (color2)
+    # ------------------------
+
+- time: '+1'
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color1)
+    ledVukLowerRightLargeTriangle2: (color1)
+    ledVukLowerRightLargeTriangle3: (color2)
+    ledVukLowerRightLargeTriangle4: (color1)
+    ledVukLowerRightLargeTriangle5: (color2)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color2)
+    ledVukLowerRightSmallTriangle2: (color2)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color1)
+    ledVukLowerRightLargeTriangle2: (color1)
+    ledVukLowerRightLargeTriangle3: (color2)
+    ledVukLowerRightLargeTriangle4: (color2)
+    ledVukLowerRightLargeTriangle5: (color2)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color2)
+    ledVukLowerRightSmallTriangle2: (color2)
+    # ------------------------
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color2)
+    ledVukLowerRightLargeTriangle2: (color1)
+    ledVukLowerRightLargeTriangle3: (color2)
+    ledVukLowerRightLargeTriangle4: (color2)
+    ledVukLowerRightLargeTriangle5: (color2)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color2)
+    ledVukLowerRightSmallTriangle2: (color2)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color2)
+    ledVukLowerRightLargeTriangle2: (color2)
+    ledVukLowerRightLargeTriangle3: (color2)
+    ledVukLowerRightLargeTriangle4: (color2)
+    ledVukLowerRightLargeTriangle5: (color2)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color2)
+    ledVukLowerRightSmallTriangle2: (color2)
+    # ------------------------
+
+- time: '+1'
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color2)
+    ledVukLowerRightLargeTriangle2: (color2)
+    ledVukLowerRightLargeTriangle3: (color2)
+    ledVukLowerRightLargeTriangle4: (color2)
+    ledVukLowerRightLargeTriangle5: (color2)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color2)
+    ledVukLowerRightSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color2)
+    ledVukLowerRightLargeTriangle2: (color2)
+    ledVukLowerRightLargeTriangle3: (color2)
+    ledVukLowerRightLargeTriangle4: (color2)
+    ledVukLowerRightLargeTriangle5: (color2)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color1)
+    ledVukLowerRightSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color2)
+    ledVukLowerRightLargeTriangle2: (color2)
+    ledVukLowerRightLargeTriangle3: (color1)
+    ledVukLowerRightLargeTriangle4: (color2)
+    ledVukLowerRightLargeTriangle5: (color1)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color1)
+    ledVukLowerRightSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color2)
+    ledVukLowerRightLargeTriangle2: (color2)
+    ledVukLowerRightLargeTriangle3: (color1)
+    ledVukLowerRightLargeTriangle4: (color1)
+    ledVukLowerRightLargeTriangle5: (color1)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color1)
+    ledVukLowerRightSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color1)
+    ledVukLowerRightLargeTriangle2: (color2)
+    ledVukLowerRightLargeTriangle3: (color1)
+    ledVukLowerRightLargeTriangle4: (color1)
+    ledVukLowerRightLargeTriangle5: (color1)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color1)
+    ledVukLowerRightSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'
+  lights:
+    # ------------------------
+    ledVukLowerRightArrowhead1: (color1)
+    ledVukLowerRightArrowhead2: (color1)
+    ledVukLowerRightArrowhead3: (color1)
+    ledVukLowerRightArrowhead4: (color1)
+    ledVukLowerRightArrowhead5: (color1)
+    ledVukLowerRightArrowhead6: (color1)
+    ledVukLowerRightArrowhead7: (color1)
+    ledVukLowerRightArrowhead8: (color1)
+    # ------------------------
+    ledVukLowerRightLargeTriangle1: (color1)
+    ledVukLowerRightLargeTriangle2: (color1)
+    ledVukLowerRightLargeTriangle3: (color1)
+    ledVukLowerRightLargeTriangle4: (color1)
+    ledVukLowerRightLargeTriangle5: (color1)
+    # ------------------------
+    ledVukLowerRightSmallTriangle1: (color1)
+    ledVukLowerRightSmallTriangle2: (color1)
+    # ------------------------
+  
+- time: '+1'

@@ -1,0 +1,158 @@
+#config_version=6
+
+config:
+# FLASH GORDON
+- configFlashGordonAchBonusUpperMini.yaml
+- configFlashGordonAchBonusLowerSuper.yaml
+- configFlashGordonSaucer.yaml
+- configFlashGordonShots.yaml
+- configFlashGordonShotsUpper.yaml
+- configFlashGordonShotsLower.yaml
+- configFlashGordonExtraBall.yaml
+# ---------------
+- configFlashGordonRotateDropTop.yaml
+- configFlashGordonThumpers.yaml
+- configFlashGordonShotsMultiplier.yaml
+- configFlashGordonPlayfieldMultiplier.yaml
+
+mode:
+  start_events: eventStartModeFlashGordon
+  stop_events:
+    - eventStopModeFlashGordon
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  
+  ball_started:
+    # RESET DROPS
+    #- eventResetDropTargetBankLeft|500
+    #- eventResetDropTargetBankRight|1000
+    - eventResetDropTargetBankLeft|500
+    - eventResetDropTargetBankInline|1000
+    - eventResetDropTargetBankTop|1500
+    
+    # ENABLE FLIPPER UPPER RIGHT
+    - eventEnableFlipperUpperRight
+    
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeFlashGordon_started:
+    
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeFlashGordonStart
+    
+    # EXTRA BALL
+    - eventResetShotExtraBall
+    
+    # TODO check if this is still needed
+    - eventResetShotSaucerBonus
+
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersFlashGordon|1000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  mode_modeFlashGordon_started:
+    nameMoon:
+      string: "FLASH GORDON"
+      action: set
+
+  # ---------------
+  # ADVANCE BONUS COUNT
+  # ---------------
+  eventCompleteBonusOnesPosted:
+    totalBonus: 1
+
+  eventCompleteAchBonusUpperOnesPosted:
+    bonusUpper: 1
+    
+  eventCompleteAchBonusLowerOnesPosted:
+    bonusLower: 1
+    
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersFlashGordon:
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusUpper:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusMiniUpper:
+      #int: 50000
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT LOWER
+    bonusLower:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusSuperLower:
+      #int: 100000
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT
+    totalBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MULTIPLIER
+    # -------------------------
+    # REMOVED TO PERSIST
+    # -------------------------
+    #multiBonus:
+    #  int: 1
+    #  action: set
+    #bonus_multiplier:
+    #  int: 1
+    #  action: set
+    # -------------------------
+    # RESET TOTAL BONUS SCORE
+    # (TOTAL BONUS X BONUS MULTIPLIER)
+    scoreBonus:
+      int: 0
+      action: set
+    # -------------------------
+
+    # -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set
+      
+## ---------------------
+## SOUND::PLAYER
+## ---------------------
+#sound_player:
+#  #---------------------
+#  # AMBIENCE
+#  mode_modeFlashGordon_started:
+#    #musicBallyStrikesSpares012:
+#    musicMataHari005:
+#      loops: -1
+#      volume: 0.8
+#      
+#  mode_modeFlashGordon_ending:
+#    #musicBallyStrikesSpares012:
+#    musicMataHari005:
+#      action: stop

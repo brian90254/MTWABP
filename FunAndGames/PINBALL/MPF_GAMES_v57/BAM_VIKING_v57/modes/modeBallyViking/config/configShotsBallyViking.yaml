@@ -1,0 +1,207 @@
+#config_version=6
+
+# BALLY VIKING
+
+# *****************************      
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::OUTLANES::WHEN-LIT
+    # -------------------
+    shotLeftOutlaneWhenLit:
+        switch: s_1_18
+        enable_events: eventEnableShotLeftOutlaneWhenLit
+        disable_events: eventDisableShotLeftOutlaneWhenLit
+        restart_events: eventRestartShotLeftOutlaneWhenLit
+        reset_events: eventResetShotLeftOutlaneWhenLit
+        profile: spShotOutlaneWhenLit
+        show_tokens:
+            led: ledLanesLeftOutlane
+            
+    shotRightOutlaneWhenLit:
+        switch: s_1_31
+        enable_events: eventEnableShotRightOutlaneWhenLit
+        disable_events: eventDisableShotRightOutlaneWhenLit
+        restart_events: eventRestartShotRightOutlaneWhenLit
+        reset_events: eventResetShotRightOutlaneWhenLit
+        profile: spShotOutlaneWhenLit
+        show_tokens:
+            led: ledLanesRightOutlane
+            
+    ## -------------------
+    ## SHOTS::TOP::LANES::A-B
+    ## -------------------
+    #shotTopLaneA:
+    #    switch: s_1_14
+    #    enable_events: eventEnableShotTopLaneA
+    #    disable_events: eventDisableShotTopLaneA
+    #    restart_events: eventRestartShotTopLaneA
+    #    reset_events: eventResetShotTopLaneA
+    #    profile: spTopLanes
+    #    show_tokens:
+    #        led: ledLanesUpperA
+    #        
+    #shotTopLaneB:
+    #    switch: s_1_2
+    #    enable_events: eventEnableShotTopLaneB
+    #    disable_events: eventDisableShotTopLaneB
+    #    restart_events: eventRestartShotTopLaneB
+    #    reset_events: eventResetShotTopLaneB
+    #    profile: spTopLanes
+    #    show_tokens:
+    #        led: ledLanesUpperB
+            
+    shotRightLane:
+        switch: s_1_29
+        enable_events: eventEnableShotRightLane
+        disable_events: eventDisableShotRightLane
+        restart_events: eventRestartShotRightLane
+        reset_events: eventResetShotRightLane
+        #profile: spTopLanes
+        #show_tokens:
+        #    led: ledLanesUpperB
+            
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    ## -----------------------------
+    ## PROFILE::LANES::A-B
+    ## -----------------------------
+    #spTopLanes:
+    #    states:
+    #      - name: unlitFlash
+    #        #show: flashTwoLedTwoColor
+    #        show: flashLedTwoColor
+    #        speed: 1
+    #        show_tokens:
+    #            color1: '000066'
+    #            color2: '000088'
+    #      - name: litFlash
+    #        #show: flashTwoLedTwoColor
+    #        show: flashLedTwoColor
+    #        show_tokens:
+    #            color1: 'ff00ff'
+    #            color2: 'ff00ff'
+    #    loop: false
+        
+    # -----------------------------
+    # PROFILE::LANES::A-B
+    # -----------------------------
+    spShotOutlaneWhenLit:
+        states:
+          - name: unlitFlash
+            show: flashLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: color1SpShotOutlaneWhenLit
+                color2: color2SpShotOutlaneWhenLit
+          - name: litFlash
+            show: flashLedTwoColor
+            show_tokens:
+                color1: color3SpShotOutlaneWhenLit
+                color2: color3SpShotOutlaneWhenLit
+        loop: false
+
+
+## ***************************** 
+## SHOTS::GROUPS
+## ***************************** 
+#shot_groups:
+#
+#    # -------------------
+#    # SHOTGROUP::TOP::LANES::A-B
+#    # -------------------
+#    shotGroupTopLanes:
+#        shots:
+#            - shotTopLaneA
+#            - shotTopLaneB
+#        enable_events:
+#            - ball_started
+#            - mode_modeBallyViking_started
+#            - eventEnableShotGroupTopLanes
+#        disable_events:
+#            - ball_ending
+#            - eventDisableShotGroupTopLanes
+#        reset_events:
+#            - ball_will_end
+#            - ball_started
+#            - mode_modeBallyViking_started
+#            - eventResetShotGroupTopLanes
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    mode_modeBallyViking_started:
+        - eventResetShotRightLane
+        - eventEnableShotRightLane
+        
+    ball_ending:
+        - eventDisableShotLeftOutlaneWhenLit
+        - eventDisableShotRightOutlaneWhenLit
+        - eventResetShotLeftOutlaneWhenLit
+        - eventResetShotRightOutlaneWhenLit
+
+    shotGroupInlineDrop_complete:
+        - eventResetShotLeftOutlaneWhenLit
+        - eventResetShotRightOutlaneWhenLit
+        - eventEnableShotLeftOutlaneWhenLit
+        - eventEnableShotRightOutlaneWhenLit
+        
+    ## -------------------
+    ## TOP::LANES::A-B
+    ## -------------------
+    #shotGroupTopLanes_complete:
+    #    - eventEnableSaucerBonusCollect
+
+
+    ## -------------------
+    ## RIGHT::LANE
+    ## -------------------
+    shotRightLane_hit:
+        - eventCompleteBonusOnes
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------
+    # SCORING::OUTLANES
+    # ---------------
+    sw_tagOutlane:
+        #score: 789
+        score: 1000
+      
+    shotRightOutlaneWhenLit_unlitFlash_hit:
+        score: 24000
+    shotRightOutlaneWhenLit_litFlash_hit:
+        score: 24000
+    shotLeftOutlaneWhenLit_unlitFlash_hit:
+        score: 24000
+    shotLeftOutlaneWhenLit_litFlash_hit:
+        score: 24000
+    
+    ## -------------------
+    ## RIGHT::LANE
+    ## -------------------
+    shotRightLane_hit:
+        score: 1000
+
+## ---------------------
+## SHOW::PLAYER
+## ---------------------
+#show_player:
+#    # FLASH BEFORE RESETTING
+#    shotGroupTopLanes_complete:
+#        showCompleteShotGroupTopLanes:
+#            loops: 0
+#            speed: 3
+#            key: keyShowCompleteShotGroupTopLanes
+            

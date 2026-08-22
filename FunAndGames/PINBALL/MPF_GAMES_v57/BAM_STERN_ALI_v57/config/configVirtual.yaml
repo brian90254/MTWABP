@@ -1,0 +1,128 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+
+
+# ******************************************
+# ------------------------------------------
+# VIRTUAL
+# ------------------------------------------
+# ******************************************
+keyboard:
+    
+    0:
+        event: debug_dump_stats
+      
+    z:
+        #switch: s_flipper_left_keyboard
+        event: eventFlipperLeftKeyboard
+    /:
+        #switch: s_flipper_right_keyboard
+        event: eventFlipperRightKeyboard
+    1:
+        switch: s_trough_1
+        toggle: true
+    2:
+        switch: s_trough_2
+        toggle: true
+    3:
+        switch: s_trough_3
+        toggle: true
+    4:
+        switch: s_trough_4
+        toggle: true
+    5:
+        switch: s_trough_5
+        toggle: true
+    6:
+        switch: s_trough_6
+        toggle: true
+    p:
+        switch: s_plunger_lane
+        toggle: true
+    s:
+        switch: s_start
+    7:
+        switch: s_drop_lf_1
+    8:
+        switch: s_drop_lf_2
+    9:
+        switch: s_drop_lf_3
+
+    #7:
+    #    switch: s_drop_rt_1
+    #    toggle: true
+    #8:
+    #    switch: s_drop_rt_2
+    #    toggle: true
+    #9:
+    #    switch: s_drop_rt_3
+    #    toggle: true
+
+
+    f:
+        switch: s_target_H
+    g:
+        switch: s_target_U
+    h:
+        switch: s_target_N
+    j:
+        switch: s_target_T
+    k:
+        switch: s_target_E
+    l:
+        switch: s_target_R
+
+    t:
+        switch: s_target_reverse
+    y:
+        switch: s_turn_around
+        
+    x:
+        switch: s_spinner
+    c:
+        switch: s_kicker_upper
+        toggle: true
+        
+        
+    v:
+        switch: s_outlane_left
+    b:
+        switch: s_return_lane_left
+    n:
+        switch: s_return_lane_right
+    m:
+        switch: s_outlane_right
+
+
+    q:
+        switch: s_thumper_right
+    w:
+        switch: s_thumper_left
+        
+    e:
+        switch: s_vuk
+    r:
+        switch: s_target_newton
+        
+        
+    u:  
+        switch: s_rollover_rt
+    i:
+        switch: s_rollover_lf_1
+    o:
+        switch: s_rollover_lf_2
+
+
+    a:
+        switch: s_hidden_lane
+        
+
+virtual_platform_start_active_switches:
+    s_trough_1
+    s_trough_2
+    s_trough_3
+    s_trough_4
+    s_trough_5
+    s_trough_6

@@ -1,0 +1,438 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - SILVERBALL MANIA
+
+- time: 0
+# ----------------------
+# RED CHASE
+# ----------------------
+  lights:
+    # ----------------------    
+    ledBonus1: 'ff0000'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: 'ff0000'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: 'ff0000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: 'ff0000'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: 'ff0000'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: 'ff0000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: 'ff0000'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: 'ff0000'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: 'ff0000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: 'ff0000'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: 'ff0000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: 'ff0000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: 'ff0000'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: 'ff0000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: 'ff0000'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------    
+    ledBonus1: 'ffff00'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: 'ffff00'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: 'ffff00'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: 'ffff00'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: 'ffff00'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: 'ffff00'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: 'ffff00'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: 'ffff00'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: 'ffff00'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: 'ffff00'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: 'ffff00'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: 'ffff00'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: 'ffff00'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: 'ffff00'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: 'ffff00'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# GREEN CHASE
+# ----------------------
+  lights:
+    # ----------------------    
+    ledBonus1: '00ff00'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: '00ff00'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '00ff00'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '00ff00'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: '00ff00'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '00ff00'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: '00ff00'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: '00ff00'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '00ff00'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: '00ff00'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: '00ff00'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '00ff00'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: '00ff00'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: '00ff00'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '00ff00'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------    
+    ledBonus1: 'ffff00'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: 'ffff00'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: 'ffff00'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: 'ffff00'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: 'ffff00'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: 'ffff00'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: 'ffff00'
+    ledBonus4: '000000'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: 'ffff00'
+    ledBonus9: '000000'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: 'ffff00'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: 'ffff00'
+    ledBonus5: '000000'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: 'ffff00'
+    ledBonus10: '000000'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: 'ffff00'
+    ledBonusMini50E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonus1: '000000'
+    ledBonus2: '000000'
+    ledBonus3: '000000'
+    ledBonus4: '000000'
+    ledBonus5: 'ffff00'
+    ledBonus6: '000000'
+    ledBonus7: '000000'
+    ledBonus8: '000000'
+    ledBonus9: '000000'
+    ledBonus10: 'ffff00'
+    # ----------------------
+    ledBonusMini50A: '000000'
+    ledBonusMini50B: '000000'
+    ledBonusMini50C: '000000'
+    ledBonusMini50D: '000000'
+    ledBonusMini50E: 'ffff00'
+    # ----------------------
+- time: "+1"

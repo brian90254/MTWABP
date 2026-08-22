@@ -1,0 +1,122 @@
+#config_version=6
+
+config:
+# 6MDM
+- config6MDMAchBonus.yaml
+- config6MDMDrops.yaml
+- config6MDMExtraBall.yaml
+- config6MDMQualifiers.yaml
+- config6MDMSaucer.yaml
+- config6MDMShots.yaml
+- config6MDMThumper.yaml
+- config6MDMUpPost.yaml
+
+mode:
+  start_events: eventStartMode6MDM
+  stop_events:
+    - eventStopMode6MDM
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:    
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_mode6MDM_started:
+    # -----------------------------------
+    # RESET DROPS
+    # -----------------------------------
+    - eventResetDropTargetBankRight|1000
+    
+    # -----------------------------------
+    # ENABLE BONUS
+    # -----------------------------------
+    # ONES
+    - eventResetAchBonusOnes
+    - eventEnableAchBonusOnes
+    - eventStartAchBonus0
+    - eventCompleteBonusOnes|1s
+    # TENS
+    - eventResetAchBonusTens
+    - eventEnableAchBonusTens
+        
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistMode6MDMStart
+    
+    # EXTRA BALL
+    - eventResetShotExtraBall
+    
+    # TODO check if this is still needed
+    - eventResetShotSaucerBonus
+
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliers6MDM
+
+    # ---------------------
+    # EVENT::START::MULTIBALLS
+    # ---------------------
+    # START MODE
+    - eventStartModeMultiball
+    ## ENABLE / DISABLE
+    #- eventEnableMultiballTwoBall
+    #- eventDisableMultiballThreeBall
+
+  ball_ending:
+    # END MULTIBALL
+    - eventDisableMultiballTwoBall
+    - eventDisableMultiballThreeBall
+    - eventDisableMultiballFourBall
+    - eventStopModeMultiball
+    
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  # -----------------------
+  # BASE MODE STARTED
+  # -----------------------
+  mode_mode6MDM_started:
+    # SET NAME FOR DMD
+    nameMoon:
+      string: "6MIL$MAN"
+      action: set
+    # SET PLAYFIELD MULTIPLIER
+    multiplierPlayfield:
+      int: 2
+      action: set
+            
+  #sw_tagBumper:
+  #  score: -1
+
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  #---------------------
+  # AMBIENCE
+  mode_mode6MDM_started:
+    music6MDM005:
+      loops: -1
+      #volume: 0.4
+      volume: 0.2
+  mode_mode6MDM_ending:
+    music6MDM005:
+      action: stop
+  #---------------------
+  # PAUSE AMBIENCE FOR VIDEO SHOW
+  eventResumeTrackPlaylist:
+    music6MDM005:
+      loops: -1
+      #volume: 0.4
+      volume: 0.2
+  eventPauseTrackPlaylist:
+    music6MDM005:
+      action: stop

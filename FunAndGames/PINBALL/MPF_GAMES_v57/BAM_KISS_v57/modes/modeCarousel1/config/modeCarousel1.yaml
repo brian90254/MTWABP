@@ -1,0 +1,136 @@
+#config_version=6
+
+config:
+# -------------
+- configModeCarousel1Backglass.yaml
+# -------------
+- configModeCarousel1SlideKissBandMemberAceFrehley1.yaml
+- configModeCarousel1SlideKissBandMemberPaulStanley1.yaml
+- configModeCarousel1SlideKissBandMemberPeterCriss1.yaml
+- configModeCarousel1SlideKissBandMemberGeneSimmons1.yaml
+#- configModeCarousel1SlideSpidermanVillanScorpion.yaml
+#- configModeCarousel1SlideSpidermanVillanKraven.yaml
+#- configModeCarousel1SlideSpidermanVillanLizard.yaml
+#- configModeCarousel1SlideSpidermanVillanKingPin.yaml
+# -------------
+
+mode:
+  start_events:
+    - eventStartModeCarousel1
+  stop_events:
+    - eventStopModeCarousel1
+  code: mpf.modes.carousel.code.carousel.Carousel
+  use_wait_queue: true
+  priority: 8000
+  
+mode_settings:
+  selectable_items:
+    # -------------
+    - kissBandMemberAceFrehley1
+    - kissBandMemberPaulStanley1
+    - kissBandMemberGeneSimmons1
+    - kissBandMemberPeterCriss1
+    #- spidermanVillanScorpion
+    #- spidermanVillanKraven
+    #- spidermanVillanLizard
+    #- spidermanVillanKingPin
+    # -------------
+  select_item_events: eventModeCarousel1Select
+  next_item_events: eventModeCarousel1Next
+  previous_item_events: eventModeCarousel1Previous
+  # THIS PREVENTS A ROTATE DURING SELECT 
+  block_events: flipper_cancel
+  release_events: both_flippers_inactive
+
+# -----------------------
+# EVENT::PLAYER::SELECT
+# -----------------------
+event_player:
+  # -----------------------------------
+  # MODE START
+  # -----------------------------------
+  mode_modeCarousel1_started:
+    # ------------
+    # MUSIC
+    # ------------
+    - eventPlaylistModeKissStart
+    # ------------
+    # BACKGLASS
+    # ------------
+    - eventShowSlideCarousel1Backglass
+
+  # -----------------------------------
+  # ROTATE
+  # -----------------------------------
+  sw_flipper_right_inactive:
+    # ROTATE
+    - eventModeCarousel1Previous
+    # PLAY SOUND
+    - playPoolSoundStart
+    # RESTART TIMER
+    - eventRestartTimerModeCarousel1SelectTimeout
+    
+  sw_flipper_left_inactive:
+    # ROTATE
+    - eventModeCarousel1Next
+    # PLAY SOUND
+    - playPoolSoundStart
+    # RESTART TIMER
+    - eventRestartTimerModeCarousel1SelectTimeout
+    
+  # -----------------------------------
+  # SELECT
+  # -----------------------------------
+  sw_tagLaunch:
+    # SELECT
+    - eventModeCarousel1Select
+  # -------------------------
+  flipper_cancel:
+    # SELECT
+    - eventModeCarousel1Select
+  # -------------------------
+  timer_timerModeCarousel1SelectTimeout_complete:
+    # SELECT
+    - eventModeCarousel1Select
+  # -------------------------
+  
+# -----------------------
+# START BY BAND MEMBER SELECTED
+# -----------------------
+  # SELECT MODE
+  # -------------
+  modeCarousel1_kissBandMemberAceFrehley1_selected:
+    - eventStartModeKissAceFrehley|100ms
+  # -------------
+  modeCarousel1_kissBandMemberPaulStanley1_selected:
+    - eventStartModeKissPaulStanley|100ms
+  # -------------
+  modeCarousel1_kissBandMemberPeterCriss1_selected:
+    - eventStartModeKissPeterCriss|100ms
+  # -------------
+  modeCarousel1_kissBandMemberGeneSimmons1_selected:
+    - eventStartModeKissGeneSimmons|100ms
+  # -------------
+  
+  # RESTART QUEUE RELAY PLAYER
+  modeCarousel1_item_selected:
+    # THIS ALSO WILL END THE CAROUSEL MODE
+    - eventQueueRelayBallStartingWaitFor
+    
+# ---------------------
+# TIMERS
+# ---------------------
+timers:
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # ----------------------------
+  timerModeCarousel1SelectTimeout:
+    start_value: 6
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+    restart_on_complete: true
+    control_events:
+      - event: eventRestartTimerModeCarousel1SelectTimeout
+        action: restart

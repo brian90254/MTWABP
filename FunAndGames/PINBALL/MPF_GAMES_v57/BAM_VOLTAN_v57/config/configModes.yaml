@@ -1,0 +1,54 @@
+#config_version=6
+
+modes:
+#-----------------
+# MODES::BASE
+#-----------------
+- modeBase
+- credits
+- bonus
+- high_score
+
+#-----------------
+# MODES::GAME SPECIFIC
+#-----------------
+# MERCURY
+- modeVoltanMercury
+- modeVoltanMercuryMultiball
+# VENUS
+- modeVoltanVenus
+- modeVoltanVenusMultiball
+# EARTH
+- modeVoltanEarth
+- modeVoltanEarthMultiball
+# MARS
+- modeVoltanMars
+- modeVoltanMarsMultiball
+# JUPITER
+- modeVoltanJupiter
+- modeVoltanJupiterMultiball
+# SATURN
+- modeVoltanSaturn
+- modeVoltanSaturnMultiball
+# NEPTUNE
+- modeVoltanNeptune
+- modeVoltanNeptuneMultiball
+# URANUS
+- modeVoltanUranus
+- modeVoltanUranusMultiball
+# PLUTO
+- modeVoltanPluto
+- modeVoltanPlutoMultiball
+
+#-----------------
+# MODES::GENERIC
+#-----------------
+- modeBallSave
+#- modeBallSaveOutlane
+#- modeBallSaveHidden
+#- modeCollectBonus
+#- modeCollectMidGameBonus
+#- modeSkillShot
+#- modeAwardWheel
+#- modeMultiball
+

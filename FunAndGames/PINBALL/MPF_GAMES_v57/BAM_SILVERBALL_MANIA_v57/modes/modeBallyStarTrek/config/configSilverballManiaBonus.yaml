@@ -1,0 +1,90 @@
+#config_version=6
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # CONDITIONAL EVENT::DON'T GO OVER 45 TOTAL BONUS
+  # -----------------------------------
+    shotGroupSpotSilverballMania_unlitFlash_hit{current_player.totalBonus<45}:
+        - eventAddBonus
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# INITIALIZE BONUS COUNT
+# ---------------
+    eventResetMultipliersSilverballMania:
+        # -------------------------
+        # RESET BONUS COUNT
+        totalBonus:
+            #int: 1
+            int: 0
+            action: set
+        # -------------------------
+        # RESET BONUS MULTIPLIER
+        multiBonus:
+            int: 1
+            action: set
+        bonus_multiplier:
+            int: 1
+            action: set
+        # -------------------------
+        # RESET TOTAL BONUS SCORE
+        # (TOTAL BONUS X BONUS MULTIPLIER)
+        scoreBonus:
+            int: 0
+            action: set
+      # -------------------------
+
+# ---------------
+# ADVANCE BONUS COUNT
+# ---------------
+    eventAddBonus:
+        totalBonus: 1
+    
+# ---------------
+# ADVANCE MULTIPLIER ON DROP TARGET HIT
+# ---------------
+    # 2X MULTIPLIER
+    shotBonusMultipliers_litFlash2X_hit:
+        multiBonus:
+            int: 2
+            action: set
+        bonus_multiplier:
+            int: 2
+            action: set
+      
+    # 3X MULTIPLIER
+    shotBonusMultipliers_litFlash3X_hit:
+        multiBonus:
+            int: 3
+            action: set
+        bonus_multiplier:
+            int: 3
+            action: set
+      
+    # 4X MULTIPLIER
+    shotBonusMultipliers_litFlash4X_hit:
+        multiBonus:
+            int: 4
+            action: set
+        bonus_multiplier:
+            int: 4
+            action: set
+      
+    # 5X MULTIPLIER
+    shotBonusMultipliers_litFlash5X_hit:
+        multiBonus:
+            int: 5
+            action: set
+        bonus_multiplier:
+            int: 5
+            action: set
+            
+    # SPECIAL
+    shotDropTarget_litSpecial_hit:
+        score: 25000

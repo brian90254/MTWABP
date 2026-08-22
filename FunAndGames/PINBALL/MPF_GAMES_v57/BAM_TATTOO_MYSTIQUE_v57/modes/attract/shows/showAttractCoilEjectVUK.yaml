@@ -1,0 +1,7 @@
+#show_version=6
+
+- time: 0
+  coils:
+    c_1_1: pulse
+    
+- time: 1

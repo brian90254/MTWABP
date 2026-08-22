@@ -1,0 +1,135 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 12
+      show_tokens:
+        color1: 'ff0000'
+        color2: 'ffff00'
+        led1: ledCircleThumperMiddle1
+        led2: ledCircleThumperMiddle2
+        led3: ledCircleThumperMiddle3
+        led4: ledCircleThumperMiddle4
+        led5: ledCircleThumperMiddle5
+        led6: ledCircleThumperMiddle6
+        led7: ledCircleThumperMiddle7
+        led8: ledCircleThumperMiddle8
+        led9: ledCircleThumperMiddle9
+        led10: ledCircleThumperMiddle10
+        led11: ledCircleThumperMiddle11
+        led12: ledCircleThumperMiddle12
+
+- time: '+2'
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 12
+      show_tokens:
+        color1: 'ffff00'
+        color2: '00ff00'
+        led1: ledCircleThumperMiddle1
+        led2: ledCircleThumperMiddle2
+        led3: ledCircleThumperMiddle3
+        led4: ledCircleThumperMiddle4
+        led5: ledCircleThumperMiddle5
+        led6: ledCircleThumperMiddle6
+        led7: ledCircleThumperMiddle7
+        led8: ledCircleThumperMiddle8
+        led9: ledCircleThumperMiddle9
+        led10: ledCircleThumperMiddle10
+        led11: ledCircleThumperMiddle11
+        led12: ledCircleThumperMiddle12
+
+- time: '+2'
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 12
+      show_tokens:
+        color1: '00ff00'
+        color2: '00ffff'
+        led1: ledCircleThumperMiddle1
+        led2: ledCircleThumperMiddle2
+        led3: ledCircleThumperMiddle3
+        led4: ledCircleThumperMiddle4
+        led5: ledCircleThumperMiddle5
+        led6: ledCircleThumperMiddle6
+        led7: ledCircleThumperMiddle7
+        led8: ledCircleThumperMiddle8
+        led9: ledCircleThumperMiddle9
+        led10: ledCircleThumperMiddle10
+        led11: ledCircleThumperMiddle11
+        led12: ledCircleThumperMiddle12
+
+- time: '+2'
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 12
+      show_tokens:
+        color1: '00ffff'
+        color2: '0000ff'
+        led1: ledCircleThumperMiddle1
+        led2: ledCircleThumperMiddle2
+        led3: ledCircleThumperMiddle3
+        led4: ledCircleThumperMiddle4
+        led5: ledCircleThumperMiddle5
+        led6: ledCircleThumperMiddle6
+        led7: ledCircleThumperMiddle7
+        led8: ledCircleThumperMiddle8
+        led9: ledCircleThumperMiddle9
+        led10: ledCircleThumperMiddle10
+        led11: ledCircleThumperMiddle11
+        led12: ledCircleThumperMiddle12
+
+- time: '+2'
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 12
+      show_tokens:
+        color1: '0000ff'
+        color2: 'ff00ff'
+        led1: ledCircleThumperMiddle1
+        led2: ledCircleThumperMiddle2
+        led3: ledCircleThumperMiddle3
+        led4: ledCircleThumperMiddle4
+        led5: ledCircleThumperMiddle5
+        led6: ledCircleThumperMiddle6
+        led7: ledCircleThumperMiddle7
+        led8: ledCircleThumperMiddle8
+        led9: ledCircleThumperMiddle9
+        led10: ledCircleThumperMiddle10
+        led11: ledCircleThumperMiddle11
+        led12: ledCircleThumperMiddle12
+
+- time: '+2'
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 12
+      show_tokens:
+        color1: 'ff00ff'
+        color2: 'ff0000'
+        led1: ledCircleThumperMiddle1
+        led2: ledCircleThumperMiddle2
+        led3: ledCircleThumperMiddle3
+        led4: ledCircleThumperMiddle4
+        led5: ledCircleThumperMiddle5
+        led6: ledCircleThumperMiddle6
+        led7: ledCircleThumperMiddle7
+        led8: ledCircleThumperMiddle8
+        led9: ledCircleThumperMiddle9
+        led10: ledCircleThumperMiddle10
+        led11: ledCircleThumperMiddle11
+        led12: ledCircleThumperMiddle12
+
+- time: '+2'

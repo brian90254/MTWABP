@@ -1,0 +1,126 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - PLAYBOY
+
+- time: 0
+# ---------------------
+# ONE
+# ---------------------
+  lights:
+    # ----------------------
+    # RED LENS
+    ledKeySpecial: 'ff0000'
+    # RED LENS
+    ledRolloverSpecial: 'ff0000'
+    # YELLOW LENS
+    ledRolloverExtraBall: 'ff0000'
+    # WHITE LENS
+    ledOutlaneSpecialLeft: 'ff0000'
+    # WHITE LENS
+    ledOutlaneSpecialRight: 'ff0000'
+    # WHITE LENS
+    ledLaneRightArrow: 'ff0000'
+
+- time: "+1"
+
+# ---------------------
+# TWO
+# ---------------------
+  lights:
+    # ----------------------
+    # RED LENS
+    ledKeySpecial: 'ffff00'
+    # RED LENS
+    ledRolloverSpecial: 'ffff00'
+    # YELLOW LENS
+    ledRolloverExtraBall: 'ffff00'
+    # WHITE LENS
+    ledOutlaneSpecialLeft: 'ffff00'
+    # WHITE LENS
+    ledOutlaneSpecialRight: 'ffff00'
+    # WHITE LENS
+    ledLaneRightArrow: 'ffff00'
+
+- time: "+1"
+
+# ---------------------
+# THREE
+# ---------------------
+  lights:
+    # ----------------------
+    # RED LENS
+    ledKeySpecial: '00ff00'
+    # RED LENS
+    ledRolloverSpecial: '00ff00'
+    # YELLOW LENS
+    ledRolloverExtraBall: '00ff00'
+    # WHITE LENS
+    ledOutlaneSpecialLeft: '00ff00'
+    # WHITE LENS
+    ledOutlaneSpecialRight: '00ff00'
+    # WHITE LENS
+    ledLaneRightArrow: '00ff00'
+
+- time: "+1"
+
+# ---------------------
+# FOUR
+# ---------------------
+  lights:
+    # ----------------------
+    # RED LENS
+    ledKeySpecial: 'ff0000'
+    # RED LENS
+    ledRolloverSpecial: 'ff0000'
+    # YELLOW LENS
+    ledRolloverExtraBall: 'ff0000'
+    # WHITE LENS
+    ledOutlaneSpecialLeft: '00ffff'
+    # WHITE LENS
+    ledOutlaneSpecialRight: '00ffff'
+    # WHITE LENS
+    ledLaneRightArrow: '00ffff'
+
+- time: "+1"
+
+# ---------------------
+# FIVE
+# ---------------------
+  lights:
+    # ----------------------
+    # RED LENS
+    ledKeySpecial: 'ffff00'
+    # RED LENS
+    ledRolloverSpecial: 'ffff00'
+    # YELLOW LENS
+    ledRolloverExtraBall: 'ffff00'
+    # WHITE LENS
+    ledOutlaneSpecialLeft: '0000ff'
+    # WHITE LENS
+    ledOutlaneSpecialRight: '0000ff'
+    # WHITE LENS
+    ledLaneRightArrow: '0000ff'
+
+- time: "+1"
+
+# ---------------------
+# SIX
+# ---------------------
+  lights:
+    # ----------------------
+    # RED LENS
+    ledKeySpecial: '00ff00'
+    # RED LENS
+    ledRolloverSpecial: '00ff00'
+    # YELLOW LENS
+    ledRolloverExtraBall: '00ff00'
+    # WHITE LENS
+    ledOutlaneSpecialLeft: 'ff00ff'
+    # WHITE LENS
+    ledOutlaneSpecialRight: 'ff00ff'
+    # WHITE LENS
+    ledLaneRightArrow: 'ff00ff'
+
+- time: "+1"

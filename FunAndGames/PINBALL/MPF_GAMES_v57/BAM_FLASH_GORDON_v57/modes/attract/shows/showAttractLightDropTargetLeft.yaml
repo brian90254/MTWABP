@@ -1,0 +1,67 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - FLASH GORDON
+
+- time: 0
+
+  lights:
+    
+    # ----------------------  
+    ledDropLeftA: 'ffffff'
+    ledDropLeftB: '000000'
+    ledDropLeftC: '000000'
+    ledDropLeftD: '000000'
+    # ----------------------
+    ledTargetRight1: 'ffffff'
+    ledTargetRight2: '000000'
+    ledReturnRight: '000000'
+    ledReturnLeft: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledDropLeftA: '000000'
+    ledDropLeftB: 'ffffff'
+    ledDropLeftC: '000000'
+    ledDropLeftD: '000000'
+    # ----------------------
+    ledTargetRight1: '000000'
+    ledTargetRight2: 'ffffff'
+    ledReturnRight: '000000'
+    ledReturnLeft: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledDropLeftA: '000000'
+    ledDropLeftB: '000000'
+    ledDropLeftC: 'ffffff'
+    ledDropLeftD: '000000'
+    # ----------------------
+    ledTargetRight1: '000000'
+    ledTargetRight2: '000000'
+    ledReturnRight: 'ffffff'
+    ledReturnLeft: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledDropLeftA: '000000'
+    ledDropLeftB: '000000'
+    ledDropLeftC: '000000'
+    ledDropLeftD: 'ffffff'
+    # ----------------------
+    ledTargetRight1: '000000'
+    ledTargetRight2: '000000'
+    ledReturnRight: '000000'
+    ledReturnLeft: 'ffffff'
+    # ----------------------
+- time: "+1"

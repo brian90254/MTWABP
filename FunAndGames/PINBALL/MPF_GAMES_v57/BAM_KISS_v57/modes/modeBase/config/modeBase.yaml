@@ -1,0 +1,50 @@
+#config_version=6
+
+# KISS
+
+config:
+- configBaseKissMatrixShots.yaml
+- configBaseKissShots.yaml
+- configBaseKissShows.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 5000
+  
+# ---------------------
+# SWITCHES::COMBO
+# ---------------------
+combo_switches:
+  
+  comboSwitchEndGame:
+    # FLIPPER::RIGHT
+    switches_1: s_0_10
+    # START
+    switches_2: s_0_8
+    hold_time: 2s
+    events_when_both: end_game
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # ----------------------------
+  # START
+  # ----------------------------
+  mode_modeBase_started:
+    - playPoolSoundHorn
+
+# ---------------------
+# PLAYLIST::PLAYER
+# ---------------------
+playlist_player:
+
+  eventPauseTrackPlaylist:
+    trackplaylist:
+      action: stop
+      
+  eventResumeTrackPlaylist:
+    trackplaylist:
+      playlist: playlistModeKissMusic
+      action: play

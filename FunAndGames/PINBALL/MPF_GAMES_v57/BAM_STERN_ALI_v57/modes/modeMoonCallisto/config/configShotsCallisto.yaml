@@ -1,0 +1,501 @@
+#config_version=6
+
+# JCv50 (Jupiter Crush v0.50)
+  
+# *****************************      
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+  # -----------------------------
+  # PROFILE::DROP::LEFT
+  # -----------------------------
+    spDropLfCallisto:
+        states:
+          - name: litFlash
+            show: flashTwoLedColor
+            speed: 2
+            show_tokens:
+               color1: 'ffff00'
+               color2: '808000'
+          - name: litSolid
+            show: onLedColor
+            show_tokens:
+               color: '00ff00'
+        loop: false
+        
+    spDropLf123Callisto:
+        states:
+          - name: litFlash
+            show: traceThreeLedColorRev
+            speed: 1
+            show_tokens:
+               color: '0000ff'
+          - name: litSolid
+            show: onThreeLedThreeColor
+            show_tokens:
+               color1: 'ff0000'
+               color2: '00ff00'
+               color3: 'ff0000'
+        # -------------------------
+        # LOOPING ONLY FOR CALISTO
+        loop: true
+        #loop: false
+        
+  # -----------------------------
+  # PROFILE::TARGET::HUNTER
+  # -----------------------------
+    spTargetHUNTERCallisto:
+        states:
+          - name: litFlash
+            show: flashTwoLedFourColor
+            speed: 2
+            show_tokens:
+                color1: 'ff00ff'
+                color2: '000000'
+                color3: '800080'
+                color4: '000000'
+          - name: unlitSolid
+            show: flashTwoLedFourColor2
+            show_tokens:
+                color1: '000000'
+                color2: '00ff00'
+                color3: '000000'
+                color4: '00ff00'
+        # -------------------------
+        # LOOPING ONLY FOR CALISTO
+        loop: true
+        
+  # -----------------------------
+  # PROFILE::HUNTER::MUSIC
+  # -----------------------------
+    spMusicHUNTERCallisto:
+        states:
+          - name: loopOn
+          - name: loopOff
+        loop: true
+        
+  # -----------------------------
+  # PROFILE::OUTLANES
+  # -----------------------------
+    spLaneOutretCallisto:
+        states:
+          - name: unlitSolid
+            show: onLedColor
+            show_tokens:
+               color: '000000'
+          - name: litFlashMiddle
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ffff00'
+               color2: 'cccc00'
+          - name: litFlash
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ffff'
+               color2: '00cccc'  
+        #loop: false
+        loop: true
+
+    #spLaneOutretCallisto:
+    #    states:
+    #      - name: unlitSolid
+    #        show: onLedColor
+    #        show_tokens:
+    #           color: '000000'
+    #      - name: litFlash
+    #        show: flashTwoLedColor
+    #        speed: 1
+    #        show_tokens:
+    #           color1: '00ffff'
+    #           color2: '00cccc'  
+    #    loop: false
+
+  # -----------------------------
+  # PROFILE::REVERSE::TARGET
+  # -----------------------------
+    spReverseTargetCallisto:
+        states:
+          - name: litFlashBlue
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '0000ff'
+               color2: '0000cc'
+          - name: litFlashCyan
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ffff'
+               color2: '00cccc'
+          - name: litFlashGreen
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ff00'
+               color2: '00cc00'
+          - name: litFlashYellow
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ffff00'
+               color2: 'cccc00'
+          - name: litFlashRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'cc0000'
+          - name: litSolidRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'ff0000'
+        loop: false
+
+  # -----------------------------
+  # PROFILE::TURN::AROUND
+  # -----------------------------
+    spTurnAroundCallisto:
+        states:
+          - name: litFlashBlue
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '0000ff'
+               color2: '0000cc'
+          - name: litFlashCyan
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ffff'
+               color2: '00cccc'
+          - name: litFlashGreen
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ff00'
+               color2: '00cc00'
+          - name: litFlashYellow
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ffff00'
+               color2: 'cccc00'
+          - name: litFlashRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'cc0000'
+          - name: litSolidRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'ff0000'
+        loop: false
+        
+  # -----------------------------
+  # PROFILE::VUK::SPINNER
+  # -----------------------------
+    spVukSpinnerCallisto:
+        states:
+          - name: litFlashBlue
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '0000ff'
+               color2: '0000cc'
+          - name: litFlashCyan
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ffff'
+               color2: '00cccc'
+          - name: litFlashGreen
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: '00ff00'
+               color2: '00cc00'
+          - name: litFlashYellow
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ffff00'
+               color2: 'cccc00'
+          - name: litFlashRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'cc0000'
+          - name: litSolidRed
+            show: flashTwoLedColor
+            speed: 1
+            show_tokens:
+               color1: 'ff0000'
+               color2: 'ff0000'
+        loop: false
+        
+# *****************************      
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::DROP::LEFT
+    # -------------------
+    shotDropLf1Callisto:
+        switch: s_drop_lf_1
+        profile:
+            spDropLf123Callisto
+        show_tokens:
+            led1: l_drop_lf_1_3
+            led2: l_drop_lf_1_2
+            led3: l_drop_lf_1_1
+            
+    shotDropLf2Callisto:
+        switch: s_drop_lf_2
+        profile:
+            spDropLf123Callisto
+        show_tokens:
+            led1: l_drop_lf_2_3
+            led2: l_drop_lf_2_2
+            led3: l_drop_lf_2_1
+
+    shotDropLf3Callisto:
+        switch: s_drop_lf_3
+        profile:
+            spDropLf123Callisto
+        show_tokens:
+            led1: l_drop_lf_3_3
+            led2: l_drop_lf_3_2
+            led3: l_drop_lf_3_1
+
+    # -------------------
+    # SHOTS::DROP::RIGHT
+    # -------------------
+    shotDropRt1Callisto:
+        switch: s_drop_rt_1
+            
+    shotDropRt2Callisto:
+        switch: s_drop_rt_2
+        
+    shotDropRt3Callisto:
+        switch: s_drop_rt_3
+
+    # -------------------
+    # SHOTS::TARGET::HUNTER
+    # -------------------
+    shotTargetHCallisto:
+        switch: s_target_H
+        profile: spTargetHUNTERCallisto
+        show_tokens:
+            led1: l_hunter_target_1
+            led2: l_hunter_bonus_1
+            
+    shotTargetUCallisto:
+        switch: s_target_U
+        profile: spTargetHUNTERCallisto
+        show_tokens:
+            led1: l_hunter_target_2
+            led2: l_hunter_bonus_2
+            
+    shotTargetNCallisto:
+        switch: s_target_N
+        profile: spTargetHUNTERCallisto
+        show_tokens:
+            led1: l_hunter_target_3
+            led2: l_hunter_bonus_3
+            
+    shotTargetTCallisto:
+        switch: s_target_T
+        profile: spTargetHUNTERCallisto
+        show_tokens:
+            led1: l_hunter_target_4
+            led2: l_hunter_bonus_4
+            
+    shotTargetECallisto:
+        switch: s_target_E
+        profile: spTargetHUNTERCallisto
+        show_tokens:
+            led1: l_hunter_target_5
+            led2: l_hunter_bonus_5
+            
+    shotTargetRCallisto:
+        switch: s_target_R
+        profile: spTargetHUNTERCallisto
+        show_tokens:
+            led1: l_hunter_target_6
+            led2: l_hunter_bonus_6
+            
+    # -------------------
+    # SHOTS::TARGET::MUSIC
+    # -------------------
+    shotMusicHCallisto:
+        switch: s_target_H
+        profile: spMusicHUNTERCallisto
+            
+    shotMusicUCallisto:
+        switch: s_target_U
+        profile: spMusicHUNTERCallisto
+            
+    shotMusicNCallisto:
+        switch: s_target_N
+        profile: spMusicHUNTERCallisto
+             
+    shotMusicTCallisto:
+        switch: s_target_T
+        profile: spMusicHUNTERCallisto
+            
+    shotMusicECallisto:
+        switch: s_target_E
+        profile: spMusicHUNTERCallisto
+            
+    shotMusicRCallisto:
+        switch: s_target_R
+        profile: spMusicHUNTERCallisto
+
+    # -------------------
+    # SHOTS::LANES::OUTRET
+    # -------------------
+    shotLaneOutret1Callisto:
+        switch: s_outlane_left
+        profile: spLaneOutretCallisto
+        show_tokens:
+            led: l_lane_outret_1
+
+    shotLaneOutret2Callisto:
+        switch: s_return_lane_left
+        profile: spLaneOutretCallisto
+        show_tokens:
+            led: l_lane_outret_2
+            
+    shotLaneOutret3Callisto:
+        switch: s_return_lane_right
+        profile: spLaneOutretCallisto
+        show_tokens:
+            led: l_lane_outret_3
+            
+    shotLaneOutret4Callisto:
+        switch: s_outlane_right
+        profile: spLaneOutretCallisto
+        show_tokens:
+            led: l_lane_outret_4
+
+    # -------------------
+    # SHOTS::REVERSE::TARGET
+    # -------------------
+    shotReverseTargetCallisto:
+        switch: s_target_reverse
+        profile: spReverseTargetCallisto
+        show_tokens:
+            led: l_target_rev_2
+
+    # -------------------
+    # SHOTS::TURN::AROUND
+    # -------------------
+    shotTurnAroundCallisto:
+        switch: s_turn_around
+        profile: spTurnAroundCallisto
+        show_tokens:
+            led: l_turn_around_3
+            
+    # -------------------
+    # SHOTS::VUK::SPINNER
+    # -------------------
+    shotVukSpinnerCallisto:
+        switch: s_vuk
+        profile: spVukSpinnerCallisto
+        show_tokens:
+            led: l_spinner_mid_2
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::DROP::LEFT
+    # -------------------
+    sgDropLfCallisto:
+        shots:
+            shotDropLf1Callisto
+            shotDropLf2Callisto
+            shotDropLf3Callisto
+        reset_events:
+            sgDropLfCallisto_litSolid_complete
+            ball_started
+            eventResetDropTargetLeft
+            mode_modeMoonCallisto_started
+        enable_events:
+            ball_started
+            mode_modeMoonCallisto_started
+        disable_events: ball_ending
+        rotate_left_events:
+            eventRotateDropTargetLeft
+            
+    # -------------------
+    # SHOTGROUP::DROP::RIGHT
+    # -------------------
+    sgDropRtCallisto:
+        shots:
+            shotDropRt1Callisto
+            shotDropRt2Callisto
+            shotDropRt3Callisto
+        reset_events:
+            ball_started
+            mode_modeMoonCallisto_started
+            #sgDropRtCallisto_litSolid_complete
+        enable_events:
+            ball_started
+            mode_modeMoonCallisto_started
+        disable_events: ball_ending
+
+    # -------------------
+    # SHOTGROUP::TARGET::HUNTER
+    # -------------------
+    sgTargetHUNTERCallisto:
+        shots:
+            shotTargetHCallisto
+            shotTargetUCallisto
+            shotTargetNCallisto
+            shotTargetTCallisto
+            shotTargetECallisto
+            shotTargetRCallisto
+        # ----------------------------
+        # ROTATION ONLY FOR JUPITERONE
+        #rotate_left_events: s_flipper_right_active
+        #rotate_right_events: s_flipper_left_active
+        enable_events:
+            ball_started
+            mode_modeMoonCallisto_started
+        disable_events: ball_ending
+        reset_events:
+            ball_started
+            mode_modeMoonCallisto_started
+            eventResetHunterMultiplier
+        
+    # -------------------
+    # SHOTGROUP::LANES::OUTRET
+    # -------------------
+    sgLaneOutretCallisto:
+        shots:
+            shotLaneOutret1Callisto
+            shotLaneOutret2Callisto
+            shotLaneOutret3Callisto
+            shotLaneOutret4Callisto
+        rotate_left_events: s_flipper_left_active
+        rotate_right_events: s_flipper_right_active
+        #rotate_left_events: s_flipper_right_active
+        #rotate_right_events: s_flipper_left_active
+        reset_events:
+            sgOutlaneReset
+            ball_started
+            mode_modeMoonCallisto_started
+        enable_events:
+            ball_started
+            mode_modeMoonCallisto_started
+        disable_events: ball_ending

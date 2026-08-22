@@ -1,0 +1,183 @@
+#config_version=6
+
+# ---------------------
+# EXTRA::BALLS
+# ---------------------
+extra_balls:
+    extraBallSilverballMania:
+        light_events: eventExtraBallSilverballManiaLit
+        award_events: eventExtraBallSilverballManiaAward
+        max_per_game: 3
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    #shotLeftRollover_stateSpShotLeftRolloverOne_hit:
+    #shotHyperSpace_stateFiveSpShotHyperSpace_hit:
+    #shotBonusMultipliers_stateFourShotBonusMultipliers_hit:
+    shotBonusMultipliers_litFlash5X_hit:
+        - eventExtraBallSilverballManiaLit
+    
+    #shotLeftRollover_stateSpShotLeftRolloverTwo_hit:
+    #shotHyperSpace_stateSixSpShotHyperSpace_hit:
+    shotExtraBall_stateOneShotExtraBall_hit:
+        eventExtraBallSilverballManiaAward
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+  ## ----------------------------
+  ## LIGHT EXTRA BALL
+  ## ----------------------------
+  #eventExtraBallSilverballManiaLit:
+  #  showExtraBallSilverballManiaLit:
+  #    loops: -1
+  #    speed: 24
+  #    key: keyExtraBallLit
+
+  # ----------------------------
+  # AWARD EXTRA BALL
+  # ----------------------------
+  extra_ball_extraBallSilverballMania_awarded:
+    showExtraBallSilverballManiaAward:
+      loops: -1
+      speed: 2
+      key: keyExtraBallAward
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  extra_ball_extraBallSilverballMania_lit:
+    slideExtraBallSilverballManiaLit:
+      target: displayDMD
+      
+  extra_ball_extraBallSilverballMania_awarded:
+    slideExtraBallSilverballManiaAward:
+      target: displayDMD
+
+# ---------------------
+# SLIDE::EXTRA BALL::LIGHT
+# ---------------------
+slides:
+  slideExtraBallSilverballManiaLit:
+    widgets:
+      # -------------------------------
+      # RED FORGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitInner
+        text: Extra Ball Lit
+        y: middle
+        x: middle
+
+      # -------------------------------
+      # YELLOW BACKGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: Extra Ball Lit
+        y: middle - 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: Extra Ball Lit
+        y: middle - 1
+        x: middle - 1
+
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: Extra Ball Lit
+        y: middle + 1
+        x: middle + 1
+
+      - type: text
+        style: fontExtraBallLit
+        color: colorFontExtraBallLitOuter1
+        text: Extra Ball Lit
+        y: middle + 1
+        x: middle - 1
+
+      # -------------------------------
+    expire: 4.0s
+
+# ---------------------
+# SLIDE::EXTRA BALL::AWARD
+# ---------------------
+
+  slideExtraBallSilverballManiaAward:
+    widgets:
+      # BLUE FORGROUND
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardInner
+        text: Extra Ball!
+        y: middle
+        x: middle
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: Extra Ball!
+        y: middle - 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: Extra Ball!
+        y: middle - 1
+        x: middle - 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: Extra Ball!
+        y: middle + 1
+        x: middle + 1
+            
+      - type: text
+        style: fontExtraBallAward
+        color: colorFontExtraBallAwardOuter1
+        text: Extra Ball!
+        y: middle + 1
+        x: middle - 1
+      # -------------------------------
+    expire: 4.0s
+
+
+# *********************
+# SHOWS
+# *********************
+shows:
+  # -----------------------------------
+  # SHOW::LED::EXTRA BALL::AWARD
+  # -----------------------------------
+    showExtraBallSilverballManiaAward:
+        - time: 0
+          lights:
+            ledShootAgain1: '00ff00'
+            ledShootAgain2: '008800'
+            ledShootAgain3: '008800'
+            ledShootAgain4: '008800'
+            ledShootAgain5: '008800'
+            ledShootAgain6: '008800'
+            ledShootAgain7: '008800'
+        - time: 1
+          lights:
+            ledShootAgain1: '008800'
+            ledShootAgain2: '00ff00'
+            ledShootAgain3: '00ff00'
+            ledShootAgain4: '00ff00'
+            ledShootAgain5: '00ff00'
+            ledShootAgain6: '00ff00'
+            ledShootAgain7: '00ff00'
+        - time: 2

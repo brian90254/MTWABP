@@ -1,0 +1,19 @@
+#config_version=6
+modes:
+#-----------------
+# MODES::GENERIC
+#-----------------
+- modeBase
+- modeBallSave
+
+#-----------------
+# MODES::GAME
+#-----------------
+- modeEightBall
+
+#-----------------
+# MODES::BUILT-IN
+#-----------------
+- credits
+- bonus
+- high_score

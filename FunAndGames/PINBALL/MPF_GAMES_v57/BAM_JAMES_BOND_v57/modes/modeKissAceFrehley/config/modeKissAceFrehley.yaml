@@ -1,0 +1,97 @@
+#config_version=6
+
+config:
+- configKissAceFrehleyExtraBall.yaml
+#- configKissAceFrehleyShots.yaml
+- configKissAceFrehleySlides.yaml
+- configKissAceFrehleyThumpers.yaml
+
+mode:
+  start_events:
+    - eventStartModeKissAceFrehley
+  stop_events:
+    - eventStopModeKissAceFrehley
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  #mode_modeKissAceFrehley_started:
+  mode_modeKissAceFrehley_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlideKissAceFrehleyBase
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeKissStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersKissAceFrehley|1000ms
+    - eventResetBonusKissAceFrehley|1000ms
+
+  # ---------------------
+  # EVENT::RESET::MULTIPLIERS
+  # ---------------------
+  eventResetMultipliersKiss:
+    - eventResetMultipliersKissAceFrehley
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  mode_modeKissAceFrehley_started:
+    nameMoon:
+      string: "ACE FREHLEY"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersKissAceFrehley:
+  #eventResetBonusKissAceFrehley:
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusMatrix:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusRows:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusColumns:
+      int: 0
+      action: set
+    # -------------------------
+    
+  #eventResetMultipliersKissAceFrehley:
+  eventResetBonusKissAceFrehley:
+    # -------------------------
+    # RESET BONUS SUPER COLOSSAL
+    bonusSuper:
+      int: 0
+      action: set
+    # -------------------------
+    bonusColossal:
+      int: 0
+      action: set
+    # -------------------------
+
+    ## -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set

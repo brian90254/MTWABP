@@ -1,0 +1,159 @@
+#show_version=6
+
+- time: 0
+  # ------------------------
+  # RED
+  shows:
+    arrowFifteenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledOrbitRightSmallTriangle1
+        led2: ledOrbitRightSmallTriangle2
+        led3: ledOrbitRightLargeTriangle1
+        led4: ledOrbitRightLargeTriangle2
+        led5: ledOrbitRightLargeTriangle3
+        led6: ledOrbitRightLargeTriangle4
+        led7: ledOrbitRightLargeTriangle5
+        led8: ledOrbitRightArrowhead1
+        led9: ledOrbitRightArrowhead2
+        led10: ledOrbitRightArrowhead3
+        led11: ledOrbitRightArrowhead4
+        led12: ledOrbitRightArrowhead5
+        led13: ledOrbitRightArrowhead6
+        led14: ledOrbitRightArrowhead7
+        led15: ledOrbitRightArrowhead8
+
+- time: '+3'
+  # ------------------------
+  # YELLOW
+  shows:
+    arrowFifteenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledOrbitRightSmallTriangle1
+        led2: ledOrbitRightSmallTriangle2
+        led3: ledOrbitRightLargeTriangle1
+        led4: ledOrbitRightLargeTriangle2
+        led5: ledOrbitRightLargeTriangle3
+        led6: ledOrbitRightLargeTriangle4
+        led7: ledOrbitRightLargeTriangle5
+        led8: ledOrbitRightArrowhead1
+        led9: ledOrbitRightArrowhead2
+        led10: ledOrbitRightArrowhead3
+        led11: ledOrbitRightArrowhead4
+        led12: ledOrbitRightArrowhead5
+        led13: ledOrbitRightArrowhead6
+        led14: ledOrbitRightArrowhead7
+        led15: ledOrbitRightArrowhead8
+
+- time: '+3'
+  # ------------------------
+  # GREEN
+  shows:
+    arrowFifteenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledOrbitRightSmallTriangle1
+        led2: ledOrbitRightSmallTriangle2
+        led3: ledOrbitRightLargeTriangle1
+        led4: ledOrbitRightLargeTriangle2
+        led5: ledOrbitRightLargeTriangle3
+        led6: ledOrbitRightLargeTriangle4
+        led7: ledOrbitRightLargeTriangle5
+        led8: ledOrbitRightArrowhead1
+        led9: ledOrbitRightArrowhead2
+        led10: ledOrbitRightArrowhead3
+        led11: ledOrbitRightArrowhead4
+        led12: ledOrbitRightArrowhead5
+        led13: ledOrbitRightArrowhead6
+        led14: ledOrbitRightArrowhead7
+        led15: ledOrbitRightArrowhead8
+
+- time: '+3'
+  # ------------------------
+  # CYAN
+  shows:
+    arrowFifteenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledOrbitRightSmallTriangle1
+        led2: ledOrbitRightSmallTriangle2
+        led3: ledOrbitRightLargeTriangle1
+        led4: ledOrbitRightLargeTriangle2
+        led5: ledOrbitRightLargeTriangle3
+        led6: ledOrbitRightLargeTriangle4
+        led7: ledOrbitRightLargeTriangle5
+        led8: ledOrbitRightArrowhead1
+        led9: ledOrbitRightArrowhead2
+        led10: ledOrbitRightArrowhead3
+        led11: ledOrbitRightArrowhead4
+        led12: ledOrbitRightArrowhead5
+        led13: ledOrbitRightArrowhead6
+        led14: ledOrbitRightArrowhead7
+        led15: ledOrbitRightArrowhead8
+
+- time: '+3'
+  # ------------------------
+  # BLUE
+  shows:
+    arrowFifteenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledOrbitRightSmallTriangle1
+        led2: ledOrbitRightSmallTriangle2
+        led3: ledOrbitRightLargeTriangle1
+        led4: ledOrbitRightLargeTriangle2
+        led5: ledOrbitRightLargeTriangle3
+        led6: ledOrbitRightLargeTriangle4
+        led7: ledOrbitRightLargeTriangle5
+        led8: ledOrbitRightArrowhead1
+        led9: ledOrbitRightArrowhead2
+        led10: ledOrbitRightArrowhead3
+        led11: ledOrbitRightArrowhead4
+        led12: ledOrbitRightArrowhead5
+        led13: ledOrbitRightArrowhead6
+        led14: ledOrbitRightArrowhead7
+        led15: ledOrbitRightArrowhead8
+
+- time: '+3'
+  # ------------------------
+  # MAGENTA
+  shows:
+    arrowFifteenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledOrbitRightSmallTriangle1
+        led2: ledOrbitRightSmallTriangle2
+        led3: ledOrbitRightLargeTriangle1
+        led4: ledOrbitRightLargeTriangle2
+        led5: ledOrbitRightLargeTriangle3
+        led6: ledOrbitRightLargeTriangle4
+        led7: ledOrbitRightLargeTriangle5
+        led8: ledOrbitRightArrowhead1
+        led9: ledOrbitRightArrowhead2
+        led10: ledOrbitRightArrowhead3
+        led11: ledOrbitRightArrowhead4
+        led12: ledOrbitRightArrowhead5
+        led13: ledOrbitRightArrowhead6
+        led14: ledOrbitRightArrowhead7
+        led15: ledOrbitRightArrowhead8
+
+- time: '+3'

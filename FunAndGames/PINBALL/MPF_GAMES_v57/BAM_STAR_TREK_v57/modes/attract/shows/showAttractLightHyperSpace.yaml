@@ -1,0 +1,109 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceSixLedTwoColor:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledHyperSpace2k
+        led2: ledHyperSpace4k
+        led3: ledHyperSpace6k
+        led4: ledHyperSpace8k
+        led5: ledHyperSpace10k
+        led6: ledExtraBallLit
+- time: "+1"
+
+  shows:
+    traceSixLedTwoColor:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledHyperSpace2k
+        led2: ledHyperSpace4k
+        led3: ledHyperSpace6k
+        led4: ledHyperSpace8k
+        led5: ledHyperSpace10k
+        led6: ledExtraBallLit
+- time: "+1"
+
+  shows:
+    traceSixLedTwoColor:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledHyperSpace2k
+        led2: ledHyperSpace4k
+        led3: ledHyperSpace6k
+        led4: ledHyperSpace8k
+        led5: ledHyperSpace10k
+        led6: ledExtraBallLit
+- time: "+1"
+
+  shows:
+    traceSixLedTwoColor:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledHyperSpace2k
+        led2: ledHyperSpace4k
+        led3: ledHyperSpace6k
+        led4: ledHyperSpace8k
+        led5: ledHyperSpace10k
+        led6: ledExtraBallLit
+- time: "+1"
+
+#
+#  shows:
+#    traceSixLedTwoColor:
+#      loops: 0
+#      speed: 6
+#      show_tokens:
+#        color1: '000000'
+#        color2: '00ffff'
+#        led1: ledHyperSpace2k
+#        led2: ledHyperSpace4k
+#        led3: ledHyperSpace6k
+#        led4: ledHyperSpace8k
+#        led5: ledHyperSpace10k
+#        led6: ledExtraBallLit
+#- time: "+1"
+#
+#  shows:
+#    traceSixLedTwoColor:
+#      loops: 0
+#      speed: 6
+#      show_tokens:
+#        color1: '000000'
+#        color2: '0000ff'
+#        led1: ledHyperSpace2k
+#        led2: ledHyperSpace4k
+#        led3: ledHyperSpace6k
+#        led4: ledHyperSpace8k
+#        led5: ledHyperSpace10k
+#        led6: ledExtraBallLit
+#- time: "+1"
+#
+#  shows:
+#    traceSixLedTwoColor:
+#      loops: 0
+#      speed: 6
+#      show_tokens:
+#        color1: '000000'
+#        color2: 'ff00ff'
+#        led1: ledHyperSpace2k
+#        led2: ledHyperSpace4k
+#        led3: ledHyperSpace6k
+#        led4: ledHyperSpace8k
+#        led5: ledHyperSpace10k
+#        led6: ledExtraBallLit
+#- time: "+1"

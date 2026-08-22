@@ -1,0 +1,1184 @@
+#config_version=6
+
+shows:
+    testAttractFlash:
+        - time: 0
+          lights:
+            l_shoot_again_1_1: 'ff0000'
+        - time: 1
+          lights:
+            l_shoot_again_1_1: '000000'
+        - time: 2
+
+    # ------------------------------
+    # ATTACK::ADVANCE
+    flashAttackAdvance:
+        - time: 0
+          lights:
+            ledAttackAdvance1: (color2)
+            ledAttackAdvance2: (color1)
+            ledAttackAdvance3: (color1)
+            ledAttackAdvance4: (color1)
+            ledAttackAdvance5: (color1)
+        - time: 1
+          lights:
+            ledAttackAdvance1: (color2)
+            ledAttackAdvance2: (color2)
+            ledAttackAdvance3: (color1)
+            ledAttackAdvance4: (color1)
+            ledAttackAdvance5: (color1)
+        - time: 2
+          lights:
+            ledAttackAdvance1: (color2)
+            ledAttackAdvance2: (color2)
+            ledAttackAdvance3: (color2)
+            ledAttackAdvance4: (color1)
+            ledAttackAdvance5: (color1)
+        - time: 3
+          lights:
+            ledAttackAdvance1: (color2)
+            ledAttackAdvance2: (color2)
+            ledAttackAdvance3: (color2)
+            ledAttackAdvance4: (color2)
+            ledAttackAdvance5: (color1)
+        - time: 4
+          lights:
+            ledAttackAdvance1: (color2)
+            ledAttackAdvance2: (color2)
+            ledAttackAdvance3: (color2)
+            ledAttackAdvance4: (color2)
+            ledAttackAdvance5: (color2)
+        - time: 5
+        
+    # ------------------------------
+    # HUNTER::BONUS
+    flashHunterBonus:
+        - time: 0
+          lights:
+            ledHunterBonusH: (color2)
+            ledHunterBonusU: (color1)
+            ledHunterBonusN: (color1)
+            ledHunterBonusT: (color1)
+            ledHunterBonusE: (color1)
+            ledHunterBonusR: (color1)
+        - time: 1
+          lights:
+            ledHunterBonusH: (color2)
+            ledHunterBonusU: (color2)
+            ledHunterBonusN: (color1)
+            ledHunterBonusT: (color1)
+            ledHunterBonusE: (color1)
+            ledHunterBonusR: (color1)
+        - time: 2
+          lights:
+            ledHunterBonusH: (color2)
+            ledHunterBonusU: (color2)
+            ledHunterBonusN: (color2)
+            ledHunterBonusT: (color1)
+            ledHunterBonusE: (color1)
+            ledHunterBonusR: (color1)
+        - time: 3
+          lights:
+            ledHunterBonusH: (color1)
+            ledHunterBonusU: (color2)
+            ledHunterBonusN: (color2)
+            ledHunterBonusT: (color2)
+            ledHunterBonusE: (color1)
+            ledHunterBonusR: (color1)
+        - time: 4
+          lights:
+            ledHunterBonusH: (color1)
+            ledHunterBonusU: (color1)
+            ledHunterBonusN: (color2)
+            ledHunterBonusT: (color2)
+            ledHunterBonusE: (color2)
+            ledHunterBonusR: (color1)
+        - time: 5
+          lights:
+            ledHunterBonusH: (color1)
+            ledHunterBonusU: (color1)
+            ledHunterBonusN: (color1)
+            ledHunterBonusT: (color2)
+            ledHunterBonusE: (color2)
+            ledHunterBonusR: (color2)
+        - time: 6
+          lights:
+            ledHunterBonusH: (color1)
+            ledHunterBonusU: (color1)
+            ledHunterBonusN: (color1)
+            ledHunterBonusT: (color1)
+            ledHunterBonusE: (color2)
+            ledHunterBonusR: (color2)
+        - time: 7
+          lights:
+            ledHunterBonusH: (color1)
+            ledHunterBonusU: (color1)
+            ledHunterBonusN: (color1)
+            ledHunterBonusT: (color1)
+            ledHunterBonusE: (color1)
+            ledHunterBonusR: (color2)
+        - time: 8
+        
+    # ------------------------------
+    # HUNTER::TARGET
+    flashHunterTarget:
+        - time: 0
+          lights:
+            ledHunterTargetH: (color2)
+            ledHunterTargetU: (color1)
+            ledHunterTargetN: (color1)
+            ledHunterTargetT: (color1)
+            ledHunterTargetE: (color1)
+            ledHunterTargetR: (color1)
+        - time: 1
+          lights:
+            ledHunterTargetH: (color1)
+            ledHunterTargetU: (color2)
+            ledHunterTargetN: (color1)
+            ledHunterTargetT: (color1)
+            ledHunterTargetE: (color1)
+            ledHunterTargetR: (color1)
+        - time: 2
+          lights:
+            ledHunterTargetH: (color2)
+            ledHunterTargetU: (color1)
+            ledHunterTargetN: (color2)
+            ledHunterTargetT: (color1)
+            ledHunterTargetE: (color1)
+            ledHunterTargetR: (color1)
+        - time: 3
+          lights:
+            ledHunterTargetH: (color1)
+            ledHunterTargetU: (color2)
+            ledHunterTargetN: (color1)
+            ledHunterTargetT: (color2)
+            ledHunterTargetE: (color1)
+            ledHunterTargetR: (color1)
+        - time: 4
+          lights:
+            ledHunterTargetH: (color1)
+            ledHunterTargetU: (color1)
+            ledHunterTargetN: (color2)
+            ledHunterTargetT: (color1)
+            ledHunterTargetE: (color2)
+            ledHunterTargetR: (color1)
+        - time: 5
+          lights:
+            ledHunterTargetH: (color1)
+            ledHunterTargetU: (color1)
+            ledHunterTargetN: (color1)
+            ledHunterTargetT: (color2)
+            ledHunterTargetE: (color1)
+            ledHunterTargetR: (color2)
+        - time: 6
+          lights:
+            ledHunterTargetH: (color1)
+            ledHunterTargetU: (color1)
+            ledHunterTargetN: (color1)
+            ledHunterTargetT: (color1)
+            ledHunterTargetE: (color2)
+            ledHunterTargetR: (color1)
+        - time: 7
+          lights:
+            ledHunterTargetH: (color1)
+            ledHunterTargetU: (color1)
+            ledHunterTargetN: (color1)
+            ledHunterTargetT: (color1)
+            ledHunterTargetE: (color1)
+            ledHunterTargetR: (color2)
+        - time: 8
+        
+    # ------------------------------
+    # MOON::MODES
+    flashMoonModes:
+        - time: 0
+          lights:
+            ledMoonModes1A: (color2)
+            ledMoonModes1B: (color2)
+            ledMoonModes1C: (color2)
+            ledMoonModes2A: (color1)
+            ledMoonModes2B: (color1)
+            ledMoonModes2C: (color1)
+            ledMoonModes3A: (color1)
+            ledMoonModes3B: (color1)
+            ledMoonModes3C: (color1)
+            ledMoonModes4A: (color1)
+            ledMoonModes4B: (color1)
+            ledMoonModes4C: (color1)
+        - time: 1
+          lights:
+            ledMoonModes1A: (color2)
+            ledMoonModes1B: (color2)
+            ledMoonModes1C: (color2)
+            ledMoonModes2A: (color2)
+            ledMoonModes2B: (color2)
+            ledMoonModes2C: (color2)
+            ledMoonModes3A: (color1)
+            ledMoonModes3B: (color1)
+            ledMoonModes3C: (color1)
+            ledMoonModes4A: (color1)
+            ledMoonModes4B: (color1)
+            ledMoonModes4C: (color1)
+        - time: 2
+          lights:
+            ledMoonModes1A: (color2)
+            ledMoonModes1B: (color2)
+            ledMoonModes1C: (color2)
+            ledMoonModes2A: (color2)
+            ledMoonModes2B: (color2)
+            ledMoonModes2C: (color2)
+            ledMoonModes3A: (color1)
+            ledMoonModes3B: (color1)
+            ledMoonModes3C: (color1)
+            ledMoonModes4A: (color1)
+            ledMoonModes4B: (color1)
+            ledMoonModes4C: (color1)
+        - time: 3
+          lights:
+            ledMoonModes1A: (color2)
+            ledMoonModes1B: (color2)
+            ledMoonModes1C: (color2)
+            ledMoonModes2A: (color2)
+            ledMoonModes2B: (color2)
+            ledMoonModes2C: (color2)
+            ledMoonModes3A: (color2)
+            ledMoonModes3B: (color2)
+            ledMoonModes3C: (color2)
+            ledMoonModes4A: (color2)
+            ledMoonModes4B: (color2)
+            ledMoonModes4C: (color2)
+        - time: 4
+        #  lights:
+        #    ledMoonModes1A: (color1)
+        #    ledMoonModes1B: (color1)
+        #    ledMoonModes1C: (color1)
+        #    ledMoonModes2A: (color1)
+        #    ledMoonModes2B: (color1)
+        #    ledMoonModes2C: (color1)
+        #    ledMoonModes3A: (color1)
+        #    ledMoonModes3B: (color1)
+        #    ledMoonModes3C: (color1)
+        #    ledMoonModes4A: (color1)
+        #    ledMoonModes4B: (color1)
+        #    ledMoonModes4C: (color1)
+        #- time: 5
+        #  lights:
+        #    ledMoonModes1A: (color1)
+        #    ledMoonModes1B: (color1)
+        #    ledMoonModes1C: (color1)
+        #    ledMoonModes2A: (color1)
+        #    ledMoonModes2B: (color1)
+        #    ledMoonModes2C: (color1)
+        #    ledMoonModes3A: (color1)
+        #    ledMoonModes3B: (color1)
+        #    ledMoonModes3C: (color1)
+        #    ledMoonModes4A: (color1)
+        #    ledMoonModes4B: (color1)
+        #    ledMoonModes4C: (color1)
+        #- time: 6
+        
+        
+    # ------------------------------
+    # METEOR::ADVANCE::BONUS
+    flashMeteor:
+        - time: 0
+          lights:
+            ledBonusMultiplier2x: (color2)
+            ledBonusMultiplier4x: (color1)
+            ledBonusMultiplier8x: (color1)
+            ledBonusMultiplier16x: (color1)
+            ledBonusMultiplier32x1: (color1)
+            ledBonusMultiplier32x2: (color1)
+            ledBonusMultiplier32x3: (color1)
+            ledBonusMultiplier32x4: (color1)
+            ledBonusMultiplier32x5: (color1)
+            ledBonusMultiplier32x6: (color1)
+        - time: 1
+          lights:
+            ledBonusMultiplier2x: (color2)
+            ledBonusMultiplier4x: (color2)
+            ledBonusMultiplier8x: (color1)
+            ledBonusMultiplier16x: (color1)
+            ledBonusMultiplier32x1: (color1)
+            ledBonusMultiplier32x2: (color1)
+            ledBonusMultiplier32x3: (color1)
+            ledBonusMultiplier32x4: (color1)
+            ledBonusMultiplier32x5: (color1)
+            ledBonusMultiplier32x6: (color1)
+        - time: 2
+          lights:
+            ledBonusMultiplier2x: (color2)
+            ledBonusMultiplier4x: (color2)
+            ledBonusMultiplier8x: (color2)
+            ledBonusMultiplier16x: (color1)
+            ledBonusMultiplier32x1: (color1)
+            ledBonusMultiplier32x2: (color1)
+            ledBonusMultiplier32x3: (color1)
+            ledBonusMultiplier32x4: (color1)
+            ledBonusMultiplier32x5: (color1)
+            ledBonusMultiplier32x6: (color1)
+        - time: 3
+          lights:
+            ledBonusMultiplier2x: (color2)
+            ledBonusMultiplier4x: (color2)
+            ledBonusMultiplier8x: (color2)
+            ledBonusMultiplier16x: (color2)
+            ledBonusMultiplier32x1: (color1)
+            ledBonusMultiplier32x2: (color1)
+            ledBonusMultiplier32x3: (color1)
+            ledBonusMultiplier32x4: (color1)
+            ledBonusMultiplier32x5: (color1)
+            ledBonusMultiplier32x6: (color1)
+        - time: 4
+          lights:
+            ledBonusMultiplier2x: (color2)
+            ledBonusMultiplier4x: (color2)
+            ledBonusMultiplier8x: (color2)
+            ledBonusMultiplier16x: (color2)
+            ledBonusMultiplier32x1: (color2)
+            ledBonusMultiplier32x2: (color1)
+            ledBonusMultiplier32x3: (color1)
+            ledBonusMultiplier32x4: (color1)
+            ledBonusMultiplier32x5: (color1)
+            ledBonusMultiplier32x6: (color1)
+        - time: 5
+          lights:
+            ledBonusMultiplier2x: (color2)
+            ledBonusMultiplier4x: (color2)
+            ledBonusMultiplier8x: (color2)
+            ledBonusMultiplier16x: (color2)
+            ledBonusMultiplier32x1: (color2)
+            ledBonusMultiplier32x2: (color2)
+            ledBonusMultiplier32x3: (color1)
+            ledBonusMultiplier32x4: (color1)
+            ledBonusMultiplier32x5: (color1)
+            ledBonusMultiplier32x6: (color1)
+        - time: 6
+          lights:
+            ledBonusMultiplier2x: (color2)
+            ledBonusMultiplier4x: (color2)
+            ledBonusMultiplier8x: (color2)
+            ledBonusMultiplier16x: (color2)
+            ledBonusMultiplier32x1: (color2)
+            ledBonusMultiplier32x2: (color2)
+            ledBonusMultiplier32x3: (color2)
+            ledBonusMultiplier32x4: (color1)
+            ledBonusMultiplier32x5: (color1)
+            ledBonusMultiplier32x6: (color1)
+        - time: 7
+          lights:
+            ledBonusMultiplier2x: (color2)
+            ledBonusMultiplier4x: (color2)
+            ledBonusMultiplier8x: (color2)
+            ledBonusMultiplier16x: (color2)
+            ledBonusMultiplier32x1: (color2)
+            ledBonusMultiplier32x2: (color2)
+            ledBonusMultiplier32x3: (color2)
+            ledBonusMultiplier32x4: (color2)
+            ledBonusMultiplier32x5: (color1)
+            ledBonusMultiplier32x6: (color1)
+        - time: 8
+          lights:
+            ledBonusMultiplier2x: (color2)
+            ledBonusMultiplier4x: (color2)
+            ledBonusMultiplier8x: (color2)
+            ledBonusMultiplier16x: (color2)
+            ledBonusMultiplier32x1: (color2)
+            ledBonusMultiplier32x2: (color2)
+            ledBonusMultiplier32x3: (color2)
+            ledBonusMultiplier32x4: (color2)
+            ledBonusMultiplier32x5: (color2)
+            ledBonusMultiplier32x6: (color1)
+        - time: 9
+          lights:
+            ledBonusMultiplier2x: (color2)
+            ledBonusMultiplier4x: (color2)
+            ledBonusMultiplier8x: (color2)
+            ledBonusMultiplier16x: (color2)
+            ledBonusMultiplier32x1: (color2)
+            ledBonusMultiplier32x2: (color2)
+            ledBonusMultiplier32x3: (color2)
+            ledBonusMultiplier32x4: (color2)
+            ledBonusMultiplier32x5: (color2)
+            ledBonusMultiplier32x6: (color2)
+        - time: 10
+
+
+    # ------------------------------
+    # KICKER::MODES
+    flashKickerMode:
+        - time: 0
+          lights:
+            ledKickerMode1A: (color2)
+            ledKickerMode1B: (color2)
+            ledKickerMode1C: (color2)
+            ledKickerMode2A: (color1)
+            ledKickerMode2B: (color1)
+            ledKickerMode2C: (color1)
+            ledKickerMode3A: (color1)
+            ledKickerMode3B: (color1)
+            ledKickerMode3C: (color1)
+        - time: 1
+          lights:
+            ledKickerMode1A: (color2)
+            ledKickerMode1B: (color2)
+            ledKickerMode1C: (color2)
+            ledKickerMode2A: (color2)
+            ledKickerMode2B: (color2)
+            ledKickerMode2C: (color2)
+            ledKickerMode3A: (color1)
+            ledKickerMode3B: (color1)
+            ledKickerMode3C: (color1)
+        - time: 2
+          lights:
+            ledKickerMode1A: (color2)
+            ledKickerMode1B: (color2)
+            ledKickerMode1C: (color2)
+            ledKickerMode2A: (color2)
+            ledKickerMode2B: (color2)
+            ledKickerMode2C: (color2)
+            ledKickerMode3A: (color2)
+            ledKickerMode3B: (color2)
+            ledKickerMode3C: (color2)
+        - time: 3
+
+    # ------------------------------
+    # DROP::TARGET::LEFT
+    flashDropLeft:
+        - time: 0
+          lights:
+            ledDropLeft1A: (color2)
+            ledDropLeft1B: (color2)
+            ledDropLeft1C: (color2)
+            ledDropLeft2A: (color1)
+            ledDropLeft2B: (color1)
+            ledDropLeft2C: (color1)
+            ledDropLeft3A: (color1)
+            ledDropLeft3B: (color1)
+            ledDropLeft3C: (color1)
+        - time: 1
+          lights:
+            ledDropLeft1A: (color2)
+            ledDropLeft1B: (color2)
+            ledDropLeft1C: (color2)
+            ledDropLeft2A: (color2)
+            ledDropLeft2B: (color2)
+            ledDropLeft2C: (color2)
+            ledDropLeft3A: (color1)
+            ledDropLeft3B: (color1)
+            ledDropLeft3C: (color1)
+        - time: 2
+          lights:
+            ledDropLeft1A: (color2)
+            ledDropLeft1B: (color2)
+            ledDropLeft1C: (color2)
+            ledDropLeft2A: (color2)
+            ledDropLeft2B: (color2)
+            ledDropLeft2C: (color2)
+            ledDropLeft3A: (color2)
+            ledDropLeft3B: (color2)
+            ledDropLeft3C: (color2)
+        - time: 3
+        
+        
+    # ------------------------------
+    # OUTLANES::RETURN::LANES
+    flashLanesOutReturn:
+        - time: 0
+          lights:
+            ledOutlaneLeft: (color2)
+            ledReturnLeft: (color1)
+            ledOutlaneRight: (color1)
+            ledReturnRight: (color1)
+        - time: 1
+          lights:
+            ledOutlaneLeft: (color1)
+            ledReturnLeft: (color2)
+            ledOutlaneRight: (color1)
+            ledReturnRight: (color1)
+        - time: 2
+          lights:
+            ledOutlaneLeft: (color2)
+            ledReturnLeft: (color1)
+            ledOutlaneRight: (color2)
+            ledReturnRight: (color1)
+        - time: 3
+          lights:
+            ledOutlaneLeft: (color1)
+            ledReturnLeft: (color2)
+            ledOutlaneRight: (color1)
+            ledReturnRight: (color2)
+        - time: 4
+          lights:
+            ledOutlaneLeft: (color1)
+            ledReturnLeft: (color1)
+            ledOutlaneRight: (color2)
+            ledReturnRight: (color1)
+        - time: 5
+          lights:
+            ledOutlaneLeft: (color1)
+            ledReturnLeft: (color1)
+            ledOutlaneRight: (color1)
+            ledReturnRight: (color2)
+        - time: 6
+
+    # ------------------------------
+    # SHOOT::AGAIN
+    flashShootAgain:
+        - time: 0
+          lights:
+            ledShootAgain2: (color2)
+            ledShootAgain3: (color1)
+            ledShootAgain4: (color1)
+            ledShootAgain5: (color1)
+            ledShootAgain6: (color1)
+            ledShootAgain7: (color1)
+        - time: 1
+          lights:
+            ledShootAgain2: (color1)
+            ledShootAgain3: (color2)
+            ledShootAgain4: (color1)
+            ledShootAgain5: (color1)
+            ledShootAgain6: (color1)
+            ledShootAgain7: (color1)
+        - time: 2
+          lights:
+            ledShootAgain2: (color1)
+            ledShootAgain3: (color1)
+            ledShootAgain4: (color2)
+            ledShootAgain5: (color1)
+            ledShootAgain6: (color1)
+            ledShootAgain7: (color1)
+        - time: 3
+          lights:
+            ledShootAgain2: (color1)
+            ledShootAgain3: (color1)
+            ledShootAgain4: (color1)
+            ledShootAgain5: (color2)
+            ledShootAgain6: (color1)
+            ledShootAgain7: (color1)
+        - time: 4
+          lights:
+            ledShootAgain2: (color1)
+            ledShootAgain3: (color1)
+            ledShootAgain4: (color1)
+            ledShootAgain5: (color1)
+            ledShootAgain6: (color2)
+            ledShootAgain7: (color1)
+        - time: 5
+          lights:
+            ledShootAgain2: (color1)
+            ledShootAgain3: (color1)
+            ledShootAgain4: (color1)
+            ledShootAgain5: (color1)
+            ledShootAgain6: (color1)
+            ledShootAgain7: (color2)
+        - time: 6
+        
+    # ------------------------------
+    # DROP::RIGHT
+    flashDropRight:
+        - time: 0
+          lights:
+            ledDropRight1A: (color1)
+            ledDropRight1B: (color1)
+            ledDropRight1C: (color1)
+            ledDropRight2: (color1)
+            ledDropRight3: (color2)
+        - time: 1
+          lights:
+            ledDropRight1A: (color1)
+            ledDropRight1B: (color1)
+            ledDropRight1C: (color1)
+            ledDropRight2: (color2)
+            ledDropRight3: (color2)
+        - time: 2
+          lights:
+            ledDropRight1A: (color1)
+            ledDropRight1B: (color1)
+            ledDropRight1C: (color2)
+            ledDropRight2: (color2)
+            ledDropRight3: (color2)
+        - time: 3
+          lights:
+            ledDropRight1A: (color1)
+            ledDropRight1B: (color2)
+            ledDropRight1C: (color2)
+            ledDropRight2: (color2)
+            ledDropRight3: (color2)
+        - time: 4
+          lights:
+            ledDropRight1A: (color2)
+            ledDropRight1B: (color2)
+            ledDropRight1C: (color2)
+            ledDropRight2: (color2)
+            ledDropRight3: (color2)
+        - time: 5
+        
+        
+    # ------------------------------
+    # SPINNER
+    flashSpinner:
+        - time: 0
+          lights:
+            ledSpinnerMiddle1A: (color1)
+            ledSpinnerMiddle1B: (color1)
+            ledSpinnerMiddle1C: (color1)
+            ledSpinnerMiddle2: (color2)
+        - time: 1
+          lights:
+            ledSpinnerMiddle1A: (color2)
+            ledSpinnerMiddle1B: (color1)
+            ledSpinnerMiddle1C: (color1)
+            ledSpinnerMiddle2: (color2)
+        - time: 2
+          lights:
+            ledSpinnerMiddle1A: (color2)
+            ledSpinnerMiddle1B: (color2)
+            ledSpinnerMiddle1C: (color1)
+            ledSpinnerMiddle2: (color2)
+        - time: 3
+          lights:
+            ledSpinnerMiddle1A: (color2)
+            ledSpinnerMiddle1B: (color2)
+            ledSpinnerMiddle1C: (color2)
+            ledSpinnerMiddle2: (color2)
+        - time: 4
+       
+    # ------------------------------
+    # REVERSE
+    flashReverse:
+        - time: 0
+          lights:
+            ledTargetReverse1A: (color1)
+            ledTargetReverse1B: (color1)
+            ledTargetReverse1C: (color1)
+            ledTargetReverse2: (color2)
+        - time: 1
+          lights:
+            ledTargetReverse1A: (color2)
+            ledTargetReverse1B: (color1)
+            ledTargetReverse1C: (color1)
+            ledTargetReverse2: (color2)
+        - time: 2
+          lights:
+            ledTargetReverse1A: (color2)
+            ledTargetReverse1B: (color2)
+            ledTargetReverse1C: (color1)
+            ledTargetReverse2: (color2)
+        - time: 3
+          lights:
+            ledTargetReverse1A: (color2)
+            ledTargetReverse1B: (color2)
+            ledTargetReverse1C: (color2)
+            ledTargetReverse2: (color2)
+        - time: 4
+        
+    # ------------------------------
+    # NEWTON::BALL
+    flashNewtonBall:
+        - time: 0
+          lights:
+            ledNewtonBall1A: (color1)
+            ledNewtonBall1B: (color1)
+            ledNewtonBall1C: (color2)
+        - time: 1
+          lights:
+            ledNewtonBall1A: (color1)
+            ledNewtonBall1B: (color2)
+            ledNewtonBall1C: (color2)
+        - time: 2
+          lights:
+            ledNewtonBall1A: (color2)
+            ledNewtonBall1B: (color2)
+            ledNewtonBall1C: (color2)
+        - time: 3
+        
+    # ------------------------------
+    # TURN::AROUND
+    flashTurnAround:
+        - time: 0
+          lights:
+            ledTurnAround1A: (color2)
+            ledTurnAround1B: (color1)
+            ledTurnAround1C: (color1)
+            ledTurnAround3: (color2)
+            ledTurnAround2A: (color1)
+            ledTurnAround2B: (color1)
+            ledTurnAround2C: (color1)
+        - time: 1
+          lights:
+            ledTurnAround1A: (color2)
+            ledTurnAround1B: (color2)
+            ledTurnAround1C: (color1)
+            ledTurnAround3: (color2)
+            ledTurnAround2A: (color1)
+            ledTurnAround2B: (color1)
+            ledTurnAround2C: (color1)
+        - time: 2
+          lights:
+            ledTurnAround1A: (color2)
+            ledTurnAround1B: (color2)
+            ledTurnAround1C: (color2)
+            ledTurnAround3: (color2)
+            ledTurnAround2A: (color1)
+            ledTurnAround2B: (color1)
+            ledTurnAround2C: (color1)
+        - time: 3
+          lights:
+            ledTurnAround1A: (color1)
+            ledTurnAround1B: (color2)
+            ledTurnAround1C: (color2)
+            ledTurnAround3: (color2)
+            ledTurnAround2A: (color2)
+            ledTurnAround2B: (color1)
+            ledTurnAround2C: (color1)
+        - time: 4
+          lights:
+            ledTurnAround1A: (color1)
+            ledTurnAround1B: (color1)
+            ledTurnAround1C: (color2)
+            ledTurnAround3: (color2)
+            ledTurnAround2A: (color2)
+            ledTurnAround2B: (color2)
+            ledTurnAround2C: (color1)
+        - time: 5
+          lights:
+            ledTurnAround1A: (color1)
+            ledTurnAround1B: (color1)
+            ledTurnAround1C: (color1)
+            ledTurnAround3: (color2)
+            ledTurnAround2A: (color2)
+            ledTurnAround2B: (color2)
+            ledTurnAround2C: (color2)
+        - time: 6
+          lights:
+            ledTurnAround1A: (color1)
+            ledTurnAround1B: (color1)
+            ledTurnAround1C: (color1)
+            ledTurnAround3: (color2)
+            ledTurnAround2A: (color1)
+            ledTurnAround2B: (color2)
+            ledTurnAround2C: (color2)
+        - time: 7
+          lights:
+            ledTurnAround1A: (color1)
+            ledTurnAround1B: (color1)
+            ledTurnAround1C: (color1)
+            ledTurnAround3: (color2)
+            ledTurnAround2A: (color1)
+            ledTurnAround2B: (color1)
+            ledTurnAround2C: (color2)
+        - time: 8
+        
+        
+    # ------------------------------
+    # KICKER
+    flashKicker:
+        - time: 0
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color1)
+            ledKickerWheel1C: (color1)
+            ledKickerWheel2A: (color1)
+            ledKickerWheel2B: (color1)
+            ledKickerWheel2C: (color1)
+            ledKickerWheel3A: (color1)
+            ledKickerWheel3B: (color1)
+            ledKickerWheel3C: (color1)
+            ledKickerWheel4A: (color1)
+            ledKickerWheel4B: (color1)
+            ledKickerWheel4C: (color1)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 1
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color1)
+            ledKickerWheel2A: (color1)
+            ledKickerWheel2B: (color1)
+            ledKickerWheel2C: (color1)
+            ledKickerWheel3A: (color1)
+            ledKickerWheel3B: (color1)
+            ledKickerWheel3C: (color1)
+            ledKickerWheel4A: (color1)
+            ledKickerWheel4B: (color1)
+            ledKickerWheel4C: (color1)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 2
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color1)
+            ledKickerWheel2B: (color1)
+            ledKickerWheel2C: (color1)
+            ledKickerWheel3A: (color1)
+            ledKickerWheel3B: (color1)
+            ledKickerWheel3C: (color1)
+            ledKickerWheel4A: (color1)
+            ledKickerWheel4B: (color1)
+            ledKickerWheel4C: (color1)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 3
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color1)
+            ledKickerWheel2C: (color1)
+            ledKickerWheel3A: (color1)
+            ledKickerWheel3B: (color1)
+            ledKickerWheel3C: (color1)
+            ledKickerWheel4A: (color1)
+            ledKickerWheel4B: (color1)
+            ledKickerWheel4C: (color1)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 4
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color2)
+            ledKickerWheel2C: (color1)
+            ledKickerWheel3A: (color1)
+            ledKickerWheel3B: (color1)
+            ledKickerWheel3C: (color1)
+            ledKickerWheel4A: (color1)
+            ledKickerWheel4B: (color1)
+            ledKickerWheel4C: (color1)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 5
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color2)
+            ledKickerWheel2C: (color2)
+            ledKickerWheel3A: (color1)
+            ledKickerWheel3B: (color1)
+            ledKickerWheel3C: (color1)
+            ledKickerWheel4A: (color1)
+            ledKickerWheel4B: (color1)
+            ledKickerWheel4C: (color1)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 6
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color2)
+            ledKickerWheel2C: (color2)
+            ledKickerWheel3A: (color2)
+            ledKickerWheel3B: (color1)
+            ledKickerWheel3C: (color1)
+            ledKickerWheel4A: (color1)
+            ledKickerWheel4B: (color1)
+            ledKickerWheel4C: (color1)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 7
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color2)
+            ledKickerWheel2C: (color2)
+            ledKickerWheel3A: (color2)
+            ledKickerWheel3B: (color2)
+            ledKickerWheel3C: (color1)
+            ledKickerWheel4A: (color1)
+            ledKickerWheel4B: (color1)
+            ledKickerWheel4C: (color1)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 8
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color2)
+            ledKickerWheel2C: (color2)
+            ledKickerWheel3A: (color2)
+            ledKickerWheel3B: (color2)
+            ledKickerWheel3C: (color2)
+            ledKickerWheel4A: (color1)
+            ledKickerWheel4B: (color1)
+            ledKickerWheel4C: (color1)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 9
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color2)
+            ledKickerWheel2C: (color2)
+            ledKickerWheel3A: (color2)
+            ledKickerWheel3B: (color2)
+            ledKickerWheel3C: (color2)
+            ledKickerWheel4A: (color2)
+            ledKickerWheel4B: (color1)
+            ledKickerWheel4C: (color1)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 10
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color2)
+            ledKickerWheel2C: (color2)
+            ledKickerWheel3A: (color2)
+            ledKickerWheel3B: (color2)
+            ledKickerWheel3C: (color2)
+            ledKickerWheel4A: (color2)
+            ledKickerWheel4B: (color2)
+            ledKickerWheel4C: (color1)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 11
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color2)
+            ledKickerWheel2C: (color2)
+            ledKickerWheel3A: (color2)
+            ledKickerWheel3B: (color2)
+            ledKickerWheel3C: (color2)
+            ledKickerWheel4A: (color2)
+            ledKickerWheel4B: (color2)
+            ledKickerWheel4C: (color2)
+            ledKickerWheel5A: (color1)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 12
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color2)
+            ledKickerWheel2C: (color2)
+            ledKickerWheel3A: (color2)
+            ledKickerWheel3B: (color2)
+            ledKickerWheel3C: (color2)
+            ledKickerWheel4A: (color2)
+            ledKickerWheel4B: (color2)
+            ledKickerWheel4C: (color2)
+            ledKickerWheel5A: (color2)
+            ledKickerWheel5B: (color1)
+            ledKickerWheel5C: (color1)
+        - time: 13
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color2)
+            ledKickerWheel2C: (color2)
+            ledKickerWheel3A: (color2)
+            ledKickerWheel3B: (color2)
+            ledKickerWheel3C: (color2)
+            ledKickerWheel4A: (color2)
+            ledKickerWheel4B: (color2)
+            ledKickerWheel4C: (color2)
+            ledKickerWheel5A: (color2)
+            ledKickerWheel5B: (color2)
+            ledKickerWheel5C: (color1)
+        - time: 14
+          lights:
+            ledKickerWheel1A: (color2)
+            ledKickerWheel1B: (color2)
+            ledKickerWheel1C: (color2)
+            ledKickerWheel2A: (color2)
+            ledKickerWheel2B: (color2)
+            ledKickerWheel2C: (color2)
+            ledKickerWheel3A: (color2)
+            ledKickerWheel3B: (color2)
+            ledKickerWheel3C: (color2)
+            ledKickerWheel4A: (color2)
+            ledKickerWheel4B: (color2)
+            ledKickerWheel4C: (color2)
+            ledKickerWheel5A: (color2)
+            ledKickerWheel5B: (color2)
+            ledKickerWheel5C: (color2)
+        - time: 15
+            
+    # ------------------------------
+    # ORBIT::LEFT
+    flashOrbitLeft:
+        - time: 0
+          lights:
+            ledOrbitLeft3: (color2)
+            ledOrbitLeft1A: (color1)
+            ledOrbitLeft1B: (color1)
+            ledOrbitLeft1C: (color1)
+            ledOrbitLeft2A: (color1)
+            ledOrbitLeft2B: (color1)
+            ledOrbitLeft2C: (color1)
+            ledOrbitLeft4: (color1)
+            ledRolloverOrbitLeft5A: (color2)
+            ledRolloverOrbitLeft5B: (color1)
+            ledRolloverOrbitLeft5C: (color1)
+            ledRolloverOrbitLeft5D: (color1)
+        - time: 1
+          lights:
+            ledOrbitLeft3: (color2)
+            ledOrbitLeft1A: (color2)
+            ledOrbitLeft1B: (color1)
+            ledOrbitLeft1C: (color1)
+            ledOrbitLeft2A: (color1)
+            ledOrbitLeft2B: (color1)
+            ledOrbitLeft2C: (color1)
+            ledOrbitLeft4: (color1)
+            ledRolloverOrbitLeft5A: (color1)
+            ledRolloverOrbitLeft5B: (color2)
+            ledRolloverOrbitLeft5C: (color1)
+            ledRolloverOrbitLeft5D: (color1)
+        - time: 2
+          lights:
+            ledOrbitLeft3: (color2)
+            ledOrbitLeft1A: (color2)
+            ledOrbitLeft1B: (color2)
+            ledOrbitLeft1C: (color1)
+            ledOrbitLeft2A: (color1)
+            ledOrbitLeft2B: (color1)
+            ledOrbitLeft2C: (color1)
+            ledOrbitLeft4: (color1)
+            ledRolloverOrbitLeft5A: (color1)
+            ledRolloverOrbitLeft5B: (color1)
+            ledRolloverOrbitLeft5C: (color2)
+            ledRolloverOrbitLeft5D: (color1)
+        - time: 3
+          lights:
+            ledOrbitLeft3: (color2)
+            ledOrbitLeft1A: (color2)
+            ledOrbitLeft1B: (color2)
+            ledOrbitLeft1C: (color2)
+            ledOrbitLeft2A: (color1)
+            ledOrbitLeft2B: (color1)
+            ledOrbitLeft2C: (color1)
+            ledOrbitLeft4: (color1)
+            ledRolloverOrbitLeft5A: (color1)
+            ledRolloverOrbitLeft5B: (color1)
+            ledRolloverOrbitLeft5C: (color1)
+            ledRolloverOrbitLeft5D: (color2)
+        - time: 4
+          lights:
+            ledOrbitLeft3: (color2)
+            ledOrbitLeft1A: (color2)
+            ledOrbitLeft1B: (color2)
+            ledOrbitLeft1C: (color2)
+            ledOrbitLeft2A: (color2)
+            ledOrbitLeft2B: (color1)
+            ledOrbitLeft2C: (color1)
+            ledOrbitLeft4: (color1)
+            ledRolloverOrbitLeft5A: (color2)
+            ledRolloverOrbitLeft5B: (color1)
+            ledRolloverOrbitLeft5C: (color1)
+            ledRolloverOrbitLeft5D: (color1)
+        - time: 5
+          lights:
+            ledOrbitLeft3: (color2)
+            ledOrbitLeft1A: (color2)
+            ledOrbitLeft1B: (color2)
+            ledOrbitLeft1C: (color2)
+            ledOrbitLeft2A: (color2)
+            ledOrbitLeft2B: (color2)
+            ledOrbitLeft2C: (color1)
+            ledOrbitLeft4: (color1)
+            ledRolloverOrbitLeft5A: (color1)
+            ledRolloverOrbitLeft5B: (color2)
+            ledRolloverOrbitLeft5C: (color1)
+            ledRolloverOrbitLeft5D: (color1)
+        - time: 6
+          lights:
+            ledOrbitLeft3: (color2)
+            ledOrbitLeft1A: (color2)
+            ledOrbitLeft1B: (color2)
+            ledOrbitLeft1C: (color2)
+            ledOrbitLeft2A: (color2)
+            ledOrbitLeft2B: (color2)
+            ledOrbitLeft2C: (color2)
+            ledOrbitLeft4: (color1)
+            ledRolloverOrbitLeft5A: (color1)
+            ledRolloverOrbitLeft5B: (color1)
+            ledRolloverOrbitLeft5C: (color2)
+            ledRolloverOrbitLeft5D: (color1)
+        - time: 7
+          lights:
+            ledOrbitLeft3: (color2)
+            ledOrbitLeft1A: (color2)
+            ledOrbitLeft1B: (color2)
+            ledOrbitLeft1C: (color2)
+            ledOrbitLeft2A: (color2)
+            ledOrbitLeft2B: (color2)
+            ledOrbitLeft2C: (color2)
+            ledOrbitLeft4: (color2)
+            ledRolloverOrbitLeft5A: (color1)
+            ledRolloverOrbitLeft5B: (color1)
+            ledRolloverOrbitLeft5C: (color1)
+            ledRolloverOrbitLeft5D: (color2)
+        - time: 8
+        #  lights:
+        #    ledOrbitLeft3: (color2)
+        #    ledOrbitLeft1A: (color1)
+        #    ledOrbitLeft1B: (color1)
+        #    ledOrbitLeft1C: (color1)
+        #    ledOrbitLeft2A: (color1)
+        #    ledOrbitLeft2B: (color1)
+        #    ledOrbitLeft2C: (color1)
+        #    ledOrbitLeft4: (color1)
+        #    ledRolloverOrbitLeft5A: (color2)
+        #    ledRolloverOrbitLeft5B: (color1)
+        #    ledRolloverOrbitLeft5C: (color1)
+        #    ledRolloverOrbitLeft5D: (color1)
+        #- time: 9
+
+    # ------------------------------
+    # VUK
+    flashVuk:
+        - time: 0
+          lights:
+            ledVukLeft1A: (color2)
+            ledVukLeft1B: (color1)
+            ledVukLeft1C: (color1)
+        - time: 1
+          lights:
+            ledVukLeft1A: (color2)
+            ledVukLeft1B: (color2)
+            ledVukLeft1C: (color1)
+        - time: 2
+          lights:
+            ledVukLeft1A: (color2)
+            ledVukLeft1B: (color2)
+            ledVukLeft1C: (color2)
+        - time: 3

@@ -1,0 +1,675 @@
+#show_version=6
+
+- time: 0
+
+# -----------------
+# CHASE::RED
+# -----------------
+  lights:
+    led50kAward5A: 'ff0000'
+    led50kAward5B: 'ff0000'
+    led50kAward5C: 'ff0000'
+    led50kAward5D: 'ff0000'
+    led50kAward5E: 'ff0000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+    
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: 'ff0000'
+    led50kAward04B: 'ff0000'
+    led50kAward04C: 'ff0000'
+    led50kAward04D: 'ff0000'
+    led50kAward04E: 'ff0000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: 'ff0000'
+    led50kAward03B: 'ff0000'
+    led50kAward03C: 'ff0000'
+    led50kAward03D: 'ff0000'
+    led50kAward03E: 'ff0000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: 'ff0000'
+    led50kAward02B: 'ff0000'
+    led50kAward02C: 'ff0000'
+    led50kAward02D: 'ff0000'
+    led50kAward02E: 'ff0000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: 'ff0000'
+    led50kAward01B: 'ff0000'
+    led50kAward01C: 'ff0000'
+    led50kAward01D: 'ff0000'
+    led50kAward01E: 'ff0000'
+
+- time: "+1"
+
+# -----------------
+# CHASE::GREEN
+# -----------------
+  lights:
+    led50kAward5A: '00ff00'
+    led50kAward5B: '00ff00'
+    led50kAward5C: '00ff00'
+    led50kAward5D: '00ff00'
+    led50kAward5E: '00ff00'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+    
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '00ff00'
+    led50kAward04B: '00ff00'
+    led50kAward04C: '00ff00'
+    led50kAward04D: '00ff00'
+    led50kAward04E: '00ff00'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '00ff00'
+    led50kAward03B: '00ff00'
+    led50kAward03C: '00ff00'
+    led50kAward03D: '00ff00'
+    led50kAward03E: '00ff00'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '00ff00'
+    led50kAward02B: '00ff00'
+    led50kAward02C: '00ff00'
+    led50kAward02D: '00ff00'
+    led50kAward02E: '00ff00'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '00ff00'
+    led50kAward01B: '00ff00'
+    led50kAward01C: '00ff00'
+    led50kAward01D: '00ff00'
+    led50kAward01E: '00ff00'
+
+- time: "+1"
+
+# -----------------
+# CHASE::BLUE
+# -----------------
+  lights:
+    led50kAward5A: '0000ff'
+    led50kAward5B: '0000ff'
+    led50kAward5C: '0000ff'
+    led50kAward5D: '0000ff'
+    led50kAward5E: '0000ff'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+    
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '0000ff'
+    led50kAward04B: '0000ff'
+    led50kAward04C: '0000ff'
+    led50kAward04D: '0000ff'
+    led50kAward04E: '0000ff'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '0000ff'
+    led50kAward03B: '0000ff'
+    led50kAward03C: '0000ff'
+    led50kAward03D: '0000ff'
+    led50kAward03E: '0000ff'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '0000ff'
+    led50kAward02B: '0000ff'
+    led50kAward02C: '0000ff'
+    led50kAward02D: '0000ff'
+    led50kAward02E: '0000ff'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '0000ff'
+    led50kAward01B: '0000ff'
+    led50kAward01C: '0000ff'
+    led50kAward01D: '0000ff'
+    led50kAward01E: '0000ff'
+
+- time: "+1"
+
+# -----------------
+# CHASE::WHITE
+# -----------------
+  lights:
+    led50kAward5A: '888888'
+    led50kAward5B: '888888'
+    led50kAward5C: '888888'
+    led50kAward5D: '888888'
+    led50kAward5E: '888888'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+    
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '888888'
+    led50kAward04B: '888888'
+    led50kAward04C: '888888'
+    led50kAward04D: '888888'
+    led50kAward04E: '888888'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '888888'
+    led50kAward03B: '888888'
+    led50kAward03C: '888888'
+    led50kAward03D: '888888'
+    led50kAward03E: '888888'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '888888'
+    led50kAward02B: '888888'
+    led50kAward02C: '888888'
+    led50kAward02D: '888888'
+    led50kAward02E: '888888'
+    
+    led50kAward01A: '000000'
+    led50kAward01B: '000000'
+    led50kAward01C: '000000'
+    led50kAward01D: '000000'
+    led50kAward01E: '000000'
+
+- time: "+1"
+
+  lights:
+    led50kAward5A: '000000'
+    led50kAward5B: '000000'
+    led50kAward5C: '000000'
+    led50kAward5D: '000000'
+    led50kAward5E: '000000'
+    
+    led50kAward04A: '000000'
+    led50kAward04B: '000000'
+    led50kAward04C: '000000'
+    led50kAward04D: '000000'
+    led50kAward04E: '000000'
+    
+    led50kAward03A: '000000'
+    led50kAward03B: '000000'
+    led50kAward03C: '000000'
+    led50kAward03D: '000000'
+    led50kAward03E: '000000'
+    
+    led50kAward02A: '000000'
+    led50kAward02B: '000000'
+    led50kAward02C: '000000'
+    led50kAward02D: '000000'
+    led50kAward02E: '000000'
+    
+    led50kAward01A: '888888'
+    led50kAward01B: '888888'
+    led50kAward01C: '888888'
+    led50kAward01D: '888888'
+    led50kAward01E: '888888'
+
+- time: "+1"

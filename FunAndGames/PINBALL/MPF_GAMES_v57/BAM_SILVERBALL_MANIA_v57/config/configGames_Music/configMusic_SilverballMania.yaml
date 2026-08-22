@@ -1,0 +1,329 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:  
+# ---------------------
+# SOUNDS::AMBIENCE::SILVERBALL MANIA
+# ---------------------    
+  musicAmbienceSilverballMania001:
+    file: soundSilverballManiaAmbient_001.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+# ---------------------
+# MUSIC::AMBIENCE::BALLY STAR TREK
+# ---------------------
+  #musicSilverballManiaAmbient002:
+  #  file: musicSilverballManiaAmbient_002.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient003:
+  #  file: musicSilverballManiaAmbient_003.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient004:
+  #  file: musicSilverballManiaAmbient_004.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient005:
+  #  file: musicSilverballManiaAmbient_005.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient006:
+  #  file: musicSilverballManiaAmbient_006.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient007:
+  #  file: musicSilverballManiaAmbient_007.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient008:
+  #  file: musicSilverballManiaAmbient_008.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient009:
+  #  file: musicSilverballManiaAmbient_009.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient010:
+  #  file: musicSilverballManiaAmbient_010.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient011:
+  #  file: musicSilverballManiaAmbient_011.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient012:
+  #  file: musicSilverballManiaAmbient_012.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient013:
+  #  file: musicSilverballManiaAmbient_013.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient014:
+  #  file: musicSilverballManiaAmbient_014.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient015:
+  #  file: musicSilverballManiaAmbient_015.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient016:
+  #  file: musicSilverballManiaAmbient_016.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient017:
+  #  file: musicSilverballManiaAmbient_017.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient018:
+  #  file: musicSilverballManiaAmbient_018.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient019:
+  #  file: musicSilverballManiaAmbient_019.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient020:
+  #  file: musicSilverballManiaAmbient_020.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient021:
+  #  file: musicSilverballManiaAmbient_021.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient022:
+  #  file: musicSilverballManiaAmbient_022.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #musicSilverballManiaAmbient023:
+  #  file: musicSilverballManiaAmbient_023.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #
+  #musicSilverballManiaAmbient024:
+  #  file: musicSilverballManiaAmbient_024.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::BALLY VIKING
+# ---------------------
+  musicSilverballMania001:
+    file: 01_Monsoon.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+  musicSilverballMania002:
+    file: 02_EchoPark.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania003:
+    file: 03_Goldfinger.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania004:
+    file: 04_BraveNewWorld.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+  musicSilverballMania005:
+    file: 05_RussianRoulette.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania006:
+    file: 06_MoonOverCatalina.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania007:
+    file: 07_MalibuBabylon.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania008:
+    file: 08_BlueVenus.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania009:
+    file: 09_LandOfTheUnknown.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania010:
+    file: 10_SurfersLife.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania011:
+    file: 11_StingrayStomp.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania012:
+    file: 12_ZumaSunset.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania013:
+    file: 13_JuJuBeads.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania014:
+    file: 14_GreenSea.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicSilverballMania015:
+    file: 15_SuperHero.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      # ---------------------
+      # SOUNDS::BLUE STINGRAYS::SILVERBALL MANIA
+      # ---------------------
+      - musicSilverballMania001
+      - musicSilverballMania002
+      - musicSilverballMania003
+      - musicSilverballMania004
+      - musicSilverballMania005
+      - musicSilverballMania006
+      - musicSilverballMania007
+      - musicSilverballMania008
+      - musicSilverballMania009
+      - musicSilverballMania010
+      - musicSilverballMania011
+      - musicSilverballMania012
+      - musicSilverballMania013
+      - musicSilverballMania014
+      - musicSilverballMania015
+
+  poolMusicBaseMode:
+    track: music
+    type: random_force_all
+    volume: 0.80
+    sounds:
+      # ---------------------
+      # SOUNDS::BLUE STINGRAYS::SILVERBALL MANIA
+      # ---------------------
+      - musicSilverballMania001
+      - musicSilverballMania002
+      - musicSilverballMania003
+      - musicSilverballMania004
+      - musicSilverballMania005
+      - musicSilverballMania006
+      - musicSilverballMania007
+      - musicSilverballMania008
+      - musicSilverballMania009
+      - musicSilverballMania010
+      - musicSilverballMania011
+      - musicSilverballMania012
+      - musicSilverballMania013
+      - musicSilverballMania014
+      - musicSilverballMania015
+
+# ---------------------
+# MUSIC::PLAYLISTS
+# ---------------------
+playlists:
+  
+  playlistModeSilverballManiaMusic:
+    shuffle: true
+    repeat: true
+    sounds:
+      # ---------------------
+      # SOUNDS::BLUE STINGRAYS::SILVERBALL MANIA
+      # ---------------------
+      - musicSilverballMania001
+      - musicSilverballMania002
+      - musicSilverballMania003
+      - musicSilverballMania004
+      - musicSilverballMania005
+      - musicSilverballMania006
+      - musicSilverballMania007
+      - musicSilverballMania008
+      - musicSilverballMania009
+      - musicSilverballMania010
+      - musicSilverballMania011
+      - musicSilverballMania012
+      - musicSilverballMania013
+      - musicSilverballMania014
+      - musicSilverballMania015

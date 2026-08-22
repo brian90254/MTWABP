@@ -1,0 +1,40 @@
+#show_version=6
+- time: 0
+# ----------------------
+# 4-LED CHASE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledBonusMultiplier2X: '00ff00'   
+    ledBonusMultiplier3X: '000000'
+    ledBonusMultiplier4X: '000000'
+    ledBonusMultiplier5X: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledBonusMultiplier2X: '000000'   
+    ledBonusMultiplier3X: '000000'
+    ledBonusMultiplier4X: 'ffff00'
+    ledBonusMultiplier5X: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledBonusMultiplier2X: '000000'   
+    ledBonusMultiplier3X: '000000'
+    ledBonusMultiplier4X: '000000'
+    ledBonusMultiplier5X: 'ff00ff'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledBonusMultiplier2X: '000000'   
+    ledBonusMultiplier3X: '0000ff'
+    ledBonusMultiplier4X: '000000'
+    ledBonusMultiplier5X: '000000'
+    # ---------------------- 
+- time: "+1"

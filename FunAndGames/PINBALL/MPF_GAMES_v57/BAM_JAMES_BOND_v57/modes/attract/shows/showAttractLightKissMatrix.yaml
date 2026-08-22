@@ -1,0 +1,241 @@
+#show_version=6
+
+- time: 0
+
+# -------------------
+# KISS LEFT-TO-RIGHT
+# -------------------
+  shows:
+    showChaseLight12Up:
+      loops: 0
+      speed: 3
+      show_tokens:
+        # -----------------
+        led1A: ledMatrix11A
+        led1B: ledMatrix11B
+        led1C: ledMatrix11C
+        # -----------------
+        led2A: ledMatrix21A
+        led2B: ledMatrix21B
+        led2C: ledMatrix21C
+        # -----------------
+        led3A: ledMatrix31A
+        led3B: ledMatrix31B
+        led3C: ledMatrix31C
+        # -----------------
+        led4A: ledMatrix41A
+        led4B: ledMatrix41B
+        led4C: ledMatrix41C
+        # -----------------
+        color1: 'ff0000'
+        color2: '00ffff'
+        color3: 'ffff00'
+        color4: '00ff00'
+
+- time: "+1"
+
+  shows:
+    showChaseLight12Up:
+      loops: 0
+      speed: 3
+      show_tokens:
+        # -----------------
+        led1A: ledMatrix12A
+        led1B: ledMatrix12B
+        led1C: ledMatrix12C
+        # -----------------
+        led2A: ledMatrix22A
+        led2B: ledMatrix22B
+        led2C: ledMatrix22C
+        # -----------------
+        led3A: ledMatrix32A
+        led3B: ledMatrix32B
+        led3C: ledMatrix32C
+        # -----------------
+        led4A: ledMatrix42A
+        led4B: ledMatrix42B
+        led4C: ledMatrix42C
+        # -----------------
+        color1: 'ff0000'
+        color2: '00ffff'
+        color3: 'ffff00'
+        color4: '00ff00'
+
+- time: "+1"
+
+  shows:
+    showChaseLight12Up:
+      loops: 0
+      speed: 3
+      show_tokens:
+        # -----------------
+        led1A: ledMatrix13A
+        led1B: ledMatrix13B
+        led1C: ledMatrix13C
+        # -----------------
+        led2A: ledMatrix23A
+        led2B: ledMatrix23B
+        led2C: ledMatrix23C
+        # -----------------
+        led3A: ledMatrix33A
+        led3B: ledMatrix33B
+        led3C: ledMatrix33C
+        # -----------------
+        led4A: ledMatrix43A
+        led4B: ledMatrix43B
+        led4C: ledMatrix43C
+        # -----------------
+        color1: 'ff0000'
+        color2: '00ffff'
+        color3: 'ffff00'
+        color4: '00ff00'
+
+- time: "+1"
+
+  shows:
+    showChaseLight12Up:
+      loops: 0
+      speed: 3
+      show_tokens:
+        # -----------------
+        led1A: ledMatrix14A
+        led1B: ledMatrix14B
+        led1C: ledMatrix14C
+        # -----------------
+        led2A: ledMatrix24A
+        led2B: ledMatrix24B
+        led2C: ledMatrix24C
+        # -----------------
+        led3A: ledMatrix34A
+        led3B: ledMatrix34B
+        led3C: ledMatrix34C
+        # -----------------
+        led4A: ledMatrix44A
+        led4B: ledMatrix44B
+        led4C: ledMatrix44C
+        # -----------------
+        color1: 'ff0000'
+        color2: '00ffff'
+        color3: 'ffff00'
+        color4: '00ff00'
+
+- time: "+1"
+
+# -------------------
+# KISS TOP-TO-BOTTOM
+# -------------------
+  shows:
+    showChaseLight12Up:
+      loops: 0
+      speed: 3
+      show_tokens:
+        # -----------------
+        led1A: ledMatrix11A
+        led1B: ledMatrix11B
+        led1C: ledMatrix11C
+        # -----------------
+        led2A: ledMatrix12A
+        led2B: ledMatrix12B
+        led2C: ledMatrix12C
+        # -----------------
+        led3A: ledMatrix13A
+        led3B: ledMatrix13B
+        led3C: ledMatrix13C
+        # -----------------
+        led4A: ledMatrix14A
+        led4B: ledMatrix14B
+        led4C: ledMatrix14C
+        # -----------------
+        color1: 'ff0000'
+        color2: 'ff0000'
+        color3: 'ff0000'
+        color4: 'ff0000'
+
+- time: "+1"
+
+  shows:
+    showChaseLight12Up:
+      loops: 0
+      speed: 3
+      show_tokens:
+        # -----------------
+        led1A: ledMatrix21A
+        led1B: ledMatrix21B
+        led1C: ledMatrix21C
+        # -----------------
+        led2A: ledMatrix22A
+        led2B: ledMatrix22B
+        led2C: ledMatrix22C
+        # -----------------
+        led3A: ledMatrix23A
+        led3B: ledMatrix23B
+        led3C: ledMatrix23C
+        # -----------------
+        led4A: ledMatrix24A
+        led4B: ledMatrix24B
+        led4C: ledMatrix24C
+        # -----------------
+        color1: '00ffff'
+        color2: '00ffff'
+        color3: '00ffff'
+        color4: '00ffff'
+
+- time: "+1"
+
+  shows:
+    showChaseLight12Up:
+      loops: 0
+      speed: 3
+      show_tokens:
+        # -----------------
+        led1A: ledMatrix31A
+        led1B: ledMatrix31B
+        led1C: ledMatrix31C
+        # -----------------
+        led2A: ledMatrix32A
+        led2B: ledMatrix32B
+        led2C: ledMatrix32C
+        # -----------------
+        led3A: ledMatrix33A
+        led3B: ledMatrix33B
+        led3C: ledMatrix33C
+        # -----------------
+        led4A: ledMatrix34A
+        led4B: ledMatrix34B
+        led4C: ledMatrix34C
+        # -----------------
+        color1: 'ffff00'
+        color2: 'ffff00'
+        color3: 'ffff00'
+        color4: 'ffff00'
+
+- time: "+1"
+
+  shows:
+    showChaseLight12Up:
+      loops: 0
+      speed: 3
+      show_tokens:
+        # -----------------
+        led1A: ledMatrix41A
+        led1B: ledMatrix41B
+        led1C: ledMatrix41C
+        # -----------------
+        led2A: ledMatrix42A
+        led2B: ledMatrix42B
+        led2C: ledMatrix42C
+        # -----------------
+        led3A: ledMatrix43A
+        led3B: ledMatrix43B
+        led3C: ledMatrix43C
+        # -----------------
+        led4A: ledMatrix44A
+        led4B: ledMatrix44B
+        led4C: ledMatrix44C
+        # -----------------
+        color1: '00ff00'
+        color2: '00ff00'
+        color3: '00ff00'
+        color4: '00ff00'
+
+- time: "+1"

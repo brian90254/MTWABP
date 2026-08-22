@@ -1,0 +1,598 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+widget_styles:
+# ---------------
+# FONT DEFINITIONS
+# ---------------
+
+# ************************************************
+# FONT::EXTRA BALL & BALL SAVES
+# ************************************************
+  # --------------------
+  # FONT::EXTRA BALL & BALL SAVES::GENERIC
+  # --------------------
+  # EXTRA BALL LIT
+  fontExtraBallLit:
+    font_name: Jackport
+    font_size: 40
+  # EXTRA BALL AWARD
+  fontExtraBallAward:
+    font_name: Jackport
+    font_size: 48
+  # BALL SAVE
+  fontBallSave:
+    font_name: Jackport
+    font_size: 48
+  # MACHINE INIT ONE
+  fontMachineInitOne:
+    font_name: Panther
+    font_size: 12
+  # --------------------
+  # FONT::EXTRA BALL & BALL SAVES::TATTOO MYSTIQUE
+  # --------------------
+  # EXTRA BALL LIT
+  fontExtraBallLitCharliesAngels:
+    font_name: CarnevaleeFreakshow
+    font_size: 34
+  # EXTRA BALL AWARD
+  fontExtraBallAwardCharliesAngels:
+    font_name: CarnevaleeFreakshow
+    font_size: 48
+  # BALL SAVE
+  fontBallSaveCharliesAngels:
+    font_name: CarnevaleeFreakshow
+    font_size: 48
+  # MACHINE INIT ONE
+  fontMachineInitOneCharliesAngels:
+    font_name: Panther
+    font_size: 12
+
+# ************************************************
+# FONT::GAME OVER::YOUR FORTUNE
+# ************************************************
+  # --------------------
+  # FONT::GAME OVER
+  # --------------------
+  fontGameOverCharliesAngels:
+    font_name: Quadrit
+    font_size: 32
+  # --------------------
+  # FONT::YOUR FORTUNE
+  # --------------------
+  fontYourFortuneCharliesAngels:
+    font_name: NewRocker
+    font_size: 32
+
+# ************************************************
+# FONT::ATTRACT::LAST
+# ************************************************
+  # --------------------
+  # FONT::ATTRACT::LAST::GENERIC
+  # --------------------
+  fontAttractLastHeader:
+    font_name: FlashRogers
+    font_size: 36
+  fontAttractLastMiddle:
+    font_name: RetroFunk
+    font_size: 54
+  fontAttractLastFooter:
+    font_name: COMPUTER
+    font_size: 32
+  # --------------------
+  # FONT::ATTRACT::LAST::TATTOO MYSTIQUE
+  # --------------------
+  fontAttractLastCharliesAngelsHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractLastCharliesAngelsMiddle:
+    font_name: Blackmoor
+    font_size: 54
+  fontAttractLastCharliesAngelsFooter:
+    font_name: Ribeye
+    font_size: 24
+
+# ************************************************
+# FONT::ATTRACT::TITLE
+# ************************************************
+  # --------------------
+  # FONT::ATTRACT::TITLE::GENERIC
+  # --------------------
+  fontAttractTitleHeader:
+    font_name: FlashGordon
+    font_size: 76
+  fontAttractTitleMiddle:
+    font_name: FlashGordon
+    font_size: 64
+  fontAttractTitleFooter:
+    font_name: FlashGordon
+    font_size: 50
+  # --------------------
+  # FONT::ATTRACT::TITLE::TATTOO MYSTIQUE
+  # --------------------
+  fontAttractTitleCharliesAngelsHeader:
+    font_name: LeeBold
+    font_size: 40
+  fontAttractTitleCharliesAngelsMiddle:
+    font_name: LeeBold
+    font_size: 56
+  fontAttractTitleCharliesAngelsFooter:
+    font_name: LeeBold
+    font_size: 48
+
+# ************************************************
+# FONT::ATTRACT::HIGHSCORES
+# ************************************************
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::GENERIC
+  # --------------------
+  fontAttractHighscoreHeader:
+    font_name: FlashRogers
+    font_size: 32
+  fontAttractHighscoreMiddle:
+    font_name: FlashGordon
+    font_size: 60
+  fontAttractHighscoreFooter:
+    font_name: COMPUTER
+    font_size: 48
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::GRANDCHAMPION
+  # --------------------
+  fontAttractGrandChampionCharliesAngelsHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractGrandChampionCharliesAngelsMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontAttractGrandChampionCharliesAngelsFooter:
+    font_name: TattooLetteringBlack
+    font_size: 44
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::FIRSTHIGHSCORE
+  # --------------------
+  fontAttractFirstHighScoreCharliesAngelsHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractFirstHighScoreCharliesAngelsMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontAttractFirstHighScoreCharliesAngelsFooter:
+    font_name: TattooLetteringBlack
+    font_size: 44
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::SECONDHIGHSCORE
+  # --------------------
+  fontAttractSecondHighScoreCharliesAngelsHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractSecondHighScoreCharliesAngelsMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontAttractSecondHighScoreCharliesAngelsFooter:
+    font_name: TattooLetteringBlack
+    font_size: 44
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::THIRDHIGHSCORE
+  # --------------------
+  fontAttractThirdHighScoreCharliesAngelsHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractThirdHighScoreCharliesAngelsMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontAttractThirdHighScoreCharliesAngelsFooter:
+    font_name: TattooLetteringBlack
+    font_size: 44
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::FOURTHHIGHSCORE
+  # --------------------
+  fontAttractFourthHighScoreCharliesAngelsHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractFourthHighScoreCharliesAngelsMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontAttractFourthHighScoreCharliesAngelsFooter:
+    font_name: TattooLetteringBlack
+    font_size: 44
+
+# ************************************************
+# FONT::BASE::SCORE
+# ************************************************
+  # --------------------
+  # FONT::BASE::SCORE::GENERIC
+  # --------------------
+  fontBaseMainHeader:
+    font_name: RockaBilly
+    font_size: 36
+  fontBaseMainMiddle:
+    font_name: RetroFunk
+    font_size: 54
+  fontBaseMainFooter:
+    font_name: FuturaScript
+    font_size: 22
+  # --------------------
+  # FONT::BASE::SCORE::TATTOO MYSTIQUE
+  # --------------------
+  fontBaseMainCharliesAngelsHeader:
+    font_name: LeeBold
+    #font_name: NewRocker
+    font_size: 30
+  fontBaseMainCharliesAngelsMiddle:
+    font_name: LeeBold
+    #font_name: Blackmoor
+    font_size: 48
+  fontBaseMainCharliesAngelsFooter:
+    font_name: LeeBold
+    #font_name: Ribeye
+    font_size: 32
+
+# ************************************************
+# FONT::COLLECT BONUS
+# ************************************************
+  # --------------------
+  # FONT::COLLECT BONUS::GENERIC
+  # --------------------
+  fontCollectBonusHeader:
+    font_name: Jackport
+    font_size: 44
+  fontCollectBonusMiddle:
+    font_name: Jackport
+    font_size: 54
+  fontCollectBonusFooter:
+    font_name: HighSchoolUSASans
+    font_size: 24
+  # --------------------
+  # FONT::COLLECT BONUS::TATTOO MYSTIQUE::
+  # --------------------
+  fontCollectBonusTitleCharliesAngelsHeader:
+    font_name: RoseTattoo
+    font_size: 44
+  fontCollectBonusTitleCharliesAngelsMiddle:
+    font_name: Blackmoor
+    font_size: 54
+  fontCollectBonusTitleCharliesAngelsFooter:
+    font_name: RoseTattoo
+    font_size: 24
+  # --------------------
+  # FONT::COLLECT BONUS::TATTOO MYSTIQUE
+  # --------------------
+  fontCollectBonusCharliesAngelsHeader:
+    font_name: SailorJerry
+    font_size: 24
+  fontCollectBonusCharliesAngelsMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontCollectBonusCharliesAngelsFooter:
+    font_name: SailorJerry
+    font_size: 16
+
+# ************************************************
+# ---------------
+# NAMED COLORS
+# ---------------
+# ************************************************
+named_colors:
+
+# ************************************************
+# COLOR::EXTRA BALL & BALL SAVES
+# ************************************************
+  # --------------------
+  # FONT::EXTRA BALL & BALL SAVES::GENERIC
+  # --------------------
+  # EXTRA BALL LIT
+  colorFontExtraBallLitInner: 'ff0080'
+  colorFontExtraBallLitOuter1: 'ffff00'
+  colorFontExtraBallLitOuter2: '000000'
+  # --------------------
+  # EXTRA BALL AWARD
+  colorFontExtraBallAwardInner: 'ff0080'
+  colorFontExtraBallAwardOuter1: 'ffff00'
+  colorFontExtraBallAwardOuter2: '000000'
+  # --------------------
+  # BALL SAVE
+  colorFontBallSaveInner: '0000ff'
+  colorFontBallSaveOuter1: 'ffffff'
+  colorFontBallSaveOuter2: 'ff0000'
+  # --------------------
+  # MACHINE INIT ONE
+  colorFontMachineInitOne: 'ffffff'
+
+  # --------------------
+  # FONT::EXTRA BALL & BALL SAVES::TATTOO MYSTIQUE
+  # --------------------
+  # EXTRA BALL LIT
+  colorFontExtraBallLitInnerCharliesAngels: 'ff0080'
+  colorFontExtraBallLitOuter1CharliesAngels: 'ffff00'
+  colorFontExtraBallLitOuter2CharliesAngels: '000000'
+  # --------------------
+  # EXTRA BALL AWARD
+  colorFontExtraBallAwardInnerCharliesAngels: 'ff0080'
+  colorFontExtraBallAwardOuter1CharliesAngels: 'ffff00'
+  colorFontExtraBallAwardOuter2CharliesAngels: '000000'
+  # --------------------
+  # BALL SAVE
+  colorFontBallSaveInnerCharliesAngels: '0000ff'
+  colorFontBallSaveOuter1CharliesAngels: '00ff00'
+  colorFontBallSaveOuter2CharliesAngels: '000000'
+  # --------------------
+  # MACHINE INIT ONE
+  colorFontMachineInitOneCharliesAngels: 'ffffff'
+
+# ************************************************
+# COLOR::GAME OVER::YOUR FORTUNE
+# ************************************************
+  # ---------------------
+  # GAME OVER
+  # ---------------------
+  colorFontGameOverFirstCharliesAngels: '8000ff'
+  colorFontGameOverSecondCharliesAngels: 'ffff00'
+  # ---------------------
+  # YOUR FORTUNE
+  # ---------------------
+  colorFontYourFortuneFirstCharliesAngels: 'ffff00'
+  colorFontYourFortuneSecondCharliesAngels: 'ff0000'
+
+# ************************************************
+# COLOR::ATTRACT LAST
+# ************************************************
+  # ---------------------
+  # ATTRACT::LAST::GENERIC
+  # ---------------------
+  # HEADER
+  colorFontAttractLastHeaderInner: 'ff0000'
+  colorFontAttractLastHeaderOuter1: '00ff00'
+  colorFontAttractLastHeaderOuter2: '000000'
+  # MIDDLE
+  colorFontAttractLastMiddleInner: 'ff0000'
+  colorFontAttractLastMiddleOuter1: '00ffff'
+  colorFontAttractLastMiddleOuter2: '000000'
+  # FOOTER
+  colorFontAttractLastFooterInner: '8000ff'
+  colorFontAttractLastFooterOuter1: 'ffff00'
+  colorFontAttractLastFooterOuter2: '000000'
+  # BOX
+  colorBoxAttractLastOuter: '8000ff'
+  colorBoxAttractLastMiddle: '000000'
+  colorBoxAttractLastInner: '000000'
+  colorBoxAttractLastFill: '000000'
+  # ---------------------
+  # ATTRACT::LAST::TATTOO MYSTIQUE
+  # ---------------------
+  # HEADER
+  colorFontAttractLastCharliesAngelsHeaderInner: 'ff0000'
+  colorFontAttractLastCharliesAngelsHeaderOuter1: '00ff00'
+  colorFontAttractLastCharliesAngelsHeaderOuter2: '000000'
+  # MIDDLE
+  colorFontAttractLastCharliesAngelsMiddleInner: 'ff0000'
+  colorFontAttractLastCharliesAngelsMiddleOuter1: '00ffff'
+  colorFontAttractLastCharliesAngelsMiddleOuter2: '000000'
+  # FOOTER
+  colorFontAttractLastCharliesAngelsFooterInner: '8000ff'
+  colorFontAttractLastCharliesAngelsFooterOuter1: 'ffff00'
+  colorFontAttractLastCharliesAngelsFooterOuter2: '000000'
+  # BOX
+  colorBoxAttractLastCharliesAngelsOuter: '8000ff'
+  colorBoxAttractLastCharliesAngelsMiddle: '000000'
+  colorBoxAttractLastCharliesAngelsInner: '000000'
+  colorBoxAttractLastCharliesAngelsFill: '000000'
+
+# ************************************************
+# COLOR::ATTRACT::TITLE
+# ************************************************
+  # ---------------------
+  # ATTRACT::TITLE::GENERIC
+  # ---------------------
+  # HEADER
+  colorFontAttractTitleHeaderInner: 'ffff00'
+  colorFontAttractTitleHeaderOuter1: 'ff0000'
+  colorFontAttractTitleHeaderOuter2: '8000ff'
+  # MIDDLE
+  colorFontAttractTitleMiddleInner: 'ffff00'
+  colorFontAttractTitleMiddleOuter1: 'ff0000'
+  colorFontAttractTitleMiddleOuter2: '8000ff'
+  # FOOTER
+  colorFontAttractTitleFooterInner: 'ffff00'
+  colorFontAttractTitleFooterOuter1: 'ff0000'
+  colorFontAttractTitleFooterOuter2: '8000ff'
+  # BOX
+  colorBoxAttractTitleOuter: 'ffff00'
+  colorBoxAttractTitleMiddle: 'ff0000'
+  colorBoxAttractTitleInner: '8000ff'
+  colorBoxAttractTitleFill: '000000'
+  # ---------------------
+  # ATTRACT::TITLE::TATTOO MYSTIQUE
+  # ---------------------
+  # HEADER
+  colorFontAttractTitleCharliesAngelsHeaderInner: 'ffff00'
+  colorFontAttractTitleCharliesAngelsHeaderOuter1: '000000'
+  colorFontAttractTitleCharliesAngelsHeaderOuter2: 'ff00ff'
+  # MIDDLE
+  colorFontAttractTitleCharliesAngelsMiddleInner: 'ffff00'
+  colorFontAttractTitleCharliesAngelsMiddleOuter1: '000000'
+  colorFontAttractTitleCharliesAngelsMiddleOuter2: 'ff00ff'
+  # FOOTER
+  colorFontAttractTitleCharliesAngelsFooterInner: 'ffff00'
+  colorFontAttractTitleCharliesAngelsFooterOuter1: '000000'
+  colorFontAttractTitleCharliesAngelsFooterOuter2: 'ff00ff'
+  # BOX
+  colorBoxAttractTitleCharliesAngelsOuter: 'ff00ff'
+  colorBoxAttractTitleCharliesAngelsMiddle: '000000'
+  colorBoxAttractTitleCharliesAngelsInner: 'ffff00'
+  colorBoxAttractTitleCharliesAngelsFill: '000000'
+
+# ************************************************
+# COLOR::ATTRACT::HIGH SCORES
+# ************************************************
+  # ---------------------
+  # ATTRACT::HIGHSCORE::GENERIC
+  # ---------------------
+  # GRAND CHAMPION
+  colorAttractGrandChampionText: 'ffffff'
+  colorAttractGrandChampionScore: 'ff0000'
+  colorAttractGrandChampionBackground: 'ffff00'
+  # FIRST HIGH SCORE
+  colorAttractHighscore1Text: 'ff8000'
+  colorAttractHighscore1Score: 'ffff00'
+  colorAttractHighscore1Background: 'ff0000'
+  # SECOND HIGH SCORE
+  colorAttractHighscore2Text: 'ff0000'
+  colorAttractHighscore2Score: 'ffff00'
+  colorAttractHighscore2Background: 'ff8000'
+  # THIRD HIGH SCORE
+  colorAttractHighscore3Text: '00ff00'
+  colorAttractHighscore3Score: 'ffff00'
+  colorAttractHighscore3Background: '8000ff'
+  # FOURTH HIGH SCORE
+  colorAttractHighscore4Text: '00ff00'
+  colorAttractHighscore4Score: 'ffff00'
+  colorAttractHighscore4Background: 'ff8000'
+  # ---------------------
+  # ATTRACT::HIGHSCORE::TATTOO MYSTIQUE
+  # ---------------------
+  # GRAND CHAMPION
+  colorAttractGrandChampionCharliesAngelsHeader: 'ffffff'
+  colorAttractGrandChampionCharliesAngelsMiddle: 'ff0000'
+  colorAttractGrandChampionCharliesAngelsFooter: 'ffffff'
+  colorAttractGrandChampionCharliesAngelsBackground: 'ffff00'
+  # FIRST HIGH SCORE
+  colorAttractFirstHighScoreCharliesAngelsHeader: 'ff8000'
+  colorAttractFirstHighScoreCharliesAngelsMiddle: 'ffff00'
+  colorAttractFirstHighScoreCharliesAngelsFooter: 'ff8000'
+  colorAttractFirstHighScoreCharliesAngelsBackground: 'ff0000'
+  # SECOND HIGH SCORE
+  colorAttractSecondHighScoreCharliesAngelsHeader: 'ff0000'
+  colorAttractSecondHighScoreCharliesAngelsMiddle: 'ffff00'
+  colorAttractSecondHighScoreCharliesAngelsFooter: 'ff0000'
+  colorAttractSecondHighScoreCharliesAngelsBackground: 'ff8000'
+  # THIRD HIGH SCORE
+  colorAttractThirdHighScoreCharliesAngelsHeader: '00ff00'
+  colorAttractThirdHighScoreCharliesAngelsMiddle: 'ffff00'
+  colorAttractThirdHighScoreCharliesAngelsFooter: '00ff00'
+  colorAttractThirdHighScoreCharliesAngelsBackground: '8000ff'
+  # FOURTH HIGH SCORE
+  colorAttractFourthHighScoreCharliesAngelsHeader: '00ff00'
+  colorAttractFourthHighScoreCharliesAngelsMiddle: 'ffff00'
+  colorAttractFourthHighScoreCharliesAngelsFooter: '00ff00'
+  colorAttractFourthHighScoreCharliesAngelsBackground: 'ff8000'
+
+# ************************************************
+# COLOR::BASE::MAIN
+# ************************************************
+  # ---------------------
+  # BASE::MAIN::GENERIC
+  # ---------------------
+  # HEADER
+  colorFontBaseMainHeaderInner: 'ffff00'
+  colorFontBaseMainHeaderOuter1: 'ff0000'
+  colorFontBaseMainHeaderOuter2: '000000'
+  # MIDDLE
+  colorFontBaseMainMiddleInner: 'ff0000'
+  colorFontBaseMainMiddleOuter1: 'ffffff'
+  colorFontBaseMainMiddleOuter2: '000000'
+  # FOOTER
+  colorFontBaseMainFooterInner: 'ffffff'
+  colorFontBaseMainFooterOuter1: '0000ff'
+  colorFontBaseMainFooterOuter2: '000000'
+
+  # ---------------------
+  # BASE::MAIN::TATTOO MYSTIQUE
+  # ---------------------
+  # HEADER
+  colorFontBaseMainCharliesAngelsHeaderInner: 'ffff00'
+  colorFontBaseMainCharliesAngelsHeaderOuter1: 'ff00ff'
+  colorFontBaseMainCharliesAngelsHeaderOuter2: '000000'
+  # MIDDLE
+  colorFontBaseMainCharliesAngelsMiddleInner: 'ff0000'
+  colorFontBaseMainCharliesAngelsMiddleOuter1: 'ffff00'
+  colorFontBaseMainCharliesAngelsMiddleOuter2: '000000'
+  # FOOTER
+  colorFontBaseMainCharliesAngelsFooterInner: '00ffff'
+  colorFontBaseMainCharliesAngelsFooterOuter1: 'ff0000'
+  colorFontBaseMainCharliesAngelsFooterOuter2: '000000'
+
+# ************************************************
+# COLOR::COLLECT::BONUS
+# ************************************************
+# --------------------
+# COLLECT::BONUS::GENERIC
+# --------------------
+  # HEADER
+  colorFontCollectBonusHeaderInner: 'ff0000'
+  colorFontCollectBonusHeaderOuter1: 'ffffff'
+  colorFontCollectBonusHeaderOuter2: '0000ff'
+  # MIDDLE
+  colorFontCollectBonusMiddleInner: '0000ff'
+  colorFontCollectBonusMiddleOuter1: 'ffffff'
+  colorFontCollectBonusMiddleOuter2: '000000'
+  # FOOTER
+  colorFontCollectBonusFooterInner: 'ffffff'
+  colorFontCollectBonusFooterOuter1: '0000ff'
+  colorFontCollectBonusFooterOuter2: '000000'
+# --------------------
+# COLLECT::BONUS::TATTOO MYSTIQUE::TITLE
+# --------------------
+  # HEADER
+  colorFontCollectBonusTitleCharliesAngelsHeaderInner: 'ff0000'
+  colorFontCollectBonusTitleCharliesAngelsHeaderOuter1: 'ffff00'
+  colorFontCollectBonusTitleCharliesAngelsHeaderOuter2: '00ffff'
+  # MIDDLE
+  colorFontCollectBonusTitleCharliesAngelsMiddleInner: '0000ff'
+  colorFontCollectBonusTitleCharliesAngelsMiddleOuter1: 'ffffff'
+  colorFontCollectBonusTitleCharliesAngelsMiddleOuter2: '000000'
+  # FOOTER
+  colorFontCollectBonusTitleCharliesAngelsFooterInner: 'ffffff'
+  colorFontCollectBonusTitleCharliesAngelsFooterOuter1: '0000ff'
+  colorFontCollectBonusTitleCharliesAngelsFooterOuter2: '000000'
+
+# --------------------
+# COLLECT::BONUS::TATTOO MYSTIQUE
+# --------------------
+  # HEADER
+  colorFontCollectBonusCharliesAngelsHeaderInner: 'ffff00'
+  colorFontCollectBonusCharliesAngelsHeaderOuter1: 'ff0000'
+  colorFontCollectBonusCharliesAngelsHeaderOuter2: '00ffff'
+  # MIDDLE
+  colorFontCollectBonusCharliesAngelsMiddleInner: '00ffff'
+  colorFontCollectBonusCharliesAngelsMiddleOuter1: 'ff0000'
+  colorFontCollectBonusCharliesAngelsMiddleOuter2: 'ffff00'
+  # FOOTER
+  colorFontCollectBonusCharliesAngelsFooterInner: 'ff0000'
+  colorFontCollectBonusCharliesAngelsFooterOuter1: 'ffff00'
+  colorFontCollectBonusCharliesAngelsFooterOuter2: '00ffff'
+
+# ************************************************
+# COLOR::LEDS
+# ************************************************
+  # ---------------------
+  # LEDS TATTOO MYSTIQUE :: SIX UP
+  # ---------------------
+  # YELLOW
+  colorLedCharliesAngelsSixUpYellow1: '444400'
+  colorLedCharliesAngelsSixUpYellow2: 'dddd00'
+  # GREEN
+  colorLedCharliesAngelsSixUpGreen1: '007711'
+  colorLedCharliesAngelsSixUpGreen2: '008811'
+  # BLACK
+  colorLedCharliesAngelsSixUpBlack1: '000033'
+  colorLedCharliesAngelsSixUpBlack2: '000022'
+  # RED
+  colorLedCharliesAngelsSixUpRed1: 'aa0022'
+  colorLedCharliesAngelsSixUpRed2: 'cc0033'
+
+  # ---------------------
+  # LEDS TATTOO MYSTIQUE :: THREE UP
+  # ---------------------
+  # YELLOW
+  colorLedCharliesAngelsThreeUpYellow1: '444400'
+  colorLedCharliesAngelsThreeUpYellow2: 'dddd00'
+  # GREEN
+  colorLedCharliesAngelsThreeUpGreen1: '007711'
+  colorLedCharliesAngelsThreeUpGreen2: '008811'
+  # BLACK
+  colorLedCharliesAngelsThreeUpBlack1: '000044'
+  colorLedCharliesAngelsThreeUpBlack2: '000033'
+  # RED
+  colorLedCharliesAngelsThreeUpRed1: 'aa0022'
+  colorLedCharliesAngelsThreeUpRed2: 'cc0033'

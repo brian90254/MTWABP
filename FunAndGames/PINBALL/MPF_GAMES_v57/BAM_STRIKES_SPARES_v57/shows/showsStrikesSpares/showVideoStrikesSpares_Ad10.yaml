@@ -1,0 +1,36 @@
+#show_version=6
+
+# *************************
+# BACKGLASS ANIMATION::ALL LETTERS
+# *************************
+
+#- time: 0
+#  events:
+#    - eventPauseTrackPlaylist
+#
+#- time: '+1'
+#  events:
+#    - presentSlideVideoLayout
+    
+- time: 0
+  slides:
+    slideVideoStrikesSpares_Ad10:
+      target: displayVideoDMD
+      widgets:
+      - type: video
+        video: Ad10
+        auto_play: True
+        volume: 1.0
+        z: 200
+        
+# TIME EQUALS VIDEO LENGTH - 1
+- time: '+18'
+  events:
+    - eventResumeTrackPlaylist
+
+- time: '+2'
+  events:
+    - releaseBallHoldSaucerTop
+    - removeSlideVideoLayout
+              
+- time: '+1'

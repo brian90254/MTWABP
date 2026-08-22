@@ -1,0 +1,47 @@
+#show_version=6
+
+- time: 0
+  shows:
+    showLedAttractAttackAdvance:
+      loops: -1
+    showLedAttractHunterBonus:
+      loops: -1
+    showLedAttractHunterTarget:
+      loops: -1
+    showLedAttractMoonModes:
+      loops: -1
+    showLedAttractMeteor:
+      loops: -1
+    showLedAttractKickerMode:
+      loops: -1
+    showLedAttractDropLeft:
+      loops: -1
+    showLedAttractLanesOutReturn:
+      loops: -1
+    showLedAttractShootAgain:
+      loops: -1
+    showLedAttractDropRight:
+      loops: -1
+    showLedAttractSpinner:
+      loops: -1
+      
+    showLedAttractReverse:
+      loops: -1
+    showLedAttractNewtonBall:
+      loops: -1
+    showLedAttractTurnAround:
+      loops: -1
+    showLedAttractKicker:
+      loops: -1
+    showLedAttractOrbitLeft:
+      loops: -1
+    showLedAttractVuk:
+      loops: -1
+      
+- time: '+480'
+#- time: '+60'
+
+  events: playlistAttention
+  
+- time: '+1'
+  

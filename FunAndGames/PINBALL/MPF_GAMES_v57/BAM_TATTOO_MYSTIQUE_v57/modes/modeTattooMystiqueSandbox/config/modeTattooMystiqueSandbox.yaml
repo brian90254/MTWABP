@@ -1,0 +1,519 @@
+#config_version=6
+
+# TATTOO MYSTIQUE :: PURPLE
+
+mode:
+  start_events: eventStartModeTattooMystiqueSandbox
+  stop_events:
+    - eventStopModeTattooMystiqueSandbox
+    - ball_ending
+    
+  priority: 2100
+
+# *****************************
+# SHOTS::DROPS
+# *****************************
+shots:        
+    # -------------------
+    # SHOTS::DROP::MIDDLE
+    # -------------------
+    shotSandboxTM1:
+        # DROP MIDDLE 1
+        #switch: s_0_0
+        enable_events: eventEnableShotSandboxTM1
+        disable_events: eventDisableShotSandboxTM1
+        restart_events: eventRestartShotSandboxTM1
+        reset_events: eventResetShotSandboxTM1
+        hit_events: eventHitShotSandboxTM1
+        advance_events: eventAdvanceShotSandboxTM1
+        profile: spShotSandboxTM6Up
+        show_tokens:
+            led1: ledDropTargetMiddle1A
+            led2: ledDropTargetMiddle1B
+            led3: ledDropTargetMiddle1C
+            led4: ledDropTargetMiddle1D
+            led5: ledDropTargetMiddle1E
+            led6: ledDropTargetMiddle1F
+
+    shotSandboxTM2:
+        # DROP MIDDLE 2
+        #switch: s_1_8
+        enable_events: eventEnableShotSandboxTM2
+        disable_events: eventDisableShotSandboxTM2
+        restart_events: eventRestartShotSandboxTM2
+        reset_events: eventResetShotSandboxTM2
+        hit_events: eventHitShotSandboxTM2
+        advance_events: eventAdvanceShotSandboxTM2
+        profile: spShotSandboxTM6Up
+        show_tokens:
+            led1: ledDropTargetMiddle2A
+            led2: ledDropTargetMiddle2B
+            led3: ledDropTargetMiddle2C
+            led4: ledDropTargetMiddle2D
+            led5: ledDropTargetMiddle2E
+            led6: ledDropTargetMiddle2F
+
+    shotSandboxTM3:
+        # DROP MIDDLE 3
+        #switch: s_1_24
+        enable_events: eventEnableShotSandboxTM3
+        disable_events: eventDisableShotSandboxTM3
+        restart_events: eventRestartShotSandboxTM3
+        reset_events: eventResetShotSandboxTM3
+        hit_events: eventHitShotSandboxTM3
+        advance_events: eventAdvanceShotSandboxTM3
+        profile: spShotSandboxTM6Up
+        show_tokens:
+            led1: ledDropTargetMiddle3A
+            led2: ledDropTargetMiddle3B
+            led3: ledDropTargetMiddle3C
+            led4: ledDropTargetMiddle3D
+            led5: ledDropTargetMiddle3E
+            led6: ledDropTargetMiddle3F
+
+    # -------------------
+    # SHOTS::LANES::UPPER
+    # -------------------
+    shotSandboxTM4:
+        # LANE 1
+        #switch: s_0_7
+        enable_events: eventEnableShotSandboxTM4
+        disable_events: eventDisableShotSandboxTM4
+        restart_events: eventRestartShotSandboxTM4
+        reset_events: eventResetShotSandboxTM4
+        hit_events: eventHitShotSandboxTM4
+        advance_events: eventAdvanceShotSandboxTM4
+        profile: spShotSandboxTM3Up
+        show_tokens:
+            led1: ledLane1A
+            led2: ledLane1B
+            led3: ledLane1C
+
+    shotSandboxTM5:
+        # LANE 2
+        #switch: s_0_6
+        enable_events: eventEnableShotSandboxTM5
+        disable_events: eventDisableShotSandboxTM5
+        restart_events: eventRestartShotSandboxTM5
+        reset_events: eventResetShotSandboxTM5
+        hit_events: eventHitShotSandboxTM5
+        advance_events: eventAdvanceShotSandboxTM5
+        profile: spShotSandboxTM3Up
+        show_tokens:
+            led1: ledLane2A
+            led2: ledLane2B
+            led3: ledLane2C
+
+    shotSandboxTM6:
+        # LANE 3
+        #switch: s_0_5
+        enable_events: eventEnableShotSandboxTM6
+        disable_events: eventDisableShotSandboxTM6
+        restart_events: eventRestartShotSandboxTM6
+        reset_events: eventResetShotSandboxTM6
+        hit_events: eventHitShotSandboxTM6
+        advance_events: eventAdvanceShotSandboxTM6
+        profile: spShotSandboxTM3Up
+        show_tokens:
+            led1: ledLane3A
+            led2: ledLane3B
+            led3: ledLane3C
+
+    shotSandboxTM7:
+        # LANE 4
+        #switch: s_0_4
+        enable_events: eventEnableShotSandboxTM7
+        disable_events: eventDisableShotSandboxTM7
+        restart_events: eventRestartShotSandboxTM7
+        reset_events: eventResetShotSandboxTM7
+        hit_events: eventHitShotSandboxTM7
+        advance_events: eventAdvanceShotSandboxTM7
+        profile: spShotSandboxTM3Up
+        show_tokens:
+            led1: ledLane4A
+            led2: ledLane4B
+            led3: ledLane4C
+
+    # -------------------
+    # SHOTS::DROP::RIGHT
+    # -------------------
+    shotSandboxTM8:
+        # DROP RIGHT 1
+        #switch: s_0_1
+        enable_events: eventEnableShotSandboxTM8
+        disable_events: eventDisableShotSandboxTM8
+        restart_events: eventRestartShotSandboxTM8
+        reset_events: eventResetShotSandboxTM8
+        hit_events: eventHitShotSandboxTM8
+        advance_events: eventAdvanceShotSandboxTM8
+        profile: spShotSandboxTM6Up
+        show_tokens:
+            led1: ledDropTargetRight1A
+            led2: ledDropTargetRight1B
+            led3: ledDropTargetRight1C
+            led4: ledDropTargetRight1D
+            led5: ledDropTargetRight1E
+            led6: ledDropTargetRight1F
+
+    shotSandboxTM9:
+        # DROP RIGHT 2
+        #switch: s_1_7
+        enable_events: eventEnableShotSandboxTM9
+        disable_events: eventDisableShotSandboxTM9
+        restart_events: eventRestartShotSandboxTM9
+        reset_events: eventResetShotSandboxTM9
+        hit_events: eventHitShotSandboxTM9
+        advance_events: eventAdvanceShotSandboxTM9
+        profile: spShotSandboxTM6Up
+        show_tokens:
+            led1: ledDropTargetRight2A
+            led2: ledDropTargetRight2B
+            led3: ledDropTargetRight2C
+            led4: ledDropTargetRight2D
+            led5: ledDropTargetRight2E
+            led6: ledDropTargetRight2F
+
+    shotSandboxTM10:
+        # DROP RIGHT 3
+        #switch: s_1_23
+        enable_events: eventEnableShotSandboxTM10
+        disable_events: eventDisableShotSandboxTM10
+        restart_events: eventRestartShotSandboxTM10
+        reset_events: eventResetShotSandboxTM10
+        hit_events: eventHitShotSandboxTM10
+        advance_events: eventAdvanceShotSandboxTM10
+        profile: spShotSandboxTM6Up
+        show_tokens:
+            led1: ledDropTargetRight3A
+            led2: ledDropTargetRight3B
+            led3: ledDropTargetRight3C
+            led4: ledDropTargetRight3D
+            led5: ledDropTargetRight3E
+            led6: ledDropTargetRight3F
+
+    # -------------------
+    # SHOTS::TARGETS::LEFT
+    # -------------------
+    shotSandboxTM11:
+        # TARGET LEFT 1
+        #switch: s_1_0
+        enable_events: eventEnableShotSandboxTM11
+        disable_events: eventDisableShotSandboxTM11
+        restart_events: eventRestartShotSandboxTM11
+        reset_events: eventResetShotSandboxTM11
+        hit_events: eventHitShotSandboxTM11
+        advance_events: eventAdvanceShotSandboxTM11
+        profile: spShotSandboxTM3Up
+        show_tokens:
+            led1: ledTargetLeft1A
+            led2: ledTargetLeft1B
+            led3: ledTargetLeft1C
+
+    shotSandboxTM12:
+        # TARGET LEFT 2
+        #switch: s_1_15
+        enable_events: eventEnableShotSandboxTM12
+        disable_events: eventDisableShotSandboxTM12
+        restart_events: eventRestartShotSandboxTM12
+        reset_events: eventResetShotSandboxTM12
+        hit_events: eventHitShotSandboxTM12
+        advance_events: eventAdvanceShotSandboxTM12
+        profile: spShotSandboxTM3Up
+        show_tokens:
+            led1: ledTargetLeft2A
+            led2: ledTargetLeft2B
+            led3: ledTargetLeft2C
+
+    shotSandboxTM13:
+        # TARGET LEFT 3
+        #switch: s_1_1
+        enable_events: eventEnableShotSandboxTM13
+        disable_events: eventDisableShotSandboxTM13
+        restart_events: eventRestartShotSandboxTM13
+        reset_events: eventResetShotSandboxTM13
+        hit_events: eventHitShotSandboxTM13
+        advance_events: eventAdvanceShotSandboxTM13
+        profile: spShotSandboxTM3Up
+        show_tokens:
+            led1: ledTargetLeft3A
+            led2: ledTargetLeft3B
+            led3: ledTargetLeft3C
+
+    shotSandboxTM14:
+        # TARGET LEFT 4
+        #switch: s_1_14
+        enable_events: eventEnableShotSandboxTM14
+        disable_events: eventDisableShotSandboxTM14
+        restart_events: eventRestartShotSandboxTM14
+        reset_events: eventResetShotSandboxTM14
+        hit_events: eventHitShotSandboxTM14
+        advance_events: eventAdvanceShotSandboxTM14
+        profile: spShotSandboxTM3Up
+        show_tokens:
+            led1: ledTargetLeft4A
+            led2: ledTargetLeft4B
+            led3: ledTargetLeft4C
+
+# *********************
+# SHOT::PROFILES
+# *********************
+shot_profiles:
+  # -----------------------------
+  # PROFILE::
+  # -----------------------------
+    spShotSandboxTM3Up:
+        states:
+          - name: litFlash
+            show: flashDiamondThreeLedTwoColor
+            speed: 6
+            show_tokens:
+               color1: '004444'
+               color2: '00ffff'
+          - name: litSolid
+            show: solidDiamondThreeLedTwoColor
+            speed: 6
+            show_tokens:
+               color1: 'cc00cc'
+               color2: 'ff00ff'
+        loop: false
+
+    spShotSandboxTM6Up:
+        states:
+          - name: litFlash
+            show: flashDiamondSixLedTwoColor
+            speed: 6
+            show_tokens:
+               color1: '004444'
+               color2: '00ffff'
+          - name: litSolid
+            show: solidDiamondSixLedTwoColor
+            speed: 6
+            show_tokens:
+               color1: 'cc00cc'
+               color2: 'ff00ff'
+        loop: false
+
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::BALLS::SOLIDS
+    # -------------------
+    shotGroupShotSandboxTM:
+        shots:
+            - shotSandboxTM1
+            - shotSandboxTM2
+            - shotSandboxTM3
+            - shotSandboxTM4
+            - shotSandboxTM5
+            - shotSandboxTM6
+            - shotSandboxTM7
+            - shotSandboxTM8
+            - shotSandboxTM9
+            - shotSandboxTM10
+            - shotSandboxTM11
+            - shotSandboxTM12
+            - shotSandboxTM13
+            - shotSandboxTM14
+        enable_events:
+            - eventEnableShotGroupShotSandboxTM
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupShotSandboxTM
+        reset_events:
+            - eventResetShotGroupShotSandboxTM
+        restart_events:
+            - eventRestartShotGroupShotSandboxTM
+        #rotate_left_events:
+        #    - sw_left_flipper
+        #rotate_right_events:
+        #    - sw_right_flipper
+
+# *********************
+# EVENT::PLAYER
+# *********************
+event_player:
+  # MODE STARTING
+  mode_modeTattooMystiqueSandbox_started:
+    # END OTHER MODES
+    #- eventSwapModeTattooMystiqueOrange2Purple
+    #- eventSwapModeTattooMystiquePurple2Orange
+    - eventEndModeTattooMystiquePurple
+    - eventEndModeTattooMystiqueOrange
+    # RESTART SHOTS
+    - eventRestartShotGroupShotSandboxTM
+    
+# ---------------------
+# THUMPERS
+# ---------------------
+   # SET LIGHTS
+    # MIDDLE
+    - eventShowLedShotThumperMiddleLitFlashYellow
+    - eventShowLedShotThumperMiddleLitSolidYellow|500ms
+    # LEFT
+    - eventShowLedShotThumperLeftLitFlashYellow|1000ms
+    - eventShowLedShotThumperLeftLitSolidYellow|1500ms
+    # LOWER LEFT
+    - eventShowLedShotThumperLowerLeftLitFlashYellow|2000ms
+    - eventShowLedShotThumperLowerLeftLitSolidYellow|2500ms
+
+  shotThumperMiddle_hit:
+    - eventShowLedShotThumperMiddleLitFlashYellow
+    - eventShowLedShotThumperMiddleLitSolidYellow|500ms
+  shotThumperLeft_hit:
+    - eventShowLedShotThumperLeftLitFlashYellow
+    - eventShowLedShotThumperLeftLitSolidYellow|500ms
+  shotThumperLowerLeft_hit:
+    # LIGHT SHOW
+    - eventShowLedShotThumperLowerLeftLitFlashYellow
+    - eventShowLedShotThumperLowerLeftLitSolidYellow|500ms
+    # SOUND
+    - playPoolSoundThunder
+    
+# ---------------------
+# NEWTON BALL :: GYPSY EYES
+# ---------------------
+  sw_tagNewtonBall:
+    - eventShowLedGypsyEyesYellow
+
+# ---------------------
+# SHOTS 1~7 :: SET
+# ---------------------
+  # SHOT 1
+  shotTM1_hit:
+    eventHitShotSandboxTM1
+  # SHOT 2
+  shotTM2_hit:
+    eventHitShotSandboxTM2
+  # SHOT 3
+  shotTM3_hit:
+    eventHitShotSandboxTM3
+  # SHOT 4
+  shotTM4_hit:
+    eventHitShotSandboxTM4
+  # SHOT 5
+  shotTM5_hit:
+    eventHitShotSandboxTM5
+  # SHOT 6
+  shotTM6_hit:
+    eventHitShotSandboxTM6
+  # SHOT 7
+  shotTM7_hit:
+    eventHitShotSandboxTM7
+
+# ---------------------
+# SHOTS 8~14 :: RESET
+# ---------------------
+  # SHOT 8
+  shotTM8_hit:
+    eventHitShotSandboxTM8
+  # SHOT 9
+  shotTM9_hit:
+    eventHitShotSandboxTM9
+  # SHOT 10
+  shotTM10_hit:
+    eventHitShotSandboxTM10
+  # SHOT 11
+  shotTM11_hit:
+    eventHitShotSandboxTM11
+  # SHOT 12
+  shotTM12_hit:
+    eventHitShotSandboxTM12
+  # SHOT 13
+  shotTM13_hit:
+    eventHitShotSandboxTM13
+  # SHOT 14
+  shotTM14_hit:
+    eventHitShotSandboxTM14
+
+# # *********************
+# # VARIABLE::PLAYER
+# # *********************
+# variable_player:
+# # ---------------
+# # VARIABLE::PLAYER::SCORING
+# # ---------------
+#   # ---------------
+#   # SCORING::PLAYER::TARGETS
+#   # ---------------
+#   shotGroupShotSandboxTM_litFlash_hit:
+#     score: 500
+#     totalBonus: 1
+#   shotGroupShotSandboxTM_litSolid_hit:
+#     score: 50
+
+
+# *********************
+# SHOW::PLAYER
+# *********************
+show_player:
+
+  mode_modeTattooMystiqueSandbox_started:
+    # ----------------------------
+    # ILLUMINATION::BACK
+    showBaseLightBackIllumination:
+      loops: 0
+      speed: 2
+    # ----------------------------
+    # ILLUMINATION::APRON
+    showBaseLightApronIllumination:
+      loops: 0
+      speed: 2
+
+
+# ---------------------
+# ROLLOVERS::SHOOTER
+# ---------------------
+  # SHOOTER 1
+  shotRolloverLower1_litFlash_hit:
+    swirlFourLedTwoColor:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledShooterLaneRollover1A
+        led2: ledShooterLaneRollover1B
+        led3: ledShooterLaneRollover1C
+        led4: ledShooterLaneRollover1D
+  # SHOOTER 2
+  shotRolloverLower2_litFlash_hit:
+    swirlFourLedTwoColor:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledShooterLaneRollover2A
+        led2: ledShooterLaneRollover2B
+        led3: ledShooterLaneRollover2C
+        led4: ledShooterLaneRollover2D
+
+# ---------------------
+# ROLLOVERS::LEFT
+# ---------------------
+  # LEFT ORBIT 1
+  shotRolloverLeft1_litFlash_hit:
+    swirlFourLedTwoColor:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledOrbitLeftRollover1A
+        led2: ledOrbitLeftRollover1B
+        led3: ledOrbitLeftRollover1C
+        led4: ledOrbitLeftRollover1D
+  # LEFT ORBIT 2
+  shotRolloverLeft2_litFlash_hit:
+    swirlFourLedTwoColor:
+      loops: 0
+      speed: 2
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledOrbitLeftRollover2A
+        led2: ledOrbitLeftRollover2B
+        led3: ledOrbitLeftRollover2C
+        led4: ledOrbitLeftRollover2D

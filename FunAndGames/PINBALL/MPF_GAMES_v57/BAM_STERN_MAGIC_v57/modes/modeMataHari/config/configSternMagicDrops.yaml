@@ -1,0 +1,454 @@
+#config_version=6
+
+# STERN MAGIC
+
+# *****************************
+# SHOTS::DROPS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::DROP::RIGHT
+    # -------------------
+    shotDropRight1:
+        switch: s_1_28
+        enable_events: eventEnableShotDropRight1
+        disable_events: eventDisableShotDropRight1
+        restart_events: eventRestartShotDropRight1
+        reset_events: eventResetShotDropRight1
+        profile: spShotDropRight
+        
+    shotDropRight2:
+        switch: s_1_18
+        enable_events: eventEnableShotDropRight2
+        disable_events: eventDisableShotDropRight2
+        restart_events: eventRestartShotDropRight2
+        reset_events: eventResetShotDropRight2
+        profile: spShotDropRight
+        
+    shotDropRight3:
+        switch: s_1_19
+        enable_events: eventEnableShotDropRight3
+        disable_events: eventDisableShotDropRight3
+        restart_events: eventRestartShotDropRight3
+        reset_events: eventResetShotDropRight3
+        profile: spShotDropRight
+        
+    # -------------------
+    # SHOTS::DROP::AWARD
+    # -------------------
+    shotDropRightAward:
+        enable_events: eventEnableShotDropRightAward
+        disable_events: eventDisableShotDropRightAward
+        restart_events: eventRestartShotDropRightAward
+        reset_events: eventResetShotDropRightAward
+        hit_events: eventHitShotDropRightAward
+        profile: spShotDropRightAward
+        show_tokens:
+            led1: ledDropRight5k
+            led2: ledDropRight10k
+            led3: ledDropRight20k
+            led4: ledDropRight30k
+            led5: ledDropRightSpecial
+            
+    # -------------------
+    # MULTIPLIER::ADVANCE
+    # -------------------
+    shotMultiplierAdvance:
+        enable_events: eventEnableShotMultiplierAdvance
+        disable_events: eventDisableShotMultiplierAdvance
+        restart_events: eventRestartShotMultiplierAdvance
+        reset_events: eventResetShotMultiplierAdvance
+        #advance_events: eventAdvanceMultiplierAdvance
+        hit_events: eventHitShotMultiplierAdvance
+        profile: spShotMultiplierAdvance
+        show_tokens:
+            led1: ledBonusMultiplier2X
+            led2: ledBonusMultiplier3X
+            led3: ledBonusMultiplier4X
+            led4: ledBonusMultiplier5X
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::DROP::RIGHT
+    # -------------------
+    shotGroupDropRight:
+        shots:
+            - shotDropRight1
+            - shotDropRight2
+            - shotDropRight3
+        enable_events:
+            - eventEnableShotGroupDropRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupDropRight
+        reset_events:
+            - eventResetShotGroupDropRight
+        restart_events:
+            - eventRestartShotGroupDropRight
+        #rotate_left_events:
+        #    - sw_left_flipper
+        #rotate_right_events:
+        #    - sw_right_flipper
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::DROPS::RIGHT
+    # -----------------------------
+    spShotDropRight:
+        states:
+          - name: litFlash
+          # --------------
+          - name: litSolid
+          # --------------
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::DROPS::AWARD
+    # -----------------------------
+    spShotDropRightAward:
+        states:
+          - name: litFlash5k
+            show: showShotDropRightAward
+            speed: 4
+            show_tokens:
+                # ------------------
+                color1A: '00cc00'
+                color2A: '000000'
+                color3A: '000000'
+                color4A: '000000'
+                color5A: '000000'
+                # ------------------
+                color1B: '008800'
+                color2B: '000000'
+                color3B: '000000'
+                color4B: '000000'
+                color5B: '000000'
+                # ------------------
+          - name: litFlash10k
+            show: showShotDropRightAward
+            speed: 4
+            show_tokens:
+                # ------------------
+                color1A: '00ff00'
+                color2A: '00cccc'
+                color3A: '000000'
+                color4A: '000000'
+                color5A: '000000'
+                # ------------------
+                color1B: '00ff00'
+                color2B: '008888'
+                color3B: '000000'
+                color4B: '000000'
+                color5B: '000000'
+                # ------------------
+          - name: litFlash20k
+            show: showShotDropRightAward
+            speed: 4
+            show_tokens:
+                # ------------------
+                color1A: '00ff00'
+                color2A: '00ffff'
+                color3A: 'cccc00'
+                color4A: '000000'
+                color5A: '000000'
+                # ------------------
+                color1B: '00ff00'
+                color2B: '00ffff'
+                color3B: '888800'
+                color4B: '000000'
+                color5B: '000000'
+                # ------------------
+          - name: litFlash30k
+            show: showShotDropRightAward
+            speed: 4
+            show_tokens:
+                # ------------------
+                color1A: '00ff00'
+                color2A: '00ffff'
+                color3A: 'ffff00'
+                color4A: 'cc00cc'
+                color5A: '000000'
+                # ------------------
+                color1B: '00ff00'
+                color2B: '00ffff'
+                color3B: 'ffff00'
+                color4B: '880088'
+                color5B: '000000'
+                # ------------------
+          - name: litFlashSpecial
+            show: showShotDropRightAward
+            speed: 4
+            show_tokens:
+                # ------------------
+                color1A: '00ff00'
+                color2A: '00ffff'
+                color3A: 'ffff00'
+                color4A: 'ff00ff'
+                color5A: 'cc0000'
+                # ------------------
+                color1B: '00ff00'
+                color2B: '00ffff'
+                color3B: 'ffff00'
+                color4B: 'ff00ff'
+                color5B: '880000'
+                # ------------------
+          - name: litSolidSpecial
+            show: showShotDropRightAward
+            speed: 1
+            show_tokens:
+                # ------------------
+                color1A: '00ff00'
+                color2A: '00ffff'
+                color3A: 'ffff00'
+                color4A: 'ff00ff'
+                color5A: 'ff0000'
+                # ------------------
+                color1B: '00ff00'
+                color2B: '00ffff'
+                color3B: 'ffff00'
+                color4B: 'ff00ff'
+                color5B: 'ff0000'
+                # ------------------
+        loop: false
+        
+    # -----------------------------
+    # MULTIPLIER::ADVANCE
+    # -----------------------------
+    spShotMultiplierAdvance:
+        states:
+          - name: litFlashMultiplier2X
+            show: showShotMultiplierAdvance
+            speed: 4
+            show_tokens:
+                # --------------
+                color1A: '00cc00'
+                color2A: '000000'
+                color3A: '000000'
+                color4A: '000000'
+                # --------------
+                color1B: '008800'
+                color2B: '000000'
+                color3B: '000000'
+                color4B: '000000'
+            # -------------------------------
+          - name: litFlashMultiplier3X
+            show: showShotMultiplierAdvance
+            speed: 4
+            show_tokens:
+                # --------------
+                color1A: '00ff00'
+                color2A: '00cccc'
+                color3A: '000000'
+                color4A: '000000'
+                # --------------
+                color1B: '00ff00'
+                color2B: '008888'
+                color3B: '000000'
+                color4B: '000000'
+            # -------------------------------
+          - name: litFlashMultiplier4X
+            show: showShotMultiplierAdvance
+            speed: 4
+            show_tokens:
+                # --------------
+                color1A: '00ff00'
+                color2A: '00ffff'
+                color3A: 'cccc00'
+                color4A: '000000'
+                # --------------
+                color1B: '00ff00'
+                color2B: '00ffff'
+                color3B: '888800'
+                color4B: '000000'
+            # -------------------------------
+          - name: litFlashMultiplier5X
+            show: showShotMultiplierAdvance
+            speed: 4
+            show_tokens:
+                # --------------
+                color1A: '00ff00'
+                color2A: '00ffff'
+                color3A: 'ffff00'
+                color4A: 'cc00cc'
+                # --------------
+                color1B: '00ff00'
+                color2B: '00ffff'
+                color3B: 'ffff00'
+                color4B: '880088'
+            # -------------------------------
+          - name: litSolidMultiplier5X
+            show: showShotMultiplierAdvance
+            speed: 1
+            show_tokens:
+                # --------------
+                color1A: '00ff00'
+                color2A: '00ffff'
+                color3A: 'ffff00'
+                color4A: 'ff00ff'
+                # --------------
+                color1B: '00ff00'
+                color2B: '00ffff'
+                color3B: 'ffff00'
+                color4B: 'ff00ff'
+            # -------------------------------
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    mode_modeMataHari_started:
+        # DROPS
+        - eventRestartShotDropRight1
+        - eventRestartShotDropRight2
+        - eventRestartShotDropRight3
+        # GROUP
+        - eventRestartShotGroupDropRight
+        # AWARD
+        - eventRestartShotDropRightAward
+        # MULTIPLIER ADVANCE
+        - eventRestartShotMultiplierAdvance
+        
+    shotGroupDropRight_litSolid_complete:
+        # AWARD
+        - eventHitShotDropRightAward
+        # MULTIPLIER ADVANCE
+        - eventHitShotMultiplierAdvance
+        # RESET DROPS AFTER DELAY
+        - eventResetDropTargetBankRight|2000
+        #- eventResetDropTargetBankLeft|2500
+        # RESTART
+        - eventRestartShotDropRight1|3000
+        - eventRestartShotDropRight2|3000
+        - eventRestartShotDropRight3|3000
+        # GROUP
+        - eventRestartShotGroupDropRight|3500
+
+    # -----------------------------------
+    # THIS IS TO ADD TO BONUS ON DROP RIGHT HIT
+    # -----------------------------------
+    shotDropRight1_hit:
+        - eventCompleteBonusOnes
+    shotDropRight2_hit:
+        - eventCompleteBonusOnes
+    shotDropRight3_hit:
+        - eventCompleteBonusOnes
+
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------    
+# -----------------------------------
+# THIS IS TO ADD TO SCORE ON DROP LEFT HIT
+# -----------------------------------
+    shotDropRight1_hit:
+        score: 1
+    shotDropRight2_hit:
+        score: 502
+    shotDropRight3_hit:
+        score: 1003
+
+    # DROP AWARD
+    shotDropRightAward_litFlash5k_hit:
+        score: 5000
+    shotDropRightAward_litFlash10k_hit:
+        score: 10000
+    shotDropRightAward_litFlash20k_hit:
+        score: 20000
+    shotDropRightAward_litFlash30k_hit:
+        score: 30000
+    shotDropRightAward_litFlashSpecial_hit:
+        score: 50000
+    shotDropRightAward_litSolidSpecial_hit:
+        score: 25000
+
+    # 2X MULTIPLIER
+    shotMultiplierAdvance_litFlashMultiplier2X_hit:
+        multiBonus:
+            int: 2
+            action: set
+        bonus_multiplier:
+            int: 2
+            action: set
+        
+    # 3X MULTIPLIER
+    shotMultiplierAdvance_litFlashMultiplier3X_hit:
+        multiBonus:
+            int: 3
+            action: set
+        bonus_multiplier:
+            int: 3
+            action: set
+        
+    # 4X MULTIPLIER
+    shotMultiplierAdvance_litFlashMultiplier4X_hit:
+        multiBonus:
+            int: 4
+            action: set
+        bonus_multiplier:
+            int: 4
+            action: set
+        
+    # 5X MULTIPLIER
+    shotMultiplierAdvance_litFlashMultiplier5X_hit:
+        multiBonus:
+            int: 5
+            action: set
+        bonus_multiplier:
+            int: 5
+            action: set
+        
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showShotDropRightAward:
+        - time: 0
+          lights:
+            (led1): (color1A)
+            (led2): (color2A)
+            (led3): (color3A)
+            (led4): (color4A)
+            (led5): (color5A)
+        - time: 1
+          lights:
+            (led1): (color1B)
+            (led2): (color2B)
+            (led3): (color3B)
+            (led4): (color4B)
+            (led5): (color5B)
+        - time: 2
+        
+    # -----------------------------------
+    # SHOW::MULTIPLIER::ADVANCE
+    # -----------------------------------
+    showShotMultiplierAdvance:
+        - time: 0
+          lights:
+            (led1): (color1A)
+            (led2): (color2A)
+            (led3): (color3A)
+            (led4): (color4A)
+        - time: 1
+          lights:
+            (led1): (color1B)
+            (led2): (color2B)
+            (led3): (color3B)
+            (led4): (color4B)
+        - time: 2
+        
+        

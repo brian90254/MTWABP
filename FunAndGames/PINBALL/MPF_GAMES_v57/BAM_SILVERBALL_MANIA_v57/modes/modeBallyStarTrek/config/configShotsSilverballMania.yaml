@@ -1,0 +1,1218 @@
+#config_version=6
+
+# BALLY SILVERBALL MANIA
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::SPINNER
+    # -------------------
+    shotSpinnerLeft:
+        switch: s_1_20
+        enable_events: eventEnableShotSpinnerLeft
+        disable_events: eventDisableShotSpinnerLeft
+        restart_events: eventRestartShotSpinnerLeft
+        reset_events: eventResetShotSpinnerLeft
+        profile: spShotSpinner
+        show_tokens:
+            led1: ledSpinnerLeft1
+            led2: ledSpinnerLeft2
+            led3: ledSpinnerLeft3
+            
+    shotSpinnerRight:
+        switch: s_1_16
+        enable_events: eventEnableShotSpinnerRight
+        disable_events: eventDisableShotSpinnerRight
+        restart_events: eventRestartShotSpinnerRight
+        reset_events: eventResetShotSpinnerRight
+        profile: spShotSpinner
+        show_tokens:
+            led1: ledSpinnerRight1
+            led2: ledSpinnerRight2
+            led3: ledSpinnerRight3
+            
+    # -------------------
+    # SHOTS::LANE::TOP
+    # -------------------
+    shotLaneTopLeft:
+        switch: s_0_3
+        enable_events: eventEnableShotLaneTopLeft
+        disable_events: eventDisableShotLaneTopLeft
+        restart_events: eventRestartShotLaneTopLeft
+        reset_events: eventResetShotLaneTopLeft
+        profile: spShotLaneTop
+        show_tokens:
+            led1: ledLaneTopLeft1
+            led2: ledLaneTopLeft2
+            led3: ledLaneTopLeft3
+            
+    shotLaneTopCenter:
+        switch: s_0_4
+        enable_events: eventEnableShotLaneTopCenter
+        disable_events: eventDisableShotLaneTopCenter
+        restart_events: eventRestartShotLaneTopCenter
+        reset_events: eventResetShotLaneTopCenter
+        profile: spShotLaneTop
+        show_tokens:
+            led1: ledLaneTopCenter1
+            led2: ledLaneTopCenter2
+            led3: ledLaneTopCenter3
+            
+    shotLaneTopRight:
+        switch: s_0_5
+        enable_events: eventEnableShotLaneTopRight
+        disable_events: eventDisableShotLaneTopRight
+        restart_events: eventRestartShotLaneTopRight
+        reset_events: eventResetShotLaneTopRight
+        profile: spShotLaneTop
+        show_tokens:
+            led1: ledLaneTopRight1
+            led2: ledLaneTopRight2
+            led3: ledLaneTopRight3
+            
+    shotLaneTopRotate:
+        enable_events: eventEnableShotLaneTopRotate
+        disable_events: eventDisableShotLaneTopRotate
+        restart_events: eventRestartShotLaneTopRotate
+        reset_events: eventResetShotLaneTopRotate
+        hit_events: eventHitShotLaneTopRotate
+        profile: spShotLaneTopRotate
+
+    # -------------------
+    # SHOTS::BUMPER::TOP
+    # -------------------
+    shotBumperTop1:
+        switch: s_1_0
+        enable_events: eventEnableShotBumperTop1
+        disable_events: eventDisableShotBumperTop1
+        restart_events: eventRestartShotBumperTop1
+        reset_events: eventResetShotBumperTop1
+        profile: spShotBumper
+        show_tokens:
+            led1: ledBumperTop1A
+            led2: ledBumperTop1B
+            led3: ledBumperTop1C
+            led4: ledBumperTop1D
+            led5: ledBumperTop1E
+            led6: ledBumperTop1F
+            led7: ledBumperTop1G
+            led8: ledBumperTop1H
+            led9: ledBumperTop1I
+            led10: ledBumperTop1J
+            led11: ledBumperTop1K
+            led12: ledBumperTop1L
+            
+    shotBumperTop2:
+        switch: s_1_15
+        enable_events: eventEnableShotBumperTop2
+        disable_events: eventDisableShotBumperTop2
+        restart_events: eventRestartShotBumperTop2
+        reset_events: eventResetShotBumperTop2
+        profile: spShotBumper
+        show_tokens:
+            led1: ledBumperTop2A
+            led2: ledBumperTop2B
+            led3: ledBumperTop2C
+            led4: ledBumperTop2D
+            led5: ledBumperTop2E
+            led6: ledBumperTop2F
+            led7: ledBumperTop2G
+            led8: ledBumperTop2H
+            led9: ledBumperTop2I
+            led10: ledBumperTop2J
+            led11: ledBumperTop2K
+            led12: ledBumperTop2L
+            
+    shotBumperTop3:
+        switch: s_1_1
+        enable_events: eventEnableShotBumperTop3
+        disable_events: eventDisableShotBumperTop3
+        restart_events: eventRestartShotBumperTop3
+        reset_events: eventResetShotBumperTop3
+        profile: spShotBumper
+        show_tokens:
+            led1: ledBumperTop3A
+            led2: ledBumperTop3B
+            led3: ledBumperTop3C
+            led4: ledBumperTop3D
+            led5: ledBumperTop3E
+            led6: ledBumperTop3F
+            led7: ledBumperTop3G
+            led8: ledBumperTop3H
+            led9: ledBumperTop3I
+            led10: ledBumperTop3J
+            led11: ledBumperTop3K
+            led12: ledBumperTop3L
+            
+    shotBumperTop4:
+        switch: s_1_14
+        enable_events: eventEnableShotBumperTop4
+        disable_events: eventDisableShotBumperTop4
+        restart_events: eventRestartShotBumperTop4
+        reset_events: eventResetShotBumperTop4
+        profile: spShotBumper
+        show_tokens:
+            led1: ledBumperTop4A
+            led2: ledBumperTop4B
+            led3: ledBumperTop4C
+            led4: ledBumperTop4D
+            led5: ledBumperTop4E
+            led6: ledBumperTop4F
+            led7: ledBumperTop4G
+            led8: ledBumperTop4H
+            led9: ledBumperTop4I
+            led10: ledBumperTop4J
+            led11: ledBumperTop4K
+            led12: ledBumperTop4L
+            
+    shotBumperGroup:
+        enable_events: eventEnableShotBumperGroup
+        disable_events: eventDisableShotBumperGroup
+        restart_events: eventRestartShotBumperGroup
+        reset_events: eventResetShotBumperGroup
+        hit_events: eventHitShotBumperGroup
+        profile: spShotBumperGroup
+            
+    # -------------------
+    # SHOTS::THUMPER
+    # -------------------
+    shotThumperMiddle:
+        switch: s_1_25
+        enable_events: eventEnableShotThumperMiddle
+        disable_events: eventDisableShotThumperMiddle
+        restart_events: eventRestartShotThumperMiddle
+        reset_events: eventResetShotThumperMiddle
+        profile: spShotThumper
+        show_tokens:
+            led1: ledThumperMiddleA
+            led2: ledThumperMiddleB
+            led3: ledThumperMiddleC
+            led4: ledThumperMiddleD
+            led5: ledThumperMiddleE
+            led6: ledThumperMiddleF
+            led7: ledThumperMiddleG
+            led8: ledThumperMiddleH
+            led9: ledThumperMiddleI
+            led10: ledThumperMiddleJ
+            led11: ledThumperMiddleK
+            led12: ledThumperMiddleL
+            
+    shotThumperLeft:
+        switch: s_1_24
+        enable_events: eventEnableShotThumperLeft
+        disable_events: eventDisableShotThumperLeft
+        restart_events: eventRestartShotThumperLeft
+        reset_events: eventResetShotThumperLeft
+        profile: spShotThumper
+        show_tokens:
+            led1: ledThumperLeftA
+            led2: ledThumperLeftB
+            led3: ledThumperLeftC
+            led4: ledThumperLeftD
+            led5: ledThumperLeftE
+            led6: ledThumperLeftF
+            led7: ledThumperLeftG
+            led8: ledThumperLeftH
+            led9: ledThumperLeftI
+            led10: ledThumperLeftJ
+            led11: ledThumperLeftK
+            led12: ledThumperLeftL
+            
+    shotThumperRight:
+        switch: s_1_23
+        enable_events: eventEnableShotThumperRight
+        disable_events: eventDisableShotThumperRight
+        restart_events: eventRestartShotThumperRight
+        reset_events: eventResetShotThumperRight
+        profile: spShotThumper
+        show_tokens:
+            led1: ledThumperRightA
+            led2: ledThumperRightB
+            led3: ledThumperRightC
+            led4: ledThumperRightD
+            led5: ledThumperRightE
+            led6: ledThumperRightF
+            led7: ledThumperRightG
+            led8: ledThumperRightH
+            led9: ledThumperRightI
+            led10: ledThumperRightJ
+            led11: ledThumperRightK
+            led12: ledThumperRightL
+            
+    # -------------------
+    # SHOTS::ROLLOVERS
+    # -------------------
+    shotRolloverMiddleLeft:
+        switch: s_0_2
+        enable_events: eventEnableShotRolloverMiddleLeft
+        disable_events: eventDisableShotRolloverMiddleLeft
+        restart_events: eventRestartShotRolloverMiddleLeft
+        reset_events: eventResetShotRolloverMiddleLeft
+        profile: spShotRolloverMiddle
+        show_tokens:
+            led1: ledRolloverMiddleLeft1
+            led2: ledRolloverMiddleLeft2
+            led3: ledRolloverMiddleLeft3
+            led4: ledRolloverMiddleLeft4
+            
+    shotRolloverMiddleRight:
+        switch: s_0_6
+        enable_events: eventEnableShotRolloverMiddleRight
+        disable_events: eventDisableShotRolloverMiddleRight
+        restart_events: eventRestartShotRolloverMiddleRight
+        reset_events: eventResetShotRolloverMiddleRight
+        profile: spShotRolloverMiddle
+        show_tokens:
+            led1: ledRolloverMiddleRight1
+            led2: ledRolloverMiddleRight2
+            led3: ledRolloverMiddleRight3
+            led4: ledRolloverMiddleRight4
+            
+    # -------------------
+    # SHOTS::BONUS MULTIPLIERS
+    # -------------------
+    shotBonusMultipliers:
+        #switch: s_0_2
+        enable_events: eventEnableShotBonusMultipliers
+        disable_events: eventDisableShotBonusMultipliers
+        restart_events: eventRestartShotBonusMultipliers
+        reset_events: eventResetShotBonusMultipliers
+        hit_events: eventHitShotBonusMultipliers
+        profile: spShotBonusMultipliers
+        show_tokens:
+            led1: ledBonusMultiplier2X
+            led2: ledBonusMultiplier3X
+            led3: ledBonusMultiplier4X
+            led4: ledBonusMultiplier5X
+            
+    # -------------------
+    # SHOTS::EXTRA BALL
+    # -------------------
+    shotExtraBall:
+        switch: s_1_30
+        enable_events: eventEnableShotExtraBall
+        disable_events: eventDisableShotExtraBall
+        restart_events: eventRestartShotExtraBall
+        reset_events: eventResetShotExtraBall
+        hit_events: eventHitShotExtraBall
+        profile: spShotExtraBall
+        show_tokens:
+            led1: ledExtraBall1
+            led2: ledExtraBall2
+            led3: ledExtraBall3
+            
+            
+# ***************************** 
+# SEQUENCE::SHOTS
+# ***************************** 
+sequence_shots:
+    sequenceShotInnerLoopClockwise:
+        # LEFT THEN RIGHT
+        switch_sequence: s_0_2, s_0_6
+        sequence_timeout: 3s
+  
+    sequenceShotInnerLoopCounterClockwise:
+        # RIGHT THEN LEFT 
+        switch_sequence: s_0_6, s_0_2
+        sequence_timeout: 3s
+    
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::BUMPER::TOP
+    # -------------------
+    shotGroupBumperTop:
+        shots:
+            - shotBumperTop1
+            - shotBumperTop2
+            - shotBumperTop3
+            - shotBumperTop4
+        enable_events:
+            - eventEnableShotGroupBumperTop
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupBumperTop
+        reset_events:
+            - eventResetShotGroupBumperTop
+        restart_events:
+            - eventRestartShotGroupBumperTop
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::BUMPER
+    # -----------------------------
+    spShotBumper:
+        states:
+          - name: unlitFlash
+            show: showLedShotBumper
+            speed: 3
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litFlash
+            show: showLedShotBumper
+            speed: 3
+            show_tokens:
+                color1: '888866'
+                color2: '444433'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::BUMPER::GROUP
+    # -----------------------------
+    spShotBumperGroup:
+        #states:
+        #  - name: litFlashMiddleThumper
+        #  - name: litFlashSideThumpers
+        #  - name: litFlashAllThumpers
+        #  - name: litSolid
+        #loop: false
+        states:
+          - name: litFlashMiddleThumperOne
+          - name: litFlashMiddleThumper
+          - name: litFlashSideThumpersOne
+          - name: litFlashSideThumpers
+          - name: litFlashAllThumpersOne
+          - name: litFlashAllThumpers
+          - name: litSolid
+        loop: false
+
+    # -----------------------------
+    # PROFILE::BUMPER
+    # -----------------------------
+    spShotThumper:
+        states:
+          - name: litFlash
+            show: showLedShotBumper
+            speed: 3
+            show_tokens:
+                #color1: '888866'
+                #color2: '444433'
+                color1: 'ffffcc'
+                color2: 'cccc88'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::SPINNER
+    # -----------------------------
+    spShotSpinner:
+        states:
+          - name: litFlash
+            show: showLedShotSpinner
+            speed: 3
+            show_tokens:
+                #color1: '6600cc'
+                #color2: '8800ff'
+                color1: 'ffff00'
+                color2: '888800'
+        loop: false
+        
+    # -----------------------------
+    # ROLLOVERS
+    # -----------------------------
+    spShotRolloverMiddle:
+        states:
+          - name: litFlash
+            show: showLedShotRolloverMiddle
+            speed: 4
+            show_tokens:
+                #color1: '888800'
+                #color2: '00ffff'
+                color1: 'ffffff'
+                color2: '000000'
+        loop: false
+    # -----------------------------
+    # PROFILE::LANE::TOP
+    # -----------------------------
+    spShotLaneTop:
+        states:
+          - name: litFlash
+            show: showLedShotLaneTop
+            speed: 3
+            show_tokens:
+                color1: 'ffff00'
+                color2: '888800'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::LANE::TOP::ROTATE
+    # -----------------------------
+    spShotLaneTopRotate:
+        states:
+          - name: litCenter
+          - name: litOutside
+        loop: true
+
+    # -----------------------------
+    # PROFILE::LANE::TOP
+    # -----------------------------
+    spShotBonusMultipliers:
+        states:
+          - name: litFlash2X
+            show: showLedShotBonusMultipliers
+            speed: 2
+            show_tokens:
+                color1: '008800'
+                color2: '006600'
+                color3: '000000'
+                color4: '000000'
+                color5: '000000'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+          - name: litFlash3X
+            show: showLedShotBonusMultipliers
+            speed: 2
+            show_tokens:
+                color1: '00ff00'
+                color2: '00ff00'
+                color3: '888800'
+                color4: '666600'
+                color5: '000000'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+          - name: litFlash4X
+            show: showLedShotBonusMultipliers
+            speed: 2
+            show_tokens:
+                color1: '00ff00'
+                color2: '00ff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: '000088'
+                color6: '000066'
+                color7: '000000'
+                color8: '000000'
+          - name: litFlash5X
+            show: showLedShotBonusMultipliers
+            speed: 2
+            show_tokens:
+                color1: '00ff00'
+                color2: '00ff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: '0000ff'
+                color6: '0000ff'
+                color7: '880000'
+                color8: '660000'
+          - name: litFlashExtraBall
+            show: showLedShotBonusMultipliers
+            speed: 2
+            show_tokens:
+                color1: '00ff00'
+                color2: '00ff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: '0000ff'
+                color6: '0000ff'
+                color7: 'ff0000'
+                color8: 'ff0000'
+        loop: false
+        
+    # -----------------------------
+    # EXTRA BALL
+    # -----------------------------
+    spShotExtraBall:
+        states:
+          - name: stateOneShotExtraBall
+            show: showLedShotExtraBall
+            speed: 3
+            show_tokens:
+                color1: '888800'
+                color2: '666600'
+          - name: stateTwoShotExtraBall
+            show: showLedShotExtraBall
+            speed: 3
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+        loop: false
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    ball_ending:
+        # SPINNERS
+        - eventDisableShotSpinnerLeft
+        - eventDisableShotSpinnerRight
+        # KICKER DEACTIVATE
+        #- eventPulseKickerReset
+        - eventPulseKickerDeactivate
+        
+    mode_modeBallyStarTrek_started:
+        # RESTART TOP LANES 
+        - eventDisableShotLaneTopLeft
+        - eventDisableShotLaneTopRight
+        - eventRestartShotLaneTopCenter
+        - eventRestartShotLaneTopRotate
+        # BUMPERS TOP
+        - eventRestartShotGroupBumperTop
+        - eventRestartShotBumperTop1
+        - eventRestartShotBumperTop2
+        - eventRestartShotBumperTop3
+        - eventRestartShotBumperTop4
+        # BUMPER GROUP SHOT
+        - eventRestartShotBumperGroup
+        # THUMPERS
+        - eventDisableShotThumperMiddle
+        - eventDisableShotThumperLeft
+        - eventDisableShotThumperRight
+        # ROLLOVERS
+        - eventRestartShotRolloverMiddleLeft
+        - eventRestartShotRolloverMiddleRight
+        # BONUS MULTIPLIERS
+        - eventRestartShotBonusMultipliers
+        # EXTRA BALL
+        - eventDisableShotExtraBall
+        
+    # -------------------
+    # BUMPER HIT::ROTATE TOP LANES
+    # -------------------
+    shotBumperTop1_hit:
+        - eventHitShotLaneTopRotate
+    shotBumperTop2_hit:
+        - eventHitShotLaneTopRotate
+    shotBumperTop3_hit:
+        - eventHitShotLaneTopRotate
+    shotBumperTop4_hit:
+        - eventHitShotLaneTopRotate
+        
+    shotLaneTopRotate_litCenter_hit:
+        - eventDisableShotLaneTopCenter
+        - eventRestartShotLaneTopRight
+        - eventRestartShotLaneTopLeft
+        
+    shotLaneTopRotate_litOutside_hit:
+        - eventDisableShotLaneTopLeft
+        - eventDisableShotLaneTopRight
+        - eventRestartShotLaneTopCenter
+        
+    ## -------------------
+    ## BUMPER HIT::COMPLETE::RESET
+    ## -------------------
+    #shotGroupBumperTop_litFlash_complete:
+    #    # PLAY SHOW
+    #    - eventDisableShotGroupBumperTop
+    #    - eventPlayShowBumperGroupComplete
+    #    # RESET SHOTS
+    #    - eventRestartShotBumperTop1|2000
+    #    - eventRestartShotBumperTop2|2000
+    #    - eventRestartShotBumperTop3|2000
+    #    - eventRestartShotBumperTop4|2000
+    #    # RESTART GROUP
+    #    - eventRestartShotGroupBumperTop|2500
+    #    # HIT GROUP SHOT
+    #    - eventHitShotBumperGroup|3000
+
+    # -------------------
+    # BUMPER HIT::COMPLETE::RESET
+    # -------------------
+    shotGroupBumperTop_litFlash_complete:
+        # HIT GROUP SHOT
+        - eventHitShotBumperGroup|1000
+        
+    ## -------------------
+    ## ENABLE THUMPER SHOTS
+    ## -------------------
+    ## MIDDLE
+    #shotBumperGroup_litFlashMiddleThumper_hit:
+    #    - eventRestartShotThumperMiddle
+    ## SIDE
+    #shotBumperGroup_litFlashSideThumpers_hit:
+    #    - eventDisableShotThumperMiddle
+    #    - eventRestartShotThumperLeft
+    #    - eventRestartShotThumperRight
+    ## ALL
+    #shotBumperGroup_litFlashAllThumpers_hit:
+    #    - eventRestartShotThumperMiddle
+        
+    # -------------------
+    # ENABLE THUMPER SHOTS
+    # -------------------
+    # MIDDLE
+    shotBumperGroup_litFlashMiddleThumper_hit:
+        # PLAY BUMPER SHOW
+        - eventPlayShowBumperGroupComplete
+        # RESET BUMPERS
+        - eventRestartShotBumperTop1|2000
+        - eventRestartShotBumperTop2|2000
+        - eventRestartShotBumperTop3|2000
+        - eventRestartShotBumperTop4|2000
+        # START THUMPER MIDDLE
+        - eventRestartShotThumperMiddle|2500
+    # SIDE
+    shotBumperGroup_litFlashSideThumpers_hit:
+        # PLAY BUMPER SHOW
+        - eventPlayShowBumperGroupComplete
+        # RESET BUMPERS
+        - eventRestartShotBumperTop1|2000
+        - eventRestartShotBumperTop2|2000
+        - eventRestartShotBumperTop3|2000
+        - eventRestartShotBumperTop4|2000
+        # START THUMPER SIDES
+        - eventDisableShotThumperMiddle|2500
+        - eventRestartShotThumperLeft|2500
+        - eventRestartShotThumperRight|2500
+    # ALL
+    shotBumperGroup_litFlashAllThumpers_hit:
+        # PLAY BUMPER SHOW
+        - eventPlayShowBumperGroupComplete
+        # RESET BUMPERS
+        - eventRestartShotBumperTop1|2000
+        - eventRestartShotBumperTop2|2000
+        - eventRestartShotBumperTop3|2000
+        - eventRestartShotBumperTop4|2000
+        # START THUMPER MIDDLE
+        - eventRestartShotThumperMiddle|2500
+        
+    # -------------------
+    # SET OUTHOLE KICKER
+    # -------------------
+    shotLaneTopLeft_litFlash_hit:
+        - eventCheckShotSpotSilverballMania
+        # SPINNER
+        - eventRestartShotSpinnerLeft
+        
+    shotLaneTopRight_litFlash_hit:
+        - eventCheckShotSpotSilverballMania
+        # SPINNER
+        - eventRestartShotSpinnerRight
+        
+    shotLaneTopCenter_litFlash_hit:
+        - eventPulseKickerReset
+        - eventCheckShotSpotSilverballMania
+        
+    sequenceShotInnerLoopCounterClockwise_hit:
+        - eventPulseKickerReset
+        - eventCheckShotSpotSilverballMania
+        - eventHitShotBonusMultipliers
+        
+    sequenceShotInnerLoopClockwise_hit:
+        - eventPulseKickerReset
+        - eventCheckShotSpotSilverballMania
+        - eventHitShotBonusMultipliers
+
+    eventPulseKickerReset:
+        - eventPlayShowKickerActive
+        
+    releaseBallHoldSaucerTop:
+        - eventStopShowKickerActive
+        
+    # -------------------
+    # ENABLE EXTRA BALL SHOT
+    # -------------------
+    #shotBonusMultipliers_stateFourShotBonusMultipliers_hit:
+    shotBonusMultipliers_litFlash5X_hit:
+        - eventRestartShotExtraBall
+        # NOW IN EXTRA BALL CONFIG
+        #- eventExtraBallSilverballManiaLit
+
+    # NOW IN EXTRA BALL CONFIG
+    #shotExtraBall_stateOneShotExtraBall_hit:
+    #    - eventExtraBallSilverballManiaAward
+        
+# *********************
+# COIL::PLAYER
+# *********************
+coil_player:
+    # SET KICKER ACTIVE
+    eventPulseKickerReset:
+        c_1_1:
+            action: pulse
+    # DECATIVE KICKER
+    eventPulseKickerDeactivate:
+        c_1_2:
+            action: pulse
+            
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------
+    # SCORING::SPINNER
+    # ---------------
+    sw_tagSpinner:
+        score: 1
+    shotSpinnerLeft_litFlash_hit:
+        score: 1000
+    shotSpinnerRight_litFlash_hit:
+        score: 1000
+
+    # ---------------
+    # SCORING::BUMPER
+    # ---------------
+    sw_tagBumper:
+        score: 10
+    shotBumperTop1_litFlash_hit:
+        score: 1000
+    shotBumperTop2_litFlash_hit:
+        score: 1000
+    shotBumperTop3_litFlash_hit:
+        score: 1000
+    shotBumperTop4_litFlash_hit:
+        score: 1000
+
+    # ---------------
+    # SCORING::THUMPER
+    # ---------------
+    sw_tagThumper:
+        score: 100
+    shotThumperMiddle_litFlash_hit:
+        score: 10000
+    shotThumperLeft_litFlash_hit:
+        score: 10000
+    shotThumperRight_litFlash_hit:
+        score: 10000
+        
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+  # ---------------------
+  # SHOW::BALL SAVE::DEFAULT
+  # ---------------------
+    eventPlayShowKickerActive.1:
+        #rotateSevenLedTwoColor:
+        triangleThreeLedTwoColor:
+            speed: 3
+            action: play
+            key: keyShowKickerActiveLeft
+            show_tokens:
+                led1: ledKickerActiveLeft1
+                led2: ledKickerActiveLeft2
+                led3: ledKickerActiveLeft3
+                color1: '66cc00'
+                color2: '000000'
+                
+    eventPlayShowKickerActive.2:
+        triangleThreeLedTwoColor:
+            speed: 3
+            action: play
+            key: keyShowKickerActiveRight
+            show_tokens:
+                led1: ledKickerActiveRight1
+                led2: ledKickerActiveRight2
+                led3: ledKickerActiveRight3
+                color1: '66cc00'
+                color2: '000000'
+                
+    eventStopShowKickerActive:
+        keyShowKickerActiveLeft:
+            action: stop
+        keyShowKickerActiveRight:
+            action: stop
+      
+  # ---------------------
+  # SHOW::GROUP BUMPER COMPLETE
+  # ---------------------
+    eventPlayShowBumperGroupComplete.1:
+        showGroupBumperTopComplete:
+            speed: 6
+            action: play
+            loops: 0
+            key: keyShowGroupBumperTopComplete1
+            show_tokens:
+                led1: ledBumperTop1A
+                led2: ledBumperTop1B
+                led3: ledBumperTop1C
+                led4: ledBumperTop1D
+                led5: ledBumperTop1E
+                led6: ledBumperTop1F
+                led7: ledBumperTop1G
+                led8: ledBumperTop1H
+                led9: ledBumperTop1I
+                led10: ledBumperTop1J
+                led11: ledBumperTop1K
+                led12: ledBumperTop1L
+                color1: '888866'
+                color2: '000000'
+                
+    eventPlayShowBumperGroupComplete.2:
+        showGroupBumperTopComplete:
+            speed: 6
+            action: play
+            loops: 0
+            key: keyShowGroupBumperTopComplete2
+            show_tokens:
+                led1: ledBumperTop2A
+                led2: ledBumperTop2B
+                led3: ledBumperTop2C
+                led4: ledBumperTop2D
+                led5: ledBumperTop2E
+                led6: ledBumperTop2F
+                led7: ledBumperTop2G
+                led8: ledBumperTop2H
+                led9: ledBumperTop2I
+                led10: ledBumperTop2J
+                led11: ledBumperTop2K
+                led12: ledBumperTop2L
+                color1: '888866'
+                color2: '000000'
+                
+    eventPlayShowBumperGroupComplete.3:
+        showGroupBumperTopComplete:
+            speed: 6
+            action: play
+            loops: 0
+            key: keyShowGroupBumperTopComplete3
+            show_tokens:
+                led1: ledBumperTop3A
+                led2: ledBumperTop3B
+                led3: ledBumperTop3C
+                led4: ledBumperTop3D
+                led5: ledBumperTop3E
+                led6: ledBumperTop3F
+                led7: ledBumperTop3G
+                led8: ledBumperTop3H
+                led9: ledBumperTop3I
+                led10: ledBumperTop3J
+                led11: ledBumperTop3K
+                led12: ledBumperTop3L
+                color1: '888866'
+                color2: '000000'
+                
+    eventPlayShowBumperGroupComplete.4:
+        showGroupBumperTopComplete:
+            speed: 6
+            action: play
+            loops: 0
+            key: keyShowGroupBumperTopComplete4
+            show_tokens:
+                led1: ledBumperTop4A
+                led2: ledBumperTop4B
+                led3: ledBumperTop4C
+                led4: ledBumperTop4D
+                led5: ledBumperTop4E
+                led6: ledBumperTop4F
+                led7: ledBumperTop4G
+                led8: ledBumperTop4H
+                led9: ledBumperTop4I
+                led10: ledBumperTop4J
+                led11: ledBumperTop4K
+                led12: ledBumperTop4L
+                color1: '888866'
+                color2: '000000'
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::BUMPERS
+    # -----------------------------------
+    showLedShotBumper:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color2)
+            (led8): (color1)
+            (led9): (color1)
+            (led10): (color2)
+            (led11): (color1)
+            (led12): (color1)
+        - time: 1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color2)
+            (led6): (color1)
+            (led7): (color1)
+            (led8): (color2)
+            (led9): (color1)
+            (led10): (color1)
+            (led11): (color2)
+            (led12): (color1)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color2)
+            (led7): (color1)
+            (led8): (color1)
+            (led9): (color2)
+            (led10): (color1)
+            (led11): (color1)
+            (led12): (color2)
+        - time: 3
+        
+    ## -----------------------------------
+    ## SHOW::LED::BUMPERS::COMPLETE
+    ## -----------------------------------
+    #showGroupBumperTopComplete:
+    #    - time: 0
+    #      lights:
+    #        (led1): (color1)
+    #        (led2): (color1)
+    #        (led3): (color1)
+    #        (led4): (color1)
+    #        (led5): (color1)
+    #        (led6): (color1)
+    #        (led7): (color1)
+    #        (led8): (color1)
+    #        (led9): (color1)
+    #        (led10): (color1)
+    #        (led11): (color1)
+    #        (led12): (color1)
+    #    - time: 2
+    #      lights:
+    #        (led1): (color2)
+    #        (led2): (color2)
+    #        (led3): (color1)
+    #        (led4): (color1)
+    #        (led5): (color1)
+    #        (led6): (color1)
+    #        (led7): (color1)
+    #        (led8): (color1)
+    #        (led9): (color1)
+    #        (led10): (color1)
+    #        (led11): (color1)
+    #        (led12): (color1)
+    #    - time: 3
+    #      lights:
+    #        (led1): (color2)
+    #        (led2): (color2)
+    #        (led3): (color2)
+    #        (led4): (color2)
+    #        (led5): (color1)
+    #        (led6): (color1)
+    #        (led7): (color1)
+    #        (led8): (color1)
+    #        (led9): (color1)
+    #        (led10): (color1)
+    #        (led11): (color1)
+    #        (led12): (color1)
+    #    - time: 4
+    #      lights:
+    #        (led1): (color2)
+    #        (led2): (color2)
+    #        (led3): (color2)
+    #        (led4): (color2)
+    #        (led5): (color2)
+    #        (led6): (color2)
+    #        (led7): (color1)
+    #        (led8): (color1)
+    #        (led9): (color1)
+    #        (led10): (color1)
+    #        (led11): (color1)
+    #        (led12): (color1)
+    #    - time: 5
+    #      lights:
+    #        (led1): (color2)
+    #        (led2): (color2)
+    #        (led3): (color2)
+    #        (led4): (color2)
+    #        (led5): (color2)
+    #        (led6): (color2)
+    #        (led7): (color2)
+    #        (led8): (color2)
+    #        (led9): (color1)
+    #        (led10): (color1)
+    #        (led11): (color1)
+    #        (led12): (color1)
+    #    - time: 6
+    #      lights:
+    #        (led1): (color2)
+    #        (led2): (color2)
+    #        (led3): (color2)
+    #        (led4): (color2)
+    #        (led5): (color2)
+    #        (led6): (color2)
+    #        (led7): (color2)
+    #        (led8): (color2)
+    #        (led9): (color2)
+    #        (led10): (color2)
+    #        (led11): (color1)
+    #        (led12): (color1)
+    #    - time: 7
+    #      lights:
+    #        (led1): (color2)
+    #        (led2): (color2)
+    #        (led3): (color2)
+    #        (led4): (color2)
+    #        (led5): (color2)
+    #        (led6): (color2)
+    #        (led7): (color2)
+    #        (led8): (color2)
+    #        (led9): (color2)
+    #        (led10): (color2)
+    #        (led11): (color2)
+    #        (led12): (color2)
+    #    - time: 8
+        
+    # -----------------------------------
+    # SHOW::LED::SPINNER
+    # -----------------------------------
+    showLedShotSpinner:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+        - time: 1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+        - time: 3
+        
+    # -----------------------------------
+    # SHOW::LED::ROLLOVER::MIDDLE
+    # -----------------------------------
+    showLedShotRolloverMiddle:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+        - time: 1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color1)
+        - time: 3
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color2)
+        - time: 4
+        
+    # -----------------------------------
+    # SHOW::LED::LANE::TOP
+    # -----------------------------------
+    showLedShotLaneTop:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+        - time: 1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+        - time: 3
+        
+    # -----------------------------------
+    # SHOW::LED::LANE::TOP::ROTATE
+    # -----------------------------------
+    showLedShotLaneTopRotate:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color4)
+            (led5): (color3)
+            (led6): (color3)
+            (led7): (color6)
+            (led8): (color5)
+            (led9): (color5)
+        - time: 1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color3)
+            (led5): (color4)
+            (led6): (color3)
+            (led7): (color5)
+            (led8): (color6)
+            (led9): (color5)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color3)
+            (led5): (color3)
+            (led6): (color4)
+            (led7): (color5)
+            (led8): (color5)
+            (led9): (color6)
+        - time: 3
+
+    # -----------------------------------
+    # SHOW::BONUS MULTIPLIERS
+    # -----------------------------------
+    showLedShotBonusMultipliers:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color3)
+            (led3): (color5)
+            (led4): (color7)
+        - time: 1
+          lights:
+            (led1): (color2)
+            (led2): (color4)
+            (led3): (color6)
+            (led4): (color8)
+        - time: 2
+        
+    # -----------------------------------
+    # SHOW::EXTRA BALL
+    # -----------------------------------
+    showLedShotExtraBall:
+        - time: 0
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+        - time: 1
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color1)
+        - time: 2
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color2)
+        - time: 3
+        

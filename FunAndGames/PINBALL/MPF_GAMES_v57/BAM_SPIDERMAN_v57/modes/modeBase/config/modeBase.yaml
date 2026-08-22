@@ -1,0 +1,56 @@
+#config_version=6
+
+config:
+  - configBaseSpidermanVillanAchBonus.yaml
+  - configBaseWidgets.yaml
+  
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 100
+
+# ---------------------
+# SWITCHES::COMBO
+# ---------------------
+combo_switches:
+  comboSwitchEndGame:
+    switches_1: s_0_10
+    switches_2: s_0_8
+    hold_time: 2s
+    events_when_both: end_game
+    
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # ----------------------------
+  # START
+  # ----------------------------
+  mode_modeBase_started:
+    # START SOUND
+    - playPoolSoundHorn
+    ## ENABLE UPPER FLIPPERS
+    #- eventEnableFlipperUpperRight
+    #- eventEnableFlipperUpperLeft
+    # RESET DROPS
+    - eventResetDropTargetBankRight|1s
+    - eventResetDropTargetBankMiddle|2s
+    # ENABLE SIDE LEFT SAUCER::AUTO KICKS OUT BELOW
+    - eventEnableBallHoldSaucerSideLeft
+      
+  ball_hold_ballHoldSaucerSideLeft_held_ball:
+      - releaseBallHoldSaucerSideLeft|2s
+    
+# ---------------------
+# PLAYLIST::PLAYER
+# ---------------------
+playlist_player:
+
+  eventPauseTrackPlaylist:
+    trackplaylist:
+      action: stop
+      
+  eventResumeTrackPlaylist:
+    trackplaylist:
+      playlist: playlistModeSpidermanMusic
+      action: play

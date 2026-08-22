@@ -1,0 +1,113 @@
+#show_version=6
+
+- time: 0
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '8000ff'
+        color2: 'ff00ff'
+        
+- time: '+1'
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ff00ff'
+        color2: 'ff0080'
+        
+- time: '+1'
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ff0080'
+        color2: 'ff0000'
+
+- time: '+1'
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ff0000'
+        color2: 'ff8000'
+      
+- time: '+1'
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ff8000'
+        color2: 'ffff00'
+       
+- time: '+1'
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ffff00'
+        color2: '80ff00'
+        
+- time: '+1'
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '80ff00'
+        color2: '00ff00'
+
+- time: '+1'
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '00ff00'
+        color2: '00ff80'
+        
+- time: '+1'
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '00ff80'
+        color2: '00ffff'
+        
+- time: '+1'
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '00ffff'
+        color2: '0080ff'
+        
+- time: '+1'
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '0080ff'
+        color2: '0000ff'
+        
+- time: '+1'
+  shows:
+    flashSpinner:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '0000ff'
+        color2: '8000ff'
+        
+
+        
+- time: '+1'

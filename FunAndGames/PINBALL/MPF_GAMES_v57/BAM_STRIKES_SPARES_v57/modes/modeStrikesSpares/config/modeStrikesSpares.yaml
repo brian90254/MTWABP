@@ -1,0 +1,137 @@
+#config_version=6
+
+config:
+  
+# STRIKE AND SPARES
+- configStrikesSparesAchBonus.yaml
+- configStrikesSparesSaucer.yaml
+- configStrikesSparesShots.yaml
+- configStrikesSparesShotsPins.yaml
+- configStrikesSparesThumpers.yaml
+
+mode:
+  start_events: eventStartModeStrikesSpares
+  stop_events:
+    - eventStopModeStrikesSpares
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeStrikesSpares_started:
+    # -----------------------------------
+    # MODES
+    # -----------------------------------
+    - eventStartModeStrikesSparesShotPinsOne
+    
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    #- eventPlaylistModeStrikesSparesStart
+    - eventPlaylistModeBallyStrikesSparesStart
+    
+    # -----------------------------------
+    # ENABLE BONUS
+    # -----------------------------------
+    # ONES
+    - eventResetAchBonusOnes
+    - eventEnableAchBonusOnes
+    - eventStartAchBonus0
+    - eventCompleteBonusOnes|1s
+    # TENS
+    - eventResetAchBonusTens
+    - eventEnableAchBonusTens
+
+    - eventResetShotExtraBall
+    
+    - eventResetShotSaucerBonus
+    
+    - eventResetShotAdvanceMultipliers    
+    - eventEnableShotAdvanceMultipliers
+    
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersStrikesSpares
+    
+    # ---------------------
+    # EVENT::START::MODES
+    # ---------------------
+    - eventStartModeStrikesSparesShotSaucerSpot    
+
+
+## ---------------------
+## VARIABLE::PLAYER
+## ---------------------
+#variable_player:
+#  mode_modeStrikesSpares_started:
+#    nameMoon:
+#      string: "Strikes and Spares"
+#      action: set
+      
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# SET DMD NAME
+# ---------------
+  mode_modeStrikesSpares_started:
+    nameMoon:
+      string: "Strikes and Spares"
+      action: set
+      
+    ## -------------------------
+    ## RESET AUTOMATIC STRIKE
+    #scoreAutomaticStrike:
+    #  int: 5000
+    #  action: set
+    ## -------------------------
+    
+## ---------------
+## INITIALIZE BONUS COUNT
+## ---------------
+#  eventResetMultipliersStrikesSpares:
+#    # -------------------------
+#    # RESET BONUS COUNT
+#    totalBonus:
+#      #int: 1
+#      int: 0
+#      action: set
+#    # -------------------------
+#    # RESET BONUS MULTIPLIER
+#    multiBonus:
+#      int: 1
+#      action: set
+#    bonus_multiplier:
+#      int: 1
+#      action: set
+#    # -------------------------
+#    # RESET TOTAL BONUS SCORE
+#    # (TOTAL BONUS X BONUS MULTIPLIER)
+#    scoreBonus:
+#      int: 0
+#      action: set
+#    # -------------------------
+    
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  #---------------------
+  # AMBIENCE
+  mode_modeStrikesSpares_started:
+    musicBallyStrikesSpares012:
+      loops: -1
+      volume: 0.9
+      
+  mode_modeStrikesSpares_ending:
+    musicBallyStrikesSpares012:
+      action: stop

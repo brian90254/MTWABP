@@ -1,0 +1,404 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - SILVERBALL MANIA
+
+- time: 0
+
+# ----------------------
+# CYAN CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '00ffff'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: '00ffff'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: '00ffff'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: '00ffff'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: '00ffff'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: '00ffff'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: '00ffff'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: '00ffff'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: '00ffff'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: '00ffff'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: '00ffff'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: '00ffff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# BLUE CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '0000ff'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: '0000ff'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: '0000ff'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: '0000ff'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: '0000ff'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: '0000ff'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: '0000ff'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: '0000ff'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: '0000ff'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: '0000ff'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: '0000ff'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: '0000ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# MAGENTA CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: 'ff00ff'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: 'ff00ff'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: 'ff00ff'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: 'ff00ff'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: 'ff00ff'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: 'ff00ff'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: 'ff00ff'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: 'ff00ff'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: 'ff00ff'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: 'ff00ff'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: 'ff00ff'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: 'ff00ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# RED CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: 'ff0000'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: 'ff0000'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: 'ff0000'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: 'ff0000'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: 'ff0000'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: 'ff0000'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: 'ff0000'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: 'ff0000'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: 'ff0000'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: 'ff0000'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: 'ff0000'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: 'ff0000'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: 'ffff00'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: 'ffff00'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: 'ffff00'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: 'ffff00'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: 'ffff00'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: 'ffff00'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: 'ffff00'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: 'ffff00'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: 'ffff00'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: 'ffff00'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: 'ffff00'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: 'ffff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# GREEN CHASE
+# ----------------------
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '00ff00'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: '00ff00'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: '00ff00'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: '00ff00'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: '00ff00'
+    ledOutlaneRightC: '000000'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: '00ff00'
+    ledOutlaneLeftC: '000000'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: '00ff00'
+    ledClock15Sec1C: '000000'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: '00ff00'
+    ledClock15Sec2C: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    
+    # ----------------------  
+    ledOutlaneRightA: '000000'
+    ledOutlaneRightB: '000000'
+    ledOutlaneRightC: '00ff00'
+    # ----------------------    
+    ledOutlaneLeftA: '000000'
+    ledOutlaneLeftB: '000000'
+    ledOutlaneLeftC: '00ff00'
+    # ---------------------- 
+    ledClock15Sec1A: '000000'
+    ledClock15Sec1B: '000000'
+    ledClock15Sec1C: '00ff00'
+    # ---------------------- 
+    ledClock15Sec2A: '000000'
+    ledClock15Sec2B: '000000'
+    ledClock15Sec2C: '00ff00'
+    # ---------------------- 
+- time: "+1"
+

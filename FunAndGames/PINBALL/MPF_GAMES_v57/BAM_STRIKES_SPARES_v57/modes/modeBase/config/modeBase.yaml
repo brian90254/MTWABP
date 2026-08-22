@@ -1,0 +1,41 @@
+#config_version=6
+
+config:
+- configBaseShows.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 100
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  ball_started:
+    - eventResetMultipliers
+    - eventShowSlideBaseShows
+    
+  # ----------------------------
+  # START MODE BALLY VIKING
+  # ----------------------------
+  mode_modeBase_started:
+    - eventStartModeStrikesSpares
+    #- eventStartModeBallyStarTrek
+    - playPoolSoundHorn
+
+# ---------------------
+# PLAYLIST::PLAYER
+# ---------------------
+playlist_player:
+
+  eventPauseTrackPlaylist:
+    trackplaylist:
+      action: stop
+      
+  eventResumeTrackPlaylist:
+    trackplaylist:
+      #playlist: playlistModeBallyVikingMusic
+      #playlist: playlistModeBallyStarTrekMusic
+      playlist: playlistModeBallyStrikesSparesMusic
+      action: play

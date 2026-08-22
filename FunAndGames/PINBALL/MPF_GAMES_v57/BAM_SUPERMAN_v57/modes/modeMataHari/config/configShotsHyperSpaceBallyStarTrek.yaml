@@ -1,0 +1,335 @@
+#config_version=6
+
+# BALLY STAR TREK
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::ROLLOVER::LOWER
+    # -------------------
+    shotRolloverLower:
+        switch: s_1_11
+        enable_events: eventEnableShotRolloverLower
+        disable_events: eventDisableShotRolloverLower
+        restart_events: eventRestartShotRolloverLower
+        reset_events: eventResetShotRolloverLower
+        profile: spShotRollover
+        show_tokens:
+            led1: ledRolloverTopLowerA
+            led2: ledRolloverTopLowerB
+            led3: ledRolloverTopLowerC
+            led4: ledRolloverTopLowerD
+    
+    # -------------------
+    # SHOTS::ROLLOVER::UPPER
+    # -------------------
+    shotRolloverUpper:
+        switch: s_1_9
+        enable_events: eventEnableShotRolloverUpper
+        disable_events: eventDisableShotRolloverUpper
+        restart_events: eventRestartShotRolloverUpper
+        reset_events: eventResetShotRolloverUpper
+        profile: spShotRollover
+        show_tokens:
+            led1: ledRolloverTopUpperA
+            led2: ledRolloverTopUpperB
+            led3: ledRolloverTopUpperC
+            led4: ledRolloverTopUpperD
+        
+    shotHyperSpace:
+        enable_events: eventEnableShotHyperSpace
+        disable_events: eventDisableShotHyperSpace
+        restart_events: eventRestartShotHyperSpace
+        reset_events: eventResetShotHyperSpace
+        advance_events: eventAdvanceShotHyperSpace
+        hit_events: eventHitShotHyperSpace
+        profile: spShotHyperSpace
+        show_tokens:
+            led1: ledHyperSpace2k
+            led2: ledHyperSpace4k
+            led3: ledHyperSpace6k
+            led4: ledHyperSpace8k
+            led5: ledHyperSpace10k
+            led6: ledExtraBallLit
+        
+# ***************************** 
+# SHOTS::SEQUENCE
+# ***************************** 
+sequence_shots:
+    sequenceShotRollovers:
+        #switch_sequence: shotRolloverLower, shotRolloverUpper
+        switch_sequence: s_1_11, s_1_9
+        sequence_timeout: 3s
+    
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::LANES::LEFT
+    # -------------------
+    shotGroupRollover:
+        shots:
+            - shotRolloverLower
+            - shotRolloverUpper
+        enable_events:
+            - eventEnableShotGroupRollover
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupRollover
+        reset_events:
+            - eventResetShotGroupRollover
+        restart_events:
+            - eventRestartShotGroupRollover
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::RETURN::LANES
+    # -----------------------------
+    spShotRollover:
+        states:
+          #- name: unlitFlash
+          #  show: swirlFourLedTwoColor
+          #  speed: 1
+          #  show_tokens:
+          #      color1: '000000'
+          #      color2: '000000'
+          - name: litFlash
+            show: swirlFourLedTwoColor
+            show_tokens:
+                color1: '888800'
+                color2: 'ffff00'
+          #- name: litSolid
+          #  show: swirlFourLedTwoColor
+          #  show_tokens:
+          #      color1: 'ff00ff'
+          #      color2: 'ff00ff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::HYPERSPACE
+    # -----------------------------
+    spShotHyperSpace:
+        states:
+          - name: stateOneSpShotHyperSpace
+            show: showsSpShotHyperSpace
+            show_tokens:
+                color1: '880000'
+                color2: '000000'
+                color3: '000000'
+                color4: '000000'
+                color5: '000000'
+                color6: '000000'
+                # -------------
+                color7: 'cc0000'
+                color8: '000000'
+                color9: '000000'
+                color10: '000000'
+                color11: '000000'
+                color12: '000000'
+          - name: stateTwoSpShotHyperSpace
+            show: showsSpShotHyperSpace
+            show_tokens:
+                color1: 'ffff00'
+                color2: '880000'
+                color3: '000000'
+                color4: '000000'
+                color5: '000000'
+                color6: '000000'
+                # -------------
+                color7: 'ffff00'
+                color8: 'cc0000'
+                color9: '000000'
+                color10: '000000'
+                color11: '000000'
+                color12: '000000'
+          - name: stateThreeSpShotHyperSpace
+            show: showsSpShotHyperSpace
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: '880000'
+                color4: '000000'
+                color5: '000000'
+                color6: '000000'
+                # -------------
+                color7: 'ffff00'
+                color8: 'ffff00'
+                color9: 'cc0000'
+                color10: '000000'
+                color11: '000000'
+                color12: '000000'
+          - name: stateFourSpShotHyperSpace
+            show: showsSpShotHyperSpace
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: '880000'
+                color5: '000000'
+                color6: '000000'
+                # -------------
+                color7: 'ffff00'
+                color8: 'ffff00'
+                color9: 'ffff00'
+                color10: 'cc0000'
+                color11: '000000'
+                color12: '000000'
+          - name: stateFiveSpShotHyperSpace
+            show: showsSpShotHyperSpace
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: '880000'
+                color6: '000000'
+                # -------------
+                color7: 'ffff00'
+                color8: 'ffff00'
+                color9: 'ffff00'
+                color10: 'ffff00'
+                color11: 'cc0000'
+                color12: '000000'
+          - name: stateSixSpShotHyperSpace
+            show: showsSpShotHyperSpace
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: 'ffff00'
+                color6: '666600'
+                # -------------
+                color7: 'ffff00'
+                color8: 'ffff00'
+                color9: 'ffff00'
+                color10: 'ffff00'
+                color11: 'ffff00'
+                color12: 'cccc00'
+          - name: stateSevenSpShotHyperSpace
+            show: showsSpShotHyperSpace
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+                color3: 'ffff00'
+                color4: 'ffff00'
+                color5: 'ffff00'
+                color6: 'ff8800'
+                # -------------
+                color7: 'ffff00'
+                color8: 'ffff00'
+                color9: 'ffff00'
+                color10: 'ffff00'
+                color11: 'ffff00'
+                color12: 'ff8800'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    mode_modeBallyStarTrek_started:
+        - eventRestartShotRolloverLower
+        - eventRestartShotRolloverUpper
+        - eventRestartShotHyperSpace
+        
+    ball_ending:
+        - eventDisableShotRolloverLower
+        - eventDisableShotRolloverUpper
+
+    # ---------------
+    # SCORING::ROLLOVERS
+    # ---------------
+    #sequenceShotRollovers_hit:
+    shotRolloverUpper_hit:
+        - eventHitShotHyperSpace
+        - eventCompleteBonusOnes
+
+    shotRolloverLower_hit:
+        - eventCompleteBonusOnes
+        - eventHitShotHyperSpace
+        
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------
+    # SCORING::HYPERSPACE
+    # ---------------
+    shotHyperSpace_stateOneSpShotHyperSpace_hit:
+        score: 2000
+    shotHyperSpace_stateTwoSpShotHyperSpace_hit:
+        score: 4000
+    shotHyperSpace_stateThreeSpShotHyperSpace_hit:
+        score: 6000
+    shotHyperSpace_stateFourSpShotHyperSpace_hit:
+        score: 8000
+    shotHyperSpace_stateFiveSpShotHyperSpace_hit:
+        score: 10000
+
+#    #shotOutlaneRightWhenLit_unlitFlash_hit:
+#    #    score: 24000
+#    #shotOutlaneRightWhenLit_litFlash_hit:
+#    #    score: 24000
+#    #shotOutlaneLeftWhenLit_unlitFlash_hit:
+#    #    score: 24000
+#    #shotOutlaneLeftWhenLit_litFlash_hit:
+#    #    score: 24000
+#        
+#    shotGroupOutlaneWhenLit_litFlash_hit:
+#        score: 24000
+#        
+#    ### -------------------
+#    ### RIGHT::LANE
+#    ### -------------------
+#    #shotRightLane_hit:
+#    #    score: 1000
+#
+#    ## -------------------
+#    ## RIGHT::LANE
+#    ## -------------------
+#    shotGroupReturnLane_hit:
+#        score: 300
+        
+# *********************
+# SHOWS
+# *********************
+shows:
+  # -----------------------------------
+  # SHOW::LED::SHOT::HYPERSPACE
+  # -----------------------------------
+    showsSpShotHyperSpace:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color5)
+            (led6): (color6)
+        - time: 1
+          lights:
+            (led1): (color7)
+            (led2): (color8)
+            (led3): (color9)
+            (led4): (color10)
+            (led5): (color11)
+            (led6): (color12)
+        - time: 2
+
+
+        

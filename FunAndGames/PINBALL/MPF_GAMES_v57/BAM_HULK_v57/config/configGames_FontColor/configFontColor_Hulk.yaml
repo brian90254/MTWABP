@@ -1,0 +1,350 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+widget_styles:
+    
+# ---------------
+# FONT DEFINITIONS
+# ---------------
+
+# TODO
+# fix in skill shot, collect bonus and high score
+  tall_title:
+    font_name: FeedbackReg
+    font_size: 10
+    
+# TODO
+# fix in high score
+  fontJupiterCrush:
+    font_name: starburstLanesTwinkle
+    font_size: 10
+
+# ---------------
+# FONT DEFINITIONS
+# ---------------
+  # --------------------
+  # VILLANS
+  # --------------------
+  fontSpidermanVillan:
+    font_name: CrashLanding
+    font_size: 48
+
+  # --------------------
+  # FONT::BALL SAVES
+  # --------------------  
+  fontExtraBallLit:
+    font_name: FeedbackReg
+    font_size: 36
+   
+  fontExtraBallAward:
+    font_name: FeedbackReg
+    font_size: 48
+    
+  fontBallSave:
+    font_name: FeedbackReg
+    font_size: 48
+    
+  fontMachineInitOne:
+    font_name: Panther
+    font_size: 12
+
+  # --------------------
+  # FONT::ATTRACT::LAST
+  # --------------------
+  fontAttractLastHeader:
+    font_name: CrashLanding
+    font_size: 48
+    
+  fontAttractLastMiddle:
+    font_name: BadaBoom
+    font_size: 48
+    
+  fontAttractLastFooter:
+    font_name: ComicBookCommando
+    font_size: 36
+    
+  # --------------------
+  # FONT::ATTRACT::TITLE
+  # --------------------
+  #fontAttractTitleHeader:
+  #  font_name: CrashLanding
+  #  font_size: 54
+  #  
+  #fontAttractTitleMiddle:
+  #  font_name: CrashLanding
+  #  font_size: 72
+  #  
+  #fontAttractTitleFooter:
+  #  font_name: CrashLanding
+  #  font_size: 60
+
+  fontAttractTitleHeader:
+    font_name: CrashLanding
+    #font_size: 54
+    font_size: 42
+    
+  fontAttractTitleMiddle:
+    font_name: CrashLanding
+    #font_size: 72
+    font_size: 136
+    
+  fontAttractTitleFooter:
+    font_name: CrashLanding
+    font_size: 28
+    
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES
+  # --------------------
+  fontAttractHighscoreHeader:
+    font_name: Fundead
+    font_size: 36
+    
+  fontAttractHighscoreMiddle:
+    font_name: BadaBoom
+    font_size: 48
+    
+  fontAttractHighscoreFooter:
+    font_name: ComicBookCommando
+    font_size: 54
+    
+  # --------------------
+  # FONT::BASE::SCORE
+  # --------------------
+  fontBaseMainHeader:
+    font_name: CrashLanding
+    font_size: 36
+    
+  fontBaseMainMiddle:
+    font_name: BadaBoom
+    font_size: 48
+    
+  fontBaseMainFooter:
+    font_name: Fundead
+    font_size: 32
+    
+  # --------------------
+  # FONT::COLLECT::BONUS
+  # --------------------  
+  fontCollectBonusHeader:
+    font_name: RoddenberryItalic
+    font_size: 44
+    
+  fontCollectBonusMiddle:
+    font_name: MainframeOpto
+    font_size: 44
+  # ------------------------
+  # ADDED FOR 2X MULTIPLIER
+  fontCollectBonusMiddleText:
+    font_name: MainframeSpore
+    font_size: 44
+  # ------------------------
+  fontCollectBonusFooter:
+    font_name: MainframeSpore
+    font_size: 28
+    
+# ------------------------
+
+  fontTitle:
+    font_name: CrashLanding
+    font_size: 60
+    
+  fontSubTitle:
+    font_name: CrashLanding
+    font_size: 72
+    
+  fontHeader:
+    font_name: CrashLanding
+    font_size: 48
+    
+  fontHeaderBase:
+    font_name: CrashLanding
+    font_size: 56
+
+  fontHeaderAttract:
+    font_name: Fundead
+    font_size: 36
+    
+  fontHeaderHighScore:
+    font_name: CrashLanding
+    font_size: 48
+    
+  fontCenter:
+    font_name: BadaBoom
+    font_size: 48
+    
+  fontBigInitials:
+    font_name: CrashLanding
+    font_size: 48
+
+  fontFooter:
+    font_name: ComicBookCommando
+    font_size: 36
+    
+  fontFooterBase:
+    font_name: ComicBookCommando
+    font_size: 36
+    
+  fontFooterHighScore:
+    font_name: CrashLanding
+    font_size: 48
+
+# ---------------
+# COLOR DEFINITIONS
+# ---------------
+named_colors:
+  # ---------------
+  # VILLANS
+  # ---------------
+  colorFontSpidermanVillanInner: 'ffff00'
+  colorFontSpidermanVillanOuter1: '000000'
+  colorFontSpidermanVillanOuter2: 'ff00ff'
+  
+# *****************************
+# BALL SAVE
+# *****************************
+  colorFontBallSaveInner: '0000ff'
+  colorFontBallSaveOuter1: '00ff00'
+  colorFontBallSaveOuter2: '000000'
+  
+# *****************************
+# EXTRA BALL
+# *****************************
+  colorFontExtraBallLitInner: 'ff0080'
+  colorFontExtraBallLitOuter1: 'ffff00'
+  colorFontExtraBallLitOuter2: '000000'
+  
+  colorFontExtraBallAwardInner: 'ff0080'
+  colorFontExtraBallAwardOuter1: 'ffff00'
+  colorFontExtraBallAwardOuter2: '000000'
+  
+# *****************************
+# SHOT::PROFILES::COLORS
+# *****************************
+  color1SpShotRtDrop123: 'cc00cc'
+  color2SpShotRtDrop123: 'ff00ff'
+  color3SpShotRtDrop123: 'ff0000'
+  
+  color1SpShotOutlaneWhenLit: '0000cc'
+  color2SpShotOutlaneWhenLit: '0000ff'
+  color3SpShotOutlaneWhenLit: 'ff00ff'
+  
+  
+  colorFontMachineInitOne: ffffff
+    
+# ---------------
+# ATTRACT COLORS
+# ---------------
+  # ---------------------
+  # ATTRACT::LAST
+  # ---------------------
+  colorFontAttractLastHeaderInner: ff0000
+  colorFontAttractLastHeaderOuter1: '00ff00'
+  colorFontAttractLastHeaderOuter2: '000000'
+  
+  colorFontAttractLastMiddleInner: ff0000
+  colorFontAttractLastMiddleOuter1: '00ffff'
+  colorFontAttractLastMiddleOuter2: '000000'
+  
+  colorFontAttractLastFooterInner: 8000ff
+  colorFontAttractLastFooterOuter1: ffff00
+  colorFontAttractLastFooterOuter2: '000000'
+  
+  colorBoxAttractLastOuter: 8000ff
+  colorBoxAttractLastMiddle: '000000'
+  colorBoxAttractLastInner: '000000'
+  colorBoxAttractLastFill: '000000'
+  
+  # ---------------------
+  # ATTRACT::TITLE
+  # ---------------------  
+  #colorFontAttractTitleHeaderInner: '0000ff'
+  #colorFontAttractTitleHeaderOuter1: 'ff0000'
+  #colorFontAttractTitleHeaderOuter2: 'ffcc00'
+  #
+  #colorFontAttractTitleMiddleInner: 'ff0000'
+  #colorFontAttractTitleMiddleOuter1: '0000ff'
+  #colorFontAttractTitleMiddleOuter2: 'ffcc00'
+  #
+  #colorFontAttractTitleFooterInner: 'ff0000'
+  #colorFontAttractTitleFooterOuter1: '0000ff'
+  #colorFontAttractTitleFooterOuter2: 'ffcc00'
+  #
+  #colorBoxAttractTitleOuter: 'ff0000'
+  #colorBoxAttractTitleMiddle: '0000ff'
+  #colorBoxAttractTitleInner: 'ffcc00'
+  #colorBoxAttractTitleFill: '000000'
+  
+  colorFontAttractTitleFooterInner: 'ff4400'
+  colorFontAttractTitleFooterOuter1: '8800ff'
+  colorFontAttractTitleFooterOuter2: '00ff00'
+  
+  colorFontAttractTitleHeaderInner: 'ff4400'
+  colorFontAttractTitleHeaderOuter1: '8800ff'
+  colorFontAttractTitleHeaderOuter2: '00ff00'
+  
+  colorFontAttractTitleMiddleInner: '00ff00'
+  colorFontAttractTitleMiddleOuter1: 'ff4400'
+  colorFontAttractTitleMiddleOuter2: '8800ff'
+  
+  colorBoxAttractTitleOuter: '8800ff'
+  colorBoxAttractTitleMiddle: '00ff00'
+  colorBoxAttractTitleInner: 'ff4400'
+  colorBoxAttractTitleFill: '000000'
+  
+  
+  # ---------------------
+  # ATTRACT::HIGHSCORE
+  # ---------------------
+  colorAttractGrandChampionText: ffffff
+  colorAttractGrandChampionScore: ff0000
+  colorAttractGrandChampionBackground: ffff00
+  
+  colorAttractHighscore1Text: ff8000
+  colorAttractHighscore1Score: ffff00
+  colorAttractHighscore1Background: ff0000
+  
+  colorAttractHighscore2Text: ff0000
+  colorAttractHighscore2Score: ffff00
+  colorAttractHighscore2Background: ff8000
+  
+  colorAttractHighscore3Text: '00ff00'
+  colorAttractHighscore3Score: ffff00
+  colorAttractHighscore3Background: 8000ff
+  
+  colorAttractHighscore4Text: '00ff00'
+  colorAttractHighscore4Score: ffff00
+  colorAttractHighscore4Background: ff8000
+  
+# ---------------
+# BASE COLORS
+# ---------------
+  # ---------------------
+  # BASE::MAIN
+  # ---------------------
+  colorFontBaseMainHeaderInner: 'ff0000'
+  colorFontBaseMainHeaderOuter1: '0000ff'
+  colorFontBaseMainHeaderOuter2: '000000'
+
+  colorFontBaseMainMiddleInner: '0000ff'
+  colorFontBaseMainMiddleOuter1: 'ffff00'
+  colorFontBaseMainMiddleOuter2: '000000'
+  
+  colorFontBaseMainFooterInner: 'ffff00'
+  colorFontBaseMainFooterOuter1: '0000ff'
+  colorFontBaseMainFooterOuter2: '000000'
+  
+# --------------------
+# COLOR::COLLECT::BONUS
+# --------------------
+  colorFontCollectBonusHeaderInner: ff8000
+  colorFontCollectBonusHeaderOuter1: 8000ff
+  colorFontCollectBonusHeaderOuter2: '000000'
+  
+  colorFontCollectBonusMiddleInner: ffff00
+  colorFontCollectBonusMiddleOuter1: ff0000
+  colorFontCollectBonusMiddleOuter2: '000000'
+  
+  colorFontCollectBonusFooterInner: ff0000
+  colorFontCollectBonusFooterOuter1: '0080ff'
+  colorFontCollectBonusFooterOuter2: '000000'

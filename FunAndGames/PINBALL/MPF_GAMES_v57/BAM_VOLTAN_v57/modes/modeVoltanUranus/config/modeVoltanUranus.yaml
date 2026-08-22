@@ -1,0 +1,96 @@
+#config_version=6
+
+config:
+- configVoltanUranusSlides.yaml
+- configVoltanUranusShots.yaml
+- configVoltanUranusThumpers.yaml
+- configVoltanUranusMultiball.yaml
+
+mode:
+  start_events: eventStartModeVoltanUranus
+  stop_events:
+    - eventStopModeVoltanUranus
+    - ball_ending
+    
+  priority: 3000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeVoltanUranus_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlideVoltanUranusBase
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeFlashGordonStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersVoltanUranus|1000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  mode_modeVoltanUranus_started:
+    nameMoon:
+      #string: "V O L T A N"
+      string: "URANUS"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersVoltanUranus:
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusUpper:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusMiniUpper:
+      #int: 50000
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT LOWER
+    bonusLower:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusSuperLower:
+      #int: 100000
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT
+    totalBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET TOTAL BONUS SCORE
+    # (TOTAL BONUS X BONUS MULTIPLIER)
+    scoreBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 8
+      action: set
+    # -------------------------
+    # BONUS MULTIPLIER
+    bonus_multiplier:
+      int: 8
+      action: set

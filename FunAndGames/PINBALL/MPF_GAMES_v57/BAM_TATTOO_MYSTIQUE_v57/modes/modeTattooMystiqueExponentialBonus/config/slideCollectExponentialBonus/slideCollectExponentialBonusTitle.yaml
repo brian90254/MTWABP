@@ -1,0 +1,206 @@
+#config_version=6
+
+slides:
+  # ----------------------
+  # INTRO BONUS
+  # ----------------------
+  slideCollectExponentialBonusTitle:
+    widgets:
+    # -------------------
+    # TITLE BONUS::HEADER
+    # -------------------
+      # -------------------------
+      # TITLE BONUS::HEADER::INNER
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle + 25
+      x: middle
+      z: 40
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderInner
+      # -------------------------
+      # TITLE BONUS::HEADER::OUTER::ONE
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle + 26
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle + 24
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle + 26
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle + 24
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter1
+      # -------------------------
+      # TITLE BONUS::HEADER::OUTER::TWO
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle + 27
+      x: middle + 2
+      z: 20
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle + 23
+      x: middle + 2
+      z: 20
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle + 27
+      x: middle - 2
+      z: 20
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle + 23
+      x: middle - 2
+      z: 20
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter2
+
+    # -------------------
+    # TITLE BONUS::MIDDLE
+    # -------------------
+      # -------------------------
+      # TITLE BONUS::MIDDLE::INNER
+      # -------------------------
+    - type: text
+      text: BONUS
+      #style: fontCollectBonusTitleTattooMystiqueMiddle
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      #y: middle + 3
+      #x: middle
+      y: middle - 25
+      x: middle
+      z: 40
+      #font_size: 32
+      #color: colorFontCollectBonusTitleTattooMystiqueMiddleInner
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderInner
+      # -------------------------
+      # TITLE BONUS::MIDDLE::OUTER::ONE
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle - 26
+      x: middle + 1
+      z: 30
+      #color: colorFontCollectBonusTitleTattooMystiqueMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle - 24
+      x: middle + 1
+      z: 30
+      #color: colorFontCollectBonusTitleTattooMystiqueMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle - 26
+      x: middle - 1
+      z: 30
+      #color: colorFontCollectBonusTitleTattooMystiqueMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle - 24
+      x: middle - 1
+      z: 30
+      #color: colorFontCollectBonusTitleTattooMystiqueMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter1
+      # -------------------------
+      # -------------------------
+      # TITLE BONUS::MIDDLE::OUTER::TWO
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle - 27
+      x: middle + 2
+      z: 20
+      #color: colorFontCollectBonusTitleTattooMystiqueMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle - 23
+      x: middle + 2
+      z: 20
+      #color: colorFontCollectBonusTitleTattooMystiqueMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle - 27
+      x: middle - 2
+      z: 20
+      #color: colorFontCollectBonusTitleTattooMystiqueMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTattooMystiqueHeader
+      y: middle - 23
+      x: middle - 2
+      z: 20
+      #color: colorFontCollectBonusTitleTattooMystiqueMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTattooMystiqueHeaderOuter2
+      # -------------------------
+
+    expire: 2.5s

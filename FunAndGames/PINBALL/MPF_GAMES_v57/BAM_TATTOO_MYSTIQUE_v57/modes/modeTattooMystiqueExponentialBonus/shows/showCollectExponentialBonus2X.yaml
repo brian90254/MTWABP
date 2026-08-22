@@ -1,0 +1,19 @@
+#show_version=6
+
+# ---------------------
+# SLIDES::EXPONENTIAL MULTIPLIERS
+# ---------------------
+- time: 0
+
+# COLLECT BONUS :: 2X
+  events:
+    - eventShowSlideCollectExponentialBonus2X
+    - playPoolSoundTransporter
+    
+- time: '+3.5'
+
+  events:
+    - eventCollectExponentialBonusBase
+
+- time: '+0.5'
+

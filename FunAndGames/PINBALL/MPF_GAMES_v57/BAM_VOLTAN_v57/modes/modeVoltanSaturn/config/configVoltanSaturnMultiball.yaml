@@ -1,0 +1,136 @@
+#config_version=6
+
+# VOLTAN
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeVoltanSaturn_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballSaturnUpperKickerLeft
+    - eventEnableMultiballSaturnUpperKickerRight
+    - eventEnableMultiballSaturnUpperKickerBoth
+    # ----------------------------------
+    # ENABLE LOCK
+    - eventEnableMultiballSaturnLockSaucerTopRight
+    - eventEnableMultiballSaturnLockSaucerTopLeft
+    # ----------------------------------
+    
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::RIGHT
+  # ---------------------
+  # RIGHT::TWO BALL
+  multiball_lock_multiballSaturnLockSaucerTopRight_full.1{device.multiball_locks.multiballSaturnLockSaucerTopLeft.locked_balls==0}:
+    - eventStartMultiballSaturnUpperKickerRight|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballSaturnLockSaucerTopRight
+    - eventDisableMultiballSaturnLockSaucerTopLeft
+  # ---------------------
+  # RIGHT::THREE BALL
+  multiball_lock_multiballSaturnLockSaucerTopRight_full.2{device.multiball_locks.multiballSaturnLockSaucerTopLeft.locked_balls==1}:
+    - eventStartMultiballSaturnUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballSaturnLockSaucerTopRight|3500ms
+    - eventDisableMultiballSaturnLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::LEFT
+  # ---------------------
+  # LEFT::TWO BALL
+  multiball_lock_multiballSaturnLockSaucerTopLeft_full.1{device.multiball_locks.multiballSaturnLockSaucerTopRight.locked_balls==0}:
+    - eventStartMultiballSaturnUpperKickerLeft|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballSaturnLockSaucerTopRight
+    - eventDisableMultiballSaturnLockSaucerTopLeft
+  # ---------------------
+  # LEFT::THREE BALL
+  multiball_lock_multiballSaturnLockSaucerTopLeft_full.2{device.multiball_locks.multiballSaturnLockSaucerTopRight.locked_balls==1}:
+    - eventStartMultiballSaturnUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballSaturnLockSaucerTopRight|3500ms
+    - eventDisableMultiballSaturnLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # ENDING MULTIBALL
+  # ---------------------
+  # BOTH
+  multiball_multiballSaturnUpperKickerBoth_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballSaturnLockSaucerTopRight
+    - eventEnableMultiballSaturnLockSaucerTopLeft
+  # LEFT
+  multiball_multiballSaturnUpperKickerLeft_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballSaturnLockSaucerTopRight
+    - eventEnableMultiballSaturnLockSaucerTopLeft
+  # RIGHT
+  multiball_multiballSaturnUpperKickerRight_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballSaturnLockSaucerTopRight
+    - eventEnableMultiballSaturnLockSaucerTopLeft
+
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballSaturnLockSaucerTopRight:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopRight
+    enable_events: eventEnableMultiballSaturnLockSaucerTopRight
+    disable_events: eventDisableMultiballSaturnLockSaucerTopRight
+    locked_ball_counting_strategy: physical_only
+
+  multiballSaturnLockSaucerTopLeft:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopLeft
+    enable_events: eventEnableMultiballSaturnLockSaucerTopLeft
+    disable_events: eventDisableMultiballSaturnLockSaucerTopLeft
+    locked_ball_counting_strategy: physical_only
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballSaturnUpperKickerLeft:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballSaturnUpperKickerLeft
+    disable_events: eventDisableMultiballSaturnUpperKickerLeft
+    start_events: eventStartMultiballSaturnUpperKickerLeft
+    stop_events: eventStopMultiballSaturnUpperKickerLeft
+    
+  multiballSaturnUpperKickerRight:
+    ball_locks:
+      - ballDeviceSaucerTopRight
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballSaturnUpperKickerRight
+    disable_events: eventDisableMultiballSaturnUpperKickerRight
+    start_events: eventStartMultiballSaturnUpperKickerRight
+    stop_events: eventStopMultiballSaturnUpperKickerRight
+    
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::BOTH
+  # ----------------------------
+  multiballSaturnUpperKickerBoth:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+      - ballDeviceSaucerTopRight
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballSaturnUpperKickerBoth
+    disable_events: eventDisableMultiballSaturnUpperKickerBoth
+    start_events: eventStartMultiballSaturnUpperKickerBoth
+    stop_events: eventStopMultiballSaturnUpperKickerBoth
+    

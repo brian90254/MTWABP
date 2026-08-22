@@ -1,0 +1,531 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ---------------------
+# SOUNDS::SFX
+# ---------------------
+sounds:
+# ---------------------
+# PLAYBOY
+# ---------------------
+# ---------------------
+# SOUNDS::SFX::CHIME A
+# ---------------------
+  soundChimeA001:
+    file: soundChimeA_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+
+  soundChimeA002:
+    file: soundChimeA_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundChimeA003:
+    file: soundChimeA_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundChimeA004:
+    file: soundSingleBell_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+# ---------------------
+# SOUNDS::SFX::CHIME B
+# ---------------------
+  soundChimeB001:
+    file: soundChimeB_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundChimeB002:
+    file: soundChimeB_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundChimeB003:
+    file: soundChimeB_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundChimeB004:
+    file: soundChimeB_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundChimeB005:
+    file: soundSingleBell_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+# ---------------------
+# SOUNDS::SFX::FOUR BELLS HIGH
+# ---------------------
+  soundFourBellsHigh001:
+    file: soundFourBellsHigh_006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundFourBellsHigh002:
+    file: soundFourBellsHigh_007.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundFourBellsHigh003:
+    file: soundFourBellsHigh_008.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundFourBellsHigh004:
+    file: soundFourBellsHigh_009.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundFourBellsHigh005:
+    file: soundFourBellsHigh_010.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundFourBellsHigh006:
+    file: soundFourBellsHigh_011.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundFourBellsHigh007:
+    file: soundFourBellsHigh_013.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+# ---------------------
+# SOUNDS::SFX::FOUR BELLS MID
+# ---------------------
+  soundFourBellsMid001:
+    file: soundFourBellsMid_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundFourBellsMid002:
+    file: soundFourBellsMid_005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundFourBellsMid003:
+    file: soundFourBellsMid_012.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+# ---------------------
+# SOUNDS::SFX::FOUR BELLS LOW
+# ---------------------
+  soundFourBellsLow001:
+    file: soundFourBellsLow_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundFourBellsLow002:
+    file: soundFourBellsLow_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundFourBellsLow003:
+    file: soundFourBellsLow_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+# ---------------------
+# SOUNDS::SFX::MULTI MECH
+# ---------------------
+  soundMultiMech001:
+    file: soundMultiMech_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundMultiMech002:
+    file: soundMultiMech_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundMultiMech003:
+    file: soundMultiMech_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundMultiMech004:
+    file: soundMultiMech_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundMultiMech005:
+    file: soundMultiMech_005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundMultiMech006:
+    file: soundMultiMech_006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundMultiMech007:
+    file: soundMultiMech_007.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundMultiMech008:
+    file: soundMultiMech_008.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+# ---------------------
+# SOUNDS::SFX::SINGLE MECH
+# ---------------------
+  soundSingleMech001:
+    file: soundSingleMech_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundSingleMech002:
+    file: soundSingleMech_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundSingleMech003:
+    file: soundSingleMech_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundSingleMech004:
+    file: soundSingleMech_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundSingleMech005:
+    file: soundSingleMech_005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundSingleMech006:
+    file: soundSingleMech_006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundSingleMech007:
+    file: soundSingleMech_007.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundSingleMech008:
+    file: soundSingleMech_008.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundSingleMech009:
+    file: soundSingleMech_009.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundSingleMech010:
+    file: soundSingleMech_010.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+
+# ---------------------
+# SOUNDS::SFX::RESET
+# ---------------------
+  soundReset001:
+    file: soundReset_001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundReset002:
+    file: soundReset_002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundReset003:
+    file: soundReset_003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+    
+  soundReset004:
+    file: soundReset_004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 6
+    simultaneous_limit: 2
+
+# *********************
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+# *********************
+sound_pools:
+  
+# ---------------------
+# POOLS::PLAYBOY::CHIME A
+# ---------------------
+  poolSoundChimeA:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundChimeA001
+      - soundChimeA002
+      - soundChimeA003
+      - soundChimeA004
+      
+# ---------------------
+# POOLS::PLAYBOY::CHIME B
+# ---------------------
+  poolSoundChimeB:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundChimeB001
+      - soundChimeB002
+      - soundChimeB003
+      - soundChimeB004
+      - soundChimeB005
+      
+# ---------------------
+# POOLS::PLAYBOY::FOUR BELLS HIGH
+# ---------------------
+  poolSoundFourBellsHigh:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundFourBellsHigh001
+      - soundFourBellsHigh002
+      - soundFourBellsHigh003
+      - soundFourBellsHigh004
+      - soundFourBellsHigh005
+      - soundFourBellsHigh006
+      - soundFourBellsHigh007
+      
+# ---------------------
+# POOLS::PLAYBOY::FOUR BELLS MID
+# ---------------------
+  poolSoundFourBellsMid:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundFourBellsMid001
+      - soundFourBellsMid002
+      - soundFourBellsMid003
+      
+# ---------------------
+# POOLS::PLAYBOY::FOUR BELLS LOW
+# ---------------------
+  poolSoundFourBellsLow:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundFourBellsLow001
+      - soundFourBellsLow002
+      - soundFourBellsLow003
+      
+# ---------------------
+# POOLS::PLAYBOY::MULTI MECH
+# ---------------------
+  poolSoundMultiMech:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundMultiMech001
+      - soundMultiMech002
+      - soundMultiMech003
+      - soundMultiMech004
+      - soundMultiMech005
+      - soundMultiMech006
+      - soundMultiMech007
+      - soundMultiMech008
+      
+# ---------------------
+# POOLS::PLAYBOY::SINGLE MECH
+# ---------------------
+  poolSoundSingleMech:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundSingleMech001
+      - soundSingleMech002
+      - soundSingleMech003
+      - soundSingleMech004
+      - soundSingleMech005
+      - soundSingleMech006
+      - soundSingleMech007
+      - soundSingleMech008
+      - soundSingleMech009
+      - soundSingleMech010
+      
+# ---------------------
+# POOLS::PLAYBOY::RESET
+# ---------------------
+  poolSoundReset:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundReset001
+      - soundReset002
+      - soundReset003
+      - soundReset004
+      
+# *********************
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+# *********************
+sound_player:
+
+# ---------------------
+# PLAYBOY
+# ---------------------
+  # ---------------------
+  # SOUNDS::PLAYER::CHIME A
+  # ---------------------
+  playPoolSoundChimeA:
+    poolSoundChimeA:
+      loops: 0
+      volume: 0.9
+      
+  # ---------------------
+  # SOUNDS::PLAYER::CHIME B
+  # ---------------------
+  playPoolSoundChimeB:
+    poolSoundChimeB:
+      loops: 0
+      volume: 0.9
+      
+  # ---------------------
+  # SOUNDS::PLAYER::FOUR BELLS HIGH
+  # ---------------------
+  playPoolSoundFourBellsHigh:
+    poolSoundFourBellsHigh:
+      loops: 0
+      volume: 0.9
+      
+  # ---------------------
+  # SOUNDS::PLAYER::FOUR BELLS MID
+  # ---------------------
+  playPoolSoundFourBellsMid:
+    poolSoundFourBellsMid:
+      loops: 0
+      volume: 0.9
+      
+  # ---------------------
+  # SOUNDS::PLAYER::FOUR BELLS LOW
+  # ---------------------
+  playPoolSoundFourBellsLow:
+    poolSoundFourBellsLow:
+      loops: 0
+      volume: 0.9
+      
+  # ---------------------
+  # SOUNDS::PLAYER::MULTI MECH
+  # ---------------------
+  playPoolSoundMultiMech:
+    poolSoundMultiMech:
+      loops: 0
+      volume: 0.9
+      
+  # ---------------------
+  # SOUNDS::PLAYER::SINGLE MECH
+  # ---------------------
+  playPoolSoundSingleMech:
+    poolSoundSingleMech:
+      loops: 0
+      volume: 0.9
+      
+  # ---------------------
+  # SOUNDS::PLAYER::RESET
+  # ---------------------
+  playPoolSoundReset:
+    poolSoundReset:
+      loops: 0
+      volume: 0.9

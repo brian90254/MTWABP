@@ -1,0 +1,123 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    chaseTenFlashLedTwoColor:
+      loops: 0
+      speed: 10
+      show_tokens:
+        color1: 'ff00ff'
+        color2: 'ff0000'
+        led1: ledSpinnerCount1
+        led2: ledSpinnerCount2
+        led3: ledSpinnerCount3
+        led4: ledSpinnerCount4
+        led5: ledSpinnerCount5
+        led6: ledSpinnerCount6
+        led7: ledSpinnerCount7
+        led8: ledSpinnerCount8
+        led9: ledSpinnerCount9
+        led10: ledSpinnerCount10
+
+- time: "+2"
+
+  shows:
+    chaseTenFlashLedTwoColor:
+      loops: 0
+      speed: 10
+      show_tokens:
+        color1: 'ff0000'
+        color2: 'ffff00'
+        led1: ledSpinnerCount1
+        led2: ledSpinnerCount2
+        led3: ledSpinnerCount3
+        led4: ledSpinnerCount4
+        led5: ledSpinnerCount5
+        led6: ledSpinnerCount6
+        led7: ledSpinnerCount7
+        led8: ledSpinnerCount8
+        led9: ledSpinnerCount9
+        led10: ledSpinnerCount10
+
+- time: "+2"
+
+  shows:
+    chaseTenFlashLedTwoColor:
+      loops: 0
+      speed: 10
+      show_tokens:
+        color1: 'ffff00'
+        color2: '00ff00'
+        led1: ledSpinnerCount1
+        led2: ledSpinnerCount2
+        led3: ledSpinnerCount3
+        led4: ledSpinnerCount4
+        led5: ledSpinnerCount5
+        led6: ledSpinnerCount6
+        led7: ledSpinnerCount7
+        led8: ledSpinnerCount8
+        led9: ledSpinnerCount9
+        led10: ledSpinnerCount10
+
+- time: "+2"
+
+  shows:
+    chaseTenFlashLedTwoColor:
+      loops: 0
+      speed: 10
+      show_tokens:
+        color1: '00ff00'
+        color2: '00ffff'
+        led1: ledSpinnerCount1
+        led2: ledSpinnerCount2
+        led3: ledSpinnerCount3
+        led4: ledSpinnerCount4
+        led5: ledSpinnerCount5
+        led6: ledSpinnerCount6
+        led7: ledSpinnerCount7
+        led8: ledSpinnerCount8
+        led9: ledSpinnerCount9
+        led10: ledSpinnerCount10
+
+- time: "+2"
+
+  shows:
+    chaseTenFlashLedTwoColor:
+      loops: 0
+      speed: 10
+      show_tokens:
+        color1: '00ffff'
+        color2: '0000ff'
+        led1: ledSpinnerCount1
+        led2: ledSpinnerCount2
+        led3: ledSpinnerCount3
+        led4: ledSpinnerCount4
+        led5: ledSpinnerCount5
+        led6: ledSpinnerCount6
+        led7: ledSpinnerCount7
+        led8: ledSpinnerCount8
+        led9: ledSpinnerCount9
+        led10: ledSpinnerCount10
+
+- time: "+2"
+
+  shows:
+    chaseTenFlashLedTwoColor:
+      loops: 0
+      speed: 10
+      show_tokens:
+        color1: '0000ff'
+        color2: 'ff00ff'
+        led1: ledSpinnerCount1
+        led2: ledSpinnerCount2
+        led3: ledSpinnerCount3
+        led4: ledSpinnerCount4
+        led5: ledSpinnerCount5
+        led6: ledSpinnerCount6
+        led7: ledSpinnerCount7
+        led8: ledSpinnerCount8
+        led9: ledSpinnerCount9
+        led10: ledSpinnerCount10
+
+- time: "+2"

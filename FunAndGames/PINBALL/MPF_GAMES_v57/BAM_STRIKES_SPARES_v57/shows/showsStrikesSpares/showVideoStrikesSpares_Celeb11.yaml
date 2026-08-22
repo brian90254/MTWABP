@@ -1,0 +1,27 @@
+#show_version=6
+
+- time: 0
+  events:
+    - eventPauseTrackPlaylist
+
+- time: '+1'
+  events:
+    - presentSlideVideoLayout
+    
+- time: '+1'
+  slides:
+    slideVideoStrikesSpares_Celeb11:
+      target: displayVideoDMD
+      widgets:
+      - type: video
+        video: Celeb11
+        auto_play: True
+        volume: 1.0
+        z: 200
+
+# TIME EQUALS VIDEO LENGTH + 1
+- time: '+7'
+  events:
+    - randomEventShowVideoStrikesSparesColor
+
+- time: '+1'

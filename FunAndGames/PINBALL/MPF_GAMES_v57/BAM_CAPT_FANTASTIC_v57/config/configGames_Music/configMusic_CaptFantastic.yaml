@@ -1,0 +1,198 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:
+# ---------------------
+# SOUNDS::MUSIC::THEME
+# ---------------------
+  musicCaptFantasticTheme001:
+    file: musicCaptFantasticTheme_001_YourSong.wav
+    track: music
+    volume: 0.9
+    mode_end_action: stop
+    
+  #musicCaptFantasticTheme002:
+  #  file: musicCaptFantasticTheme_002.wav
+  #  track: music
+  #  volume: 0.9
+  #  mode_end_action: stop
+    
+  musicCaptFantasticTheme003:
+    file: musicCaptFantasticTheme_003_HonkyCat.wav
+    track: music
+    volume: 0.9
+    mode_end_action: stop
+    
+  #musicCaptFantasticTheme004:
+  #  file: musicCaptFantasticTheme_004.wav
+  #  track: music
+  #  volume: 0.9
+  #  mode_end_action: stop
+
+  musicCaptFantasticTheme005:
+    file: musicCaptFantasticTheme_005_SaturdayNight.wav
+    track: music
+    volume: 0.9
+    mode_end_action: stop
+    
+  musicCaptFantasticTheme006:
+    file: musicCaptFantasticTheme_006_RocketMan.wav
+    track: music
+    volume: 0.9
+    mode_end_action: stop
+    
+  musicCaptFantasticTheme007:
+    file: musicCaptFantasticTheme_007_BennieAndTheJets.wav
+    track: music
+    volume: 0.9
+    mode_end_action: stop
+    
+  #musicCaptFantasticTheme008:
+  #  file: musicCaptFantasticTheme_008.wav
+  #  track: music
+  #  volume: 0.9
+  #  mode_end_action: stop
+    
+  #musicCaptFantasticTheme009:
+  #  file: musicCaptFantasticTheme_009.wav
+  #  track: music
+  #  volume: 0.9
+  #  mode_end_action: stop
+    
+  #musicCaptFantasticTheme010:
+  #  file: musicCaptFantasticTheme_010.wav
+  #  track: music
+  #  volume: 0.9
+  #  mode_end_action: stop
+    
+  musicCaptFantasticTheme011:
+    file: musicCaptFantasticTheme_011_CrocodileRock.wav
+    track: music
+    volume: 0.9
+    mode_end_action: stop
+    
+  musicCaptFantasticTheme012:
+    file: musicCaptFantasticTheme_012_DontGoBreakinMyHeart.wav
+    track: music
+    volume: 0.9
+    mode_end_action: stop
+    
+  musicCaptFantasticTheme013:
+    file: musicCaptFantasticTheme_013_WhyTheBlues.wav
+    track: music
+    volume: 0.9
+    mode_end_action: stop
+    
+  musicCaptFantasticTheme014:
+    file: musicCaptFantasticTheme_014_IslandGirl.wav
+    track: music
+    volume: 0.9
+    mode_end_action: stop
+    
+  musicCaptFantasticTheme015:
+    file: musicCaptFantasticTheme_015_PhilidelphiaFreedom.wav
+    track: music
+    volume: 0.9
+    mode_end_action: stop
+    
+  musicCaptFantasticTheme016:
+    file: musicCaptFantasticTheme_016_PinballWizard.wav
+    track: music
+    volume: 0.9
+    mode_end_action: stop
+
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      #- musicCaptFantasticTheme001
+      ##- musicCaptFantasticTheme002
+      #- musicCaptFantasticTheme003
+      ##- musicCaptFantasticTheme004
+      #- musicCaptFantasticTheme005
+      #- musicCaptFantasticTheme006
+      #- musicCaptFantasticTheme007
+      ##- musicCaptFantasticTheme008
+      ##- musicCaptFantasticTheme009
+      ##- musicCaptFantasticTheme010
+      #- musicCaptFantasticTheme011
+      #- musicCaptFantasticTheme012
+      #- musicCaptFantasticTheme013
+      #- musicCaptFantasticTheme014
+      #- musicCaptFantasticTheme015
+      # ---------------------------
+      # PINBALL WIZARD
+      - musicCaptFantasticTheme016
+
+  poolMusicBaseMode:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicCaptFantasticTheme001
+      #- musicCaptFantasticTheme002
+      - musicCaptFantasticTheme003
+      #- musicCaptFantasticTheme004
+      - musicCaptFantasticTheme005
+      - musicCaptFantasticTheme006
+      - musicCaptFantasticTheme007
+      #- musicCaptFantasticTheme008
+      #- musicCaptFantasticTheme009
+      #- musicCaptFantasticTheme010
+      - musicCaptFantasticTheme011
+      - musicCaptFantasticTheme012
+      - musicCaptFantasticTheme013
+      - musicCaptFantasticTheme014
+      - musicCaptFantasticTheme015
+      # ---------------------------
+      # PINBALL WIZARD
+      #- musicCaptFantasticTheme016
+
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+sound_player:
+# ---------------------
+# SOUNDS::PLAYER::STAR TREK::BY MODE
+# ---------------------
+  playPoolMusicBaseMode:
+    poolMusicBaseMode:
+      loops: 0
+      volume: 0.9
+
+# ---------------------
+# MUSIC::PLAYLISTS
+# ---------------------
+playlists:
+
+  playlistModeCaptFantasticMusic:
+    shuffle: true
+    repeat: true
+    sounds:
+      - musicCaptFantasticTheme001
+      #- musicCaptFantasticTheme002
+      - musicCaptFantasticTheme003
+      #- musicCaptFantasticTheme004
+      - musicCaptFantasticTheme005
+      - musicCaptFantasticTheme006
+      - musicCaptFantasticTheme007
+      #- musicCaptFantasticTheme008
+      #- musicCaptFantasticTheme009
+      #- musicCaptFantasticTheme010
+      - musicCaptFantasticTheme011
+      - musicCaptFantasticTheme012
+      - musicCaptFantasticTheme013
+      - musicCaptFantasticTheme014
+      - musicCaptFantasticTheme015
+      # ---------------------------
+      # PINBALL WIZARD
+      #- musicCaptFantasticTheme016
+      
+

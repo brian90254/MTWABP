@@ -1,0 +1,724 @@
+#config_version=6
+
+# *********************
+# SHOW::PLAYER
+# *********************
+show_player:
+
+# -------------------
+# JACKPOT
+# -----------------
+  # ORANGE
+  eventShowLedJackpotHighOrange:
+    showLedJackpotHigh:
+      loops: -1
+      speed: 6
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+    # showLedJackpotMedium:
+    #   action: stop
+    # showLedJackpotLow:
+    #   action: stop
+  # -----------------
+
+  mode_modeTattooMystiqueBase_started:
+    # ----------------------------
+    # ILLUMINATION::BACK
+    showBaseLightBackIllumination:
+      loops: -1
+      speed: 1
+    # ----------------------------
+    # ILLUMINATION::APRON
+    showBaseLightApronIllumination:
+      loops: -1
+      speed: 1
+
+# ---------------------
+# SHOTS 1~7
+# ---------------------
+# -------------------
+# SHOT 1
+# -----------------
+  # RESET
+  eventResetPurpleTM1:
+    showLedTM1Yellow:
+      loops: -1
+    showLedTM1Green:
+      action: stop
+    showLedTM1Black:
+      action: stop
+    showLedTM1Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM1:
+    showLedTM1Yellow:
+      action: stop
+    showLedTM1Green:
+      loops: -1
+    showLedTM1Black:
+      action: stop
+    showLedTM1Red:
+      action: stop
+# -------------------
+# SHOT 2
+# -----------------
+  # RESET
+  eventResetPurpleTM2:
+    showLedTM2Yellow:
+      loops: -1
+    showLedTM2Green:
+      action: stop
+    showLedTM2Black:
+      action: stop
+    showLedTM2Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM2:
+    showLedTM2Yellow:
+      action: stop
+    showLedTM2Green:
+      loops: -1
+    showLedTM2Black:
+      action: stop
+    showLedTM2Red:
+      action: stop
+# -------------------
+# SHOT 3
+# -----------------
+  # RESET
+  eventResetPurpleTM3:
+    showLedTM3Yellow:
+      loops: -1
+    showLedTM3Green:
+      action: stop
+    showLedTM3Black:
+      action: stop
+    showLedTM3Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM3:
+    showLedTM3Yellow:
+      action: stop
+    showLedTM3Green:
+      loops: -1
+    showLedTM3Black:
+      action: stop
+    showLedTM3Red:
+      action: stop
+# ------------------
+# SHOT 4
+# -----------------
+  # RESET
+  eventResetPurpleTM4:
+    showLedTM4Yellow:
+      loops: -1
+    showLedTM4Green:
+      action: stop
+    showLedTM4Black:
+      action: stop
+    showLedTM4Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM4:
+    showLedTM4Yellow:
+      action: stop
+    showLedTM4Green:
+      loops: -1
+    showLedTM4Black:
+      action: stop
+    showLedTM4Red:
+      action: stop
+# -------------------
+# SHOT 5
+# -----------------
+  # RESET
+  eventResetPurpleTM5:
+    showLedTM5Yellow:
+      loops: -1
+    showLedTM5Green:
+      action: stop
+    showLedTM5Black:
+      action: stop
+    showLedTM5Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM5:
+    showLedTM5Yellow:
+      action: stop
+    showLedTM5Green:
+      loops: -1
+    showLedTM5Black:
+      action: stop
+    showLedTM5Red:
+      action: stop
+# -------------------
+# SHOT 6
+# -----------------
+  # RESET
+  eventResetPurpleTM6:
+    showLedTM6Yellow:
+      loops: -1
+    showLedTM6Green:
+      action: stop
+    showLedTM6Black:
+      action: stop
+    showLedTM6Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM6:
+    showLedTM6Yellow:
+      action: stop
+    showLedTM6Green:
+      loops: -1
+    showLedTM6Black:
+      action: stop
+    showLedTM6Red:
+      action: stop
+# -------------------
+# SHOT 7
+# -----------------
+  # RESET
+  eventResetPurpleTM7:
+    showLedTM7Yellow:
+      loops: -1
+    showLedTM7Green:
+      action: stop
+    showLedTM7Black:
+      action: stop
+    showLedTM7Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM7:
+    showLedTM7Yellow:
+      action: stop
+    showLedTM7Green:
+      loops: -1
+    showLedTM7Black:
+      action: stop
+    showLedTM7Red:
+      action: stop
+
+# ---------------------
+# SHOTS 8~14
+# ---------------------
+# -------------------
+# SHOT 8
+# -----------------
+  # RESET
+  eventResetPurpleTM8:
+    showLedTM8Yellow:
+      action: stop
+    showLedTM8Green:
+      action: stop
+    showLedTM8Black:
+      loops: -1
+    showLedTM8Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM8:
+    showLedTM8Yellow:
+      action: stop
+    showLedTM8Green:
+      action: stop
+    showLedTM8Black:
+      action: stop
+    showLedTM8Red:
+      loops: -1
+# -------------------
+# SHOT 9
+# -----------------
+  # RESET
+  eventResetPurpleTM9:
+    showLedTM9Yellow:
+      action: stop
+    showLedTM9Green:
+      action: stop
+    showLedTM9Black:
+      loops: -1
+    showLedTM9Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM9:
+    showLedTM9Yellow:
+      action: stop
+    showLedTM9Green:
+      action: stop
+    showLedTM9Black:
+      action: stop
+    showLedTM9Red:
+      loops: -1
+# -------------------
+# SHOT 10
+# -----------------
+  # RESET
+  eventResetPurpleTM10:
+    showLedTM10Yellow:
+      action: stop
+    showLedTM10Green:
+      action: stop
+    showLedTM10Black:
+      loops: -1
+    showLedTM10Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM10:
+    showLedTM10Yellow:
+      action: stop
+    showLedTM10Green:
+      action: stop
+    showLedTM10Black:
+      action: stop
+    showLedTM10Red:
+      loops: -1
+# -------------------
+# SHOT 11
+# -----------------
+  # RESET
+  eventResetPurpleTM11:
+    showLedTM11Yellow:
+      action: stop
+    showLedTM11Green:
+      action: stop
+    showLedTM11Black:
+      loops: -1
+    showLedTM11Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM11:
+    showLedTM11Yellow:
+      action: stop
+    showLedTM11Green:
+      action: stop
+    showLedTM11Black:
+      action: stop
+    showLedTM11Red:
+      loops: -1
+# -------------------
+# SHOT 12
+# -----------------
+  # RESET
+  eventResetPurpleTM12:
+    showLedTM12Yellow:
+      action: stop
+    showLedTM12Green:
+      action: stop
+    showLedTM12Black:
+      loops: -1
+    showLedTM12Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM12:
+    showLedTM12Yellow:
+      action: stop
+    showLedTM12Green:
+      action: stop
+    showLedTM12Black:
+      action: stop
+    showLedTM12Red:
+      loops: -1
+# -------------------
+# SHOT 13
+# -----------------
+  # RESET
+  eventResetPurpleTM13:
+    showLedTM13Yellow:
+      action: stop
+    showLedTM13Green:
+      action: stop
+    showLedTM13Black:
+      loops: -1
+    showLedTM13Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM13:
+    showLedTM13Yellow:
+      action: stop
+    showLedTM13Green:
+      action: stop
+    showLedTM13Black:
+      action: stop
+    showLedTM13Red:
+      loops: -1
+# -------------------
+# SHOT 14
+# -----------------
+  # RESET
+  eventResetPurpleTM14:
+    showLedTM14Yellow:
+      action: stop
+    showLedTM14Green:
+      action: stop
+    showLedTM14Black:
+      loops: -1
+    showLedTM14Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetPurpleTM14:
+    showLedTM14Yellow:
+      action: stop
+    showLedTM14Green:
+      action: stop
+    showLedTM14Black:
+      action: stop
+    showLedTM14Red:
+      loops: -1
+
+
+
+# ---------------------
+# SHOTS 1~7
+# ---------------------
+# -------------------
+# SHOT 1
+# -----------------
+  # RESET
+  eventResetOrangeTM1:
+    showLedTM1Yellow:
+      action: stop
+    showLedTM1Green:
+      action: stop
+    showLedTM1Black:
+      loops: -1
+    showLedTM1Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM1:
+    showLedTM1Yellow:
+      action: stop
+    showLedTM1Green:
+      action: stop
+    showLedTM1Black:
+      action: stop
+    showLedTM1Red:
+      loops: -1
+# -------------------
+# SHOT 2
+# -----------------
+  # RESET
+  eventResetOrangeTM2:
+    showLedTM2Yellow:
+      action: stop
+    showLedTM2Green:
+      action: stop
+    showLedTM2Black:
+      loops: -1
+    showLedTM2Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM2:
+    showLedTM2Yellow:
+      action: stop
+    showLedTM2Green:
+      action: stop
+    showLedTM2Black:
+      action: stop
+    showLedTM2Red:
+      loops: -1
+# -------------------
+# SHOT 3
+# -----------------
+  # RESET
+  eventResetOrangeTM3:
+    showLedTM3Yellow:
+      action: stop
+    showLedTM3Green:
+      action: stop
+    showLedTM3Black:
+      loops: -1
+    showLedTM3Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM3:
+    showLedTM3Yellow:
+      action: stop
+    showLedTM3Green:
+      action: stop
+    showLedTM3Black:
+      action: stop
+    showLedTM3Red:
+      loops: -1
+# -------------------
+# SHOT 4
+# -----------------
+  # RESET
+  eventResetOrangeTM4:
+    showLedTM4Yellow:
+      action: stop
+    showLedTM4Green:
+      action: stop
+    showLedTM4Black:
+      loops: -1
+    showLedTM4Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM4:
+    showLedTM4Yellow:
+      action: stop
+    showLedTM4Green:
+      action: stop
+    showLedTM4Black:
+      action: stop
+    showLedTM4Red:
+      loops: -1
+# -------------------
+# SHOT 5
+# -----------------
+  # RESET
+  eventResetOrangeTM5:
+    showLedTM5Yellow:
+      action: stop
+    showLedTM5Green:
+      action: stop
+    showLedTM5Black:
+      loops: -1
+    showLedTM5Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM5:
+    showLedTM5Yellow:
+      action: stop
+    showLedTM5Green:
+      action: stop
+    showLedTM5Black:
+      action: stop
+    showLedTM5Red:
+      loops: -1
+# -------------------
+# SHOT 6
+# -----------------
+  # RESET
+  eventResetOrangeTM6:
+    showLedTM6Yellow:
+      action: stop
+    showLedTM6Green:
+      action: stop
+    showLedTM6Black:
+      loops: -1
+    showLedTM6Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM6:
+    showLedTM6Yellow:
+      action: stop
+    showLedTM6Green:
+      action: stop
+    showLedTM6Black:
+      action: stop
+    showLedTM6Red:
+      loops: -1
+# -------------------
+# SHOT 7
+# -----------------
+  # RESET
+  eventResetOrangeTM7:
+    showLedTM7Yellow:
+      action: stop
+    showLedTM7Green:
+      action: stop
+    showLedTM7Black:
+      loops: -1
+    showLedTM7Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM7:
+    showLedTM7Yellow:
+      action: stop
+    showLedTM7Green:
+      action: stop
+    showLedTM7Black:
+      action: stop
+    showLedTM7Red:
+      loops: -1
+# ---------------------
+# SHOTS 8~14
+# ---------------------
+# -------------------
+# SHOT 8
+# -----------------
+  # RESET
+  eventResetOrangeTM8:
+    showLedTM8Yellow:
+      loops: -1
+    showLedTM8Green:
+      action: stop
+    showLedTM8Black:
+      action: stop
+    showLedTM8Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM8:
+    showLedTM8Yellow:
+      action: stop
+    showLedTM8Green:
+      loops: -1
+    showLedTM8Black:
+      action: stop
+    showLedTM8Red:
+      action: stop
+# -------------------
+# SHOT 9
+# -----------------
+  # RESET
+  eventResetOrangeTM9:
+    showLedTM9Yellow:
+      loops: -1
+    showLedTM9Green:
+      action: stop
+    showLedTM9Black:
+      action: stop
+    showLedTM9Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM9:
+    showLedTM9Yellow:
+      action: stop
+    showLedTM9Green:
+      loops: -1
+    showLedTM9Black:
+      action: stop
+    showLedTM9Red:
+      action: stop
+# -------------------
+# SHOT 10
+# -----------------
+  # RESET
+  eventResetOrangeTM10:
+    showLedTM10Yellow:
+      loops: -1
+    showLedTM10Green:
+      action: stop
+    showLedTM10Black:
+      action: stop
+    showLedTM10Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM10:
+    showLedTM10Yellow:
+      action: stop
+    showLedTM10Green:
+      loops: -1
+    showLedTM10Black:
+      action: stop
+    showLedTM10Red:
+      action: stop
+# -------------------
+# SHOT 11
+# -----------------
+  # RESET
+  eventResetOrangeTM11:
+    showLedTM11Yellow:
+      loops: -1
+    showLedTM11Green:
+      action: stop
+    showLedTM11Black:
+      action: stop
+    showLedTM11Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM11:
+    showLedTM11Yellow:
+      action: stop
+    showLedTM11Green:
+      loops: -1
+    showLedTM11Black:
+      action: stop
+    showLedTM11Red:
+      action: stop
+# -------------------
+# SHOT 12
+# -----------------
+  # RESET
+  eventResetOrangeTM12:
+    showLedTM12Yellow:
+      loops: -1
+    showLedTM12Green:
+      action: stop
+    showLedTM12Black:
+      action: stop
+    showLedTM12Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM12:
+    showLedTM12Yellow:
+      action: stop
+    showLedTM12Green:
+      loops: -1
+    showLedTM12Black:
+      action: stop
+    showLedTM12Red:
+      action: stop
+# -------------------
+# SHOT 13
+# -----------------
+  # RESET
+  eventResetOrangeTM13:
+    showLedTM13Yellow:
+      loops: -1
+    showLedTM13Green:
+      action: stop
+    showLedTM13Black:
+      action: stop
+    showLedTM13Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM13:
+    showLedTM13Yellow:
+      action: stop
+    showLedTM13Green:
+      loops: -1
+    showLedTM13Black:
+      action: stop
+    showLedTM13Red:
+      action: stop
+# ------------------
+# SHOT 14
+# -----------------
+  # RESET
+  eventResetOrangeTM14:
+    showLedTM14Yellow:
+      loops: -1
+    showLedTM14Green:
+      action: stop
+    showLedTM14Black:
+      action: stop
+    showLedTM14Red:
+      action: stop
+  # -----------------
+  # SET
+  eventSetOrangeTM14:
+    showLedTM14Yellow:
+      action: stop
+    showLedTM14Green:
+      loops: -1
+    showLedTM14Black:
+      action: stop
+    showLedTM14Red:
+      action: stop

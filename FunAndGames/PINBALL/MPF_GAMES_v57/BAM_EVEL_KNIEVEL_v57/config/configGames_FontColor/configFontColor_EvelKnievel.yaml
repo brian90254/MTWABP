@@ -1,0 +1,685 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+widget_styles:
+# ---------------
+# FONT DEFINITIONS
+# ---------------
+
+# ************************************************
+# FONT::EXTRA BALL & BALL SAVES
+# ************************************************
+  # --------------------
+  # FONT::EXTRA BALL & BALL SAVES::GENERIC
+  # --------------------
+  # EXTRA BALL LIT
+  fontExtraBallLit:
+    font_name: Jackport
+    font_size: 40
+  # EXTRA BALL AWARD
+  fontExtraBallAward:
+    font_name: Jackport
+    font_size: 48
+  # BALL SAVE
+  fontBallSave:
+    font_name: Jackport
+    font_size: 48
+  # MACHINE INIT ONE
+  fontMachineInitOne:
+    font_name: Panther
+    font_size: 12
+
+  # fontHeader:
+  #   font_name: SignPainter
+  #   font_size: 40
+  # fontMiddle:
+  #   font_name: Blackmoor
+  #   font_size: 44
+  # fontFooter:
+  #   font_name: TattooLetteringBlack
+  #   font_size: 44
+
+  # fontHeaderHighScore:
+  #   font_name: SignPainter
+  #   font_size: 40
+  # fontMiddleHighScore:
+  #   font_name: Blackmoor
+  #   font_size: 44
+  # fontFooterHighScore:
+  #   font_name: TattooLetteringBlack
+  #   font_size: 44
+
+# ------------------------
+
+  fontTitle:
+    font_name: CrashLanding
+    font_size: 60
+    
+  fontSubTitle:
+    font_name: CrashLanding
+    font_size: 72
+    
+  fontHeader:
+    font_name: CrashLanding
+    font_size: 48
+    
+  fontHeaderBase:
+    font_name: CrashLanding
+    font_size: 56
+
+  fontHeaderAttract:
+    font_name: Fundead
+    font_size: 36
+    
+  fontHeaderHighScore:
+    font_name: CrashLanding
+    font_size: 48
+    
+  fontCenter:
+    font_name: BadaBoom
+    font_size: 48
+    
+  fontBigInitials:
+    font_name: CrashLanding
+    font_size: 48
+
+  fontFooter:
+    font_name: ComicBookCommando
+    font_size: 36
+    
+  fontFooterBase:
+    font_name: ComicBookCommando
+    font_size: 36
+    
+  fontFooterHighScore:
+    font_name: CrashLanding
+    font_size: 48
+
+  # --------------------
+  # FONT::EXTRA BALL & BALL SAVES::TATTOO MYSTIQUE
+  # --------------------
+  # EXTRA BALL LIT
+  fontExtraBallLitEvelKnievel:
+    font_name: CarnevaleeFreakshow
+    font_size: 34
+  # EXTRA BALL AWARD
+  fontExtraBallAwardEvelKnievel:
+    font_name: CarnevaleeFreakshow
+    font_size: 48
+  # BALL SAVE
+  fontBallSaveEvelKnievel:
+    font_name: CarnevaleeFreakshow
+    font_size: 48
+  # MACHINE INIT ONE
+  fontMachineInitOneEvelKnievel:
+    font_name: Panther
+    font_size: 12
+
+# ************************************************
+# FONT::GAME OVER::YOUR FORTUNE
+# ************************************************
+  # --------------------
+  # FONT::GAME OVER
+  # --------------------
+  fontGameOverEvelKnievel:
+    font_name: Quadrit
+    font_size: 32
+  # --------------------
+  # FONT::YOUR FORTUNE
+  # --------------------
+  fontYourFortuneEvelKnievel:
+    font_name: NewRocker
+    font_size: 32
+
+# ************************************************
+# FONT::ATTRACT::LAST
+# ************************************************
+  # --------------------
+  # FONT::ATTRACT::LAST::GENERIC
+  # --------------------
+  fontAttractLastHeader:
+    font_name: FlashRogers
+    font_size: 36
+  fontAttractLastMiddle:
+    font_name: RetroFunk
+    font_size: 54
+  fontAttractLastFooter:
+    font_name: COMPUTER
+    font_size: 32
+  # --------------------
+  # FONT::ATTRACT::LAST::TATTOO MYSTIQUE
+  # --------------------
+  fontAttractLastEvelKnievelHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractLastEvelKnievelMiddle:
+    font_name: Blackmoor
+    font_size: 54
+  fontAttractLastEvelKnievelFooter:
+    font_name: Ribeye
+    font_size: 24
+
+# ************************************************
+# FONT::ATTRACT::TITLE
+# ************************************************
+  # --------------------
+  # FONT::ATTRACT::TITLE::GENERIC
+  # --------------------
+  fontAttractTitleHeader:
+    font_name: FlashGordon
+    font_size: 76
+  fontAttractTitleMiddle:
+    font_name: FlashGordon
+    font_size: 64
+  fontAttractTitleFooter:
+    font_name: FlashGordon
+    font_size: 50
+  # --------------------
+  # FONT::ATTRACT::TITLE::TATTOO MYSTIQUE
+  # --------------------
+  fontAttractTitleEvelKnievelHeader:
+    # font_name: CreakyFrank
+    # font_size: 64
+    font_name: RockaBilly
+    font_size: 50
+  fontAttractTitleEvelKnievelMiddle:
+    # font_name: CreakyFrank
+    # font_size: 64
+    font_name: RockaBilly
+    font_size: 50
+  fontAttractTitleEvelKnievelFooter:
+    # font_name: CreakyFrank
+    # font_size: 64
+    font_name: RockaBilly
+    font_size: 50
+
+# ************************************************
+# FONT::ATTRACT::HIGHSCORES
+# ************************************************
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::GENERIC
+  # --------------------
+  fontAttractHighscoreHeader:
+    font_name: FlashRogers
+    font_size: 32
+  fontAttractHighscoreMiddle:
+    font_name: FlashGordon
+    font_size: 60
+  fontAttractHighscoreFooter:
+    font_name: COMPUTER
+    font_size: 48
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::GRANDCHAMPION
+  # --------------------
+  fontAttractGrandChampionEvelKnievelHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractGrandChampionEvelKnievelMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontAttractGrandChampionEvelKnievelFooter:
+    font_name: TattooLetteringBlack
+    font_size: 44
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::FIRSTHIGHSCORE
+  # --------------------
+  fontAttractFirstHighScoreEvelKnievelHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractFirstHighScoreEvelKnievelMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontAttractFirstHighScoreEvelKnievelFooter:
+    font_name: TattooLetteringBlack
+    font_size: 44
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::SECONDHIGHSCORE
+  # --------------------
+  fontAttractSecondHighScoreEvelKnievelHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractSecondHighScoreEvelKnievelMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontAttractSecondHighScoreEvelKnievelFooter:
+    font_name: TattooLetteringBlack
+    font_size: 44
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::THIRDHIGHSCORE
+  # --------------------
+  fontAttractThirdHighScoreEvelKnievelHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractThirdHighScoreEvelKnievelMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontAttractThirdHighScoreEvelKnievelFooter:
+    font_name: TattooLetteringBlack
+    font_size: 44
+  # --------------------
+  # FONT::ATTRACT::HIGHSCORES::FOURTHHIGHSCORE
+  # --------------------
+  fontAttractFourthHighScoreEvelKnievelHeader:
+    font_name: SignPainter
+    font_size: 40
+  fontAttractFourthHighScoreEvelKnievelMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontAttractFourthHighScoreEvelKnievelFooter:
+    font_name: TattooLetteringBlack
+    font_size: 44
+
+# ************************************************
+# FONT::BASE::SCORE
+# ************************************************
+  # --------------------
+  # FONT::BASE::SCORE::GENERIC
+  # --------------------
+  fontBaseMainHeader:
+    font_name: RockaBilly
+    font_size: 36
+  fontBaseMainMiddle:
+    font_name: RetroFunk
+    font_size: 54
+  fontBaseMainFooter:
+    font_name: FuturaScript
+    font_size: 22
+  # --------------------
+  # FONT::BASE::SCORE::TATTOO MYSTIQUE
+  # --------------------
+  fontBaseMainEvelKnievelHeader:
+    font_name: Woodpecker
+    font_size: 32
+  fontBaseMainEvelKnievelMiddle:
+    font_name: CreakyFrank
+    font_size: 48
+  fontBaseMainEvelKnievelFooter:
+    font_name: Naluka
+    font_size: 24
+
+# ************************************************
+# FONT::COLLECT BONUS
+# ************************************************
+  # --------------------
+  # FONT::COLLECT BONUS::GENERIC
+  # --------------------
+  fontCollectBonusHeader:
+    font_name: Jackport
+    font_size: 44
+  fontCollectBonusMiddle:
+    font_name: Jackport
+    font_size: 54
+  fontCollectBonusFooter:
+    font_name: HighSchoolUSASans
+    font_size: 24
+  # --------------------
+  # FONT::COLLECT BONUS::TATTOO MYSTIQUE::
+  # --------------------
+  fontCollectBonusTitleEvelKnievelHeader:
+    font_name: RoseTattoo
+    font_size: 44
+  fontCollectBonusTitleEvelKnievelMiddle:
+    font_name: Blackmoor
+    font_size: 54
+  fontCollectBonusTitleEvelKnievelFooter:
+    font_name: RoseTattoo
+    font_size: 24
+  # --------------------
+  # FONT::COLLECT BONUS::TATTOO MYSTIQUE
+  # --------------------
+  fontCollectBonusEvelKnievelHeader:
+    font_name: SailorJerry
+    font_size: 24
+  fontCollectBonusEvelKnievelMiddle:
+    font_name: Blackmoor
+    font_size: 44
+  fontCollectBonusEvelKnievelFooter:
+    font_name: SailorJerry
+    font_size: 16
+
+# ************************************************
+# ---------------
+# NAMED COLORS
+# ---------------
+# ************************************************
+named_colors:
+
+# ************************************************
+# COLOR::EXTRA BALL & BALL SAVES
+# ************************************************
+  # --------------------
+  # FONT::EXTRA BALL & BALL SAVES::GENERIC
+  # --------------------
+  # EXTRA BALL LIT
+  colorFontExtraBallLitInner: 'ff0080'
+  colorFontExtraBallLitOuter1: 'ffff00'
+  colorFontExtraBallLitOuter2: '000000'
+  # --------------------
+  # EXTRA BALL AWARD
+  colorFontExtraBallAwardInner: 'ff0080'
+  colorFontExtraBallAwardOuter1: 'ffff00'
+  colorFontExtraBallAwardOuter2: '000000'
+  # --------------------
+  # BALL SAVE
+  colorFontBallSaveInner: '0000ff'
+  colorFontBallSaveOuter1: 'ffffff'
+  colorFontBallSaveOuter2: 'ff0000'
+  # --------------------
+  # MACHINE INIT ONE
+  colorFontMachineInitOne: 'ffffff'
+
+  # --------------------
+  # FONT::EXTRA BALL & BALL SAVES::TATTOO MYSTIQUE
+  # --------------------
+  # EXTRA BALL LIT
+  colorFontExtraBallLitInnerEvelKnievel: 'ff0080'
+  colorFontExtraBallLitOuter1EvelKnievel: 'ffff00'
+  colorFontExtraBallLitOuter2EvelKnievel: '000000'
+  # --------------------
+  # EXTRA BALL AWARD
+  colorFontExtraBallAwardInnerEvelKnievel: 'ff0080'
+  colorFontExtraBallAwardOuter1EvelKnievel: 'ffff00'
+  colorFontExtraBallAwardOuter2EvelKnievel: '000000'
+  # --------------------
+  # BALL SAVE
+  colorFontBallSaveInnerEvelKnievel: '0000ff'
+  colorFontBallSaveOuter1EvelKnievel: '00ff00'
+  colorFontBallSaveOuter2EvelKnievel: '000000'
+  # --------------------
+  # MACHINE INIT ONE
+  colorFontMachineInitOneEvelKnievel: 'ffffff'
+
+# ************************************************
+# COLOR::GAME OVER::YOUR FORTUNE
+# ************************************************
+  # ---------------------
+  # GAME OVER
+  # ---------------------
+  colorFontGameOverFirstEvelKnievel: '8000ff'
+  colorFontGameOverSecondEvelKnievel: 'ffff00'
+  # ---------------------
+  # YOUR FORTUNE
+  # ---------------------
+  colorFontYourFortuneFirstEvelKnievel: 'ffff00'
+  colorFontYourFortuneSecondEvelKnievel: 'ff0000'
+
+# ************************************************
+# COLOR::ATTRACT LAST
+# ************************************************
+  # ---------------------
+  # ATTRACT::LAST::GENERIC
+  # ---------------------
+  # HEADER
+  colorFontAttractLastHeaderInner: 'ff0000'
+  colorFontAttractLastHeaderOuter1: '00ff00'
+  colorFontAttractLastHeaderOuter2: '000000'
+  # MIDDLE
+  colorFontAttractLastMiddleInner: 'ff0000'
+  colorFontAttractLastMiddleOuter1: '00ffff'
+  colorFontAttractLastMiddleOuter2: '000000'
+  # FOOTER
+  colorFontAttractLastFooterInner: '8000ff'
+  colorFontAttractLastFooterOuter1: 'ffff00'
+  colorFontAttractLastFooterOuter2: '000000'
+  # BOX
+  colorBoxAttractLastOuter: '8000ff'
+  colorBoxAttractLastMiddle: '000000'
+  colorBoxAttractLastInner: '000000'
+  colorBoxAttractLastFill: '000000'
+  # ---------------------
+  # ATTRACT::LAST::TATTOO MYSTIQUE
+  # ---------------------
+  # HEADER
+  colorFontAttractLastEvelKnievelHeaderInner: 'ff0000'
+  colorFontAttractLastEvelKnievelHeaderOuter1: '00ff00'
+  colorFontAttractLastEvelKnievelHeaderOuter2: '000000'
+  # MIDDLE
+  colorFontAttractLastEvelKnievelMiddleInner: 'ff0000'
+  colorFontAttractLastEvelKnievelMiddleOuter1: '00ffff'
+  colorFontAttractLastEvelKnievelMiddleOuter2: '000000'
+  # FOOTER
+  colorFontAttractLastEvelKnievelFooterInner: '8000ff'
+  colorFontAttractLastEvelKnievelFooterOuter1: 'ffff00'
+  colorFontAttractLastEvelKnievelFooterOuter2: '000000'
+  # BOX
+  colorBoxAttractLastEvelKnievelOuter: '8000ff'
+  colorBoxAttractLastEvelKnievelMiddle: '000000'
+  colorBoxAttractLastEvelKnievelInner: '000000'
+  colorBoxAttractLastEvelKnievelFill: '000000'
+
+# ************************************************
+# COLOR::ATTRACT::TITLE
+# ************************************************
+  # ---------------------
+  # ATTRACT::TITLE::GENERIC
+  # ---------------------
+  # HEADER
+  colorFontAttractTitleHeaderInner: 'ffff00'
+  colorFontAttractTitleHeaderOuter1: 'ff0000'
+  colorFontAttractTitleHeaderOuter2: '8000ff'
+  # MIDDLE
+  colorFontAttractTitleMiddleInner: 'ffff00'
+  colorFontAttractTitleMiddleOuter1: 'ff0000'
+  colorFontAttractTitleMiddleOuter2: '8000ff'
+  # FOOTER
+  colorFontAttractTitleFooterInner: 'ffff00'
+  colorFontAttractTitleFooterOuter1: 'ff0000'
+  colorFontAttractTitleFooterOuter2: '8000ff'
+  # BOX
+  colorBoxAttractTitleOuter: 'ffff00'
+  colorBoxAttractTitleMiddle: 'ff0000'
+  colorBoxAttractTitleInner: '8000ff'
+  colorBoxAttractTitleFill: '000000'
+  # ---------------------
+  # ATTRACT::TITLE
+  # ---------------------
+  # # HEADER
+  # colorFontAttractTitleEvelKnievelHeaderInner: 'ff0000'
+  # colorFontAttractTitleEvelKnievelHeaderOuter1: 'ffff00'
+  # colorFontAttractTitleEvelKnievelHeaderOuter2: 'ff0088'
+  # # MIDDLE
+  # colorFontAttractTitleEvelKnievelMiddleInner: 'ff0000'
+  # colorFontAttractTitleEvelKnievelMiddleOuter1: 'ffff00'
+  # colorFontAttractTitleEvelKnievelMiddleOuter2: 'ff0088'
+  # # FOOTER
+  # colorFontAttractTitleEvelKnievelFooterInner: 'ff0000'
+  # colorFontAttractTitleEvelKnievelFooterOuter1: 'ffff00'
+  # colorFontAttractTitleEvelKnievelFooterOuter2: 'ff0088'
+  # # BOX
+  # colorBoxAttractTitleEvelKnievelOuter: 'ff0000'
+  # colorBoxAttractTitleEvelKnievelMiddle: 'ffff00'
+  # colorBoxAttractTitleEvelKnievelInner: 'ff0088'
+  # colorBoxAttractTitleEvelKnievelFill: '000000'
+  # HEADER
+  colorFontAttractTitleEvelKnievelHeaderInner: 'ff0000'
+  colorFontAttractTitleEvelKnievelHeaderOuter1: 'ffffff'
+  colorFontAttractTitleEvelKnievelHeaderOuter2: '0000ff'
+  # MIDDLE
+  colorFontAttractTitleEvelKnievelMiddleInner: 'ff0000'
+  colorFontAttractTitleEvelKnievelMiddleOuter1: 'ffffff'
+  colorFontAttractTitleEvelKnievelMiddleOuter2: '0000ff'
+  # FOOTER
+  colorFontAttractTitleEvelKnievelFooterInner: 'ff0000'
+  colorFontAttractTitleEvelKnievelFooterOuter1: 'ffffff'
+  colorFontAttractTitleEvelKnievelFooterOuter2: '0000ff'
+  # BOX
+  colorBoxAttractTitleEvelKnievelOuter: 'ff0000'
+  colorBoxAttractTitleEvelKnievelMiddle: 'ffffff'
+  colorBoxAttractTitleEvelKnievelInner: '0000ff'
+  colorBoxAttractTitleEvelKnievelFill: '000000'
+
+# ************************************************
+# COLOR::ATTRACT::HIGH SCORES
+# ************************************************
+  # ---------------------
+  # ATTRACT::HIGHSCORE::GENERIC
+  # ---------------------
+  # GRAND CHAMPION
+  colorAttractGrandChampionText: 'ffffff'
+  colorAttractGrandChampionScore: 'ff0000'
+  colorAttractGrandChampionBackground: 'ffff00'
+  # FIRST HIGH SCORE
+  colorAttractHighscore1Text: 'ff8000'
+  colorAttractHighscore1Score: 'ffff00'
+  colorAttractHighscore1Background: 'ff0000'
+  # SECOND HIGH SCORE
+  colorAttractHighscore2Text: 'ff0000'
+  colorAttractHighscore2Score: 'ffff00'
+  colorAttractHighscore2Background: 'ff8000'
+  # THIRD HIGH SCORE
+  colorAttractHighscore3Text: '00ff00'
+  colorAttractHighscore3Score: 'ffff00'
+  colorAttractHighscore3Background: '8000ff'
+  # FOURTH HIGH SCORE
+  colorAttractHighscore4Text: '00ff00'
+  colorAttractHighscore4Score: 'ffff00'
+  colorAttractHighscore4Background: 'ff8000'
+  # ---------------------
+  # ATTRACT::HIGHSCORE::TATTOO MYSTIQUE
+  # ---------------------
+  # GRAND CHAMPION
+  colorAttractGrandChampionEvelKnievelHeader: 'ffffff'
+  colorAttractGrandChampionEvelKnievelMiddle: 'ff0000'
+  colorAttractGrandChampionEvelKnievelFooter: 'ffffff'
+  colorAttractGrandChampionEvelKnievelBackground: 'ffff00'
+  # FIRST HIGH SCORE
+  colorAttractFirstHighScoreEvelKnievelHeader: 'ff8000'
+  colorAttractFirstHighScoreEvelKnievelMiddle: 'ffff00'
+  colorAttractFirstHighScoreEvelKnievelFooter: 'ff8000'
+  colorAttractFirstHighScoreEvelKnievelBackground: 'ff0000'
+  # SECOND HIGH SCORE
+  colorAttractSecondHighScoreEvelKnievelHeader: 'ff0000'
+  colorAttractSecondHighScoreEvelKnievelMiddle: 'ffff00'
+  colorAttractSecondHighScoreEvelKnievelFooter: 'ff0000'
+  colorAttractSecondHighScoreEvelKnievelBackground: 'ff8000'
+  # THIRD HIGH SCORE
+  colorAttractThirdHighScoreEvelKnievelHeader: '00ff00'
+  colorAttractThirdHighScoreEvelKnievelMiddle: 'ffff00'
+  colorAttractThirdHighScoreEvelKnievelFooter: '00ff00'
+  colorAttractThirdHighScoreEvelKnievelBackground: '8000ff'
+  # FOURTH HIGH SCORE
+  colorAttractFourthHighScoreEvelKnievelHeader: '00ff00'
+  colorAttractFourthHighScoreEvelKnievelMiddle: 'ffff00'
+  colorAttractFourthHighScoreEvelKnievelFooter: '00ff00'
+  colorAttractFourthHighScoreEvelKnievelBackground: 'ff8000'
+
+# ************************************************
+# COLOR::BASE::MAIN
+# ************************************************
+  # ---------------------
+  # BASE::MAIN::GENERIC
+  # ---------------------
+  # HEADER
+  colorFontBaseMainHeaderInner: 'ffff00'
+  colorFontBaseMainHeaderOuter1: 'ff0000'
+  colorFontBaseMainHeaderOuter2: '000000'
+  # MIDDLE
+  colorFontBaseMainMiddleInner: 'ff0000'
+  colorFontBaseMainMiddleOuter1: 'ffffff'
+  colorFontBaseMainMiddleOuter2: '000000'
+  # FOOTER
+  colorFontBaseMainFooterInner: 'ffffff'
+  colorFontBaseMainFooterOuter1: '0000ff'
+  colorFontBaseMainFooterOuter2: '000000'
+
+  # ---------------------
+  # BASE::MAIN::TATTOO MYSTIQUE
+  # ---------------------
+  # HEADER
+  colorFontBaseMainEvelKnievelHeaderInner: 'ffff00'
+  colorFontBaseMainEvelKnievelHeaderOuter1: 'ff00ff'
+  colorFontBaseMainEvelKnievelHeaderOuter2: '000000'
+  # MIDDLE
+  colorFontBaseMainEvelKnievelMiddleInner: 'ff0000'
+  colorFontBaseMainEvelKnievelMiddleOuter1: 'ffff00'
+  colorFontBaseMainEvelKnievelMiddleOuter2: '000000'
+  # FOOTER
+  colorFontBaseMainEvelKnievelFooterInner: '00ffff'
+  colorFontBaseMainEvelKnievelFooterOuter1: 'ff0000'
+  colorFontBaseMainEvelKnievelFooterOuter2: '000000'
+
+# ************************************************
+# COLOR::COLLECT::BONUS
+# ************************************************
+# --------------------
+# COLLECT::BONUS::GENERIC
+# --------------------
+  # HEADER
+  colorFontCollectBonusHeaderInner: 'ff0000'
+  colorFontCollectBonusHeaderOuter1: 'ffffff'
+  colorFontCollectBonusHeaderOuter2: '0000ff'
+  # MIDDLE
+  colorFontCollectBonusMiddleInner: '0000ff'
+  colorFontCollectBonusMiddleOuter1: 'ffffff'
+  colorFontCollectBonusMiddleOuter2: '000000'
+  # FOOTER
+  colorFontCollectBonusFooterInner: 'ffffff'
+  colorFontCollectBonusFooterOuter1: '0000ff'
+  colorFontCollectBonusFooterOuter2: '000000'
+# --------------------
+# COLLECT::BONUS::TATTOO MYSTIQUE::TITLE
+# --------------------
+  # HEADER
+  colorFontCollectBonusTitleEvelKnievelHeaderInner: 'ff0000'
+  colorFontCollectBonusTitleEvelKnievelHeaderOuter1: 'ffff00'
+  colorFontCollectBonusTitleEvelKnievelHeaderOuter2: '00ffff'
+  # MIDDLE
+  colorFontCollectBonusTitleEvelKnievelMiddleInner: '0000ff'
+  colorFontCollectBonusTitleEvelKnievelMiddleOuter1: 'ffffff'
+  colorFontCollectBonusTitleEvelKnievelMiddleOuter2: '000000'
+  # FOOTER
+  colorFontCollectBonusTitleEvelKnievelFooterInner: 'ffffff'
+  colorFontCollectBonusTitleEvelKnievelFooterOuter1: '0000ff'
+  colorFontCollectBonusTitleEvelKnievelFooterOuter2: '000000'
+
+# --------------------
+# COLLECT::BONUS::TATTOO MYSTIQUE
+# --------------------
+  # HEADER
+  colorFontCollectBonusEvelKnievelHeaderInner: 'ffff00'
+  colorFontCollectBonusEvelKnievelHeaderOuter1: 'ff0000'
+  colorFontCollectBonusEvelKnievelHeaderOuter2: '00ffff'
+  # MIDDLE
+  colorFontCollectBonusEvelKnievelMiddleInner: '00ffff'
+  colorFontCollectBonusEvelKnievelMiddleOuter1: 'ff0000'
+  colorFontCollectBonusEvelKnievelMiddleOuter2: 'ffff00'
+  # FOOTER
+  colorFontCollectBonusEvelKnievelFooterInner: 'ff0000'
+  colorFontCollectBonusEvelKnievelFooterOuter1: 'ffff00'
+  colorFontCollectBonusEvelKnievelFooterOuter2: '00ffff'
+
+# ************************************************
+# COLOR::LEDS
+# ************************************************
+  # ---------------------
+  # LEDS TATTOO MYSTIQUE :: SIX UP
+  # ---------------------
+  # YELLOW
+  colorLedEvelKnievelSixUpYellow1: '444400'
+  colorLedEvelKnievelSixUpYellow2: 'dddd00'
+  # GREEN
+  colorLedEvelKnievelSixUpGreen1: '007711'
+  colorLedEvelKnievelSixUpGreen2: '008811'
+  # BLACK
+  colorLedEvelKnievelSixUpBlack1: '000033'
+  colorLedEvelKnievelSixUpBlack2: '000022'
+  # RED
+  colorLedEvelKnievelSixUpRed1: 'aa0022'
+  colorLedEvelKnievelSixUpRed2: 'cc0033'
+
+  # ---------------------
+  # LEDS TATTOO MYSTIQUE :: THREE UP
+  # ---------------------
+  # YELLOW
+  colorLedEvelKnievelThreeUpYellow1: '444400'
+  colorLedEvelKnievelThreeUpYellow2: 'dddd00'
+  # GREEN
+  colorLedEvelKnievelThreeUpGreen1: '007711'
+  colorLedEvelKnievelThreeUpGreen2: '008811'
+  # BLACK
+  colorLedEvelKnievelThreeUpBlack1: '000044'
+  colorLedEvelKnievelThreeUpBlack2: '000033'
+  # RED
+  colorLedEvelKnievelThreeUpRed1: 'aa0022'
+  colorLedEvelKnievelThreeUpRed2: 'cc0033'

@@ -1,0 +1,121 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  modeCarousel_year1958_highlighted:
+    slideYear1958:
+      target: displayDMD
+
+slides:
+  slideYear1958:
+    widgets:
+      # ---------------
+      # INNER
+      # ---------------
+      - type: text
+        text: "1958"
+        y: middle
+        x: middle
+        style: font1958
+        color: colorFontYear1950sTwo
+        z: 20
+      # ---------------
+      # OUTER ONE
+      # ---------------
+      - type: text
+        text: "1958"
+        y: middle + 1
+        x: middle + 1
+        style: font1958
+        color: black
+        z: 15
+      - type: text
+        text: "1958"
+        y: middle - 1
+        x: middle + 1
+        style: font1958
+        color: black
+        z: 15
+      - type: text
+        text: "1958"
+        y: middle + 1
+        x: middle - 1
+        style: font1958
+        color: black
+        z: 15
+      - type: text
+        text: "1958"
+        y: middle - 1
+        x: middle - 1
+        style: font1958
+        color: black
+        z: 15
+      # ---------------
+      # OUTER TWO
+      # ---------------
+      - type: text
+        text: "1958"
+        y: middle + 2
+        x: middle + 2
+        style: font1958
+        color: colorFontYear1950sOne
+        z: 10
+      - type: text
+        text: "1958"
+        y: middle - 2
+        x: middle + 2
+        style: font1958
+        color: colorFontYear1950sOne
+        z: 10
+      - type: text
+        text: "1958"
+        y: middle + 2
+        x: middle - 2
+        style: font1958
+        color: colorFontYear1950sOne
+        z: 10
+      - type: text
+        text: "1958"
+        y: middle - 2
+        x: middle - 2
+        style: font1958
+        color: colorFontYear1950sOne
+        z: 10
+        
+        # --------------------
+        # COLOR OUTLINE
+        # --------------------
+      - type: rectangle
+        color: colorBoxYear1950sOuter
+        width: 236
+        height: 130
+        x: 120
+        y: 67
+        z: 3
+      - type: rectangle
+        color: colorBoxYear1950sMiddle
+        width: 232
+        height: 126
+        x: 120
+        y: 67
+        z: 5
+      - type: rectangle
+        color: colorBoxYear1950sInner
+        width: 228
+        height: 122
+        x: 120
+        y: 67
+        z: 6
+        # --------------------
+        # BLACK INFILL
+        # --------------------
+      - type: rectangle
+        color: colorBoxYear1950sFill
+        width: 224
+        height: 118
+        x: 120
+        y: 67
+        z: 7
+        

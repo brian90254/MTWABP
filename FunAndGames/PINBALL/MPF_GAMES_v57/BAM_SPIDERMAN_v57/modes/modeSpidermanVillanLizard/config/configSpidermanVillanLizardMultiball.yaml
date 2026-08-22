@@ -1,0 +1,314 @@
+#config_version=6
+
+# ---------------------
+# SHOTS
+# ---------------------
+shots:
+    # -------------------
+    # SHOTS::DROP MIDDLE::ENABLE SAUCERS
+    # -------------------
+    shotLizardSaucerMultiball1:
+        enable_events: eventEnableShotLizardSaucerMultiball1
+        disable_events: eventDisableShotLizardSaucerMultiball1
+        restart_events: eventRestartShotLizardSaucerMultiball1
+        reset_events: eventResetShotLizardSaucerMultiball1
+        hit_events: eventHitShotLizardSaucerMultiball1
+        advance_events: eventAdvanceShotLizardSaucerMultiball1
+        profile: spShotLizardSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop1A
+            led2: ledSaucerTop1B
+            led3: ledSaucerTop1C
+            led4: ledSaucerTop1D
+            led5: ledSaucerTop1E
+            
+    shotLizardSaucerMultiball2:
+        enable_events: eventEnableShotLizardSaucerMultiball2
+        disable_events: eventDisableShotLizardSaucerMultiball2
+        restart_events: eventRestartShotLizardSaucerMultiball2
+        reset_events: eventResetShotLizardSaucerMultiball2
+        hit_events: eventHitShotLizardSaucerMultiball2
+        advance_events: eventAdvanceShotLizardSaucerMultiball2
+        profile: spShotLizardSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop2A
+            led2: ledSaucerTop2B
+            led3: ledSaucerTop2C
+            led4: ledSaucerTop2D
+            led5: ledSaucerTop2E
+            
+    shotLizardSaucerMultiball3:
+        enable_events: eventEnableShotLizardSaucerMultiball3
+        disable_events: eventDisableShotLizardSaucerMultiball3
+        restart_events: eventRestartShotLizardSaucerMultiball3
+        reset_events: eventResetShotLizardSaucerMultiball3
+        hit_events: eventHitShotLizardSaucerMultiball3
+        advance_events: eventAdvanceShotLizardSaucerMultiball3
+        profile: spShotLizardSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop3A
+            led2: ledSaucerTop3B
+            led3: ledSaucerTop3C
+            led4: ledSaucerTop3D
+            led5: ledSaucerTop3E
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::OUTLANE::SPECIAL
+    # -----------------------------
+    spShotLizardSaucerMultiball:
+        states:
+          #- name: unlitSolid
+          #  show: ribbonFiveLedTwoColor
+          #  speed: 6
+          #  show_tokens:
+          #      color1: '000000'
+          #      color2: '000000'
+          - name: litFlashOne
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '000088'
+                color2: '00ffff'
+          #- name: litFlashTwo
+          #  show: ribbonFiveLedTwoColor
+          #  speed: 6
+          #  show_tokens:
+          #      color1: 'cc0000'
+          #      color2: 'ff00ff'
+          - name: litSolid
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '880000'
+                color2: 'ff00ff'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeSpidermanVillanLizard_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballLizardSaucerTop1
+    #- eventEnableMultiballLizardSaucerTop2
+    #- eventEnableMultiballLizardSaucerTop3
+    # ----------------------------------
+    # ENABLE LOCK
+    #- eventEnableMultiballLockLizardSaucerTop1
+    #- eventEnableMultiballLockLizardSaucerTop2
+    #- eventEnableMultiballLockLizardSaucerTop3
+    # ----------------------------------
+    # SET WIDGETS TO GRAY
+    - eventAddWidgetSaucerOneGray
+    - eventAddWidgetSaucerTwoGray
+    - eventAddWidgetSaucerThreeGray
+
+# --------------
+# MULTIBALL
+# --------------
+  # ----------------------------------
+  # MULTIBALL ONE ENABLED
+  eventEnableMultiballLizardSaucerTop1:
+    # ENABLE SAUCER SHOT ONE
+    - eventRestartShotLizardSaucerMultiball1
+    # ENABLE LOCK ONE
+    - eventEnableMultiballLockLizardSaucerTop1
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerOneColor
+  # ---------------------
+  # ENDING MULTIBALL ONE
+  # ---------------------
+  multiball_multiballLizardSaucerTop1_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerOneX
+    # ENABLE NEXT MULTIBALL
+    - eventEnableMultiballLizardSaucerTop2
+    #- eventEnableMultiballLockLizardSaucerTop1
+    #- eventEnableMultiballLockLizardSaucerTop2
+    #- eventEnableMultiballLockLizardSaucerTop3
+    
+  # ----------------------------------
+  # MULTIBALL TWO ENABLED
+  eventEnableMultiballLizardSaucerTop2:
+    # ENABLE SAUCER SHOT TWO
+    - eventRestartShotLizardSaucerMultiball2
+    # ENABLE LOCK TWO
+    - eventEnableMultiballLockLizardSaucerTop2
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerTwoColor
+  # ---------------------
+  # ENDING MULTIBALL TWO
+  # ---------------------
+  multiball_multiballLizardSaucerTop2_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerTwoX
+    # ENABLE NEXT MULTIBALL
+    #- eventEnableMultiballLockLizardSaucerTop3
+    - eventEnableMultiballLizardSaucerTop3
+    
+  # ----------------------------------
+  # MULTIBALL THREE ENABLED
+  eventEnableMultiballLizardSaucerTop3:
+    # ENABLE SAUCER SHOT THREE
+    - eventRestartShotLizardSaucerMultiball3
+    # ENABLE LOCK THREE
+    - eventEnableMultiballLockLizardSaucerTop3
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerThreeColor
+  # ---------------------
+  # ENDING MULTIBALL TWO
+  # ---------------------
+  multiball_multiballLizardSaucerTop3_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerThreeX
+    # ENABLE NEXT LOCK
+    #- eventEnableMultiballLockLizardSaucerTop1
+    
+  # ---------------------
+  # START MULTIBALL::SAUCER TOPS
+  # ---------------------
+  # TOP 1::THREE BALL
+  multiball_lock_multiballLockLizardSaucerTop1_full:
+    # HIT SAUCER SHOT
+    - eventHitShotLizardSaucerMultiball1
+    # START MULTIBALL
+    - eventStartMultiballLizardSaucerTop1|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockLizardSaucerTop1
+    - eventDisableMultiballLockLizardSaucerTop2
+    - eventDisableMultiballLockLizardSaucerTop3
+  # ---------------------
+  # TOP 2::THREE BALL
+  multiball_lock_multiballLockLizardSaucerTop2_full:
+    # HIT SAUCER SHOT
+    - eventHitShotLizardSaucerMultiball2
+    # START MULTIBALL
+    - eventStartMultiballLizardSaucerTop2|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockLizardSaucerTop1
+    - eventDisableMultiballLockLizardSaucerTop2
+    - eventDisableMultiballLockLizardSaucerTop3
+  # ---------------------
+  # TOP 3::THREE BALL
+  multiball_lock_multiballLockLizardSaucerTop3_full:
+    # HIT SAUCER SHOT
+    - eventHitShotLizardSaucerMultiball3
+    # START MULTIBALL
+    - eventStartMultiballLizardSaucerTop3|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockLizardSaucerTop1
+    - eventDisableMultiballLockLizardSaucerTop2
+    - eventDisableMultiballLockLizardSaucerTop3
+
+  ## ---------------------
+  ## ENDING MULTIBALL
+  ## ---------------------
+  ## LEFT
+  #multiball_multiballLizardSaucerTop1_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockLizardSaucerTop1
+  #  - eventEnableMultiballLockLizardSaucerTop2
+  #  - eventEnableMultiballLockLizardSaucerTop3
+  ## RIGHT
+  #multiball_multiballLizardSaucerTop2_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockLizardSaucerTop1
+  #  - eventEnableMultiballLockLizardSaucerTop2
+  #  - eventEnableMultiballLockLizardSaucerTop3
+  ## BOTH
+  #multiball_multiballLizardSaucerTop3_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockLizardSaucerTop1
+  #  - eventEnableMultiballLockLizardSaucerTop2
+  #  - eventEnableMultiballLockLizardSaucerTop3
+    
+  ball_will_end:
+    # ----------------------------
+    # REMOVE WIDGETS::GRAY
+    - eventRemoveWidgetSaucerOneGray
+    - eventRemoveWidgetSaucerTwoGray
+    - eventRemoveWidgetSaucerThreeGray
+    # REMOVE WIDGETS::COLOR
+    - eventRemoveWidgetSaucerOneColor
+    - eventRemoveWidgetSaucerTwoColor
+    - eventRemoveWidgetSaucerThreeColor
+    # REMOVE WIDGETS::X
+    - eventRemoveWidgetSaucerOneX
+    - eventRemoveWidgetSaucerTwoX
+    - eventRemoveWidgetSaucerThreeX
+    # DISABLE MULTIBALL SHOTS
+    - eventDisableShotLizardSaucerMultiball1
+    - eventDisableShotLizardSaucerMultiball2
+    - eventDisableShotLizardSaucerMultiball3
+    
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballLockLizardSaucerTop1:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop1
+    enable_events: eventEnableMultiballLockLizardSaucerTop1
+    disable_events: eventDisableMultiballLockLizardSaucerTop1
+    locked_ball_counting_strategy: physical_only
+    
+  multiballLockLizardSaucerTop2:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop2
+    enable_events: eventEnableMultiballLockLizardSaucerTop2
+    disable_events: eventDisableMultiballLockLizardSaucerTop2
+    locked_ball_counting_strategy: physical_only
+    
+  multiballLockLizardSaucerTop3:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop3
+    enable_events: eventEnableMultiballLockLizardSaucerTop3
+    disable_events: eventDisableMultiballLockLizardSaucerTop3
+    locked_ball_counting_strategy: physical_only
+    
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballLizardSaucerTop1:
+    ball_locks:
+      - ballDeviceSaucerTop1
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballLizardSaucerTop1
+    disable_events: eventDisableMultiballLizardSaucerTop1
+    start_events: eventStartMultiballLizardSaucerTop1
+    stop_events: eventStopMultiballLizardSaucerTop1
+    
+  multiballLizardSaucerTop2:
+    ball_locks:
+      - ballDeviceSaucerTop2
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballLizardSaucerTop2
+    disable_events: eventDisableMultiballLizardSaucerTop2
+    start_events: eventStartMultiballLizardSaucerTop2
+    stop_events: eventStopMultiballLizardSaucerTop2
+
+  multiballLizardSaucerTop3:
+    ball_locks:
+      - ballDeviceSaucerTop3
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballLizardSaucerTop3
+    disable_events: eventDisableMultiballLizardSaucerTop3
+    start_events: eventStartMultiballLizardSaucerTop3
+    stop_events: eventStopMultiballLizardSaucerTop3
+    

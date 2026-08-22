@@ -1,0 +1,165 @@
+#show_version=6
+
+# --------------------
+- time: 0
+  lights:
+    # --------------------
+    ledMatrix41A: '888888'
+    ledMatrix41B: '888888'
+    ledMatrix41C: '888888'
+    # --------------------
+    ledMatrix42A: '888888'
+    ledMatrix42B: '888888'
+    ledMatrix42C: '888888'
+    # --------------------
+    ledMatrix43A: '888888'
+    ledMatrix43B: '888888'
+    ledMatrix43C: '888888'
+    # --------------------
+    ledMatrix44A: '888888'
+    ledMatrix44B: '888888'
+    ledMatrix44C: '888888'
+    # --------------------
+# --------------------
+- time: 1
+  lights:
+    # --------------------
+    ledMatrix41A: 'ffffff'
+    ledMatrix41B: 'ffffff'
+    ledMatrix41C: 'ffffff'
+    # --------------------
+    ledMatrix42A: 'ffffff'
+    ledMatrix42B: 'ffffff'
+    ledMatrix42C: 'ffffff'
+    # --------------------
+    ledMatrix43A: 'ffffff'
+    ledMatrix43B: 'ffffff'
+    ledMatrix43C: 'ffffff'
+    # --------------------
+    ledMatrix44A: 'ffffff'
+    ledMatrix44B: 'ffffff'
+    ledMatrix44C: 'ffffff'
+    # --------------------
+# --------------------
+- time: 2
+  lights:
+    # --------------------
+    ledMatrix41A: '888888'
+    ledMatrix41B: '888888'
+    ledMatrix41C: '888888'
+    # --------------------
+    ledMatrix42A: '888888'
+    ledMatrix42B: '888888'
+    ledMatrix42C: '888888'
+    # --------------------
+    ledMatrix43A: '888888'
+    ledMatrix43B: '888888'
+    ledMatrix43C: '888888'
+    # --------------------
+    ledMatrix44A: '888888'
+    ledMatrix44B: '888888'
+    ledMatrix44C: '888888'
+    # --------------------
+# --------------------
+- time: 3
+  lights:
+    # --------------------
+    ledMatrix41A: 'ffffff'
+    ledMatrix41B: 'ffffff'
+    ledMatrix41C: 'ffffff'
+    # --------------------
+    ledMatrix42A: 'ffffff'
+    ledMatrix42B: 'ffffff'
+    ledMatrix42C: 'ffffff'
+    # --------------------
+    ledMatrix43A: 'ffffff'
+    ledMatrix43B: 'ffffff'
+    ledMatrix43C: 'ffffff'
+    # --------------------
+    ledMatrix44A: 'ffffff'
+    ledMatrix44B: 'ffffff'
+    ledMatrix44C: 'ffffff'
+    # --------------------
+# --------------------
+- time: 4
+  lights:
+    # --------------------
+    ledMatrix41A: '888888'
+    ledMatrix41B: '888888'
+    ledMatrix41C: '888888'
+    # --------------------
+    ledMatrix42A: '888888'
+    ledMatrix42B: '888888'
+    ledMatrix42C: '888888'
+    # --------------------
+    ledMatrix43A: '888888'
+    ledMatrix43B: '888888'
+    ledMatrix43C: '888888'
+    # --------------------
+    ledMatrix44A: '888888'
+    ledMatrix44B: '888888'
+    ledMatrix44C: '888888'
+    # --------------------
+# --------------------
+- time: 5
+  lights:
+    # --------------------
+    ledMatrix41A: 'ffffff'
+    ledMatrix41B: 'ffffff'
+    ledMatrix41C: 'ffffff'
+    # --------------------
+    ledMatrix42A: 'ffffff'
+    ledMatrix42B: 'ffffff'
+    ledMatrix42C: 'ffffff'
+    # --------------------
+    ledMatrix43A: 'ffffff'
+    ledMatrix43B: 'ffffff'
+    ledMatrix43C: 'ffffff'
+    # --------------------
+    ledMatrix44A: 'ffffff'
+    ledMatrix44B: 'ffffff'
+    ledMatrix44C: 'ffffff'
+    # --------------------
+# --------------------
+- time: 6
+  lights:
+    # --------------------
+    ledMatrix41A: '888888'
+    ledMatrix41B: '888888'
+    ledMatrix41C: '888888'
+    # --------------------
+    ledMatrix42A: '888888'
+    ledMatrix42B: '888888'
+    ledMatrix42C: '888888'
+    # --------------------
+    ledMatrix43A: '888888'
+    ledMatrix43B: '888888'
+    ledMatrix43C: '888888'
+    # --------------------
+    ledMatrix44A: '888888'
+    ledMatrix44B: '888888'
+    ledMatrix44C: '888888'
+    # --------------------
+# --------------------
+- time: 7
+  lights:
+    # --------------------
+    ledMatrix41A: 'ffffff'
+    ledMatrix41B: 'ffffff'
+    ledMatrix41C: 'ffffff'
+    # --------------------
+    ledMatrix42A: 'ffffff'
+    ledMatrix42B: 'ffffff'
+    ledMatrix42C: 'ffffff'
+    # --------------------
+    ledMatrix43A: 'ffffff'
+    ledMatrix43B: 'ffffff'
+    ledMatrix43C: 'ffffff'
+    # --------------------
+    ledMatrix44A: 'ffffff'
+    ledMatrix44B: 'ffffff'
+    ledMatrix44C: 'ffffff'
+    # --------------------
+# --------------------
+- time: 8
+

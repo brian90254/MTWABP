@@ -1,0 +1,476 @@
+#config_version=6
+
+config:
+- configVoltanNeptuneMultiballSlides.yaml
+
+mode:
+  start_events: eventStartModeVoltanNeptuneMultiball
+  stop_events:
+    - eventStopModeVoltanNeptuneMultiball
+    - ball_ending
+    
+  priority: 3100
+  
+# *****************************
+# SHOTS::PLANETS
+# *****************************
+shots:
+    # -------------------
+    # MATRIX SPOT
+    # -------------------
+    shotPlanetNeptune:
+        switch: s_1_29
+        enable_events: eventEnableShotPlanetNeptune
+        disable_events: eventDisableShotPlanetNeptune
+        restart_events: eventRestartShotPlanetNeptune
+        reset_events: eventResetShotPlanetNeptune
+        profile: spShotPlanetsNeptune
+        show_tokens:
+            led1: ledSpot7A
+            led2: ledSpot7B
+            led3: ledSpot7C
+            led4: ledSpot7D
+            led5: ledSpot7E
+            led6: ledLane7
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::PLANETS
+    # -----------------------------
+    spShotPlanetsNeptune:
+        states:
+          - name: litSolid
+            show: showPlanetsNeptune
+            speed: 6
+            show_tokens:
+                color1: '886600'
+                color2: 'ffcc00'
+                color3: '886600'
+                color4: 'ffcc00'
+        loop: false
+        
+# ---------------------
+# EXTRA::BALLS
+# ---------------------
+extra_balls:
+  extraBallMultiballNeptune:
+    light_events: eventExtraBallMultiballNeptuneLit
+    award_events: eventExtraBallMultiballNeptuneAward
+    max_per_game: 1
+    
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeVoltanNeptuneMultiball_started:
+    # ----------------------------------
+    # LIT EXTRA BALL
+    - eventExtraBallMultiballNeptuneLit
+    # AWARD EXTRA BALL
+    - eventExtraBallMultiballNeptuneAward|1000ms
+    # ----------------------------------
+    # ENABLE MULTIBALL
+    - eventEnableMultiballNeptune
+    - eventStartMultiballNeptune|1000ms
+    # ----------------------------------
+    # SHOW SLIDE
+    - eventShowSlideMultiballNeptune
+    # ----------------------------------
+    # RESTART SHOT
+    - eventRestartShotPlanetNeptune
+    # ----------------------------------
+    # OTHER PLANETS SHOW
+    - playShowPlanetSolidMercury
+    - playShowPlanetSolidVenus
+    - playShowPlanetSolidEarth
+    - playShowPlanetSolidMars
+    - playShowPlanetSolidJupiter
+    - playShowPlanetSolidSaturn
+    #- playShowPlanetSolidNeptune
+    #- playShowPlanetSolidUranus
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # INITIALIZE MERCURY COUNT
+  # ---------------
+  multiball_multiballNeptune_started:
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusNeptune:
+      int: 0
+      action: set
+  # ---------------
+  # ADD MERCURY COUNT
+  # ---------------
+  shotPlanetNeptune_litSolid_hit:
+    bonusNeptune: 1
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::MERCURY
+  # ----------------------------
+  multiballNeptune:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+      - ballDeviceSaucerTopRight
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballNeptune
+    disable_events: eventDisableMultiballNeptune
+    start_events: eventStartMultiballNeptune
+    stop_events: eventStopMultiballNeptune
+    
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+    # ---------------------
+    # SHOW::MERCURY
+    # ---------------------
+    playShowPlanetSolidMercury:
+        showNeptunePlanetsSolid:
+            speed: 2
+            loops: -1
+            action: play
+            key: keyPlayShowPlanetSolidMercury
+            show_tokens:
+                # --------------
+                led1: ledSpot1A
+                led2: ledSpot1B
+                led3: ledSpot1C
+                led4: ledSpot1D
+                led5: ledSpot1E
+                # --------------
+                led6: ledLane1
+                # --------------
+                color1: 'ff0000'
+                color2: 'ff0000'
+                color3: 'cc0000'
+                color4: 'cc0000'
+
+    # ---------------------
+    # SHOW::VENUS
+    # ---------------------
+    playShowPlanetSolidVenus:
+        showNeptunePlanetsSolid:
+            speed: 2
+            loops: -1
+            action: play
+            key: keyPlayShowPlanetSolidVenus
+            show_tokens:
+                # --------------
+                led1: ledSpot2A
+                led2: ledSpot2B
+                led3: ledSpot2C
+                led4: ledSpot2D
+                led5: ledSpot2E
+                # --------------
+                led6: ledTarget2
+                # --------------
+                color1: 'ff0000'
+                color2: 'ff0000'
+                color3: 'cc0000'
+                color4: 'cc0000'
+                
+    # ---------------------
+    # SHOW::EARTH
+    # ---------------------
+    playShowPlanetSolidEarth:
+        showNeptunePlanetsSolid:
+            speed: 2
+            loops: -1
+            action: play
+            key: keyPlayShowPlanetSolidEarth
+            show_tokens:
+                # --------------
+                led1: ledSpot3A
+                led2: ledSpot3B
+                led3: ledSpot3C
+                led4: ledSpot3D
+                led5: ledSpot3E
+                # --------------
+                led6: ledLane3
+                # --------------
+                color1: 'ff0000'
+                color2: 'ff0000'
+                color3: 'cc0000'
+                color4: 'cc0000'
+                
+    # ---------------------
+    # SHOW::MARS
+    # ---------------------
+    playShowPlanetSolidMars:
+        showNeptunePlanetsSolid:
+            speed: 2
+            loops: -1
+            action: play
+            key: keyPlayShowPlanetSolidMars
+            show_tokens:
+                # --------------
+                led1: ledSpot4A
+                led2: ledSpot4B
+                led3: ledSpot4C
+                led4: ledSpot4D
+                led5: ledSpot4E
+                # --------------
+                led6: ledLane4
+                # --------------
+                color1: 'ff0000'
+                color2: 'ff0000'
+                color3: 'cc0000'
+                color4: 'cc0000'
+                
+    # ---------------------
+    # SHOW::JUPITER
+    # ---------------------
+    playShowPlanetSolidJupiter:
+        showNeptunePlanetsSolid:
+            speed: 2
+            loops: -1
+            action: play
+            key: keyPlayShowPlanetSolidJupiter
+            show_tokens:
+                # --------------
+                led1: ledSpot5A
+                led2: ledSpot5B
+                led3: ledSpot5C
+                led4: ledSpot5D
+                led5: ledSpot5E
+                # --------------
+                led6: ledTarget5
+                # --------------
+                color1: 'ff0000'
+                color2: 'ff0000'
+                color3: 'cc0000'
+                color4: 'cc0000'
+                
+    # ---------------------
+    # SHOW::SATURN
+    # ---------------------
+    playShowPlanetSolidSaturn:
+        showNeptunePlanetsSolid:
+            speed: 2
+            loops: -1
+            action: play
+            key: keyPlayShowPlanetSolidSaturn
+            show_tokens:
+                # --------------
+                led1: ledSpot6A
+                led2: ledSpot6B
+                led3: ledSpot6C
+                led4: ledSpot6D
+                led5: ledSpot6E
+                # --------------
+                led6: ledLane6
+                # --------------
+                color1: 'ff0000'
+                color2: 'ff0000'
+                color3: 'cc0000'
+                color4: 'cc0000'
+                
+    # ---------------------
+    # SHOW::NEPTUNE
+    # ---------------------
+    playShowPlanetSolidNeptune:
+        showNeptunePlanetsSolid:
+            speed: 2
+            loops: -1
+            action: play
+            key: keyPlayShowPlanetSolidNeptune
+            show_tokens:
+                # --------------
+                led1: ledSpot7A
+                led2: ledSpot7B
+                led3: ledSpot7C
+                led4: ledSpot7D
+                led5: ledSpot7E
+                # --------------
+                led6: ledLane7
+                # --------------
+                color1: 'ff0000'
+                color2: 'ff0000'
+                color3: 'cc0000'
+                color4: 'cc0000'
+                
+    # ---------------------
+    # SHOW::URANUS
+    # ---------------------
+    playShowPlanetSolidUranus:
+        showNeptunePlanetsSolid:
+            speed: 2
+            loops: -1
+            action: play
+            key: keyPlayShowPlanetSolidUranus
+            show_tokens:
+                # --------------
+                led1: ledSpot8A
+                led2: ledSpot8B
+                led3: ledSpot8C
+                led4: ledSpot8D
+                led5: ledSpot8E
+                # --------------
+                led6: ledTarget8
+                # --------------
+                color1: 'ff0000'
+                color2: 'ff0000'
+                color3: 'cc0000'
+                color4: 'cc0000'
+
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showNeptunePlanetsSolid:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color4)
+            (led3): (color4)
+            (led4): (color4)
+            (led5): (color4)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+        
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showPlanetsNeptune:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+        

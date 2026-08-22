@@ -1,0 +1,257 @@
+#config_version=6
+
+config:
+- configAttractShows.yaml
+
+mode:
+  priority: 10000
+
+# ************************************
+# SOUND::PLAYER
+# ************************************
+sound_player:
+# ---------------------
+# SOUNDS::PLAYER::ATTRACT
+# ---------------------
+  mode_attract_started:
+    poolMusicAttract:
+      loops: 0
+      volume: 0.8
+  
+  mode_attract_stopping:
+    poolMusicAttract:
+      action: stop
+
+# ************************************
+# SHOW::PLAYER
+# ************************************
+show_player:
+# ---------------------
+# SHOW::PLAYER::ATTRACT
+# --------------------- 
+  mode_attract_started:
+    showAttractDisplay:
+      loops: -1
+      speed: 1
+      
+    showAttractBackglass:
+      loops: -1
+      #speed: 8
+      speed: 2
+      
+    #showAttractLEDs:
+    #  loops: -1
+    #  speed: 1
+
+    #showCoilAttractSpinner:
+    #  loops: -1
+    #  speed: 1
+      
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  showAttractBackglass1:
+    target: displayBackglass
+    widgets:
+    - type: image
+      image: imagebackglass
+      #z: 3
+      z: 40
+      # --------------------
+      # BITMAP FONT TEST
+      # --------------------
+    - type: text
+      text: (machine|player1_score)
+      z: 30
+      x: left + 728
+      y: bottom + 876
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      text: (machine|player2_score)
+      z: 30
+      x: left + 1429
+      y: bottom + 879
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      text: (machine|player3_score)
+      z: 30
+      x: left + 730
+      y: bottom + 290
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      text: (machine|player4_score)
+      z: 30
+      x: left + 1430
+      y: bottom + 289
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      text: (player|ball)
+      min_digits: 2
+      z: 30
+      x: left + 1423
+      y: bottom + 558
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+# -----------------------
+# ADDED 200507
+    - type: text
+      text: (machine|credits_string)
+      min_digits: 1
+      z: 30
+      x: left + 1359
+      y: bottom + 558
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+## -----------------------
+## ADDED 210731
+#    - type: text
+#      text: (machine|player5_score)
+#      #min_digits: 2
+#      z: 30
+#      x: left + 1400
+#      y: bottom + 790
+#      anchor_x: right
+#      anchor_y: middle
+#      font_name: bitmapFontBallySevenSegment6
+#      bitmap_font: true
+#      
+#    - type: text
+#      text: (machine|player6_score)
+#      #min_digits: 2
+#      z: 30
+#      x: left + 1400
+#      y: bottom + 218
+#      anchor_x: right
+#      anchor_y: middle
+#      font_name: bitmapFontBallySevenSegment6
+#      bitmap_font: true
+      
+      
+  showAttractBackglass2:
+    target: displayBackglass
+    widgets:
+    - type: image
+      image: imagebackglass
+      z: 40
+      #z: 3
+      # --------------------
+      # BITMAP FONT TEST
+      # --------------------
+      # (machine|score1_value)
+    - type: text
+      text: (machine|score1_value)
+      z: 30
+      x: left + 728
+      y: bottom + 876
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      text: (machine|score2_value)
+      #text: (machine|score1_value)
+      z: 30
+      x: left + 1429
+      y: bottom + 879
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      text: (machine|score3_value)
+      #text: (machine|score1_value)
+      z: 30
+      x: left + 730
+      y: bottom + 290
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      text: (machine|score4_value)
+      #text: (machine|score1_value)
+      z: 30
+      x: left + 1430
+      y: bottom + 289
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+    - type: text
+      #text: '78 99'
+      text: (player|ball)
+      min_digits: 2
+      z: 30
+      x: left + 1423
+      y: bottom + 558
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+# -----------------------
+# ADDED 200507
+    - type: text
+      text: (machine|credits_string)
+      min_digits: 1
+      z: 30
+      x: left + 1359
+      y: bottom + 558
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment6
+      bitmap_font: true
+## -----------------------
+## ADDED 210731
+#    - type: text
+#      text: (machine|score5_value)
+#      #min_digits: 2
+#      z: 30
+#      x: left + 1400
+#      y: bottom + 790
+#      anchor_x: right
+#      anchor_y: middle
+#      font_name: bitmapFontBallySevenSegment6
+#      bitmap_font: true
+#      
+#    - type: text
+#      text: (machine|score6_value)
+#      #min_digits: 2
+#      z: 30
+#      x: left + 1400
+#      y: bottom + 218
+#      anchor_x: right
+#      anchor_y: middle
+#      font_name: bitmapFontBallySevenSegment6
+#      bitmap_font: true
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  # ---------------------
+  # ATTRACT::BACKGLASS
+  # ---------------------
+  eventShowAttractBackglass1:
+    showAttractBackglass1:
+      target: displayBackglass
+    
+  eventShowAttractBackglass2:
+    showAttractBackglass2:
+      target: displayBackglass

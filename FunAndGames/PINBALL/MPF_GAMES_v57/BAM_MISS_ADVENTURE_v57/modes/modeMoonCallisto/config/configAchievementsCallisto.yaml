@@ -1,0 +1,201 @@
+#config_version=6
+
+# JCv50 (Jupiter Crush v0.50)
+
+achievements:
+# *****************************
+# ACHIEVEMENT::BONUS::MULTI
+# *****************************
+  # -----------------------------
+  # BONUS::MULTI::ONE
+  # -----------------------------
+  achBonusMultiCallisto1:
+    start_events: mode_modeMoonCallisto_started
+    show_tokens:
+      led: l_bonus_multi_1
+    show_when_selected: flashLedTwoOrange
+    show_when_started: flashLedTwoOrange
+    show_when_completed: onLedOrange
+    restart_after_stop_possible: true
+    events_when_completed:
+      startAchBonusMulti2
+      advMultiBonus
+    complete_events: sgDropLfCallisto_litSolid_complete
+    enable_events: mode_modeMoonCallisto_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # BONUS::MULTI::TWO
+  # -----------------------------
+  achBonusMultiCallisto2:
+    start_events: startAchBonusMulti2
+    show_tokens:
+      led: l_bonus_multi_2
+    show_when_selected: flashLedTwoOrange
+    show_when_started: flashLedTwoOrange
+    show_when_completed: onLedOrange
+    restart_after_stop_possible: true
+    events_when_completed:
+      startAchBonusMulti3
+      advMultiBonus
+    complete_events: sgDropLfCallisto_litSolid_complete
+    enable_events: mode_modeMoonCallisto_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # BONUS::MULTI::THREE
+  # -----------------------------
+  achBonusMultiCallisto3:
+    start_events: startAchBonusMulti3
+    show_tokens:
+      led: l_bonus_multi_3
+    show_when_selected: flashLedTwoOrange
+    show_when_started: flashLedTwoOrange
+    show_when_completed: onLedOrange
+    restart_after_stop_possible: true
+    events_when_completed:
+      startAchBonusMulti4
+      advMultiBonus
+    complete_events: sgDropLfCallisto_litSolid_complete
+    enable_events: mode_modeMoonCallisto_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # BONUS::MULTI::FOUR
+  # -----------------------------
+  achBonusMultiCallisto4:
+    start_events: startAchBonusMulti4
+    show_tokens:
+      led: l_bonus_multi_4
+    show_when_selected: flashLedTwoOrange
+    show_when_started: flashLedTwoOrange
+    show_when_completed: onLedOrange
+    restart_after_stop_possible: true
+    events_when_completed:
+      startAchBonusMulti5
+      advMultiBonus
+    complete_events: sgDropLfCallisto_litSolid_complete
+    enable_events: mode_modeMoonCallisto_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # BONUS::MULTI::FIVE
+  # -----------------------------
+  achBonusMultiCallisto5:
+    start_events: startAchBonusMulti5
+    show_tokens:
+      led1: l_bonus_multi_5_1
+      led2: l_bonus_multi_5_2
+      led3: l_bonus_multi_5_3
+      led4: l_bonus_multi_5_4
+      led5: l_bonus_multi_5_5
+      led6: l_bonus_multi_5_6
+    show_when_selected: flashSixLedTwoRed
+    show_when_started: flashSixLedTwoRed
+    show_when_completed: onSixLedRed
+    restart_after_stop_possible: true
+    events_when_completed:
+      startAchBonusMulti6
+      advMultiBonus
+    complete_events: sgDropLfCallisto_litSolid_complete
+    enable_events: mode_modeMoonCallisto_started
+    sync_ms: 1
+    reset_events: ball_ending
+    
+# *****************************
+# ACHIEVEMENT::NEWTON::BALL
+# *****************************
+  # -----------------------------
+  # NEWTON::BALL::ONE
+  # -----------------------------
+  achNewtonBallCallisto1:
+    start_events: mode_modeMoonCallisto_started
+    show_tokens:
+      led: l_attack_adv_1
+    show_when_selected: flashLedTwoPink
+    show_when_started: flashLedTwoPink
+    show_when_completed: onLedPink
+    restart_after_stop_possible: true
+    events_when_completed:
+      startAchNewtonBallCallisto2
+      advMultiNewton
+    complete_events: s_target_newton_active
+    enable_events: mode_modeMoonCallisto_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # NEWTON::BALL::TWO
+  # -----------------------------
+  achNewtonBallCallisto2:
+    start_events: startAchNewtonBallCallisto2
+    show_tokens:
+      led: l_attack_adv_2
+    show_when_selected: flashLedTwoPink
+    show_when_started: flashLedTwoPink
+    show_when_completed: onLedPink
+    restart_after_stop_possible: true
+    events_when_completed:
+      startAchNewtonBallCallisto3
+      advMultiNewton
+    complete_events: s_target_newton_active
+    enable_events: mode_modeMoonCallisto_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # NEWTON::BALL::THREE
+  # -----------------------------
+  achNewtonBallCallisto3:
+    start_events: startAchNewtonBallCallisto3
+    show_tokens:
+      led: l_attack_adv_3
+    show_when_selected: flashLedTwoPink
+    show_when_started: flashLedTwoPink
+    show_when_completed: onLedPink
+    restart_after_stop_possible: true
+    events_when_completed:
+      startAchNewtonBallCallisto4
+      advMultiNewton
+    complete_events: s_target_newton_active
+    enable_events: mode_modeMoonCallisto_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # NEWTON::BALL::FOUR
+  # -----------------------------
+  achNewtonBallCallisto4:
+    start_events: startAchNewtonBallCallisto4
+    show_tokens:
+      led: l_attack_adv_4
+    show_when_selected: flashLedTwoPink
+    show_when_started: flashLedTwoPink
+    show_when_completed: onLedPink
+    restart_after_stop_possible: true
+    events_when_completed:
+      startAchNewtonBallCallisto5
+      advMultiNewton
+    complete_events: s_target_newton_active
+    enable_events: mode_modeMoonCallisto_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # NEWTON::BALL::FIVE
+  # -----------------------------
+  achNewtonBallCallisto5:
+    start_events: startAchNewtonBallCallisto5
+    show_tokens:
+      led: l_attack_adv_5
+    show_when_selected: flashLedTwoPink
+    show_when_started: flashLedTwoPink
+    show_when_completed: onLedPink
+    restart_after_stop_possible: true
+    events_when_completed:
+      startAchNewtonBallCallisto6
+      advMultiNewton
+    complete_events: s_target_newton_active
+    enable_events: mode_modeMoonCallisto_started
+    sync_ms: 1
+    reset_events: ball_ending
+    
+# *****************************
+# END ACHIEVEMENTS
+# *****************************

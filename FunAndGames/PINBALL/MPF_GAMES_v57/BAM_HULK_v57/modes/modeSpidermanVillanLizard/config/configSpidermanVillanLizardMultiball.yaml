@@ -1,0 +1,136 @@
+#config_version=6
+
+# VOLTAN
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeSpidermanVillanLizard_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballLizardUpperKickerLeft
+    - eventEnableMultiballLizardUpperKickerRight
+    - eventEnableMultiballLizardUpperKickerBoth
+    # ----------------------------------
+    # ENABLE LOCK
+    - eventEnableMultiballLizardLockSaucerTopRight
+    - eventEnableMultiballLizardLockSaucerTopLeft
+    # ----------------------------------
+    
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::RIGHT
+  # ---------------------
+  # RIGHT::TWO BALL
+  multiball_lock_multiballLizardLockSaucerTopRight_full.1{device.multiball_locks.multiballLizardLockSaucerTopLeft.locked_balls==0}:
+    - eventStartMultiballLizardUpperKickerRight|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballLizardLockSaucerTopRight
+    - eventDisableMultiballLizardLockSaucerTopLeft
+  # ---------------------
+  # RIGHT::THREE BALL
+  multiball_lock_multiballLizardLockSaucerTopRight_full.2{device.multiball_locks.multiballLizardLockSaucerTopLeft.locked_balls==1}:
+    - eventStartMultiballLizardUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballLizardLockSaucerTopRight|3500ms
+    - eventDisableMultiballLizardLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::LEFT
+  # ---------------------
+  # LEFT::TWO BALL
+  multiball_lock_multiballLizardLockSaucerTopLeft_full.1{device.multiball_locks.multiballLizardLockSaucerTopRight.locked_balls==0}:
+    - eventStartMultiballLizardUpperKickerLeft|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballLizardLockSaucerTopRight
+    - eventDisableMultiballLizardLockSaucerTopLeft
+  # ---------------------
+  # LEFT::THREE BALL
+  multiball_lock_multiballLizardLockSaucerTopLeft_full.2{device.multiball_locks.multiballLizardLockSaucerTopRight.locked_balls==1}:
+    - eventStartMultiballLizardUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballLizardLockSaucerTopRight|3500ms
+    - eventDisableMultiballLizardLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # ENDING MULTIBALL
+  # ---------------------
+  # BOTH
+  multiball_multiballLizardUpperKickerBoth_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballLizardLockSaucerTopRight
+    - eventEnableMultiballLizardLockSaucerTopLeft
+  # LEFT
+  multiball_multiballLizardUpperKickerLeft_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballLizardLockSaucerTopRight
+    - eventEnableMultiballLizardLockSaucerTopLeft
+  # RIGHT
+  multiball_multiballLizardUpperKickerRight_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballLizardLockSaucerTopRight
+    - eventEnableMultiballLizardLockSaucerTopLeft
+
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballLizardLockSaucerTopRight:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopRight
+    enable_events: eventEnableMultiballLizardLockSaucerTopRight
+    disable_events: eventDisableMultiballLizardLockSaucerTopRight
+    locked_ball_counting_strategy: physical_only
+
+  multiballLizardLockSaucerTopLeft:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopLeft
+    enable_events: eventEnableMultiballLizardLockSaucerTopLeft
+    disable_events: eventDisableMultiballLizardLockSaucerTopLeft
+    locked_ball_counting_strategy: physical_only
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballLizardUpperKickerLeft:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballLizardUpperKickerLeft
+    disable_events: eventDisableMultiballLizardUpperKickerLeft
+    start_events: eventStartMultiballLizardUpperKickerLeft
+    stop_events: eventStopMultiballLizardUpperKickerLeft
+    
+  multiballLizardUpperKickerRight:
+    ball_locks:
+      - ballDeviceSaucerTopRight
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballLizardUpperKickerRight
+    disable_events: eventDisableMultiballLizardUpperKickerRight
+    start_events: eventStartMultiballLizardUpperKickerRight
+    stop_events: eventStopMultiballLizardUpperKickerRight
+    
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::BOTH
+  # ----------------------------
+  multiballLizardUpperKickerBoth:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+      - ballDeviceSaucerTopRight
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballLizardUpperKickerBoth
+    disable_events: eventDisableMultiballLizardUpperKickerBoth
+    start_events: eventStartMultiballLizardUpperKickerBoth
+    stop_events: eventStopMultiballLizardUpperKickerBoth
+    

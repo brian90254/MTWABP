@@ -1,0 +1,105 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ff0000'
+        color2: 'ffff00'
+        led1: ledDropLeftSpecial1
+        led2: ledDropLeftSpecial2
+        led3: ledDropLeftSpecial3
+        led4: ledDropLeftSpecial4
+        led5: ledDropLeftSpecial5
+        led6: ledDropLeftSpecial6
+        led7: ledDropLeftSpecial7
+        
+- time: "+2"
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ffff00'
+        color2: '00ff00'
+        led1: ledDropLeftSpecial1
+        led2: ledDropLeftSpecial2
+        led3: ledDropLeftSpecial3
+        led4: ledDropLeftSpecial4
+        led5: ledDropLeftSpecial5
+        led6: ledDropLeftSpecial6
+        led7: ledDropLeftSpecial7
+
+- time: "+2"
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '00ff00'
+        color2: '00ffff'
+        led1: ledDropLeftSpecial1
+        led2: ledDropLeftSpecial2
+        led3: ledDropLeftSpecial3
+        led4: ledDropLeftSpecial4
+        led5: ledDropLeftSpecial5
+        led6: ledDropLeftSpecial6
+        led7: ledDropLeftSpecial7
+
+- time: "+2"
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '00ffff'
+        color2: '0000ff'
+        led1: ledDropLeftSpecial1
+        led2: ledDropLeftSpecial2
+        led3: ledDropLeftSpecial3
+        led4: ledDropLeftSpecial4
+        led5: ledDropLeftSpecial5
+        led6: ledDropLeftSpecial6
+        led7: ledDropLeftSpecial7
+
+- time: "+2"
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '0000ff'
+        color2: 'ff00ff'
+        led1: ledDropLeftSpecial1
+        led2: ledDropLeftSpecial2
+        led3: ledDropLeftSpecial3
+        led4: ledDropLeftSpecial4
+        led5: ledDropLeftSpecial5
+        led6: ledDropLeftSpecial6
+        led7: ledDropLeftSpecial7
+
+- time: "+2"
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ff00ff'
+        color2: 'ff0000'
+        led1: ledDropLeftSpecial1
+        led2: ledDropLeftSpecial2
+        led3: ledDropLeftSpecial3
+        led4: ledDropLeftSpecial4
+        led5: ledDropLeftSpecial5
+        led6: ledDropLeftSpecial6
+        led7: ledDropLeftSpecial7
+        
+- time: "+2"

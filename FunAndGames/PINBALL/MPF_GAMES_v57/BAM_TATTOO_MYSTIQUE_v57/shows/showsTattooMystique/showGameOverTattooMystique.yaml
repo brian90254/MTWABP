@@ -1,0 +1,87 @@
+#show_version=6
+- time: 0
+  slides:
+    slideGameOverTattooMystiquePurpleYellow1:
+      target: displayDMD
+  events:
+    - playPoolSoundGameOver
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiqueYellowPurple1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiquePurpleYellow1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiqueYellowPurple1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiquePurpleYellow1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiqueYellowPurple1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiquePurpleYellow1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiqueYellowPurple1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiquePurpleYellow1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiqueYellowPurple1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiquePurpleYellow1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiqueYellowPurple1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiquePurpleYellow1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiqueYellowPurple1:
+      target: displayDMD
+
+- time: '+0.33'
+  slides:
+    slideGameOverTattooMystiquePurpleYellow1:
+      target: displayDMD
+
+# - time: '+7.4'
+  events:
+    #- eventShowAttractDisplay
+    - eventShowYourFortuneTattooMystique
+
+- time: '+0.1'
+
+#   events: startFortuneCookie
+# - time: '+1'

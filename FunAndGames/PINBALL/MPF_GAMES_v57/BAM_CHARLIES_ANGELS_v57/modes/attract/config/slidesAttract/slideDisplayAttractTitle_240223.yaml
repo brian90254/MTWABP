@@ -1,0 +1,194 @@
+#config_version=6
+
+# *********************
+# CHARLIE'S ANGELS
+# *********************
+
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  # *************************
+  # CHARLIE'S ANGELS TITLE :: ONE
+  # *************************
+  slideDisplayAttractTitle:
+    target: displayDMD
+    widgets:
+      # --------------------
+      # IRON - CENTER TEXT
+      # --------------------
+    - type: text
+      text: CHARLIE'S
+      y: middle + 15
+      x: middle
+      style: fontAttractTitleCharliesAngelsHeader
+      color: colorFontAttractTitleCharliesAngelsHeaderInner
+      z: 20
+      # --------------------
+      # IRON - OUTLINE
+      # --------------------
+    - type: text
+      text: CHARLIE'S
+      y: middle + 16
+      x: middle + 1
+      style: fontAttractTitleCharliesAngelsHeader
+      color: colorFontAttractTitleCharliesAngelsHeaderOuter1
+      z: 15
+    - type: text
+      text: CHARLIE'S
+      y: middle + 16
+      x: middle - 1
+      style: fontAttractTitleCharliesAngelsHeader
+      color: colorFontAttractTitleCharliesAngelsHeaderOuter1
+      z: 15
+    - type: text
+      text: CHARLIE'S
+      y: middle + 14
+      x: middle + 1
+      style: fontAttractTitleCharliesAngelsHeader
+      color: colorFontAttractTitleCharliesAngelsHeaderOuter1
+      z: 15
+    - type: text
+      text: CHARLIE'S
+      y: middle + 14
+      x: middle - 1
+      style: fontAttractTitleCharliesAngelsHeader
+      color: colorFontAttractTitleCharliesAngelsHeaderOuter1
+      z: 15
+      # --------------------
+      # IRON - DOUBLE _ OUTLINE
+      # --------------------
+    - type: text
+      text: CHARLIE'S
+      y: middle + 17
+      x: middle + 2
+      style: fontAttractTitleCharliesAngelsHeader
+      color: colorFontAttractTitleCharliesAngelsHeaderOuter2
+      z: 10
+    - type: text
+      text: CHARLIE'S
+      y: middle + 17
+      x: middle - 2
+      style: fontAttractTitleCharliesAngelsHeader
+      color: colorFontAttractTitleCharliesAngelsHeaderOuter2
+      z: 10
+    - type: text
+      text: CHARLIE'S
+      y: middle + 13
+      x: middle + 2
+      style: fontAttractTitleCharliesAngelsHeader
+      color: colorFontAttractTitleCharliesAngelsHeaderOuter2
+      z: 10
+    - type: text
+      text: CHARLIE'S
+      y: middle + 13
+      x: middle - 2
+      style: fontAttractTitleCharliesAngelsHeader
+      color: colorFontAttractTitleCharliesAngelsHeaderOuter2
+      z: 10
+      # --------------------
+      # ANGELS - CENTER TEXT
+      # --------------------
+    - type: text
+      text: ANGELS
+      y: middle - 20
+      x: middle
+      style: fontAttractTitleCharliesAngelsMiddle
+      color: colorFontAttractTitleCharliesAngelsMiddleInner
+      z: 20
+      # --------------------
+      # MAIDEN - OUTLINE
+      # --------------------
+    - type: text
+      text: ANGELS
+      y: middle - 21
+      x: middle - 1
+      style: fontAttractTitleCharliesAngelsMiddle
+      color: colorFontAttractTitleCharliesAngelsMiddleOuter1
+      z: 15
+    - type: text
+      text: ANGELS
+      y: middle - 21
+      x: middle + 1
+      style: fontAttractTitleCharliesAngelsMiddle
+      color: colorFontAttractTitleCharliesAngelsMiddleOuter1
+      z: 15
+    - type: text
+      text: ANGELS
+      y: middle - 19
+      x: middle - 1
+      style: fontAttractTitleCharliesAngelsMiddle
+      color: colorFontAttractTitleCharliesAngelsMiddleOuter1
+      z: 15
+    - type: text
+      text: ANGELS
+      y: middle - 19
+      x: middle + 1
+      style: fontAttractTitleCharliesAngelsMiddle
+      color: colorFontAttractTitleCharliesAngelsMiddleOuter1
+      z: 15
+      # --------------------
+      # MAIDEN - DOUBLE - OUTLINE
+      # --------------------
+    - type: text
+      text: ANGELS
+      y: middle - 22
+      x: middle - 2
+      style: fontAttractTitleCharliesAngelsMiddle
+      color: colorFontAttractTitleCharliesAngelsMiddleOuter2
+      z: 10
+    - type: text
+      text: ANGELS
+      y: middle - 22
+      x: middle + 2
+      style: fontAttractTitleCharliesAngelsMiddle
+      color: colorFontAttractTitleCharliesAngelsMiddleOuter2
+      z: 10
+    - type: text
+      text: ANGELS
+      y: middle - 18
+      x: middle - 2
+      style: fontAttractTitleCharliesAngelsMiddle
+      color: colorFontAttractTitleCharliesAngelsMiddleOuter2
+      z: 10
+    - type: text
+      text: ANGELS
+      y: middle - 18
+      x: middle + 2
+      style: fontAttractTitleCharliesAngelsMiddle
+      color: colorFontAttractTitleCharliesAngelsMiddleOuter2
+      z: 10
+      # --------------------
+      # COLOR OUTLINE
+      # --------------------
+    - type: rectangle
+      color: colorBoxAttractTitleCharliesAngelsOuter
+      width: 236
+      height: 130
+      x: 120
+      y: 67
+      z: 3
+    - type: rectangle
+      color: colorBoxAttractTitleCharliesAngelsMiddle
+      width: 232
+      height: 126
+      x: 120
+      y: 67
+      z: 5
+    - type: rectangle
+      color: colorBoxAttractTitleCharliesAngelsInner
+      width: 228
+      height: 122
+      x: 120
+      y: 67
+      z: 6
+      # --------------------
+      # BLACK INFILL
+      # --------------------
+    - type: rectangle
+      color: colorBoxAttractTitleCharliesAngelsFill
+      width: 224
+      height: 118
+      x: 120
+      y: 67
+      z: 7

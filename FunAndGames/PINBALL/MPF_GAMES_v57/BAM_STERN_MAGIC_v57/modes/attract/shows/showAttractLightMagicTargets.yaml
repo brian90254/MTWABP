@@ -1,0 +1,235 @@
+#show_version=6
+- time: 0
+# ----------------------
+# 4-LED CHASE RED
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetRightM: 'ff0000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: 'ff0000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: 'ff0000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: 'ff0000'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE YELLOW
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetRightM: 'ffff00'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: 'ffff00'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: 'ffff00'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: 'ffff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE GREEN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetRightM: '00ff00'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '00ff00'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '00ff00'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '00ff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE CYAN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetRightM: '00ffff'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '00ffff'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '00ffff'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '00ffff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE BLUE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetRightM: '0000ff'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '0000ff'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '0000ff'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '0000ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE MAGENTA
+# ----------------------
+  lights:
+    # ----------------------  
+    ledTargetRightM: 'ff00ff'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: 'ff00ff'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: 'ff00ff'
+    ledTargetLeftG: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledTargetRightM: '000000'   
+    ledTargetRightC: '000000'
+    ledTargetLeftI: '000000'
+    ledTargetLeftG: 'ff00ff'
+    # ---------------------- 
+- time: "+1"

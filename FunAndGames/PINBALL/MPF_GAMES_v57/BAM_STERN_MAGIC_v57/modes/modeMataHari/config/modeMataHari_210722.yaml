@@ -1,0 +1,135 @@
+#config_version=6
+
+config:
+# MATA HARI
+- configMataHariAchBonus.yaml
+- configMataHariSaucer.yaml
+- configMataHariShots.yaml
+- configMataHariDrops.yaml
+
+mode:
+  start_events: eventStartModeMataHari
+  stop_events:
+    - eventStopModeMataHari
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  
+  ball_started:
+    # RESET DROPS
+    - eventResetDropTargetBankLeft|500
+    - eventResetDropTargetBankRight|1000
+    
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeMataHari_started:
+    # -----------------------------------
+    # MODES
+    # -----------------------------------
+    #- eventStartModeStrikesSparesShotPinsOne
+    
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeBallyStrikesSparesStart
+    #- eventPlaylistModeMataHariStart
+    
+    ## -----------------------------------
+    ## ENABLE BONUS
+    ## -----------------------------------
+    ## ONES
+    #- eventResetAchBonusOnes
+    #- eventEnableAchBonusOnes
+    #- eventStartAchBonus0
+    #- eventCompleteBonusOnes|1s
+    ## TENS
+    #- eventResetAchBonusTens
+    #- eventEnableAchBonusTens
+
+    - eventResetShotExtraBall
+    
+    - eventResetShotSaucerBonus
+    
+    - eventResetShotAdvanceMultipliers    
+    - eventEnableShotAdvanceMultipliers
+    
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersMataHari
+    
+    # ---------------------
+    # EVENT::START::MODES
+    # ---------------------
+    #- eventStartModeMataHariShotSaucerSpot
+    # TEST
+    #- eventStartModeMataHariShotSaucerReset
+    
+
+  ## ---------------------
+  ## EVENT::SWITCH MODES
+  ## ---------------------
+  #eventSwitchModesShotSaucerResetToSpot:
+  #  - eventStopModeMataHariShotSaucerReset
+  #  - eventStartModeMataHariShotSaucerSpot
+  #  # RESET BALLY SPOT
+  #  - eventRestartShotGroupSpotBally
+  #
+  #eventSwitchModesShotSaucerSpotToReset:
+  #  # MODE SWITCH
+  #  - eventStopModeMataHariShotSaucerSpot
+  #  - eventStartModeMataHariShotSaucerReset
+  #  # DISABLE BALLY SPOT
+  #  - eventDisableShotGroupSpotBally
+    
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  mode_modeMataHari_started:
+    nameMoon:
+      string: "MATA HARI"
+      action: set
+
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  #---------------------
+  # AMBIENCE
+  mode_modeMataHari_started:
+    #musicGlobetrotters012:
+    #poolMusicAmbienceGlobetrotters:
+    #musicAmbienceBallyViking001:
+    #musicAmbienceMataHari001:
+    musicBallyStrikesSpares012:
+      loops: -1
+      volume: 0.9
+      
+  mode_modeMataHari_ending:
+    #musicGlobetrotters012:
+    #poolMusicAmbienceGlobetrotters:
+    #musicAmbienceBallyViking001:
+    #musicAmbienceMataHari001:
+    musicBallyStrikesSpares012:
+      action: stop
+      
+  #---------------------
+  
+## ************************************
+## SHOW::PLAYER
+## ************************************
+#show_player:
+## ---------------------
+## SHOW::PLAYER::ATTRACT
+## --------------------- 
+#  mode_attract_started:
+#    showResetLightPins:
+#      loops: -1
+#      speed: 4

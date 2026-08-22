@@ -1,0 +1,117 @@
+#show_version=6
+
+- time: 0
+
+#-------------
+# GREEN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneRightA
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledLaneRightA1
+        led2: ledLaneRightA2
+        led3: ledLaneRightA3
+        led4: ledLaneRightA4
+        led5: ledLaneRightA5
+
+- time: "+4"
+
+#-------------
+# CYAN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneRightA
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledLaneRightA1
+        led2: ledLaneRightA2
+        led3: ledLaneRightA3
+        led4: ledLaneRightA4
+        led5: ledLaneRightA5
+
+- time: "+4"
+
+#-------------
+# BLUE
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneRightA
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledLaneRightA1
+        led2: ledLaneRightA2
+        led3: ledLaneRightA3
+        led4: ledLaneRightA4
+        led5: ledLaneRightA5
+
+- time: "+4"
+
+#-------------
+# MAGENTA
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneRightA
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledLaneRightA1
+        led2: ledLaneRightA2
+        led3: ledLaneRightA3
+        led4: ledLaneRightA4
+        led5: ledLaneRightA5
+
+- time: "+4"
+
+#-------------
+# RED
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneRightA
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledLaneRightA1
+        led2: ledLaneRightA2
+        led3: ledLaneRightA3
+        led4: ledLaneRightA4
+        led5: ledLaneRightA5
+
+- time: "+4"
+
+#-------------
+# YELLOW
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedLaneRightA
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledLaneRightA1
+        led2: ledLaneRightA2
+        led3: ledLaneRightA3
+        led4: ledLaneRightA4
+        led5: ledLaneRightA5
+
+- time: "+4"

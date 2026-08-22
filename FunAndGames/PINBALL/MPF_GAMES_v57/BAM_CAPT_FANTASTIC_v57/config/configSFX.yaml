@@ -1,0 +1,1886 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ---------------------
+# SOUNDS::SFX
+# ---------------------
+sounds:
+
+# ---------------------
+# SOUNDS::SFX::CHIMES
+# ---------------------
+  soundChimes001:
+    file: Chime_10a.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundChimes002:
+    file: Chime_100a.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundChimes003:
+    file: Chime_1000a.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundChimes004:
+    file: Chime1.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundChimes005:
+    file: Chime2.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundChimes006:
+    file: Chime3.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundChimes007:
+    file: Chime4.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::ONESHOT
+# ---------------------
+  soundOneshot001:
+    file: Oneshot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOneshot002:
+    file: Oneshot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOneshot003:
+    file: Oneshot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOneshot004:
+    file: Oneshot010.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOneshot005:
+    file: Oneshot011.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOneshot006:
+    file: Oneshot014.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::REVERSE
+# ---------------------
+
+  soundReverse001:
+    file: Perc_Synth_MoogDelay_21.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReverse002:
+    file: Perc_Synth_MoogDelay_22.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReverse003:
+    file: Perc_Synth_MoogDelay_23.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReverse004:
+    file: Perc_Synth_MoogDelay_24.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReverse005:
+    file: Perc_Synth_MoogDelay_25.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::ROLLOVERS
+# ---------------------
+  soundWhooshStarShip001:
+    file: Whoosh001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundWhooshStarShip002:
+    file: Whoosh005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundWhooshStarShip003:
+    file: Whoosh011.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundWhooshStarShip004:
+    file: StarShipSounds001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundWhooshStarShip005:
+    file: StarShipSounds002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundWhooshStarShip006:
+    file: StarShipSounds009.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+    
+# ---------------------
+# SOUNDS::SFX::COMPUTE
+# ---------------------
+  soundCompute001:
+    file: ClassicSH001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+  
+  soundCompute002:
+    file: ClassicSH002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCompute003:
+    file: ClassicSH003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCompute004:
+    file: ClassicSH004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+  
+  soundCompute005:
+    file: ClassicSH005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCompute006:
+    file: ClassicSH006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+    
+# ---------------------
+# SOUNDS::SFX::ZAPPS
+# ---------------------
+  soundZapps001:
+    file: Zapps001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundZapps002:
+    file: Zapps002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundZapps003:
+    file: Zapps003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+    
+# ---------------------
+# SOUNDS::SFX::HIGH_SCORE
+# ---------------------
+  soundHighScore001:
+    file: HighScore001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundHighScore002:
+    file: HighScore002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundHighScore003:
+    file: HighScore003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundHighScore004:
+    file: HighScore004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+    
+# ---------------------
+# SOUNDS::SFX::RAIL_GUN_SINGLE_SHOT
+# ---------------------
+  soundRailGunSingleShot001:
+    file: RailGunSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRailGunSingleShot002:
+    file: RailGunSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRailGunSingleShot003:
+    file: RailGunSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRailGunSingleShot004:
+    file: RailGunSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRailGunSingleShot005:
+    file: RailGunSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::IMPULSE_GUN_SINGLE_SHOT
+# ---------------------
+  soundImpulseGunSingleShot001:
+    file: ImpulseGunSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundImpulseGunSingleShot002:
+    file: ImpulseGunSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundImpulseGunSingleShot003:
+    file: ImpulseGunSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundImpulseGunSingleShot004:
+    file: ImpulseGunSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundImpulseGunSingleShot005:
+    file: ImpulseGunSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+# ---------------------
+# SOUNDS::SFX::BALLSAVESTOPPER
+# ---------------------
+  soundBallSaveStopper001:
+    file: MineMachineLaunch001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundBallSaveStopper002:
+    file: MineMachineLaunch002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBallSaveStopper003:
+    file: MineMachineLaunch003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBallSaveStopper004:
+    file: MineMachineLaunch004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBallSaveStopper005:
+    file: MineMachineLaunch005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::BALLSAVEWINDUP
+# ---------------------
+  soundBallSaveWindUp001:
+    file: WindUp001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBallSaveWindUp002:
+    file: WindUp002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBallSaveWindUp003:
+    file: WindUp003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::CANNONLOAD
+# ---------------------
+  soundBackFromThePastSingleShot001:
+    file: BackFromThePastSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundBackFromThePastSingleShot002:
+    file: BackFromThePastSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundBackFromThePastSingleShot003:
+    file: BackFromThePastSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBackFromThePastSingleShot004:
+    file: BackFromThePastSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBackFromThePastSingleShot005:
+    file: BackFromThePastSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+# ---------------------
+# SOUNDS::SFX::COIN
+# ---------------------
+  soundCoin001:
+    file: BucketGunReload001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCoin002:
+    file: BucketGunReload002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCoin003:
+    file: BucketGunReload003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCoin004:
+    file: BucketGunReload004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::DRAIN
+# ---------------------
+  soundDoor001:
+    #file: ChunkyCrunchyLargeGrindingLeverGroanClunk001.wav
+    file: Door001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundDoor002:
+    #file: ChunkyCrunchyLargeGrindingLeverGroanClunk002.wav
+    file: Door002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::GAMEOVER
+# ---------------------
+  soundGameOver001:
+    file: SteamGunStopEngine001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundGameOver002:
+    file: SteamGunStopEngine002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::ElectrocutorGunSingleShot
+# ---------------------
+  soundElectrocutorGunSingleShot001:
+    file: ElectrocutorGunSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundElectrocutorGunSingleShot002:
+    file: ElectrocutorGunSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundElectrocutorGunSingleShot003:
+    file: ElectrocutorGunSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundElectrocutorGunSingleShot004:
+    file: ElectrocutorGunSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundElectrocutorGunSingleShot005:
+    file: ElectrocutorGunSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::LOWERPFDROPTARGET
+# ---------------------
+  soundLowerPFDropTarget001:
+    file: Theremin_FX_06.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFDropTarget002:
+    file: Theremin_FX_07.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFDropTarget003:
+    file: Theremin_FX_08.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFDropTarget004:
+    file: Theremin_FX_11.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFDropTarget005:
+    file: Theremin_FX_12.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::LOWERPFTARGET
+# ---------------------
+  soundLowerPFTarget001:
+    file: Theremin_FX_13.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFTarget002:
+    file: Theremin_FX_14.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFTarget003:
+    file: Theremin_FX_15.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFTarget004:
+    file: Theremin_FX_16.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFTarget005:
+    file: Theremin_FX_17.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::LOWERTOUPPER
+# ---------------------
+  soundLowerToUpper001:
+    file: CleanOldLeverThrow001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::MAGNET
+# ---------------------
+  soundMagnet001:
+    file: MagnetGunReload001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::NEWTONBALL
+# ---------------------
+  soundNewtonBall001:
+    file: Misc_Sci_fi_47.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundNewtonBall002:
+    file: Misc_Sci_fi_48.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundNewtonBall003:
+    file: Misc_Sci_fi_49.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundNewtonBall004:
+    file: Misc_Sci_fi_51.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundNewtonBall005:
+    file: Misc_Sci_fi_52.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::OUTLANE
+# ---------------------
+  soundOutlane001:
+    file: BioMachineSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOutlane002:
+    file: BioMachineSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOutlane003:
+    file: BioMachineSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOutlane004:
+    file: BioMachineSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOutlane005:
+    file: BioMachineSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::RETURNLANE
+# ---------------------
+  soundEvisceratorSingleShot001:
+    file: EvisceratorSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundEvisceratorSingleShot002:
+    file: EvisceratorSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundEvisceratorSingleShot003:
+    file: EvisceratorSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundEvisceratorSingleShot004:
+    file: EvisceratorSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundEvisceratorSingleShot005:
+    file: EvisceratorSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::ThornSingleShot
+# ---------------------
+  soundThornSingleShot001:
+    file: ThornSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundThornSingleShot002:
+    file: ThornSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundThornSingleShot003:
+    file: ThornSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundThornSingleShot004:
+    file: ThornSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundThornSingleShot005:
+    file: ThornSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::SLINGSHOT
+# ---------------------
+  soundPulseGunSingleShot001:
+    file: PulseGunSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundPulseGunSingleShot002:
+    file: PulseGunSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundPulseGunSingleShot003:
+    file: PulseGunSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundPulseGunSingleShot004:
+    file: PulseGunSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundPulseGunSingleShot005:
+    file: PulseGunSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::SPINNER
+# ---------------------
+  soundSpinner001:
+    #file: Zapps_01.wav
+    file: Zapps_01.wav
+    track: sfx
+    volume: 0.6
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSpinner002:
+    #file: Zapps_02.wav
+    file: Zapps_02.wav
+    track: sfx
+    volume: 0.6
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSpinner003:
+    #file: Zapps_03.wav
+    file: Zapps_03.wav
+    track: sfx
+    volume: 0.6
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSpinner004:
+    file: Zapps_04.wav
+    track: sfx
+    volume: 0.6
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSpinner005:
+    file: Zapps_05.wav
+    track: sfx
+    volume: 0.6
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::STANDUPTARGET
+# ---------------------
+  soundRebelBioSingleShot001:
+    file: RebelBioSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRebelBioSingleShot002:
+    file: RebelBioSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRebelBioSingleShot003:
+    file: RebelBioSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRebelBioSingleShot004:
+    file: RebelBioSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRebelBioSingleShot005:
+    file: RebelBioSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::START
+# ---------------------
+  soundStart001:
+    file: LockInPlaceRocketLoad001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundStart002:
+    file: LockInPlaceRocketLoad002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundStart003:
+    file: LockInPlaceRocketLoad003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundStart004:
+    file: LockInPlaceRocketLoad004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+
+    
+# ---------------------
+# SOUNDS::SFX::TROUGHEJECT
+# ---------------------
+  soundTroughEject001:
+    file: AngryDaddyReload001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundTroughEject002:
+    file: AngryDaddyReload002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundTroughEject003:
+    file: AngryDaddyReload003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundTroughEject004:
+    file: AngryDaddyReload004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::UPPERTOLOWER
+# ---------------------
+  soundUpperToLower001:
+    file: RocketLauncherSemiAutoReload001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundUpperToLower002:
+    file: RocketLauncherSemiAutoReload002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundUpperToLower003:
+    file: RocketLauncherSemiAutoReload003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundUpperToLower004:
+    file: RocketLauncherSemiAutoReload004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundUpperToLower005:
+    file: RocketLauncherSemiAutoReload005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::VUKCANNON
+# ---------------------
+  soundVUKCannon001:
+    file: SteamerSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundVUKCannon002:
+    file: SteamerSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundVUKCannon003:
+    file: SteamerSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+  
+  soundVUKCannon004:
+    file: SteamerSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundVUKCannon005:
+    file: SteamerSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::DROP
+# ---------------------
+  soundDropTarget001:
+    file: MetalChunkerGunSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundDropTarget002:
+    file: MetalChunkerGunSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundDropTarget003:
+    file: MetalChunkerGunSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundDropTarget004:
+    file: MetalChunkerGunSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundDropTarget005:
+    file: MetalChunkerGunSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+# ---------------------
+# SOUNDS::POOLS
+sound_pools:
+
+  poolSoundChimesA:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundChimes001
+      - soundChimes002
+      - soundChimes003
+
+  poolSoundChimesB:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundChimes004
+      - soundChimes005
+      - soundChimes006
+      - soundChimes007
+
+  poolSoundHighScore:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundHighScore001
+      - soundHighScore002
+      - soundHighScore003
+      - soundHighScore004
+      
+  poolSoundCompute:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundCompute001
+      - soundCompute002
+      - soundCompute003
+      - soundCompute004
+      - soundCompute005
+      - soundCompute006
+      
+  poolSoundZapps:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundZapps001
+      - soundZapps002
+      - soundZapps003
+      
+      
+  poolSoundRailGunSingleShot:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundRailGunSingleShot001
+      - soundRailGunSingleShot002
+      - soundRailGunSingleShot003
+      - soundRailGunSingleShot004
+      - soundRailGunSingleShot005
+      
+  poolSoundImpulseGunSingleShot:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundImpulseGunSingleShot001
+      - soundImpulseGunSingleShot002
+      - soundImpulseGunSingleShot003
+      - soundImpulseGunSingleShot004
+      - soundImpulseGunSingleShot005
+
+  poolSoundBallSaveStopper:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundBallSaveStopper001
+      - soundBallSaveStopper002
+      - soundBallSaveStopper003
+      - soundBallSaveStopper004
+      - soundBallSaveStopper005
+      
+  poolSoundBallSaveWindUp:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundBallSaveWindUp001
+      - soundBallSaveWindUp002
+      - soundBallSaveWindUp003
+
+  poolSoundBackFromThePastSingleShot:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundBackFromThePastSingleShot001
+      - soundBackFromThePastSingleShot002
+      - soundBackFromThePastSingleShot003
+      - soundBackFromThePastSingleShot004
+      - soundBackFromThePastSingleShot005
+      
+  poolSoundCoin:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundCoin001
+      - soundCoin002
+      - soundCoin003
+      - soundCoin004
+      
+  poolSoundDoor:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundDoor001
+      - soundDoor002
+      
+  poolSoundGameOver:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundGameOver001
+      - soundGameOver002
+      
+  poolSoundLowerPFDropTarget:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundLowerPFDropTarget001
+      - soundLowerPFDropTarget002
+      - soundLowerPFDropTarget003
+      - soundLowerPFDropTarget004
+      - soundLowerPFDropTarget005
+      
+  poolSoundLowerPFTarget:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundLowerPFTarget001
+      - soundLowerPFTarget002
+      - soundLowerPFTarget003
+      - soundLowerPFTarget004
+      - soundLowerPFTarget005
+      
+  poolSoundLowerToUpper:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundLowerToUpper001
+      
+  poolSoundMagnet:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundMagnet001
+      
+  poolSoundNewtonBall:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundNewtonBall001
+      - soundNewtonBall002
+      - soundNewtonBall003
+      - soundNewtonBall004
+      - soundNewtonBall005
+      
+  poolSoundOutlane:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundOutlane001
+      - soundOutlane002
+      - soundOutlane003
+      - soundOutlane004
+      - soundOutlane005
+      
+  poolSoundEvisceratorSingleShot:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundEvisceratorSingleShot001
+      - soundEvisceratorSingleShot002
+      - soundEvisceratorSingleShot003
+      - soundEvisceratorSingleShot004
+      - soundEvisceratorSingleShot005
+      
+  poolSoundWhooshStarShips:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundWhooshStarShip001
+      - soundWhooshStarShip002
+      - soundWhooshStarShip003
+      - soundWhooshStarShip004
+      - soundWhooshStarShip005
+      - soundWhooshStarShip006
+            
+  poolSoundPulseGunSingleShot:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundPulseGunSingleShot001
+      - soundPulseGunSingleShot002
+      - soundPulseGunSingleShot003
+      - soundPulseGunSingleShot004
+      - soundPulseGunSingleShot005
+      
+  poolSoundSpinner:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundSpinner001
+      - soundSpinner002
+      - soundSpinner003
+      - soundSpinner004
+      - soundSpinner005
+      
+  poolSoundRebelBioSingleShot:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundRebelBioSingleShot001
+      - soundRebelBioSingleShot002
+      - soundRebelBioSingleShot003
+      - soundRebelBioSingleShot004
+      - soundRebelBioSingleShot005
+      
+  poolSoundStart:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundStart001
+      - soundStart002
+      - soundStart003
+      - soundStart004
+      
+  poolSoundOneshot:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundOneshot001
+      - soundOneshot002
+      - soundOneshot003
+      - soundOneshot004
+      - soundOneshot005
+      - soundOneshot006
+      
+  poolSoundReverse:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundReverse001
+      - soundReverse002
+      - soundReverse003
+      - soundReverse004
+      - soundReverse005
+      
+  poolSoundTroughEject:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundTroughEject001
+      - soundTroughEject002
+      - soundTroughEject003
+      - soundTroughEject004
+      
+  poolSoundUpperToLower:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundUpperToLower001
+      - soundUpperToLower002
+      - soundUpperToLower003
+      - soundUpperToLower004
+      - soundUpperToLower005
+      
+  poolSoundVUKCannon:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundVUKCannon001
+      - soundVUKCannon002
+      - soundVUKCannon003
+      - soundVUKCannon004
+      - soundVUKCannon005
+      
+  poolSoundElectrocutorGunSingleShot:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundElectrocutorGunSingleShot001
+      - soundElectrocutorGunSingleShot002
+      - soundElectrocutorGunSingleShot003
+      - soundElectrocutorGunSingleShot004
+      - soundElectrocutorGunSingleShot005
+      
+  poolSoundDropTarget:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundDropTarget001
+      - soundDropTarget002
+      - soundDropTarget003
+      - soundDropTarget004
+      - soundDropTarget005
+    
+  poolSoundThornSingleShot:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundThornSingleShot001
+      - soundThornSingleShot002
+      - soundThornSingleShot003
+      - soundThornSingleShot004
+      - soundThornSingleShot005
+      
+
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+sound_player:
+
+  # ---------------------
+  # SOUNDS::PLAYER::HIGH_SCORE
+  # ---------------------
+  #shift_left_event:
+  eventShiftLeft:
+    poolSoundZapps:
+      loops: 0
+      volume: 0.3
+
+  #shift_right_event:
+  eventShiftRight:
+    poolSoundZapps:
+      loops: 0
+      volume: 0.3
+      
+  #select_event:
+  eventSelect:
+    poolSoundBallSaveWindUp:
+      loops: 0
+      volume: 0.5
+
+  playPoolSoundChimesA:
+    poolSoundChimesA:
+      loops: 0
+      volume: 0.6
+
+  playPoolSoundChimesB:
+    poolSoundChimesB:
+      loops: 0
+      volume: 0.6
+
+  playPoolSoundHighScore:
+    poolSoundHighScore:
+      loops: 0
+      volume: 0.9
+  
+  playPoolSoundCompute:
+    poolSoundCompute:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundRailGunSingleShot:
+    poolSoundRailGunSingleShot:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundImpulseGunSingleShot:
+    poolSoundImpulseGunSingleShot:
+      loops: 0
+      volume: 0.9
+
+  playPoolSoundBallSaveStopper:
+    poolSoundBallSaveStopper:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundBallSaveWindUp:
+    poolSoundBallSaveWindUp:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundBackFromThePastSingleShot:
+    poolSoundBackFromThePastSingleShot:
+      loops: 0
+      volume: 0.9
+
+  playPoolSoundCoin:
+    poolSoundCoin:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundDoor:
+    poolSoundDoor:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundGameOver:
+    poolSoundGameOver:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundLowerPFDropTarget:
+    poolSoundLowerPFDropTarget:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundLowerPFTarget:
+    poolSoundLowerPFTarget:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundLowerToUpper:
+    poolSoundLowerToUpper:
+      loops: 0
+      volume: 0.9
+      
+  playPoolMagnet:
+    poolSoundMagnet:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundNewtonBall:
+    poolSoundNewtonBall:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundOutlane:
+    poolSoundOutlane:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundEvisceratorSingleShot:
+    poolSoundEvisceratorSingleShot:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundWhooshStarShips:
+    poolSoundWhooshStarShips:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundPulseGunSingleShot:
+    poolSoundPulseGunSingleShot:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundSpinner:
+    poolSoundSpinner:
+      loops: 0
+      volume: 0.6
+      
+  playPoolSoundRebelBioSingleShot:
+    poolSoundRebelBioSingleShot:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundStart:
+    poolSoundStart:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundOneshot:
+    poolSoundOneshot:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundReverse:
+    poolSoundReverse:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundTroughEject:
+    poolSoundTroughEject:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundUpperToLower:
+    poolSoundUpperToLower:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundVUKCannon:
+    poolSoundVUKCannon:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundElectrocutorGunSingleShot:
+    poolSoundElectrocutorGunSingleShot:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundDropTarget:
+    poolSoundDropTarget:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundThornSingleShot:
+    poolSoundThornSingleShot:
+      loops: 0
+      volume: 0.9
+      
+# *********************
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+# *********************
+event_player:
+  
+# ---------------------
+# EVENT::PLAYER::SOUNDS_ON_EVENT
+# ---------------------
+  eventPlayPoolSoundSaucerKickout:
+    playPoolSoundElectrocutorGunSingleShot
+    
+  ball_starting:
+    playPoolVoiceBallyStarTrekBallStarting
+    
+  ball_save_default_saving_ball:
+    playPoolVoiceBallyStarTrekBallSave
+
+  game_will_end:
+    playPoolVoiceBallyStarTrekGameOver
+    
+  # SPINNER HIT EVERY THIRD TIME
+  shotSpinnerLeft_litSolid_hit:
+    playPoolSoundSpinner
+    
+  shotSpinnerRight_litSolid_hit:
+    playPoolSoundSpinner
+    
+# ---------------------
+# EVENT::PLAYER::SWITCH TAGS
+# ---------------------
+  sw_tagCoin:
+    playPoolSoundCoin
+    
+  sw_tagStart:
+    #playPoolSoundComputer
+    playPoolSoundStart
+    
+  sw_tagLaunch:
+    playPoolSoundComputer
+    
+  sw_tagShooterLane:
+    playPoolSoundSwoosh
+    
+  sw_tagBumper:
+    #playPoolSoundComputer
+    #playPoolSoundMineBlast
+    playPoolSoundBleep
+    
+  sw_tagTarget:
+    #playPoolSoundRebelBioSingleShot
+    #playPoolStandupTarget
+    playPoolSoundPlasmaRifle
+    
+  sw_tagLane:
+    playPoolSoundImpact
+    
+  sw_tagDropTarget:
+    #playPoolSoundDropTarget
+    #playPoolSoundPhotonTorpedo
+    playPoolSoundElectricPistol
+    
+  sw_tagInlineDropTarget:
+    #playPoolSoundBleep
+    playPoolSoundMineBlast
+    
+  sw_tagRollover:
+    #playPoolSoundWhooshStarShips
+    playPoolSoundRollover
+    
+  #sw_tagSpinner:
+  #  playPoolSoundSpinner
+    
+  #sw_tagSling:
+  #  #playPoolSoundPulseGunSingleShot
+  #  playPoolSoundSlingShot
+    
+  sw_tagSling:
+    playPoolSoundPhotonTorpedo
+
+  sw_tagThumper:
+    #playPoolSoundRebelBioSingleShot
+    #playPoolSoundThumper
+    playPoolSoundPhaser
+    #playPoolSoundSwoosh
+    
+  sw_tagReturn:
+    #playPoolSoundAlert
+    playPoolSoundReturnLane
+    
+  sw_tagOutlane:
+    #playPoolVoiceBallyStarTrekBallLost
+    playPoolSoundOutlane
+    
+  sw_tagDrain:
+    #playPoolSoundSwoosh
+    playPoolSoundDrain
+
+  shotPlanetMercury_litSolid_hit:
+    playPoolSoundExplosion
+
+## *********************
+## ---------------------
+## EVENT::PLAYER
+## ---------------------
+## *********************
+#event_player:
+#  
+## ---------------------
+## EVENT::PLAYER::SOUNDS_ON_EVENT
+## ---------------------
+#  eventPlayPoolSoundSaucerKickout:
+#    playPoolSoundElectrocutorGunSingleShot
+#    
+## ---------------------
+## EVENT::PLAYER::SOUNDS_ON_SWITCH
+## ---------------------
+#  sw_tagHiddenLane:
+#    playPoolSoundHighScore
+#    
+#  sw_tagCoin:
+#    playPoolSoundCoin
+#      
+#  sw_tagLowerPFDropTarget:
+#    playPoolSoundLowerPFDropTarget
+#      
+#  sw_tagDropRt:
+#    playPoolSoundLowerPFDropTarget
+#    
+#  sw_tagLowerPFTarget:
+#    playPoolSoundLowerPFTarget
+#      
+#  sw_tagDropLf:
+#    playPoolSoundLowerPFTarget
+#    
+#  sw_tagDropTarget:
+#    playPoolSoundDropTarget
+#  
+#  sw_tagNewtonBall:
+#    playPoolSoundNewtonBall
+#    
+#  #sw_tagOutlane:
+#  #  playPoolSoundOutlane
+#      
+#  sw_tagRollover:
+#    playPoolSoundWhooshStarShips
+#    
+#  #sw_tagSlingShot:
+#  sw_tagSling:
+#    playPoolSoundPulseGunSingleShot
+#      
+#  #sw_tagSpinner:
+#  #  playPoolSoundSpinner
+#
+#  #sw_tagStandupTarget:
+#  sw_tagTarget:
+#    playPoolSoundRebelBioSingleShot
+#    
+#  #sw_tagStart:
+#  #  playPoolSoundStart
+#      
+#  sw_tagThumper:
+#    playPoolSoundRebelBioSingleShot
+#    
+#  sw_tagReverseTarget:
+#    playPoolSoundReverse
+#    
+#  sw_tagVariTarget:
+#    playPoolSoundRailGunSingleShot
+#    
+#  sw_tagDropYellow:
+#    playPoolSoundThornSingleShot
+#    
+#  sw_tagDropRed:
+#    playPoolSoundPulseGunSingleShot
+#    
+#  sw_tagPopRollover:
+#    playPoolSoundRebelBioSingleShot
+#    
+#  #sw_tagDrain:
+#  #  playPoolSoundDoor
+#    
+#  sw_s10pts:
+#    playPoolSoundEvisceratorSingleShot
+#    
+#  sw_s50pts:
+#    playPoolSoundBackFromThePastSingleShot
+#    
+#  #sw_tagReturnLane:
+#  #  playPoolSoundImpulseGunSingleShot
+#    
+#  sw_tagLane:
+#    #playPoolSoundOneshot
+#    playPoolSoundImpact
+#    
+#  #sw_tagDropRight:
+#  #  playPoolSoundAxe
+#    
+#  #sw_tagThumper:
+#  #  playPoolSoundSword
+#        
+#  sw_tagSpinner:
+#    #playPoolSoundThunder
+#    playPoolSoundSpinner
+#    
+## -----------------------
+## BALLY STAR TREK
+## -----------------------
+#  # -----------------------
+#  # BALLY STAR TREK::MODES
+#  # -----------------------
+#  ball_starting:
+#    playPoolVoiceBallyStarTrekBallStarting
+#    
+#  ball_save_default_saving_ball:
+#    playPoolVoiceBallyStarTrekBallSave
+#    
+#  shotTargetTopLeft_hit:
+#    playPoolVoiceBallyStarTrekTargetHit
+#    
+#  game_will_end:
+#    playPoolVoiceBallyStarTrekGameOver
+#
+#  # -----------------------
+#  # BALLY STAR TREK::SHOTS
+#  # -----------------------
+#  sw_tagOutlane:
+#    playPoolVoiceBallyStarTrekBallLost
+#
+#  sw_tagStart:
+#    playPoolSoundComputer
+#
+#  #sw_tagThumper:
+#  #  playPoolSoundOneshot
+#    
+#  sw_tagReturnLane:
+#    playPoolSoundAlert
+#    
+#  sw_tagBumper:
+#    playPoolSoundComputer
+#    
+#  sw_tagDropLeft:
+#    playPoolSoundExplosion
+#    
+#  #sw_tagTarget:
+#  #  playPoolSoundPhaser
+#    
+#  #sw_tagSling:
+#  #  playPoolSoundPhotonTorpedo
+#    
+#  sw_tagLaneUpper:
+#    playPoolSoundTransporter
+#    
+#  sw_tagDrain:
+#    playPoolSoundSwoosh
+#    
+#  sw_tagLaneShooter:
+#    playPoolSoundSwoosh
+#    
+#  #sw_tagRollover:
+#  #  playPoolSoundWarp
+#    
+#  sw_tagLaneLeft:
+#    playPoolSoundWhistle
+#    
+
+    

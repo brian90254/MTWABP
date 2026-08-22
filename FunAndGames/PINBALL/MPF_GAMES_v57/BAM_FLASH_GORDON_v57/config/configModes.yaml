@@ -1,0 +1,29 @@
+#config_version=6
+
+modes:
+#-----------------
+# MODES::BASE
+#-----------------
+- modeBase
+- credits
+- bonus
+- high_score
+
+#-----------------
+# MODES::GAME SPECIFIC
+#-----------------
+- modeFlashGordon
+
+#-----------------
+# MODES::GENERIC
+#-----------------
+- modeBallSave
+#- modeBallSaveOutlane
+#- modeBallSaveHidden
+#- modeCollectBonus
+#- modeCollectMidGameBonus
+- modeCollectMidGameBonusLower
+#- modeSkillShot
+#- modeAwardWheel
+#- modeMultiball
+

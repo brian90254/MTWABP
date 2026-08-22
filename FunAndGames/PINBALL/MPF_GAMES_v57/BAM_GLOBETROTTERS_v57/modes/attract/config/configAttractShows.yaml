@@ -1,0 +1,67 @@
+#config_version=6
+
+# ************************************
+# SHOW::PLAYER
+# ************************************
+show_player:
+# ---------------------
+# SHOW::PLAYER::ATTRACT
+# --------------------- 
+  mode_attract_started:
+    showAttractLightPlayers:
+      loops: -1
+      speed: 1
+      
+    showAttractLightBonus:
+      loops: -1
+      speed: 1
+
+    showAttractLightAwardGlobe:
+      loops: -1
+      speed: 1
+      
+    showAttractLightGlobeSaucer:
+      loops: -1
+      speed: 1
+      
+    showAttractLightExtraBall:
+      loops: -1
+      speed: 1
+      
+    showAttractLightReboundLane:
+      loops: -1
+      speed: 1
+      
+    showAttractLightAwardSpinnerMiddle:
+      loops: -1
+      speed: 1
+      
+    showAttractLightTargetSlamDunk:
+      loops: -1
+      speed: 1
+      
+    showAttractLightTimeOut:
+      loops: -1
+      speed: 1
+      
+    showAttractLightAwardSpinnerRight:
+      loops: -1
+      speed: 1
+
+    showAttractLightCircleThumperLeft:
+      loops: -1
+      speed: 1
+      
+    showAttractLightCircleThumperMiddle:
+      loops: -1
+      speed: 1
+      
+    showAttractLightCircleThumperRight:
+      loops: -1
+      speed: 1
+      
+    #showAttractLights:
+    #  loops: -1
+    #  speed: 1
+
+  

@@ -1,0 +1,191 @@
+#config_version=6
+
+# ************************************
+# SHOW::PLAYER
+# ************************************
+show_player:
+
+# ---------------------
+# SHOW::VIDEO::TEST
+# ---------------------
+  #eventShowAttractVideoSlideTest:
+  #  showAttractVideoSlideTest:
+  #    loops: 0
+  #    speed: 1
+      
+# ---------------------
+# SHOW::PLAYER::ATTRACT
+# --------------------- 
+  mode_attract_started:
+
+# ------------------
+#   ROLLOVERS
+# ------------------
+    showAttractLightRollover1:
+      loops: -1
+      speed: 8
+
+    showAttractLightRollover2:
+      loops: -1
+      speed: 8
+      
+    showAttractLightRollover3:
+      loops: -1
+      speed: 8
+      
+    showAttractLightRollover4:
+      loops: -1
+      speed: 8
+      
+# ------------------
+#   BONUS
+# ------------------
+    showAttractLightBonus:
+      loops: -1
+      speed: 6
+      
+    #showAttractLightPins:
+    #  loops: -1
+    #  speed: 4
+    
+    #showAttractLightDropInlineTargetA:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightSaucerLeftCollectBonus:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightSaucerUpper:
+    #  loops: -1
+    #  speed: 1
+      
+    #showAttractLightThumperLowerRight:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperLowerLeft:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperUpperLeft:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperUpperRight:
+    #  loops: -1
+    #  speed: 1
+      
+# ------------------
+#   THUMPERS
+# ------------------
+    showAttractLightThumperLeft:
+      loops: -1
+      speed: 1
+    #showAttractLightThumperTop:
+    #  loops: -1
+    #  speed: 1
+    showAttractLightThumperMiddle:
+      loops: -1
+      speed: 1
+    showAttractLightThumperRight:
+      loops: -1
+      speed: 1
+
+# ------------------
+#   SHOOT AGAIN
+# ------------------
+    showAttractLightShootAgain:
+      loops: -1
+      speed: 1
+      
+
+# ------------------
+#   JAMES BOND TEST
+# ------------------
+    showAttractLightJamesBondTest:
+      loops: -1
+      speed: 1
+      
+
+### ------------------
+###   WARP DRIVE
+### ------------------
+##    showAttractLightWarpDriveLeft:
+##      loops: -1
+##      speed: 6
+##    showAttractLightWarpDriveRight:
+##      loops: -1
+##      speed: 6
+#
+## ------------------
+##   ROLLOVERS
+## ------------------
+#    showAttractLightRollover:
+#      loops: -1
+#      speed: 4
+#
+## ------------------
+##   BONUS
+## ------------------
+#    # ------------------
+#    #   UPPER MINI
+#    # ------------------
+#    showAttractLightBonusMini:
+#      loops: -1
+#      speed: 5
+#
+#    # ------------------
+#    #   LOWER SUPER
+#    # ------------------
+#    showAttractLightBonusSuper:
+#      loops: -1
+#      speed: 5
+#      
+## ------------------
+##   3-UPS
+## ------------------
+#    # ------------------
+#    #   MULTIPLIERS
+#    # ------------------
+#    showAttractLight3UpMultipliers:
+#      loops: -1
+#      speed: 3
+#
+#    # ------------------
+#    #   OUTLANES CLOCKS
+#    # ------------------
+#    showAttractLight3UpOutlanesClocks:
+#      loops: -1
+#      speed: 3
+#      
+#    # ------------------
+#    #   EXTRA BALL::TARGET MULTIPLIERS
+#    # ------------------
+#    showAttractLight3UpExtraBallTargets:
+#      loops: -1
+#      speed: 3
+#
+## ------------------
+##   SINGLES
+## ------------------
+#    # ------------------
+#    #   DROP TARGET LEFT
+#    # ------------------
+#    showAttractLightDropTargetLeft:
+#      loops: -1
+#      speed: 4
+#
+#    # ------------------
+#    #   ARROWS
+#    # ------------------
+#    showAttractLightSingleArrows:
+#      loops: -1
+#      speed: 4
+#      
+#    # ------------------
+#    #   OTHERS
+#    # ------------------
+#    showAttractLightSingleOthers:
+#      loops: -1
+#      speed: 4

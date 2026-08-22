@@ -1,0 +1,276 @@
+#config_version=6
+
+# ************************************
+# SHOW::PLAYER
+# ************************************
+show_player:
+
+# ---------------------
+# SHOW::VIDEO::TEST
+# ---------------------
+  #eventShowAttractVideoSlideTest:
+  #  showAttractVideoSlideTest:
+  #    loops: 0
+  #    speed: 1
+      
+# ---------------------
+# SHOW::PLAYER::ATTRACT
+# --------------------- 
+  mode_attract_started:
+
+    #showAttractLightPins:
+    #  loops: -1
+    #  speed: 4
+    
+    #showAttractLightDropInlineTargetA:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightSaucerLeftCollectBonus:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightSaucerUpper:
+    #  loops: -1
+    #  speed: 1
+      
+    #showAttractLightThumperLowerRight:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperLowerLeft:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperUpperLeft:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperUpperRight:
+    #  loops: -1
+    #  speed: 1
+      
+# ------------------
+#   THUMPERS
+# ------------------
+    showAttractLightThumperLeft:
+      loops: -1
+      speed: 1
+    #showAttractLightThumperTop:
+    #  loops: -1
+    #  speed: 1
+    showAttractLightThumperMiddle:
+      loops: -1
+      speed: 1
+    showAttractLightThumperRight:
+      loops: -1
+      speed: 1
+
+#------------------
+#  SHOOT AGAIN
+#------------------
+    showAttractLightShootAgain:
+      loops: -1
+      speed: 1
+
+# ------------------
+#   ROLLOVERS
+# ------------------
+    showAttractLightRollover:
+      loops: -1
+      speed: 4
+
+# ------------------
+#   BONUS
+# ------------------
+    showAttractLightBonus:
+      loops: -1
+      speed: 5
+      
+# ------------------
+#   GROTTO BONUS
+# ------------------
+    showAttractLightGrottoBonus:
+      loops: -1
+      speed: 1
+
+# ------------------
+#   PLAYMATES
+# ------------------
+    showAttractLightPlaymates:
+      loops: -1
+      speed: 1
+      
+# ------------------
+#   SINGLES
+# ------------------
+    showAttractLightSingleOthers:
+      loops: -1
+      speed: 1
+      
+# ------------------
+#   KEYS
+# ------------------
+    # ------------------
+    #   KEY :: 1
+    # ------------------
+    showAttractLightKeys1:
+      loops: -1
+      speed: 1
+    # ------------------
+    #   KEY :: 2
+    # ------------------
+    showAttractLightKeys2:
+      loops: -1
+      speed: 1
+    # ------------------
+    #   KEY :: 3
+    # ------------------
+    showAttractLightKeys3:
+      loops: -1
+      speed: 1
+    # ------------------
+    #   KEY :: 4
+    # ------------------
+    showAttractLightKeys4:
+      loops: -1
+      speed: 1
+    # ------------------
+    #   KEY :: 5
+    # ------------------
+    showAttractLightKeys5:
+      loops: -1
+      speed: 1
+    # ------------------
+    #   KEY :: 6
+    # ------------------
+    showAttractLightBonusMultiplier5X:
+      loops: -1
+      speed: 1
+      
+# ------------------
+#   3-UPS
+# ------------------
+    # ------------------
+    #   MULTIPLIERS
+    # ------------------
+    showAttractLight3UpMultipliers:
+      loops: -1
+      speed: 3
+    
+      
+    # ------------------
+    #   UPPER MINI
+    # ------------------
+    #showAttractLightBonusMini:
+    #  loops: -1
+    #  speed: 5
+
+    # ------------------
+    #   LOWER SUPER
+    # ------------------
+    #showAttractLightBonusSuper:
+    #  loops: -1
+    #  speed: 5
+      
+# ------------------
+#   3-UPS
+# ------------------
+    # ------------------
+    #   MULTIPLIERS
+    # ------------------
+    #showAttractLight3UpMultipliers:
+    #  loops: -1
+    #  speed: 3
+
+    # ------------------
+    #   OUTLANES CLOCKS
+    # ------------------
+    #showAttractLight3UpOutlanesClocks:
+    #  loops: -1
+    #  speed: 3
+      
+    # ------------------
+    #   EXTRA BALL::TARGET MULTIPLIERS
+    # ------------------
+    #showAttractLight3UpExtraBallTargets:
+    #  loops: -1
+    #  speed: 3
+
+# ------------------
+#   SINGLES
+# ------------------
+    # ------------------
+    #   DROP TARGET LEFT
+    # ------------------
+    #showAttractLightDropTargetLeft:
+    #  loops: -1
+    #  speed: 4
+
+    # ------------------
+    #   ARROWS
+    # ------------------
+    #showAttractLightSingleArrows:
+    #  loops: -1
+    #  speed: 4
+      
+    # ------------------
+    #   OTHERS
+    # ------------------
+    #showAttractLightSingleOthers:
+    #  loops: -1
+    #  speed: 4
+
+
+## ------------------
+##   BONUS MULTIPLIER
+## ------------------
+#    showAttractLightBonusMultiplier2X:
+#      loops: -1
+#      speed: 1
+#    showAttractLightBonusMultiplier3X:
+#      loops: -1
+#      speed: 1
+
+## ------------------
+##   BONUS ADVANCE
+## ------------------
+#    showAttractLightBonusAdvance20:
+#      loops: -1
+#      speed: 1
+      
+## ------------------
+##   DROP LEFT
+## ------------------
+#    showAttractLightDropLeftSpecial:
+#      loops: -1
+#      speed: 1
+#      
+#
+#    showAttractLightSpinnerCount:
+#      loops: -1
+#      speed: 1
+#      
+#    showAttractLightBonus:
+#      loops: -1
+#      speed: 1
+#
+#    showAttractLightBonusCount:
+#      loops: -1
+#      speed: 1
+#      
+#    showAttractLightMultiplier:
+#      loops: -1
+#      speed: 1
+#      
+#    showAttractLightWhenLit:
+#      loops: -1
+#      speed: 1
+#
+#    showAttractLightExtraBall:
+#      loops: -1
+#      speed: 1
+#
+#    showAttractLightBUCK:
+#      loops: -1
+#      speed: 1

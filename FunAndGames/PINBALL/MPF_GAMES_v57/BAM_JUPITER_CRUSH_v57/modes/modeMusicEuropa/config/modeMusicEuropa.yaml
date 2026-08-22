@@ -1,0 +1,75 @@
+#config_version=6
+
+mode:
+  start_events: eventStartModeMusicEuropa
+  stop_events: eventStopModeMusicEuropa
+  priority: 1000
+
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  mode_modeMusicEuropa_started:
+    musicEuropa001:
+      loops: -1
+      volume: 0.3
+      
+  mode_modeMusicEuropa_ending:
+    musicEuropa001:
+      action: stop
+  #---------------------
+  eventShotMusicHLoopOnHit:
+    musicEuropa002:
+      loops: -1
+      volume: 0.45
+      
+  eventShotMusicHLoopOffHit:
+    musicEuropa002:
+      action: stop
+  # ---------------------      
+  eventShotMusicULoopOnHit:
+    musicEuropa003:
+      loops: -1
+      volume: 0.25
+      
+  eventShotMusicULoopOffHit:
+    musicEuropa003:
+      action: stop
+  # ---------------------
+  eventShotMusicNLoopOnHit:
+    musicEuropa004:
+      loops: -1
+      volume: 0.6
+      
+  eventShotMusicNLoopOffHit:
+    musicEuropa004:
+      action: stop
+  # ---------------------
+  eventShotMusicTLoopOnHit:
+    musicEuropa005:
+      loops: -1
+      volume: 0.15
+      
+  eventShotMusicTLoopOffHit:
+    musicEuropa005:
+      action: stop
+  # ---------------------
+  eventShotMusicELoopOnHit:
+    musicEuropa006:
+      loops: -1
+      volume: 0.45
+      
+  eventShotMusicELoopOffHit:
+    musicEuropa006:
+      action: stop
+  # ---------------------
+  eventShotMusicRLoopOnHit:
+    musicEuropa007:
+      loops: -1
+      volume: 0.3
+      
+  eventShotMusicRLoopOffHit:
+    musicEuropa007:
+      action: stop
+  # ---------------------
+  

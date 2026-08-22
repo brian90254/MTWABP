@@ -1,0 +1,122 @@
+#config_version=6
+
+config:
+# -------------
+- configModeCarouselBackglass.yaml
+# -------------
+- configModeCarouselSlideSpidermanVillanScorpion.yaml
+- configModeCarouselSlideSpidermanVillanKraven.yaml
+- configModeCarouselSlideSpidermanVillanLizard.yaml
+- configModeCarouselSlideSpidermanVillanKingPin.yaml
+# -------------
+
+mode:
+  start_events:
+    - eventStartModeCarousel
+  stop_events:
+    - eventStopModeCarousel
+  code: mpf.modes.carousel.code.carousel.Carousel
+  use_wait_queue: true
+  priority: 200
+  
+mode_settings:
+  selectable_items:
+    # -------------
+    - spidermanVillanScorpion
+    - spidermanVillanKraven
+    - spidermanVillanLizard
+    - spidermanVillanKingPin
+    # -------------
+  select_item_events: eventModeCarouselSelect
+  next_item_events: eventModeCarouselNext
+  previous_item_events: eventModeCarouselPrevious
+  # THIS PREVENTS A ROTATE DURING SELECT 
+  block_events: flipper_cancel
+  release_events: both_flippers_inactive
+
+# -----------------------
+# EVENT::PLAYER::SELECT
+# -----------------------
+event_player:
+  # -----------------------------------
+  # MUSIC
+  # -----------------------------------
+  mode_modeCarousel_started:
+  - eventPlaylistModeSpidermanStart
+  - eventShowSlideCarouselBackglass
+
+  # -----------------------------------
+  # ROTATE
+  # -----------------------------------
+  sw_flipper_left_inactive:
+    # ROTATE
+    - eventModeCarouselPrevious
+    # PLAY SOUND
+    - playPoolSoundStart
+    # RESTART TIMER
+    - eventRestartTimerModeCarouselSelectTimeout
+    
+  sw_flipper_right_inactive:
+    # ROTATE
+    - eventModeCarouselNext
+    # PLAY SOUND
+    - playPoolSoundStart
+    # RESTART TIMER
+    - eventRestartTimerModeCarouselSelectTimeout
+    
+  # -----------------------------------
+  # SELECT
+  # -----------------------------------
+  sw_tagLaunch:
+    # SELECT
+    - eventModeCarouselSelect
+  # -------------------------
+  flipper_cancel:
+    # SELECT
+    - eventModeCarouselSelect
+  # -------------------------
+  timer_timerModeCarouselSelectTimeout_complete:
+    # SELECT
+    - eventModeCarouselSelect
+  # -------------------------
+  
+# -----------------------
+# START BY VILLAN SELECTED
+# -----------------------
+  # SELECT MODE
+  # -------------
+  modeCarousel_spidermanVillanScorpion_selected:
+    - eventStartModeSpidermanVillanScorpion|100ms
+  # -------------
+  modeCarousel_spidermanVillanKraven_selected:
+    - eventStartModeSpidermanVillanKraven|100ms
+  # -------------
+  modeCarousel_spidermanVillanLizard_selected:
+    - eventStartModeSpidermanVillanLizard|100ms
+  # -------------
+  modeCarousel_spidermanVillanKingPin_selected:
+    - eventStartModeSpidermanVillanKingPin|100ms
+  # -------------
+  
+  # RESTART QUEUE RELAY PLAYER
+  modeCarousel_item_selected:
+    # THIS ALSO WILL END THE CAROUSEL MODE
+    - eventQueueRelayBallStartingWaitFor
+    
+# ---------------------
+# TIMERS
+# ---------------------
+timers:
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # ----------------------------
+  timerModeCarouselSelectTimeout:
+    start_value: 2
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+    restart_on_complete: true
+    control_events:
+      - event: eventRestartTimerModeCarouselSelectTimeout
+        action: restart

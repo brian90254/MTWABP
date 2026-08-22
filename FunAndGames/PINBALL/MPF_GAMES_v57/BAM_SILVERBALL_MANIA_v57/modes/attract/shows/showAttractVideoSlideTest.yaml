@@ -1,0 +1,18 @@
+#show_version=6
+
+# *************************
+# BACKGLASS ANIMATION::ALL LETTERS
+# *************************
+- time: 0
+  #events:
+  #  presentSlideVideoLayout
+
+- time: '+1'
+  events:
+    eventShowSlideVideoTest1
+      
+- time: '+4'
+  #events:
+  #  removeSlideVideoLayout
+        
+- time: '+4'

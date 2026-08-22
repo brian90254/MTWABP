@@ -1,0 +1,189 @@
+#config_version=6
+    
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_credits_started:
+    eventCreditStart|1000ms
+    
+# ---------------------
+# EVENT::PLAYER::SOUNDS_ON_SWITCH
+# ---------------------
+  sw_tagHiddenLane:
+    playPoolSoundHighScore
+    
+  sw_tagCoin:
+    playPoolSoundCoin
+      
+  sw_tagDrain:
+    playPoolSoundDrain
+      
+  sw_tagLowerPFDropTarget:
+    playPoolSoundLowerPFDropTarget
+      
+  sw_tagDropRt:
+    playPoolSoundLowerPFDropTarget
+    
+  sw_tagLowerPFTarget:
+    playPoolSoundLowerPFTarget
+      
+  sw_tagDropLf:
+    playPoolSoundLowerPFTarget
+    
+  # sw_tagNewtonBall:
+  #   playPoolSoundNewtonBall
+
+  sw_tagLane:
+    #playPoolSoundNewtonBall
+    playPoolSoundUpperToLower
+    
+  sw_tagOutlane:
+    #playPoolSoundOutlane
+    playPoolSoundBuzzer
+    
+  # sw_tagReturnLane:
+  #   #playPoolSoundReturnLane
+  #   playPoolSoundBuzzer
+
+  sw_tagReturn:
+    playPoolSoundReturnLane
+
+  sw_tagRollover:
+    #playPoolSoundRollovers
+    #playPoolSoundBowlingStrikeMultiplePins
+    playPoolSoundGrenadeLauncherOomph
+    
+  sw_tagSlingShot:
+    playPoolSoundSlingShot
+      
+# TOO MANY HITS, MAKE SHOT REDUCE TO 1/5, ETC 
+  # sw_tagSpinner:
+  #   playPoolSoundBounce
+    #playPoolSoundSpinner
+    # -------------------
+    # SFX Angry Daddy Reload
+    #playPoolSoundTroughEject
+    #playPoolSoundBounce
+    
+  #sw_tagStandupTarget:
+  #  playPoolSoundWhistle
+    #playPoolSoundStandupTarget
+    #playPoolSoundChimesB
+    #playPoolSoundWhistle
+    
+  sw_tagStart:
+    playPoolSoundStart
+      
+  #sw_tagThumper:
+  #  playPoolSoundShot
+    #playPoolSoundThumper
+    #playPoolSoundChimesA
+    #playPoolSoundShot
+    
+  sw_tagReverseTarget:
+    playPoolSoundReverse
+    
+  sw_tagDrop:
+    playPoolSoundSwish
+
+  sw_sLowerBumper:
+    playPoolSoundLetsGo
+    
+  sw_sUpperBumper:
+    playPoolSoundDefense
+    
+  # ---------------------
+  # BALLSAVES::OUTLANE
+  # ---------------------
+  ball_save_bsOutlane_disabled:
+    - stopShowBallSaveOutlane
+    - sgOutlaneReset
+    
+  mode_modeBallSaveOutlane_started:
+    playShowBallSaveOutlane
+    
+  mode_modeBallSaveOutlane_stopping:
+    stopShowBallSaveOutlane
+    
+  # ---------------------
+  # BALLSAVES::HIDDEN
+  # ---------------------
+  ball_save_bsHidden_timer_start:
+    playShowBallSaveHidden
+    
+  ball_save_bsHidden_hurry_up:
+    playShowBallSaveHiddenHurryUp
+
+  ball_save_bsHidden_grace_period:
+    stopShowBallSaveHidden
+    
+  ball_save_bsHidden_disabled:
+    stopShowBallSaveHidden
+    
+  #ball_started:
+  #  stopShowBallSaveHidden
+    
+  ball_started:
+    - stopShowBallSaveOutlane
+    - stopShowBallSaveHidden
+    
+  # ---------------------
+  # CALL OUTS
+  # ---------------------
+  game_started:
+    - playPoolVoiceAnnouncerSpaceCadet
+    - showSlideDisplayBackglass2
+    
+# -----------------
+# DISPLAYS::SLIDES
+# -----------------
+slides:
+  slideDisplayBackglass2:
+    widgets:
+    - type: image
+      image: imagebackglass
+
+#slide_player:
+#  showSlideDisplayBackglass2:
+#    slideDisplayBackglass2:
+#      target: displayBackglass
+      
+# ---------------------
+# PLAYLIST::PLAYER
+# ---------------------
+playlist_player:
+  # -------------------
+  # ADDED SURPRISE VOICE DURING ATTRACT MODE
+  playlistAttention:
+    trackplaylist:
+      playlist: playlistIntro
+      action: play
+
+  #eventPlaylistModeEightBallStart:
+  eventPlaylistModeTattooMystiqueStart:
+    trackplaylist:
+      #playlist: playlistModeEightBallMusic
+      playlist: playlistModeMusicTattooMystique
+      action: play
+
+  eventPauseTrackPlaylist:
+    trackplaylist:
+      action: stop
+      
+  eventResumeTrackPlaylist:
+    trackplaylist:
+      #playlist: playlistModeEightBallMusic
+      playlist: playlistModeMusicTattooMystique
+      action: play
+      
+  ball_ending:
+    trackplaylist:
+      action: stop
+  
+  high_score_enter_initials:
+    trackplaylist:
+      playlist: playlistHighScore
+      shuffle: true
+      repeat: false
+      action: play

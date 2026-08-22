@@ -1,0 +1,106 @@
+#config_version=6
+
+# ---------------------
+# RANDOM::EVENT::PLAYER
+# ---------------------
+random_event_player:
+    # -------------------
+    # SAUCER::TOP::PLAY VIDEO
+    # -------------------
+    ball_hold_ballHoldSaucerTop_held_ball:
+      scope: player
+      events:
+        - eventShowVideoSilverballMania_Clip1
+        - eventShowVideoSilverballMania_Clip2
+        - eventShowVideoSilverballMania_Clip3
+        - eventShowVideoSilverballMania_Clip4
+        - eventShowVideoSilverballMania_Clip5
+        - eventShowVideoSilverballMania_Clip6
+        - eventShowVideoSilverballMania_Clip7
+        - eventShowVideoSilverballMania_Clip8
+        #- eventShowVideoSilverballMania_Clip9
+        #- eventShowVideoSilverballMania_Clip10
+        #- eventShowVideoSilverballMania_Clip11
+        #- eventShowVideoSilverballMania_Clip12
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# --------------------------
+# SHOW::PLAYER::VIDEO CLIPS::BALLY STAR TREK
+# --------------------------
+  # --------------------------
+  # SAUCER::TOP
+  # --------------------------
+  eventShowVideoSilverballMania_Clip1:
+    showVideoSilverballMania_Clip1:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania
+      
+  eventShowVideoSilverballMania_Clip2:
+    showVideoSilverballMania_Clip2:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania
+      
+  eventShowVideoSilverballMania_Clip3:
+    showVideoSilverballMania_Clip3:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania
+      
+  eventShowVideoSilverballMania_Clip4:
+    showVideoSilverballMania_Clip4:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania
+      
+  eventShowVideoSilverballMania_Clip5:
+    showVideoSilverballMania_Clip5:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania
+      
+  eventShowVideoSilverballMania_Clip6:
+    showVideoSilverballMania_Clip6:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania
+      
+  eventShowVideoSilverballMania_Clip7:
+    showVideoSilverballMania_Clip7:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania
+      
+  eventShowVideoSilverballMania_Clip8:
+    showVideoSilverballMania_Clip8:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania
+      
+  eventShowVideoSilverballMania_Clip9:
+    showVideoSilverballMania_Clip9:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania
+      
+  eventShowVideoSilverballMania_Clip10:
+    showVideoSilverballMania_Clip10:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania
+      
+  eventShowVideoSilverballMania_Clip11:
+    showVideoSilverballMania_Clip11:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania
+
+  eventShowVideoSilverballMania_Clip12:
+    showVideoSilverballMania_Clip12:
+      loops: 0
+      speed: 1
+      key: keyShowVideoSilverballMania

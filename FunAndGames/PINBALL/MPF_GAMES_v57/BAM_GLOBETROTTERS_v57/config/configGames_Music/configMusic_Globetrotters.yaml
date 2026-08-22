@@ -1,0 +1,174 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:
+# ---------------------
+# SOUNDS::MUSIC::GLOBETROTTERS
+# ---------------------
+  musicGlobetrotters001:
+    file: musicGlobetrottersTheme_Globetrottin.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicGlobetrotters002:
+    file: musicGlobetrottersTheme_Gravy.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicGlobetrotters003:
+    file: musicGlobetrottersTheme_BouncinAllOverTheWorld.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicGlobetrotters004:
+    file: musicGlobetrottersTheme_HouseParty.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicGlobetrotters005:
+    file: musicGlobetrottersTheme_Meadowlark.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicGlobetrotters006:
+    file: musicGlobetrottersTheme_SweetGeorgiaBrown_1.wav
+    track: music
+    volume: 1.0
+    mode_end_action: stop
+    
+  musicGlobetrotters007:
+    file: musicGlobetrottersTheme_Cartoon_0.wav
+    track: music
+    volume: 0.4
+    mode_end_action: stop
+
+  musicGlobetrotters008:
+    file: musicGlobetrottersTheme_KurtisBlow.wav
+    track: music
+    volume: 1.0
+    mode_end_action: stop
+    
+  #musicGlobetrotters009:
+  #  file: musicBowlingTheme_CVBTakeTheSkinheadsBowling.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+    
+  musicGlobetrotters010:
+    file: musicGlobetrottersTheme_ChicagoBulls.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  #musicGlobetrotters011:
+  #  file: musicBowlingTheme_TelefoneBowlingSong.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+
+  musicGlobetrotters012:
+    file: Globetrotters_Loop_8_Ambience.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+# ---------------------
+# SOUNDS::AMBIENCE::GLOBETROTTERS
+# ---------------------
+
+  musicAmbienceGlobetrotters001:
+    file: soundGlobetrotters_Ambience_1.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicAmbienceGlobetrotters002:
+    file: soundGlobetrotters_Ambience_2.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicAmbienceGlobetrotters003:
+    file: soundGlobetrotters_Ambience_3.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicAmbienceGlobetrotters004:
+    file: soundGlobetrotters_Ambience_4.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicAmbienceGlobetrotters005:
+    file: soundGlobetrotters_Ambience_Combined.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicGlobetrotters007
+
+  poolMusicBaseMode:
+    track: music
+    type: random_force_next
+    volume: 0.80
+    sounds:
+      - musicGlobetrotters001
+      - musicGlobetrotters002
+      - musicGlobetrotters003
+      - musicGlobetrotters004
+      - musicGlobetrotters005
+      - musicGlobetrotters006
+      #- musicGlobetrotters007
+      - musicGlobetrotters008
+      #- musicGlobetrotters009
+      - musicGlobetrotters010
+
+  poolMusicAmbienceGlobetrotters:
+    track: music
+    #type: random_force_all
+    type: random_force_next
+    volume: 0.40
+    sounds:
+      - musicAmbienceGlobetrotters001
+      - musicAmbienceGlobetrotters002
+      - musicAmbienceGlobetrotters003
+      - musicAmbienceGlobetrotters004
+      
+# ---------------------
+# MUSIC::PLAYLISTS
+# ---------------------
+playlists:
+  playlistModeGlobetrottersMusic:
+    shuffle: true
+    repeat: true
+    crossfade_mode: override
+    crossfade_time: 3s
+    sounds:
+      - musicGlobetrotters001
+      - musicGlobetrotters002
+      - musicGlobetrotters003
+      - musicGlobetrotters004
+      #- musicGlobetrotters005
+      - musicGlobetrotters006
+      #- musicGlobetrotters007
+      - musicGlobetrotters008
+      #- musicGlobetrotters009
+      - musicGlobetrotters010

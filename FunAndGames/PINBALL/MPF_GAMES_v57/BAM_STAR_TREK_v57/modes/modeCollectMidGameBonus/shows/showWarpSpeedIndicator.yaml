@@ -1,0 +1,19 @@
+#show_version=6
+
+- time: 0
+  coils:
+    c_0_11: pulse
+
+- time: "+0.5"
+  coils:
+    c_0_11: pulse
+    
+- time: "+0.5"
+  coils:
+    c_0_11: pulse
+    
+- time: "+0.5"
+  coils:
+    c_0_11: pulse
+    
+- time: "+0.5"

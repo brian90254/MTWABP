@@ -1,0 +1,235 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - BALLY PLAYBOY
+
+- time: 0
+
+# ---------------------
+# CYAN
+# --------------------- 
+  shows:
+    chaseEighteenLedTwoColor:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '00ff00'
+        color2: '00ffff'
+        # ----------------------
+        led1A: ledGrottoBonus5A
+        led1B: ledGrottoBonus5B
+        led1C: ledGrottoBonus5C
+        # ----------------------
+        led2A: ledGrottoBonus4A
+        led2B: ledGrottoBonus4B
+        led2C: ledGrottoBonus4C
+        # ----------------------
+        led3A: ledGrottoBonus3A
+        led3B: ledGrottoBonus3B
+        led3C: ledGrottoBonus3C
+        # ----------------------
+        led4A: ledGrottoBonus2A
+        led4B: ledGrottoBonus2B
+        led4C: ledGrottoBonus2C
+        # ----------------------
+        led5A: ledGrottoBonus1A
+        led5B: ledGrottoBonus1B
+        led5C: ledGrottoBonus1C
+        # ----------------------
+        led6A: ledGrottoSpecialA
+        led6B: ledGrottoSpecialB
+        led6C: ledGrottoSpecialC
+        # ----------------------
+        
+- time: "+3"
+
+# ---------------------
+# BLUE
+# --------------------- 
+  shows:
+    chaseEighteenLedTwoColor:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '00ffff'
+        color2: '0000ff'
+        # ----------------------
+        led1A: ledGrottoBonus5A
+        led1B: ledGrottoBonus5B
+        led1C: ledGrottoBonus5C
+        # ----------------------
+        led2A: ledGrottoBonus4A
+        led2B: ledGrottoBonus4B
+        led2C: ledGrottoBonus4C
+        # ----------------------
+        led3A: ledGrottoBonus3A
+        led3B: ledGrottoBonus3B
+        led3C: ledGrottoBonus3C
+        # ----------------------
+        led4A: ledGrottoBonus2A
+        led4B: ledGrottoBonus2B
+        led4C: ledGrottoBonus2C
+        # ----------------------
+        led5A: ledGrottoBonus1A
+        led5B: ledGrottoBonus1B
+        led5C: ledGrottoBonus1C
+        # ----------------------
+        led6A: ledGrottoSpecialA
+        led6B: ledGrottoSpecialB
+        led6C: ledGrottoSpecialC
+        # ----------------------
+        
+- time: "+3"
+
+# ---------------------
+# MAGENTA
+# --------------------- 
+  shows:
+    chaseEighteenLedTwoColor:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: '0000ff'
+        color2: 'ff00ff'
+        # ----------------------
+        led1A: ledGrottoBonus5A
+        led1B: ledGrottoBonus5B
+        led1C: ledGrottoBonus5C
+        # ----------------------
+        led2A: ledGrottoBonus4A
+        led2B: ledGrottoBonus4B
+        led2C: ledGrottoBonus4C
+        # ----------------------
+        led3A: ledGrottoBonus3A
+        led3B: ledGrottoBonus3B
+        led3C: ledGrottoBonus3C
+        # ----------------------
+        led4A: ledGrottoBonus2A
+        led4B: ledGrottoBonus2B
+        led4C: ledGrottoBonus2C
+        # ----------------------
+        led5A: ledGrottoBonus1A
+        led5B: ledGrottoBonus1B
+        led5C: ledGrottoBonus1C
+        # ----------------------
+        led6A: ledGrottoSpecialA
+        led6B: ledGrottoSpecialB
+        led6C: ledGrottoSpecialC
+        # ----------------------
+        
+- time: "+3"
+
+# ---------------------
+# RED
+# --------------------- 
+  shows:
+    chaseEighteenLedTwoColor:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: 'ff00ff'
+        color2: 'ff0000'
+        # ----------------------
+        led1A: ledGrottoBonus5A
+        led1B: ledGrottoBonus5B
+        led1C: ledGrottoBonus5C
+        # ----------------------
+        led2A: ledGrottoBonus4A
+        led2B: ledGrottoBonus4B
+        led2C: ledGrottoBonus4C
+        # ----------------------
+        led3A: ledGrottoBonus3A
+        led3B: ledGrottoBonus3B
+        led3C: ledGrottoBonus3C
+        # ----------------------
+        led4A: ledGrottoBonus2A
+        led4B: ledGrottoBonus2B
+        led4C: ledGrottoBonus2C
+        # ----------------------
+        led5A: ledGrottoBonus1A
+        led5B: ledGrottoBonus1B
+        led5C: ledGrottoBonus1C
+        # ----------------------
+        led6A: ledGrottoSpecialA
+        led6B: ledGrottoSpecialB
+        led6C: ledGrottoSpecialC
+        # ----------------------
+        
+- time: "+3"
+
+# ---------------------
+# YELLOW
+# --------------------- 
+  shows:
+    chaseEighteenLedTwoColor:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: 'ff0000'
+        color2: 'ffff00'
+        # ----------------------
+        led1A: ledGrottoBonus5A
+        led1B: ledGrottoBonus5B
+        led1C: ledGrottoBonus5C
+        # ----------------------
+        led2A: ledGrottoBonus4A
+        led2B: ledGrottoBonus4B
+        led2C: ledGrottoBonus4C
+        # ----------------------
+        led3A: ledGrottoBonus3A
+        led3B: ledGrottoBonus3B
+        led3C: ledGrottoBonus3C
+        # ----------------------
+        led4A: ledGrottoBonus2A
+        led4B: ledGrottoBonus2B
+        led4C: ledGrottoBonus2C
+        # ----------------------
+        led5A: ledGrottoBonus1A
+        led5B: ledGrottoBonus1B
+        led5C: ledGrottoBonus1C
+        # ----------------------
+        led6A: ledGrottoSpecialA
+        led6B: ledGrottoSpecialB
+        led6C: ledGrottoSpecialC
+        # ----------------------
+        
+- time: "+3"
+
+# ---------------------
+# GREEN
+# --------------------- 
+  shows:
+    chaseEighteenLedTwoColor:
+      loops: 0
+      speed: 6
+      show_tokens:
+        color1: 'ffff00'
+        color2: '00ff00'
+        # ----------------------
+        led1A: ledGrottoBonus5A
+        led1B: ledGrottoBonus5B
+        led1C: ledGrottoBonus5C
+        # ----------------------
+        led2A: ledGrottoBonus4A
+        led2B: ledGrottoBonus4B
+        led2C: ledGrottoBonus4C
+        # ----------------------
+        led3A: ledGrottoBonus3A
+        led3B: ledGrottoBonus3B
+        led3C: ledGrottoBonus3C
+        # ----------------------
+        led4A: ledGrottoBonus2A
+        led4B: ledGrottoBonus2B
+        led4C: ledGrottoBonus2C
+        # ----------------------
+        led5A: ledGrottoBonus1A
+        led5B: ledGrottoBonus1B
+        led5C: ledGrottoBonus1C
+        # ----------------------
+        led6A: ledGrottoSpecialA
+        led6B: ledGrottoSpecialB
+        led6C: ledGrottoSpecialC
+        # ----------------------
+        
+- time: "+3"

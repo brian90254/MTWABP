@@ -1,0 +1,119 @@
+#show_version=6
+
+- time: 0
+  #coils:
+  #  c_spinner: pulse
+    
+  lights:
+    l_flying_saucer_1_1: 808080
+    l_flying_saucer_1_2: 800000
+    l_flying_saucer_1_3: '008000'
+    l_flying_saucer_1_4: '000080'
+    l_flying_saucer_1_5: 808080
+    l_flying_saucer_1_6: 800000
+    l_flying_saucer_1_7: '008000'
+    l_flying_saucer_1_8: '000080'
+    l_flying_saucer_1_9: 808080
+    l_flying_saucer_1_10: 800000
+    l_flying_saucer_1_11: '008000'
+    l_flying_saucer_1_12: '000080'
+    l_flying_saucer_1_13: 808080
+    l_flying_saucer_1_14: 800000
+    l_flying_saucer_1_15: '008000'
+    l_flying_saucer_1_16: '000080'
+    l_flying_saucer_1_17: 808080
+    l_flying_saucer_1_18: 800000
+    l_flying_saucer_1_19: '008000'
+    l_flying_saucer_1_20: '000080'
+    l_flying_saucer_1_21: 808080
+    l_flying_saucer_1_22: 800000
+    l_flying_saucer_1_23: '008000'
+    l_flying_saucer_1_24: '000080'
+    
+- time: 1
+  lights:
+    l_flying_saucer_1_1: '000000'
+    l_flying_saucer_1_2: '000000'
+    l_flying_saucer_1_3: '000000'
+    l_flying_saucer_1_4: '000000'
+    l_flying_saucer_1_5: '000000'
+    l_flying_saucer_1_6: '000000'
+    l_flying_saucer_1_7: '000000'
+    l_flying_saucer_1_8: '000000'
+    l_flying_saucer_1_9: '000000'
+    l_flying_saucer_1_10: '000000'
+    l_flying_saucer_1_11: '000000'
+    l_flying_saucer_1_12: '000000'
+    l_flying_saucer_1_13: '000000'
+    l_flying_saucer_1_14: '000000'
+    l_flying_saucer_1_15: '000000'
+    l_flying_saucer_1_16: '000000'
+    l_flying_saucer_1_17: '000000'
+    l_flying_saucer_1_18: '000000'
+    l_flying_saucer_1_19: '000000'
+    l_flying_saucer_1_20: '000000'
+    l_flying_saucer_1_21: '000000'
+    l_flying_saucer_1_22: '000000'
+    l_flying_saucer_1_23: '000000'
+    l_flying_saucer_1_24: '000000'
+    
+- time: 2
+
+  coils:
+    c_spinner: pulse
+
+  lights:
+    l_flying_saucer_1_1: 808080
+    l_flying_saucer_1_2: 800000
+    l_flying_saucer_1_3: '008000'
+    l_flying_saucer_1_4: '000080'
+    l_flying_saucer_1_5: 808080
+    l_flying_saucer_1_6: 800000
+    l_flying_saucer_1_7: '008000'
+    l_flying_saucer_1_8: '000080'
+    l_flying_saucer_1_9: 808080
+    l_flying_saucer_1_10: 800000
+    l_flying_saucer_1_11: '008000'
+    l_flying_saucer_1_12: '000080'
+    l_flying_saucer_1_13: 808080
+    l_flying_saucer_1_14: 800000
+    l_flying_saucer_1_15: '008000'
+    l_flying_saucer_1_16: '000080'
+    l_flying_saucer_1_17: 808080
+    l_flying_saucer_1_18: 800000
+    l_flying_saucer_1_19: '008000'
+    l_flying_saucer_1_20: '000080'
+    l_flying_saucer_1_21: 808080
+    l_flying_saucer_1_22: 800000
+    l_flying_saucer_1_23: '008000'
+    l_flying_saucer_1_24: '000080'
+    
+- time: 3
+  lights:
+    l_flying_saucer_1_1: '000000'
+    l_flying_saucer_1_2: '000000'
+    l_flying_saucer_1_3: '000000'
+    l_flying_saucer_1_4: '000000'
+    l_flying_saucer_1_5: '000000'
+    l_flying_saucer_1_6: '000000'
+    l_flying_saucer_1_7: '000000'
+    l_flying_saucer_1_8: '000000'
+    l_flying_saucer_1_9: '000000'
+    l_flying_saucer_1_10: '000000'
+    l_flying_saucer_1_11: '000000'
+    l_flying_saucer_1_12: '000000'
+    l_flying_saucer_1_13: '000000'
+    l_flying_saucer_1_14: '000000'
+    l_flying_saucer_1_15: '000000'
+    l_flying_saucer_1_16: '000000'
+    l_flying_saucer_1_17: '000000'
+    l_flying_saucer_1_18: '000000'
+    l_flying_saucer_1_19: '000000'
+    l_flying_saucer_1_20: '000000'
+    l_flying_saucer_1_21: '000000'
+    l_flying_saucer_1_22: '000000'
+    l_flying_saucer_1_23: '000000'
+    l_flying_saucer_1_24: '000000'
+#- time: 0
+
+- time: '+60'

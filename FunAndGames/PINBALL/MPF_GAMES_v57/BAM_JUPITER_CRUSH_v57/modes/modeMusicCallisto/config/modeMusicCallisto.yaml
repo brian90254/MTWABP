@@ -1,0 +1,75 @@
+#config_version=6
+
+mode:
+  start_events: eventStartModeMusicCallisto
+  stop_events: eventStopModeMusicCallisto
+  priority: 1000
+
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  mode_modeMusicCallisto_started:
+    musicCallisto001:
+      loops: -1
+      volume: 0.3
+      
+  mode_modeMusicCallisto_ending:
+    musicCallisto001:
+      action: stop
+  #---------------------
+  eventShotMusicHLoopOnHit:
+    musicCallisto002:
+      loops: -1
+      volume: 0.45
+      
+  eventShotMusicHLoopOffHit:
+    musicCallisto002:
+      action: stop
+  # ---------------------      
+  eventShotMusicULoopOnHit:
+    musicCallisto003:
+      loops: -1
+      volume: 0.25
+      
+  eventShotMusicULoopOffHit:
+    musicCallisto003:
+      action: stop
+  # ---------------------
+  eventShotMusicNLoopOnHit:
+    musicCallisto004:
+      loops: -1
+      volume: 0.6
+      
+  eventShotMusicNLoopOffHit:
+    musicCallisto004:
+      action: stop
+  # ---------------------
+  eventShotMusicTLoopOnHit:
+    musicCallisto005:
+      loops: -1
+      volume: 0.15
+      
+  eventShotMusicTLoopOffHit:
+    musicCallisto005:
+      action: stop
+  # ---------------------
+  eventShotMusicELoopOnHit:
+    musicCallisto006:
+      loops: -1
+      volume: 0.45
+      
+  eventShotMusicELoopOffHit:
+    musicCallisto006:
+      action: stop
+  # ---------------------
+  eventShotMusicRLoopOnHit:
+    musicCallisto007:
+      loops: -1
+      volume: 0.3
+      
+  eventShotMusicRLoopOffHit:
+    musicCallisto007:
+      action: stop
+  # ---------------------
+  

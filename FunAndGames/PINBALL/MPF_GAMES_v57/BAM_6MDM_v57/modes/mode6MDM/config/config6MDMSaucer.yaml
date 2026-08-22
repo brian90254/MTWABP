@@ -1,0 +1,548 @@
+#config_version=6
+
+# SIX MILLION DOLLAR MAN
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SAUCER::ADVANCE
+    # -------------------
+    shotSaucerAdvance:
+        enable_events: eventEnableShotSaucerAdvance
+        disable_events: eventDisableShotSaucerAdvance
+        restart_events: eventRestartShotSaucerAdvance
+        reset_events: eventResetShotSaucerAdvance
+        #advance_events: eventAdvanceSaucerAdvance
+        hit_events: eventHitShotSaucerAdvance
+        profile: spShotSaucerAdvance
+        show_tokens:
+            # ------------------------
+            led1: ledSaucer3k
+            led2: ledSaucer5k
+            led3: ledSaucer2X
+            led4: ledSaucer3X
+            led5: ledSaucer5X
+            
+    # -------------------
+    # SAUCER::CHOOSE BATTLE
+    # -------------------
+    shotSaucerChooseBattle:
+        enable_events: eventEnableShotSaucerChooseBattle
+        disable_events: eventDisableShotSaucerChooseBattle
+        restart_events: eventRestartShotSaucerChooseBattle
+        reset_events: eventResetShotSaucerChooseBattle
+        #advance_events: eventChooseBattleSaucerChooseBattle
+        hit_events: eventHitShotSaucerChooseBattle
+        profile: spShotSaucerChooseBattle
+        show_tokens:
+            # ------------------------
+            led1: ledSaucer3k
+            led2: ledSaucer5k
+            led3: ledSaucer2X
+            led4: ledSaucer3X
+            led5: ledSaucer5X
+            
+    # -------------------
+    # SAUCER::BONUS MULTIPLIER::2X
+    # -------------------
+    shotSaucerBonusMultiplier2x:
+        enable_events: eventEnableShotSaucerBonusMultiplier2x
+        disable_events: eventDisableShotSaucerBonusMultiplier2x
+        restart_events: eventRestartShotSaucerBonusMultiplier2x
+        reset_events: eventResetShotSaucerBonusMultiplier2x
+        #advance_events: eventAdvanceSaucerBonusMultiplier2x
+        hit_events: eventHitShotSaucerBonusMultiplier2x
+        profile: spShotSaucerBonusMultiplier
+        show_tokens:
+            # ------------------------
+            ledA: ledBonusMultiplier2XA
+            ledB: ledBonusMultiplier2XB
+            ledC: ledBonusMultiplier2XC
+            # ------------------------
+            color1: '00ff00'
+            color2: '00cc00'
+            
+    # -------------------
+    # SAUCER::BONUS MULTIPLIER::3X
+    # -------------------
+    shotSaucerBonusMultiplier3x:
+        enable_events: eventEnableShotSaucerBonusMultiplier3x
+        disable_events: eventDisableShotSaucerBonusMultiplier3x
+        restart_events: eventRestartShotSaucerBonusMultiplier3x
+        reset_events: eventResetShotSaucerBonusMultiplier3x
+        #advance_events: eventAdvanceSaucerBonusMultiplier3x
+        hit_events: eventHitShotSaucerBonusMultiplier3x
+        profile: spShotSaucerBonusMultiplier
+        show_tokens:
+            # ------------------------
+            ledA: ledBonusMultiplier3XA
+            ledB: ledBonusMultiplier3XB
+            ledC: ledBonusMultiplier3XC
+            # ------------------------
+            color1: 'ffff00'
+            color2: 'cccc00'
+
+    # -------------------
+    # SAUCER::BONUS MULTIPLIER::5X
+    # -------------------
+    shotSaucerBonusMultiplier5x:
+        enable_events: eventEnableShotSaucerBonusMultiplier5x
+        disable_events: eventDisableShotSaucerBonusMultiplier5x
+        restart_events: eventRestartShotSaucerBonusMultiplier5x
+        reset_events: eventResetShotSaucerBonusMultiplier5x
+        #advance_events: eventAdvanceSaucerBonusMultiplier5x
+        hit_events: eventHitShotSaucerBonusMultiplier5x
+        profile: spShotSaucerBonusMultiplier
+        show_tokens:
+            # ------------------------
+            ledA: ledBonusMultiplier5XA
+            ledB: ledBonusMultiplier5XB
+            ledC: ledBonusMultiplier5XC
+            # ------------------------
+            color1: '00ffff'
+            color2: '00cccc'
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+# -----------------------------
+# SHOT PROFILES
+# -----------------------------
+    # -----------------------------
+    # PROFILE::SAUCER::ADVANCE
+    # -----------------------------
+    spShotSaucerAdvance:
+        states:
+          - name: litFlashSaucer3k
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: '880000'
+                color2A: '000000'
+                color3A: '000000'
+                color4A: '000000'
+                color5A: '000000'
+                # --------------
+                color1B: '660000'
+                color2B: '000000'
+                color3B: '000000'
+                color4B: '000000'
+                color5B: '000000'
+            # -------------------------------
+          - name: litFlashSaucer5k
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: 'ff0000'
+                color2A: '880088'
+                color3A: '000000'
+                color4A: '000000'
+                color5A: '000000'
+                # --------------
+                color1B: 'ee0000'
+                color2B: '660066'
+                color3B: '000000'
+                color4B: '000000'
+                color5B: '000000'
+            # -------------------------------
+          - name: litFlashSaucer2X
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: 'ff0000'
+                color2A: 'ff00ff'
+                color3A: 'ffffff'
+                color4A: '000000'
+                color5A: '000000'
+                # --------------
+                color1B: 'ee0000'
+                color2B: 'ee00ee'
+                color3B: '888888'
+                color4B: '000000'
+                color5B: '000000'
+            # -------------------------------
+          - name: litFlashSaucer3X
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: 'ff0000'
+                color2A: 'ff00ff'
+                color3A: 'ffffff'
+                color4A: '888800'
+                color5A: '000000'
+                # --------------
+                color1B: 'ee0000'
+                color2B: 'ee00ee'
+                color3B: 'eeeeee'
+                color4B: '666600'
+                color5B: '000000'
+            # -------------------------------
+          - name: litFlashSaucer5X
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: 'ff0000'
+                color2A: 'ff00ff'
+                color3A: 'ffffff'
+                color4A: 'ffff00'
+                color5A: '008888'
+                # --------------
+                color1B: 'ee0000'
+                color2B: 'ee00ee'
+                color3B: 'eeeeee'
+                color4B: 'eeee00'
+                color5B: '006666'
+            # -------------------------------
+          - name: litSolid
+            show: showShotSaucerAdvance
+            speed: 2
+            show_tokens:
+                color1A: 'ff0000'
+                color2A: 'ff00ff'
+                color3A: 'ffffff'
+                color4A: 'ffff00'
+                color5A: '00ffff'
+                # --------------
+                color1B: 'ee0000'
+                color2B: 'ee00ee'
+                color3B: 'eeeeee'
+                color4B: 'eeee00'
+                color5B: '00eeee'
+            # -------------------------------
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::SAUCER::ADVANCE
+    # -----------------------------
+    spShotSaucerBonusMultiplier:
+        states:
+          - name: litFlash
+            show: showShotSaucerBonusMultiplierFlash
+            speed: 3
+            # -------------------------
+          - name: litSolid
+            show: showShotSaucerBonusMultiplierSolid
+            speed: 3
+        loop: false
+
+    # -----------------------------
+    # PROFILE::SAUCER::ADVANCE
+    # -----------------------------
+    spShotSaucerChooseBattle:
+        states:
+          - name: litFlash
+            show: showShotSaucerChooseBattle
+            speed: 4
+            show_tokens:
+                color1A: '00ff00'
+                color2A: '00ff00'
+                #color3A: '00ff00'
+                color3A: 'ffffff'
+                color4A: '00ff00'
+                color5A: '00ff00'
+                # --------------
+                color1B: '004400'
+                color2B: '004400'
+                #color3B: '004400'
+                color3B: '444444'
+                color4B: '004400'
+                color5B: '004400'
+            # -------------------------------
+          - name: litSolid
+            show: showShotSaucerChooseBattle
+            speed: 4
+            show_tokens:
+                color1A: '00ff00'
+                color2A: '00ff00'
+                #color3A: '00ff00'
+                color3A: 'ffffff'
+                color4A: '00ff00'
+                color5A: '00ff00'
+                # --------------
+                color1B: '00ff00'
+                color2B: '00ff00'
+                #color3B: '00ff00'
+                color3B: 'ffffff'
+                color4B: '00ff00'
+                color5B: '00ff00'
+            # -------------------------------
+            
+# *********************
+# EVENT::PLAYER
+# *********************
+event_player:
+# -------------------
+# EVENTS::ON BALL STARTING
+# -------------------
+    mode_mode6MDM_started:
+        # RESET SAUCER ADVANC
+        - eventRestartShotSaucerAdvance
+        # RESET BONUS MULTIPLIER SHOTS
+        - eventRestartShotSaucerBonusMultiplier2x
+        - eventRestartShotSaucerBonusMultiplier3x
+        - eventRestartShotSaucerBonusMultiplier5x
+        
+    ball_ending:
+        # DISABLE SAUCER CHOOSE BATTLE
+        - eventDisableShotSaucerChooseBattle
+        
+# -------------------
+# EVENTS::BALL IN PLAY
+# -------------------
+
+    shotSaucerAdvance_hit:
+        - randomEventShowVideo6MDM
+        #- eventStartModeCarouselVillian
+        
+    eventQualifyBattleBigfoot:
+        - eventDisableShotSaucerAdvance
+        - eventRestartShotSaucerChooseBattle
+
+    # -------------------
+    # EVENTS::SAUCER SHOT::HIT
+    # -------------------
+    ball_hold_ballHoldSaucerTop_held_ball:
+        # ADVANCE SAUCER ACHIEVEMENT
+        - eventHitShotSaucerAdvance
+        # SAUCER CHOOSE BATTLE
+        - eventHitShotSaucerChooseBattle
+        # SAUCER CHOOSE BATTLE
+        - eventHitShotSaucerMultiball
+        # ADVANCE BONUS BY THREE
+        #- eventCompleteBonusOnes
+        #- eventCompleteBonusOnes|1s
+        #- eventCompleteBonusOnes|2s
+
+    # 2X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer2X_hit:
+        - eventHitShotSaucerBonusMultiplier2x
+
+    # 3X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer3X_hit:
+        - eventHitShotSaucerBonusMultiplier3x
+        
+    # 5X MULTIPLIER
+    shotSaucerAdvance_litFlashSaucer5X_hit:
+        - eventHitShotSaucerBonusMultiplier5x
+
+    shotSaucerChooseBattle_litFlash_hit:
+        - eventStartModeCarouselVillian
+        
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# ADVANCE MULTIPLIER ON SAUCER HIT
+# ---------------
+    # SPECIAL
+    shotSaucerAdvance_litFlashSaucer3k_hit:
+        score: 3000 * current_player.multiplierPlayfield
+        
+    # SPECIAL
+    shotSaucerAdvance_litFlashSaucer5k_hit:
+        score: 5000 * current_player.multiplierPlayfield
+        
+    # 2X MULTIPLIER
+    #shotSaucerAdvance_litFlashSaucer2X_hit:
+    shotSaucerBonusMultiplier2x_litFlash_hit:
+        multiBonus:
+            int: 2
+            action: set
+        bonus_multiplier:
+            int: 2
+            action: set
+        score: 5000 * current_player.multiplierPlayfield
+        
+    # 3X MULTIPLIER
+    #shotSaucerAdvance_litFlashSaucer3X_hit:
+    shotSaucerBonusMultiplier3x_litFlash_hit:
+        multiBonus:
+            int: 3
+            action: set
+        bonus_multiplier:
+            int: 3
+            action: set
+        score: 5000 * current_player.multiplierPlayfield
+        
+    # 5X MULTIPLIER
+    #shotSaucerAdvance_litFlashSaucer5X_hit:
+    shotSaucerBonusMultiplier5x_litFlash_hit:
+        multiBonus:
+            int: 5
+            action: set
+        bonus_multiplier:
+            int: 5
+            action: set
+        score: 5000 * current_player.multiplierPlayfield
+        
+# ---------------------
+# RANDOM::EVENT::PLAYER
+# ---------------------
+random_event_player:
+# ---------------------
+# PLAY VIDEO::SAUCER::SPARE
+# ---------------------
+    # -------------------
+    # PLAY VIDEO::SAUCER::6MDM
+    # -------------------
+    randomEventShowVideo6MDM:
+        scope: player
+        events:
+          - eventShowVideo6MDM_Clip1
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# --------------------------
+# SHOW::PLAYER::VIDEO CLIPS::^MDM
+# --------------------------
+    # --------------------------
+    # SAUCER::6MDMD
+    # --------------------------
+    eventShowVideo6MDM_Clip1:
+        showVideo6MDM_Clip1:
+            loops: 0
+            speed: 1
+            key: keyShowVideo6MDM
+
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SAUCER ADVANCE
+    # -----------------------------------
+    showShotSaucerAdvance:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color1A)
+            (led2): (color2A)
+            (led3): (color3A)
+            (led4): (color4A)
+            (led5): (color5A)
+            # ----------------
+        - time: 1
+          lights:
+            # ----------------
+            (led1): (color1B)
+            (led2): (color2B)
+            (led3): (color3B)
+            (led4): (color4B)
+            (led5): (color5B)
+            # ----------------
+        - time: 2
+
+    # -----------------------------------
+    # SHOW::LED::SAUCER CHOOSE BATTLE
+    # -----------------------------------
+    showShotSaucerChooseBattle:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color1B)
+            (led2): (color2B)
+            (led3): (color3B)
+            (led4): (color4B)
+            (led5): (color5B)
+            # ----------------
+        - time: 1
+          lights:
+            # ----------------
+            (led1): (color1A)
+            (led2): (color2B)
+            (led3): (color3B)
+            (led4): (color4B)
+            (led5): (color5A)
+            # ----------------
+        - time: 2
+          lights:
+            # ----------------
+            (led1): (color1B)
+            (led2): (color2A)
+            (led3): (color3B)
+            (led4): (color4A)
+            (led5): (color5B)
+            # ----------------
+        - time: 3
+          lights:
+            # ----------------
+            (led1): (color1B)
+            (led2): (color2B)
+            (led3): (color3A)
+            (led4): (color4B)
+            (led5): (color5B)
+            # ----------------
+        - time: 4
+        
+    # -----------------------------------
+    # SHOW::LED::BONUS MULTIPLIER::FLASH
+    # -----------------------------------
+    showShotSaucerBonusMultiplierFlash:
+        - time: 0
+          lights:
+            # ----------------
+            (ledA): '000000'
+            (ledB): '000000'
+            (ledC): '000000'
+            ledDummy1: (color1)
+            ledDummy2: (color2)
+            # ----------------
+        - time: 1
+          lights:
+            # ----------------
+            (ledA): '000000'
+            (ledB): '000000'
+            (ledC): '000000'
+            ledDummy1: (color1)
+            ledDummy2: (color2)
+            # ----------------
+        - time: 2
+          lights:
+            # ----------------
+            (ledA): '000000'
+            (ledB): '000000'
+            (ledC): '000000'
+            ledDummy1: (color1)
+            ledDummy2: (color2)
+            # ----------------
+        - time: 3
+        
+    # -----------------------------------
+    # SHOW::LED::BONUS MULTIPLIER::FLASH
+    # -----------------------------------
+    showShotSaucerBonusMultiplierSolid:
+        - time: 0
+          lights:
+            # ----------------
+            (ledA): (color1)
+            (ledB): (color2)
+            (ledC): (color2)
+            ledDummy1: (color1)
+            ledDummy2: (color2)
+            # ----------------
+        - time: 1
+          lights:
+            # ----------------
+            (ledA): (color2)
+            (ledB): (color1)
+            (ledC): (color2)
+            ledDummy1: (color1)
+            ledDummy2: (color2)
+            # ----------------
+        - time: 2
+          lights:
+            # ----------------
+            (ledA): (color2)
+            (ledB): (color2)
+            (ledC): (color1)
+            ledDummy1: (color1)
+            ledDummy2: (color2)
+            # ----------------
+        - time: 3
+        

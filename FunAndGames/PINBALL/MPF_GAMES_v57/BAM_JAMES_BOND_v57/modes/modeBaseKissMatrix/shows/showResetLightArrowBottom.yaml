@@ -1,0 +1,61 @@
+#show_version=6
+
+# --------------------
+- time: 0
+  lights:
+    ledArrowsBottom1: '888888'
+    ledArrowsBottom2: '888888'
+    ledArrowsBottom3: '888888'
+    ledArrowsBottom4: '888888'
+# --------------------
+- time: 1
+  lights:
+    ledArrowsBottom1: 'ffffff'
+    ledArrowsBottom2: 'ffffff'
+    ledArrowsBottom3: 'ffffff'
+    ledArrowsBottom4: 'ffffff'
+# --------------------
+- time: 2
+  lights:
+    ledArrowsBottom1: '888888'
+    ledArrowsBottom2: '888888'
+    ledArrowsBottom3: '888888'
+    ledArrowsBottom4: '888888'
+# --------------------
+- time: 3
+  lights:
+    ledArrowsBottom1: 'ffffff'
+    ledArrowsBottom2: 'ffffff'
+    ledArrowsBottom3: 'ffffff'
+    ledArrowsBottom4: 'ffffff'
+# --------------------
+- time: 4
+  lights:
+    ledArrowsBottom1: '888888'
+    ledArrowsBottom2: '888888'
+    ledArrowsBottom3: '888888'
+    ledArrowsBottom4: '888888'
+# --------------------
+- time: 5
+  lights:
+    ledArrowsBottom1: 'ffffff'
+    ledArrowsBottom2: 'ffffff'
+    ledArrowsBottom3: 'ffffff'
+    ledArrowsBottom4: 'ffffff'
+# --------------------
+- time: 6
+  lights:
+    ledArrowsBottom1: '888888'
+    ledArrowsBottom2: '888888'
+    ledArrowsBottom3: '888888'
+    ledArrowsBottom4: '888888'
+# --------------------
+- time: 7
+  lights:
+    ledArrowsBottom1: 'ffffff'
+    ledArrowsBottom2: 'ffffff'
+    ledArrowsBottom3: 'ffffff'
+    ledArrowsBottom4: 'ffffff'
+# --------------------
+- time: 8
+

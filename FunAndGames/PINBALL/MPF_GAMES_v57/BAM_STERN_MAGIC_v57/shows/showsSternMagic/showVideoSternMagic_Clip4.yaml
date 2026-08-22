@@ -1,0 +1,31 @@
+#show_version=6
+
+- time: 0
+  events:
+    - eventPauseTrackPlaylist
+
+- time: '+1'
+  events:
+    - presentSlideVideoLayout
+    
+- time: '+1'
+  slides:
+    slideVideoSternMagic_Clip4:
+      target: displayVideoDMD
+      widgets:
+      - type: video
+        video: videoSternMagic_Clip4
+        auto_play: True
+        volume: 1.0
+        z: 200
+
+- time: '+1'
+  events:
+    - eventResumeTrackPlaylist
+
+- time: '+1'
+  events:
+    - releaseBallHoldSaucerTop
+    - removeSlideVideoLayout
+              
+- time: '+1'

@@ -1,0 +1,246 @@
+#config_version=6
+
+          #- type: text
+          #  text: PLAYER (machine|playerAddedNum) ADDED
+          #  font_size: 12
+          #  color: white
+            
+slides:
+    slidePlayerAdded:
+        target: displayDMD
+        widgets:
+        # -------------------------------------------------
+        #                       TOP
+        # -------------------------------------------------
+        # -----------------
+        # CENTER
+        # -----------------
+        - type: text
+          text: PLAYER
+          y: top - 24
+          x: middle
+          z: 40
+          style: fontPlayerAddedHeader
+          color: colorFontPlayerAddedHeaderInner
+        
+        # -----------------
+        # OUTLINE ONE
+        # -----------------
+        - type: text
+          text: PLAYER
+          y: top - 23
+          x: middle - 1
+          z: 30
+          style: fontPlayerAddedHeader
+          color: colorFontPlayerAddedHeaderOuter1
+        
+        - type: text
+          text: PLAYER
+          y: top - 23
+          x: middle + 1
+          z: 30
+          style: fontPlayerAddedHeader
+          color: colorFontPlayerAddedHeaderOuter1
+        
+        - type: text
+          text: PLAYER
+          y: top - 25
+          x: middle - 1
+          z: 30
+          style: fontPlayerAddedHeader
+          color: colorFontPlayerAddedHeaderOuter1
+          
+        - type: text
+          text: PLAYER
+          y: top - 25
+          x: middle + 1
+          z: 30
+          style: fontPlayerAddedHeader
+          color: colorFontPlayerAddedHeaderOuter1
+        # -------------------------------------------------
+        # -----------------
+        # OUTLINE TWO
+        # -----------------
+        - type: text
+          text: PLAYER
+          y: top - 22
+          x: middle - 2
+          z: 30
+          style: fontPlayerAddedHeader
+          color: colorFontPlayerAddedHeaderOuter2
+        
+        - type: text
+          text: PLAYER
+          y: top - 22
+          x: middle + 2
+          z: 30
+          style: fontPlayerAddedHeader
+          color: colorFontPlayerAddedHeaderOuter2
+        
+        - type: text
+          text: PLAYER
+          y: top - 26
+          x: middle - 2
+          z: 30
+          style: fontPlayerAddedHeader
+          color: colorFontPlayerAddedHeaderOuter2
+          
+        - type: text
+          text: PLAYER
+          y: top - 26
+          x: middle + 2
+          z: 30
+          style: fontPlayerAddedHeader
+          color: colorFontPlayerAddedHeaderOuter2
+        # -------------------------------------------------
+  
+        # -------------------------------------------------
+        #                       MIDDLE
+        # -------------------------------------------------
+        # -----------------
+        # RED CENTER
+        # -----------------
+        - type: text
+          text: (machine|playerAddedNum)
+          #number_grouping: true
+          #min_digits: 2
+          y: middle - 4
+          x: middle
+          z: 40
+          style: fontPlayerAddedMiddle
+          color: colorFontPlayerAddedMiddleInner
+          
+        # -----------------
+        # OUTLINE CYAN
+        # -----------------
+        - type: text
+          text: (machine|playerAddedNum)
+          #number_grouping: true
+          #min_digits: 2
+          y: middle - 5
+          x: middle - 1
+          z: 30
+          style: fontPlayerAddedMiddle
+          color: colorFontPlayerAddedMiddleOuter1
+          
+        - type: text
+          text: (machine|playerAddedNum)
+          #number_grouping: true
+          #min_digits: 2
+          y: middle - 5
+          x: middle + 1
+          z: 30
+          style: fontPlayerAddedMiddle
+          color: colorFontPlayerAddedMiddleOuter1
+          
+        - type: text
+          text: (machine|playerAddedNum)
+          #number_grouping: true
+          #min_digits: 2
+          y: middle  - 3
+          x: middle + 1
+          z: 30
+          style: fontPlayerAddedMiddle
+          color: colorFontPlayerAddedMiddleOuter1
+          
+        - type: text
+          text: (machine|playerAddedNum)
+          #number_grouping: true
+          #min_digits: 2
+          y: middle - 3
+          x: middle - 1
+          z: 30
+          style: fontPlayerAddedMiddle
+          color: colorFontPlayerAddedMiddleOuter1
+        # -------------------------------------------------
+  
+  
+        # -------------------------------------------------
+        #                       BOTTOM
+        # -------------------------------------------------
+        # -----------------
+        # CENTER YELLOW
+        # -----------------
+        - type: text
+          text: ADDED
+          anchor_y: bottom
+          y: bottom + 4
+          x: middle
+          z: 40
+          style: fontPlayerAddedFooter
+          color: colorFontPlayerAddedFooterInner
+          
+        # -----------------
+        # OUTLINE GREEN
+        # -----------------
+        - type: text
+          text: ADDED
+          anchor_y: bottom
+          y: bottom + 3
+          x: middle - 1
+          z: 30
+          style: fontPlayerAddedFooter
+          color: colorFontPlayerAddedFooterOuter1
+          
+        - type: text
+          text: ADDED
+          anchor_y: bottom
+          y: bottom + 5
+          x: middle + 1
+          z: 30
+          style: fontPlayerAddedFooter
+          color: colorFontPlayerAddedFooterOuter1
+          
+        - type: text
+          text: ADDED
+          anchor_y: bottom
+          y: bottom + 3
+          x: middle + 1
+          z: 30
+          style: fontPlayerAddedFooter
+          color: colorFontPlayerAddedFooterOuter1
+          
+        - type: text
+          text: ADDED
+          anchor_y: bottom
+          y: bottom + 5
+          x: middle - 1
+          z: 30 
+          style: fontPlayerAddedFooter
+          color: colorFontPlayerAddedFooterOuter1
+  
+          # --------------------
+          # COLOR OUTLINE
+          # --------------------
+        - type: rectangle
+          color: colorBoxPlayerAddedOuter
+          width: 236
+          height: 130
+          x: 120
+          y: 67
+          z: 3
+        - type: rectangle
+          color: colorBoxPlayerAddedMiddle
+          width: 232
+          height: 126
+          x: 120
+          y: 67
+          z: 5
+        - type: rectangle
+          color: colorBoxPlayerAddedInner
+          width: 228
+          height: 122
+          x: 120
+          y: 67
+          z: 6
+          # --------------------
+          # BLACK INFILL
+          # --------------------
+        - type: rectangle
+          color: colorBoxPlayerAddedFill
+          width: 224
+          height: 118
+          x: 120
+          y: 67
+          z: 7
+

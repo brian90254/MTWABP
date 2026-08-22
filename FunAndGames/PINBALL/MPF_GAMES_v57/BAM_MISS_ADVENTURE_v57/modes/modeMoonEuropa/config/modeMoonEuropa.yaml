@@ -1,0 +1,321 @@
+#config_version=6
+
+config:
+- configShotsEuropa.yaml
+- configAchievementsEuropa.yaml
+- configScoringEuropa.yaml
+- configSpecialShotsEuropa.yaml
+- configExtraBallEuropa.yaml
+
+mode:
+  start_events: startModeEuropa
+  stop_events: stopModeEuropa
+  priority: 3000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeMoonEuropa_started:
+    # ---------------------
+    # EVENT::START::SPECIAL MODES
+    # ---------------------
+    #- eventStartModeSkillShot
+    #- eventStartModeCollectMidGameBonus
+    - eventStartModeMultiball
+    # ---------------------
+    # START::LIGHT::SHOWS
+    # ---------------------
+    - showEuropaStarShooterLane
+    - showEuropaStarTurnAround
+    - showEuropaStarOrbitLeft1
+    - showEuropaStarOrbitLeft2
+    - showEuropaStarOrbitRight
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersEuropa
+    # ---------------------
+    # EVENT::PLAYER::FLIPPERS
+    # ---------------------
+    - eventEnableFlipperEuropa|250ms
+    # ----------------------------
+    - eventDisableFlipperJupiterOne
+    #- eventDisableFlipperEuropa
+    - eventDisableFlipperGanymede
+    - eventDisableFlipperCallisto
+    # ---------------------
+    # EVENT::RESET::DROPS
+    # ---------------------
+    - eventResetDropTargetLeft|1.5s
+    - eventResetDropTargetRight|1s
+    # ---------------------
+    # EVENT::START::MULTIBALLS
+    # ---------------------
+    - eventStartModeMultiball
+    #- eventEnableMultiballUpperKicker
+    - eventDisableMultiballUpperKicker
+    - eventDisableShotStartMultiballVukEuropa
+    
+  # ----------------------------
+  # EUROPA::INCREASE::DIFFICULTY
+  shotReverseTargetEuropa_hit:
+    eventRotateDropTargetLeft
+  shotTurnAroundEuropa_hit:
+    eventResetDropTargetLeft
+  # ----------------------------
+
+  # ---------------------
+  # EVENT::START::WHEEL_ACHIEVEMENT
+  # ---------------------
+  multiball_multiballUpperKicker_ended:
+    - eventEnableMultiballVuk
+    - eventEnableAwardWheel
+    
+    
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  mode_modeMoonEuropa_started:
+    nameMoon:
+      string: "Moon: Europa"
+      action: set
+      
+# ---------------------
+# COIL::PLAYER
+# ---------------------
+coil_player:
+
+  # ----------------------------
+  # SAUCER MOTOR
+  # ----------------------------
+  eventStartSaucerVukShow:
+    c_spinner:
+      action: enable
+      
+  eventStopSaucerVukShow:
+    c_spinner:
+      action: disable
+      
+  eventStartSaucerKickerShow:
+    c_spinner:
+      action: enable
+      
+  eventStopSaucerKickerShow:
+    c_spinner:
+      action: disable
+  
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# ---------------------
+# SHOW::PLAYER::COILS
+# ---------------------
+  ball_lock_blVUK_locked_ball:
+    showBallLockVUK:
+      loops: 0
+      speed: 1
+
+  ball_lock_blKickerUpper_locked_ball:
+    showBallLockKickerUpper:
+      loops: 0
+      speed: 1
+
+  # ----------------------------
+  # VUK SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  eventStartSaucerVukShow:
+    showSaucerMotorLights:
+      loops: -1
+      speed: 16
+      show_tokens:
+        color1: '00ff00'
+        color2: '00ff00'
+        color3: '000000'
+        color4: '000000'
+      key: saucerVukShow
+      
+  eventStopSaucerVukShow:
+    saucerVukShow:
+      action: stop
+  # ----------------------------
+  
+  # ----------------------------
+  # KICKER SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  eventStartSaucerKickerShow:
+    showSaucerMotorLights:
+      loops: -1
+      speed: 16
+      show_tokens:
+        color1: 'ff00ff'
+        color2: 'ff00ff'
+        color3: '000000'
+        color4: '000000'
+      key: saucerKickerShow
+      
+  eventStopSaucerKickerShow:
+    saucerKickerShow:
+      action: stop
+  # ----------------------------
+      
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------
+  mode_modeMoonEuropa_started:
+    onThreeLedColor:
+      show_tokens:
+        led1: l_newton_ball_2
+        led2: l_newton_ball_3
+        led3: l_newton_ball_4
+        color: 'ffff88'
+      key: newtonBall
+
+  showJupiterOneMoonMode:
+    onThreeLedColor:
+      show_tokens:
+        led1: l_moon_modes_1_1
+        led2: l_moon_modes_1_2
+        led3: l_moon_modes_1_3
+        color: 'cc00ff'
+      key: JupiterOne
+
+  showEuropaMoonMode:
+    pulseThreeLedTwoColor:
+      show_tokens:
+        led1: l_moon_modes_2_1
+        led2: l_moon_modes_2_2
+        led3: l_moon_modes_2_3
+        color1: 'cc00ff'
+        color2: '660088'
+      key: Europa
+            
+  # -------------------------------
+  
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------
+  # ---------------------
+  # MODE SPECIFIC::STAR::ROLLOVERS
+  # ---------------------
+  # EUROPA::GREEN
+  # ---------------------
+  showEuropaStarShooterLane:
+    swirlFourLedTwoColor:
+      show_tokens:
+        led1: l_lane_shooter_2_1
+        led2: l_lane_shooter_2_2
+        led3: l_lane_shooter_2_3
+        led4: l_lane_shooter_2_4
+        color1: '66cc00'
+        color2: '336600'
+      key: starShooterLane
+      
+  showEuropaStarTurnAround:
+    swirlFourLedTwoColor:
+      show_tokens:
+        led1: l_turn_around_4_1
+        led2: l_turn_around_4_2
+        led3: l_turn_around_4_3
+        led4: l_turn_around_4_4
+        color1: '66cc00'
+        color2: '336600'
+      key: starTurnAround
+      
+  showEuropaStarOrbitLeft1:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_left_4
+        color1: '88ff00'
+        color2: '66cc00'
+      key: starOrbitLeft1
+      
+  showEuropaStarOrbitLeft2:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_left_5
+        color1: '88ff00'
+        color2: '66cc00'
+      key: starOrbitLeft2
+      
+  showEuropaStarOrbitRight:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_right_2
+        color1: '88ff00'
+        color2: '66cc00'
+      key: starOrbitRight
+  # ---------------------
+  # END MODE SPECIFIC::EUROPA::GREEN
+  # ---------------------
+      
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  mode_modeMoonEuropa_started:
+    musicEuropa001:
+      loops: -1
+      volume: 0.3
+      
+  mode_modeMoonEuropa_ending:
+    musicEuropa001:
+      action: stop
+  #---------------------
+  shotMusicHEuropa_loopOn_hit:
+    musicEuropa002:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicHEuropa_loopOff_hit:
+    musicEuropa002:
+      action: stop
+  # ---------------------      
+  shotMusicUEuropa_loopOn_hit:
+    musicEuropa003:
+      loops: -1
+      volume: 0.25
+      
+  shotMusicUEuropa_loopOff_hit:
+    musicEuropa003:
+      action: stop
+  # ---------------------
+  shotMusicNEuropa_loopOn_hit:
+    musicEuropa004:
+      loops: -1
+      volume: 0.6
+      
+  shotMusicNEuropa_loopOff_hit:
+    musicEuropa004:
+      action: stop
+  # ---------------------
+  shotMusicTEuropa_loopOn_hit:
+    musicEuropa005:
+      loops: -1
+      volume: 0.15
+      
+  shotMusicTEuropa_loopOff_hit:
+    musicEuropa005:
+      action: stop
+  # ---------------------
+  shotMusicEEuropa_loopOn_hit:
+    musicEuropa006:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicEEuropa_loopOff_hit:
+    musicEuropa006:
+      action: stop
+  # ---------------------
+  shotMusicREuropa_loopOn_hit:
+    musicEuropa007:
+      loops: -1
+      volume: 0.3
+      
+  shotMusicREuropa_loopOff_hit:
+    musicEuropa007:
+      action: stop
+  # ---------------------
+  

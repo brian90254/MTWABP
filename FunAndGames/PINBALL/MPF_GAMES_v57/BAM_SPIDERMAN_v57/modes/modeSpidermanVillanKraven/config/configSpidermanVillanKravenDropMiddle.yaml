@@ -1,0 +1,487 @@
+#config_version=6
+
+# SPIDERMAN
+
+  # EXAMPLE CONDITIONAL EVENT
+  # example conditional event
+  # mode_modeCollectBonus_started.2{current_player.multiHunter==6}:
+  #   - eventCompletedAchModeJupiterOne|6s
+  #
+  #   shotSpinnerLeft_hit.1{current_player.shot_shotSpinnerLeftAward==0}:
+  #     score: 10 * current_player.multiPlayfield
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    # -----------
+    # BALL STARTING
+    # -----------
+    mode_modeSpidermanVillanKraven_started:
+        # -----------
+        # DROP MIDDLE
+        # -----------
+        - eventRestartShotKravenDropMiddle1
+        - eventRestartShotKravenDropMiddle2
+        - eventRestartShotKravenDropMiddle3
+        
+    # -----------
+    # DROP::MIDDLE::RESET::SEQUENCE
+    # -----------
+    eventRestartDropMiddleComboShot:
+        - eventRestartShotKravenDropMiddleSequence123
+        - eventAdvanceShotKravenDropMiddleSequence123
+        
+# -----------
+# ONE
+# -----------
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::ONE::HIT
+    # -----------
+    sequenceShotKravenDropMiddle1_hit.1{current_player.shot_shotKravenDropMiddleSequence123==1}:
+        - eventHitShotKravenDropMiddleSequence123
+        - eventSuccessShotKravenDropMiddleSequence1
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::ONE::MISS
+    # -----------
+    sequenceShotKravenDropMiddle1_hit.2{current_player.shot_shotKravenDropMiddleSequence123==2}:
+        - eventDisableShotKravenDropMiddleSequence123
+        - eventResetShotKravenDropMiddleSequence123
+        - eventFailShotKravenDropMiddleSequence1
+    sequenceShotKravenDropMiddle1_hit.3{current_player.shot_shotKravenDropMiddleSequence123==3}:
+        - eventDisableShotKravenDropMiddleSequence123
+        - eventResetShotKravenDropMiddleSequence123
+        - eventFailShotKravenDropMiddleSequence1
+
+# -----------
+# TWO
+# -----------
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::TWO::HIT
+    # -----------
+    sequenceShotKravenDropMiddle2_hit.1{current_player.shot_shotKravenDropMiddleSequence123==2}:
+        - eventHitShotKravenDropMiddleSequence123
+        - eventSuccessShotKravenDropMiddleSequence2
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::TWO::MISS
+    # -----------
+    sequenceShotKravenDropMiddle2_hit.2{current_player.shot_shotKravenDropMiddleSequence123==1}:
+        - eventDisableShotKravenDropMiddleSequence123
+        - eventResetShotKravenDropMiddleSequence123
+        - eventFailShotKravenDropMiddleSequence2
+    sequenceShotKravenDropMiddle2_hit.3{current_player.shot_shotKravenDropMiddleSequence123==3}:
+        - eventDisableShotKravenDropMiddleSequence123
+        - eventResetShotKravenDropMiddleSequence123
+        - eventFailShotKravenDropMiddleSequence2
+        
+# -----------
+# THREE
+# -----------
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::THREE::HIT
+    # -----------
+    sequenceShotKravenDropMiddle3_hit.1{current_player.shot_shotKravenDropMiddleSequence123==3}:
+        - eventHitShotKravenDropMiddleSequence123
+        - eventSuccessShotKravenDropMiddleSequence3
+        - eventCompleteShotKravenDropMiddleSequence
+    # -----------
+    # DROP::MIDDLE::SEQUENCE::THREE::MISS
+    # -----------
+    sequenceShotKravenDropMiddle3_hit.2{current_player.shot_shotKravenDropMiddleSequence123==1}:
+        - eventDisableShotKravenDropMiddleSequence123
+        - eventResetShotKravenDropMiddleSequence123
+        - eventFailShotKravenDropMiddleSequence3
+    sequenceShotKravenDropMiddle3_hit.3{current_player.shot_shotKravenDropMiddleSequence123==2}:
+        - eventDisableShotKravenDropMiddleSequence123
+        - eventResetShotKravenDropMiddleSequence123
+        - eventFailShotKravenDropMiddleSequence3
+        
+    # -----------
+    # DROP MIDDLE::ADVANCE BONUS
+    # -----------
+    shotGroupKravenDropMiddle_hit:
+        - eventCompleteAchBonusOnes
+    # -----------
+    # FLIPPER BUTTON HIT
+    # -----------
+    sw_right_flipper:
+        - eventSequenceShotRightFlipperHit
+    # -----------
+    # DROP::MIDDLE::HIT
+    # -----------
+    shotKravenDropMiddle1_hit:
+        - eventSequenceShotKravenDropMiddle1Hit
+    shotKravenDropMiddle2_hit:
+        - eventSequenceShotKravenDropMiddle2Hit|250ms
+    shotKravenDropMiddle3_hit:
+        - eventSequenceShotKravenDropMiddle3Hit|500ms
+        
+# *****************************
+# SEQUENCE SHOTS
+# *****************************
+sequence_shots:
+    # -------------------
+    # SEQUENCE SHOTS::DROP MIDDLE::1
+    # -------------------
+    sequenceShotKravenDropMiddle1:
+        event_sequence:
+            - eventSequenceShotRightFlipperHit
+            - eventSequenceShotKravenDropMiddle1Hit
+        #cancel_events: playfield_active
+        sequence_timeout: 2000ms
+    # -------------------
+    # SEQUENCE SHOTS::DROP MIDDLE::2
+    # -------------------
+    sequenceShotKravenDropMiddle2:
+        event_sequence:
+            - eventSequenceShotRightFlipperHit
+            - eventSequenceShotKravenDropMiddle2Hit
+        #cancel_events: playfield_active
+        sequence_timeout: 2250ms
+    # -------------------
+    # SEQUENCE SHOTS::DROP MIDDLE::3
+    # -------------------
+    sequenceShotKravenDropMiddle3:
+        event_sequence:
+            - eventSequenceShotRightFlipperHit
+            - eventSequenceShotKravenDropMiddle3Hit
+        #cancel_events: playfield_active
+        sequence_timeout: 2500ms
+
+
+    #my_event_based_sequence_shot:
+    #    event_sequence:
+    #        - event1
+    #        - event2
+    #        - event3
+    #    cancel_events: cancel
+    #    delay_event_list:
+    #        delay1: 1s
+    #    sequence_timeout: 3s
+    
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::DROP MIDDLE
+    # -------------------
+    shotKravenDropMiddle1:
+        switch: s_1_0
+        enable_events: eventEnableShotKravenDropMiddle1
+        disable_events: eventDisableShotKravenDropMiddle1
+        restart_events: eventRestartShotKravenDropMiddle1
+        reset_events: eventResetShotKravenDropMiddle1
+
+    shotKravenDropMiddle2:
+        switch: s_1_15
+        enable_events: eventEnableShotKravenDropMiddle2
+        disable_events: eventDisableShotKravenDropMiddle2
+        restart_events: eventRestartShotKravenDropMiddle2
+        reset_events: eventResetShotKravenDropMiddle2
+        
+    shotKravenDropMiddle3:
+        switch: s_1_1
+        enable_events: eventEnableShotKravenDropMiddle3
+        disable_events: eventDisableShotKravenDropMiddle3
+        restart_events: eventRestartShotKravenDropMiddle3
+        reset_events: eventResetShotKravenDropMiddle3
+            
+    # -------------------
+    # SHOTS::DROP MIDDLE::SEQUENCE
+    # -------------------
+    shotKravenDropMiddleSequence123:
+        enable_events: eventEnableShotKravenDropMiddleSequence123
+        disable_events: eventDisableShotKravenDropMiddleSequence123
+        restart_events: eventRestartShotKravenDropMiddleSequence123
+        reset_events: eventResetShotKravenDropMiddleSequence123
+        hit_events: eventHitShotKravenDropMiddleSequence123
+        advance_events: eventAdvanceShotKravenDropMiddleSequence123
+        profile: spShotKravenDropMiddleSequence123
+          
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::DROP RIGHT::SPOT
+    # -------------------
+    shotGroupKravenDropMiddle:
+        shots:
+            - shotKravenDropMiddle1
+            - shotKravenDropMiddle2
+            - shotKravenDropMiddle3
+        enable_events:
+            - eventEnableShotGroupKravenDropMiddle
+        disable_events:
+            - eventDisableShotGroupKravenDropMiddle
+        reset_events:
+            - eventResetShotGroupKravenDropMiddle
+        restart_events:
+            - eventRestartShotGroupKravenDropMiddle
+        #rotate_left_events:
+        #    - sw_right_flipper
+        #rotate_right_events:
+        #    - sw_left_flipper
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::SPINNER
+    # -----------------------------
+    spShotKravenDropMiddleSequence123:
+        states:
+          - name: unlitDisabled
+          - name: unlitSolid
+          - name: litFlashOne
+          - name: litFlashTwo
+          - name: litFlashThree
+        loop: false
+        
+    ## -----------------------------
+    ## PROFILE::SPINNER
+    ## -----------------------------
+    #spShotKravenSpinner:
+    #    states:
+    #      - name: litSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: 'ffff00'
+    #            color2: '888800'
+    #    loop: false
+    #
+    ## -----------------------------
+    ## PROFILE::OUTLANE::SPECIAL
+    ## -----------------------------
+    #spShotKravenOutlaneReturnWhenLit:
+    #    states:
+    #      - name: unlitSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: '000000'
+    #      - name: litFlashOne
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            #color1: '440066'
+    #            #color2: '8800cc'
+    #            color1: '0000cc'
+    #            color2: '00ffff'
+    #      - name: litFlashTwo
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            #color1: 'cc00cc'
+    #            color1: 'cc0000'
+    #            color2: 'ff00ff'
+    #      - name: litSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            #color1: 'cc00cc'
+    #            color1: 'cccc00'
+    #            color2: 'ffff00'
+    #    loop: false
+    #    
+    #
+    ## -----------------------------
+    ## PROFILE::LANES::A-B
+    ## -----------------------------
+    #spShotKravenLaneAB:
+    #    states:
+    #      - name: litFlashOne
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: 'ff0000'
+    #      - name: litFlashTwo
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: 'ffff00'
+    #      - name: litSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '00cc00'
+    #            color2: '00ff00'
+    #    loop: false
+    #    
+    ## -----------------------------
+    ## PROFILE::LANES::MULTI-BONUS
+    ## -----------------------------
+    #spShotKravenLaneMultiBonus:
+    #    states:
+    #      - name: litFlashOne
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: 'ff0000'
+    #      - name: litFlashTwo
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000000'
+    #            color2: 'ffff00'
+    #      - name: litSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '00cc00'
+    #            color2: '00ff00'
+    #    loop: false
+    #    
+    ## -----------------------------
+    ## PROFILE::DROP RIGHT::SPOT
+    ## -----------------------------
+    #spShotKravenDropRightSpot:
+    #    states:
+    #      - name: litFlashOne
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '000088'
+    #            color2: '00ffff'
+    #      - name: litFlashTwo
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: '880000'
+    #            color2: 'ff00ff'
+    #      - name: litSolid
+    #        show: ribbonFiveLedTwoColor
+    #        speed: 6
+    #        show_tokens:
+    #            color1: 'cccc00'
+    #            color2: 'ffff00'
+    #    loop: false
+        
+## ---------------------
+## EVENT::PLAYER
+## ---------------------
+#event_player:
+#    # -----------
+#    # BALL STARTING
+#    # -----------
+#    mode_modeSpidermanVillanKraven_started:
+#        # -----------
+#        # DROP MIDDLE
+#        # -----------
+#        - eventRestartShotKravenDropMiddle1
+#        - eventRestartShotKravenDropMiddle2
+#        - eventRestartShotKravenDropMiddle3
+#        
+#    # -----------
+#    # DROP MIDDLE::ADVANCE BONUS
+#    # -----------
+#    shotGroupKravenDropMiddle_hit:
+#        - eventCompleteAchBonusOnes
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------------
+    # DROP::MIDDLE
+    # ---------------------
+    shotGroupKravenDropMiddle_hit:
+        score: 1000 * current_player.multiPlayfield
+
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+    # ---------------------
+    # SHOW::VERTICAL::RIGHT
+    # ---------------------
+    playShowKravenDropMiddleFiveLedTwoColor:
+        showKravenDropMiddleFiveLedTwoColor:
+            speed: 2
+            loops: 3
+            action: play
+            #key: showKravenDropMiddleFiveLedTwoColor
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot6A
+                led2B: ledSpot6B
+                led2C: ledSpot6C
+                led2D: ledSpot6D
+                led2E: ledSpot6E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showKravenDropMiddleFiveLedTwoColor:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1)
+            (led1B): (color1)
+            (led1C): (color1)
+            (led1D): (color1)
+            (led1E): (color1)
+            # ----------------
+            (led2A): (color1)
+            (led2B): (color1)
+            (led2C): (color1)
+            (led2D): (color1)
+            (led2E): (color1)
+            # ----------------
+            (led3A): (color1)
+            (led3B): (color1)
+            (led3C): (color1)
+            (led3D): (color1)
+            (led3E): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color2)
+            (led1B): (color2)
+            (led1C): (color2)
+            (led1D): (color2)
+            (led1E): (color2)
+            # ----------------
+            (led2A): (color2)
+            (led2B): (color2)
+            (led2C): (color2)
+            (led2D): (color2)
+            (led2E): (color2)
+            # ----------------
+            (led3A): (color2)
+            (led3B): (color2)
+            (led3C): (color2)
+            (led3D): (color2)
+            (led3E): (color2)
+            # ----------------
+        - time: "+1"

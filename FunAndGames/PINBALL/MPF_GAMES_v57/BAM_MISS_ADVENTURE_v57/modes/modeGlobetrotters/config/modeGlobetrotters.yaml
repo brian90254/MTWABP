@@ -1,0 +1,329 @@
+#config_version=6
+
+config:
+#- configShotsGlobetrotters.yaml
+#- configAchievementsGlobetrotters.yaml
+- configScoringGlobetrotters.yaml
+#- configExtraBallGlobetrotters.yaml
+#- configSpecialShotsGlobetrotters.yaml
+
+mode:
+  start_events: eventStartModeGlobetrotters
+  stop_events: eventStopModeGlobetrotters
+  priority: 2000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeGlobetrotters_started:
+    - eventPlaylistModeGlobetrottersStart
+#    # ---------------------
+#    # EVENT::START::SPECIAL MODES
+#    # ---------------------
+#    #- eventStartModeSkillShot
+#    #- eventStartModeCollectMidGameBonus
+#    - eventStartModeAwardWheel
+#    # ---------------------
+#    # START::LIGHT::SHOWS
+#    # ---------------------
+#    - showGlobetrottersStarShooterLane
+#    - showGlobetrottersStarTurnAround
+#    - showGlobetrottersStarOrbitLeft1
+#    - showGlobetrottersStarOrbitLeft2
+#    - showGlobetrottersStarOrbitRight
+#    # ---------------------
+#    # EVENT::RESET::MULTIPLIERS
+#    # ---------------------
+    - eventResetMultipliersGlobetrotters
+#    # ---------------------
+#    # EVENT::PLAYER::FLIPPERS
+#    # ---------------------
+#    - eventEnableFlipperGlobetrotters|250ms
+#    # ----------------------------
+#    #- eventDisableFlipperGlobetrotters
+#    - eventDisableFlipperEuropa
+#    - eventDisableFlipperGanymede
+#    - eventDisableFlipperCallisto
+#    # ---------------------
+#    # EVENT::RESET::DROPS
+#    # ---------------------
+#    - eventResetDropTargetLeft|1.5s
+#    - eventResetDropTargetRight|1s
+#    # ---------------------
+#    # EVENT::START::MULTIBALLS
+#    # ---------------------
+#    - eventStartModeMultiball
+#    #- eventEnableMultiballUpperKicker
+#    - eventDisableMultiballUpperKicker
+#    - eventDisableShotStartMultiballVukGlobetrotters
+#
+#  # ---------------------
+#  # EVENT::START::WHEEL_ACHIEVEMENT
+#  # ---------------------
+#  multiball_multiballUpperKicker_ended:
+#    - eventEnableMultiballVuk
+#    - eventEnableAwardWheel
+
+
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  mode_modeGlobetrotters_started:
+    nameMoon:
+      #string: "Stern: Magic"
+      #string: "Bally: Strikes and Spares"
+      #string: "GLOBETROTTERS"
+      string: "Miss Adventure"
+      action: set
+      
+# ---------------------
+# COIL::PLAYER
+# ---------------------
+#coil_player:
+#  # ----------------------------
+#  # SAUCER MOTOR
+#  # ----------------------------
+#  eventStartSaucerVukShow:
+#    c_spinner:
+#      action: enable
+#      
+#  eventStopSaucerVukShow:
+#    c_spinner:
+#      action: disable
+#      
+#  eventStartSaucerKickerShow:
+#    c_spinner:
+#      action: enable
+#      
+#  eventStopSaucerKickerShow:
+#    c_spinner:
+#      action: disable
+      
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# ---------------------
+# SHOW::PLAYER::COILS
+# ---------------------
+  #ball_lock_blVUK_locked_ball:
+  #  showBallLockVUK:
+  #    loops: 0
+  #    speed: 1
+
+  #ball_lock_blKickerUpper_locked_ball:
+  ball_hold_blKickerUpper_held_ball:
+    showBallLockKickerUpper:
+      loops: 0
+      speed: 1
+
+  ball_hold_blKickerRight_held_ball:
+    showBallLockKickerRight:
+      loops: 0
+      speed: 1
+
+  # ----------------------------
+  # VUK SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  #eventStartSaucerVukShow:
+  #  showSaucerMotorLights:
+  #    loops: -1
+  #    speed: 16
+  #    show_tokens:
+  #      color1: '0000ff'
+  #      color2: '0000ff'
+  #      color3: '000000'
+  #      color4: '000000'
+  #    key: saucerVukShow
+  #    
+  #eventStopSaucerVukShow:
+  #  saucerVukShow:
+  #    action: stop
+  # ----------------------------
+  
+  # ----------------------------
+  # KICKER SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  #eventStartSaucerKickerShow:
+  #  showSaucerMotorLights:
+  #    loops: -1
+  #    speed: 16
+  #    show_tokens:
+  #      color1: 'ffff00'
+  #      color2: 'ffff00'
+  #      color3: '000000'
+  #      color4: '000000'
+  #    key: saucerKickerShow
+      
+  #eventStopSaucerKickerShow:
+  #  saucerKickerShow:
+  #    action: stop
+  # ----------------------------
+      
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------
+    
+  #mode_modeGlobetrotters_started:      
+  #  onThreeLedColor:
+  #    show_tokens:
+  #      led1: l_newton_ball_2
+  #      led2: l_newton_ball_3
+  #      led3: l_newton_ball_4
+  #      color: 'ffff88'
+  #    key: newtonBall
+      
+  #showGlobetrottersMode:
+  #  pulseThreeLedTwoColor:
+  #    show_tokens:
+  #      led1: l_moon_modes_1_1
+  #      led2: l_moon_modes_1_2
+  #      led3: l_moon_modes_1_3
+  #      color1: 'cc00ff'
+  #      color2: '660088'
+  #    key: Globetrotters
+            
+  # -------------------------------
+  
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------
+  # ---------------------
+  # MODE SPECIFIC::STAR::ROLLOVERS
+  # ---------------------
+  # JUPITER ONE::ORANGE
+  # ---------------------
+  #showGlobetrottersStarShooterLane:
+  #  swirlFourLedTwoColor:
+  #    show_tokens:
+  #      led1: l_lane_shooter_2_1
+  #      led2: l_lane_shooter_2_2
+  #      led3: l_lane_shooter_2_3
+  #      led4: l_lane_shooter_2_4
+  #      color1: 'cc6600'
+  #      color2: '664400'
+  #    key: starShooterLane
+      
+  #showGlobetrottersStarTurnAround:
+  #  swirlFourLedTwoColor:
+  #    show_tokens:
+  #      led1: l_turn_around_4_1
+  #      led2: l_turn_around_4_2
+  #      led3: l_turn_around_4_3
+  #      led4: l_turn_around_4_4
+  #      color1: 'cc6600'
+  #      color2: '664400'
+  #    key: starTurnAround
+      
+  #showGlobetrottersStarOrbitLeft1:
+  #  flashLedTwoColor:
+  #    show_tokens:
+  #      led: l_orbit_left_4
+  #      color1: '885500'
+  #      color2: 'ffaa00'
+  #    key: starOrbitLeft1
+      
+  #showGlobetrottersStarOrbitLeft2:
+  #  flashLedTwoColor:
+  #    show_tokens:
+  #      led: l_orbit_left_5
+  #      color1: '885500'
+  #      color2: 'ffaa00'
+  #    key: starOrbitLeft2
+      
+  #showGlobetrottersStarOrbitRight:
+  #  flashLedTwoColor:
+  #    show_tokens:
+  #      led: l_orbit_right_2
+  #      color1: '885500'
+  #      color2: 'ffaa00'
+  #    key: starOrbitRight
+  
+  # ---------------------
+  # END MODE SPECIFIC::JUPITER ONE::ORANGE
+  # ---------------------
+      
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  #---------------------
+  # AMBIENCE
+  mode_modeGlobetrotters_started:
+    musicGlobetrotters012:
+      loops: -1
+      volume: 0.3
+      
+  mode_modeGlobetrotters_ending:
+    musicGlobetrotters012:
+      action: stop
+  #---------------------
+  
+  #mode_modeGlobetrotters_started:
+  #  musicGlobetrotters001:
+  #    loops: -1
+  #    volume: 0.3
+  #    
+  #mode_modeGlobetrotters_ending:
+  #  musicGlobetrotters001:
+  #    action: stop
+  #---------------------
+  shotMusicHGlobetrotters_loopOn_hit:
+    musicGlobetrotters002:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicHGlobetrotters_loopOff_hit:
+    musicGlobetrotters002:
+      action: stop
+  # ---------------------      
+  shotMusicUGlobetrotters_loopOn_hit:
+    musicGlobetrotters003:
+      loops: -1
+      volume: 0.25
+      
+  shotMusicUGlobetrotters_loopOff_hit:
+    musicGlobetrotters003:
+      action: stop
+  # ---------------------
+  shotMusicNGlobetrotters_loopOn_hit:
+    musicGlobetrotters004:
+      loops: -1
+      volume: 0.6
+      
+  shotMusicNGlobetrotters_loopOff_hit:
+    musicGlobetrotters004:
+      action: stop
+  # ---------------------
+  shotMusicTGlobetrotters_loopOn_hit:
+    musicGlobetrotters005:
+      loops: -1
+      volume: 0.15
+      
+  shotMusicTGlobetrotters_loopOff_hit:
+    musicGlobetrotters005:
+      action: stop
+  # ---------------------
+  shotMusicEGlobetrotters_loopOn_hit:
+    musicGlobetrotters006:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicEGlobetrotters_loopOff_hit:
+    musicGlobetrotters006:
+      action: stop
+  # ---------------------
+  shotMusicRGlobetrotters_loopOn_hit:
+    musicGlobetrotters007:
+      loops: -1
+      volume: 0.3
+      
+  shotMusicRGlobetrotters_loopOff_hit:
+    musicGlobetrotters007:
+      action: stop
+  # ---------------------
+  
+

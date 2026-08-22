@@ -1,0 +1,1026 @@
+#config_version=6
+
+# VOLTAN
+
+# *****************************
+# SHOTS::LANES
+# *****************************
+shots:
+    # -------------------
+    # MATRIX SPOT
+    # -------------------
+    shotMatrixSpotUranus1:
+        switch: s_1_28
+        enable_events: eventEnableShotMatrixSpotUranus1
+        disable_events: eventDisableShotMatrixSpotUranus1
+        restart_events: eventRestartShotMatrixSpotUranus1
+        reset_events: eventResetShotMatrixSpotUranus1
+        profile: spShotMatrixSpotUranus
+        show_tokens:
+            led1: ledSpot1A
+            led2: ledSpot1B
+            led3: ledSpot1C
+            led4: ledSpot1D
+            led5: ledSpot1E
+            led6: ledLane1
+           
+    shotMatrixSpotUranus2:
+        switch: s_1_30
+        enable_events: eventEnableShotMatrixSpotUranus2
+        disable_events: eventDisableShotMatrixSpotUranus2
+        restart_events: eventRestartShotMatrixSpotUranus2
+        reset_events: eventResetShotMatrixSpotUranus2
+        profile: spShotMatrixSpotUranus
+        show_tokens:
+            led1: ledSpot2A
+            led2: ledSpot2B
+            led3: ledSpot2C
+            led4: ledSpot2D
+            led5: ledSpot2E
+            led6: ledTarget2
+            
+    shotMatrixSpotUranus3:
+        switch: s_1_19
+        enable_events: eventEnableShotMatrixSpotUranus3
+        disable_events: eventDisableShotMatrixSpotUranus3
+        restart_events: eventRestartShotMatrixSpotUranus3
+        reset_events: eventResetShotMatrixSpotUranus3
+        profile: spShotMatrixSpotUranus
+        show_tokens:
+            led1: ledSpot3A
+            led2: ledSpot3B
+            led3: ledSpot3C
+            led4: ledSpot3D
+            led5: ledSpot3E
+            led6: ledLane3
+            
+    shotMatrixSpotUranus4:
+        switch: s_1_17
+        enable_events: eventEnableShotMatrixSpotUranus4
+        disable_events: eventDisableShotMatrixSpotUranus4
+        restart_events: eventRestartShotMatrixSpotUranus4
+        reset_events: eventResetShotMatrixSpotUranus4
+        profile: spShotMatrixSpotUranus
+        show_tokens:
+            led1: ledSpot4A
+            led2: ledSpot4B
+            led3: ledSpot4C
+            led4: ledSpot4D
+            led5: ledSpot4E
+            led6: ledLane4
+           
+    shotMatrixSpotUranus5:
+        switch: s_1_9
+        enable_events: eventEnableShotMatrixSpotUranus5
+        disable_events: eventDisableShotMatrixSpotUranus5
+        restart_events: eventRestartShotMatrixSpotUranus5
+        reset_events: eventResetShotMatrixSpotUranus5
+        profile: spShotMatrixSpotUranus
+        show_tokens:
+            led1: ledSpot5A
+            led2: ledSpot5B
+            led3: ledSpot5C
+            led4: ledSpot5D
+            led5: ledSpot5E
+            led6: ledTarget5
+            
+    shotMatrixSpotUranus6:
+        switch: s_1_31
+        enable_events: eventEnableShotMatrixSpotUranus6
+        disable_events: eventDisableShotMatrixSpotUranus6
+        restart_events: eventRestartShotMatrixSpotUranus6
+        reset_events: eventResetShotMatrixSpotUranus6
+        profile: spShotMatrixSpotUranus
+        show_tokens:
+            led1: ledSpot6A
+            led2: ledSpot6B
+            led3: ledSpot6C
+            led4: ledSpot6D
+            led5: ledSpot6E
+            led6: ledLane6
+            
+    shotMatrixSpotUranus7:
+        switch: s_1_29
+        enable_events: eventEnableShotMatrixSpotUranus7
+        disable_events: eventDisableShotMatrixSpotUranus7
+        restart_events: eventRestartShotMatrixSpotUranus7
+        reset_events: eventResetShotMatrixSpotUranus7
+        profile: spShotMatrixSpotUranus
+        show_tokens:
+            led1: ledSpot7A
+            led2: ledSpot7B
+            led3: ledSpot7C
+            led4: ledSpot7D
+            led5: ledSpot7E
+            led6: ledLane7
+           
+    shotMatrixSpotUranus8:
+        switch: s_1_16
+        enable_events: eventEnableShotMatrixSpotUranus8
+        disable_events: eventDisableShotMatrixSpotUranus8
+        restart_events: eventRestartShotMatrixSpotUranus8
+        reset_events: eventResetShotMatrixSpotUranus8
+        profile: spShotMatrixSpotUranus
+        show_tokens:
+            led1: ledSpot8A
+            led2: ledSpot8B
+            led3: ledSpot8C
+            led4: ledSpot8D
+            led5: ledSpot8E
+            led6: ledTarget8
+            
+    shotMatrixSpotUranus9:
+        switch: s_1_18
+        enable_events: eventEnableShotMatrixSpotUranus9
+        disable_events: eventDisableShotMatrixSpotUranus9
+        restart_events: eventRestartShotMatrixSpotUranus9
+        reset_events: eventResetShotMatrixSpotUranus9
+        profile: spShotMatrixSpotUranus
+        show_tokens:
+            led1: ledSpot9A
+            led2: ledSpot9B
+            led3: ledSpot9C
+            led4: ledSpot9D
+            led5: ledSpot9E
+            led6: ledLane9
+            
+    # -------------------
+    # MATRIX SPOT::GROUPS
+    # -------------------
+    # DIAGONAL
+    shotMatrixSpotUranusDiagonalLeft:
+        enable_events: eventEnableShotMatrixSpotUranusDiagonalLeft
+        disable_events: eventDisableShotMatrixSpotUranusDiagonalLeft
+        restart_events: eventRestartShotMatrixSpotUranusDiagonalLeft
+        reset_events: eventResetShotMatrixSpotUranusDiagonalLeft
+        hit_events: eventHitShotMatrixSpotUranusDiagonalLeft
+        profile: spShotMatrixSpotUranusDiagonal
+            
+    shotMatrixSpotUranusDiagonalRight:
+        enable_events: eventEnableShotMatrixSpotUranusDiagonalRight
+        disable_events: eventDisableShotMatrixSpotUranusDiagonalRight
+        restart_events: eventRestartShotMatrixSpotUranusDiagonalRight
+        reset_events: eventResetShotMatrixSpotUranusDiagonalRight
+        hit_events: eventHitShotMatrixSpotUranusDiagonalRight
+        profile: spShotMatrixSpotUranusDiagonal
+        
+    # VERTICAL
+    shotMatrixSpotUranusVerticalLeft:
+        enable_events: eventEnableShotMatrixSpotUranusVerticalLeft
+        disable_events: eventDisableShotMatrixSpotUranusVerticalLeft
+        restart_events: eventRestartShotMatrixSpotUranusVerticalLeft
+        reset_events: eventResetShotMatrixSpotUranusVerticalLeft
+        hit_events: eventHitShotMatrixSpotUranusVerticalLeft
+        profile: spShotMatrixSpotUranusVertical
+            
+    shotMatrixSpotUranusVerticalMiddle:
+        enable_events: eventEnableShotMatrixSpotUranusVerticalMiddle
+        disable_events: eventDisableShotMatrixSpotUranusVerticalMiddle
+        restart_events: eventRestartShotMatrixSpotUranusVerticalMiddle
+        reset_events: eventResetShotMatrixSpotUranusVerticalMiddle
+        hit_events: eventHitShotMatrixSpotUranusVerticalMiddle
+        profile: spShotMatrixSpotUranusVertical
+        
+    shotMatrixSpotUranusVerticalRight:
+        enable_events: eventEnableShotMatrixSpotUranusVerticalRight
+        disable_events: eventDisableShotMatrixSpotUranusVerticalRight
+        restart_events: eventRestartShotMatrixSpotUranusVerticalRight
+        reset_events: eventResetShotMatrixSpotUranusVerticalRight
+        hit_events: eventHitShotMatrixSpotUranusVerticalRight
+        profile: spShotMatrixSpotUranusVertical
+        
+    # -------------------
+    # SHOTS::SPINNERS
+    # -------------------
+    shotSpinnerUranusLeft:
+        switch: s_1_11
+        enable_events: eventEnableShotSpinnerUranusLeft
+        disable_events: eventDisableShotSpinnerUranusLeft
+        restart_events: eventRestartShotSpinnerUranusLeft
+        reset_events: eventResetShotSpinnerUranusLeft
+        profile: spShotSpinnerUranus
+        show_tokens:
+            led1: ledSpinnerLeft1
+            led2: ledSpinnerLeft2
+            led3: ledSpinnerLeft3
+        
+    shotSpinnerUranusRight:
+        switch: s_1_4
+        enable_events: eventEnableShotSpinnerUranusRight
+        disable_events: eventDisableShotSpinnerUranusRight
+        restart_events: eventRestartShotSpinnerUranusRight
+        reset_events: eventResetShotSpinnerUranusRight
+        profile: spShotSpinnerUranus
+        show_tokens:
+            led1: ledSpinnerRight1
+            led2: ledSpinnerRight2
+            led3: ledSpinnerRight3
+        
+    # -------------------
+    # SHOTS::OUTLANES
+    # -------------------
+    shotOutlaneUranusLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlaneUranusLeft
+        disable_events: eventDisableShotOutlaneUranusLeft
+        restart_events: eventRestartShotOutlaneUranusLeft
+        reset_events: eventResetShotOutlaneUranusLeft
+        profile: spShotOutlaneUranus
+            
+    shotOutlaneUranusRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlaneUranusRight
+        disable_events: eventDisableShotOutlaneUranusRight
+        restart_events: eventRestartShotOutlaneUranusRight
+        reset_events: eventResetShotOutlaneUranusRight
+        profile: spShotOutlaneUranus
+            
+    # -------------------
+    # SHOTS::OUTLANE::SPECIAL
+    # -------------------
+    shotOutlaneUranusSpecialLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlaneUranusSpecialLeft
+        disable_events: eventDisableShotOutlaneUranusSpecialLeft
+        restart_events: eventRestartShotOutlaneUranusSpecialLeft
+        reset_events: eventResetShotOutlaneUranusSpecialLeft
+        profile: spShotOutlaneUranusSpecial
+        show_tokens:
+            led: ledOutlaneLeft
+            
+    shotOutlaneUranusSpecialRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlaneUranusSpecialRight
+        disable_events: eventDisableShotOutlaneUranusSpecialRight
+        restart_events: eventRestartShotOutlaneUranusSpecialRight
+        reset_events: eventResetShotOutlaneUranusSpecialRight
+        profile: spShotOutlaneUranusSpecial
+        show_tokens:
+            led: ledOutlaneRight
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotUranusAll:
+        shots:
+            - shotMatrixSpotUranus7
+            - shotMatrixSpotUranus2
+            - shotMatrixSpotUranus1
+            - shotMatrixSpotUranus4
+            - shotMatrixSpotUranus6
+            - shotMatrixSpotUranus9
+            - shotMatrixSpotUranus8
+            - shotMatrixSpotUranus3
+            - shotMatrixSpotUranus5
+        enable_events:
+            - eventEnableShotGroupMatrixSpotUranusAll
+        disable_events:
+            - eventDisableShotGroupMatrixSpotUranusAll
+        reset_events:
+            - eventResetShotGroupMatrixSpotUranusAll
+        restart_events:
+            - eventRestartShotGroupMatrixSpotUranusAll
+        rotate_left_events:
+            - sw_right_flipper
+        rotate_right_events:
+            - sw_left_flipper
+        
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotUranusDiagonalLeft:
+        shots:
+            - shotMatrixSpotUranus1
+            - shotMatrixSpotUranus5
+            - shotMatrixSpotUranus9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotUranusDiagonalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotUranusDiagonalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotUranusDiagonalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotUranusDiagonalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotUranusDiagonalRight:
+        shots:
+            - shotMatrixSpotUranus3
+            - shotMatrixSpotUranus5
+            - shotMatrixSpotUranus7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotUranusDiagonalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotUranusDiagonalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotUranusDiagonalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotUranusDiagonalRight
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotUranusVerticalLeft:
+        shots:
+            - shotMatrixSpotUranus1
+            - shotMatrixSpotUranus4
+            - shotMatrixSpotUranus7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotUranusVerticalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotUranusVerticalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotUranusVerticalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotUranusVerticalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotUranusVerticalMiddle:
+        shots:
+            - shotMatrixSpotUranus2
+            - shotMatrixSpotUranus5
+            - shotMatrixSpotUranus8
+        enable_events:
+            - eventEnableShotGroupMatrixSpotUranusVerticalMiddle
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotUranusVerticalMiddle
+        reset_events:
+            - eventResetShotGroupMatrixSpotUranusVerticalMiddle
+        restart_events:
+            - eventRestartShotGroupMatrixSpotUranusVerticalMiddle
+            
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotUranusVerticalRight:
+        shots:
+            - shotMatrixSpotUranus3
+            - shotMatrixSpotUranus6
+            - shotMatrixSpotUranus9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotUranusVerticalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotUranusVerticalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotUranusVerticalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotUranusVerticalRight
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::MARTIX::SPOT
+    # -----------------------------
+    spShotMatrixSpotUranus:
+        states:
+          - name: litFlash3
+            show: showMatrixSpotUranus
+            speed: 4
+            show_tokens:
+                color1: '880088'
+                color2: 'ff00ff'
+                color3: '000000'
+                color4: '000000'
+          - name: litFlash2
+            show: showMatrixSpotUranus
+            speed: 4
+            show_tokens:
+                color1: '880000'
+                color2: 'ff0000'
+                color3: '880000'
+                color4: 'ff0000'
+          - name: litFlash
+            show: showMatrixSpotUranus
+            speed: 4
+            show_tokens:
+                color1: '888800'
+                color2: 'ffff00'
+                color3: '888800'
+                color4: 'ffff00'
+          - name: litSolid
+            show: showMatrixSpotUranus
+            speed: 4
+            show_tokens:
+                #color1: '660088'
+                #color2: '660088'
+                color1: '0000cc'
+                color2: '0000cc'
+                color3: '008888'
+                color4: '00ffff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::MARTIX::GROUPS
+    # -----------------------------
+    spShotMatrixSpotUranusDiagonal:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    spShotMatrixSpotUranusVertical:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::SPINNER
+    # -----------------------------
+    spShotSpinnerUranus:
+        states:
+          - name: litSolid
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: 'ffff00'
+                color2: '888800'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE
+    # -----------------------------
+    spShotOutlaneUranus:
+        states:
+          #- name: litFlash
+          - name: litSolid
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE::SPECIAL
+    # -----------------------------
+    spShotOutlaneUranusSpecial:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '440066'
+                color2: '8800cc'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: 'cc00ff'
+                color2: 'cc00ff'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeVoltanUranus_started:
+        # -----------
+        # OUTLANES
+        # -----------
+        - eventEnableShotOutlaneUranusLeft
+        - eventEnableShotOutlaneUranusRight
+        # -----------
+        # MATRIX
+        # -----------
+        - eventEnableShotMatrixSpotUranus1
+        - eventEnableShotMatrixSpotUranus2
+        - eventEnableShotMatrixSpotUranus3
+        - eventEnableShotMatrixSpotUranus4
+        - eventEnableShotMatrixSpotUranus5
+        - eventEnableShotMatrixSpotUranus6
+        - eventEnableShotMatrixSpotUranus7
+        - eventEnableShotMatrixSpotUranus8
+        - eventEnableShotMatrixSpotUranus9
+        # -----------
+        # MATRIX::GROUPS
+        # -----------
+        # DIAGONAL
+        # TODO reserve this for higher level modes past Uranus
+        - eventEnableShotMatrixSpotUranusDiagonalLeft
+        - eventEnableShotMatrixSpotUranusDiagonalRight
+        #VERTICAL
+        - eventEnableShotMatrixSpotUranusVerticalLeft
+        - eventEnableShotMatrixSpotUranusVerticalMiddle
+        - eventEnableShotMatrixSpotUranusVerticalRight
+        
+# -----------
+# MATRIX::GROUPS::COMPLETE
+# -----------
+# -----------
+# DIAGONAL
+# -----------
+    # TODO this is not enables in Uranus
+    # -----------
+    # DIAGONAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotUranusDiagonalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotUranusDiagonalLeft
+        # -------------
+    shotMatrixSpotUranusDiagonalLeft_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotUranus1
+        #- eventDisableShotMatrixSpotUranus5
+        #- eventDisableShotMatrixSpotUranus9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalLeft
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotUranus1|3000ms
+        #- eventRestartShotMatrixSpotUranus5|3000ms
+        #- eventRestartShotMatrixSpotUranus9|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerUranusLeft
+    
+    # -----------
+    # DIAGONAL::RIGHT
+    # -----------
+    # TODO this is not enables in Uranus
+    shotGroupMatrixSpotUranusDiagonalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotUranusDiagonalRight
+        # -------------
+    shotMatrixSpotUranusDiagonalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotUranus3
+        #- eventDisableShotMatrixSpotUranus5
+        #- eventDisableShotMatrixSpotUranus7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalRight
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotUranus3|3000ms
+        #- eventRestartShotMatrixSpotUranus5|3000ms
+        #- eventRestartShotMatrixSpotUranus7|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerUranusRight
+        
+    # -----------
+    # GROUP::ALL
+    # -----------
+    shotGroupMatrixSpotUranusAll_litSolid_complete:
+        - eventVoltanUranusComplete|3000ms
+    
+# -----------
+# VERTICAL
+# -----------
+    # -----------
+    # VERTICAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotUranusVerticalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotUranusVerticalLeft
+        # -------------
+    shotMatrixSpotUranusVerticalLeft_litFlash_hit:
+        # TODO this is not enables in Uranus
+        # -------------
+        # DISABLE SHOT
+        - eventDisableShotMatrixSpotUranus1
+        - eventDisableShotMatrixSpotUranus4
+        - eventDisableShotMatrixSpotUranus7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalLeft
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Uranus
+        - eventRestartShotMatrixSpotUranus1|3000ms
+        - eventRestartShotMatrixSpotUranus4|3000ms
+        - eventRestartShotMatrixSpotUranus7|3000ms
+        
+    shotGroupMatrixSpotUranusVerticalMiddle_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotUranusVerticalMiddle
+        # -------------
+    shotMatrixSpotUranusVerticalMiddle_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in Uranus
+        - eventDisableShotMatrixSpotUranus2
+        - eventDisableShotMatrixSpotUranus5
+        - eventDisableShotMatrixSpotUranus8
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalMiddle
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Uranus
+        - eventRestartShotMatrixSpotUranus2|3000ms
+        - eventRestartShotMatrixSpotUranus5|3000ms
+        - eventRestartShotMatrixSpotUranus8|3000ms
+        
+    shotGroupMatrixSpotUranusVerticalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotUranusVerticalRight
+        # -------------
+    shotMatrixSpotUranusVerticalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in Uranus
+        - eventDisableShotMatrixSpotUranus3
+        - eventDisableShotMatrixSpotUranus6
+        - eventDisableShotMatrixSpotUranus9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalRight
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Uranus
+        - eventRestartShotMatrixSpotUranus3|3000ms
+        - eventRestartShotMatrixSpotUranus6|3000ms
+        - eventRestartShotMatrixSpotUranus9|3000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------------
+    # SPINNERS
+    # ---------------------
+    shotSpinnerUranusLeft_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotSpinnerUranusRight_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    sw_tagSpinner:
+      score: 1 * current_player.multiPlayfield
+
+    # ---------------------
+    # OUTLANES
+    # ---------------------
+    # STANDARD
+    shotOutlaneUranusLeft_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    shotOutlaneUranusRight_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    # SPECIAL
+    shotOutlaneUranusSpecialLeft_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+    shotOutlaneUranusSpecialRight_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+
+    # ---------------------
+    # TARGETS AND LANES
+    # ---------------------
+    shotGroupMatrixSpotUranusAll_litFlash_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotGroupMatrixSpotUranusAll_litSolid_hit:
+        score: 10 * current_player.multiPlayfield
+      
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+    # ---------------------
+    # SHOW::DIAGONAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalLeft:
+        showMatrixSpotUranusThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotUranusThreeCompleteDiagonalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+        
+    # ---------------------
+    # SHOW::DIAGONAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalRight:
+        showMatrixSpotUranusThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotUranusThreeCompleteDiagonalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalLeft:
+        showMatrixSpotUranusThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotUranusThreeCompleteVerticalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot4A
+                led2B: ledSpot4B
+                led2C: ledSpot4C
+                led2D: ledSpot4D
+                led2E: ledSpot4E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::MIDDLE
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalMiddle:
+        showMatrixSpotUranusThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotUranusThreeCompleteVerticalMiddle
+            show_tokens:
+                # --------------
+                led1A: ledSpot2A
+                led1B: ledSpot2B
+                led1C: ledSpot2C
+                led1D: ledSpot2D
+                led1E: ledSpot2E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot8A
+                led3B: ledSpot8B
+                led3C: ledSpot8C
+                led3D: ledSpot8D
+                led3E: ledSpot8E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalRight:
+        showMatrixSpotUranusThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotUranusThreeCompleteVerticalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot6A
+                led2B: ledSpot6B
+                led2C: ledSpot6C
+                led2D: ledSpot6D
+                led2E: ledSpot6E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotUranus:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotUranusThreeComplete:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1)
+            (led1B): (color1)
+            (led1C): (color1)
+            (led1D): (color1)
+            (led1E): (color1)
+            # ----------------
+            (led2A): (color1)
+            (led2B): (color1)
+            (led2C): (color1)
+            (led2D): (color1)
+            (led2E): (color1)
+            # ----------------
+            (led3A): (color1)
+            (led3B): (color1)
+            (led3C): (color1)
+            (led3D): (color1)
+            (led3E): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color2)
+            (led1B): (color2)
+            (led1C): (color2)
+            (led1D): (color2)
+            (led1E): (color2)
+            # ----------------
+            (led2A): (color2)
+            (led2B): (color2)
+            (led2C): (color2)
+            (led2D): (color2)
+            (led2E): (color2)
+            # ----------------
+            (led3A): (color2)
+            (led3B): (color2)
+            (led3C): (color2)
+            (led3D): (color2)
+            (led3E): (color2)
+            # ----------------
+        - time: "+1"

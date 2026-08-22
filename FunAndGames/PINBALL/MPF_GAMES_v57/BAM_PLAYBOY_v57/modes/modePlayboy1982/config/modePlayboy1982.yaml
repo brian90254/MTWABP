@@ -1,0 +1,67 @@
+#config_version=6
+
+config:
+- configPlayboy1982Slides.yaml
+
+mode:
+  start_events:
+    - eventStartModePlayboy1982
+  stop_events:
+    - eventStopModePlayboy1982
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modePlayboy1982_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlidePlayboy1982Base
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModePlayboyStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersPlayboy1982|1000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  #mode_modeVoltanMercury_started:
+  mode_modePlayboy1982_started:
+    nameMoon:
+      string: "PLAYBOY"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersPlayboy1982:
+    # -------------------------
+    # RESET BONUS COUNT
+    totalBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET TOTAL BONUS SCORE
+    # (TOTAL BONUS X BONUS MULTIPLIER)
+    scoreBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set

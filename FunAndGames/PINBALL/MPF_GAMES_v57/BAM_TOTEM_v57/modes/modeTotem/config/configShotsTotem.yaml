@@ -1,0 +1,626 @@
+#config_version=6
+
+# TOTEM
+
+# *****************************      
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::TOP::LANES::BUCK
+    # -------------------
+    shotTopLaneA:
+        switch: s_1_24
+        enable_events: eventEnableShotTopLaneA
+        disable_events: eventDisableShotTopLaneA
+        restart_events: eventRestartShotTopLaneA
+        reset_events: eventResetShotTopLaneA
+        profile: spTopLanes
+        show_tokens:
+            led1: ledTopLaneUpperA
+            led2: ledTopLaneLowerA
+            
+    shotTopLaneB:
+        switch: s_0_0
+        enable_events: eventEnableShotTopLaneB
+        disable_events: eventDisableShotTopLaneB
+        restart_events: eventRestartShotTopLaneB
+        reset_events: eventResetShotTopLaneB
+        profile: spTopLanes
+        show_tokens:
+            led1: ledTopLaneUpperB
+            led2: ledTopLaneLowerB
+            
+    shotTopLaneC:
+        switch: s_1_12
+        enable_events: eventEnableShotTopLaneC
+        disable_events: eventDisableShotTopLaneC
+        restart_events: eventRestartShotTopLaneC
+        reset_events: eventResetShotTopLaneC
+        profile: spTopLanes
+        show_tokens:
+            led1: ledTopLaneUpperC
+            led2: ledTopLaneLowerC
+            
+    shotTopLaneD:
+        switch: s_1_8
+        enable_events: eventEnableShotTopLaneD
+        disable_events: eventDisableShotTopLaneD
+        restart_events: eventRestartShotTopLaneD
+        reset_events: eventResetShotTopLaneD
+        profile: spTopLanes
+        show_tokens:
+            led1: ledTopLaneUpperD
+            led2: ledTopLaneLowerD
+            
+    # -------------------
+    # SHOTS::DROP::MIDDLE
+    # -------------------
+    shotDropMiddle1:
+        switch: s_1_21
+        enable_events: eventEnableShotDropMiddle1
+        disable_events: eventDisableShotDropMiddle1
+        restart_events: eventRestartShotDropMiddle1
+        reset_events: eventResetShotDropMiddle1
+        profile: spDropMiddle
+        show_tokens:
+            led1: ledWhenLitDropMiddle1
+
+    shotDropMiddle2:
+        switch: s_0_5
+        enable_events: eventEnableShotDropMiddle2
+        disable_events: eventDisableShotDropMiddle2
+        restart_events: eventRestartShotDropMiddle2
+        reset_events: eventResetShotDropMiddle2
+        profile: spDropMiddle
+        show_tokens:
+            led1: ledWhenLitDropMiddle2
+
+    shotDropMiddle3:
+        switch: s_1_1
+        enable_events: eventEnableShotDropMiddle3
+        disable_events: eventDisableShotDropMiddle3
+        restart_events: eventRestartShotDropMiddle3
+        reset_events: eventResetShotDropMiddle3
+        profile: spDropMiddle
+        show_tokens:
+            led1: ledWhenLitDropMiddle3
+
+    shotDropMiddle4:
+        switch: s_0_4
+        enable_events: eventEnableShotDropMiddle4
+        disable_events: eventDisableShotDropMiddle4
+        restart_events: eventRestartShotDropMiddle4
+        reset_events: eventResetShotDropMiddle4
+        profile: spDropMiddle
+        show_tokens:
+            led1: ledWhenLitDropMiddle4
+
+    shotDropMiddle5:
+        switch: s_1_14
+        enable_events: eventEnableShotDropMiddle5
+        disable_events: eventDisableShotDropMiddle5
+        restart_events: eventRestartShotDropMiddle5
+        reset_events: eventResetShotDropMiddle5
+        profile: spDropMiddle
+        show_tokens:
+            led1: ledWhenLitDropMiddle5
+
+    shotDropMiddle6:
+        switch: s_1_26
+        enable_events: eventEnableShotDropMiddle6
+        disable_events: eventDisableShotDropMiddle6
+        restart_events: eventRestartShotDropMiddle6
+        reset_events: eventResetShotDropMiddle6
+        profile: spDropMiddle
+        show_tokens:
+            led1: ledWhenLitDropMiddle6
+
+    # -------------------
+    # SHOTS::DROP::YELLOW::LEFT
+    # -------------------
+    shotDropYellowLeft1:
+        switch: s_1_31
+        enable_events: eventEnableShotDropYellowLeft
+        disable_events: eventDisableShotDropYellowLeft
+        restart_events: eventRestartShotDropYellowLeft
+        reset_events: eventResetShotDropYellowLeft
+        profile: spDropYellow
+        show_tokens:
+            led1: ledWhenLitYellowDrop1
+            
+    shotDropYellowLeft2:
+        switch: s_1_27
+        enable_events: eventEnableShotDropYellowLeft
+        disable_events: eventDisableShotDropYellowLeft
+        restart_events: eventRestartShotDropYellowLeft
+        reset_events: eventResetShotDropYellowLeft
+        profile: spDropYellow
+        show_tokens:
+            led1: ledWhenLitYellowDrop1
+            
+    # -------------------
+    # SHOTS::DROP::YELLOW::RIGHT
+    # -------------------
+    shotDropYellowRight1:
+        switch: s_1_17
+        enable_events: eventEnableShotDropYellowRight
+        disable_events: eventDisableShotDropYellowRight
+        restart_events: eventRestartShotDropYellowRight
+        reset_events: eventResetShotDropYellowRight
+        profile: spDropYellow
+        show_tokens:
+            led1: ledWhenLitYellowDrop2
+            
+    shotDropYellowRight2:
+        switch: s_1_21
+        enable_events: eventEnableShotDropYellowRight
+        disable_events: eventDisableShotDropYellowRight
+        restart_events: eventRestartShotDropYellowRight
+        reset_events: eventResetShotDropYellowRight
+        profile: spDropYellow
+        show_tokens:
+            led1: ledWhenLitYellowDrop2
+           
+    # -------------------
+    # SHOTS::DROP::RED
+    # -------------------
+    shotDropRed1:
+        switch: s_1_30
+        enable_events: eventEnableShotDropRed
+        disable_events: eventDisableShotDropRed
+        restart_events: eventRestartShotDropRed
+        reset_events: eventResetShotDropRed
+        profile: spDropRed
+        show_tokens:
+            led1: ledWhenLitRedDrop
+            
+    shotDropRed2:
+        switch: s_1_26
+        enable_events: eventEnableShotDropRed
+        disable_events: eventDisableShotDropRed
+        restart_events: eventRestartShotDropRed
+        reset_events: eventResetShotDropRed
+        profile: spDropRed
+        show_tokens:
+            led1: ledWhenLitRedDrop
+            
+    shotDropRed3:
+        switch: s_1_18
+        enable_events: eventEnableShotDropRed
+        disable_events: eventDisableShotDropRed
+        restart_events: eventRestartShotDropRed
+        reset_events: eventResetShotDropRed
+        profile: spDropRed
+        show_tokens:
+            led1: ledWhenLitRedDrop
+            
+    shotDropRed4:
+        switch: s_1_22
+        enable_events: eventEnableShotDropRed
+        disable_events: eventDisableShotDropRed
+        restart_events: eventRestartShotDropRed
+        reset_events: eventResetShotDropRed
+        profile: spDropRed
+        show_tokens:
+            led1: ledWhenLitRedDrop
+            
+
+    # -------------------
+    # SHOTS::SAUCER::BONUS
+    # -------------------
+    shotSaucerBonus:
+        switch: s_1_2
+        enable_events: eventEnableShotSaucerBonus
+        disable_events:
+            - eventDisableShotSaucerBonus
+            - ball_ending
+        restart_events: eventRestartShotSaucerBonus
+        reset_events: eventResetShotSaucerBonus
+        profile: spSaucerBonus
+        show_tokens:
+            led1: ledWhenLitSaucer
+            
+    # -------------------
+    # SHOTS::EXTRA::BALL
+    # -------------------
+    shotExtraBall:
+        switch: s_1_19
+        enable_events: eventEnableShotExtraBall
+        disable_events:
+            - eventDisableShotExtraBall
+            - ball_ending
+        restart_events: eventRestartShotExtraBall
+        reset_events: eventResetShotExtraBall
+        profile: spExtraBall
+        show_tokens:
+            led1: ledExtraBall
+            
+    # -------------------
+    # SHOTS::ADVANCE::MULTIPLIERS
+    # -------------------
+    shotAdvanceMultipliers:
+        # dummy switch
+        switch: s_0_7
+        enable_events: eventEnableShotAdvanceMultipliers
+        disable_events:
+            - eventDisableShotAdvanceMultipliers
+            - ball_ending
+        restart_events: eventRestartShotAdvanceMultipliers
+        reset_events: eventResetShotAdvanceMultipliers
+        profile: spAdvanceMultipliers
+        advance_events: eventAdvanceShotAdvanceMultipliers
+        show_tokens:
+            led1: ledBonusMulti2x
+            led2: ledBonusMulti3x
+            led3: ledBonusMulti4x
+            led4: ledBonusMulti5x
+
+
+# *****************************      
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+
+    # -----------------------------
+    # PROFILE::DROP::YELLOW
+    # -----------------------------
+    spDropMiddle:
+        states:
+          - name: unlitFlash
+            show: flashTwoLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: 'ccff00'
+                color2: '88cc00'
+          - name: litFlash
+            show: flashTwoLedTwoColor
+            show_tokens:
+               color1: 'ff00ff'
+               color2: 'ff00ff'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::DROP::YELLOW
+    # -----------------------------
+    spDropYellow:
+        states:
+          - name: unlitFlash
+            show: flashTwoLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: 'ccff00'
+                color2: '88cc00'
+          - name: litFlash
+            #show: flashTwoLedTwoColor
+            #show_tokens:
+            #    color1: 'ff00ff'
+            #    color2: 'ff00ff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::DROP::RED
+    # -----------------------------
+    spDropRed:
+        states:
+          - name: unlitFlash
+            show: flashTwoLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: '880000'
+          - name: litFlash
+            #show: flashTwoLedTwoColor
+            #show_tokens:
+            #    color1: 'ff00ff'
+            #    color2: 'ff00ff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::SAUCER::BONUS
+    # -----------------------------
+    spSaucerBonus:
+        states:
+          - name: unlitFlash
+            show: flashTwoLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: 'ff0088'
+                color2: '880044'
+          - name: litFlash
+            #show: flashTwoLedTwoColor
+            #show_tokens:
+            #    color1: 'ff00ff'
+            #    color2: 'ff00ff'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::EXTRA::BALL
+    # -----------------------------
+    spExtraBall:
+        states:
+          - name: unlitFlash
+            show: flashTwoLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: '0088ff'
+                color2: '004488'
+          - name: litFlash
+            #show: flashTwoLedTwoColor
+            #show_tokens:
+            #    color1: 'ff00ff'
+            #    color2: 'ff00ff'
+        loop: false
+        
+        
+    # -----------------------------
+    # PROFILE::LANES::BUCK
+    # -----------------------------
+    spTopLanes:
+        states:
+          - name: unlitFlash
+            show: flashTwoLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: '000066'
+                color2: '000088'
+          - name: litFlash
+            show: flashTwoLedTwoColor
+            show_tokens:
+                color1: 'ff00ff'
+                color2: 'ff00ff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::ADVANCE::MULTIPLIERS
+    # -----------------------------
+    spAdvanceMultipliers:
+        states:
+          - name: unlitFlash
+            show: flashFourLedEightColor
+            speed: 1
+            show_tokens:
+                color1: '440000'
+                color2: '000000'
+                color3: '000000'
+                color4: '000000'
+                color5: '660000'
+                color6: '000000'
+                color7: '000000'
+                color8: '000000'
+          - name: litFlash2x
+            show: flashFourLedEightColor
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: '440000'
+                color3: '000000'
+                color4: '000000'
+                color5: 'ff0000'
+                color6: '660000'
+                color7: '000000'
+                color8: '000000'
+          - name: litFlash3x
+            show: flashFourLedEightColor
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: 'ff0000'
+                color3: '440000'
+                color4: '000000'
+                color5: 'ff0000'
+                color6: 'ff0000'
+                color7: '660000'
+                color8: '000000'
+          - name: litFlash4x
+            show: flashFourLedEightColor
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: 'ff0000'
+                color3: 'ff0000'
+                color4: '440000'
+                color5: 'ff0000'
+                color6: 'ff0000'
+                color7: 'ff0000'
+                color8: '660000'
+          - name: litFlash4x
+            show: flashFourLedEightColor
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: 'ff0000'
+                color3: 'ff0000'
+                color4: 'ff0000'
+                color5: 'ff0000'
+                color6: 'ff0000'
+                color7: 'ff0000'
+                color8: 'ff0000'
+        loop: false
+
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+
+    # -------------------
+    # SHOTGROUP::DROP::YELLOW::LEFT
+    # -------------------
+    shotGroupDropMiddle:
+        shots:
+            - shotDropMiddle1
+            - shotDropMiddle2
+            - shotDropMiddle3
+            - shotDropMiddle4
+            - shotDropMiddle5
+            - shotDropMiddle6
+        enable_events:
+            - eventEnableShotGroupDropMiddle
+        disable_events:
+            - ball_ending
+        reset_events:
+            - eventResetShotGroupDropMiddle
+
+    # -------------------
+    # SHOTGROUP::DROP::YELLOW::LEFT
+    # -------------------
+    shotGroupDropYellowLeft:
+        shots:
+            - shotDropYellowLeft1
+            - shotDropYellowLeft2
+        enable_events:
+            - eventEnableShotGroupDropYellowLeft
+        disable_events:
+            - ball_ending
+        reset_events:
+            - eventResetShotGroupDropYellowLeft
+            
+    # -------------------
+    # SHOTGROUP::DROP::YELLOW::RIGHT
+    # -------------------
+    shotGroupDropYellowRight:
+        shots:
+            - shotDropYellowRight1
+            - shotDropYellowRight2
+        enable_events:
+            - eventEnableShotGroupDropYellowRight
+        disable_events:
+            - ball_ending
+        reset_events:
+            - eventResetShotGroupDropYellowRight
+            
+    # -------------------
+    # SHOTGROUP::DROP::YELLOW::LEFT
+    # -------------------
+    shotGroupDropRed:
+        shots:
+            - shotDropRed1
+            - shotDropRed2
+            - shotDropRed3
+            - shotDropRed4
+        enable_events:
+            - eventEnableShotGroupDropRed
+        disable_events:
+            - ball_ending
+        reset_events:
+            - eventResetShotGroupDropRed
+            
+    # -------------------
+    # SHOTGROUP::TOP::LANES::BUCK
+    # -------------------
+    shotGroupTopLanes:
+        shots:
+            - shotTopLaneA
+            - shotTopLaneB
+            - shotTopLaneC
+            - shotTopLaneB
+        rotate_left_events: s_flipper_left_active
+        rotate_right_events: s_flipper_right_active
+        enable_events:
+            - ball_started
+            - mode_modeTotem_started
+            - eventEnableShotGroupTopLanes
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupTopLanes
+        reset_events:
+            - ball_will_end
+            - ball_started
+            - mode_modeTotem_started
+            - eventResetShotGroupTopLanes
+
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    
+# -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+    mode_modeTotem_started:
+
+    # -----------------------------------
+    # RESET / RESTART TOTEM SHOTS
+    # -----------------------------------
+        # -----------------------------------
+        # RESTART TOP LANES
+        # -----------------------------------
+        - eventRestartShotTopLaneA
+        - eventRestartShotTopLaneB
+        - eventRestartShotTopLaneC
+        - eventRestartShotTopLaneD
+        - eventRestartShotGroupTopLanes
+        # -----------------------------------
+        # RESTART ADVANCE MULTIPLIERS
+        # -----------------------------------
+        - eventRestartShotAdvanceMultipliers
+
+        # -----------------------------------
+        # RESET :: EXTRA BALL / SAUCER BONUS 
+        # -----------------------------------    
+        - eventResetShotExtraBall
+        - eventResetShotSaucerBonus
+
+
+    # -------------------
+    # DROP::YELLOW::LEFT
+    # -------------------
+    eventCompletedAchVariTarget2:
+        - eventResetDropTargetBankYellow
+        - eventResetShotGroupDropYellowLeft
+        - eventResetShotDropYellowLeft
+        - eventEnableShotDropYellowLeft
+
+    shotGroupDropYellowLeft_complete:
+        - advMultiBonus
+        - eventAdvanceShotAdvanceMultipliers
+        
+    # -------------------
+    # DROP::YELLOW::RIGHT
+    # -------------------
+    eventCompletedAchVariTarget4:
+        - eventResetDropTargetBankYellow
+        - eventResetShotGroupDropYellowRight
+        - eventResetShotDropYellowRight
+        - eventEnableShotDropYellowRight
+
+    shotGroupDropYellowRight_complete:
+        - advMultiBonus
+        - eventAdvanceShotAdvanceMultipliers
+
+    # -------------------
+    # WHEN::LIT::EXTRA::BALL:SAUCER::BONUS
+    # -------------------
+    eventCompletedAchVariTarget6:
+        - eventResetShotSaucerBonus
+        - eventResetShotExtraBall
+        - eventEnableShotSaucerBonus
+        - eventEnableShotExtraBall
+        
+    # -------------------
+    # DROP::YELLOW::SPECIAL
+    # -------------------
+    shotGroupTopLanes_complete:
+        - eventResetDropTargetBankRed
+        - eventResetShotGroupDropRed
+        - eventResetShotDropRed
+        - eventEnableShotDropRed
+        #- eventResetShotGroupTopLanes
+        #- eventEnableShotGroupTopLanes
+        
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+    shotGroupTopLanes_complete:
+        showCompleteShotGroupTopLanes:
+            loops: 0
+            speed: 3
+            key: keyShowCompleteShotGroupTopLanes
+            
+    eventAgAchVariTargetCompleted:
+        showCompleteAchVariTarget:
+            loops: 0
+            speed: 3
+            key: keyShowCompleteAchVariTarget

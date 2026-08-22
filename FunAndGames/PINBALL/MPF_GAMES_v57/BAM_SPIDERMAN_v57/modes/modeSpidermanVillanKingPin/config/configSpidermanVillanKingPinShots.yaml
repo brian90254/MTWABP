@@ -1,0 +1,1032 @@
+#config_version=6
+
+# SPIDERMAN
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::DROP RIGHT
+    # -------------------
+    shotKingPinDropRightSpot1:
+        switch: s_0_7
+        enable_events: eventEnableShotKingPinDropRightSpot1
+        disable_events: eventDisableShotKingPinDropRightSpot1
+        restart_events: eventRestartShotKingPinDropRightSpot1
+        reset_events: eventResetShotKingPinDropRightSpot1
+        profile: spShotKingPinDropRightSpot
+        show_tokens:
+            led1: ledDropRightSpot1A
+            led2: ledDropRightSpot1B
+            led3: ledDropRightSpot1C
+            led4: ledDropRightSpot1D
+            led5: ledDropRightSpot1E
+            
+    shotKingPinDropRightSpot2:
+        switch: s_0_6
+        enable_events: eventEnableShotKingPinDropRightSpot2
+        disable_events: eventDisableShotKingPinDropRightSpot2
+        restart_events: eventRestartShotKingPinDropRightSpot2
+        reset_events: eventResetShotKingPinDropRightSpot2
+        profile: spShotKingPinDropRightSpot
+        show_tokens:
+            led1: ledDropRightSpot2A
+            led2: ledDropRightSpot2B
+            led3: ledDropRightSpot2C
+            led4: ledDropRightSpot2D
+            led5: ledDropRightSpot2E
+            
+    shotKingPinDropRightSpot3:
+        switch: s_0_5
+        enable_events: eventEnableShotKingPinDropRightSpot3
+        disable_events: eventDisableShotKingPinDropRightSpot3
+        restart_events: eventRestartShotKingPinDropRightSpot3
+        reset_events: eventResetShotKingPinDropRightSpot3
+        profile: spShotKingPinDropRightSpot
+        show_tokens:
+            led1: ledDropRightSpot3A
+            led2: ledDropRightSpot3B
+            led3: ledDropRightSpot3C
+            led4: ledDropRightSpot3D
+            led5: ledDropRightSpot3E
+            
+    shotKingPinDropRightSpot4:
+        switch: s_0_4
+        enable_events: eventEnableShotKingPinDropRightSpot4
+        disable_events: eventDisableShotKingPinDropRightSpot4
+        restart_events: eventRestartShotKingPinDropRightSpot4
+        reset_events: eventResetShotKingPinDropRightSpot4
+        profile: spShotKingPinDropRightSpot
+        show_tokens:
+            led1: ledDropRightSpot4A
+            led2: ledDropRightSpot4B
+            led3: ledDropRightSpot4C
+            led4: ledDropRightSpot4D
+            led5: ledDropRightSpot4E
+            
+    shotKingPinDropRightSpot5:
+        switch: s_0_3
+        enable_events: eventEnableShotKingPinDropRightSpot5
+        disable_events: eventDisableShotKingPinDropRightSpot5
+        restart_events: eventRestartShotKingPinDropRightSpot5
+        reset_events: eventResetShotKingPinDropRightSpot5
+        profile: spShotKingPinDropRightSpot
+        show_tokens:
+            led1: ledDropRightSpot5A
+            led2: ledDropRightSpot5B
+            led3: ledDropRightSpot5C
+            led4: ledDropRightSpot5D
+            led5: ledDropRightSpot5E
+
+    # -------------------
+    # SHOTS::DROP MIDDLE
+    # -------------------
+    #shotKingPinDropMiddle1:
+    #    switch: s_1_0
+    #    enable_events: eventEnableShotKingPinDropMiddle1
+    #    disable_events: eventDisableShotKingPinDropMiddle1
+    #    restart_events: eventRestartShotKingPinDropMiddle1
+    #    reset_events: eventResetShotKingPinDropMiddle1
+    #
+    #shotKingPinDropMiddle2:
+    #    switch: s_1_15
+    #    enable_events: eventEnableShotKingPinDropMiddle2
+    #    disable_events: eventDisableShotKingPinDropMiddle2
+    #    restart_events: eventRestartShotKingPinDropMiddle2
+    #    reset_events: eventResetShotKingPinDropMiddle2
+    #    
+    #shotKingPinDropMiddle3:
+    #    switch: s_1_1
+    #    enable_events: eventEnableShotKingPinDropMiddle3
+    #    disable_events: eventDisableShotKingPinDropMiddle3
+    #    restart_events: eventRestartShotKingPinDropMiddle3
+    #    reset_events: eventResetShotKingPinDropMiddle3
+        
+    # -------------------
+    # SHOTS::SPINNERS
+    # -------------------
+    shotKingPinSpinnerLeft:
+        switch: s_0_1
+        enable_events: eventEnableShotKingPinSpinnerLeft
+        disable_events: eventDisableShotKingPinSpinnerLeft
+        restart_events: eventRestartShotKingPinSpinnerLeft
+        reset_events: eventResetShotKingPinSpinnerLeft
+        profile: spShotKingPinSpinner
+        show_tokens:
+            led1: ledSpinnerLeft1
+            led2: ledSpinnerLeft2
+            led3: ledSpinnerLeft3
+            led4: ledSpinnerLeft4
+            led5: ledSpinnerLeft5
+            
+    # -------------------
+    # SHOTS::OUTLANE::WHEN LIT
+    # -------------------
+    shotKingPinOutlaneWhenLitLeft:
+        switch: s_1_7
+        enable_events: eventEnableShotKingPinOutlaneWhenLitLeft
+        disable_events: eventDisableShotKingPinOutlaneWhenLitLeft
+        restart_events: eventRestartShotKingPinOutlaneWhenLitLeft
+        reset_events: eventResetShotKingPinOutlaneWhenLitLeft
+        profile: spShotKingPinOutlaneReturnWhenLit
+        show_tokens:
+            led1: ledOutlaneLeft1
+            led2: ledOutlaneLeft2
+            led3: ledOutlaneLeft3
+            led4: ledOutlaneLeft4
+            led5: ledOutlaneLeft5
+            
+    shotKingPinOutlaneWhenLitRight:
+        switch: s_1_9
+        enable_events: eventEnableShotKingPinOutlaneWhenLitRight
+        disable_events: eventDisableShotKingPinOutlaneWhenLitRight
+        restart_events: eventRestartShotKingPinOutlaneWhenLitRight
+        reset_events: eventResetShotKingPinOutlaneWhenLitRight
+        profile: spShotKingPinOutlaneReturnWhenLit
+        show_tokens:
+            led1: ledOutlaneRight1
+            led2: ledOutlaneRight2
+            led3: ledOutlaneRight3
+            led4: ledOutlaneRight4
+            led5: ledOutlaneRight5
+            
+    # -------------------
+    # SHOTS::OUTLANE::WHEN LIT
+    # -------------------
+    shotKingPinReturnWhenLitLeft:
+        switch: s_1_3
+        enable_events: eventEnableShotKingPinReturnWhenLitLeft
+        disable_events: eventDisableShotKingPinReturnWhenLitLeft
+        restart_events: eventRestartShotKingPinReturnWhenLitLeft
+        reset_events: eventResetShotKingPinReturnWhenLitLeft
+        profile: spShotKingPinOutlaneReturnWhenLit
+        show_tokens:
+            led1: ledReturnLeft1
+            led2: ledReturnLeft2
+            led3: ledReturnLeft3
+            led4: ledReturnLeft4
+            led5: ledReturnLeft5
+            
+    shotKingPinReturnWhenLitRight:
+        switch: s_1_13
+        enable_events: eventEnableShotKingPinReturnWhenLitRight
+        disable_events: eventDisableShotKingPinReturnWhenLitRight
+        restart_events: eventRestartShotKingPinReturnWhenLitRight
+        reset_events: eventResetShotKingPinReturnWhenLitRight
+        profile: spShotKingPinOutlaneReturnWhenLit
+        show_tokens:
+            led1: ledReturnRight1
+            led2: ledReturnRight2
+            led3: ledReturnRight3
+            led4: ledReturnRight4
+            led5: ledReturnRight5
+            
+    # -------------------
+    # SHOTS::LANES::TOP::A-B
+    # -------------------
+    shotKingPinLaneTopA:
+        switch: s_1_14
+        enable_events: eventEnableShotKingPinLaneTopA
+        disable_events: eventDisableShotKingPinLaneTopA
+        restart_events: eventRestartShotKingPinLaneTopA
+        reset_events: eventResetShotKingPinLaneTopA
+        profile: spShotKingPinLaneAB
+        show_tokens:
+            led1: ledLaneTopA1
+            led2: ledLaneTopA2
+            led3: ledLaneTopA3
+            led4: ledLaneTopA4
+            led5: ledLaneTopA5
+            
+    shotKingPinLaneTopB:
+        switch: s_1_2
+        enable_events: eventEnableShotKingPinLaneTopB
+        disable_events: eventDisableShotKingPinLaneTopB
+        restart_events: eventRestartShotKingPinLaneTopB
+        reset_events: eventResetShotKingPinLaneTopB
+        profile: spShotKingPinLaneAB
+        show_tokens:
+            led1: ledLaneTopB1
+            led2: ledLaneTopB2
+            led3: ledLaneTopB3
+            led4: ledLaneTopB4
+            led5: ledLaneTopB5
+           
+    # -------------------
+    # SHOTS::LANES::SIDE::A-B
+    # -------------------
+    shotKingPinLaneRightA:
+        switch: s_1_6
+        enable_events: eventEnableShotKingPinLaneRightA
+        disable_events: eventDisableShotKingPinLaneRightA
+        restart_events: eventRestartShotKingPinLaneRightA
+        reset_events: eventResetShotKingPinLaneRightA
+        profile: spShotKingPinLaneAB
+        show_tokens:
+            led1: ledLaneRightA1
+            led2: ledLaneRightA2
+            led3: ledLaneRightA3
+            led4: ledLaneRightA4
+            led5: ledLaneRightA5
+            
+    shotKingPinLaneLeftB:
+        switch: s_1_10
+        enable_events: eventEnableShotKingPinLaneLeftB
+        disable_events: eventDisableShotKingPinLaneLeftB
+        restart_events: eventRestartShotKingPinLaneLeftB
+        reset_events: eventResetShotKingPinLaneLeftB
+        profile: spShotKingPinLaneAB
+        show_tokens:
+            led1: ledLaneLeftB1
+            led2: ledLaneLeftB2
+            led3: ledLaneLeftB3
+            led4: ledLaneLeftB4
+            led5: ledLaneLeftB5
+            
+    # -------------------
+    # SHOTS::LANES::A-B::WHEN LIT
+    # -------------------
+    shotKingPinLaneTopMultiBonus:
+        #switch: s_1_14
+        enable_events: eventEnableShotKingPinLaneTopMultiBonus
+        disable_events: eventDisableShotKingPinLaneTopMultiBonus
+        restart_events: eventRestartShotKingPinLaneTopMultiBonus
+        reset_events: eventResetShotKingPinLaneTopMultiBonus
+        hit_events: eventHitShotKingPinLaneTopMultiBonus
+        advance_events: eventAdvanceShotKingPinLaneTopMultiBonus
+        profile: spShotKingPinLaneMultiBonus
+        show_tokens:
+            led1: ledLaneTopMultiBonus1
+            led2: ledLaneTopMultiBonus2
+            led3: ledLaneTopMultiBonus3
+            led4: ledLaneTopMultiBonus4
+            led5: ledLaneTopMultiBonus5
+            
+    shotKingPinLaneLeftMultiBonus:
+        #switch: s_1_10
+        enable_events: eventEnableShotKingPinLaneLeftMultiBonus
+        disable_events: eventDisableShotKingPinLaneLeftMultiBonus
+        restart_events: eventRestartShotKingPinLaneLeftMultiBonus
+        reset_events: eventResetShotKingPinLaneLeftMultiBonus
+        hit_events: eventHitShotKingPinLaneLeftMultiBonus
+        advance_events: eventAdvanceShotKingPinLaneLeftMultiBonus
+        profile: spShotKingPinLaneMultiBonus
+        show_tokens:
+            led1: ledLaneLeftMultiBonus1
+            led2: ledLaneLeftMultiBonus2
+            led3: ledLaneLeftMultiBonus3
+            led4: ledLaneLeftMultiBonus4
+            led5: ledLaneLeftMultiBonus5
+            
+    shotKingPinLaneRightMultiBonus:
+        #switch: s_1_6
+        enable_events: eventEnableShotKingPinLaneRightMultiBonus
+        disable_events: eventDisableShotKingPinLaneRightMultiBonus
+        restart_events: eventRestartShotKingPinLaneRightMultiBonus
+        reset_events: eventResetShotKingPinLaneRightMultiBonus
+        hit_events: eventHitShotKingPinLaneRightMultiBonus
+        advance_events: eventAdvanceShotKingPinLaneRightMultiBonus
+        profile: spShotKingPinLaneMultiBonus
+        show_tokens:
+            led1: ledLaneRightMultiBonus1
+            led2: ledLaneRightMultiBonus2
+            led3: ledLaneRightMultiBonus3
+            led4: ledLaneRightMultiBonus4
+            led5: ledLaneRightMultiBonus5
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::OUTLANE RETURN::WHEN LIT
+    # -------------------
+    shotGroupKingPinOutlaneReturnWhenLit:
+        shots:
+            - shotKingPinOutlaneWhenLitLeft
+            - shotKingPinReturnWhenLitLeft
+            - shotKingPinReturnWhenLitRight
+            - shotKingPinOutlaneWhenLitRight
+        enable_events:
+            - eventEnableShotGroupKingPinOutlaneReturnWhenLit
+        disable_events:
+            - eventDisableShotGroupKingPinOutlaneReturnWhenLit
+        reset_events:
+            - eventResetShotGroupKingPinOutlaneReturnWhenLit
+        restart_events:
+            - eventRestartShotGroupKingPinOutlaneReturnWhenLit
+        rotate_left_events:
+            - sw_right_flipper
+        rotate_right_events:
+            - sw_left_flipper
+
+    # -------------------
+    # SHOTGROUP::DROP RIGHT::SPOT
+    # -------------------
+    shotGroupKingPinDropRightSpot:
+        shots:
+            - shotKingPinDropRightSpot1
+            - shotKingPinDropRightSpot2
+            - shotKingPinDropRightSpot3
+            - shotKingPinDropRightSpot4
+            - shotKingPinDropRightSpot5
+        enable_events:
+            - eventEnableShotGroupKingPinDropRightSpot
+        disable_events:
+            - eventDisableShotGroupKingPinDropRightSpot
+        reset_events:
+            - eventResetShotGroupKingPinDropRightSpot
+        restart_events:
+            - eventRestartShotGroupKingPinDropRightSpot
+        rotate_left_events:
+            - sw_right_flipper
+        #rotate_right_events:
+        #    - sw_left_flipper
+
+    # -------------------
+    # SHOTGROUP::DROP RIGHT::SPOT
+    # -------------------
+    shotGroupKingPinDropMiddle:
+        shots:
+            - shotKingPinDropMiddle1
+            - shotKingPinDropMiddle2
+            - shotKingPinDropMiddle3
+        enable_events:
+            - eventEnableShotGroupKingPinDropMiddle
+        disable_events:
+            - eventDisableShotGroupKingPinDropMiddle
+        reset_events:
+            - eventResetShotGroupKingPinDropMiddle
+        restart_events:
+            - eventRestartShotGroupKingPinDropMiddle
+        #rotate_left_events:
+        #    - sw_right_flipper
+        #rotate_right_events:
+        #    - sw_left_flipper
+
+
+    # -------------------
+    # SHOTGROUP::LANE::SIDE:A-B
+    # -------------------
+    shotGroupKingPinLaneTopAB:
+        shots:
+            - shotKingPinLaneTopA
+            - shotKingPinLaneTopB
+        enable_events:
+            - eventEnableShotGroupKingPinLaneTopAB
+        disable_events:
+            - eventDisableShotGroupKingPinLaneTopAB
+        reset_events:
+            - eventResetShotGroupKingPinLaneTopAB
+        restart_events:
+            - eventRestartShotGroupKingPinLaneTopAB
+        rotate_left_events:
+            - sw_right_flipper
+        #rotate_right_events:
+        #    - sw_left_flipper
+            
+    # -------------------
+    # SHOTGROUP::LANE::SIDE:A-B
+    # -------------------
+    shotGroupKingPinLaneRightLeftAB:
+        shots:
+            - shotKingPinLaneRightA
+            - shotKingPinLaneLeftB
+        enable_events:
+            - eventEnableShotGroupKingPinLaneRightLeftAB
+        disable_events:
+            - eventDisableShotGroupKingPinLaneRightLeftAB
+        reset_events:
+            - eventResetShotGroupKingPinLaneRightLeftAB
+        restart_events:
+            - eventRestartShotGroupKingPinLaneRightLeftAB
+        #rotate_left_events:
+        #    - sw_right_flipper
+        rotate_right_events:
+            - sw_left_flipper
+            
+    # -------------------
+    # SHOTGROUP::LANE::SIDE:A-B
+    # -------------------
+    shotGroupKingPinLaneRightLeftMultiBonus:
+        shots:
+            - shotKingPinLaneRightMultiBonus
+            - shotKingPinLaneLeftMultiBonus
+        enable_events:
+            - eventEnableShotGroupKingPinLaneRightLeftMultiBonus
+        disable_events:
+            - eventDisableShotGroupKingPinLaneRightLeftMultiBonus
+        reset_events:
+            - eventResetShotGroupKingPinLaneRightLeftMultiBonus
+        restart_events:
+            - eventRestartShotGroupKingPinLaneRightLeftMultiBonus
+        #rotate_left_events:
+        #    - sw_right_flipper
+        #rotate_right_events:
+        #    - sw_left_flipper
+
+      
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::SPINNER
+    # -----------------------------
+    spShotKingPinSpinner:
+        states:
+          - name: litSolid
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: 'ffff00'
+                color2: '888800'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE::SPECIAL
+    # -----------------------------
+    spShotKingPinOutlaneReturnWhenLit:
+        states:
+          - name: unlitSolid
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litFlashOne
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                #color1: '440066'
+                #color2: '8800cc'
+                color1: '0000cc'
+                color2: '00ffff'
+          - name: litFlashTwo
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                #color1: 'cc00cc'
+                color1: 'cc0000'
+                color2: 'ff00ff'
+          - name: litSolid
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                #color1: 'cc00cc'
+                color1: 'cccc00'
+                color2: 'ffff00'
+        loop: false
+        
+
+    # -----------------------------
+    # PROFILE::LANES::A-B
+    # -----------------------------
+    spShotKingPinLaneAB:
+        states:
+          - name: litFlashOne
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '000000'
+                color2: 'ff0000'
+          - name: litFlashTwo
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '000000'
+                color2: 'ffff00'
+          - name: litSolid
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '00cc00'
+                color2: '00ff00'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::LANES::MULTI-BONUS
+    # -----------------------------
+    spShotKingPinLaneMultiBonus:
+        states:
+          - name: litFlashOne
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '000000'
+                color2: 'ff0000'
+          - name: litFlashTwo
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '000000'
+                color2: 'ffff00'
+          - name: litSolid
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '00cc00'
+                color2: '00ff00'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::DROP RIGHT::SPOT
+    # -----------------------------
+    spShotKingPinDropRightSpot:
+        states:
+          - name: litFlashOne
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '000088'
+                color2: '00ffff'
+          - name: litFlashTwo
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '880000'
+                color2: 'ff00ff'
+          - name: litSolid
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: 'cccc00'
+                color2: 'ffff00'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeSpidermanVillanKingPin_started:
+        # -----------
+        # OUTLANES
+        # -----------
+        - eventRestartShotKingPinOutlaneWhenLitLeft
+        - eventRestartShotKingPinOutlaneWhenLitRight
+        # -----------
+        # RETURN
+        # -----------
+        - eventRestartShotKingPinReturnWhenLitLeft
+        - eventRestartShotKingPinReturnWhenLitRight
+        # -----------
+        # DROP RIGHT::SPOT
+        # -----------
+        - eventRestartShotKingPinDropRightSpot1
+        - eventRestartShotKingPinDropRightSpot2
+        - eventRestartShotKingPinDropRightSpot3
+        - eventRestartShotKingPinDropRightSpot4
+        - eventRestartShotKingPinDropRightSpot5
+        # -----------
+        # DROP MIDDLE
+        # -----------
+        #- eventRestartShotKingPinDropMiddle1
+        #- eventRestartShotKingPinDropMiddle2
+        #- eventRestartShotKingPinDropMiddle3
+        # -----------
+        # LANE::A-B
+        # -----------
+        - eventRestartShotKingPinLaneTopA
+        - eventRestartShotKingPinLaneTopB
+        - eventRestartShotKingPinLaneRightA
+        - eventRestartShotKingPinLaneLeftB
+        
+# -----------
+# LANES::WHEN LIT
+# -----------
+    # -----------
+    # LANES::RESTART
+    # -----------
+    shotGroupKingPinLaneTopAB_litSolid_complete:
+        - eventRestartShotKingPinLaneTopMultiBonus
+      
+    shotGroupKingPinLaneRightLeftAB_litSolid_complete:
+        - eventRestartShotKingPinLaneRightMultiBonus
+        - eventRestartShotKingPinLaneLeftMultiBonus
+        
+    # -----------
+    # LANES::HIT
+    # -----------
+    shotKingPinLaneTopA_litSolid_hit:
+        - eventHitShotKingPinLaneTopMultiBonus
+    shotKingPinLaneTopB_litSolid_hit:
+        - eventHitShotKingPinLaneTopMultiBonus
+    shotKingPinLaneRightA_litSolid_hit:
+        - eventHitShotKingPinLaneRightMultiBonus
+    shotKingPinLaneLeftB_litSolid_hit:
+        - eventHitShotKingPinLaneLeftMultiBonus
+
+    # -----------
+    # LANES::MULTI BONUS HIT
+    # -----------
+    # TOP A-B
+    shotKingPinLaneTopMultiBonus_litFlashTwo_hit:
+        # DISABLE BONUS SHOT
+        - eventDisableShotKingPinLaneTopMultiBonus|2000ms
+        # RESTART LANE SHOTS
+        - eventRestartShotKingPinLaneTopA|3000ms
+        - eventRestartShotKingPinLaneTopB|3000ms
+    # LEFT - RIGHT A-B
+    shotGroupKingPinLaneRightLeftMultiBonus_litFlashTwo_complete:
+        # DISABLE BONUS SHOTS
+        - eventDisableShotKingPinLaneRightMultiBonus|2000ms
+        - eventDisableShotKingPinLaneLeftMultiBonus|2000ms
+        # RESTART LANE SHOTS
+        - eventRestartShotKingPinLaneRightA|3000ms
+        - eventRestartShotKingPinLaneLeftB|3000ms
+
+    # -----------
+    # OUTLANE RETURN::ADVANCE BONUS
+    # -----------
+    shotGroupKingPinOutlaneReturnWhenLit_unlitSolid_hit:
+        - eventCompleteAchBonusOnes
+    shotGroupKingPinOutlaneReturnWhenLit_litFlashOne_hit:
+        - eventCompleteAchBonusOnes
+        - eventCompleteAchBonusOnes|500ms
+    shotGroupKingPinOutlaneReturnWhenLit_litFlashTwo_hit:
+        - eventCompleteAchBonusOnes
+        - eventCompleteAchBonusOnes|500ms
+        - eventCompleteAchBonusOnes|1000ms
+
+    # -----------
+    # DROP MIDDLE::ADVANCE BONUS
+    # -----------
+    shotGroupKingPinDropMiddle_hit:
+        - eventCompleteAchBonusOnes
+
+    # -----------
+    # LANES::DISABLE
+    # -----------
+    ball_will_end:
+        - eventDisableShotKingPinLaneTopMultiBonus
+        - eventDisableShotKingPinLaneRightMultiBonus
+        - eventDisableShotKingPinLaneLeftMultiBonus
+        
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------------
+    # SPINNERS
+    # ---------------------
+    shotKingPinSpinnerLeft_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotKingPinSpinnerRight_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    sw_tagSpinner:
+      score: 1 * current_player.multiPlayfield
+
+    # ---------------------
+    # OUTLANES
+    # ---------------------
+    # STANDARD
+    sw_tagOutlane:
+        score: 500 * current_player.multiPlayfield
+    sw_tagReturn:
+        score: 500 * current_player.multiPlayfield
+    # SPECIAL
+    shotKingPinOutlaneWhenLitLeft_litFlash_hit:
+        score: 4500 * current_player.multiPlayfield
+    shotKingPinOutlaneWhenLitRight_litFlash_hit:
+        score: 4500 * current_player.multiPlayfield
+    shotKingPinReturnWhenLitLeft_litFlash_hit:
+        score: 4500 * current_player.multiPlayfield
+    shotKingPinReturnWhenLitRight_litFlash_hit:
+        score: 4500 * current_player.multiPlayfield
+
+      
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+    # ---------------------
+    # SHOW::DIAGONAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalLeft:
+        showMatrixSpotKingPinThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotKingPinThreeCompleteDiagonalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+        
+    # ---------------------
+    # SHOW::DIAGONAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalRight:
+        showMatrixSpotKingPinThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotKingPinThreeCompleteDiagonalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalLeft:
+        showMatrixSpotKingPinThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotKingPinThreeCompleteVerticalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot4A
+                led2B: ledSpot4B
+                led2C: ledSpot4C
+                led2D: ledSpot4D
+                led2E: ledSpot4E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::MIDDLE
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalMiddle:
+        showMatrixSpotKingPinThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotKingPinThreeCompleteVerticalMiddle
+            show_tokens:
+                # --------------
+                led1A: ledSpot2A
+                led1B: ledSpot2B
+                led1C: ledSpot2C
+                led1D: ledSpot2D
+                led1E: ledSpot2E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot8A
+                led3B: ledSpot8B
+                led3C: ledSpot8C
+                led3D: ledSpot8D
+                led3E: ledSpot8E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalRight:
+        showMatrixSpotKingPinThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotKingPinThreeCompleteVerticalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot6A
+                led2B: ledSpot6B
+                led2C: ledSpot6C
+                led2D: ledSpot6D
+                led2E: ledSpot6E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotKingPin:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotKingPinThreeComplete:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1)
+            (led1B): (color1)
+            (led1C): (color1)
+            (led1D): (color1)
+            (led1E): (color1)
+            # ----------------
+            (led2A): (color1)
+            (led2B): (color1)
+            (led2C): (color1)
+            (led2D): (color1)
+            (led2E): (color1)
+            # ----------------
+            (led3A): (color1)
+            (led3B): (color1)
+            (led3C): (color1)
+            (led3D): (color1)
+            (led3E): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color2)
+            (led1B): (color2)
+            (led1C): (color2)
+            (led1D): (color2)
+            (led1E): (color2)
+            # ----------------
+            (led2A): (color2)
+            (led2B): (color2)
+            (led2C): (color2)
+            (led2D): (color2)
+            (led2E): (color2)
+            # ----------------
+            (led3A): (color2)
+            (led3B): (color2)
+            (led3C): (color2)
+            (led3D): (color2)
+            (led3E): (color2)
+            # ----------------
+        - time: "+1"

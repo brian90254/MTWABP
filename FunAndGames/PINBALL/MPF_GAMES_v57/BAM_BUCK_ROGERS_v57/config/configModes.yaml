@@ -1,0 +1,29 @@
+#config_version=6
+modes:
+- modeBase
+- modeBuckRogers
+#-----------------
+# MODES::SPECIAL
+#-----------------
+- modeBallSave
+
+#----------------------
+- credits
+#----------------------
+
+#-----------------
+# MODES::SPECIAL
+#-----------------
+#- modeBallSave
+#- modeBallSaveOutlane
+#- modeBallSaveHidden
+#- modeCollectBonus
+#- modeCollectMidGameBonus
+#- modeSkillShot
+#- modeAwardWheel
+#- modeMultiball
+#-----------------
+# MODES::END OF GAME
+#-----------------
+#- bonus
+- high_score

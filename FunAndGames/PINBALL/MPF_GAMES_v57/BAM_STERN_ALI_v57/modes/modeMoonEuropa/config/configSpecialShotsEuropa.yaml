@@ -1,0 +1,237 @@
+#config_version=6
+
+# JCv50 (Jupiter Crush v0.50)
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    # ---------------------
+    # EVENT::ORBIT LOOP::GATE
+    # ---------------------
+    sequenceShotOrbitLoopEuropa_hit:
+        - eventOrbitLoopGateOpen
+        - eventOrbitLoopGateClose|3s
+
+    # ---------------------
+    # EVENT::HIDDEN LANE::BALL SAVE
+    # ---------------------
+    shotHiddenLaneBallSaveEuropa_hit:
+        - eventStartBallSaveHidden
+        
+    # ---------------------
+    # EVENT::REVERSE TARTGET::ENABLE MULTIBALL::UPPER KICKER
+    # ---------------------
+    shotReverseArrowEuropa_spReverseArrowEuropa_litFlash_hit:
+        - eventEnableShotStartMultiballEuropa
+        - eventEnableMultiballUpperKicker
+        
+    shotStartMultiballEuropa_hit:
+        - eventStartMultiballUpperKicker
+
+    # ---------------------
+    # EVENT::VUK::ENABLE MULTIBALL::VUK
+    # ---------------------
+    shotTurnAroundArrowEuropa_spTurnAroundArrowEuropa_litFlash_hit:
+        - eventEnableShotStartMultiballVukEuropa
+        
+    shotStartMultiballVukEuropa_hit:
+        - eventStartMultiballVuk
+        
+# -----------------------------
+# SHOT::PROFILES
+# -----------------------------
+shot_profiles:
+  # -----------------------------
+  # PROFILE::REVERSE::ARROW
+  # -----------------------------
+    spReverseArrowEuropa:
+        states:
+          - name: litFlashTwo
+            show: traceThreeLedColorRev
+            speed: 1
+            show_tokens:
+               color: 'ff00ff'
+          - name: litFlash
+            show: traceThreeLedColorRev
+            speed: 1
+            show_tokens:
+               color: 'ffff00'
+          - name: litSolid
+            show: onThreeLedThreeColor
+            show_tokens:
+               color1: '00ff00'
+               color2: '00ff00'
+               color3: '00ff00'
+        loop: false
+
+  # -----------------------------
+  # PROFILE::TURN AROUND::ARROWS
+  # -----------------------------
+    spTurnAroundArrowEuropa:
+        states:
+          - name: litFlashTwo
+            show: traceSixLedTwoColor
+            speed: 6
+            show_tokens:
+               color1: 'ff00ff'
+               color2: '000000'
+          - name: litFlash
+            show: traceSixLedTwoColor
+            speed: 6
+            show_tokens:
+               color1: 'ffff00'
+               color2: '000000'
+          - name: litSolid
+            show: traceSixLedTwoColor
+            speed: 1
+            show_tokens:
+               color1: '00ff00'
+               color2: '00ff00'
+        loop: false
+        
+        
+        
+# -----------------------------
+# SHOTS
+# -----------------------------
+shots:
+# -----------------------------
+# SHOTS::MULTIBALLS
+# -----------------------------
+    # -------------------
+    # SHOTS::REVERSE TARTGET::ENABLE MULTIBALL UPPER KICKER
+    # -------------------
+    shotReverseArrowEuropa:
+        switch: s_target_reverse
+        enable_events:
+            - eventStopModeSkillShot
+            - eventCompleteAchKickerWheel
+        disable_events:
+            - eventStartAchKickerWheel
+            - eventEnableMultiballVuk
+            - ball_will_end
+        reset_events:
+            #- multiball_multiballUpperKicker_ended
+            #- eventCompleteAchKickerWheel
+            - mode_modeMoonEuropa_started
+        profile:
+            spReverseArrowEuropa
+        show_tokens:
+            led1: l_target_rev_1_1
+            led2: l_target_rev_1_2
+            led3: l_target_rev_1_3
+
+    # -------------------
+    # SHOTS::START::MULTIBALL::UPPER KICKER
+    # -------------------
+    shotStartMultiballEuropa:
+        switch: s_kicker_upper
+        enable_events:
+            - eventEnableShotStartMultiballEuropa
+        disable_events:
+            - eventStartMultiballUpperKicker
+
+    # -------------------
+    # SHOTS::REVERSE TARTGET::ENABLE MULTIBALL VUK
+    # -------------------
+    shotTurnAroundArrowEuropa:
+        switch: s_turn_around
+        enable_events:
+            - eventEnableMultiballVuk
+        disable_events:
+            - eventDisableMultiballVuk
+        reset_events:
+            - mode_modeMoonEuropa_started
+        profile:
+            spTurnAroundArrowEuropa
+        show_tokens:
+            led1: l_turn_around_1_1
+            led2: l_turn_around_1_2
+            led3: l_turn_around_1_3
+            led4: l_turn_around_2_3
+            led5: l_turn_around_2_2
+            led6: l_turn_around_2_1
+
+    # -------------------
+    # SHOTS::START::MULTIBALL::UPPER KICKER
+    # -------------------
+    shotStartMultiballVukEuropa:
+        switch: s_vuk
+        enable_events:
+            - eventEnableShotStartMultiballVukEuropa
+            
+# -----------------------------
+# SHOTS::BALL SAVES
+# -----------------------------
+    # -------------------
+    # SHOTS::HIDDEN LANE::BALL SAVE
+    # -------------------
+    shotHiddenLaneBallSaveEuropa:
+        switch: s_hidden_lane
+        enable_events:
+            - mode_modeBallSave_stopping
+            #- mode_modeMoonEuropa_started
+            #- extra_ball_extraBallEuropa_awarded
+        disable_events:
+            - ball_will_end
+            #- extra_ball_extraBallEuropa_lit
+
+# -----------------------------
+# SHOTS::EXTRA BALL
+# -----------------------------
+    # -------------------
+    # SHOTS::ORBIT LOOP
+    # -------------------
+    shotOrbitLoop1Europa:
+        switch: s_rollover_lf_1
+        enable_events:
+            - sgDropRtEuropa_lit_complete
+            #- extra_ball_extraBallEuropa_awarded
+        disable_events:
+            - eventResetDropTargetRight
+
+    shotOrbitLoop2Europa:
+        switch: s_rollover_lf_2
+        enable_events:
+            - sgDropRtEuropa_lit_complete
+        disable_events:
+            - eventResetDropTargetRight
+
+# ---------------------
+# SEQUENCE::SHOTS
+# ---------------------
+sequence_shots:
+    # -------------------
+    # SEQUENCE::SHOTS::ORBIT::GATE
+    # -------------------
+    sequenceShotOrbitLoopEuropa:
+        event_sequence:
+            - shotOrbitLoop1Europa_hit
+            - shotOrbitLoop2Europa_hit
+        sequence_timeout: 3s
+    # -------------------
+    # SEQUENCE::SHOTS::ORBIT::COMPLETE
+    # -------------------
+    sequenceShotOrbitLoopCompleteEuropa:
+        event_sequence:
+            - shotOrbitLoop1Europa_hit
+            - shotOrbitLoop2Europa_hit
+            - s_rollover_rt_active
+        sequence_timeout: 4s
+
+
+# ---------------------
+# COIL::PLAYER
+# ---------------------
+coil_player:
+    # ----------------------------
+    # ORBIT LOOP GATE
+    # ----------------------------
+    eventOrbitLoopGateOpen:
+        c_gate:
+            action: enable
+    
+    eventOrbitLoopGateClose:
+        c_gate:
+            action: disable

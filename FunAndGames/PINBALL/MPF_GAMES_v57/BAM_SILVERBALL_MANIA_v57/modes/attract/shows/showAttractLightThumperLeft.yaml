@@ -1,0 +1,135 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: 'ff00ff'
+        color2: 'ff0000'
+        led1: ledThumperLeftA
+        led2: ledThumperLeftB
+        led3: ledThumperLeftC
+        led4: ledThumperLeftD
+        led5: ledThumperLeftE
+        led6: ledThumperLeftF
+        led7: ledThumperLeftG
+        led8: ledThumperLeftH
+        led9: ledThumperLeftI
+        led10: ledThumperLeftJ
+        led11: ledThumperLeftK
+        led12: ledThumperLeftL
+
+- time: "+3"
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: 'ff0000'
+        color2: 'ffff00'
+        led1: ledThumperLeftA
+        led2: ledThumperLeftB
+        led3: ledThumperLeftC
+        led4: ledThumperLeftD
+        led5: ledThumperLeftE
+        led6: ledThumperLeftF
+        led7: ledThumperLeftG
+        led8: ledThumperLeftH
+        led9: ledThumperLeftI
+        led10: ledThumperLeftJ
+        led11: ledThumperLeftK
+        led12: ledThumperLeftL
+        
+- time: "+3"
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: 'ffff00'
+        color2: '00ff00'
+        led1: ledThumperLeftA
+        led2: ledThumperLeftB
+        led3: ledThumperLeftC
+        led4: ledThumperLeftD
+        led5: ledThumperLeftE
+        led6: ledThumperLeftF
+        led7: ledThumperLeftG
+        led8: ledThumperLeftH
+        led9: ledThumperLeftI
+        led10: ledThumperLeftJ
+        led11: ledThumperLeftK
+        led12: ledThumperLeftL
+        
+- time: "+3"
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: '00ff00'
+        color2: '00ffff'
+        led1: ledThumperLeftA
+        led2: ledThumperLeftB
+        led3: ledThumperLeftC
+        led4: ledThumperLeftD
+        led5: ledThumperLeftE
+        led6: ledThumperLeftF
+        led7: ledThumperLeftG
+        led8: ledThumperLeftH
+        led9: ledThumperLeftI
+        led10: ledThumperLeftJ
+        led11: ledThumperLeftK
+        led12: ledThumperLeftL
+        
+- time: "+3"
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: '00ffff'
+        color2: '0000ff'
+        led1: ledThumperLeftA
+        led2: ledThumperLeftB
+        led3: ledThumperLeftC
+        led4: ledThumperLeftD
+        led5: ledThumperLeftE
+        led6: ledThumperLeftF
+        led7: ledThumperLeftG
+        led8: ledThumperLeftH
+        led9: ledThumperLeftI
+        led10: ledThumperLeftJ
+        led11: ledThumperLeftK
+        led12: ledThumperLeftL
+        
+- time: "+3"
+
+  shows:
+    traceTwelveLedTwoColor:
+      loops: 0
+      speed: 8
+      show_tokens:
+        color1: '0000ff'
+        color2: 'ff00ff'
+        led1: ledThumperLeftA
+        led2: ledThumperLeftB
+        led3: ledThumperLeftC
+        led4: ledThumperLeftD
+        led5: ledThumperLeftE
+        led6: ledThumperLeftF
+        led7: ledThumperLeftG
+        led8: ledThumperLeftH
+        led9: ledThumperLeftI
+        led10: ledThumperLeftJ
+        led11: ledThumperLeftK
+        led12: ledThumperLeftL
+        
+- time: "+3"

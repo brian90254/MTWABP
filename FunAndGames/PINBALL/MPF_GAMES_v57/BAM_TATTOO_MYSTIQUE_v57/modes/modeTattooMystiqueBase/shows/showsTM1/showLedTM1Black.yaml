@@ -1,0 +1,20 @@
+#show_version=6
+
+- time: 0
+  # ------------------------
+  # YELLOW
+  shows:
+    solidDiamondSixLedTwoColor:
+      loops: 0
+      speed: 3
+      show_tokens:
+        color1: colorLedTattooMystiqueSixUpBlack1
+        color2: colorLedTattooMystiqueSixUpBlack2
+        led1: ledDropTargetMiddle1A
+        led2: ledDropTargetMiddle1B
+        led3: ledDropTargetMiddle1C
+        led4: ledDropTargetMiddle1D
+        led5: ledDropTargetMiddle1E
+        led6: ledDropTargetMiddle1F
+
+- time: '+2'

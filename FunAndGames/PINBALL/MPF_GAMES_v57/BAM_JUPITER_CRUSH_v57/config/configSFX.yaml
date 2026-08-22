@@ -1,0 +1,1463 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ---------------------
+# SOUNDS::SFX
+# ---------------------
+sounds:
+# ---------------------
+# SOUNDS::SFX::THUMPER
+# ---------------------
+  soundThumper001:
+    file: Oneshot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundThumper002:
+    file: Oneshot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundThumper003:
+    file: Oneshot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundThumper004:
+    file: Oneshot010.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundThumper005:
+    file: Oneshot011.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundThumper006:
+    file: Oneshot014.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::REVERSE
+# ---------------------
+
+  soundReverse001:
+    file: Perc_Synth_MoogDelay_21.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReverse002:
+    file: Perc_Synth_MoogDelay_22.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReverse003:
+    file: Perc_Synth_MoogDelay_23.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReverse004:
+    file: Perc_Synth_MoogDelay_24.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReverse005:
+    file: Perc_Synth_MoogDelay_25.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::ROLLOVERS
+# ---------------------
+  soundRollovers001:
+    file: Whoosh001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRollovers002:
+    file: Whoosh005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRollovers003:
+    file: Whoosh011.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  #soundRollovers004:
+  #  file: Whoosh013.wav
+  #  track: sfx
+  #  volume: 0.9
+  #  max_queue_time: 1.5
+  #  simultaneous_limit: 3
+    
+  soundRollovers005:
+    file: StarShipSounds001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRollovers006:
+    file: StarShipSounds002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundRollovers007:
+    file: StarShipSounds009.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+    
+# ---------------------
+# SOUNDS::SFX::COMPUTE
+# ---------------------
+  soundCompute001:
+    file: ClassicSH001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+  
+  soundCompute002:
+    file: ClassicSH002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCompute003:
+    file: ClassicSH003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCompute004:
+    file: ClassicSH004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+  
+  soundCompute005:
+    file: ClassicSH005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCompute006:
+    file: ClassicSH006.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+    
+# ---------------------
+# SOUNDS::SFX::ZAPPS
+# ---------------------
+  soundZapps001:
+    file: Zapps001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundZapps002:
+    file: Zapps002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundZapps003:
+    file: Zapps003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+    
+# ---------------------
+# SOUNDS::SFX::HIGH_SCORE
+# ---------------------
+  soundHighScore001:
+    file: HighScore001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundHighScore002:
+    file: HighScore002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundHighScore003:
+    file: HighScore003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundHighScore004:
+    file: HighScore004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+    
+# ---------------------
+# SOUNDS::SFX::AUTOFIRELAUNCH
+# ---------------------
+  soundAutoFireLaunch001:
+    file: RailGunSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundAutoFireLaunch002:
+    file: RailGunSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundAutoFireLaunch003:
+    file: RailGunSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundAutoFireLaunch004:
+    file: RailGunSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundAutoFireLaunch005:
+    file: RailGunSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::BALLSAVESTOPPER
+# ---------------------
+  soundBallSaveStopper001:
+    file: MineMachineLaunch001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundBallSaveStopper002:
+    file: MineMachineLaunch002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBallSaveStopper003:
+    file: MineMachineLaunch003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBallSaveStopper004:
+    file: MineMachineLaunch004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBallSaveStopper005:
+    file: MineMachineLaunch005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::BALLSAVEWINDUP
+# ---------------------
+  soundBallSaveWindUp001:
+    file: WindUp001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBallSaveWindUp002:
+    file: WindUp002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundBallSaveWindUp003:
+    file: WindUp003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::CANNONLOAD
+# ---------------------
+  soundCannonLoad001:
+    file: BackFromThePastSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundCannonLoad002:
+    file: BackFromThePastSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundCannonLoad003:
+    file: BackFromThePastSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCannonLoad004:
+    file: BackFromThePastSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCannonLoad005:
+    file: BackFromThePastSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+# ---------------------
+# SOUNDS::SFX::COIN
+# ---------------------
+  soundCoin001:
+    file: BucketGunReload001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCoin002:
+    file: BucketGunReload002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCoin003:
+    file: BucketGunReload003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundCoin004:
+    file: BucketGunReload004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::DRAIN
+# ---------------------
+  soundDrain001:
+    #file: ChunkyCrunchyLargeGrindingLeverGroanClunk001.wav
+    file: Door001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundDrain002:
+    #file: ChunkyCrunchyLargeGrindingLeverGroanClunk002.wav
+    file: Door002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::GAMEOVER
+# ---------------------
+  soundGameOver001:
+    file: SteamGunStopEngine001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundGameOver002:
+    file: SteamGunStopEngine002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+## ---------------------
+## SOUNDS::SFX::VUK
+## ---------------------
+#  soundVUK001:
+#    file: ElectrocutorGunSingleShot001.wav
+#    track: sfx
+#    volume: 0.9
+#    max_queue_time: 1.5
+#    simultaneous_limit: 3
+#    
+#  soundVUK002:
+#    file: ElectrocutorGunSingleShot002.wav
+#    track: sfx
+#    volume: 0.9
+#    max_queue_time: 1.5
+#    simultaneous_limit: 3
+#    
+#  soundVUK003:
+#    file: ElectrocutorGunSingleShot003.wav
+#    track: sfx
+#    volume: 0.9
+#    max_queue_time: 1.5
+#    simultaneous_limit: 3
+#    
+#  soundVUK004:
+#    file: ElectrocutorGunSingleShot004.wav
+#    track: sfx
+#    volume: 0.9
+#    max_queue_time: 1.5
+#    simultaneous_limit: 3
+#    
+#  soundVUK005:
+#    file: ElectrocutorGunSingleShot005.wav
+#    track: sfx
+#    volume: 0.9
+#    max_queue_time: 1.5
+#    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::LOWERPFAUTOFIRE
+# ---------------------
+  soundLowerPFAutoFire001:
+    file: ElectrocutorGunSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFAutoFire002:
+    file: ElectrocutorGunSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFAutoFire003:
+    file: ElectrocutorGunSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFAutoFire004:
+    file: ElectrocutorGunSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFAutoFire005:
+    file: ElectrocutorGunSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::LOWERPFDROPTARGET
+# ---------------------
+  soundLowerPFDropTarget001:
+    file: Theremin_FX_06.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFDropTarget002:
+    file: Theremin_FX_07.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFDropTarget003:
+    file: Theremin_FX_08.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFDropTarget004:
+    file: Theremin_FX_11.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFDropTarget005:
+    file: Theremin_FX_12.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::LOWERPFTARGET
+# ---------------------
+  soundLowerPFTarget001:
+    file: Theremin_FX_13.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFTarget002:
+    file: Theremin_FX_14.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFTarget003:
+    file: Theremin_FX_15.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFTarget004:
+    file: Theremin_FX_16.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundLowerPFTarget005:
+    file: Theremin_FX_17.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::LOWERTOUPPER
+# ---------------------
+  soundLowerToUpper001:
+    file: CleanOldLeverThrow001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::MAGNET
+# ---------------------
+  soundMagnet001:
+    file: MagnetGunReload001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::NEWTONBALL
+# ---------------------
+  soundNewtonBall001:
+    file: Misc_Sci_fi_47.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundNewtonBall002:
+    file: Misc_Sci_fi_48.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundNewtonBall003:
+    file: Misc_Sci_fi_49.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundNewtonBall004:
+    file: Misc_Sci_fi_51.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundNewtonBall005:
+    file: Misc_Sci_fi_52.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::OUTLANE
+# ---------------------
+  soundOutlane001:
+    file: BioMachineSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOutlane002:
+    file: BioMachineSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOutlane003:
+    file: BioMachineSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOutlane004:
+    file: BioMachineSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundOutlane005:
+    file: BioMachineSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::RETURNLANE
+# ---------------------
+  soundReturnLane001:
+    file: EvisceratorSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReturnLane002:
+    file: EvisceratorSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReturnLane003:
+    file: EvisceratorSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReturnLane004:
+    file: EvisceratorSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundReturnLane005:
+    file: EvisceratorSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+## ---------------------
+## SOUNDS::SFX::ROLLOVERS
+## ---------------------
+#  soundRollovers001:
+#    file: ThornSingleShot001.wav
+#    track: sfx
+#    volume: 0.9
+#    max_queue_time: 1.5
+#    simultaneous_limit: 3
+#    
+#  soundRollovers002:
+#    file: ThornSingleShot002.wav
+#    track: sfx
+#    volume: 0.9
+#    max_queue_time: 1.5
+#    simultaneous_limit: 3
+#    
+#  soundRollovers003:
+#    file: ThornSingleShot003.wav
+#    track: sfx
+#    volume: 0.9
+#    max_queue_time: 1.5
+#    simultaneous_limit: 3
+#    
+#  soundRollovers004:
+#    file: ThornSingleShot004.wav
+#    track: sfx
+#    volume: 0.9
+#    max_queue_time: 1.5
+#    simultaneous_limit: 3
+#    
+#  soundRollovers005:
+#    file: ThornSingleShot005.wav
+#    track: sfx
+#    volume: 0.9
+#    max_queue_time: 1.5
+#    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::SLINGSHOT
+# ---------------------
+  soundSlingShot001:
+    file: PulseGunSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSlingShot002:
+    file: PulseGunSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSlingShot003:
+    file: PulseGunSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSlingShot004:
+    file: PulseGunSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSlingShot005:
+    file: PulseGunSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::SPINNER
+# ---------------------
+  soundSpinner001:
+    file: Zapps_01.wav
+    track: sfx
+    volume: 0.6
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSpinner002:
+    file: Zapps_02.wav
+    track: sfx
+    volume: 0.6
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSpinner003:
+    file: Zapps_03.wav
+    track: sfx
+    volume: 0.6
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSpinner004:
+    file: Zapps_04.wav
+    track: sfx
+    volume: 0.6
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundSpinner005:
+    file: Zapps_05.wav
+    track: sfx
+    volume: 0.6
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::STANDUPTARGET
+# ---------------------
+  soundStandupTarget001:
+    file: RebelBioSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundStandupTarget002:
+    file: RebelBioSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundStandupTarget003:
+    file: RebelBioSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundStandupTarget004:
+    file: RebelBioSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundStandupTarget005:
+    file: RebelBioSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::START
+# ---------------------
+  soundStart001:
+    file: LockInPlaceRocketLoad001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundStart002:
+    file: LockInPlaceRocketLoad002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundStart003:
+    file: LockInPlaceRocketLoad003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundStart004:
+    file: LockInPlaceRocketLoad004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+
+    
+# ---------------------
+# SOUNDS::SFX::TROUGHEJECT
+# ---------------------
+  soundTroughEject001:
+    file: AngryDaddyReload001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundTroughEject002:
+    file: AngryDaddyReload002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundTroughEject003:
+    file: AngryDaddyReload003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundTroughEject004:
+    file: AngryDaddyReload004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::UPPERTOLOWER
+# ---------------------
+  soundUpperToLower001:
+    file: RocketLauncherSemiAutoReload001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundUpperToLower002:
+    file: RocketLauncherSemiAutoReload002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+
+  soundUpperToLower003:
+    file: RocketLauncherSemiAutoReload003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundUpperToLower004:
+    file: RocketLauncherSemiAutoReload004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundUpperToLower005:
+    file: RocketLauncherSemiAutoReload005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::SFX::VUKCANNON
+# ---------------------
+  soundVUKCannon001:
+    file: SteamerSingleShot001.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundVUKCannon002:
+    file: SteamerSingleShot002.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundVUKCannon003:
+    file: SteamerSingleShot003.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+  
+  soundVUKCannon004:
+    file: SteamerSingleShot004.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+  soundVUKCannon005:
+    file: SteamerSingleShot005.wav
+    track: sfx
+    volume: 0.9
+    max_queue_time: 1.5
+    simultaneous_limit: 3
+    
+# ---------------------
+# SOUNDS::POOLS
+
+
+sound_pools:
+  
+  poolSoundHighScore:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundHighScore001
+      - soundHighScore002
+      - soundHighScore003
+      - soundHighScore004
+      
+  poolSoundCompute:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundCompute001
+      - soundCompute002
+      - soundCompute003
+      - soundCompute004
+      - soundCompute005
+      - soundCompute006
+      
+  poolSoundZapps:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundZapps001
+      - soundZapps002
+      - soundZapps003
+      
+      
+  poolSoundAutoFireLaunch:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundAutoFireLaunch001
+      - soundAutoFireLaunch002
+      - soundAutoFireLaunch003
+      - soundAutoFireLaunch004
+      - soundAutoFireLaunch005
+      
+  poolSoundBallSaveStopper:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundBallSaveStopper001
+      - soundBallSaveStopper002
+      - soundBallSaveStopper003
+      - soundBallSaveStopper004
+      - soundBallSaveStopper005
+      
+  poolSoundBallSaveWindUp:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundBallSaveWindUp001
+      - soundBallSaveWindUp002
+      - soundBallSaveWindUp003
+
+  poolSoundCannonLoad:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundCannonLoad001
+      - soundCannonLoad002
+      - soundCannonLoad003
+      - soundCannonLoad004
+      - soundCannonLoad005
+      
+  poolSoundCoin:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundCoin001
+      - soundCoin002
+      - soundCoin003
+      - soundCoin004
+      
+  poolSoundDrain:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundDrain001
+      - soundDrain002
+      
+  poolSoundGameOver:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundGameOver001
+      - soundGameOver002
+      
+  poolSoundLowerPFAutoFire:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundLowerPFAutoFire001
+      - soundLowerPFAutoFire002
+      - soundLowerPFAutoFire003
+      - soundLowerPFAutoFire004
+      - soundLowerPFAutoFire005
+      
+  poolSoundLowerPFDropTarget:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundLowerPFDropTarget001
+      - soundLowerPFDropTarget002
+      - soundLowerPFDropTarget003
+      - soundLowerPFDropTarget004
+      - soundLowerPFDropTarget005
+      
+  poolSoundLowerPFTarget:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundLowerPFTarget001
+      - soundLowerPFTarget002
+      - soundLowerPFTarget003
+      - soundLowerPFTarget004
+      - soundLowerPFTarget005
+      
+  poolSoundLowerToUpper:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundLowerToUpper001
+      
+  poolSoundMagnet:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundMagnet001
+      
+  poolSoundNewtonBall:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundNewtonBall001
+      - soundNewtonBall002
+      - soundNewtonBall003
+      - soundNewtonBall004
+      - soundNewtonBall005
+      
+  poolSoundOutlane:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundOutlane001
+      - soundOutlane002
+      - soundOutlane003
+      - soundOutlane004
+      - soundOutlane005
+      
+  poolSoundReturnLane:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundReturnLane001
+      - soundReturnLane002
+      - soundReturnLane003
+      - soundReturnLane004
+      - soundReturnLane005
+      
+  poolSoundRollovers:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundRollovers001
+      - soundRollovers002
+      - soundRollovers003
+      - soundRollovers005
+      - soundRollovers006
+      - soundRollovers007
+      #- soundRollovers004
+            
+  poolSoundSlingShot:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundSlingShot001
+      - soundSlingShot002
+      - soundSlingShot003
+      - soundSlingShot004
+      - soundSlingShot005
+      
+  poolSoundSpinner:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundSpinner001
+      - soundSpinner002
+      - soundSpinner003
+      - soundSpinner004
+      - soundSpinner005
+      
+  poolSoundStandupTarget:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundStandupTarget001
+      - soundStandupTarget002
+      - soundStandupTarget003
+      - soundStandupTarget004
+      - soundStandupTarget005
+      
+  poolSoundStart:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundStart001
+      - soundStart002
+      - soundStart003
+      - soundStart004
+      
+  poolSoundThumper:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundThumper001
+      - soundThumper002
+      - soundThumper003
+      - soundThumper004
+      - soundThumper005
+      - soundThumper006
+      
+  poolSoundReverse:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundReverse001
+      - soundReverse002
+      - soundReverse003
+      - soundReverse004
+      - soundReverse005
+      
+  poolSoundTroughEject:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundTroughEject001
+      - soundTroughEject002
+      - soundTroughEject003
+      - soundTroughEject004
+      
+  poolSoundUpperToLower:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundUpperToLower001
+      - soundUpperToLower002
+      - soundUpperToLower003
+      - soundUpperToLower004
+      - soundUpperToLower005
+      
+  poolSoundVUKCannon:
+    type: random_force_all
+    track: sfx
+    sounds:
+      - soundVUKCannon001
+      - soundVUKCannon002
+      - soundVUKCannon003
+      - soundVUKCannon004
+      - soundVUKCannon005
+      
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+sound_player:
+
+  # ---------------------
+  # SOUNDS::PLAYER::HIGH_SCORE
+  # ---------------------
+  #shift_left_event:
+  eventShiftLeft:
+    poolSoundZapps:
+      loops: 0
+      volume: 0.3
+
+  #shift_right_event:
+  eventShiftRight:
+    poolSoundZapps:
+      loops: 0
+      volume: 0.3
+      
+  #select_event:
+  eventSelect:
+    poolSoundBallSaveWindUp:
+      loops: 0
+      volume: 0.5
+
+  # ---------------------
+  # SOUNDS::PLAYER::SFX
+  # ---------------------
+  playPoolSoundHighScore:
+    poolSoundHighScore:
+      loops: 0
+      volume: 0.9
+  
+  playPoolSoundCompute:
+    poolSoundCompute:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundAutoFireLaunch:
+    poolSoundAutoFireLaunch:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundBallSaveStopper:
+    poolSoundBallSaveStopper:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundBallSaveWindUp:
+    poolSoundBallSaveWindUp:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundCannonLoad:
+    poolSoundCannonLoad:
+      loops: 0
+      volume: 0.9
+
+  playPoolSoundCoin:
+    poolSoundCoin:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundDrain:
+    poolSoundDrain:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundGameOver:
+    poolSoundGameOver:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundLowerPFAutoFire:
+    poolSoundLowerPFAutoFire:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundLowerPFDropTarget:
+    poolSoundLowerPFDropTarget:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundLowerPFTarget:
+    poolSoundLowerPFTarget:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundLowerToUpper:
+    poolSoundLowerToUpper:
+      loops: 0
+      volume: 0.9
+      
+  playPoolMagnet:
+    poolSoundMagnet:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundNewtonBall:
+    poolSoundNewtonBall:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundOutlane:
+    poolSoundOutlane:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundReturnLane:
+    poolSoundReturnLane:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundRollovers:
+    poolSoundRollovers:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundSlingShot:
+    poolSoundSlingShot:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundSpinner:
+    poolSoundSpinner:
+      loops: 0
+      volume: 0.6
+      
+  playPoolSoundStandupTarget:
+    poolSoundStandupTarget:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundStart:
+    poolSoundStart:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundThumper:
+    poolSoundThumper:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundReverse:
+    poolSoundReverse:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundTroughEject:
+    poolSoundTroughEject:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundUpperToLower:
+    poolSoundUpperToLower:
+      loops: 0
+      volume: 0.9
+      
+  playPoolSoundVUKCannon:
+    poolSoundVUKCannon:
+      loops: 0
+      volume: 0.9

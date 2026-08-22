@@ -1,0 +1,136 @@
+#config_version=6
+
+# VOLTAN
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeSpidermanVillanScorpion_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballScorpionUpperKickerLeft
+    - eventEnableMultiballScorpionUpperKickerRight
+    - eventEnableMultiballScorpionUpperKickerBoth
+    # ----------------------------------
+    # ENABLE LOCK
+    - eventEnableMultiballScorpionLockSaucerTopRight
+    - eventEnableMultiballScorpionLockSaucerTopLeft
+    # ----------------------------------
+    
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::RIGHT
+  # ---------------------
+  # RIGHT::TWO BALL
+  multiball_lock_multiballScorpionLockSaucerTopRight_full.1{device.multiball_locks.multiballScorpionLockSaucerTopLeft.locked_balls==0}:
+    - eventStartMultiballScorpionUpperKickerRight|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballScorpionLockSaucerTopRight
+    - eventDisableMultiballScorpionLockSaucerTopLeft
+  # ---------------------
+  # RIGHT::THREE BALL
+  multiball_lock_multiballScorpionLockSaucerTopRight_full.2{device.multiball_locks.multiballScorpionLockSaucerTopLeft.locked_balls==1}:
+    - eventStartMultiballScorpionUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballScorpionLockSaucerTopRight|3500ms
+    - eventDisableMultiballScorpionLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::LEFT
+  # ---------------------
+  # LEFT::TWO BALL
+  multiball_lock_multiballScorpionLockSaucerTopLeft_full.1{device.multiball_locks.multiballScorpionLockSaucerTopRight.locked_balls==0}:
+    - eventStartMultiballScorpionUpperKickerLeft|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballScorpionLockSaucerTopRight
+    - eventDisableMultiballScorpionLockSaucerTopLeft
+  # ---------------------
+  # LEFT::THREE BALL
+  multiball_lock_multiballScorpionLockSaucerTopLeft_full.2{device.multiball_locks.multiballScorpionLockSaucerTopRight.locked_balls==1}:
+    - eventStartMultiballScorpionUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballScorpionLockSaucerTopRight|3500ms
+    - eventDisableMultiballScorpionLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # ENDING MULTIBALL
+  # ---------------------
+  # BOTH
+  multiball_multiballScorpionUpperKickerBoth_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballScorpionLockSaucerTopRight
+    - eventEnableMultiballScorpionLockSaucerTopLeft
+  # LEFT
+  multiball_multiballScorpionUpperKickerLeft_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballScorpionLockSaucerTopRight
+    - eventEnableMultiballScorpionLockSaucerTopLeft
+  # RIGHT
+  multiball_multiballScorpionUpperKickerRight_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballScorpionLockSaucerTopRight
+    - eventEnableMultiballScorpionLockSaucerTopLeft
+
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballScorpionLockSaucerTopRight:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopRight
+    enable_events: eventEnableMultiballScorpionLockSaucerTopRight
+    disable_events: eventDisableMultiballScorpionLockSaucerTopRight
+    locked_ball_counting_strategy: physical_only
+
+  multiballScorpionLockSaucerTopLeft:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopLeft
+    enable_events: eventEnableMultiballScorpionLockSaucerTopLeft
+    disable_events: eventDisableMultiballScorpionLockSaucerTopLeft
+    locked_ball_counting_strategy: physical_only
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballScorpionUpperKickerLeft:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballScorpionUpperKickerLeft
+    disable_events: eventDisableMultiballScorpionUpperKickerLeft
+    start_events: eventStartMultiballScorpionUpperKickerLeft
+    stop_events: eventStopMultiballScorpionUpperKickerLeft
+    
+  multiballScorpionUpperKickerRight:
+    ball_locks:
+      - ballDeviceSaucerTopRight
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballScorpionUpperKickerRight
+    disable_events: eventDisableMultiballScorpionUpperKickerRight
+    start_events: eventStartMultiballScorpionUpperKickerRight
+    stop_events: eventStopMultiballScorpionUpperKickerRight
+    
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::BOTH
+  # ----------------------------
+  multiballScorpionUpperKickerBoth:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+      - ballDeviceSaucerTopRight
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballScorpionUpperKickerBoth
+    disable_events: eventDisableMultiballScorpionUpperKickerBoth
+    start_events: eventStartMultiballScorpionUpperKickerBoth
+    stop_events: eventStopMultiballScorpionUpperKickerBoth
+    

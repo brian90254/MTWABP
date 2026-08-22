@@ -1,0 +1,214 @@
+#config_version=6
+
+config:
+- configAttractShows.yaml
+
+mode:
+  priority: 10000
+
+# ************************************
+# SOUND::PLAYER
+# ************************************
+sound_player:
+# ---------------------
+# SOUNDS::PLAYER::ATTRACT
+# ---------------------
+  mode_attract_started:
+    poolMusicAttract:
+      loops: 0
+      volume: 0.9
+  
+  mode_attract_stopping:
+    poolMusicAttract:
+      action: stop
+
+# ************************************
+# SHOW::PLAYER
+# ************************************
+show_player:
+# ---------------------
+# SHOW::PLAYER::ATTRACT
+# --------------------- 
+  mode_attract_started:
+    showAttractDisplay:
+      loops: -1
+      speed: 1
+      
+    showAttractBackglass:
+      loops: -1
+      speed: 2
+      
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  
+  slideVideoTest1:
+    #target: displayVideoDMD
+    target: displayBackglass
+    widgets:
+    - type: video
+      #video: videoBuckRogers_BuckCanBePersuasive
+      video: videoBuckRogers_BeThereTonight
+      auto_play: True
+      z: 200
+      
+  showAttractBackglass1:
+    target: displayBackglass
+    widgets:
+    - type: image
+      image: imagebackglass
+      z: 40
+      # --------------------
+      # BITMAP FONT TEST
+      # --------------------
+    - type: text
+      text: (machine|player1_score)
+      z: 30
+      x: left + 730
+      y: bottom + 787
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+    - type: text
+      text: (machine|player2_score)
+      z: 30
+      x: left + 1431
+      y: bottom + 787
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+    - type: text
+      text: (machine|player3_score)
+      z: 30
+      x: left + 730
+      y: bottom + 215
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+    - type: text
+      text: (machine|player4_score)
+      z: 30
+      x: left + 1431
+      y: bottom + 215
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+    - type: text
+      #text: '78 99'
+      text: (player|ball)
+      min_digits: 2
+      z: 30
+      x: left + 1462
+      y: bottom + 581
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+# -----------------------
+# ADDED 200507
+    - type: text
+      text: (machine|credits_string)
+      min_digits: 1
+      z: 30
+      x: left + 1356
+      y: bottom + 581
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+
+  showAttractBackglass2:
+    target: displayBackglass
+    widgets:
+    - type: image
+      image: imagebackglass
+      z: 40
+      # --------------------
+      # BITMAP FONT TEST
+      # --------------------
+    - type: text
+      text: (machine|score1_value)
+      z: 30
+      x: left + 730
+      y: bottom + 787
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+    - type: text
+      text: (machine|score1_value)
+      z: 30
+      x: left + 1431
+      y: bottom + 787
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+    - type: text
+      text: (machine|score1_value)
+      z: 30
+      x: left + 730
+      y: bottom + 215
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+    - type: text
+      text: (machine|score1_value)
+      z: 30
+      x: left + 1431
+      y: bottom + 215
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+    - type: text
+      text: (player|ball)
+      min_digits: 2
+      z: 30
+      x: left + 1462
+      y: bottom + 581
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+# -----------------------
+# ADDED 200507
+    - type: text
+      text: (machine|credits_string)
+      min_digits: 1
+      z: 30
+      x: left + 1356
+      y: bottom + 581
+      anchor_x: right
+      anchor_y: middle
+      font_name: bitmapFontBallySevenSegment4
+      bitmap_font: true
+
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  
+  # TEST
+  eventShowSlideVideoTest1:
+    slideVideoTest1:
+      #target: displayVideoDMD
+      target: displayBackglass
+      
+  # ---------------------
+  # ATTRACT::BACKGLASS
+  # ---------------------
+  eventShowAttractBackglass1:
+    showAttractBackglass1:
+      target: displayBackglass
+
+  eventShowAttractBackglass2:
+    showAttractBackglass2:
+      target: displayBackglass

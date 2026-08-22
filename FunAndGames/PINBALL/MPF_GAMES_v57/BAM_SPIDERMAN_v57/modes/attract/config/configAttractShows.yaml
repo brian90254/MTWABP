@@ -1,0 +1,276 @@
+#config_version=6
+
+# ************************************
+# SHOW::PLAYER
+# ************************************
+show_player:
+
+# ---------------------
+# SHOW::VIDEO::TEST
+# ---------------------
+  #eventShowAttractVideoSlideTest:
+  #  showAttractVideoSlideTest:
+  #    loops: 0
+  #    speed: 1
+      
+# ---------------------
+# SHOW::PLAYER::ATTRACT
+# --------------------- 
+  mode_attract_started:
+
+    #showAttractLightPins:
+    #  loops: -1
+    #  speed: 4
+    
+    #showAttractLightDropInlineTargetA:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightSaucerLeftCollectBonus:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightSaucerUpper:
+    #  loops: -1
+    #  speed: 1
+      
+    #showAttractLightThumperLowerRight:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperLowerLeft:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperUpperLeft:
+    #  loops: -1
+    #  speed: 1
+    #  
+    #showAttractLightThumperUpperRight:
+    #  loops: -1
+    #  speed: 1
+      
+# ------------------
+#   THUMPERS
+# ------------------
+    showAttractLightThumperLeft:
+      loops: -1
+      speed: 1
+    #showAttractLightThumperTop:
+    #  loops: -1
+    #  speed: 1
+    #showAttractLightThumperMiddle:
+    #  loops: -1
+    #  speed: 1
+    showAttractLightThumperRight:
+      loops: -1
+      speed: 1
+
+# ------------------
+#   7-UPS :: SHOOT AGAIN
+# ------------------
+    showAttractLightShootAgain:
+      loops: -1
+      speed: 1
+      
+    showAttractLightSaucerTopScoreBonus:
+      loops: -1
+      speed: 1
+      
+    showAttractLightSaucerSideLeft:
+      loops: -1
+      speed: 1
+      
+    showAttractLightDropMiddleExtraBall:
+      loops: -1
+      speed: 1
+     
+    showAttractLightDropRightExtraBall:
+      loops: -1
+      speed: 1
+      
+## ------------------
+##   WARP DRIVE
+## ------------------
+#    showAttractLightWarpDriveLeft:
+#      loops: -1
+#      speed: 6
+#    showAttractLightWarpDriveRight:
+#      loops: -1
+#      speed: 6
+
+# ------------------
+#   ROLLOVERS
+# ------------------
+    showAttractLightRollover:
+      loops: -1
+      speed: 4
+
+# ------------------
+#   BONUS
+# ------------------
+    # ------------------
+    #   STANDARD
+    # ------------------
+    showAttractLightBonus:
+      loops: -1
+      speed: 3
+    ## ------------------
+    ##   UPPER MINI
+    ## ------------------
+    #showAttractLightBonusMini:
+    #  loops: -1
+    #  speed: 5
+    #
+    ## ------------------
+    ##   LOWER SUPER
+    ## ------------------
+    #showAttractLightBonusSuper:
+    #  loops: -1
+    #  speed: 5
+      
+
+# ------------------
+#   5-UPS
+# ------------------
+    showAttractLight5UpMultipliers:
+      loops: -1
+      speed: 5
+      
+    # ------------------
+    #  SAUCERS TOP
+    # ------------------
+    showAttractLight5upSaucerTop1:
+      loops: -1
+      speed: 1
+
+    showAttractLight5upSaucerTop2:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upSaucerTop3:
+      loops: -1
+      speed: 1
+
+    # ------------------
+    #  LANE TOP RIGHT
+    # ------------------
+    showAttractLight5upLaneTopRightA:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upLaneTopRightB:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upLaneTopRightMultiBonus:
+      loops: -1
+      speed: 1
+      
+    # ------------------
+    #  TOP TARGET
+    # ------------------
+    showAttractLight5upTargetTopSpecial:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upTargetTopAdvanceMultiplier:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upTargetTopMultiBonus:
+      loops: -1
+      speed: 1
+      
+    # ------------------
+    #  LANE LEFT
+    # ------------------
+    showAttractLight5upSpinnerLeft:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upLaneLeftB:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upLaneLeftMultiBonus:
+      loops: -1
+      speed: 1
+      
+    # ------------------
+    #  DROP RIGHT SPOT
+    # ------------------
+    showAttractLight5upDropRightSpot1:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upDropRightSpot2:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upDropRightSpot3:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upDropRightSpot4:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upDropRightSpot5:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upDropMiddleAddBonus:
+      loops: -1
+      speed: 1
+      
+    # ------------------
+    #  OUTLANES AND RETURN LANES
+    # ------------------
+    showAttractLight5upOutlaneLeft:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upOutlaneRight:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upReturnLeft:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upReturnRight:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upLaneRightA:
+      loops: -1
+      speed: 1
+      
+    showAttractLight5upLaneRightMultiBonus:
+      loops: -1
+      speed: 1
+
+# ------------------
+#   SINGLES
+# ------------------
+    # ------------------
+    #   DROP TARGET LEFT
+    # ------------------
+    showAttractLightDropTargetLeft:
+      loops: -1
+      speed: 4
+
+    # ------------------
+    #   ARROWS
+    # ------------------
+    showAttractLightSingleArrows:
+      loops: -1
+      speed: 4
+      
+    # ------------------
+    #   OTHERS
+    # ------------------
+    showAttractLightSingleOthers:
+      loops: -1
+      speed: 4

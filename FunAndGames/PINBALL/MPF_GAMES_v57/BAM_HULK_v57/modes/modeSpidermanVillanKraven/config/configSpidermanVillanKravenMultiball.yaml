@@ -1,0 +1,136 @@
+#config_version=6
+
+# VOLTAN
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeSpidermanVillanKraven_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballKravenUpperKickerLeft
+    - eventEnableMultiballKravenUpperKickerRight
+    - eventEnableMultiballKravenUpperKickerBoth
+    # ----------------------------------
+    # ENABLE LOCK
+    - eventEnableMultiballKravenLockSaucerTopRight
+    - eventEnableMultiballKravenLockSaucerTopLeft
+    # ----------------------------------
+    
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::RIGHT
+  # ---------------------
+  # RIGHT::TWO BALL
+  multiball_lock_multiballKravenLockSaucerTopRight_full.1{device.multiball_locks.multiballKravenLockSaucerTopLeft.locked_balls==0}:
+    - eventStartMultiballKravenUpperKickerRight|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballKravenLockSaucerTopRight
+    - eventDisableMultiballKravenLockSaucerTopLeft
+  # ---------------------
+  # RIGHT::THREE BALL
+  multiball_lock_multiballKravenLockSaucerTopRight_full.2{device.multiball_locks.multiballKravenLockSaucerTopLeft.locked_balls==1}:
+    - eventStartMultiballKravenUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballKravenLockSaucerTopRight|3500ms
+    - eventDisableMultiballKravenLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::LEFT
+  # ---------------------
+  # LEFT::TWO BALL
+  multiball_lock_multiballKravenLockSaucerTopLeft_full.1{device.multiball_locks.multiballKravenLockSaucerTopRight.locked_balls==0}:
+    - eventStartMultiballKravenUpperKickerLeft|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballKravenLockSaucerTopRight
+    - eventDisableMultiballKravenLockSaucerTopLeft
+  # ---------------------
+  # LEFT::THREE BALL
+  multiball_lock_multiballKravenLockSaucerTopLeft_full.2{device.multiball_locks.multiballKravenLockSaucerTopRight.locked_balls==1}:
+    - eventStartMultiballKravenUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballKravenLockSaucerTopRight|3500ms
+    - eventDisableMultiballKravenLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # ENDING MULTIBALL
+  # ---------------------
+  # BOTH
+  multiball_multiballKravenUpperKickerBoth_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballKravenLockSaucerTopRight
+    - eventEnableMultiballKravenLockSaucerTopLeft
+  # LEFT
+  multiball_multiballKravenUpperKickerLeft_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballKravenLockSaucerTopRight
+    - eventEnableMultiballKravenLockSaucerTopLeft
+  # RIGHT
+  multiball_multiballKravenUpperKickerRight_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballKravenLockSaucerTopRight
+    - eventEnableMultiballKravenLockSaucerTopLeft
+
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballKravenLockSaucerTopRight:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopRight
+    enable_events: eventEnableMultiballKravenLockSaucerTopRight
+    disable_events: eventDisableMultiballKravenLockSaucerTopRight
+    locked_ball_counting_strategy: physical_only
+
+  multiballKravenLockSaucerTopLeft:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopLeft
+    enable_events: eventEnableMultiballKravenLockSaucerTopLeft
+    disable_events: eventDisableMultiballKravenLockSaucerTopLeft
+    locked_ball_counting_strategy: physical_only
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballKravenUpperKickerLeft:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKravenUpperKickerLeft
+    disable_events: eventDisableMultiballKravenUpperKickerLeft
+    start_events: eventStartMultiballKravenUpperKickerLeft
+    stop_events: eventStopMultiballKravenUpperKickerLeft
+    
+  multiballKravenUpperKickerRight:
+    ball_locks:
+      - ballDeviceSaucerTopRight
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKravenUpperKickerRight
+    disable_events: eventDisableMultiballKravenUpperKickerRight
+    start_events: eventStartMultiballKravenUpperKickerRight
+    stop_events: eventStopMultiballKravenUpperKickerRight
+    
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::BOTH
+  # ----------------------------
+  multiballKravenUpperKickerBoth:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+      - ballDeviceSaucerTopRight
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKravenUpperKickerBoth
+    disable_events: eventDisableMultiballKravenUpperKickerBoth
+    start_events: eventStartMultiballKravenUpperKickerBoth
+    stop_events: eventStopMultiballKravenUpperKickerBoth
+    

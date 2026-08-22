@@ -1,0 +1,227 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:
+# ---------------------
+# SOUNDS::MUSIC::IRON MAIDEN
+# ---------------------
+  musicIronMaiden001:
+    file: musicIronMaidenTheme_01_HeavyMetal.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicIronMaiden002:
+    file: musicIronMaidenTheme_02_Heartbeat.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicIronMaiden003:
+    file: musicIronMaidenTheme_03_WorkingInTheCoalMine.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicIronMaiden004:
+    file: musicIronMaidenTheme_04_VeteransOfThePsychicWars.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicIronMaiden005:
+    file: musicIronMaidenTheme_05_ReachOut.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicIronMaiden006:
+    file: musicIronMaidenTheme_06_TakeARide.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicIronMaiden007:
+    file: musicIronMaidenTheme_07_TrueCompanion.wav
+    track: music
+    volume: 0.4
+    mode_end_action: stop
+
+  musicIronMaiden008:
+    file: musicIronMaidenTheme_08_Crazy.wav
+    track: music
+    volume: 1.0
+    mode_end_action: stop
+    
+  musicIronMaiden009:
+    file: musicIronMaidenTheme_09_RadarRider.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicIronMaiden010:
+    file: musicIronMaidenTheme_10_OpenArms.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicIronMaiden011:
+    file: musicIronMaidenTheme_11_QueenBee.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+  musicIronMaiden012:
+    file: musicIronMaidenTheme_12_MustBeDreamin.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicIronMaiden013:
+    file: musicIronMaidenTheme_13_TheMobRules.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+  musicIronMaiden014:
+    file: musicIronMaidenTheme_14_AllOfYou.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicIronMaiden015:
+    file: musicIronMaidenTheme_15_Prefabricated.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicIronMaiden016:
+    file: musicIronMaidenTheme_16_BlueLamp.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::AMBIENCE::GLOBETROTTERS
+# ---------------------
+
+  musicAmbienceIronMaiden001:
+    file: soundIronMaiden_Ambience_1.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicAmbienceIronMaiden002:
+    file: soundIronMaiden_Ambience_2.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicAmbienceIronMaiden003:
+    file: soundIronMaiden_Ambience_3.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  musicAmbienceIronMaiden004:
+    file: soundIronMaiden_Ambience_4.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  #musicAmbienceIronMaiden005:
+  #  file: soundIronMaiden_Ambience_Combined.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicIronMaiden001
+      - musicIronMaiden002
+      - musicIronMaiden003
+      - musicIronMaiden004
+      - musicIronMaiden005
+      - musicIronMaiden006
+      - musicIronMaiden007
+      - musicIronMaiden008
+      - musicIronMaiden009
+      - musicIronMaiden010
+      - musicIronMaiden011
+      - musicIronMaiden012
+      - musicIronMaiden013
+      - musicIronMaiden014
+      - musicIronMaiden015
+      - musicIronMaiden016
+      
+  poolMusicBaseMode:
+    track: music
+    type: random_force_all
+    volume: 0.80
+    sounds:
+      - musicIronMaiden001
+      - musicIronMaiden001
+      - musicIronMaiden002
+      - musicIronMaiden003
+      - musicIronMaiden004
+      - musicIronMaiden005
+      - musicIronMaiden006
+      - musicIronMaiden007
+      - musicIronMaiden008
+      - musicIronMaiden009
+      - musicIronMaiden010
+      - musicIronMaiden011
+      - musicIronMaiden012
+      - musicIronMaiden013
+      - musicIronMaiden014
+      - musicIronMaiden015
+      - musicIronMaiden016
+
+  poolMusicAmbienceIronMaiden:
+    track: music
+    type: random_force_all
+    #type: random_force_next
+    volume: 0.40
+    sounds:
+      - musicAmbienceIronMaiden001
+      - musicAmbienceIronMaiden002
+      - musicAmbienceIronMaiden003
+      - musicAmbienceIronMaiden004
+      
+# ---------------------
+# MUSIC::PLAYLISTS
+# ---------------------
+playlists:
+  playlistModeIronMaidenMusic:
+    shuffle: true
+    repeat: true
+    crossfade_mode: override
+    crossfade_time: 3s
+    sounds:
+      - musicIronMaiden001
+      - musicIronMaiden001
+      - musicIronMaiden002
+      - musicIronMaiden003
+      - musicIronMaiden004
+      - musicIronMaiden005
+      - musicIronMaiden006
+      - musicIronMaiden007
+      - musicIronMaiden008
+      - musicIronMaiden009
+      - musicIronMaiden010
+      - musicIronMaiden011
+      - musicIronMaiden012
+      - musicIronMaiden013
+      - musicIronMaiden014
+      - musicIronMaiden015
+      - musicIronMaiden016

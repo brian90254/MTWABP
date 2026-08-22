@@ -1,0 +1,113 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - STRIKES AND SPARES
+
+- time: 0
+# ----------------------
+# COLOR CHASE
+# ----------------------
+  lights:
+    # ------------------
+    ledOutlaneLeftSpecial: (color1)
+    ledReturnLeftExtraBall: (color2)
+    ledAward5k: (color2)
+    ledMultiplier2X: (color2)
+    ledMultiplier3X: (color2)
+    ledAwardSpecial: (color2)
+    ledReturnRightExtraBall: (color2)
+    ledOutlaneRightSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledOutlaneLeftSpecial: (color1)
+    ledReturnLeftExtraBall: (color1)
+    ledAward5k: (color2)
+    ledMultiplier2X: (color2)
+    ledMultiplier3X: (color2)
+    ledAwardSpecial: (color2)
+    ledReturnRightExtraBall: (color2)
+    ledOutlaneRightSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledOutlaneLeftSpecial: (color1)
+    ledReturnLeftExtraBall: (color1)
+    ledAward5k: (color1)
+    ledMultiplier2X: (color2)
+    ledMultiplier3X: (color2)
+    ledAwardSpecial: (color2)
+    ledReturnRightExtraBall: (color2)
+    ledOutlaneRightSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledOutlaneLeftSpecial: (color1)
+    ledReturnLeftExtraBall: (color1)
+    ledAward5k: (color1)
+    ledMultiplier2X: (color1)
+    ledMultiplier3X: (color2)
+    ledAwardSpecial: (color2)
+    ledReturnRightExtraBall: (color2)
+    ledOutlaneRightSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledOutlaneLeftSpecial: (color1)
+    ledReturnLeftExtraBall: (color1)
+    ledAward5k: (color1)
+    ledMultiplier2X: (color1)
+    ledMultiplier3X: (color1)
+    ledAwardSpecial: (color2)
+    ledReturnRightExtraBall: (color2)
+    ledOutlaneRightSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledOutlaneLeftSpecial: (color1)
+    ledReturnLeftExtraBall: (color1)
+    ledAward5k: (color1)
+    ledMultiplier2X: (color1)
+    ledMultiplier3X: (color1)
+    ledAwardSpecial: (color1)
+    ledReturnRightExtraBall: (color2)
+    ledOutlaneRightSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledOutlaneLeftSpecial: (color1)
+    ledReturnLeftExtraBall: (color1)
+    ledAward5k: (color1)
+    ledMultiplier2X: (color1)
+    ledMultiplier3X: (color1)
+    ledAwardSpecial: (color1)
+    ledReturnRightExtraBall: (color1)
+    ledOutlaneRightSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledOutlaneLeftSpecial: (color1)
+    ledReturnLeftExtraBall: (color1)
+    ledAward5k: (color1)
+    ledMultiplier2X: (color1)
+    ledMultiplier3X: (color1)
+    ledAwardSpecial: (color1)
+    ledReturnRightExtraBall: (color1)
+    ledOutlaneRightSpecial: (color1)
+    # ------------------
+- time: "+1"

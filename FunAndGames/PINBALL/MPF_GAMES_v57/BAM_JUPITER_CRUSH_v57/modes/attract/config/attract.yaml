@@ -1,0 +1,136 @@
+#config_version=6
+
+config:
+- configAttractShows.yaml
+
+mode:
+  priority: 10000
+
+# ************************************
+# SOUND::PLAYER
+# ************************************
+sound_player:
+# ---------------------
+# SOUNDS::PLAYER::ATTRACT
+# ---------------------
+  mode_attract_started:
+    poolMusicAttract:
+      loops: 0
+      volume: 0.9
+  
+  mode_attract_stopping:
+    poolMusicAttract:
+      action: stop
+
+# ************************************
+# SHOW::PLAYER
+# ************************************
+show_player:
+# ---------------------
+# SHOW::PLAYER::ATTRACT
+# --------------------- 
+  mode_attract_started:
+    showAttractDisplay:
+      loops: -1
+      speed: 1
+      
+    showAttractBackglass:
+      loops: -1
+      speed: 8
+      
+    showAttractLEDs:
+      loops: -1
+      speed: 1
+
+    showCoilAttractSpinner:
+      loops: -1
+      speed: 1
+      
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  showAttractBackglass1:
+    #target: displayBackglass
+    #widgets:
+    #- type: image
+    #  image: safe_image
+    #  z: 3
+    #- type: image
+    #  image: imageJupiterCrushBackglassText1
+    #  z: 4
+    target: displayBackglass
+    widgets:
+    - type: image
+      image: imageJupiterCrushBackglass1
+      z: 3
+    - type: image
+      image: imageJupiterCrushBackglassText1
+      z: 4
+
+  showAttractBackglass2:
+    target: displayBackglass
+    widgets:
+    - type: image
+      image: imageJupiterCrushBackglass2
+      z: 3
+    - type: image
+      image: imageJupiterCrushBackglassText2
+      z: 4
+
+  showAttractBackglass3:
+    target: displayBackglass
+    widgets:
+    - type: image
+      image: imageJupiterCrushBackglass3
+      z: 3
+    - type: image
+      image: imageJupiterCrushBackglassText3
+      z: 4
+
+  showAttractBackglass4:
+    target: displayBackglass
+    widgets:
+    - type: image
+      image: imageJupiterCrushBackglass4
+      z: 3
+    - type: image
+      image: imageJupiterCrushBackglassText4
+      z: 4
+
+  showAttractBackglass5:
+    target: displayBackglass
+    widgets:
+    - type: image
+      image: imageJupiterCrushBackglass5
+      z: 3
+    - type: image
+      image: imageJupiterCrushBackglassText5
+      z: 4
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  # ---------------------
+  # ATTRACT::BACKGLASS
+  # ---------------------
+  eventShowAttractBackglass1:
+    showAttractBackglass1:
+      target: displayBackglass
+    
+  eventShowAttractBackglass2:
+    showAttractBackglass2:
+      target: displayBackglass
+    
+  eventShowAttractBackglass3:
+    showAttractBackglass3:
+      target: displayBackglass
+    
+  eventShowAttractBackglass4:
+    showAttractBackglass4:
+      target: displayBackglass
+    
+  eventShowAttractBackglass5:
+    showAttractBackglass5:
+      target: displayBackglass

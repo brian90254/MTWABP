@@ -1,0 +1,242 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - SILVERBALL MANIA
+
+- time: 0
+# ----------------------
+# RED CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: 'ff0000'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: 'ff0000'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: 'ff0000'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: 'ff0000'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: 'ff0000'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: 'ff0000'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: 'ff0000'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: 'ff0000'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: 'ffff00'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: 'ffff00'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: 'ffff00'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: 'ffff00'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: 'ffff00'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: 'ffff00'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: 'ffff00'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: 'ffff00'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# GREEN CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '00ff00'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: '00ff00'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: '00ff00'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: '00ff00'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: '00ff00'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: '00ff00'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: '00ff00'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: '00ff00'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: 'ffff00'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: 'ffff00'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: 'ffff00'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: 'ffff00'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: 'ffff00'
+    ledRolloverMiddleLeft4: '000000'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: 'ffff00'
+    ledRolloverMiddleRight4: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------
+    ledRolloverMiddleLeft1: '000000'
+    ledRolloverMiddleLeft2: '000000'
+    ledRolloverMiddleLeft3: '000000'
+    ledRolloverMiddleLeft4: 'ffff00'
+    # ----------------------    
+    ledRolloverMiddleRight1: '000000'
+    ledRolloverMiddleRight2: '000000'
+    ledRolloverMiddleRight3: '000000'
+    ledRolloverMiddleRight4: 'ffff00'
+    # ----------------------
+- time: "+1"

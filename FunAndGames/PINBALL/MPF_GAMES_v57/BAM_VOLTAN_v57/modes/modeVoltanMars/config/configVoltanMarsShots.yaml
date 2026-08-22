@@ -1,0 +1,1018 @@
+#config_version=6
+
+# VOLTAN
+
+# *****************************
+# SHOTS::LANES
+# *****************************
+shots:
+    # -------------------
+    # MATRIX SPOT
+    # -------------------
+    shotMatrixSpotMars1:
+        switch: s_1_28
+        enable_events: eventEnableShotMatrixSpotMars1
+        disable_events: eventDisableShotMatrixSpotMars1
+        restart_events: eventRestartShotMatrixSpotMars1
+        reset_events: eventResetShotMatrixSpotMars1
+        profile: spShotMatrixSpotMars
+        show_tokens:
+            led1: ledSpot1A
+            led2: ledSpot1B
+            led3: ledSpot1C
+            led4: ledSpot1D
+            led5: ledSpot1E
+            led6: ledLane1
+           
+    shotMatrixSpotMars2:
+        switch: s_1_30
+        enable_events: eventEnableShotMatrixSpotMars2
+        disable_events: eventDisableShotMatrixSpotMars2
+        restart_events: eventRestartShotMatrixSpotMars2
+        reset_events: eventResetShotMatrixSpotMars2
+        profile: spShotMatrixSpotMars
+        show_tokens:
+            led1: ledSpot2A
+            led2: ledSpot2B
+            led3: ledSpot2C
+            led4: ledSpot2D
+            led5: ledSpot2E
+            led6: ledTarget2
+            
+    shotMatrixSpotMars3:
+        switch: s_1_19
+        enable_events: eventEnableShotMatrixSpotMars3
+        disable_events: eventDisableShotMatrixSpotMars3
+        restart_events: eventRestartShotMatrixSpotMars3
+        reset_events: eventResetShotMatrixSpotMars3
+        profile: spShotMatrixSpotMars
+        show_tokens:
+            led1: ledSpot3A
+            led2: ledSpot3B
+            led3: ledSpot3C
+            led4: ledSpot3D
+            led5: ledSpot3E
+            led6: ledLane3
+            
+    shotMatrixSpotMars4:
+        switch: s_1_17
+        enable_events: eventEnableShotMatrixSpotMars4
+        disable_events: eventDisableShotMatrixSpotMars4
+        restart_events: eventRestartShotMatrixSpotMars4
+        reset_events: eventResetShotMatrixSpotMars4
+        profile: spShotMatrixSpotMars
+        show_tokens:
+            led1: ledSpot4A
+            led2: ledSpot4B
+            led3: ledSpot4C
+            led4: ledSpot4D
+            led5: ledSpot4E
+            led6: ledLane4
+           
+    shotMatrixSpotMars5:
+        switch: s_1_9
+        enable_events: eventEnableShotMatrixSpotMars5
+        disable_events: eventDisableShotMatrixSpotMars5
+        restart_events: eventRestartShotMatrixSpotMars5
+        reset_events: eventResetShotMatrixSpotMars5
+        profile: spShotMatrixSpotMars
+        show_tokens:
+            led1: ledSpot5A
+            led2: ledSpot5B
+            led3: ledSpot5C
+            led4: ledSpot5D
+            led5: ledSpot5E
+            led6: ledTarget5
+            
+    shotMatrixSpotMars6:
+        switch: s_1_31
+        enable_events: eventEnableShotMatrixSpotMars6
+        disable_events: eventDisableShotMatrixSpotMars6
+        restart_events: eventRestartShotMatrixSpotMars6
+        reset_events: eventResetShotMatrixSpotMars6
+        profile: spShotMatrixSpotMars
+        show_tokens:
+            led1: ledSpot6A
+            led2: ledSpot6B
+            led3: ledSpot6C
+            led4: ledSpot6D
+            led5: ledSpot6E
+            led6: ledLane6
+            
+    shotMatrixSpotMars7:
+        switch: s_1_29
+        enable_events: eventEnableShotMatrixSpotMars7
+        disable_events: eventDisableShotMatrixSpotMars7
+        restart_events: eventRestartShotMatrixSpotMars7
+        reset_events: eventResetShotMatrixSpotMars7
+        profile: spShotMatrixSpotMars
+        show_tokens:
+            led1: ledSpot7A
+            led2: ledSpot7B
+            led3: ledSpot7C
+            led4: ledSpot7D
+            led5: ledSpot7E
+            led6: ledLane7
+           
+    shotMatrixSpotMars8:
+        switch: s_1_16
+        enable_events: eventEnableShotMatrixSpotMars8
+        disable_events: eventDisableShotMatrixSpotMars8
+        restart_events: eventRestartShotMatrixSpotMars8
+        reset_events: eventResetShotMatrixSpotMars8
+        profile: spShotMatrixSpotMars
+        show_tokens:
+            led1: ledSpot8A
+            led2: ledSpot8B
+            led3: ledSpot8C
+            led4: ledSpot8D
+            led5: ledSpot8E
+            led6: ledTarget8
+            
+    shotMatrixSpotMars9:
+        switch: s_1_18
+        enable_events: eventEnableShotMatrixSpotMars9
+        disable_events: eventDisableShotMatrixSpotMars9
+        restart_events: eventRestartShotMatrixSpotMars9
+        reset_events: eventResetShotMatrixSpotMars9
+        profile: spShotMatrixSpotMars
+        show_tokens:
+            led1: ledSpot9A
+            led2: ledSpot9B
+            led3: ledSpot9C
+            led4: ledSpot9D
+            led5: ledSpot9E
+            led6: ledLane9
+            
+    # -------------------
+    # MATRIX SPOT::GROUPS
+    # -------------------
+    # DIAGONAL
+    shotMatrixSpotMarsDiagonalLeft:
+        enable_events: eventEnableShotMatrixSpotMarsDiagonalLeft
+        disable_events: eventDisableShotMatrixSpotMarsDiagonalLeft
+        restart_events: eventRestartShotMatrixSpotMarsDiagonalLeft
+        reset_events: eventResetShotMatrixSpotMarsDiagonalLeft
+        hit_events: eventHitShotMatrixSpotMarsDiagonalLeft
+        profile: spShotMatrixSpotMarsDiagonal
+            
+    shotMatrixSpotMarsDiagonalRight:
+        enable_events: eventEnableShotMatrixSpotMarsDiagonalRight
+        disable_events: eventDisableShotMatrixSpotMarsDiagonalRight
+        restart_events: eventRestartShotMatrixSpotMarsDiagonalRight
+        reset_events: eventResetShotMatrixSpotMarsDiagonalRight
+        hit_events: eventHitShotMatrixSpotMarsDiagonalRight
+        profile: spShotMatrixSpotMarsDiagonal
+        
+    # VERTICAL
+    shotMatrixSpotMarsVerticalLeft:
+        enable_events: eventEnableShotMatrixSpotMarsVerticalLeft
+        disable_events: eventDisableShotMatrixSpotMarsVerticalLeft
+        restart_events: eventRestartShotMatrixSpotMarsVerticalLeft
+        reset_events: eventResetShotMatrixSpotMarsVerticalLeft
+        hit_events: eventHitShotMatrixSpotMarsVerticalLeft
+        profile: spShotMatrixSpotMarsVertical
+            
+    shotMatrixSpotMarsVerticalMiddle:
+        enable_events: eventEnableShotMatrixSpotMarsVerticalMiddle
+        disable_events: eventDisableShotMatrixSpotMarsVerticalMiddle
+        restart_events: eventRestartShotMatrixSpotMarsVerticalMiddle
+        reset_events: eventResetShotMatrixSpotMarsVerticalMiddle
+        hit_events: eventHitShotMatrixSpotMarsVerticalMiddle
+        profile: spShotMatrixSpotMarsVertical
+        
+    shotMatrixSpotMarsVerticalRight:
+        enable_events: eventEnableShotMatrixSpotMarsVerticalRight
+        disable_events: eventDisableShotMatrixSpotMarsVerticalRight
+        restart_events: eventRestartShotMatrixSpotMarsVerticalRight
+        reset_events: eventResetShotMatrixSpotMarsVerticalRight
+        hit_events: eventHitShotMatrixSpotMarsVerticalRight
+        profile: spShotMatrixSpotMarsVertical
+        
+    # -------------------
+    # SHOTS::SPINNERS
+    # -------------------
+    shotSpinnerMarsLeft:
+        switch: s_1_11
+        enable_events: eventEnableShotSpinnerMarsLeft
+        disable_events: eventDisableShotSpinnerMarsLeft
+        restart_events: eventRestartShotSpinnerMarsLeft
+        reset_events: eventResetShotSpinnerMarsLeft
+        profile: spShotSpinnerMars
+        show_tokens:
+            led1: ledSpinnerLeft1
+            led2: ledSpinnerLeft2
+            led3: ledSpinnerLeft3
+        
+    shotSpinnerMarsRight:
+        switch: s_1_4
+        enable_events: eventEnableShotSpinnerMarsRight
+        disable_events: eventDisableShotSpinnerMarsRight
+        restart_events: eventRestartShotSpinnerMarsRight
+        reset_events: eventResetShotSpinnerMarsRight
+        profile: spShotSpinnerMars
+        show_tokens:
+            led1: ledSpinnerRight1
+            led2: ledSpinnerRight2
+            led3: ledSpinnerRight3
+        
+    # -------------------
+    # SHOTS::OUTLANES
+    # -------------------
+    shotOutlaneMarsLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlaneMarsLeft
+        disable_events: eventDisableShotOutlaneMarsLeft
+        restart_events: eventRestartShotOutlaneMarsLeft
+        reset_events: eventResetShotOutlaneMarsLeft
+        profile: spShotOutlaneMars
+            
+    shotOutlaneMarsRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlaneMarsRight
+        disable_events: eventDisableShotOutlaneMarsRight
+        restart_events: eventRestartShotOutlaneMarsRight
+        reset_events: eventResetShotOutlaneMarsRight
+        profile: spShotOutlaneMars
+            
+    # -------------------
+    # SHOTS::OUTLANE::SPECIAL
+    # -------------------
+    shotOutlaneMarsSpecialLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlaneMarsSpecialLeft
+        disable_events: eventDisableShotOutlaneMarsSpecialLeft
+        restart_events: eventRestartShotOutlaneMarsSpecialLeft
+        reset_events: eventResetShotOutlaneMarsSpecialLeft
+        profile: spShotOutlaneMarsSpecial
+        show_tokens:
+            led: ledOutlaneLeft
+            
+    shotOutlaneMarsSpecialRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlaneMarsSpecialRight
+        disable_events: eventDisableShotOutlaneMarsSpecialRight
+        restart_events: eventRestartShotOutlaneMarsSpecialRight
+        reset_events: eventResetShotOutlaneMarsSpecialRight
+        profile: spShotOutlaneMarsSpecial
+        show_tokens:
+            led: ledOutlaneRight
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotMarsAll:
+        shots:
+            - shotMatrixSpotMars7
+            - shotMatrixSpotMars2
+            - shotMatrixSpotMars1
+            - shotMatrixSpotMars4
+            - shotMatrixSpotMars6
+            - shotMatrixSpotMars9
+            - shotMatrixSpotMars8
+            - shotMatrixSpotMars3
+            - shotMatrixSpotMars5
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMarsAll
+        disable_events:
+            - eventDisableShotGroupMatrixSpotMarsAll
+        reset_events:
+            - eventResetShotGroupMatrixSpotMarsAll
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMarsAll
+        rotate_left_events:
+            - sw_right_flipper
+        rotate_right_events:
+            - sw_left_flipper
+        
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotMarsDiagonalLeft:
+        shots:
+            - shotMatrixSpotMars1
+            - shotMatrixSpotMars5
+            - shotMatrixSpotMars9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMarsDiagonalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotMarsDiagonalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotMarsDiagonalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMarsDiagonalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotMarsDiagonalRight:
+        shots:
+            - shotMatrixSpotMars3
+            - shotMatrixSpotMars5
+            - shotMatrixSpotMars7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMarsDiagonalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotMarsDiagonalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotMarsDiagonalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMarsDiagonalRight
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotMarsVerticalLeft:
+        shots:
+            - shotMatrixSpotMars1
+            - shotMatrixSpotMars4
+            - shotMatrixSpotMars7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMarsVerticalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotMarsVerticalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotMarsVerticalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMarsVerticalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotMarsVerticalMiddle:
+        shots:
+            - shotMatrixSpotMars2
+            - shotMatrixSpotMars5
+            - shotMatrixSpotMars8
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMarsVerticalMiddle
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotMarsVerticalMiddle
+        reset_events:
+            - eventResetShotGroupMatrixSpotMarsVerticalMiddle
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMarsVerticalMiddle
+            
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotMarsVerticalRight:
+        shots:
+            - shotMatrixSpotMars3
+            - shotMatrixSpotMars6
+            - shotMatrixSpotMars9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotMarsVerticalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotMarsVerticalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotMarsVerticalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotMarsVerticalRight
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::MARTIX::SPOT
+    # -----------------------------
+    spShotMatrixSpotMars:
+        states:
+          - name: litFlash2
+            show: showMatrixSpotMars
+            speed: 4
+            show_tokens:
+                color1: '880088'
+                color2: 'ff00ff'
+                color3: '000000'
+                color4: '000000'
+          - name: litFlash
+            show: showMatrixSpotMars
+            speed: 4
+            show_tokens:
+                color1: '888800'
+                color2: 'ffff00'
+                color3: '888800'
+                color4: 'ffff00'
+          - name: litSolid
+            show: showMatrixSpotMars
+            speed: 4
+            show_tokens:
+                #color1: '660088'
+                #color2: '660088'
+                color1: '0000cc'
+                color2: '0000cc'
+                color3: '008888'
+                color4: '00ffff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::MARTIX::GROUPS
+    # -----------------------------
+    spShotMatrixSpotMarsDiagonal:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    spShotMatrixSpotMarsVertical:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::SPINNER
+    # -----------------------------
+    spShotSpinnerMars:
+        states:
+          - name: litSolid
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: 'ffff00'
+                color2: '888800'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE
+    # -----------------------------
+    spShotOutlaneMars:
+        states:
+          #- name: litFlash
+          - name: litSolid
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE::SPECIAL
+    # -----------------------------
+    spShotOutlaneMarsSpecial:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '440066'
+                color2: '8800cc'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: 'cc00ff'
+                color2: 'cc00ff'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeVoltanMars_started:
+        # -----------
+        # OUTLANES
+        # -----------
+        - eventEnableShotOutlaneMarsLeft
+        - eventEnableShotOutlaneMarsRight
+        # -----------
+        # MATRIX
+        # -----------
+        - eventEnableShotMatrixSpotMars1
+        - eventEnableShotMatrixSpotMars2
+        - eventEnableShotMatrixSpotMars3
+        - eventEnableShotMatrixSpotMars4
+        - eventEnableShotMatrixSpotMars5
+        - eventEnableShotMatrixSpotMars6
+        - eventEnableShotMatrixSpotMars7
+        - eventEnableShotMatrixSpotMars8
+        - eventEnableShotMatrixSpotMars9
+        # -----------
+        # MATRIX::GROUPS
+        # -----------
+        # DIAGONAL
+        # TODO reserve this for higher level modes past Mars
+        - eventEnableShotMatrixSpotMarsDiagonalLeft
+        - eventEnableShotMatrixSpotMarsDiagonalRight
+        #VERTICAL
+        - eventEnableShotMatrixSpotMarsVerticalLeft
+        - eventEnableShotMatrixSpotMarsVerticalMiddle
+        - eventEnableShotMatrixSpotMarsVerticalRight
+        
+# -----------
+# MATRIX::GROUPS::COMPLETE
+# -----------
+# -----------
+# DIAGONAL
+# -----------
+    # TODO this is not enables in Mars
+    # -----------
+    # DIAGONAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotMarsDiagonalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotMarsDiagonalLeft
+        # -------------
+    shotMatrixSpotMarsDiagonalLeft_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotMars1
+        #- eventDisableShotMatrixSpotMars5
+        #- eventDisableShotMatrixSpotMars9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalLeft
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotMars1|3000ms
+        #- eventRestartShotMatrixSpotMars5|3000ms
+        #- eventRestartShotMatrixSpotMars9|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerMarsLeft
+    
+    # -----------
+    # DIAGONAL::RIGHT
+    # -----------
+    # TODO this is not enables in Mars
+    shotGroupMatrixSpotMarsDiagonalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotMarsDiagonalRight
+        # -------------
+    shotMatrixSpotMarsDiagonalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotMars3
+        #- eventDisableShotMatrixSpotMars5
+        #- eventDisableShotMatrixSpotMars7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalRight
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotMars3|3000ms
+        #- eventRestartShotMatrixSpotMars5|3000ms
+        #- eventRestartShotMatrixSpotMars7|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerMarsRight
+        
+    # -----------
+    # GROUP::ALL
+    # -----------
+    shotGroupMatrixSpotMarsAll_litSolid_complete:
+        - eventVoltanMarsComplete|3000ms
+    
+# -----------
+# VERTICAL
+# -----------
+    # -----------
+    # VERTICAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotMarsVerticalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotMarsVerticalLeft
+        # -------------
+    shotMatrixSpotMarsVerticalLeft_litFlash_hit:
+        # TODO this is not enables in Mars
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotMars1
+        #- eventDisableShotMatrixSpotMars4
+        #- eventDisableShotMatrixSpotMars7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalLeft
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Mars
+        #- eventRestartShotMatrixSpotMars1|3000ms
+        #- eventRestartShotMatrixSpotMars4|3000ms
+        #- eventRestartShotMatrixSpotMars7|3000ms
+        
+    shotGroupMatrixSpotMarsVerticalMiddle_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotMarsVerticalMiddle
+        # -------------
+    shotMatrixSpotMarsVerticalMiddle_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in Mars
+        #- eventDisableShotMatrixSpotMars2
+        #- eventDisableShotMatrixSpotMars5
+        #- eventDisableShotMatrixSpotMars8
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalMiddle
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Mars
+        #- eventRestartShotMatrixSpotMars2|3000ms
+        #- eventRestartShotMatrixSpotMars5|3000ms
+        #- eventRestartShotMatrixSpotMars8|3000ms
+        
+    shotGroupMatrixSpotMarsVerticalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotMarsVerticalRight
+        # -------------
+    shotMatrixSpotMarsVerticalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in Mars
+        #- eventDisableShotMatrixSpotMars3
+        #- eventDisableShotMatrixSpotMars6
+        #- eventDisableShotMatrixSpotMars9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalRight
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in Mars
+        #- eventRestartShotMatrixSpotMars3|3000ms
+        #- eventRestartShotMatrixSpotMars6|3000ms
+        #- eventRestartShotMatrixSpotMars9|3000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------------
+    # SPINNERS
+    # ---------------------
+    shotSpinnerMarsLeft_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotSpinnerMarsRight_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    sw_tagSpinner:
+      score: 1 * current_player.multiPlayfield
+
+    # ---------------------
+    # OUTLANES
+    # ---------------------
+    # STANDARD
+    shotOutlaneMarsLeft_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    shotOutlaneMarsRight_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    # SPECIAL
+    shotOutlaneMarsSpecialLeft_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+    shotOutlaneMarsSpecialRight_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+
+    # ---------------------
+    # TARGETS AND LANES
+    # ---------------------
+    shotGroupMatrixSpotMarsAll_litFlash_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotGroupMatrixSpotMarsAll_litSolid_hit:
+        score: 10 * current_player.multiPlayfield
+      
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+    # ---------------------
+    # SHOW::DIAGONAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalLeft:
+        showMatrixSpotMarsThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotMarsThreeCompleteDiagonalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+        
+    # ---------------------
+    # SHOW::DIAGONAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalRight:
+        showMatrixSpotMarsThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotMarsThreeCompleteDiagonalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalLeft:
+        showMatrixSpotMarsThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotMarsThreeCompleteVerticalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot4A
+                led2B: ledSpot4B
+                led2C: ledSpot4C
+                led2D: ledSpot4D
+                led2E: ledSpot4E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::MIDDLE
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalMiddle:
+        showMatrixSpotMarsThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotMarsThreeCompleteVerticalMiddle
+            show_tokens:
+                # --------------
+                led1A: ledSpot2A
+                led1B: ledSpot2B
+                led1C: ledSpot2C
+                led1D: ledSpot2D
+                led1E: ledSpot2E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot8A
+                led3B: ledSpot8B
+                led3C: ledSpot8C
+                led3D: ledSpot8D
+                led3E: ledSpot8E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalRight:
+        showMatrixSpotMarsThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotMarsThreeCompleteVerticalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot6A
+                led2B: ledSpot6B
+                led2C: ledSpot6C
+                led2D: ledSpot6D
+                led2E: ledSpot6E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotMars:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotMarsThreeComplete:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1)
+            (led1B): (color1)
+            (led1C): (color1)
+            (led1D): (color1)
+            (led1E): (color1)
+            # ----------------
+            (led2A): (color1)
+            (led2B): (color1)
+            (led2C): (color1)
+            (led2D): (color1)
+            (led2E): (color1)
+            # ----------------
+            (led3A): (color1)
+            (led3B): (color1)
+            (led3C): (color1)
+            (led3D): (color1)
+            (led3E): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color2)
+            (led1B): (color2)
+            (led1C): (color2)
+            (led1D): (color2)
+            (led1E): (color2)
+            # ----------------
+            (led2A): (color2)
+            (led2B): (color2)
+            (led2C): (color2)
+            (led2D): (color2)
+            (led2E): (color2)
+            # ----------------
+            (led3A): (color2)
+            (led3B): (color2)
+            (led3C): (color2)
+            (led3D): (color2)
+            (led3E): (color2)
+            # ----------------
+        - time: "+1"

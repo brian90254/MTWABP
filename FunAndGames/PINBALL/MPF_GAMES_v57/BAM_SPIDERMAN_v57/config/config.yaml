@@ -1,0 +1,49 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ---------------
+# MODES
+# ---------------
+config:
+# -----------------
+# HARDWARE
+- configSystem.yaml
+- configVirtual.yaml
+#- configFastHardware.yaml
+- configFastHardware_ReverseDebounce.yaml
+# -----------------
+# GAME
+- configModes.yaml
+# -----------------
+# SHOWS
+- configLeds.yaml
+- configShows.yaml
+#- configEvents.yaml
+- configDisplays.yaml
+# -----------------
+# QUEUE RELAY :: FOR CAROUSEL
+- configQueueRelay.yaml
+# -----------------
+# SOUNDS
+#- configMusic.yaml
+#- configVoice.yaml
+- configSFX.yaml
+# -----------------
+# SOUNDS BY GAME
+#- configGames_SFX/configSFX_FlashGordon.yaml
+#- configGames_SFX/configSFX_Playboy.yaml
+- configGames_SFX/configSFX_Spiderman.yaml
+# -----------------
+# FONT / COLOR BY GAME
+#- configGames_FontColor/configFontColor_Kiss.yaml
+#- configGames_FontColor/configFontColor_Playboy.yaml
+- configGames_FontColor/configFontColor_Spiderman.yaml
+# -----------------
+# MUSIC BY GAME
+#- configGames_Music/configMusic_FlashGordon.yaml
+#- configGames_Music/configMusic_Playboy.yaml
+- configGames_Music/configMusic_Spiderman.yaml
+# -----------------
+# VOICE BY GAME
+- configGames_Voice/configVoice_FlashGordon.yaml

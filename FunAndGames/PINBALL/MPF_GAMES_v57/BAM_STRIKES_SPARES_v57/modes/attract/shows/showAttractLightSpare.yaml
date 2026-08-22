@@ -1,0 +1,59 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - STRIKES AND SPARES
+
+- time: 0
+# ----------------------
+# COLOR CHASE
+# ----------------------
+  lights:
+    # ------------------
+    ledSpareE: (color1)
+    ledSpareR: (color2)
+    ledSpareA: (color2)
+    ledSpareP: (color2)
+    ledSpareS: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledSpareE: (color2)
+    ledSpareR: (color1)
+    ledSpareA: (color2)
+    ledSpareP: (color2)
+    ledSpareS: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledSpareE: (color2)
+    ledSpareR: (color2)
+    ledSpareA: (color1)
+    ledSpareP: (color2)
+    ledSpareS: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledSpareE: (color2)
+    ledSpareR: (color2)
+    ledSpareA: (color2)
+    ledSpareP: (color1)
+    ledSpareS: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledSpareE: (color2)
+    ledSpareR: (color2)
+    ledSpareA: (color2)
+    ledSpareP: (color2)
+    ledSpareS: (color1)
+    # ------------------
+- time: "+1"

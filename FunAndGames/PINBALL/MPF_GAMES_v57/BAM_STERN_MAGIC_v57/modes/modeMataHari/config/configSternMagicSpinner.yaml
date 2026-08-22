@@ -1,0 +1,482 @@
+#config_version=6
+
+# STERN MAGIC
+
+# *****************************
+# SHOTS::LANES
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::SPINNERS
+    # -------------------
+    shotSpinnerLeft1000:
+        switch: s_0_3
+        enable_events: eventEnableShotSpinnerLeft1000
+        disable_events: eventDisableShotSpinnerLeft1000
+        restart_events: eventRestartShotSpinnerLeft1000
+        reset_events: eventResetShotSpinnerLeft1000
+        profile: spShotSpinner1000
+        show_tokens:
+            led: ledSpinnerLeft1000
+
+    shotSpinnerRight1000:
+        switch: s_0_4
+        enable_events: eventEnableShotSpinnerRight1000
+        disable_events: eventDisableShotSpinnerRight1000
+        restart_events: eventRestartShotSpinnerRight1000
+        reset_events: eventResetShotSpinnerRight1000
+        profile: spShotSpinner1000
+        show_tokens:
+            led: ledSpinnerRight1000
+    # -------------------
+    shotSpinnerLeft400B:
+        switch: s_0_3
+        enable_events: eventEnableShotSpinnerLeft400B
+        disable_events: eventDisableShotSpinnerLeft400B
+        restart_events: eventRestartShotSpinnerLeft400B
+        reset_events: eventResetShotSpinnerLeft400B
+        profile: spShotSpinner400B
+        show_tokens:
+            led: ledSpinnerLeft400B
+
+    shotSpinnerRight400B:
+        switch: s_0_4
+        enable_events: eventEnableShotSpinnerRight400B
+        disable_events: eventDisableShotSpinnerRight400B
+        restart_events: eventRestartShotSpinnerRight400B
+        reset_events: eventResetShotSpinnerRight400B
+        profile: spShotSpinner400B
+        show_tokens:
+            led: ledSpinnerRight400B
+    # -------------------
+    shotSpinnerLeft400A:
+        switch: s_0_3
+        enable_events: eventEnableShotSpinnerLeft400A
+        disable_events: eventDisableShotSpinnerLeft400A
+        restart_events: eventRestartShotSpinnerLeft400A
+        reset_events: eventResetShotSpinnerLeft400A
+        profile: spShotSpinner400A
+        show_tokens:
+            led: ledSpinnerLeft400A
+
+    shotSpinnerRight400A:
+        switch: s_0_4
+        enable_events: eventEnableShotSpinnerRight400A
+        disable_events: eventDisableShotSpinnerRight400A
+        restart_events: eventRestartShotSpinnerRight400A
+        reset_events: eventResetShotSpinnerRight400A
+        profile: spShotSpinner400A
+        show_tokens:
+            led: ledSpinnerRight400A
+    # -------------------
+    shotSpinnerLeftBase:
+        switch: s_0_3
+        enable_events: eventEnableShotSpinnerLeftBase
+        disable_events: eventDisableShotSpinnerLeftBase
+        restart_events: eventRestartShotSpinnerLeftBase
+        reset_events: eventResetShotSpinnerLeftBase
+        profile: spShotSpinnerBase
+
+    shotSpinnerRightBase:
+        switch: s_0_4
+        enable_events: eventEnableShotSpinnerRightBase
+        disable_events: eventDisableShotSpinnerRightBase
+        restart_events: eventRestartShotSpinnerRightBase
+        reset_events: eventResetShotSpinnerRightBase
+        profile: spShotSpinnerBase
+            
+    # -------------------
+    # SHOTS::MAGIC
+    # -------------------
+    shotMagicM:
+        switch: s_1_6
+        enable_events: eventEnableShotMagicM
+        disable_events: eventDisableShotMagicM
+        restart_events: eventRestartShotMagicM
+        reset_events: eventResetShotMagicM
+        profile: spShotMagic
+        show_tokens:
+            led1: ledLaneTopM
+            led2: ledTargetRightM
+            color1A: 'cc00cc'
+            color1B: '880088'
+            color2A: '00ffff'
+            color2B: '00ffff'
+            
+    shotMagicA:
+        switch: s_1_10
+        enable_events: eventEnableShotMagicA
+        disable_events: eventDisableShotMagicA
+        restart_events: eventRestartShotMagicA
+        reset_events: eventResetShotMagicA
+        profile: spShotMagic
+        show_tokens:
+            led1: ledLaneTopA
+            led2: ledDummy3
+            color1A: '888800'
+            color1B: '666600'
+            color2A: 'ff0000'
+            color2B: 'ff0000'
+        
+    shotMagicG:
+        switch: s_1_7
+        enable_events: eventEnableShotMagicG
+        disable_events: eventDisableShotMagicG
+        restart_events: eventRestartShotMagicG
+        reset_events: eventResetShotMagicG
+        profile: spShotMagic
+        show_tokens:
+            led1: ledLaneTopG
+            led2: ledTargetLeftG
+            color1A: 'cc00cc'
+            color1B: '880088'
+            color2A: '00ffff'
+            color2B: '00ffff'
+            
+    shotMagicI:
+        switch: s_1_8
+        enable_events: eventEnableShotMagicI
+        disable_events: eventDisableShotMagicI
+        restart_events: eventRestartShotMagicI
+        reset_events: eventResetShotMagicI
+        profile: spShotMagic
+        show_tokens:
+            led1: ledDummy4
+            led2: ledTargetLeftI
+            color1A: 'cc00cc'
+            color1B: '880088'
+            color2A: '00ffff'
+            color2B: '00ffff'
+            
+    shotMagicC:
+        switch: s_1_9
+        enable_events: eventEnableShotMagicC
+        disable_events: eventDisableShotMagicC
+        restart_events: eventRestartShotMagicC
+        reset_events: eventResetShotMagicC
+        profile: spShotMagic
+        show_tokens:
+            led1: ledDummy5
+            led2: ledTargetRightC
+            color1A: 'cc00cc'
+            color1B: '880088'
+            color2A: '00ffff'
+            color2B: '00ffff'
+
+    # -------------------
+    # SHOTS::MAGIC::ADVANCE
+    # -------------------
+    shotMagicAdvance:
+        enable_events: eventEnableShotMagicAdvance
+        disable_events: eventDisableShotMagicAdvance
+        restart_events: eventRestartShotMagicAdvance
+        reset_events: eventResetShotMagicAdvance
+        hit_events: eventHitShotMagicAdvance
+        profile: spShotMagicAdvance
+        show_tokens:
+            led: ledSpecialMagic
+
+    # -------------------
+    # SHOTS::EXTRA BALL
+    # -------------------
+    shotExtraBall:
+        switch: s_1_11
+        enable_events: eventEnableShotExtraBall
+        disable_events: eventDisableShotExtraBall
+        restart_events: eventRestartShotExtraBall
+        reset_events: eventResetShotExtraBall
+        profile: spShotExtraBall
+        show_tokens:
+            led: ledExtraBall
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::LANES::LEFT
+    # -------------------
+    shotGroupMagic:
+        shots:
+            - shotMagicM
+            - shotMagicA
+            - shotMagicG
+            - shotMagicI
+            - shotMagicC
+        enable_events:
+            - eventEnableShotMagic
+        disable_events:
+            - ball_ending
+            - eventDisableShotMagic
+        reset_events:
+            - eventResetShotMagic
+        restart_events:
+            - eventRestartShotMagic
+        rotate_left_events:
+            - sw_left_flipper
+        rotate_right_events:
+            - sw_right_flipper
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::SPINNER
+    # -----------------------------
+    spShotSpinner1000:
+        states:
+          - name: litSolid
+            show: onLedOrange
+            speed: 1
+        loop: false
+        
+    spShotSpinner400B:
+        states:
+          - name: litSolid
+            show: onLedGreen
+            speed: 1
+        loop: false
+        
+    spShotSpinner400A:
+        states:
+          - name: litSolid
+            show: onLedGreen
+            speed: 1
+        loop: false
+        
+    spShotSpinnerBase:
+        states:
+          - name: litSolid
+            #show: onLedGreen
+            #speed: 1
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::MAGIC
+    # -----------------------------
+    spShotMagic:
+        states:
+          - name: litFlash
+            show: showShotMagicFlash
+            speed: 4
+          - name: litSolid
+            show: showShotMagicSolid
+            speed: 1
+        loop: false
+
+    # -----------------------------
+    # PROFILE::MAGIC::ADVANCE
+    # -----------------------------
+    spShotMagicAdvance:
+        states:
+          - name: unlitSolid
+            show: flashLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: '000000'
+                color2: '000000'
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: 'ff0000'
+                color2: '880000'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: 'ff0000'
+                color2: 'ff0000'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::EXTRA BALL
+    # -----------------------------
+    spShotExtraBall:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: 'ffff00'
+                color2: '888800'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 1
+            show_tokens:
+                color1: 'ffff00'
+                color2: 'ffff00'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+
+    mode_modeMataHari_started:
+        # RETURN LANES
+        - eventRestartShotGroupMagic
+        - eventRestartShotMagicM
+        - eventRestartShotMagicA
+        - eventRestartShotMagicG
+        - eventRestartShotMagicI
+        - eventRestartShotMagicC
+        - eventRestartShotMagicAdvance
+        # SPINNER BASE
+        - eventRestartShotSpinnerLeftBase
+        - eventRestartShotSpinnerRightBase
+        
+    ball_ending:
+        # -------------------------------
+        # SPINNER
+        - eventDisableShotSpinnerLeft1000
+        - eventDisableShotSpinnerRight1000
+        # -------------------------------
+        - eventDisableShotSpinnerLeft400B
+        - eventDisableShotSpinnerRight400B
+        # -------------------------------
+        - eventDisableShotSpinnerLeft400A
+        - eventDisableShotSpinnerRight400A
+        # -------------------------------
+        # EXTRA BALL
+        - eventDisableShotExtraBall
+        # -------------------------------
+
+    # -------------------
+    # SHOT::HIT::MAGIC
+    # -------------------
+    shotMagicM_litFlash_hit:
+        - eventRestartShotSpinnerLeft400A
+        - eventCompleteBonusOnes
+    shotMagicA_litFlash_hit:
+        - eventRestartShotSpinnerLeft1000
+        #- eventRestartShotSpinnerRight1000
+        - eventCompleteBonusOnes
+    shotMagicG_litFlash_hit:
+        - eventRestartShotSpinnerRight400A
+        - eventCompleteBonusOnes
+    shotMagicI_litFlash_hit:
+        - eventRestartShotSpinnerLeft400B
+        - eventCompleteBonusOnes
+    shotMagicC_litFlash_hit:
+        - eventRestartShotSpinnerRight400B
+        - eventCompleteBonusOnes
+
+    shotGroupMagic_litSolid_complete:
+        - eventHitShotMagicAdvance
+        - eventRestartShotMagicM|3500
+        - eventRestartShotMagicA|3500
+        - eventRestartShotMagicG|3500
+        - eventRestartShotMagicI|3500
+        - eventRestartShotMagicC|3500
+        - eventRestartShotGroupMagic|4000
+
+    # -------------------
+    # SHOT::HIT::SPINNER::1000
+    # -------------------
+    shotSpinnerLeft1000_litSolid_hit:
+        - eventRestartShotSpinnerRight1000
+        - eventDisableShotSpinnerLeft1000
+
+    shotSpinnerRight1000_litSolid_hit:
+        - eventRestartShotSpinnerLeft1000
+        - eventDisableShotSpinnerRight1000
+        
+    # -------------------
+    # SHOT::EXTRA::BALL
+    # -------------------
+    shotMagicAdvance_litFlash_hit:
+        - eventRestartShotExtraBall
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # -------------------
+    # MAGIC::FLASH
+    # -------------------
+    shotMagicM_litFlash_hit:
+        score: 1000
+    shotMagicA_litFlash_hit:
+        score: 1000
+    shotMagicG_litFlash_hit:
+        score: 1000
+    shotMagicI_litFlash_hit:
+        score: 1000
+    shotMagicC_litFlash_hit:
+        score: 1000
+    # -------------------
+    # MAGIC::SOLID
+    # -------------------
+    shotMagicM_litSolid_hit:
+        score: 100
+    shotMagicA_litSolid_hit:
+        score: 100
+    shotMagicG_litSolid_hit:
+        score: 100
+    shotMagicI_litSolid_hit:
+        score: 100
+    shotMagicC_litSolid_hit:
+        score: 100
+
+    # -------------------
+    # MAGIC::SPECIAL
+    # -------------------
+    shotMagicAdvance_litFlash_hit:
+        score: 25000
+    
+    # -------------------
+    # SPINNERS
+    # -------------------
+    shotSpinnerLeft1000_litSolid_hit:
+        score: 1000
+    shotSpinnerRight1000_litSolid_hit:
+        score: 1000
+    # -------------------
+    shotSpinnerLeft400B_litSolid_hit:
+        score: 400
+    shotSpinnerRight400B_litSolid_hit:
+        score: 400
+    # -------------------
+    shotSpinnerLeft400A_litSolid_hit:
+        score: 400
+    shotSpinnerRight400A_litSolid_hit:
+        score: 400
+    # -------------------
+    shotSpinnerLeftBase_litSolid_hit:
+        score: 200
+    shotSpinnerRightBase_litSolid_hit:
+        score: 200
+        
+# *********************
+# SHOWS
+# *********************
+shows:
+  # -----------------------------------
+  # SHOW::SHOT::MAGIC::FLASH::SOLID
+  # -----------------------------------
+    showShotMagicFlash:
+        - time: 0
+          lights:
+            (led1): (color1A)
+            (led2): (color1A)
+        - time: 1
+          lights:
+            (led1): (color1B)
+            (led2): (color1B)
+        - time: 2
+        
+    showShotMagicSolid:
+        - time: 0
+          lights:
+            (led1): (color2A)
+            (led2): (color2A)
+        - time: 1
+          lights:
+            (led1): (color2B)
+            (led2): (color2B)
+        - time: 2

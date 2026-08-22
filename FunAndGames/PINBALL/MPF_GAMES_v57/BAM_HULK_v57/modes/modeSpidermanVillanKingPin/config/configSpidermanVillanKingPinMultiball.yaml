@@ -1,0 +1,136 @@
+#config_version=6
+
+# VOLTAN
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeSpidermanVillanKingPin_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballKingPinUpperKickerLeft
+    - eventEnableMultiballKingPinUpperKickerRight
+    - eventEnableMultiballKingPinUpperKickerBoth
+    # ----------------------------------
+    # ENABLE LOCK
+    - eventEnableMultiballKingPinLockSaucerTopRight
+    - eventEnableMultiballKingPinLockSaucerTopLeft
+    # ----------------------------------
+    
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::RIGHT
+  # ---------------------
+  # RIGHT::TWO BALL
+  multiball_lock_multiballKingPinLockSaucerTopRight_full.1{device.multiball_locks.multiballKingPinLockSaucerTopLeft.locked_balls==0}:
+    - eventStartMultiballKingPinUpperKickerRight|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballKingPinLockSaucerTopRight
+    - eventDisableMultiballKingPinLockSaucerTopLeft
+  # ---------------------
+  # RIGHT::THREE BALL
+  multiball_lock_multiballKingPinLockSaucerTopRight_full.2{device.multiball_locks.multiballKingPinLockSaucerTopLeft.locked_balls==1}:
+    - eventStartMultiballKingPinUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballKingPinLockSaucerTopRight|3500ms
+    - eventDisableMultiballKingPinLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::LEFT
+  # ---------------------
+  # LEFT::TWO BALL
+  multiball_lock_multiballKingPinLockSaucerTopLeft_full.1{device.multiball_locks.multiballKingPinLockSaucerTopRight.locked_balls==0}:
+    - eventStartMultiballKingPinUpperKickerLeft|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballKingPinLockSaucerTopRight
+    - eventDisableMultiballKingPinLockSaucerTopLeft
+  # ---------------------
+  # LEFT::THREE BALL
+  multiball_lock_multiballKingPinLockSaucerTopLeft_full.2{device.multiball_locks.multiballKingPinLockSaucerTopRight.locked_balls==1}:
+    - eventStartMultiballKingPinUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballKingPinLockSaucerTopRight|3500ms
+    - eventDisableMultiballKingPinLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # ENDING MULTIBALL
+  # ---------------------
+  # BOTH
+  multiball_multiballKingPinUpperKickerBoth_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballKingPinLockSaucerTopRight
+    - eventEnableMultiballKingPinLockSaucerTopLeft
+  # LEFT
+  multiball_multiballKingPinUpperKickerLeft_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballKingPinLockSaucerTopRight
+    - eventEnableMultiballKingPinLockSaucerTopLeft
+  # RIGHT
+  multiball_multiballKingPinUpperKickerRight_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballKingPinLockSaucerTopRight
+    - eventEnableMultiballKingPinLockSaucerTopLeft
+
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballKingPinLockSaucerTopRight:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopRight
+    enable_events: eventEnableMultiballKingPinLockSaucerTopRight
+    disable_events: eventDisableMultiballKingPinLockSaucerTopRight
+    locked_ball_counting_strategy: physical_only
+
+  multiballKingPinLockSaucerTopLeft:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopLeft
+    enable_events: eventEnableMultiballKingPinLockSaucerTopLeft
+    disable_events: eventDisableMultiballKingPinLockSaucerTopLeft
+    locked_ball_counting_strategy: physical_only
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballKingPinUpperKickerLeft:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKingPinUpperKickerLeft
+    disable_events: eventDisableMultiballKingPinUpperKickerLeft
+    start_events: eventStartMultiballKingPinUpperKickerLeft
+    stop_events: eventStopMultiballKingPinUpperKickerLeft
+    
+  multiballKingPinUpperKickerRight:
+    ball_locks:
+      - ballDeviceSaucerTopRight
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKingPinUpperKickerRight
+    disable_events: eventDisableMultiballKingPinUpperKickerRight
+    start_events: eventStartMultiballKingPinUpperKickerRight
+    stop_events: eventStopMultiballKingPinUpperKickerRight
+    
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::BOTH
+  # ----------------------------
+  multiballKingPinUpperKickerBoth:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+      - ballDeviceSaucerTopRight
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKingPinUpperKickerBoth
+    disable_events: eventDisableMultiballKingPinUpperKickerBoth
+    start_events: eventStartMultiballKingPinUpperKickerBoth
+    stop_events: eventStopMultiballKingPinUpperKickerBoth
+    

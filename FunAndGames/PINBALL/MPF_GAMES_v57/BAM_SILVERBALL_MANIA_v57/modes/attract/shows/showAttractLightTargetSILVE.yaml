@@ -1,0 +1,33 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceEightFlashLedTwoColor:
+      loops: 0
+      speed: 5
+      show_tokens:
+        color2: '000000'
+        color1: 'ff00ff'
+        led1: ledTargetSTop
+        led2: ledTargetITop
+        led3: ledTargetLTop
+        led4: ledTargetVTop
+        led5: ledTargetELeft
+
+- time: "+1"
+
+  shows:
+    traceEightFlashLedTwoColor:
+      loops: 0
+      speed: 5
+      show_tokens:
+        color2: '000000'
+        color1: 'ffff00'
+        led1: ledTargetSTop
+        led2: ledTargetITop
+        led3: ledTargetLTop
+        led4: ledTargetVTop
+        led5: ledTargetELeft
+        
+- time: "+1"

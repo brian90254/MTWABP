@@ -1,0 +1,120 @@
+#show_version=6
+
+- time: 0
+
+#-------------
+# GREEN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpot7
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledSpot7A
+        led2: ledSpot7B
+        led3: ledSpot7C
+        led4: ledSpot7D
+        led5: ledSpot7E
+
+- time: "+2"
+
+#-------------
+# CYAN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpot7
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledSpot7A
+        led2: ledSpot7B
+        led3: ledSpot7C
+        led4: ledSpot7D
+        led5: ledSpot7E
+
+- time: "+2"
+
+#-------------
+# BLUE
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpot7
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledSpot7A
+        led2: ledSpot7B
+        led3: ledSpot7C
+        led4: ledSpot7D
+        led5: ledSpot7E
+
+- time: "+2"
+
+#-------------
+# MAGENTA
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpot7
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledSpot7A
+        led2: ledSpot7B
+        led3: ledSpot7C
+        led4: ledSpot7D
+        led5: ledSpot7E
+
+- time: "+2"
+
+#-------------
+# RED
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpot7
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledSpot7A
+        led2: ledSpot7B
+        led3: ledSpot7C
+        led4: ledSpot7D
+        led5: ledSpot7E
+
+- time: "+2"
+
+#-------------
+# YELLOW
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 6
+      key: keyLedSpot7
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledSpot7A
+        led2: ledSpot7B
+        led3: ledSpot7C
+        led4: ledSpot7D
+        led5: ledSpot7E
+
+- time: "+2"
+
+
+

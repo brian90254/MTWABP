@@ -1,0 +1,94 @@
+#config_version=6
+
+config:
+#- configBaseAchievements.yaml
+- configBaseShows.yaml
+
+mode:
+  start_events: ball_starting
+  priority: 100
+
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  ball_started:
+    - eventStartModeSkillShot
+    - eventResetMultipliers
+    
+  # ----------------------------
+  # CONDITIONAL START MODE JUPITER ONE
+  # ----------------------------
+  mode_modeBase_started:
+    - eventStartModeSternAli
+    #- eventStartModeSkillShot
+    #- eventStartModeAwardWheel
+    #- eventSelectNextMode|20ms
+
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+#event_player:
+#  ball_started:
+#    - eventStartModeSkillShot
+#    - eventResetMultipliers
+#    
+#  # ----------------------------
+#  # CONDITIONAL START MODE JUPITER ONE
+#  # ----------------------------
+#  mode_modeBase_started:
+#    #- eventStartModeSkillShot
+#    #- eventStartModeAwardWheel
+#    - eventSelectNextMode|20ms
+#    
+#  eventSelectNextMode:
+#    - startAchModeJupiterOne{device.achievements.achModeJupiterOne.state!="completed"}
+#  eventSelectNextMode.2:
+#    - startAchModeEuropa{device.achievements.achModeJupiterOne.state=="completed" and device.achievements.achModeEuropa.state!="completed"}
+#  eventSelectNextMode.3:
+#    - startAchModeGanymede{device.achievements.achModeJupiterOne.state=="completed" and device.achievements.achModeEuropa.state=="completed" and device.achievements.achModeGanymede.state!="completed"}
+#  eventSelectNextMode.4:
+#    - startAchModeCallisto{device.achievements.achModeJupiterOne.state=="completed" and device.achievements.achModeEuropa.state=="completed" and device.achievements.achModeGanymede.state=="completed" and device.achievements.achModeCallisto.state!="completed"}
+
+
+#  # ----------------------------
+#  # FORCE AUTO PLUNGE EJECT
+#  # ----------------------------
+#  timer_timerForceAutoEject_complete:
+#    eventForceAutoEject|1s
+#
+
+
+# ---------------------
+# TIMERS
+# ---------------------
+#timers:
+#  # ----------------------------
+#  # FORCE AUTO PLUNGE EJECT
+#  # ----------------------------
+#    timerForceAutoEject:
+#        start_value: 20
+#        end_value: 0
+#        direction: down
+#        tick_interval: 1s
+#        start_running: no
+#        control_events:
+#            - event: mode_modeBase_started
+#              action: start
+#            - event: balldevice_plunger_lane_ball_eject_success
+#              action: stop
+
+
+# ---------------------
+# COIL::PLAYER
+# ---------------------
+#coil_player:
+#  # ----------------------------
+#  # FORCE AUTO PLUNGE EJECT
+#  # ----------------------------
+#  eventForceAutoEject:
+#    c_plunger_lane:
+#      action: pulse
+

@@ -1,0 +1,266 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:
+# ---------------------
+# SOUNDS::MUSIC::THEME
+# ---------------------
+  musicPlayboyTheme001:
+    file: musicPlayboyTheme_RunningFast_001.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme002:
+    file: musicPlayboyTheme_Trops_002.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme003:
+    file: musicPlayboyTheme_BluesForAlexandra_003.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme004:
+    file: musicPlayboyTheme_MotoCentripeto_004.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicPlayboyTheme005:
+    file: musicPlayboyTheme_BlueMedia_005.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme006:
+    file: musicPlayboyTheme_DiamondBossaNova_006.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme007:
+    file: musicPlayboyTheme_LitaliaVistaDalCielo_007.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme008:
+    file: musicPlayboyTheme_FearingMuch_008.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme009:
+    file: musicPlayboyTheme_Sessomatto_009.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme010:
+    file: musicPlayboyTheme_Decisione_010.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme011:
+    file: musicPlayboyTheme_AirportRock_011.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme012:
+    file: musicPlayboyTheme_HoneyRhythmAndButter_012.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme013:
+    file: musicPlayboyTheme_UnDetective_013.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme014:
+    file: musicPlayboyTheme_CasaDiModa_014.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme015:
+    file: musicPlayboyTheme_LadyMagnolia_015.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme016:
+    file: musicPlayboyTheme_Messaggio_016.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+# -----------------------------
+
+  musicPlayboyTheme017:
+    file: musicPlayboyTheme_Nago_017.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme018:
+    file: musicPlayboyTheme_NorthPolePenguin_018.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicPlayboyTheme019:
+    file: musicPlayboyTheme_Libanese_019.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme020:
+    file: musicPlayboyTheme_SoulSamba_020.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme021:
+    file: musicPlayboyTheme_SwingSesso_021.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme022:
+    file: musicPlayboyTheme_TreMessicani_022.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+  musicPlayboyTheme023:
+    file: musicPlayboyTheme_AfroSwing_023.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  musicPlayboyTheme024:
+    file: musicPlayboyTheme_LuomoDagli_024.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+
+
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicPlayboyTheme001
+      - musicPlayboyTheme002
+      - musicPlayboyTheme003
+      - musicPlayboyTheme004
+      - musicPlayboyTheme005
+      - musicPlayboyTheme006
+      - musicPlayboyTheme007
+      - musicPlayboyTheme008
+      - musicPlayboyTheme009
+      - musicPlayboyTheme010
+      - musicPlayboyTheme011
+      - musicPlayboyTheme012
+      - musicPlayboyTheme013
+      - musicPlayboyTheme014
+      - musicPlayboyTheme015
+      - musicPlayboyTheme016
+      - musicPlayboyTheme017
+      - musicPlayboyTheme018
+      - musicPlayboyTheme019
+      - musicPlayboyTheme020
+      - musicPlayboyTheme021
+      - musicPlayboyTheme022
+      - musicPlayboyTheme023
+      - musicPlayboyTheme024
+
+  poolMusicBaseMode:
+    track: music
+    type: random_force_all
+    sounds:
+      - musicPlayboyTheme001
+      - musicPlayboyTheme002
+      - musicPlayboyTheme003
+      - musicPlayboyTheme004
+      - musicPlayboyTheme005
+      - musicPlayboyTheme006
+      - musicPlayboyTheme007
+      - musicPlayboyTheme008
+      - musicPlayboyTheme009
+      - musicPlayboyTheme010
+      - musicPlayboyTheme011
+      - musicPlayboyTheme012
+      - musicPlayboyTheme013
+      - musicPlayboyTheme014
+      - musicPlayboyTheme015
+      - musicPlayboyTheme016
+      - musicPlayboyTheme017
+      - musicPlayboyTheme018
+      - musicPlayboyTheme019
+      - musicPlayboyTheme020
+      - musicPlayboyTheme021
+      - musicPlayboyTheme022
+      - musicPlayboyTheme023
+      - musicPlayboyTheme024
+
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+sound_player:
+# ---------------------
+# SOUNDS::PLAYER::STAR TREK::BY MODE
+# ---------------------
+  playPoolMusicBaseMode:
+    poolMusicBaseMode:
+      loops: 0
+      volume: 0.7
+    
+# ---------------------
+# MUSIC::PLAYLISTS
+# ---------------------
+playlists:
+  playlistModePlayboyMusic:
+    shuffle: true
+    repeat: true
+    sounds:
+      - musicPlayboyTheme001
+      - musicPlayboyTheme002
+      - musicPlayboyTheme003
+      - musicPlayboyTheme004
+      - musicPlayboyTheme005
+      - musicPlayboyTheme006
+      - musicPlayboyTheme007
+      - musicPlayboyTheme008
+      - musicPlayboyTheme009
+      - musicPlayboyTheme010
+      - musicPlayboyTheme011
+      - musicPlayboyTheme012
+      - musicPlayboyTheme013
+      - musicPlayboyTheme014
+      - musicPlayboyTheme015
+      - musicPlayboyTheme016
+      - musicPlayboyTheme017
+      - musicPlayboyTheme018
+      - musicPlayboyTheme019
+      - musicPlayboyTheme020
+      - musicPlayboyTheme021
+      - musicPlayboyTheme022
+      - musicPlayboyTheme023
+      - musicPlayboyTheme024
+      
+

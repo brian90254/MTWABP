@@ -1,0 +1,585 @@
+#config_version=6
+
+# Bally BuckRogers v1.01
+
+lights:
+# -------------------------------------
+# FADECANDY - BOARD ZERO - CHANNEL ZERO
+# -------------------------------------
+# BALLY STRIKES AND SPARES
+# -------------------------------------
+
+# -------------------------------------
+# CHANNEL ZERO
+# -------------------------------------
+  # --------
+  # PIN 1
+  # --------
+  ledPin1A:
+    number: 0-0
+    type: grb
+    subtype: led
+  ledPin1B:
+    number: 0-1
+    type: grb
+    subtype: led
+  ledPin1C:
+    number: 0-2
+    type: grb
+    subtype: led
+  ledPin1D:
+    number: 0-3
+    type: grb
+    subtype: led
+    
+  # --------
+  # PIN 2
+  # --------
+  ledPin3A:
+    number: 0-4
+    type: grb
+    subtype: led
+  ledPin3B:
+    number: 0-5
+    type: grb
+    subtype: led
+  ledPin3C:
+    number: 0-6
+    type: grb
+    subtype: led
+  ledPin3D:
+    number: 0-7
+    type: grb
+    subtype: led
+    
+  # --------
+  # PIN 3
+  # --------
+  ledPin6A:
+    number: 0-8
+    type: grb
+    subtype: led
+  ledPin6B:
+    number: 0-9
+    type: grb
+    subtype: led
+  ledPin6C:
+    number: 0-10
+    type: grb
+    subtype: led
+  ledPin6D:
+    number: 0-11
+    type: grb
+    subtype: led
+    
+  # --------
+  # PIN 4
+  # --------
+  ledPin10A:
+    number: 0-12
+    type: grb
+    subtype: led
+  ledPin10B:
+    number: 0-13
+    type: grb
+    subtype: led
+  ledPin10C:
+    number: 0-14
+    type: grb
+    subtype: led
+  ledPin10D:
+    number: 0-15
+    type: grb
+    subtype: led
+    
+  # --------
+  # PIN 5
+  # --------
+  ledPin9A:
+    number: 0-16
+    type: grb
+    subtype: led
+  ledPin9B:
+    number: 0-17
+    type: grb
+    subtype: led
+  ledPin9C:
+    number: 0-18
+    type: grb
+    subtype: led
+  ledPin9D:
+    number: 0-19
+    type: grb
+    subtype: led
+    
+  # --------
+  # PIN 6
+  # --------
+  ledPin5A:
+    number: 0-20
+    type: grb
+    subtype: led
+  ledPin5B:
+    number: 0-21
+    type: grb
+    subtype: led
+  ledPin5C:
+    number: 0-22
+    type: grb
+    subtype: led
+  ledPin5D:
+    number: 0-23
+    type: grb
+    subtype: led
+    
+  # --------
+  # PIN 7
+  # --------
+  ledPin2A:
+    number: 0-24
+    type: grb
+    subtype: led
+  ledPin2B:
+    number: 0-25
+    type: grb
+    subtype: led
+  ledPin2C:
+    number: 0-26
+    type: grb
+    subtype: led
+  ledPin2D:
+    number: 0-27
+    type: grb
+    subtype: led
+    
+  # --------
+  # PIN 8
+  # --------
+  ledPin4A:
+    number: 0-28
+    type: grb
+    subtype: led
+  ledPin4B:
+    number: 0-29
+    type: grb
+    subtype: led
+  ledPin4C:
+    number: 0-30
+    type: grb
+    subtype: led
+  ledPin4D:
+    number: 0-31
+    type: grb
+    subtype: led
+    
+  # --------
+  # PIN 9
+  # --------
+  ledPin8A:
+    number: 0-32
+    type: grb
+    subtype: led
+  ledPin8B:
+    number: 0-33
+    type: grb
+    subtype: led
+  ledPin8C:
+    number: 0-34
+    type: grb
+    subtype: led
+  ledPin8D:
+    number: 0-35
+    type: grb
+    subtype: led
+    
+  # --------
+  # PIN 10
+  # --------
+  ledPin7A:
+    number: 0-36
+    type: grb
+    subtype: led
+  ledPin7B:
+    number: 0-37
+    type: grb
+    subtype: led
+  ledPin7C:
+    number: 0-38
+    type: grb
+    subtype: led
+  ledPin7D:
+    number: 0-39
+    type: grb
+    subtype: led
+
+  # --------
+  # SPINNER
+  # --------
+  ledSpinnerLeft:
+    number: 0-40
+    type: grb
+    subtype: led
+    
+    
+# -------------------------------------
+# CHANNEL ONE
+# -------------------------------------
+
+  ledAutomaticStrike:
+    number: 0-64
+    type: grb
+    subtype: led
+    
+  ledLaneA:
+    number: 0-65
+    type: grb
+    subtype: led
+    
+  ledLaneB:
+    number: 0-66
+    type: grb
+    subtype: led
+    
+  ledLaneC:
+    number: 0-67
+    type: grb
+    subtype: led
+    
+  ledSpareS:
+    number: 0-68
+    type: grb
+    subtype: led
+    
+  ledSpareP:
+    number: 0-69
+    type: grb
+    subtype: led
+    
+  ledSpareA:
+    number: 0-70
+    type: grb
+    subtype: led
+    
+  ledSpareR:
+    number: 0-71
+    type: grb
+    subtype: led
+    
+  ledSpareE:
+    number: 0-72
+    type: grb
+    subtype: led
+    
+  ledOutlaneRightSpecial:
+    number: 0-73
+    type: grb
+    subtype: led
+    
+  ledReturnRightExtraBall:
+    number: 0-74
+    type: grb
+    subtype: led
+    
+  ledAwardSpecial:
+    number: 0-75
+    type: grb
+    subtype: led
+    
+  ledMultiplier3X:
+    number: 0-76
+    type: grb
+    subtype: led
+    
+  ledBonus10:
+    number: 0-77
+    type: grb
+    subtype: led
+    
+  ledBonus8:
+    number: 0-78
+    type: grb
+    subtype: led
+    
+  ledBonus6:
+    number: 0-79
+    type: grb
+    subtype: led
+    
+  ledBonus4:
+    number: 0-80
+    type: grb
+    subtype: led
+    
+  ledBonus2:
+    number: 0-81
+    type: grb
+    subtype: led
+    
+  ledShootAgain:
+    number: 0-82
+    type: grb
+    subtype: led
+    
+  ledBonus20:
+    number: 0-83
+    type: grb
+    subtype: led
+    
+  ledBonus1:
+    number: 0-84
+    type: grb
+    subtype: led
+    
+  ledBonus3:
+    number: 0-85
+    type: grb
+    subtype: led
+    
+  ledBonus5:
+    number: 0-86
+    type: grb
+    subtype: led
+    
+  ledBonus7:
+    number: 0-87
+    type: grb
+    subtype: led
+    
+  ledBonus9:
+    number: 0-88
+    type: grb
+    subtype: led
+    
+  ledMultiplier5X:
+    number: 0-89
+    type: grb
+    subtype: led
+    
+  ledMultiplier2X:
+    number: 0-90
+    type: grb
+    subtype: led
+    
+  ledAward5k:
+    number: 0-91
+    type: grb
+    subtype: led
+    
+  ledOutlaneLeftSpecial:
+    number: 0-92
+    type: grb
+    subtype: led
+    
+  ledReturnLeftExtraBall:
+    number: 0-93
+    type: grb
+    subtype: led
+    
+  ledStrikeValue5k:
+    number: 0-94
+    type: grb
+    subtype: led
+    
+  ledStrikeValue10k:
+    number: 0-95
+    type: grb
+    subtype: led
+    
+  ledStrikeValue15k:
+    number: 0-96
+    type: grb
+    subtype: led
+    
+  ledStrikeValue20k:
+    number: 0-97
+    type: grb
+    subtype: led
+    
+  ledStrikeValue50k:
+    number: 0-98
+    type: grb
+    subtype: led
+    
+  ledStrikeValueSpecial:
+    number: 0-99
+    type: grb
+    subtype: led
+    
+  ledSpareSpecial:
+    number: 0-100
+    type: grb
+    subtype: led
+    
+# -------------------------------------
+# CHANNEL TWO
+# -------------------------------------
+  # -------------------------------------
+  # THUMPER RIGHT
+  # -------------------------------------
+  ledThumperRight1:
+    number: 0-128
+    type: grb
+    subtype: led
+  ledThumperRight2:
+    number: 0-129
+    type: grb
+    subtype: led
+  ledThumperRight3:
+    number: 0-130
+    type: grb
+    subtype: led
+  ledThumperRight4:
+    number: 0-131
+    type: grb
+    subtype: led
+  ledThumperRight5:
+    number: 0-132
+    type: grb
+    subtype: led
+  ledThumperRight6:
+    number: 0-133
+    type: grb
+    subtype: led
+  ledThumperRight7:
+    number: 0-134
+    type: grb
+    subtype: led
+  ledThumperRight8:
+    number: 0-135
+    type: grb
+    subtype: led
+  ledThumperRight9:
+    number: 0-136
+    type: grb
+    subtype: led
+  ledThumperRight10:
+    number: 0-137
+    type: grb
+    subtype: led
+  ledThumperRight11:
+    number: 0-138
+    type: grb
+    subtype: led
+  ledThumperRight12:
+    number: 0-139
+    type: grb
+    subtype: led
+    
+# -------------------------------------
+# CHANNEL THREE
+# -------------------------------------
+  # -------------------------------------
+  # THUMPER LEFT
+  # -------------------------------------
+  ledThumperLeft1:
+    number: 0-192
+    type: grb
+    subtype: led
+  ledThumperLeft2:
+    number: 0-193
+    type: grb
+    subtype: led
+  ledThumperLeft3:
+    number: 0-194
+    type: grb
+    subtype: led
+  ledThumperLeft4:
+    number: 0-195
+    type: grb
+    subtype: led
+  ledThumperLeft5:
+    number: 0-196
+    type: grb
+    subtype: led
+  ledThumperLeft6:
+    number: 0-197
+    type: grb
+    subtype: led
+  ledThumperLeft7:
+    number: 0-198
+    type: grb
+    subtype: led
+  ledThumperLeft8:
+    number: 0-199
+    type: grb
+    subtype: led
+  ledThumperLeft9:
+    number: 0-200
+    type: grb
+    subtype: led
+  ledThumperLeft10:
+    number: 0-201
+    type: grb
+    subtype: led
+  ledThumperLeft11:
+    number: 0-202
+    type: grb
+    subtype: led
+  ledThumperLeft12:
+    number: 0-203
+    type: grb
+    subtype: led
+    
+# -------------------------------------
+# CHANNEL FOUR
+# -------------------------------------
+  # -------------------------------------
+  # THUMPER MIDDLE
+  # -------------------------------------
+  ledThumperMiddle1:
+    number: 0-256
+    type: grb
+    subtype: led
+  ledThumperMiddle2:
+    number: 0-257
+    type: grb
+    subtype: led
+  ledThumperMiddle3:
+    number: 0-258
+    type: grb
+    subtype: led
+  ledThumperMiddle4:
+    number: 0-259
+    type: grb
+    subtype: led
+  ledThumperMiddle5:
+    number: 0-260
+    type: grb
+    subtype: led
+  ledThumperMiddle6:
+    number: 0-261
+    type: grb
+    subtype: led
+  ledThumperMiddle7:
+    number: 0-262
+    type: grb
+    subtype: led
+  ledThumperMiddle8:
+    number: 0-263
+    type: grb
+    subtype: led
+  ledThumperMiddle9:
+    number: 0-264
+    type: grb
+    subtype: led
+  ledThumperMiddle10:
+    number: 0-265
+    type: grb
+    subtype: led
+  ledThumperMiddle11:
+    number: 0-266
+    type: grb
+    subtype: led
+  ledThumperMiddle12:
+    number: 0-267
+    type: grb
+    subtype: led
+    
+# -------------------------------------
+# DUMMY
+# -------------------------------------
+  ledDummy1:
+    number: 7-0
+    type: grb
+    subtype: led
+    

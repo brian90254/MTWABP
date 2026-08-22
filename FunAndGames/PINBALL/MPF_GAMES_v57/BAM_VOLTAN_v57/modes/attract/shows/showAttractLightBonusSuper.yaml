@@ -1,0 +1,654 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - SILVERBALL MANIA
+
+- time: 0
+# ----------------------
+# RED CHASE
+# ----------------------
+  lights:
+    # ----------------------    
+    ledBonusLower1: 'ff0000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: 'ff0000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: 'ff0000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: 'ff0000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: 'ff0000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: 'ff0000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: 'ff0000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: 'ff0000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: 'ff0000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: 'ff0000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: 'ff0000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: 'ff0000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: 'ff0000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: 'ff0000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: 'ff0000'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------    
+    ledBonusLower1: 'ffff00'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: 'ffff00'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: 'ffff00'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: 'ffff00'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: 'ffff00'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: 'ffff00'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: 'ffff00'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: 'ffff00'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: 'ffff00'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: 'ffff00'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: 'ffff00'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: 'ffff00'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: 'ffff00'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: 'ffff00'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: 'ffff00'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# GREEN CHASE
+# ----------------------
+  lights:
+    # ----------------------    
+    ledBonusLower1: '00ff00'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '00ff00'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '00ff00'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '00ff00'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '00ff00'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '00ff00'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '00ff00'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '00ff00'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '00ff00'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '00ff00'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '00ff00'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '00ff00'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '00ff00'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '00ff00'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '00ff00'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# CYAN CHASE
+# ----------------------
+  lights:
+    # ----------------------    
+    ledBonusLower1: '00ffff'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '00ffff'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '00ffff'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '00ffff'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '00ffff'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '00ffff'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '00ffff'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '00ffff'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '00ffff'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '00ffff'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '00ffff'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '00ffff'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '00ffff'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '00ffff'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '00ffff'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# BLUE CHASE
+# ----------------------
+  lights:
+    # ----------------------    
+    ledBonusLower1: '0000ff'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '0000ff'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '0000ff'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '0000ff'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '0000ff'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '0000ff'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '0000ff'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '0000ff'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '0000ff'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '0000ff'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '0000ff'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '0000ff'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '0000ff'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '0000ff'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '0000ff'
+    # ----------------------
+- time: "+1"
+
+# ----------------------
+# MAGENTA CHASE
+# ----------------------
+  lights:
+    # ----------------------    
+    ledBonusLower1: 'ff00ff'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: 'ff00ff'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: 'ff00ff'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: 'ff00ff'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: 'ff00ff'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: 'ff00ff'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: 'ff00ff'
+    ledBonusLower4: '000000'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: 'ff00ff'
+    ledBonusLower9: '000000'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: 'ff00ff'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: 'ff00ff'
+    ledBonusLower5: '000000'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: 'ff00ff'
+    ledBonusLower10: '000000'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: 'ff00ff'
+    ledBonusSuper100E: '000000'
+    # ----------------------
+- time: "+1"
+
+  lights:
+    # ----------------------    
+    ledBonusLower1: '000000'
+    ledBonusLower2: '000000'
+    ledBonusLower3: '000000'
+    ledBonusLower4: '000000'
+    ledBonusLower5: 'ff00ff'
+    ledBonusLower6: '000000'
+    ledBonusLower7: '000000'
+    ledBonusLower8: '000000'
+    ledBonusLower9: '000000'
+    ledBonusLower10: 'ff00ff'
+    # ----------------------
+    ledBonusSuper100A: '000000'
+    ledBonusSuper100B: '000000'
+    ledBonusSuper100C: '000000'
+    ledBonusSuper100D: '000000'
+    ledBonusSuper100E: 'ff00ff'
+    # ----------------------
+- time: "+1"

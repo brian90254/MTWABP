@@ -1,0 +1,97 @@
+#config_version=6
+
+config:
+#- configJamesBondGeorgeLazenbyExtraBall.yaml
+##- configJamesBondGeorgeLazenbyShots.yaml
+- configJamesBondGeorgeLazenbySlides.yaml
+#- configJamesBondGeorgeLazenbyThumpers.yaml
+
+mode:
+  start_events:
+    - eventStartModeJamesBondGeorgeLazenby
+  stop_events:
+    - eventStopModeJamesBondGeorgeLazenby
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  #mode_modeJamesBondGeorgeLazenby_started:
+  mode_modeJamesBondGeorgeLazenby_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlideJamesBondGeorgeLazenbyBase
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeJamesBondStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersJamesBondGeorgeLazenby|1000ms
+    - eventResetBonusJamesBondGeorgeLazenby|1000ms
+
+  # ---------------------
+  # EVENT::RESET::MULTIPLIERS
+  # ---------------------
+  eventResetMultipliersJamesBond:
+    - eventResetMultipliersJamesBondGeorgeLazenby
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  mode_modeJamesBondGeorgeLazenby_started:
+    nameMoon:
+      string: "GEORGE LAZENBY"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersJamesBondGeorgeLazenby:
+  #eventResetBonusJamesBondGeorgeLazenby:
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusMatrix:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusRows:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusColumns:
+      int: 0
+      action: set
+    # -------------------------
+    
+  #eventResetMultipliersJamesBondGeorgeLazenby:
+  eventResetBonusJamesBondGeorgeLazenby:
+    # -------------------------
+    # RESET BONUS SUPER COLOSSAL
+    bonusSuper:
+      int: 0
+      action: set
+    # -------------------------
+    bonusColossal:
+      int: 0
+      action: set
+    # -------------------------
+
+    ## -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set

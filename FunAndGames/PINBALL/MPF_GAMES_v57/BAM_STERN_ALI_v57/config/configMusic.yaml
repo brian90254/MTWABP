@@ -1,0 +1,274 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:  
+# ---------------------
+# SOUNDS::MUSIC::ATTRACT
+# ---------------------
+  musicJupiterOneAttract:
+    file: JupiterCrush_Track_1_JupiterOne.wav
+    track: music
+    volume: 0.5
+    mode_end_action: stop
+    
+  musicEuropaAttract:
+    file: JupiterCrush_Track_2_Europa.wav
+    track: music
+    volume: 0.5
+    mode_end_action: stop
+    
+  musicGanymedeAttract:
+    file: JupiterCrush_Track_3_Ganymede.wav
+    track: music
+    volume: 0.5
+    mode_end_action: stop
+    
+  musicCallistoAttract:
+    file: JupiterCrush_Track_4_Callisto.wav
+    track: music
+    volume: 0.5
+    mode_end_action: stop
+
+# ---------------------
+# SOUNDS::MUSIC::STERN MAGIC
+# ---------------------
+  musicSternAli001:
+    file: SternAli_Loop_1_Sweet.wav
+    track: music
+    volume: 0.15
+    mode_end_action: stop
+    
+  musicSternAli002:
+    file: SternAli_Loop_2_Shield.wav
+    track: music
+    volume: 0.45
+    mode_end_action: stop
+    
+  musicSternAli003:
+    file: SternAli_Loop_3_Pressure.wav
+    track: music
+    volume: 0.2
+    mode_end_action: stop
+    
+  musicSternAli004:
+    file: SternAli_Loop_4_Space.wav
+    track: music
+    volume: 0.5
+    mode_end_action: stop
+    
+  musicSternAli005:
+    file: SternAli_Loop_5_Son.wav
+    track: music
+    volume: 0.45
+    mode_end_action: stop
+    
+  musicSternAli006:
+    file: SternAli_Loop_6_Gonzagues.wav
+    track: music
+    volume: 0.45
+    mode_end_action: stop
+    
+  musicSternAli007:
+    file: SternAli_Loop_7_Obsbertis.wav
+    track: music
+    volume: 0.2
+    mode_end_action: stop
+
+# ---------------------
+# SOUNDS::MUSIC::JUPITER ONE
+# ---------------------
+  musicJupiterOne001:
+    file: JupiterOne_Loop_1_Sweet.wav
+    track: music
+    volume: 0.15
+    mode_end_action: stop
+    
+  musicJupiterOne002:
+    file: JupiterOne_Loop_2_Shield.wav
+    track: music
+    volume: 0.45
+    mode_end_action: stop
+    
+  musicJupiterOne003:
+    file: JupiterOne_Loop_3_Pressure.wav
+    track: music
+    volume: 0.2
+    mode_end_action: stop
+    
+  musicJupiterOne004:
+    file: JupiterOne_Loop_4_Space.wav
+    track: music
+    volume: 0.5
+    mode_end_action: stop
+    
+  musicJupiterOne005:
+    file: JupiterOne_Loop_5_Son.wav
+    track: music
+    volume: 0.45
+    mode_end_action: stop
+    
+  musicJupiterOne006:
+    file: JupiterOne_Loop_6_Gonzagues.wav
+    track: music
+    volume: 0.45
+    mode_end_action: stop
+    
+  musicJupiterOne007:
+    file: JupiterOne_Loop_7_Obsbertis.wav
+    track: music
+    volume: 0.2
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::EUROPA
+# ---------------------
+  musicEuropa001:
+    file: Europa_Loop_1_Arcanes.wav
+    track: music
+    volume: 0.15
+    mode_end_action: stop
+    
+  musicEuropa002:
+    file: Europa_Loop_2_HardTrap.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+  musicEuropa003:
+    file: Europa_Loop_3_Interstellar.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+  musicEuropa004:
+    file: Europa_Loop_4_Tokyo.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+  musicEuropa005:
+    file: Europa_Loop_5_SpaceMelody.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+  musicEuropa006:
+    file: Europa_Loop_6_ShiraSynth.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+  musicEuropa007:
+    file: Europa_Loop_7_WavyRhodes.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::GANYMEDE
+# ---------------------
+  musicGanymede001:
+    file: Ganymede_Loop_1_RetroGame.wav
+    track: music
+    volume: 0.15
+    mode_end_action: stop
+    
+  musicGanymede002:
+    file: Ganymede_Loop_2_GangstaBells.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+  musicGanymede003:
+    file: Ganymede_Loop_3_RetroDice.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+  musicGanymede004:
+    file: Ganymede_Loop_4_SquareLead.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+  musicGanymede005:
+    file: Ganymede_Loop_5_SynthBass.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+  musicGanymede006:
+    file: Ganymede_Loop_6_Organized.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+  musicGanymede007:
+    file: Ganymede_Loop_7_LikeaStar.wav
+    track: music
+    volume: 0.40
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::CALLISTO
+# ---------------------
+  musicCallisto001:
+    file: Callisto_Loop_1_PowerUnsolvable.wav
+    track: music
+    volume: 0.15
+    mode_end_action: stop
+    
+  musicCallisto002:
+    file: Callisto_Loop_2_SynthCriz.wav
+    track: music
+    volume: 0.15
+    mode_end_action: stop
+    
+  musicCallisto003:
+    file: Callisto_Loop_3_HxcBass.wav
+    track: music
+    volume: 0.15
+    mode_end_action: stop
+    
+  musicCallisto004:
+    file: Callisto_Loop_4_Ukan8bit.wav
+    track: music
+    volume: 0.15
+    mode_end_action: stop
+    
+  musicCallisto005:
+    file: Callisto_Loop_5_Leese8bit.wav
+    track: music
+    volume: 0.15
+    mode_end_action: stop
+    
+  musicCallisto006:
+    file: Callisto_Loop_6_JapaneseTrap.wav
+    track: music
+    volume: 0.15
+    mode_end_action: stop
+    
+  musicCallisto007:
+    file: Callisto_Loop_7_AdArp.wav
+    track: music
+    volume: 0.15
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      musicJupiterOneAttract
+      musicEuropaAttract
+      musicGanymedeAttract
+      musicCallistoAttract
+      
+      

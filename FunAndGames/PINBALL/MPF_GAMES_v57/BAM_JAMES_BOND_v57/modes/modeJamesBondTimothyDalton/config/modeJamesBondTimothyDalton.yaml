@@ -1,0 +1,98 @@
+#config_version=6
+
+config:
+#- configJamesBondTimothyDaltonExtraBall.yaml
+##- configJamesBondTimothyDaltonShots.yaml
+- configJamesBondTimothyDaltonSlides.yaml
+#- configJamesBondTimothyDaltonThumpers.yaml
+
+mode:
+  start_events:
+    - eventStartModeJamesBondTimothyDalton
+  stop_events:
+    - eventStopModeJamesBondTimothyDalton
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  #mode_modeJamesBondTimothyDalton_started:
+  mode_modeJamesBondTimothyDalton_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlideJamesBondTimothyDaltonBase
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeJamesBondStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersJamesBondTimothyDalton|1000ms
+    - eventResetBonusJamesBondTimothyDalton|1000ms
+
+  # ---------------------
+  # EVENT::RESET::MULTIPLIERS
+  # ---------------------
+  eventResetMultipliersJamesBond:
+    - eventResetMultipliersJamesBondTimothyDalton
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  mode_modeJamesBondTimothyDalton_started:
+    nameMoon:
+      #string: "ROGER MOORE"
+      string: "TIMOTHY DALTON"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersJamesBondTimothyDalton:
+  #eventResetBonusJamesBondTimothyDalton:
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusMatrix:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusRows:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusColumns:
+      int: 0
+      action: set
+    # -------------------------
+    
+  #eventResetMultipliersJamesBondTimothyDalton:
+  eventResetBonusJamesBondTimothyDalton:
+    # -------------------------
+    # RESET BONUS SUPER COLOSSAL
+    bonusSuper:
+      int: 0
+      action: set
+    # -------------------------
+    bonusColossal:
+      int: 0
+      action: set
+    # -------------------------
+
+    ## -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set

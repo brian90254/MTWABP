@@ -1,0 +1,68 @@
+#config_version=6
+
+config:
+- configPlayboy1970Slides.yaml
+
+mode:
+  start_events:
+    - eventStartModePlayboy1970
+  stop_events:
+    - eventStopModePlayboy1970
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modePlayboy1970_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlidePlayboy1970Base
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModePlayboyStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersPlayboy1970|1000ms
+    #- eventCompleteBonusOnes
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  #mode_modeVoltanMercury_started:
+  mode_modePlayboy1970_started:
+    nameMoon:
+      string: "PLAYBOY"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersPlayboy1970:
+    # -------------------------
+    # RESET BONUS COUNT
+    totalBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET TOTAL BONUS SCORE
+    # (TOTAL BONUS X BONUS MULTIPLIER)
+    scoreBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set

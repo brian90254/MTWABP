@@ -1,0 +1,46 @@
+#show_version=6
+
+# *************************
+# BACKGLASS ANIMATION::ALL LETTERS
+# *************************
+
+# -----------------------------
+# HIGH SCORES
+# -----------------------------
+- time: 0
+  events:
+    eventShowAttractBackglass1A
+
+- time: '+1'
+  events:
+    eventShowAttractBackglass1B
+    
+- time: '+1'
+  events:
+    eventShowAttractBackglass1C
+    
+- time: '+1'
+  events:
+    eventShowAttractBackglass1D
+    
+# -----------------------------
+# LAST GAME
+# -----------------------------
+- time: '+1'
+  events:
+    eventShowAttractBackglass2A
+
+- time: '+1'
+  events:
+    eventShowAttractBackglass2B
+    
+- time: '+1'
+  events:
+    eventShowAttractBackglass2C
+    
+- time: '+1'
+  events:
+    eventShowAttractBackglass2D
+
+- time: '+1'
+

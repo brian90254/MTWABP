@@ -1,0 +1,135 @@
+#show_version=6
+
+- time: 0
+
+#-------------
+# RED
+#-------------
+  shows:
+    chaseNineLedTwoColor:
+      loops: 0
+      speed: 9
+      show_tokens:
+        color1: 'ff00ff'
+        color2: 'ff0000'
+        led1: ledLane7
+        led2: ledTarget2
+        led3: ledTarget5
+        led4: ledTarget8
+        led5: ledLane3
+        led6: ledLane1
+        led7: ledLane4
+        led8: ledLane6
+        led9: ledLane9
+        
+- time: "+1"
+
+#-------------
+# YELLOW
+#-------------
+  shows:
+    chaseNineLedTwoColor:
+      loops: 0
+      speed: 9
+      show_tokens:
+        color1: 'ff0000'
+        color2: 'ffff00'
+        led1: ledLane7
+        led2: ledTarget2
+        led3: ledTarget5
+        led4: ledTarget8
+        led5: ledLane3
+        led6: ledLane1
+        led7: ledLane4
+        led8: ledLane6
+        led9: ledLane9
+        
+- time: "+1"
+
+#-------------
+# GREEN
+#-------------
+  shows:
+    chaseNineLedTwoColor:
+      loops: 0
+      speed: 9
+      show_tokens:
+        color1: 'ffff00'
+        color2: '00ff00'
+        led1: ledLane7
+        led2: ledTarget2
+        led3: ledTarget5
+        led4: ledTarget8
+        led5: ledLane3
+        led6: ledLane1
+        led7: ledLane4
+        led8: ledLane6
+        led9: ledLane9
+        
+- time: "+1"
+
+#-------------
+# CYAN
+#-------------
+  shows:
+    chaseNineLedTwoColor:
+      loops: 0
+      speed: 9
+      show_tokens:
+        color1: '00ff00'
+        color2: '00ffff'
+        led1: ledLane7
+        led2: ledTarget2
+        led3: ledTarget5
+        led4: ledTarget8
+        led5: ledLane3
+        led6: ledLane1
+        led7: ledLane4
+        led8: ledLane6
+        led9: ledLane9
+        
+- time: "+1"
+
+#-------------
+# BLUE
+#-------------
+  shows:
+    chaseNineLedTwoColor:
+      loops: 0
+      speed: 9
+      show_tokens:
+        color1: '00ffff'
+        color2: '0000ff'
+        led1: ledLane7
+        led2: ledTarget2
+        led3: ledTarget5
+        led4: ledTarget8
+        led5: ledLane3
+        led6: ledLane1
+        led7: ledLane4
+        led8: ledLane6
+        led9: ledLane9
+        
+- time: "+1"
+
+#-------------
+# MAGENTA
+#-------------
+  shows:
+    chaseNineLedTwoColor:
+      loops: 0
+      speed: 9
+      show_tokens:
+        color1: '0000ff'
+        color2: 'ff00ff'
+        led1: ledLane7
+        led2: ledTarget2
+        led3: ledTarget5
+        led4: ledTarget8
+        led5: ledLane3
+        led6: ledLane1
+        led7: ledLane4
+        led8: ledLane6
+        led9: ledLane9
+        
+- time: "+1"

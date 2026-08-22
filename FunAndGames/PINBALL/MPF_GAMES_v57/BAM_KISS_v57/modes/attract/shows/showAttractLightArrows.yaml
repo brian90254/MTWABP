@@ -1,0 +1,47 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - KISS
+
+- time: 0
+
+  lights:
+    # ----------------------  
+    ledArrowsLeft1: 'ff0000'
+    ledArrowsLeft2: '000000'
+    ledArrowsLeft3: 'ffff00'
+    ledArrowsLeft4: '000000'
+    # ----------------------
+    ledArrowsBottom1: 'ffff00'
+    ledArrowsBottom2: '000000'
+    ledArrowsBottom3: 'ffff00'
+    ledArrowsBottom4: '000000'
+    # ----------------------
+    ledArrowsRight1: 'ffff00'
+    ledArrowsRight2: '000000'
+    ledArrowsRight3: 'ffff00'
+    ledArrowsRight4: '000000'
+    # ----------------------
+    
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledArrowsLeft1: '000000'
+    ledArrowsLeft2: '00ffff'
+    ledArrowsLeft3: '000000'
+    ledArrowsLeft4: '00ff00'
+    # ----------------------
+    ledArrowsBottom1: '000000'
+    ledArrowsBottom2: 'ffff00'
+    ledArrowsBottom3: '000000'
+    ledArrowsBottom4: 'ffff00'
+    # ----------------------
+    ledArrowsRight1: '000000'
+    ledArrowsRight2: 'ffff00'
+    ledArrowsRight3: '000000'
+    ledArrowsRight4: 'ffff00'
+    # ----------------------
+    
+- time: "+1"

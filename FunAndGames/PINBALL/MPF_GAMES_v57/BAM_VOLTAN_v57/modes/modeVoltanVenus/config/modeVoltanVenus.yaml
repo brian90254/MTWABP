@@ -1,0 +1,97 @@
+#config_version=6
+
+config:
+- configVoltanVenusSlides.yaml
+- configVoltanVenusShots.yaml
+- configVoltanVenusThumpers.yaml
+- configVoltanVenusMultiball.yaml
+
+mode:
+  start_events: eventStartModeVoltanVenus
+  stop_events:
+    - eventStopModeVoltanVenus
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeVoltanVenus_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlideVoltanVenusBase
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeFlashGordonStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersVoltanVenus|1000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  mode_modeVoltanVenus_started:
+    nameMoon:
+      #string: "V O L T A N"
+      string: "VENUS"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersVoltanVenus:
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusUpper:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusMiniUpper:
+      #int: 50000
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT LOWER
+    bonusLower:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusSuperLower:
+      #int: 100000
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS COUNT
+    totalBonus:
+      #int: 0
+      int: 1
+      action: set
+    # -------------------------
+    # RESET TOTAL BONUS SCORE
+    # (TOTAL BONUS X BONUS MULTIPLIER)
+    scoreBonus:
+      int: 0
+      action: set
+    # -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 2
+      action: set
+    # -------------------------
+    # BONUS MULTIPLIER
+    bonus_multiplier:
+      int: 2
+      action: set

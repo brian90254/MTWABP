@@ -1,0 +1,97 @@
+#config_version=6
+
+config:
+- configKissPeterCrissExtraBall.yaml
+#- configKissPeterCrissShots.yaml
+- configKissPeterCrissSlides.yaml
+- configKissPeterCrissThumpers.yaml
+
+mode:
+  start_events:
+    - eventStartModeKissPeterCriss
+  stop_events:
+    - eventStopModeKissPeterCriss
+    - ball_ending
+    
+  priority: 2000
+  
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  #mode_modeKissPeterCriss_started:
+  mode_modeKissPeterCriss_started:
+    # -----------------------------------
+    # SLIDES
+    # -----------------------------------
+    - eventShowSlideKissPeterCrissBase
+    # -----------------------------------
+    # MUSIC
+    # -----------------------------------
+    - eventPlaylistModeKissStart
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersKissPeterCriss|1000ms
+    - eventResetBonusKissPeterCriss|1000ms
+
+  # ---------------------
+  # EVENT::RESET::MULTIPLIERS
+  # ---------------------
+  eventResetMultipliersKiss:
+    - eventResetMultipliersKissPeterCriss
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # BALL STARTING
+  # ---------------
+  mode_modeKissPeterCriss_started:
+    nameMoon:
+      string: "PETER CRISS"
+      action: set
+  # ---------------
+  # INITIALIZE BONUS COUNT
+  # ---------------
+  eventResetMultipliersKissPeterCriss:
+  #eventResetBonusKissPeterCriss:
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusMatrix:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusRows:
+      int: 0
+      action: set
+    # -------------------------
+    # RESET BONUS MATRIX
+    bonusColumns:
+      int: 0
+      action: set
+    # -------------------------
+    
+  #eventResetMultipliersKissPeterCriss:
+  eventResetBonusKissPeterCriss:
+    # -------------------------
+    # RESET BONUS SUPER COLOSSAL
+    bonusSuper:
+      int: 0
+      action: set
+    # -------------------------
+    bonusColossal:
+      int: 0
+      action: set
+    # -------------------------
+
+    ## -------------------------
+    # PLAYFIELD MULTIPLIER
+    multiPlayfield:
+      int: 1
+      action: set

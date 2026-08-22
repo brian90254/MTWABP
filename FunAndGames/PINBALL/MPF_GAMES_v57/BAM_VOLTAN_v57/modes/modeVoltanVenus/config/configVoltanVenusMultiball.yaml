@@ -1,0 +1,136 @@
+#config_version=6
+
+# VOLTAN
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeVoltanVenus_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballVenusUpperKickerLeft
+    - eventEnableMultiballVenusUpperKickerRight
+    - eventEnableMultiballVenusUpperKickerBoth
+    # ----------------------------------
+    # ENABLE LOCK
+    - eventEnableMultiballVenusLockSaucerTopRight
+    - eventEnableMultiballVenusLockSaucerTopLeft
+    # ----------------------------------
+    
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::RIGHT
+  # ---------------------
+  # RIGHT::TWO BALL
+  multiball_lock_multiballVenusLockSaucerTopRight_full.1{device.multiball_locks.multiballVenusLockSaucerTopLeft.locked_balls==0}:
+    - eventStartMultiballVenusUpperKickerRight|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballVenusLockSaucerTopRight
+    - eventDisableMultiballVenusLockSaucerTopLeft
+  # ---------------------
+  # RIGHT::THREE BALL
+  multiball_lock_multiballVenusLockSaucerTopRight_full.2{device.multiball_locks.multiballVenusLockSaucerTopLeft.locked_balls==1}:
+    - eventStartMultiballVenusUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballVenusLockSaucerTopRight|3500ms
+    - eventDisableMultiballVenusLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # START MULTIBALL::UPPER KICKER::LEFT
+  # ---------------------
+  # LEFT::TWO BALL
+  multiball_lock_multiballVenusLockSaucerTopLeft_full.1{device.multiball_locks.multiballVenusLockSaucerTopRight.locked_balls==0}:
+    - eventStartMultiballVenusUpperKickerLeft|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballVenusLockSaucerTopRight
+    - eventDisableMultiballVenusLockSaucerTopLeft
+  # ---------------------
+  # LEFT::THREE BALL
+  multiball_lock_multiballVenusLockSaucerTopLeft_full.2{device.multiball_locks.multiballVenusLockSaucerTopRight.locked_balls==1}:
+    - eventStartMultiballVenusUpperKickerBoth|3000ms
+    # DISABLE LOCKS DURING MULTIBALL
+    - eventDisableMultiballVenusLockSaucerTopRight|3500ms
+    - eventDisableMultiballVenusLockSaucerTopLeft|3500ms
+
+  # ---------------------
+  # ENDING MULTIBALL
+  # ---------------------
+  # BOTH
+  multiball_multiballVenusUpperKickerBoth_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballVenusLockSaucerTopRight
+    - eventEnableMultiballVenusLockSaucerTopLeft
+  # LEFT
+  multiball_multiballVenusUpperKickerLeft_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballVenusLockSaucerTopRight
+    - eventEnableMultiballVenusLockSaucerTopLeft
+  # RIGHT
+  multiball_multiballVenusUpperKickerRight_ended:
+    # ENABLE LOCK
+    - eventEnableMultiballVenusLockSaucerTopRight
+    - eventEnableMultiballVenusLockSaucerTopLeft
+
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballVenusLockSaucerTopRight:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopRight
+    enable_events: eventEnableMultiballVenusLockSaucerTopRight
+    disable_events: eventDisableMultiballVenusLockSaucerTopRight
+    locked_ball_counting_strategy: physical_only
+
+  multiballVenusLockSaucerTopLeft:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTopLeft
+    enable_events: eventEnableMultiballVenusLockSaucerTopLeft
+    disable_events: eventDisableMultiballVenusLockSaucerTopLeft
+    locked_ball_counting_strategy: physical_only
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballVenusUpperKickerLeft:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballVenusUpperKickerLeft
+    disable_events: eventDisableMultiballVenusUpperKickerLeft
+    start_events: eventStartMultiballVenusUpperKickerLeft
+    stop_events: eventStopMultiballVenusUpperKickerLeft
+    
+  multiballVenusUpperKickerRight:
+    ball_locks:
+      - ballDeviceSaucerTopRight
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballVenusUpperKickerRight
+    disable_events: eventDisableMultiballVenusUpperKickerRight
+    start_events: eventStartMultiballVenusUpperKickerRight
+    stop_events: eventStopMultiballVenusUpperKickerRight
+    
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::BOTH
+  # ----------------------------
+  multiballVenusUpperKickerBoth:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+      - ballDeviceSaucerTopRight
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballVenusUpperKickerBoth
+    disable_events: eventDisableMultiballVenusUpperKickerBoth
+    start_events: eventStartMultiballVenusUpperKickerBoth
+    stop_events: eventStopMultiballVenusUpperKickerBoth
+    

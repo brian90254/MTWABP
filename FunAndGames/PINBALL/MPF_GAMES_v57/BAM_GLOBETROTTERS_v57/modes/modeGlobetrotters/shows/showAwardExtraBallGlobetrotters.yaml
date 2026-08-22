@@ -1,0 +1,64 @@
+#show_version=6
+
+- time: 0
+  lights:
+    # --------------------------
+    ledExtraBall1A: 'ff00ff'
+    ledExtraBall1B: '880088'
+    ledExtraBall1C: '880088'
+    # --------------------------
+
+- time: 1
+  lights:
+    # --------------------------
+    ledExtraBall1A: '880088'
+    ledExtraBall1B: 'ff00ff'
+    ledExtraBall1C: '880088'
+    # --------------------------
+
+- time: 2
+  lights:
+    # --------------------------
+    ledExtraBall1A: '880088'
+    ledExtraBall1B: '880088'
+    ledExtraBall1C: 'ff00ff'
+    # --------------------------
+    
+- time: 3
+
+
+#- time: 0
+#  lights:
+#    # --------------------------
+#    l_shoot_again_1_1: 'ff0080'
+#    l_shoot_again_1_2: '800040'
+#    l_shoot_again_1_3: 'c00060'
+#    l_shoot_again_1_4: 'ff0080'
+#    l_shoot_again_1_5: '800040'
+#    l_shoot_again_1_6: 'c00060'
+#    # --------------------------
+#
+#- time: 1
+#  lights:
+#    # --------------------------
+#    l_shoot_again_1_2: 'ff0080'
+#    l_shoot_again_1_3: '800040'
+#    l_shoot_again_1_4: 'c00060'
+#    l_shoot_again_1_5: 'ff0080'
+#    l_shoot_again_1_6: '800040'
+#    l_shoot_again_1_1: 'c00060'
+#    # --------------------------
+#
+#- time: 2
+#  lights:
+#    # --------------------------
+#    l_shoot_again_1_3: 'ff0080'
+#    l_shoot_again_1_4: '800040'
+#    l_shoot_again_1_5: 'c00060'
+#    l_shoot_again_1_6: 'ff0080'
+#    l_shoot_again_1_1: '800040'
+#    l_shoot_again_1_2: 'c00060'
+#    # --------------------------
+#    
+#- time: '+1'
+

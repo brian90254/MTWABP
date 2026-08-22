@@ -1,0 +1,204 @@
+#config_version=6
+
+slides:
+  # ----------------------
+  # INTRO BONUS
+  # ----------------------
+  slideCollectEndBallBonusTitle:
+    widgets:
+    # -------------------
+    # TITLE BONUS::HEADER
+    # -------------------
+      # -------------------------
+      # TITLE BONUS::HEADER::INNER
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTotemHeader
+      y: middle + 25
+      x: middle
+      z: 40
+      color: colorFontCollectBonusTitleTotemHeaderInner
+      # -------------------------
+      # TITLE BONUS::HEADER::OUTER::ONE
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTotemHeader
+      y: middle + 26
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusTitleTotemHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTotemHeader
+      y: middle + 24
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusTitleTotemHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTotemHeader
+      y: middle + 26
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusTitleTotemHeaderOuter1
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTotemHeader
+      y: middle + 24
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusTitleTotemHeaderOuter1
+      # -------------------------
+      # TITLE BONUS::HEADER::OUTER::TWO
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTotemHeader
+      y: middle + 27
+      x: middle + 2
+      z: 20
+      color: colorFontCollectBonusTitleTotemHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTotemHeader
+      y: middle + 23
+      x: middle + 2
+      z: 20
+      color: colorFontCollectBonusTitleTotemHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTotemHeader
+      y: middle + 27
+      x: middle - 2
+      z: 20
+      color: colorFontCollectBonusTitleTotemHeaderOuter2
+      # -------------------------
+    - type: text
+      text: COLLECT
+      style: fontCollectBonusTitleTotemHeader
+      y: middle + 23
+      x: middle - 2
+      z: 20
+      color: colorFontCollectBonusTitleTotemHeaderOuter2
+
+    # -------------------
+    # TITLE BONUS::MIDDLE
+    # -------------------
+      # -------------------------
+      # TITLE BONUS::MIDDLE::INNER
+      # -------------------------
+    - type: text
+      text: BONUS
+      #style: fontCollectBonusTitleTotemMiddle
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTotemHeader
+      #y: middle + 3
+      #x: middle
+      y: middle - 25
+      x: middle
+      z: 40
+      #font_size: 32
+      #color: colorFontCollectBonusTitleTotemMiddleInner
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTotemHeaderInner
+      # -------------------------
+      # TITLE BONUS::MIDDLE::OUTER::ONE
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTotemHeader
+      y: middle - 26
+      x: middle + 1
+      z: 30
+      #color: colorFontCollectBonusTitleTotemMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTotemHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTotemHeader
+      y: middle - 24
+      x: middle + 1
+      z: 30
+      #color: colorFontCollectBonusTitleTotemMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTotemHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTotemHeader
+      y: middle - 26
+      x: middle - 1
+      z: 30
+      #color: colorFontCollectBonusTitleTotemMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTotemHeaderOuter1
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTotemHeader
+      y: middle - 24
+      x: middle - 1
+      z: 30
+      #color: colorFontCollectBonusTitleTotemMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTotemHeaderOuter1
+      # -------------------------
+      # -------------------------
+      # TITLE BONUS::MIDDLE::OUTER::TWO
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTotemHeader
+      y: middle - 27
+      x: middle + 2
+      z: 20
+      #color: colorFontCollectBonusTitleTotemMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTotemHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTotemHeader
+      y: middle - 23
+      x: middle + 2
+      z: 20
+      #color: colorFontCollectBonusTitleTotemMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTotemHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTotemHeader
+      y: middle - 27
+      x: middle - 2
+      z: 20
+      #color: colorFontCollectBonusTitleTotemMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTotemHeaderOuter2
+      # -------------------------
+    - type: text
+      text: BONUS
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      style: fontCollectBonusTitleTotemHeader
+      y: middle - 23
+      x: middle - 2
+      z: 20
+      #color: colorFontCollectBonusTitleTotemMiddleOuter1
+      # DEVIATING - THIS IS HEADER STYLE TO MATCH
+      color: colorFontCollectBonusTitleTotemHeaderOuter2
+      # -------------------------

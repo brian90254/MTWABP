@@ -1,0 +1,174 @@
+#show_version=6
+
+- time: 0
+
+#-------------
+# CYAN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      key: keyLedOutlaneLeft
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledOutlaneLeft1
+        led2: ledOutlaneLeft2
+        led3: ledOutlaneLeft3
+        led4: ledOutlaneLeft4
+        led5: ledOutlaneLeft5
+
+- time: "+3"
+
+#-------------
+# BLUE
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      key: keyLedOutlaneLeft
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledOutlaneLeft1
+        led2: ledOutlaneLeft2
+        led3: ledOutlaneLeft3
+        led4: ledOutlaneLeft4
+        led5: ledOutlaneLeft5
+
+- time: "+3"
+
+#-------------
+# MAGENTA
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      key: keyLedOutlaneLeft
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledOutlaneLeft1
+        led2: ledOutlaneLeft2
+        led3: ledOutlaneLeft3
+        led4: ledOutlaneLeft4
+        led5: ledOutlaneLeft5
+
+- time: "+3"
+
+#-------------
+# RED
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      key: keyLedOutlaneLeft
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledOutlaneLeft1
+        led2: ledOutlaneLeft2
+        led3: ledOutlaneLeft3
+        led4: ledOutlaneLeft4
+        led5: ledOutlaneLeft5
+
+- time: "+3"
+
+#-------------
+# YELLOW
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      key: keyLedOutlaneLeft
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledOutlaneLeft1
+        led2: ledOutlaneLeft2
+        led3: ledOutlaneLeft3
+        led4: ledOutlaneLeft4
+        led5: ledOutlaneLeft5
+
+- time: "+3"
+
+#-------------
+# GREEN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      key: keyLedOutlaneLeft
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledOutlaneLeft1
+        led2: ledOutlaneLeft2
+        led3: ledOutlaneLeft3
+        led4: ledOutlaneLeft4
+        led5: ledOutlaneLeft5
+
+- time: "+3"
+
+#-------------
+# CYAN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      key: keyLedOutlaneLeft
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledOutlaneLeft1
+        led2: ledOutlaneLeft2
+        led3: ledOutlaneLeft3
+        led4: ledOutlaneLeft4
+        led5: ledOutlaneLeft5
+
+- time: "+3"
+
+#-------------
+# BLUE
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      key: keyLedOutlaneLeft
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledOutlaneLeft1
+        led2: ledOutlaneLeft2
+        led3: ledOutlaneLeft3
+        led4: ledOutlaneLeft4
+        led5: ledOutlaneLeft5
+
+- time: "+3"
+
+#-------------
+# MAGENTA
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 4
+      key: keyLedOutlaneLeft
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledOutlaneLeft1
+        led2: ledOutlaneLeft2
+        led3: ledOutlaneLeft3
+        led4: ledOutlaneLeft4
+        led5: ledOutlaneLeft5
+
+- time: "+3"

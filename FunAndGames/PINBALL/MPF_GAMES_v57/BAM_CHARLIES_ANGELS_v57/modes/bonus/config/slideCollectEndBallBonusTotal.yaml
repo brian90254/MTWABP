@@ -1,0 +1,263 @@
+#config_version=6
+
+slides:
+  # ----------------------
+  # TOTAL BONUS
+  # ----------------------
+  slideCollectEndBallBonusTotal:
+    widgets:
+    # -------------------
+    # TOTAL BONUS::HEADER
+    # -------------------
+      # -------------------------
+      # TOTAL BONUS::HEADER::INNER
+      # -------------------------
+    - type: text
+      text: TOTAL
+      style: fontCollectBonusCharliesAngelsHeader
+      y: top - 17
+      x: middle
+      z: 40
+      color: colorFontCollectBonusCharliesAngelsHeaderInner
+      # -------------------------
+      # TOTAL BONUS::HEADER::OUTER ONE
+      # -------------------------
+    - type: text
+      text: TOTAL
+      style: fontCollectBonusCharliesAngelsHeader
+      y: top - 18
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusCharliesAngelsHeaderOuter1
+      # -------------------------
+    - type: text
+      text: TOTAL
+      style: fontCollectBonusCharliesAngelsHeader
+      y: top - 18
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusCharliesAngelsHeaderOuter1
+      # -------------------------
+    - type: text
+      text: TOTAL
+      style: fontCollectBonusCharliesAngelsHeader
+      y: top - 16
+      x: middle + 1
+      z: 30
+      color: colorFontCollectBonusCharliesAngelsHeaderOuter1
+      # -------------------------
+    - type: text
+      text: TOTAL
+      style: fontCollectBonusCharliesAngelsHeader
+      y: top - 16
+      x: middle - 1
+      z: 30
+      color: colorFontCollectBonusCharliesAngelsHeaderOuter1
+      # -------------------------
+      # TOTAL BONUS::HEADER::OUTER TWO
+      # -------------------------
+    - type: text
+      text: TOTAL
+      style: fontCollectBonusCharliesAngelsHeader
+      y: top - 19
+      x: middle + 2
+      z: 30
+      color: colorFontCollectBonusCharliesAngelsHeaderOuter2
+      # -------------------------
+    - type: text
+      text: TOTAL
+      style: fontCollectBonusCharliesAngelsHeader
+      y: top - 19
+      x: middle - 2
+      z: 30
+      color: colorFontCollectBonusCharliesAngelsHeaderOuter2
+      # -------------------------
+    - type: text
+      text: TOTAL
+      style: fontCollectBonusCharliesAngelsHeader
+      y: top - 15
+      x: middle + 2
+      z: 30
+      color: colorFontCollectBonusCharliesAngelsHeaderOuter2
+      # -------------------------
+    - type: text
+      text: TOTAL
+      style: fontCollectBonusCharliesAngelsHeader
+      y: top - 15
+      x: middle - 2
+      z: 30
+      color: colorFontCollectBonusCharliesAngelsHeaderOuter2
+
+    # -------------------
+    # TOTAL BONUS::MIDDLE
+    # -------------------
+      # -------------------------
+      # TOTAL BONUS::MIDDLE::INNER
+      # -------------------------
+    - type: text
+      text: "(score)"
+      number_grouping: true
+      min_digits: 2
+      style: fontCollectBonusCharliesAngelsMiddle
+      y: middle - 3
+      x: middle
+      color: colorFontCollectBonusCharliesAngelsMiddleInner
+      # -------------------------
+      # TOTAL BONUS::MIDDLE::OUTER::ONE
+      # -------------------------
+    - type: text
+      text: "(score)"
+      number_grouping: true
+      min_digits: 2
+      style: fontCollectBonusCharliesAngelsMiddle
+      y: middle - 4
+      x: middle + 1
+      color: colorFontCollectBonusCharliesAngelsMiddleOuter1
+      # --------------------------
+    - type: text
+      text: "(score)"
+      number_grouping: true
+      min_digits: 2
+      style: fontCollectBonusCharliesAngelsMiddle
+      y: middle - 4
+      x: middle - 1
+      color: colorFontCollectBonusCharliesAngelsMiddleOuter1
+      # --------------------------
+    - type: text
+      text: "(score)"
+      number_grouping: true
+      min_digits: 2
+      style: fontCollectBonusCharliesAngelsMiddle
+      y: middle - 2
+      x: middle + 1
+      color: colorFontCollectBonusCharliesAngelsMiddleOuter1
+      # --------------------------
+    - type: text
+      text: "(score)"
+      number_grouping: true
+      min_digits: 2
+      style: fontCollectBonusCharliesAngelsMiddle
+      y: middle - 2
+      x: middle - 1
+      color: colorFontCollectBonusCharliesAngelsMiddleOuter1
+      # -------------------------
+      # TOTAL BONUS::MIDDLE::OUTER::TWO
+      # -------------------------
+    - type: text
+      text: "(score)"
+      number_grouping: true
+      min_digits: 2
+      style: fontCollectBonusCharliesAngelsMiddle
+      y: middle - 5
+      x: middle + 2
+      color: colorFontCollectBonusCharliesAngelsMiddleOuter2
+      # --------------------------
+    - type: text
+      text: "(score)"
+      number_grouping: true
+      min_digits: 2
+      style: fontCollectBonusCharliesAngelsMiddle
+      y: middle - 5
+      x: middle - 2
+      color: colorFontCollectBonusCharliesAngelsMiddleOuter2
+      # --------------------------
+    - type: text
+      text: "(score)"
+      number_grouping: true
+      min_digits: 2
+      style: fontCollectBonusCharliesAngelsMiddle
+      y: middle - 1
+      x: middle + 2
+      color: colorFontCollectBonusCharliesAngelsMiddleOuter2
+      # --------------------------
+    - type: text
+      text: "(score)"
+      number_grouping: true
+      min_digits: 2
+      style: fontCollectBonusCharliesAngelsMiddle
+      y: middle - 1
+      x: middle - 2
+      color: colorFontCollectBonusCharliesAngelsMiddleOuter2
+
+    # -------------------
+    # TOTAL BONUS::FOOTER
+    # -------------------
+      # -------------------------
+      # TOTAL BONUS::FOOTER::INNER
+      # -------------------------
+    - type: text
+      text: BONUS
+      style: fontCollectBonusCharliesAngelsFooter
+      anchor_y: bottom
+      y: bottom + 5
+      x: middle
+      color: colorFontCollectBonusCharliesAngelsFooterInner
+      # ----------------
+      # -------------------
+      # SCORE BONUS::FOOTER::OUTER::ONE
+      # -------------------
+    - type: text
+      text: BONUS
+      style: fontCollectBonusCharliesAngelsFooter
+      anchor_y: bottom
+      y: bottom + 4
+      x: middle + 1
+      color: colorFontCollectBonusCharliesAngelsFooterOuter1
+      # ----------------
+    - type: text
+      text: BONUS
+      style: fontCollectBonusCharliesAngelsFooter
+      anchor_y: bottom
+      y: bottom + 4
+      x: middle - 1
+      color: colorFontCollectBonusCharliesAngelsFooterOuter1
+      # ----------------
+    - type: text
+      text: BONUS
+      style: fontCollectBonusCharliesAngelsFooter
+      anchor_y: bottom
+      y: bottom + 6
+      x: middle + 1
+      color: colorFontCollectBonusCharliesAngelsFooterOuter1
+      # ----------------
+    - type: text
+      text: BONUS
+      style: fontCollectBonusCharliesAngelsFooter
+      anchor_y: bottom
+      y: bottom + 6
+      x: middle - 1
+      color: colorFontCollectBonusCharliesAngelsFooterOuter1
+      # -------------------
+      # SCORE BONUS::FOOTER::OUTER::TWO
+      # -------------------
+    - type: text
+      text: BONUS
+      style: fontCollectBonusCharliesAngelsFooter
+      anchor_y: bottom
+      y: bottom + 3
+      x: middle + 2
+      color: colorFontCollectBonusCharliesAngelsFooterOuter2
+      # ----------------
+    - type: text
+      text: BONUS
+      style: fontCollectBonusCharliesAngelsFooter
+      anchor_y: bottom
+      y: bottom + 3
+      x: middle - 2
+      color: colorFontCollectBonusCharliesAngelsFooterOuter2
+      # ----------------
+    - type: text
+      text: BONUS
+      style: fontCollectBonusCharliesAngelsFooter
+      anchor_y: bottom
+      y: bottom + 7
+      x: middle + 2
+      color: colorFontCollectBonusCharliesAngelsFooterOuter2
+      # ----------------
+    - type: text
+      text: BONUS
+      style: fontCollectBonusCharliesAngelsFooter
+      anchor_y: bottom
+      y: bottom + 7
+      x: middle - 2
+      color: colorFontCollectBonusCharliesAngelsFooterOuter2

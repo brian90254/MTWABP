@@ -1,0 +1,210 @@
+#config_version=6
+
+# FLASH GORDON ROTATE
+
+# *****************************
+# SHOTS
+# *****************************
+shots:
+    # -------------------
+    # SHOTS::ROTATE::DROP::TOP
+    # -------------------
+    shotRotateDropTop:
+        enable_events: eventEnableShotRotateDropTop
+        disable_events: eventDisableShotRotateDropTop
+        restart_events: eventRestartShotRotateDropTop
+        reset_events: eventResetShotRotateDropTop
+        hit_events: eventHitShotRotateDropTop
+        profile: spShotGroupRotateDropTop
+        
+    # -------------------
+    # SHOTS::DROP::TOP
+    # -------------------
+    shotRotateDropTop1:
+        switch: s_1_7
+        enable_events: eventEnableShotRotateDropTop1
+        disable_events: eventDisableShotRotateDropTop1
+        restart_events: eventRestartShotRotateDropTop1
+        reset_events: eventResetShotRotateDropTop1
+        profile: spShotRotateDropTop
+        show_tokens:
+            led: ledDropUpper1
+        
+    shotRotateDropTop2:
+        switch: s_1_9
+        enable_events: eventEnableShotRotateDropTop2
+        disable_events: eventDisableShotRotateDropTop2
+        restart_events: eventRestartShotRotateDropTop2
+        reset_events: eventResetShotRotateDropTop2
+        profile: spShotRotateDropTop
+        show_tokens:
+            led: ledDropUpper2
+        
+    shotRotateDropTop3:
+        switch: s_1_6
+        enable_events: eventEnableShotRotateDropTop3
+        disable_events: eventDisableShotRotateDropTop3
+        restart_events: eventRestartShotRotateDropTop3
+        reset_events: eventResetShotRotateDropTop3
+        profile: spShotRotateDropTop
+        show_tokens:
+            led: ledDropUpper3
+
+# *****************************      
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::ROTATE::DROP::TOP
+    # -----------------------------
+    spShotGroupRotateDropTop:
+        states:
+          - name: litShotRotateDropTopOne
+          - name: litShotRotateDropTopTwo
+          - name: litShotRotateDropTopThree
+        loop: true
+
+    # -----------------------------
+    # PROFILE::GLOBE::SAUCER::1
+    # -----------------------------
+    spShotRotateDropTop:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '008888'
+                color2: '00ffff'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: 'ff00ff'
+                color2: 'ff00ff'
+        loop: false
+
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::TARGET::PLAYER
+    # -------------------
+    shotGroupRotateDropTop:
+        shots:
+            - shotRotateDropTop1
+            - shotRotateDropTop2
+            - shotRotateDropTop3
+        #rotate_right_events: eventRotateRightShotGroupAchDropTop
+        enable_events:
+            - eventEnableShotGroupRotateDropTop
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupRotateDropTop
+        reset_events:
+            - eventResetShotGroupRotateDropTop
+        restart_events:
+            - eventRestartShotGroupRotateDropTop
+        
+# *****************************
+# EVENT::PLAYER
+# *****************************
+event_player:    
+  # -----------------------------------
+  # MODE SPECIFIC EVENTS
+  # -----------------------------------
+  mode_modeFlashGordon_started:
+    # RESET AWARD
+    - eventRestartShotRotateDropTop
+    # RESET GROUP
+    - eventRestartShotGroupRotateDropTop
+    # DISABLE INDIVIDUAL TARGETS
+    - eventDisableShotRotateDropTop1
+    - eventDisableShotRotateDropTop2
+    - eventDisableShotRotateDropTop3
+    # ENABLE FIRST DROP TARGET
+    - eventHitShotRotateDropTop|100ms
+    
+  # ----------------------------
+  # TIMER TO ROTATE SHOT
+  # ----------------------------
+  timer_timerShotRotateDropTop_complete:
+    - eventHitShotRotateDropTop
+  sw_right_flipper:
+    - eventHitShotRotateDropTop
+    - eventTimerAddFourSeconds
+  # ----------------------------
+  # ROTATE SHOT HIT::ONE
+  # ----------------------------
+  shotRotateDropTop_litShotRotateDropTopOne_hit.1{current_player.shot_shotRotateDropTop1!=1}:
+    - eventRestartShotRotateDropTop1
+  shotRotateDropTop_litShotRotateDropTopOne_hit.2{current_player.shot_shotRotateDropTop2!=1}:
+    - eventDisableShotRotateDropTop2
+  shotRotateDropTop_litShotRotateDropTopOne_hit.3{current_player.shot_shotRotateDropTop3!=1}:
+    - eventDisableShotRotateDropTop3
+  # ADDED 220112 BCOX TEST
+  # IF ALREADY HIT, ROTATE AGAIN
+  #shotRotateDropTop_litShotRotateDropTopOne_hit.4{current_player.shot_shotRotateDropTop1==1}:
+  shotRotateDropTop_litShotRotateDropTopOne_hit.4{current_player.shot_shotRotateDropTop1==1 and (current_player.shot_shotRotateDropTop2!=1 or current_player.shot_shotRotateDropTop3!=1)}:
+    - eventHitShotRotateDropTop|10ms
+  # ----------------------------
+  # ROTATE SHOT HIT::TWO
+  # ----------------------------
+  shotRotateDropTop_litShotRotateDropTopTwo_hit.1{current_player.shot_shotRotateDropTop2!=1}:
+    - eventRestartShotRotateDropTop2
+  shotRotateDropTop_litShotRotateDropTopTwo_hit.2{current_player.shot_shotRotateDropTop1!=1}:
+    - eventDisableShotRotateDropTop1
+  shotRotateDropTop_litShotRotateDropTopTwo_hit.3{current_player.shot_shotRotateDropTop3!=1}:
+    - eventDisableShotRotateDropTop3
+  # ADDED 220112 BCOX TEST
+  # IF ALREADY HIT, ROTATE AGAIN
+  shotRotateDropTop_litShotRotateDropTopTwo_hit.4{current_player.shot_shotRotateDropTop2==1 and (current_player.shot_shotRotateDropTop1!=1 or current_player.shot_shotRotateDropTop3!=1)}:
+    - eventHitShotRotateDropTop|10ms
+  # ----------------------------
+  # ROTATE SHOT HIT::THREE
+  # ----------------------------
+  shotRotateDropTop_litShotRotateDropTopThree_hit.1{current_player.shot_shotRotateDropTop3!=1}:
+    - eventRestartShotRotateDropTop3
+  shotRotateDropTop_litShotRotateDropTopThree_hit.2{current_player.shot_shotRotateDropTop2!=1}:
+    - eventDisableShotRotateDropTop2
+  shotRotateDropTop_litShotRotateDropTopThree_hit.3{current_player.shot_shotRotateDropTop1!=1}:
+    - eventDisableShotRotateDropTop1
+  # ADDED 220112 BCOX TEST
+  # IF ALREADY HIT, ROTATE AGAIN
+  shotRotateDropTop_litShotRotateDropTopThree_hit.4{current_player.shot_shotRotateDropTop3==1 and (current_player.shot_shotRotateDropTop2!=1 or current_player.shot_shotRotateDropTop1!=1)}:
+    - eventHitShotRotateDropTop|10ms
+  # ----------------------------
+  # RESET GROUP ON COMPLETE::DROP TOP
+  # ----------------------------
+  shotGroupRotateDropTop_litSolid_complete:
+    - eventRestartShotRotateDropTop1|3000ms
+    - eventRestartShotRotateDropTop2|3000ms
+    - eventRestartShotRotateDropTop3|3000ms
+    - eventRestartShotGroupRotateDropTop|3100ms
+
+  # ----------------------------
+  # ROTATE TO NEXT TARGET ON HIT
+  # ----------------------------
+  shotGroupRotateDropTop_litFlash_hit:
+    - eventHitShotRotateDropTop
+  
+# ---------------------
+# TIMERS
+# ---------------------
+timers:
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # ----------------------------
+    timerShotRotateDropTop:
+        start_value: 4
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: true
+        restart_on_complete: true
+        control_events:
+          - event: eventTimerAddFourSeconds
+            action: add
+            value: 4
+
+            

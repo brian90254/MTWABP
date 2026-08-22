@@ -1,0 +1,259 @@
+#config_version=6
+
+# JCv50 (Jupiter Crush v0.50)
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    # ---------------------
+    # EVENT::ORBIT LOOP::GATE
+    # ---------------------
+    sequenceShotOrbitLoopGanymede_hit:
+        - eventOrbitLoopGateOpen
+        - eventOrbitLoopGateClose|3s
+
+    # ---------------------
+    # EVENT::HIDDEN LANE::BALL SAVE
+    # ---------------------
+    shotHiddenLaneBallSaveGanymede_hit:
+        - eventStartBallSaveHidden
+        
+    # ---------------------
+    # EVENT::REVERSE TARTGET::ENABLE MULTIBALL::UPPER KICKER
+    # ---------------------
+    shotReverseArrowGanymede_spReverseArrowGanymede_litFlash_hit:
+        - eventEnableShotStartMultiballGanymede
+        - eventEnableMultiballUpperKicker
+        
+    shotStartMultiballGanymede_hit:
+        - eventStartMultiballUpperKicker
+
+    # ---------------------
+    # EVENT::VUK::ENABLE MULTIBALL::VUK
+    # ---------------------
+    shotTurnAroundArrowGanymede_spTurnAroundArrowGanymede_litFlash_hit:
+        - eventEnableShotStartMultiballVukGanymede
+        
+    shotStartMultiballVukGanymede_hit:
+        - eventStartMultiballVuk
+
+# -----------------------------
+# SHOT::PROFILES
+# -----------------------------
+shot_profiles:
+  # -----------------------------
+  # PROFILE::REVERSE::ARROW
+  # -----------------------------
+    spReverseArrowGanymede:
+        states:
+          - name: litFlashThree
+            show: traceThreeLedColorRev
+            speed: 1
+            show_tokens:
+               color: '00ffff'
+          - name: litFlashTwo
+            show: traceThreeLedColorRev
+            speed: 1
+            show_tokens:
+               color: 'ff00ff'
+          - name: litFlash
+            show: traceThreeLedColorRev
+            speed: 1
+            show_tokens:
+               color: 'ffff00'
+          - name: litSolid
+            show: onThreeLedThreeColor
+            show_tokens:
+               color1: '00ff00'
+               color2: '00ff00'
+               color3: '00ff00'
+        loop: false
+
+  # -----------------------------
+  # PROFILE::TURN AROUND::ARROWS
+  # -----------------------------
+    spTurnAroundArrowGanymede:
+        states:
+          - name: litFlashThree
+            show: traceSixLedTwoColor
+            speed: 6
+            show_tokens:
+               color1: '00ffff'
+               color2: '000000'
+          - name: litFlashTwo
+            show: traceSixLedTwoColor
+            speed: 6
+            show_tokens:
+               color1: 'ff00ff'
+               color2: '000000'
+          - name: litFlash
+            show: traceSixLedTwoColor
+            speed: 6
+            show_tokens:
+               color1: 'ffff00'
+               color2: '000000'
+          - name: litSolid
+            show: traceSixLedTwoColor
+            speed: 1
+            show_tokens:
+               color1: '00ff00'
+               color2: '00ff00'
+        loop: false
+
+# -----------------------------
+# SHOTS
+# -----------------------------
+shots:
+# -----------------------------
+# SHOTS::MULTIBALLS
+# -----------------------------
+    # -------------------
+    # SHOTS::REVERSE TARTGET::ENABLE MULTIBALL UPPER KICKER
+    # -------------------
+    shotReverseArrowGanymede:
+        switch: s_target_reverse
+        enable_events:
+            - eventStopModeSkillShot
+            - eventCompleteAchKickerWheel
+        disable_events:
+            - eventStartAchKickerWheel
+            - eventEnableMultiballVuk
+            - ball_will_end
+        reset_events:
+            #- multiball_multiballUpperKicker_ended
+            #- eventCompleteAchKickerWheel
+            - mode_modeMoonGanymede_started
+        profile:
+            spReverseArrowGanymede
+        show_tokens:
+            led1: l_target_rev_1_1
+            led2: l_target_rev_1_2
+            led3: l_target_rev_1_3
+
+    # -------------------
+    # SHOTS::START::MULTIBALL::UPPER KICKER
+    # -------------------
+    shotStartMultiballGanymede:
+        switch: s_kicker_upper
+        enable_events:
+            - eventEnableShotStartMultiballGanymede
+        disable_events:
+            - eventStartMultiballUpperKicker
+
+    # -------------------
+    # SHOTS::REVERSE TARTGET::ENABLE MULTIBALL VUK
+    # -------------------
+    shotTurnAroundArrowGanymede:
+        switch: s_turn_around
+        enable_events:
+            - eventEnableMultiballVuk
+        disable_events:
+            - eventDisableMultiballVuk
+        reset_events:
+            - mode_modeMoonGanymede_started
+        profile:
+            spTurnAroundArrowGanymede
+        show_tokens:
+            led1: l_turn_around_1_1
+            led2: l_turn_around_1_2
+            led3: l_turn_around_1_3
+            led4: l_turn_around_2_3
+            led5: l_turn_around_2_2
+            led6: l_turn_around_2_1
+
+    # -------------------
+    # SHOTS::START::MULTIBALL::UPPER KICKER
+    # -------------------
+    shotStartMultiballVukGanymede:
+        switch: s_vuk
+        enable_events:
+            - eventEnableShotStartMultiballVukGanymede
+            
+# -----------------------------
+# SHOTS::BALL SAVES
+# -----------------------------
+    # -------------------
+    # SHOTS::HIDDEN LANE::BALL SAVE
+    # -------------------
+    shotHiddenLaneBallSaveGanymede:
+        switch: s_hidden_lane
+        enable_events:
+            - mode_modeBallSave_stopping
+            #- mode_modeMoonGanymede_started
+            #- extra_ball_extraBallGanymede_awarded
+        disable_events:
+            - ball_will_end
+            #- extra_ball_extraBallGanymede_lit
+
+    # -------------------
+    # SHOTS::KICKER::UPPER
+    # -------------------
+    shotCollectMidGameBonusGanymede:
+        switch: s_kicker_upper
+        enable_events:
+            - eventStopModeSkillShot
+            #- mode_modeMoonGanymede_started
+            - extra_ball_extraBallGanymede_awarded
+        disable_events:
+            - ball_will_end
+            - extra_ball_extraBallGanymede_lit
+
+# -----------------------------
+# SHOTS::EXTRA BALL
+# -----------------------------
+    # -------------------
+    # SHOTS::ORBIT LOOP
+    # -------------------
+    shotOrbitLoop1Ganymede:
+        switch: s_rollover_lf_1
+        enable_events:
+            - sgDropRtGanymede_lit_complete
+            #- extra_ball_extraBallGanymede_awarded
+        disable_events:
+            - eventResetDropTargetRight
+
+    shotOrbitLoop2Ganymede:
+        switch: s_rollover_lf_2
+        enable_events:
+            - sgDropRtGanymede_lit_complete
+        disable_events:
+            - eventResetDropTargetRight
+
+# ---------------------
+# SEQUENCE::SHOTS
+# ---------------------
+sequence_shots:
+    # -------------------
+    # SEQUENCE::SHOTS::ORBIT::GATE
+    # -------------------
+    sequenceShotOrbitLoopGanymede:
+        event_sequence:
+            - shotOrbitLoop1Ganymede_hit
+            - shotOrbitLoop2Ganymede_hit
+        sequence_timeout: 3s
+    # -------------------
+    # SEQUENCE::SHOTS::ORBIT::COMPLETE
+    # -------------------
+    sequenceShotOrbitLoopCompleteGanymede:
+        event_sequence:
+            - shotOrbitLoop1Ganymede_hit
+            - shotOrbitLoop2Ganymede_hit
+            - s_rollover_rt_active
+        sequence_timeout: 4s
+
+
+# ---------------------
+# COIL::PLAYER
+# ---------------------
+coil_player:
+    # ----------------------------
+    # ORBIT LOOP GATE
+    # ----------------------------
+    eventOrbitLoopGateOpen:
+        c_gate:
+            action: enable
+    
+    eventOrbitLoopGateClose:
+        c_gate:
+            action: disable

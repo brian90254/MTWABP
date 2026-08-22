@@ -1,0 +1,165 @@
+#show_version=6
+
+- time: 0
+  lights:
+    # --------------------------
+    ledRolloverShooterLane2A: '000000'
+    ledRolloverShooterLane2B: '000000'
+    ledRolloverShooterLane2C: '000000'
+    ledRolloverShooterLane2D: '000000'
+    # --------------------------
+    ledShooterLane1C: '000000'
+    ledShooterLane1B: '000000'
+    ledShooterLane1A: '000000'
+    # --------------------------
+    # --------------------------
+    ledAttackAdvance5: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledRolloverShooterLane2A: 'ff0000'
+    ledRolloverShooterLane2B: '000000'
+    ledRolloverShooterLane2C: '000000'
+    ledRolloverShooterLane2D: '000000'
+    # --------------------------
+    ledShooterLane1C: '000000'
+    ledShooterLane1B: '000000'
+    ledShooterLane1A: '000000'
+    # --------------------------
+    # --------------------------
+    ledAttackAdvance5: '000000'
+    # --------------------------
+    
+- time: "+1"
+  lights:
+    # --------------------------
+    ledRolloverShooterLane2A: 'ff0000'
+    ledRolloverShooterLane2B: 'ff0000'
+    ledRolloverShooterLane2C: 'ff0000'
+    ledRolloverShooterLane2D: '000000'
+    # --------------------------
+    ledShooterLane1C: '000000'
+    ledShooterLane1B: '000000'
+    ledShooterLane1A: '000000'
+    # --------------------------
+    # --------------------------
+    ledAttackAdvance5: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledRolloverShooterLane2A: 'ff0000'
+    ledRolloverShooterLane2B: 'ff0000'
+    ledRolloverShooterLane2C: 'ff0000'
+    ledRolloverShooterLane2D: 'ff0000'
+    # --------------------------
+    ledShooterLane1C: '000000'
+    ledShooterLane1B: '000000'
+    ledShooterLane1A: '000000'
+    # --------------------------
+    # --------------------------
+    ledAttackAdvance5: '000000'
+    # --------------------------
+
+- time: "+1"
+  lights:
+    # --------------------------
+    ledRolloverShooterLane2A: '000000'
+    ledRolloverShooterLane2B: 'ff0000'
+    ledRolloverShooterLane2C: 'ff0000'
+    ledRolloverShooterLane2D: 'ff0000'
+    # --------------------------
+    ledShooterLane1C: 'ff0000'
+    ledShooterLane1B: '000000'
+    ledShooterLane1A: '000000'
+    # --------------------------
+    # --------------------------
+    ledAttackAdvance5: '000000'
+    # --------------------------
+    
+- time: "+1"
+  lights:
+    # --------------------------
+    ledRolloverShooterLane2A: '000000'
+    ledRolloverShooterLane2B: '000000'
+    ledRolloverShooterLane2C: '000000'
+    ledRolloverShooterLane2D: 'ff0000'
+    # --------------------------
+    ledShooterLane1C: 'ff0000'
+    ledShooterLane1B: 'ff0000'
+    ledShooterLane1A: '000000'
+    # --------------------------
+    # --------------------------
+    ledAttackAdvance5: '000000'
+    # --------------------------
+    
+- time: "+1"
+  lights:
+    # --------------------------
+    ledRolloverShooterLane2A: '000000'
+    ledRolloverShooterLane2B: '000000'
+    ledRolloverShooterLane2C: '000000'
+    ledRolloverShooterLane2D: '000000'
+    # --------------------------
+    ledShooterLane1C: 'ff0000'
+    ledShooterLane1B: 'ff0000'
+    ledShooterLane1A: 'ff0000'
+    # --------------------------
+    # --------------------------
+    ledAttackAdvance5: '000000'
+    # --------------------------
+    
+- time: "+1"
+  lights:
+    # --------------------------
+    ledRolloverShooterLane2A: '000000'
+    ledRolloverShooterLane2B: '000000'
+    ledRolloverShooterLane2C: '000000'
+    ledRolloverShooterLane2D: '000000'
+    # --------------------------
+    ledShooterLane1C: '000000'
+    ledShooterLane1B: 'ff0000'
+    ledShooterLane1A: 'ff0000'
+    # --------------------------
+    # --------------------------
+    ledAttackAdvance5: 'ff0000'
+    # --------------------------
+    
+- time: "+1"
+  lights:
+    # --------------------------
+    ledRolloverShooterLane2A: '000000'
+    ledRolloverShooterLane2B: '000000'
+    ledRolloverShooterLane2C: '000000'
+    ledRolloverShooterLane2D: '000000'
+    # --------------------------
+    ledShooterLane1C: '000000'
+    ledShooterLane1B: '000000'
+    ledShooterLane1A: 'ff0000'
+    # --------------------------
+    # --------------------------
+    ledAttackAdvance5: 'ff0000'
+    # --------------------------
+
+    
+- time: "+1"
+  lights:
+    # --------------------------
+    ledRolloverShooterLane2A: '000000'
+    ledRolloverShooterLane2B: '000000'
+    ledRolloverShooterLane2C: '000000'
+    ledRolloverShooterLane2D: '000000'
+    # --------------------------
+    ledShooterLane1C: '000000'
+    ledShooterLane1B: '000000'
+    ledShooterLane1A: '000000'
+    # --------------------------
+    # --------------------------
+    ledAttackAdvance5: 'ff0000'
+    # --------------------------
+
+
+- time: "+1"

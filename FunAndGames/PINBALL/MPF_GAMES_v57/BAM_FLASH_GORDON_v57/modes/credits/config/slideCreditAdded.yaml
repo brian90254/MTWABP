@@ -1,0 +1,241 @@
+#config_version=6
+            
+slides:
+    slideCreditAdded:
+        target: displayDMD
+        widgets:
+        # -------------------------------------------------
+        #                       TOP
+        # -------------------------------------------------
+        # -----------------
+        # CENTER
+        # -----------------
+        - type: text
+          text: CREDITS
+          y: top - 44
+          x: middle
+          z: 40
+          style: fontCreditAddedHeader
+          color: colorFontCreditAddedHeaderInner
+        
+        # -----------------
+        # OUTLINE ONE
+        # -----------------
+        - type: text
+          text: CREDITS
+          y: top - 43
+          x: middle - 1
+          z: 30
+          style: fontCreditAddedHeader
+          color: colorFontCreditAddedHeaderOuter1
+        
+        - type: text
+          text: CREDITS
+          y: top - 43
+          x: middle + 1
+          z: 30
+          style: fontCreditAddedHeader
+          color: colorFontCreditAddedHeaderOuter1
+        
+        - type: text
+          text: CREDITS
+          y: top - 45
+          x: middle - 1
+          z: 30
+          style: fontCreditAddedHeader
+          color: colorFontCreditAddedHeaderOuter1
+          
+        - type: text
+          text: CREDITS
+          y: top - 45
+          x: middle + 1
+          z: 30
+          style: fontCreditAddedHeader
+          color: colorFontCreditAddedHeaderOuter1
+        # -------------------------------------------------
+        # -----------------
+        # OUTLINE TWO
+        # -----------------
+        - type: text
+          text: CREDITS
+          y: top - 42
+          x: middle - 2
+          z: 30
+          style: fontCreditAddedHeader
+          color: colorFontCreditAddedHeaderOuter2
+        
+        - type: text
+          text: CREDITS
+          y: top - 42
+          x: middle + 2
+          z: 30
+          style: fontCreditAddedHeader
+          color: colorFontCreditAddedHeaderOuter2
+        
+        - type: text
+          text: CREDITS
+          y: top - 46
+          x: middle - 2
+          z: 30
+          style: fontCreditAddedHeader
+          color: colorFontCreditAddedHeaderOuter2
+          
+        - type: text
+          text: CREDITS
+          y: top - 46
+          x: middle + 2
+          z: 30
+          style: fontCreditAddedHeader
+          color: colorFontCreditAddedHeaderOuter2
+        # -------------------------------------------------
+  
+        # -------------------------------------------------
+        #                       MIDDLE
+        # -------------------------------------------------
+        # -----------------
+        # RED CENTER
+        # -----------------
+        - type: text
+          text: (machine|credits_value)
+          #number_grouping: true
+          #min_digits: 2
+          y: middle - 24
+          x: middle
+          z: 40
+          style: fontCreditAddedMiddle
+          color: colorFontCreditAddedMiddleInner
+          
+        # -----------------
+        # OUTLINE CYAN
+        # -----------------
+        - type: text
+          text: (machine|credits_value)
+          #number_grouping: true
+          #min_digits: 2
+          y: middle - 25
+          x: middle - 1
+          z: 30
+          style: fontCreditAddedMiddle
+          color: colorFontCreditAddedMiddleOuter1
+          
+        - type: text
+          text: (machine|credits_value)
+          #number_grouping: true
+          #min_digits: 2
+          y: middle - 25
+          x: middle + 1
+          z: 30
+          style: fontCreditAddedMiddle
+          color: colorFontCreditAddedMiddleOuter1
+          
+        - type: text
+          text: (machine|credits_value)
+          #number_grouping: true
+          #min_digits: 2
+          y: middle  - 23
+          x: middle + 1
+          z: 30
+          style: fontCreditAddedMiddle
+          color: colorFontCreditAddedMiddleOuter1
+          
+        - type: text
+          text: (machine|credits_value)
+          #number_grouping: true
+          #min_digits: 2
+          y: middle - 23
+          x: middle - 1
+          z: 30
+          style: fontCreditAddedMiddle
+          color: colorFontCreditAddedMiddleOuter1
+        # -------------------------------------------------
+  
+  
+        ## -------------------------------------------------
+        ##                       BOTTOM
+        ## -------------------------------------------------
+        ## -----------------
+        ## CENTER YELLOW
+        ## -----------------
+        #- type: text
+        #  text: ADDED
+        #  anchor_y: bottom
+        #  y: bottom + 4
+        #  x: middle
+        #  z: 40
+        #  style: fontCreditAddedFooter
+        #  color: colorFontCreditAddedFooterInner
+        #  
+        ## -----------------
+        ## OUTLINE GREEN
+        ## -----------------
+        #- type: text
+        #  text: ADDED
+        #  anchor_y: bottom
+        #  y: bottom + 3
+        #  x: middle - 1
+        #  z: 30
+        #  style: fontCreditAddedFooter
+        #  color: colorFontCreditAddedFooterOuter1
+        #  
+        #- type: text
+        #  text: ADDED
+        #  anchor_y: bottom
+        #  y: bottom + 5
+        #  x: middle + 1
+        #  z: 30
+        #  style: fontCreditAddedFooter
+        #  color: colorFontCreditAddedFooterOuter1
+        #  
+        #- type: text
+        #  text: ADDED
+        #  anchor_y: bottom
+        #  y: bottom + 3
+        #  x: middle + 1
+        #  z: 30
+        #  style: fontCreditAddedFooter
+        #  color: colorFontCreditAddedFooterOuter1
+        #  
+        #- type: text
+        #  text: ADDED
+        #  anchor_y: bottom
+        #  y: bottom + 5
+        #  x: middle - 1
+        #  z: 30 
+        #  style: fontCreditAddedFooter
+        #  color: colorFontCreditAddedFooterOuter1
+  
+          # --------------------
+          # COLOR OUTLINE
+          # --------------------
+        - type: rectangle
+          color: colorBoxCreditAddedOuter
+          width: 236
+          height: 130
+          x: 120
+          y: 67
+          z: 3
+        - type: rectangle
+          color: colorBoxCreditAddedMiddle
+          width: 232
+          height: 126
+          x: 120
+          y: 67
+          z: 5
+        - type: rectangle
+          color: colorBoxCreditAddedInner
+          width: 228
+          height: 122
+          x: 120
+          y: 67
+          z: 6
+          # --------------------
+          # BLACK INFILL
+          # --------------------
+        - type: rectangle
+          color: colorBoxCreditAddedFill
+          width: 224
+          height: 118
+          x: 120
+          y: 67
+          z: 7
+

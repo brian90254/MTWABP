@@ -1,0 +1,240 @@
+#config_version=6
+
+# JCv50 (Jupiter Crush v0.50)
+
+# *********************
+# EVENT::PLAYER
+# *********************
+event_player:
+  sequenceShotOrbitLoopCompleteEuropa_hit:
+    - scoreSequenceShotOrbitLoopCompleteEuropa
+    - scoreAdvanceMultiOrbitLoopDivider|2000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+  # ---------------
+  # SCORING::DROP::TARGETS
+  # ---------------
+  shotDropLf1Europa_hit:
+    score: 10 * current_player.multiNewton * current_player.multiDropLeft
+  shotDropLf2Europa_hit:
+    score: 10 * current_player.multiNewton * current_player.multiDropLeft
+  shotDropLf3Europa_hit:
+    score: 10 * current_player.multiNewton * current_player.multiDropLeft
+  sgDropLfEuropa_litSolid_complete:
+    score: 50 * current_player.multiNewton * current_player.multiDropLeft
+  # ---------------
+  # SCORING::SPINNER
+  # ---------------
+  sw_tagSpinner:
+    score: 1 * current_player.multiNewton * current_player.multiVukSpinner
+  # ---------------
+  # SCORING::TARGET::REVERSE
+  # ---------------
+  sw_tagReverseTarget:
+    score: 30 * current_player.multiNewton * current_player.multiReverseTarget
+  # ---------------
+  # SCORING::TURN::AROUND
+  # ---------------
+  sw_tagTurnAround:
+    score: 50 * current_player.multiNewton * current_player.multiTurnAround
+    
+  # ---------------
+  # SCORING::TARGET::HUNTER
+  # ---------------
+  sgTargetHUNTEREuropa_litFlash_hit:
+    score: 200 * current_player.multiNewton * current_player.multiHunterTarget
+    
+  sgTargetHUNTEREuropa_unlitSolid_hit:
+    score: 20 * current_player.multiNewton * current_player.multiHunterTarget
+    
+  # ---------------
+  # SCORING::THUMPERS
+  # ---------------
+  sw_tagThumper:
+    score: 10 * current_player.multiNewton
+      
+  # ---------------
+  # SCORING::ROLLOVERS
+  # ---------------
+  sw_tagRollover:
+    score: 30 * current_player.multiNewton
+
+  # ---------------
+  # SCORING::ROLLOVERS
+  # ---------------
+  sw_tagDropRt:
+    score: 100 * current_player.multiNewton
+
+  # ---------------
+  # SCORING::BALL::LOCKS
+  # ---------------
+  sw_tagVuk:
+    score: 2000 * current_player.multiNewton
+    
+  sw_tagKickerUpper:
+    score: 500 * current_player.multiNewton
+    
+  # ---------------
+  # SCORING::ORBIT::COMPLETE
+  # ---------------
+  scoreSequenceShotOrbitLoopCompleteEuropa:
+    score: (50000 * current_player.multiMode) / current_player.multiOrbitLoopDivider
+  scoreAdvanceMultiOrbitLoopDivider:
+    multiOrbitLoopDivider:
+      int: current_player.multiOrbitLoopDivider * 2
+      action: set
+    
+    
+# ---------------
+# ADVANCE::MULTIPLYERS
+# ---------------
+  # ---------------
+  # BONUS
+  # ---------------
+  advMultiBonus:
+    multiBonus: 1
+    # ---------------
+    totalBonus:
+      int: current_player.totalBonus * 2
+      action: set
+    # ---------------
+  # ---------------
+  # NEWTON
+  # ---------------
+  advMultiNewton:
+    multiNewton: 1
+    
+  ball_save_default_saving_ball:
+    multiNewton: 1
+    
+  # ---------------
+  # HUNTER
+  # ---------------
+  sgTargetHunterEuropa_litFlash_hit:
+  #advMultiHunter:
+    multiHunter: 1
+    # ---------------
+    totalBonus:
+      int: current_player.totalBonus * 2
+      action: set
+    # ---------------
+  # ---------------
+  # KICKER
+  # ---------------
+  advMultiKicker:
+    multiKicker: 1
+  # ---------------
+  # REVERSE::TARGET
+  # ---------------
+  shotReverseTargetEuropa_hit:
+    multiReverseTarget: 1
+  # ---------------
+  # TURN::AROUND
+  # ---------------
+  shotTurnAroundEuropa_hit:
+    multiTurnAround: 1
+  # ---------------
+  # TURN::AROUND
+  # ---------------
+  shotVukSpinnerEuropa_hit:
+    multiVukSpinner: 1
+  # ---------------
+  # DROP::LEFT
+  # ---------------
+  sgDropLfEuropa_complete:
+    multiDropLeft: 1
+    
+  # ---------------
+  # ELLA UN-USED BALL-SAVE LANE BONUS 
+  # ---------------
+  #advEllaBonus:
+  sgLaneOutretEuropa_unlitSolid_hit:
+    multiEllaBonus: 1
+    #scoreEllaBonus:
+    #  int: 2000 * current_player.multiEllaBonus * current_player.multiEllaBonus
+    #  action: set
+
+  sgLaneOutretEuropa_litFlash_hit:
+    multiEllaBonus: -1
+    #scoreEllaBonus:
+    #  int: 2000 * current_player.multiEllaBonus * current_player.multiEllaBonus
+    #  action: set
+
+  eventStopBallSaveOutlane:
+    multiEllaBonus:
+      int: 0
+      action: set
+
+  # ---------------
+  # RESET
+  # ---------------
+  eventResetMultipliersEuropa:
+    totalBonus:
+      int: 1
+      action: set
+    multiBonus:
+      int: 0
+      action: set
+    multiNewton:
+      int: 2
+      #changes with mode
+      action: set
+    multiHunter:
+      int: 2
+      #changes with mode
+      action: set
+    multiKicker:
+      int: 0
+      action: set
+    multiReverseTarget:
+      int: 1
+      action: set
+    multiTurnAround:
+      int: 1
+      action: set
+    multiDropLeft:
+      int: 1
+      action: set
+    multiVukSpinner:
+      int: 1
+      action: set
+      
+    multiHunterTarget:
+      int: 1
+      action: set
+      
+# ADDED 180810 FOR ELLA LANE BONUS
+    multiEllaBonus:
+      int: 0
+      action: set
+
+    scoreEllaBonus:
+      int: 2000
+      #changes with mode
+      action: set
+      
+# ADDED 181122 FOR MODE MULTIPLIER
+    multiMode:
+      int: 2
+      action: set
+      
+# ADDED 181218 FOR ORBIT LOOP DIVIDER
+    multiOrbitLoopDivider:
+      int: 1
+      action: set
+      
+      
+  # ---------------
+  # RESET HUNTER ONLY
+  # ---------------
+  eventResetHunterMultiplier:
+    multiHunter:
+      int: 2
+      action: set
+      

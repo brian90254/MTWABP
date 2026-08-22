@@ -1,0 +1,195 @@
+#config_version=6
+
+# VOLTAN
+
+# -----------------------------
+# ACHIEVEMENT::MODE::ADVANCE
+# -----------------------------
+achievements:
+  # -----------------------------
+  # ACHIEVEMENT::MODE::VOLTAN MERCURY
+  # -----------------------------
+  achVoltanMercury:
+    events_when_selected:
+      - eventAchVoltanMercurySelected
+    events_when_started:
+      - eventAchVoltanMercuryStarted
+    events_when_completed:
+      - eventAchVoltanMercuryCompleted
+    enable_events: eventEnableAchVoltanMercury
+    select_events: eventSelectAchVoltanMercury
+    start_events: eventStartAchVoltanMercury
+    stop_events: eventStopAchVoltanMercury
+    complete_events: eventCompleteAchVoltanMercury
+    sync_ms: 1
+    restart_after_stop_possible: true
+
+  # -----------------------------
+  # ACHIEVEMENT::MODE::VOLTAN VENUS
+  # -----------------------------
+  achVoltanVenus:
+    events_when_selected:
+      - eventAchVoltanVenusSelected
+    events_when_started:
+      - eventAchVoltanVenusStarted
+    events_when_completed:
+      - eventAchVoltanVenusCompleted
+    enable_events: eventEnableAchVoltanVenus
+    select_events: eventSelectAchVoltanVenus
+    start_events: eventStartAchVoltanVenus
+    stop_events: eventStopAchVoltanVenus
+    complete_events: eventCompleteAchVoltanVenus
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::MODE::VOLTAN EARTH
+  # -----------------------------
+  achVoltanEarth:
+    events_when_selected:
+      - eventAchVoltanEarthSelected
+    events_when_started:
+      - eventAchVoltanEarthStarted
+    events_when_completed:
+      - eventAchVoltanEarthCompleted
+    enable_events: eventEnableAchVoltanEarth
+    select_events: eventSelectAchVoltanEarth
+    start_events: eventStartAchVoltanEarth
+    stop_events: eventStopAchVoltanEarth
+    complete_events: eventCompleteAchVoltanEarth
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::MODE::VOLTAN MARS
+  # -----------------------------
+  achVoltanMars:
+    events_when_selected:
+      - eventAchVoltanMarsSelected
+    events_when_started:
+      - eventAchVoltanMarsStarted
+    events_when_completed:
+      - eventAchVoltanMarsCompleted
+    enable_events: eventEnableAchVoltanMars
+    select_events: eventSelectAchVoltanMars
+    start_events: eventStartAchVoltanMars
+    stop_events: eventStopAchVoltanMars
+    complete_events: eventCompleteAchVoltanMars
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::MODE::VOLTAN JUPITER
+  # -----------------------------
+  achVoltanJupiter:
+    events_when_selected:
+      - eventAchVoltanJupiterSelected
+    events_when_started:
+      - eventAchVoltanJupiterStarted
+    events_when_completed:
+      - eventAchVoltanJupiterCompleted
+    enable_events: eventEnableAchVoltanJupiter
+    select_events: eventSelectAchVoltanJupiter
+    start_events: eventStartAchVoltanJupiter
+    stop_events: eventStopAchVoltanJupiter
+    complete_events: eventCompleteAchVoltanJupiter
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::MODE::VOLTAN SATURN
+  # -----------------------------
+  achVoltanSaturn:
+    events_when_selected:
+      - eventAchVoltanSaturnSelected
+    events_when_started:
+      - eventAchVoltanSaturnStarted
+    events_when_completed:
+      - eventAchVoltanSaturnCompleted
+    enable_events: eventEnableAchVoltanSaturn
+    select_events: eventSelectAchVoltanSaturn
+    start_events: eventStartAchVoltanSaturn
+    stop_events: eventStopAchVoltanSaturn
+    complete_events: eventCompleteAchVoltanSaturn
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::MODE::VOLTAN URANUS
+  # -----------------------------
+  achVoltanUranus:
+    events_when_selected:
+      - eventAchVoltanUranusSelected
+    events_when_started:
+      - eventAchVoltanUranusStarted
+    events_when_completed:
+      - eventAchVoltanUranusCompleted
+    enable_events: eventEnableAchVoltanUranus
+    select_events: eventSelectAchVoltanUranus
+    start_events: eventStartAchVoltanUranus
+    stop_events: eventStopAchVoltanUranus
+    complete_events: eventCompleteAchVoltanUranus
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::MODE::VOLTAN NEPTUNE
+  # -----------------------------
+  achVoltanNeptune:
+    events_when_selected:
+      - eventAchVoltanNeptuneSelected
+    events_when_started:
+      - eventAchVoltanNeptuneStarted
+    events_when_completed:
+      - eventAchVoltanNeptuneCompleted
+    enable_events: eventEnableAchVoltanNeptune
+    select_events: eventSelectAchVoltanNeptune
+    start_events: eventStartAchVoltanNeptune
+    stop_events: eventStopAchVoltanNeptune
+    complete_events: eventCompleteAchVoltanNeptune
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+  # -----------------------------
+  # ACHIEVEMENT::MODE::VOLTAN PLUTO
+  # -----------------------------
+  achVoltanPluto:
+    events_when_selected:
+      - eventAchVoltanPlutoSelected
+    events_when_started:
+      - eventAchVoltanPlutoStarted
+    events_when_completed:
+      - eventAchVoltanPlutoCompleted
+    enable_events: eventEnableAchVoltanPluto
+    select_events: eventSelectAchVoltanPluto
+    start_events: eventStartAchVoltanPluto
+    stop_events: eventStopAchVoltanPluto
+    complete_events: eventCompleteAchVoltanPluto
+    sync_ms: 1
+    restart_after_stop_possible: true
+    
+# -----------------------------
+# ACHIEVEMENT::GROUPS
+# -----------------------------
+achievement_groups:
+  # -----------------------------
+  # KICKER::WHEEL
+  # -----------------------------
+  achGroupVoltanPlanets:
+    achievements:
+      - achVoltanMercury
+      - achVoltanVenus
+      - achVoltanEarth
+      - achVoltanMars
+      - achVoltanJupiter
+      - achVoltanSaturn
+      - achVoltanUranus
+      - achVoltanNeptune
+      - achVoltanPluto
+    enable_events: eventEnableAchGroupVoltanPlanets
+    rotate_right_events: eventRotateRightAchGroupVoltanPlanets
+    disable_while_achievement_started: false
+    allow_selection_change_while_disabled: true
+    enable_while_no_achievement_started: true
+    auto_select: false
+    

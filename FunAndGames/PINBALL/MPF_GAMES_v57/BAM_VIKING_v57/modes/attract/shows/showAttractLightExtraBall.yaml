@@ -1,0 +1,105 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ff0000'
+        color2: 'ffff00'
+        led1: ledShootAgain1
+        led2: ledShootAgain2
+        led3: ledShootAgain3
+        led4: ledShootAgain4
+        led5: ledShootAgain5
+        led6: ledShootAgain6
+        led7: ledShootAgain7
+        
+- time: '+2'
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ffff00'
+        color2: '00ff00'
+        led1: ledShootAgain1
+        led2: ledShootAgain2
+        led3: ledShootAgain3
+        led4: ledShootAgain4
+        led5: ledShootAgain5
+        led6: ledShootAgain6
+        led7: ledShootAgain7
+
+- time: '+2'
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '00ff00'
+        color2: '00ffff'
+        led1: ledShootAgain1
+        led2: ledShootAgain2
+        led3: ledShootAgain3
+        led4: ledShootAgain4
+        led5: ledShootAgain5
+        led6: ledShootAgain6
+        led7: ledShootAgain7
+
+- time: '+2'
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '00ffff'
+        color2: '0000ff'
+        led1: ledShootAgain1
+        led2: ledShootAgain2
+        led3: ledShootAgain3
+        led4: ledShootAgain4
+        led5: ledShootAgain5
+        led6: ledShootAgain6
+        led7: ledShootAgain7
+
+- time: '+2'
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: '0000ff'
+        color2: 'ff00ff'
+        led1: ledShootAgain1
+        led2: ledShootAgain2
+        led3: ledShootAgain3
+        led4: ledShootAgain4
+        led5: ledShootAgain5
+        led6: ledShootAgain6
+        led7: ledShootAgain7
+
+- time: '+2'
+
+  shows:
+    traceSevenLedTwoColor:
+      loops: 0
+      speed: 4
+      show_tokens:
+        color1: 'ff00ff'
+        color2: 'ff0000'
+        led1: ledShootAgain1
+        led2: ledShootAgain2
+        led3: ledShootAgain3
+        led4: ledShootAgain4
+        led5: ledShootAgain5
+        led6: ledShootAgain6
+        led7: ledShootAgain7
+        
+- time: '+2'

@@ -1,0 +1,75 @@
+#config_version=6
+
+mode:
+  start_events: eventStartModeMusicGanymede
+  stop_events: eventStopModeMusicGanymede
+  priority: 1000
+
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  mode_modeMusicGanymede_started:
+    musicGanymede001:
+      loops: -1
+      volume: 0.3
+      
+  mode_modeMusicGanymede_ending:
+    musicGanymede001:
+      action: stop
+  #---------------------
+  eventShotMusicHLoopOnHit:
+    musicGanymede002:
+      loops: -1
+      volume: 0.45
+      
+  eventShotMusicHLoopOffHit:
+    musicGanymede002:
+      action: stop
+  # ---------------------      
+  eventShotMusicULoopOnHit:
+    musicGanymede003:
+      loops: -1
+      volume: 0.25
+      
+  eventShotMusicULoopOffHit:
+    musicGanymede003:
+      action: stop
+  # ---------------------
+  eventShotMusicNLoopOnHit:
+    musicGanymede004:
+      loops: -1
+      volume: 0.6
+      
+  eventShotMusicNLoopOffHit:
+    musicGanymede004:
+      action: stop
+  # ---------------------
+  eventShotMusicTLoopOnHit:
+    musicGanymede005:
+      loops: -1
+      volume: 0.15
+      
+  eventShotMusicTLoopOffHit:
+    musicGanymede005:
+      action: stop
+  # ---------------------
+  eventShotMusicELoopOnHit:
+    musicGanymede006:
+      loops: -1
+      volume: 0.45
+      
+  eventShotMusicELoopOffHit:
+    musicGanymede006:
+      action: stop
+  # ---------------------
+  eventShotMusicRLoopOnHit:
+    musicGanymede007:
+      loops: -1
+      volume: 0.3
+      
+  eventShotMusicRLoopOffHit:
+    musicGanymede007:
+      action: stop
+  # ---------------------
+  

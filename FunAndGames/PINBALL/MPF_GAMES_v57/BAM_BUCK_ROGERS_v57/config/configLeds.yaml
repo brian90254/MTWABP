@@ -1,0 +1,257 @@
+#config_version=6
+
+# Bally BuckRogers v1.01
+
+lights:
+  
+  # -------------------------------------
+  # FADECANDY - BOARD ZERO - CHANNEL ZERO
+  # -------------------------------------
+  # BUCK UPPER LANES
+  # -------------------------------------
+  ledBuckUpperB:
+    number: 0-1
+    type: grb
+    subtype: led
+    
+  ledBuckUpperU:
+    number: 0-0
+    type: grb
+    subtype: led
+    
+  ledBuckUpperC:
+    number: 0-64
+    type: grb
+    subtype: led
+    
+  ledBuckUpperK:
+    number: 0-65
+    type: grb
+    subtype: led
+
+  # -------------------------------------
+  # BUCK LOWER LANES
+  # -------------------------------------
+  ledBuckLowerB:
+    number: 0-2
+    type: grb
+    subtype: led
+    
+  ledBuckLowerU:
+    number: 0-100
+    type: grb
+    subtype: led
+    
+  ledBuckLowerC:
+    number: 0-101
+    type: grb
+    subtype: led
+    
+  ledBuckLowerK:
+    number: 0-68
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # SHOOT AGAIN
+  # -------------------------------------
+  ledShootAgain1:
+    number: 0-85
+    type: grb
+    subtype: led
+
+  ledShootAgain2:
+    number: 0-86
+    type: grb
+    subtype: led
+
+  ledShootAgain3:
+    number: 0-87
+    type: grb
+    subtype: led
+
+  ledShootAgain4:
+    number: 0-88
+    type: grb
+    subtype: led
+
+  ledShootAgain5:
+    number: 0-89
+    type: grb
+    subtype: led
+    
+  ledShootAgain6:
+    number: 0-90
+    type: grb
+    subtype: led
+    
+  ledShootAgain7:
+    number: 0-91
+    type: grb
+    subtype: led
+
+  # -------------------------------------
+  # BONUS VALUE
+  # -------------------------------------
+  ledBonus1000:
+    number: 0-84
+    type: grb
+    subtype: led
+    
+  ledBonus2000:
+    number: 0-83
+    type: grb
+    subtype: led
+    
+  ledBonus3000:
+    number: 0-82
+    type: grb
+    subtype: led
+    
+  ledBonus4000:
+    number: 0-81
+    type: grb
+    subtype: led
+    
+  ledBonus5000:
+    number: 0-80
+    type: grb
+    subtype: led
+    
+  ledBonus6000:
+    number: 0-79
+    type: grb
+    subtype: led
+    
+  ledBonus7000:
+    number: 0-78
+    type: grb
+    subtype: led
+    
+  ledBonus8000:
+    number: 0-77
+    type: grb
+    subtype: led
+    
+  ledBonus9000:
+    number: 0-76
+    type: grb
+    subtype: led
+    
+  ledBonus10k:
+    number: 0-75
+    type: grb
+    subtype: led
+    
+  ledBonus20k:
+    number: 0-74
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # BONUS MULTIPLIER
+  # -------------------------------------
+  ledBonusMulti2x:
+    number: 0-73
+    type: grb
+    subtype: led
+    
+  ledBonusMulti3x:
+    number: 0-72
+    type: grb
+    subtype: led
+    
+  ledBonusMulti4x:
+    number: 0-71
+    type: grb
+    subtype: led
+    
+  ledBonusMulti5x:
+    number: 0-70
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # BONUS COUNT
+  # -------------------------------------
+  ledBonusBase:
+    number: 0-5
+    type: grb
+    subtype: led
+    
+  ledBonusCount1:
+    number: 0-6
+    type: grb
+    subtype: led
+    
+  ledBonusCount2:
+    number: 0-7
+    type: grb
+    subtype: led
+    
+  ledBonusCount3:
+    number: 0-8
+    type: grb
+    subtype: led
+    
+  ledBonusCount4:
+    number: 0-9
+    type: grb
+    subtype: led
+    
+  ledBonusCount5:
+    number: 0-10
+    type: grb
+    subtype: led
+    
+  ledBonusReturn:
+    number: 0-11
+    type: grb
+    subtype: led
+    
+  # -------------------------------------
+  # DROPS WHEN LIT
+  # -------------------------------------
+  ledWhenLitYellowDrop1:
+    number: 0-3
+    type: grb
+    subtype: led
+    
+  ledWhenLitYellowDrop2:
+    number: 0-4
+    type: grb
+    subtype: led
+    
+  ledWhenLitRedDrop:
+    number: 0-69
+    type: grb
+    subtype: led
+    
+  ledWhenLitSaucer:
+    number: 0-66
+    type: grb
+    subtype: led
+  
+  # -------------------------------------
+  # DROPS WHEN LIT
+  # -------------------------------------
+  ledExtraBall:
+    number: 0-67
+    type: grb
+    subtype: led
+  
+  # -------------------------------------
+  # DUMMY LIGHTS FOR SHOW PURPOSES
+  # -------------------------------------
+  ledDummy1:
+    number: 4-0
+    type: grb
+  ledDummy2:
+    number: 4-1
+    type: grb
+  ledDummy3:
+    number: 4-2
+    type: grb
+  ledDummy4:
+    number: 4-3
+    type: grb

@@ -1,0 +1,1122 @@
+#config_version=6
+
+# Bally BuckRogers v1.01
+
+lights:
+  
+# -------------------------------------
+# FAST EXP - BOARD ZERO - CHANNEL ZERO
+# -------------------------------------
+
+# -------------------------------------
+# BONUS AWARD
+# -------------------------------------
+  # -------------------------------------
+  # BONUS AWARD :: 9000
+  # -------------------------------------
+  ledBonus9000A:
+    number: expplayfield-1-1
+    type: rgb
+    subtype: led
+    
+  ledBonus9000B:
+    number: expplayfield-1-2
+    type: rgb
+    subtype: led
+
+  ledBonus9000C:
+    number: expplayfield-1-3
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # BONUS AWARD :: 7000
+  # -------------------------------------
+  ledBonus7000A:
+    number: expplayfield-1-4
+    type: rgb
+    subtype: led
+    
+  ledBonus7000B:
+    number: expplayfield-1-5
+    type: rgb
+    subtype: led
+
+  ledBonus7000C:
+    number: expplayfield-1-6
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # BONUS AWARD :: 5000
+  # -------------------------------------
+  ledBonus5000A:
+    number: expplayfield-1-7
+    type: rgb
+    subtype: led
+    
+  ledBonus5000B:
+    number: expplayfield-1-8
+    type: rgb
+    subtype: led
+
+  ledBonus5000C:
+    number: expplayfield-1-9
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # BONUS AWARD :: 3000
+  # -------------------------------------
+  ledBonus3000A:
+    number: expplayfield-1-10
+    type: rgb
+    subtype: led
+    
+  ledBonus3000B:
+    number: expplayfield-1-11
+    type: rgb
+    subtype: led
+
+  ledBonus3000C:
+    number: expplayfield-1-12
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # BONUS AWARD :: 1000
+  # -------------------------------------
+  ledBonus1000A:
+    number: expplayfield-1-13
+    type: rgb
+    subtype: led
+    
+  ledBonus1000B:
+    number: expplayfield-1-14
+    type: rgb
+    subtype: led
+
+  ledBonus1000C:
+    number: expplayfield-1-15
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # BONUS AWARD :: 2000
+  # -------------------------------------
+  ledBonus2000A:
+    number: expplayfield-1-16
+    type: rgb
+    subtype: led
+    
+  ledBonus2000B:
+    number: expplayfield-1-17
+    type: rgb
+    subtype: led
+
+  ledBonus2000C:
+    number: expplayfield-1-18
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # BONUS AWARD :: 4000
+  # -------------------------------------
+  ledBonus4000A:
+    number: expplayfield-1-19
+    type: rgb
+    subtype: led
+    
+  ledBonus4000B:
+    number: expplayfield-1-20
+    type: rgb
+    subtype: led
+
+  ledBonus4000C:
+    number: expplayfield-1-21
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # BONUS AWARD :: 6000
+  # -------------------------------------
+  ledBonus6000A:
+    number: expplayfield-1-22
+    type: rgb
+    subtype: led
+    
+  ledBonus6000B:
+    number: expplayfield-1-23
+    type: rgb
+    subtype: led
+
+  ledBonus6000C:
+    number: expplayfield-1-24
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # BONUS AWARD :: 8000
+  # -------------------------------------
+  ledBonus8000A:
+    number: expplayfield-1-25
+    type: rgb
+    subtype: led
+    
+  ledBonus8000B:
+    number: expplayfield-1-26
+    type: rgb
+    subtype: led
+
+  ledBonus8000C:
+    number: expplayfield-1-27
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # BONUS AWARD :: 10000
+  # -------------------------------------
+  ledBonus10000A:
+    number: expplayfield-1-28
+    type: rgb
+    subtype: led
+  
+  ledBonus10000B:
+    number: expplayfield-1-29
+    type: rgb
+    subtype: led
+
+  ledBonus10000C:
+    number: expplayfield-1-30
+    type: rgb
+    subtype: led
+
+
+# -------------------------------------
+# SUPER LOW
+# -------------------------------------
+  # -------------------------------------
+  # SUPER LOW :: R
+  # -------------------------------------
+  ledSuperLowR1:
+    number: expplayfield-2-1
+    type: rgb
+    subtype: led
+
+  ledSuperLowR2:
+    number: expplayfield-2-2
+    type: rgb
+    subtype: led
+
+  ledSuperLowR3:
+    number: expplayfield-2-3
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # SUPER LOW :: E
+  # -------------------------------------
+  ledSuperLowE1:
+    number: expplayfield-2-4
+    type: rgb
+    subtype: led
+
+  ledSuperLowE2:
+    number: expplayfield-2-5
+    type: rgb
+    subtype: led
+
+  ledSuperLowE3:
+    number: expplayfield-2-6
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # SUPER LOW :: P
+  # -------------------------------------
+  ledSuperLowP1:
+    number: expplayfield-2-7
+    type: rgb
+    subtype: led
+
+  ledSuperLowP2:
+    number: expplayfield-2-8
+    type: rgb
+    subtype: led
+
+  ledSuperLowP3:
+    number: expplayfield-2-9
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # SUPER LOW :: U
+  # -------------------------------------
+  ledSuperLowU1:
+    number: expplayfield-2-10
+    type: rgb
+    subtype: led
+
+  ledSuperLowU2:
+    number: expplayfield-2-11
+    type: rgb
+    subtype: led
+
+  ledSuperLowU3:
+    number: expplayfield-2-12
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # SUPER LOW :: S
+  # -------------------------------------
+  ledSuperLowS1:
+    number: expplayfield-2-13
+    type: rgb
+    subtype: led
+
+  ledSuperLowS2:
+    number: expplayfield-2-14
+    type: rgb
+    subtype: led
+
+  ledSuperLowS3:
+    number: expplayfield-2-15
+    type: rgb
+    subtype: led
+
+# -------------------------------------
+# DROP TARGETS
+# -------------------------------------
+  # -------------------------------------
+  # DROP TARGETS :: DOUBLE BONUS LIT
+  # -------------------------------------
+  ledDoubleBonusLit1:
+    number: expplayfield-2-16
+    type: rgb
+    subtype: led
+
+  ledDoubleBonusLit2:
+    number: expplayfield-2-17
+    type: rgb
+    subtype: led
+
+  ledDoubleBonusLit3:
+    number: expplayfield-2-18
+    type: rgb
+    subtype: led
+
+  ledDoubleBonusLit4:
+    number: expplayfield-2-19
+    type: rgb
+    subtype: led
+
+  ledDoubleBonusLit5:
+    number: expplayfield-2-20
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # DROP TARGETS :: EXTRA BALL LIT
+  # -------------------------------------
+  ledExtraBallLit1:
+    number: expplayfield-2-21
+    type: rgb
+    subtype: led
+
+  ledExtraBallLit2:
+    number: expplayfield-2-22
+    type: rgb
+    subtype: led
+
+  ledExtraBallLit3:
+    number: expplayfield-2-23
+    type: rgb
+    subtype: led
+
+  ledExtraBallLit4:
+    number: expplayfield-2-24
+    type: rgb
+    subtype: led
+
+  ledExtraBallLit5:
+    number: expplayfield-2-25
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # DROP TARGETS :: SPECIAL LIT
+  # -------------------------------------
+  ledSpecialLit1:
+    number: expplayfield-2-26
+    type: rgb
+    subtype: led
+
+  ledSpecialLit2:
+    number: expplayfield-2-27
+    type: rgb
+    subtype: led
+
+  ledSpecialLit3:
+    number: expplayfield-2-28
+    type: rgb
+    subtype: led
+
+  ledSpecialLit4:
+    number: expplayfield-2-29
+    type: rgb
+    subtype: led
+
+  ledSpecialLit5:
+    number: expplayfield-2-30
+    type: rgb
+    subtype: led
+
+# -------------------------------------
+# SPINNER :: STANDUPS :: OUTLANES :: AWARDS
+# -------------------------------------
+  # -------------------------------------
+  # SPINNER :: SPINNER RIGHT
+  # -------------------------------------
+  ledSpinnerRight1:
+    number: expplayfield-3-1
+    type: rgb
+    subtype: led
+
+  ledSpinnerRight2:
+    number: expplayfield-3-2
+    type: rgb
+    subtype: led
+
+  ledSpinnerRight3:
+    number: expplayfield-3-3
+    type: rgb
+    subtype: led
+
+  ledSpinnerRight4:
+    number: expplayfield-3-4
+    type: rgb
+    subtype: led
+
+  ledSpinnerRight5:
+    number: expplayfield-3-5
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # STANDUP :: CYCLE 2C
+  # -------------------------------------
+  ledStandupCycle2C1:
+    number: expplayfield-3-6
+    type: rgb
+    subtype: led
+
+  ledStandupCycle2C2:
+    number: expplayfield-3-7
+    type: rgb
+    subtype: led
+
+  ledStandupCycle2C3:
+    number: expplayfield-3-8
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # STANDUP :: CYCLE L
+  # -------------------------------------
+  ledStandupCycleL1:
+    number: expplayfield-3-9
+    type: rgb
+    subtype: led
+
+  ledStandupCycleL2:
+    number: expplayfield-3-10
+    type: rgb
+    subtype: led
+
+  ledStandupCycleL3:
+    number: expplayfield-3-11
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # STANDUP :: CYCLE E
+  # -------------------------------------
+  ledStandupCycleE1:
+    number: expplayfield-3-12
+    type: rgb
+    subtype: led
+
+  ledStandupCycleE2:
+    number: expplayfield-3-13
+    type: rgb
+    subtype: led
+
+  ledStandupCycleE3:
+    number: expplayfield-3-14
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # OUTLANE :: RIGHT
+  # -------------------------------------
+  ledOutlaneRight1:
+    number: expplayfield-3-15
+    type: rgb
+    subtype: led
+
+  ledOutlaneRight2:
+    number: expplayfield-3-16
+    type: rgb
+    subtype: led
+
+  ledOutlaneRight3:
+    number: expplayfield-3-17
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # AWARD :: EXTRA BALL
+  # -------------------------------------
+  ledExtraBallAward1:
+    number: expplayfield-3-18
+    type: rgb
+    subtype: led
+
+  ledExtraBallAward2:
+    number: expplayfield-3-19
+    type: rgb
+    subtype: led
+
+  ledExtraBallAward3:
+    number: expplayfield-3-20
+    type: rgb
+    subtype: led
+
+  ledExtraBallAward4:
+    number: expplayfield-3-21
+    type: rgb
+    subtype: led
+
+  ledExtraBallAward5:
+    number: expplayfield-3-22
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # AWARD :: DOUBLE BONUS
+  # -------------------------------------
+  ledDoubleBonusAward1:
+    number: expplayfield-3-23
+    type: rgb
+    subtype: led
+
+  ledDoubleBonusAward2:
+    number: expplayfield-3-24
+    type: rgb
+    subtype: led
+
+  ledDoubleBonusAward3:
+    number: expplayfield-3-25
+    type: rgb
+    subtype: led
+
+  ledDoubleBonusAward4:
+    number: expplayfield-3-26
+    type: rgb
+    subtype: led
+
+  ledDoubleBonusAward5:
+    number: expplayfield-3-27
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # OUTLANE :: LEFT
+  # -------------------------------------
+  ledOutlaneLeft1:
+    number: expplayfield-3-28
+    type: rgb
+    subtype: led
+
+  ledOutlaneLeft2:
+    number: expplayfield-3-29
+    type: rgb
+    subtype: led
+
+  ledOutlaneLeft3:
+    number: expplayfield-3-30
+    type: rgb
+    subtype: led
+
+# -------------------------------------
+# ARROW :: SPINNER :: CYCLE :: SUPER TOP
+# -------------------------------------
+  # -------------------------------------
+  # ARROWS
+  # -------------------------------------
+  ledSuperArrow1:
+    number: expplayfield-4-1
+    type: rgb
+    subtype: led
+
+  ledSuperArrow2:
+    number: expplayfield-4-2
+    type: rgb
+    subtype: led
+
+  ledSuperArrow3:
+    number: expplayfield-4-3
+    type: rgb
+    subtype: led
+  
+  ledSuperArrow4:
+    number: expplayfield-4-4
+    type: rgb
+    subtype: led
+
+  ledSuperArrow5:
+    number: expplayfield-4-5
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # SPINNER :: LEFT
+  # -------------------------------------
+  ledSpinnerLeft1:
+    number: expplayfield-4-6
+    type: rgb
+    subtype: led
+
+  ledSpinnerLeft2:
+    number: expplayfield-4-7
+    type: rgb
+    subtype: led
+
+  ledSpinnerLeft3:
+    number: expplayfield-4-8
+    type: rgb
+    subtype: led
+  
+  ledSpinnerLeft4:
+    number: expplayfield-4-9
+    type: rgb
+    subtype: led
+
+  ledSpinnerLeft5:
+    number: expplayfield-4-10
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # STANDUP :: CYCLE 1C
+  # -------------------------------------
+  ledTopLaneCycle1C1:
+    number: expplayfield-4-11
+    type: rgb
+    subtype: led
+
+  ledTopLaneCycle1C2:
+    number: expplayfield-4-12
+    type: rgb
+    subtype: led
+
+  ledTopLaneCycle1C3:
+    number: expplayfield-4-13
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # SUPER TOP :: S
+  # -------------------------------------
+  ledSuperTopS1:
+    number: expplayfield-4-14
+    type: rgb
+    subtype: led
+
+  ledSuperTopS2:
+    number: expplayfield-4-15
+    type: rgb
+    subtype: led
+
+  ledSuperTopS3:
+    number: expplayfield-4-16
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # SUPER TOP :: U
+  # -------------------------------------
+  ledSuperTopU1:
+    number: expplayfield-4-17
+    type: rgb
+    subtype: led
+
+  ledSuperTopU2:
+    number: expplayfield-4-18
+    type: rgb
+    subtype: led
+
+  ledSuperTopU3:
+    number: expplayfield-4-19
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # SUPER TOP :: P
+  # -------------------------------------
+  ledSuperTopP1:
+    number: expplayfield-4-20
+    type: rgb
+    subtype: led
+
+  ledSuperTopP2:
+    number: expplayfield-4-21
+    type: rgb
+    subtype: led
+
+  ledSuperTopP3:
+    number: expplayfield-4-22
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # SUPER TOP :: E
+  # -------------------------------------
+  ledSuperTopE1:
+    number: expplayfield-4-23
+    type: rgb
+    subtype: led
+
+  ledSuperTopE2:
+    number: expplayfield-4-24
+    type: rgb
+    subtype: led
+
+  ledSuperTopE3:
+    number: expplayfield-4-25
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # SUPER TOP :: R
+  # -------------------------------------
+  ledSuperTopR1:
+    number: expplayfield-4-26
+    type: rgb
+    subtype: led
+
+  ledSuperTopR2:
+    number: expplayfield-4-27
+    type: rgb
+    subtype: led
+
+  ledSuperTopR3:
+    number: expplayfield-4-28
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # STANDUP :: CYCLE Y
+  # -------------------------------------
+  ledTopLaneCycleY1:
+    number: expplayfield-4-29
+    type: rgb
+    subtype: led
+
+  ledTopLaneCycleY2:
+    number: expplayfield-4-30
+    type: rgb
+    subtype: led
+
+  ledTopLaneCycleY3:
+    number: expplayfield-4-31
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # BUCK UPPER LANES
+  # -------------------------------------
+  ledBuckUpperB:
+    number: expplayfield-5-1
+    type: rgb
+    subtype: led
+    
+  ledBuckUpperU:
+    number: expplayfield-5-2
+    type: rgb
+    subtype: led
+    
+  ledBuckUpperC:
+    number: expplayfield-5-3
+    type: rgb
+    subtype: led
+    
+  ledBuckUpperK:
+    number: expplayfield-5-4
+    type: rgb
+    subtype: led
+  # -------------------------------------
+  # TOTEM UPPER LANES
+  # -------------------------------------
+  ledTopLaneUpperA:
+    number: expplayfield-7-1
+    type: rgb
+    subtype: led
+    
+  ledTopLaneUpperB:
+    number: expplayfield-7-2
+    type: rgb
+    subtype: led
+    
+  ledTopLaneUpperC:
+    number: expplayfield-7-3
+    type: rgb
+    subtype: led
+    
+  ledTopLaneUpperD:
+    number: expplayfield-7-4
+    type: rgb
+    subtype: led
+
+
+  # -------------------------------------
+  # BUCK LOWER LANES
+  # -------------------------------------
+  ledBuckLowerB:
+    number: expplayfield-5-5
+    type: rgb
+    subtype: led
+    
+  ledBuckLowerU:
+    number: expplayfield-5-6
+    type: rgb
+    subtype: led
+    
+  ledBuckLowerC:
+    number: expplayfield-5-7
+    type: rgb
+    subtype: led
+    
+  ledBuckLowerK:
+    number: expplayfield-5-8
+    type: rgb
+    subtype: led
+  # -------------------------------------
+  # TOTEM LOWER LANES
+  # -------------------------------------
+  ledTopLaneLowerA:
+    number: expplayfield-7-5
+    type: rgb
+    subtype: led
+    
+  ledTopLaneLowerB:
+    number: expplayfield-7-6
+    type: rgb
+    subtype: led
+    
+  ledTopLaneLowerC:
+    number: expplayfield-7-7
+    type: rgb
+    subtype: led
+    
+  ledTopLaneLowerD:
+    number: expplayfield-7-8
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # SHOOT AGAIN
+  # -------------------------------------
+  ledShootAgain1:
+    number: expplayfield-5-9
+    type: rgb
+    subtype: led
+
+  ledShootAgain2:
+    number: expplayfield-5-10
+    type: rgb
+    subtype: led
+
+  ledShootAgain3:
+    number: expplayfield-5-11
+    type: rgb
+    subtype: led
+
+  ledShootAgain4:
+    number: expplayfield-5-12
+    type: rgb
+    subtype: led
+
+  ledShootAgain5:
+    number: expplayfield-5-13
+    type: rgb
+    subtype: led
+    
+  ledShootAgain6:
+    number: expplayfield-5-14
+    type: rgb
+    subtype: led
+    
+  ledShootAgain7:
+    number: expplayfield-5-15
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # BONUS VALUE
+  # -------------------------------------
+  ledBonus1000:
+    number: expplayfield-5-16
+    type: rgb
+    subtype: led
+    
+  ledBonus2000:
+    number: expplayfield-5-17
+    type: rgb
+    subtype: led
+    
+  ledBonus3000:
+    number: expplayfield-5-18
+    type: rgb
+    subtype: led
+    
+  ledBonus4000:
+    number: expplayfield-5-19
+    type: rgb
+    subtype: led
+    
+  ledBonus5000:
+    number: expplayfield-5-20
+    type: rgb
+    subtype: led
+    
+  ledBonus6000:
+    number: expplayfield-5-21
+    type: rgb
+    subtype: led
+    
+  ledBonus7000:
+    number: expplayfield-5-22
+    type: rgb
+    subtype: led
+    
+  ledBonus8000:
+    number: expplayfield-5-23
+    type: rgb
+    subtype: led
+    
+  ledBonus9000:
+    number: expplayfield-5-24
+    type: rgb
+    subtype: led
+    
+  ledBonus10k:
+    number: expplayfield-5-25
+    type: rgb
+    subtype: led
+    
+  ledBonus20k:
+    number: expplayfield-5-26
+    type: rgb
+    subtype: led
+    
+  # -------------------------------------
+  # BONUS MULTIPLIER
+  # -------------------------------------
+  ledBonusMulti2x:
+    number: expplayfield-5-27
+    type: rgb
+    subtype: led
+    
+  ledBonusMulti3x:
+    number: expplayfield-5-28
+    type: rgb
+    subtype: led
+    
+  ledBonusMulti4x:
+    number: expplayfield-5-29
+    type: rgb
+    subtype: led
+    
+  ledBonusMulti5x:
+    number: expplayfield-5-30
+    type: rgb
+    subtype: led
+    
+  # -------------------------------------
+  # BONUS COUNT
+  # -------------------------------------
+  ledBonusBase:
+    number: expplayfield-5-31
+    type: rgb
+    subtype: led
+    
+  ledBonusCount1:
+    number: expplayfield-5-32
+    type: rgb
+    subtype: led
+    
+  ledBonusCount2:
+    number: expplayfield-6-1
+    type: rgb
+    subtype: led
+    
+  ledBonusCount3:
+    number: expplayfield-6-2
+    type: rgb
+    subtype: led
+    
+  ledBonusCount4:
+    number: expplayfield-6-3
+    type: rgb
+    subtype: led
+    
+  ledBonusCount5:
+    number: expplayfield-6-4
+    type: rgb
+    subtype: led
+    
+  ledBonusReturn:
+    number: expplayfield-6-5
+    type: rgb
+    subtype: led
+    
+  # -------------------------------------
+  # DROPS WHEN LIT MIDDLE
+  # -------------------------------------
+  ledWhenLitDropMiddle1:
+    number: expplayfield-7-9
+    type: rgb
+    subtype: led
+
+  ledWhenLitDropMiddle2:
+    number: expplayfield-7-10
+    type: rgb
+    subtype: led
+
+  ledWhenLitDropMiddle3:
+    number: expplayfield-7-11
+    type: rgb
+    subtype: led
+
+  ledWhenLitDropMiddle4:
+    number: expplayfield-7-12
+    type: rgb
+    subtype: led
+
+  ledWhenLitDropMiddle5:
+    number: expplayfield-7-13
+    type: rgb
+    subtype: led
+
+  ledWhenLitDropMiddle6:
+    number: expplayfield-7-14
+    type: rgb
+    subtype: led
+
+  # -------------------------------------
+  # DROPS WHEN LIT OLD
+  # -------------------------------------
+  ledWhenLitYellowDrop1:
+    number: expplayfield-6-6
+    type: rgb
+    subtype: led
+    
+  ledWhenLitYellowDrop2:
+    number: expplayfield-6-7
+    type: rgb
+    subtype: led
+    
+  ledWhenLitRedDrop:
+    number: expplayfield-6-8
+    type: rgb
+    subtype: led
+    
+  ledWhenLitSaucer:
+    number: expplayfield-6-9
+    type: rgb
+    subtype: led
+
+
+  # -------------------------------------
+  # DROPS WHEN LIT
+  # -------------------------------------
+  ledExtraBall:
+    number: expplayfield-6-10
+    type: rgb
+    subtype: led
+  
+  # -------------------------------------
+  # DUMMY LIGHTS FOR SHOW PURPOSES
+  # -------------------------------------
+  ledDummy1:
+    number: expplayfield-6-11
+    type: rgb
+  ledDummy2:
+    number: expplayfield-6-12
+    type: rgb
+  ledDummy3:
+    number: expplayfield-6-13
+    type: rgb
+  ledDummy4:
+    number: expplayfield-6-14
+    type: rgb
+
+  # -------------------------------------
+  # BONUS VALUE
+  # -------------------------------------
+  ledBonus1:
+    number: expplayfield-6-15
+    type: rgb
+    subtype: led
+    
+  ledBonus2:
+    number: expplayfield-6-16
+    type: rgb
+    subtype: led
+    
+  ledBonus3:
+    number: expplayfield-6-17
+    type: rgb
+    subtype: led
+    
+  ledBonus4:
+    number: expplayfield-6-18
+    type: rgb
+    subtype: led
+    
+  ledBonus5:
+    number: expplayfield-6-19
+    type: rgb
+    subtype: led
+    
+  ledBonus6:
+    number: expplayfield-6-20
+    type: rgb
+    subtype: led
+    
+  ledBonus7:
+    number: expplayfield-6-21
+    type: rgb
+    subtype: led
+    
+  ledBonus8:
+    number: expplayfield-6-22
+    type: rgb
+    subtype: led
+    
+  ledBonus9:
+    number: expplayfield-6-23
+    type: rgb
+    subtype: led
+    
+  ledBonus10:
+    number: expplayfield-6-24
+    type: rgb
+    subtype: led
+    
+  ledBonus20:
+    number: expplayfield-6-25
+    type: rgb
+    subtype: led

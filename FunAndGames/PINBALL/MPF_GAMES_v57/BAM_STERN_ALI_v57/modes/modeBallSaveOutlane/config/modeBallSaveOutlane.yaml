@@ -1,0 +1,142 @@
+#config_version=6
+
+mode:
+  start_events:
+    sgLaneOutretJupiterOne_litFlash_complete
+    sgLaneOutretEuropa_litFlash_complete
+    sgLaneOutretGanymede_litFlash_complete
+    sgLaneOutretCallisto_litFlash_complete
+  stop_events:
+    eventStopBallSaveOutlane
+    ball_ending
+  priority: 6500
+
+ball_saves:    
+  bsOutlane:
+    active_time: 8s
+    hurry_up_time: 4s
+    grace_period: 2s
+    enable_events: sw_tagOutlane
+    disable_events:
+      - ball_starting
+      - ball_will_end
+    early_ball_save_events: sw_tagOutlane
+    auto_launch: true
+    balls_to_save: 1
+    debug: true
+    
+event_player:
+  ball_save_bsOutlane_saving_ball:
+    eventStopBallSaveOutlane|3s
+    
+slide_player:
+  ball_save_bsOutlane_saving_ball:
+    slideBallSaveOutlane:
+      target: displayDMD
+  
+
+slides:
+  slideBallSaveOutlane:
+    widgets:
+      # -------------------------------
+      # BLUE FORGROUND
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: '0000ff'
+        text: Ball Saved
+        y: middle
+        x: middle
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+      # -------------------------------
+      # -------------------------------
+      # GREEN BACKGROUND
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: '00ff00'
+        text: Ball Saved
+        y: middle-1
+        x: middle+1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: '00ff00'
+        text: Ball Saved
+        y: middle-1
+        x: middle-1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: '00ff00'
+        text: Ball Saved
+        y: middle+1
+        x: middle+1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      - type: text
+        style: tall_title
+        font_size: 32
+        color: '00ff00'
+        text: Ball Saved
+        y: middle+1
+        x: middle-1
+        animations: 
+          entrance:
+          - property: font_size
+            value: 32
+            duration: 2000ms
+            timing: with_previous
+          - property: opacity
+            value: 0
+            duration: 1000ms
+            timing: after_previous
+            
+      # -------------------------------
+            
+    expire: 2.0s
+    
+    
+
+
+

@@ -1,0 +1,37 @@
+#show_version=6
+
+- time: 0
+  lights:
+    # --------------------------
+    l_shoot_again_1_1: 'ff0080'
+    l_shoot_again_1_2: '800040'
+    l_shoot_again_1_3: 'c00060'
+    l_shoot_again_1_4: 'ff0080'
+    l_shoot_again_1_5: '800040'
+    l_shoot_again_1_6: 'c00060'
+    # --------------------------
+
+- time: 1
+  lights:
+    # --------------------------
+    l_shoot_again_1_2: 'ff0080'
+    l_shoot_again_1_3: '800040'
+    l_shoot_again_1_4: 'c00060'
+    l_shoot_again_1_5: 'ff0080'
+    l_shoot_again_1_6: '800040'
+    l_shoot_again_1_1: 'c00060'
+    # --------------------------
+
+- time: 2
+  lights:
+    # --------------------------
+    l_shoot_again_1_3: 'ff0080'
+    l_shoot_again_1_4: '800040'
+    l_shoot_again_1_5: 'c00060'
+    l_shoot_again_1_6: 'ff0080'
+    l_shoot_again_1_1: '800040'
+    l_shoot_again_1_2: 'c00060'
+    # --------------------------
+    
+- time: "+1"
+

@@ -1,0 +1,17 @@
+#show_version=6
+
+- time: 0
+  # ------------------------
+  # YELLOW
+  shows:
+    solidDiamondThreeLedTwoColor:
+      loops: 0
+      speed: 3
+      show_tokens:
+        color1: colorLedTattooMystiqueThreeUpBlack1
+        color2: colorLedTattooMystiqueThreeUpBlack2
+        led1: ledLane4A
+        led2: ledLane4B
+        led3: ledLane4C
+
+- time: '+2'

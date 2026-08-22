@@ -1,0 +1,390 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  eventShowSlideBaseShows:
+    slideBaseDMD:
+      target: displayDMD
+    #slideBaseBackglass:
+    slideAttractBackglassTattooMystique5:
+      target: displayBackglass
+
+slides:
+# ---------------------
+# SLIDE::DMD
+# ---------------------
+  slideBaseDMD:
+    target: displayDMD
+    widgets:
+    # ---------------------
+    # ANIMATED IMAGES
+    # ---------------------
+    # TIGER HEAD :: PURPLE
+    # ---------------------
+    - type: image
+      image: imageTigerHeadPurple
+      y: middle
+      x: middle
+      z: 50
+      opacity: 0
+      scale: 0.25
+      animations:
+        # -----------------------
+        # MAKE VISIBLE :: TIGER HEAD :: PURPLE
+        #show_slide:
+        eventMakeVisibleTigerHeadPurple:
+          # -----------------------
+          - property: opacity
+            value: 1
+            duration: 1.5s
+          - property: scale
+            value: 1
+            duration: 1.5s
+            timing: with_previous
+          # -----------------------
+          - property: opacity
+            value: 0
+            duration: 1.0s
+          - property: scale
+            value: 4
+            duration: 1.5s
+            timing: with_previous
+          # -----------------------
+          - property: scale
+            value: 0.25
+            duration: 0.1s
+      # ---------------------
+      # TIGER HEAD :: ORANGE
+      # ---------------------
+    - type: image
+      image: imageTigerHeadOrange
+      y: middle
+      x: middle
+      z: 60
+      opacity: 0
+      scale: 0.25
+      animations:
+        # -----------------------
+        # MAKE VISIBLE :: TIGER HEAD :: PURPLE
+        eventMakeVisibleTigerHeadOrange:
+          # -----------------------
+          - property: opacity
+            value: 1
+            duration: 1.5s
+          - property: scale
+            value: 1
+            duration: 1.5s
+            timing: with_previous
+          # -----------------------
+          - property: opacity
+            value: 0
+            duration: 1.0s
+          - property: scale
+            value: 4
+            duration: 1.5s
+            timing: with_previous
+          # -----------------------
+          - property: scale
+            value: 0.25
+            duration: 0.1s
+
+      # -------------------------------------------------
+      #                       TOP
+      # -------------------------------------------------
+      # -----------------
+      # MOON NAME, CENTER ORANGE
+      # -----------------
+    - type: text
+      text: "(player|nameMoon)"
+      y: top - 23
+      x: middle
+      z: 40
+      style: fontBaseMainTattooMystiqueHeader
+      color: colorFontBaseMainTattooMystiqueHeaderInner
+      # -----------------
+      # MOON NAME, OUTLINE GREEN
+      # -----------------
+    - type: text
+      text: (player|nameMoon)
+      y: top - 24
+      x: middle - 1
+      z: 30
+      style: fontBaseMainTattooMystiqueHeader
+      color: colorFontBaseMainTattooMystiqueHeaderOuter1
+      # ---------------------
+    - type: text
+      text: (player|nameMoon)
+      y: top - 24
+      x: middle + 1
+      z: 30
+      style: fontBaseMainTattooMystiqueHeader
+      color: colorFontBaseMainTattooMystiqueHeaderOuter1
+      # ---------------------
+    - type: text
+      text: (player|nameMoon)
+      y: top - 22
+      x: middle - 1
+      z: 30
+      style: fontBaseMainTattooMystiqueHeader
+      color: colorFontBaseMainTattooMystiqueHeaderOuter1
+      # ---------------------
+    - type: text
+      text: (player|nameMoon)
+      y: top - 22
+      x: middle + 1
+      z: 30
+      style: fontBaseMainTattooMystiqueHeader
+      color: colorFontBaseMainTattooMystiqueHeaderOuter1
+      # -------------------------------------------------
+
+
+      # -------------------------------------------------
+      #                       MIDDLE
+      # -------------------------------------------------
+      # -----------------
+      # RED CENTER
+      # -----------------
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 5
+      x: middle
+      z: 40
+      style: fontBaseMainTattooMystiqueMiddle
+      color: colorFontBaseMainTattooMystiqueMiddleInner
+      
+      # -----------------
+      # OUTLINE CYAN
+      # -----------------
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 4
+      x: middle - 1
+      z: 30
+      style: fontBaseMainTattooMystiqueMiddle
+      color: colorFontBaseMainTattooMystiqueMiddleOuter1
+      # ---------------------
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 4
+      x: middle + 1
+      z: 30
+      style: fontBaseMainTattooMystiqueMiddle
+      color: colorFontBaseMainTattooMystiqueMiddleOuter1
+      # ---------------------
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 6
+      x: middle + 1
+      z: 30
+      style: fontBaseMainTattooMystiqueMiddle
+      color: colorFontBaseMainTattooMystiqueMiddleOuter1
+      # ---------------------
+    - type: text
+      text: (player|score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 6
+      x: middle - 1
+      z: 30
+      style: fontBaseMainTattooMystiqueMiddle
+      color: colorFontBaseMainTattooMystiqueMiddleOuter1
+      # -------------------------------------------------
+
+
+      # -------------------------------------------------
+      #                       BOTTOM
+      # -------------------------------------------------
+      # -----------------
+      # CENTER YELLOW
+      # -----------------
+    - type: text
+      text: Player (player|number)    Ball (player|ball)
+      anchor_y: bottom
+      y: bottom + 5
+      x: middle
+      z: 40
+      style: fontBaseMainTattooMystiqueFooter
+      color: colorFontBaseMainTattooMystiqueFooterInner
+      
+      # -----------------
+      # OUTLINE GREEN
+      # -----------------
+    - type: text
+      text: Player (player|number)    Ball (player|ball)
+      anchor_y: bottom
+      y: bottom + 6
+      x: middle - 1
+      z: 30
+      style: fontBaseMainTattooMystiqueFooter
+      color: colorFontBaseMainTattooMystiqueFooterOuter1
+      # ---------------------
+    - type: text
+      text: Player (player|number)    Ball (player|ball)
+      anchor_y: bottom
+      y: bottom + 6
+      x: middle + 1
+      z: 30
+      style: fontBaseMainTattooMystiqueFooter
+      color: colorFontBaseMainTattooMystiqueFooterOuter1
+      # ---------------------
+    - type: text
+      text: Player (player|number)    Ball (player|ball)
+      anchor_y: bottom
+      y: bottom + 4
+      x: middle + 1
+      z: 30
+      style: fontBaseMainTattooMystiqueFooter
+      color: colorFontBaseMainTattooMystiqueFooterOuter1
+      # ---------------------
+    - type: text
+      text: Player (player|number)    Ball (player|ball)
+      anchor_y: bottom
+      y: bottom + 4
+      x: middle - 1
+      z: 30
+      style: fontBaseMainTattooMystiqueFooter
+      color: colorFontBaseMainTattooMystiqueFooterOuter1
+      # -------------------------------------------------
+
+
+      # -------------------------------------------------
+      #                       MULTIPLIER BUG::PURPLE
+      # -------------------------------------------------
+      # -----------------
+      # CENTER
+      # -----------------
+    - type: text
+      text: (player|bonusCountPurple)
+      anchor_y: bottom
+      # y: bottom + 5
+      # x: middle
+      y: middle + 2
+      x: middle - 88
+      z: 40
+      style: fontCollectBonusTattooMystiqueBug
+      color: colorFontCollectBonusTattooMystiqueBugInner
+      
+      # -----------------
+      # OUTLINE ONE
+      # -----------------
+    - type: text
+      text: (player|bonusCountPurple)
+      anchor_y: bottom
+      # y: bottom + 6
+      # x: middle - 1
+      y: middle + 3
+      x: middle - 89
+      z: 30
+      style: fontCollectBonusTattooMystiqueBug
+      color: colorFontCollectBonusTattooMystiqueBugOuter1
+      # ---------------------
+    - type: text
+      text: (player|bonusCountPurple)
+      anchor_y: bottom
+      # y: bottom + 6
+      # x: middle + 1
+      y: middle + 3
+      x: middle - 87
+      z: 30
+      style: fontCollectBonusTattooMystiqueBug
+      color: colorFontCollectBonusTattooMystiqueBugOuter1
+      # ---------------------
+    - type: text
+      text: (player|bonusCountPurple)
+      anchor_y: bottom
+      # y: bottom + 4
+      # x: middle + 1
+      y: middle + 1
+      x: middle - 89
+      z: 30
+      style: fontCollectBonusTattooMystiqueBug
+      color: colorFontCollectBonusTattooMystiqueBugOuter1
+      # ---------------------
+    - type: text
+      text: (player|bonusCountPurple)
+      anchor_y: bottom
+      # y: bottom + 4
+      # x: middle - 1
+      y: middle + 1
+      x: middle - 87
+      z: 30
+      style: fontCollectBonusTattooMystiqueBug
+      color: colorFontCollectBonusTattooMystiqueBugOuter1
+      # -------------------------------------------------
+
+
+      # -------------------------------------------------
+      #                       MULTIPLIER BUG::Orange
+      # -------------------------------------------------
+      # -----------------
+      # CENTER
+      # -----------------
+    - type: text
+      text: (player|bonusCountOrange)
+      anchor_y: bottom
+      # y: bottom + 5
+      # x: middle
+      y: middle + 2
+      x: middle + 88
+      z: 40
+      style: fontCollectBonusTattooMystiqueBug
+      color: colorFontCollectBonusTattooMystiqueBugOuter1
+      
+      # -----------------
+      # OUTLINE ONE
+      # -----------------
+    - type: text
+      text: (player|bonusCountOrange)
+      anchor_y: bottom
+      # y: bottom + 6
+      # x: middle - 1
+      y: middle + 3
+      x: middle + 89
+      z: 30
+      style: fontCollectBonusTattooMystiqueBug
+      color: colorFontCollectBonusTattooMystiqueBugInner
+      # ---------------------
+    - type: text
+      text: (player|bonusCountOrange)
+      anchor_y: bottom
+      # y: bottom + 6
+      # x: middle + 1
+      y: middle + 3
+      x: middle + 87
+      z: 30
+      style: fontCollectBonusTattooMystiqueBug
+      color: colorFontCollectBonusTattooMystiqueBugInner
+      # ---------------------
+    - type: text
+      text: (player|bonusCountOrange)
+      anchor_y: bottom
+      # y: bottom + 4
+      # x: middle + 1
+      y: middle + 1
+      x: middle + 89
+      z: 30
+      style: fontCollectBonusTattooMystiqueBug
+      color: colorFontCollectBonusTattooMystiqueBugInner
+      # ---------------------
+    - type: text
+      text: (player|bonusCountOrange)
+      anchor_y: bottom
+      # y: bottom + 4
+      # x: middle - 1
+      y: middle + 1
+      x: middle + 87
+      z: 30
+      style: fontCollectBonusTattooMystiqueBug
+      color: colorFontCollectBonusTattooMystiqueBugInner
+      # -------------------------------------------------
+

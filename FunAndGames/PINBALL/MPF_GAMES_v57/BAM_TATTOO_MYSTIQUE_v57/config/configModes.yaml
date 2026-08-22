@@ -1,0 +1,25 @@
+#config_version=6
+
+modes:
+#-----------------
+# MODES::GENERIC
+#-----------------
+- modeBase
+- modeBallSave
+
+#-----------------
+# MODES::GAME
+#-----------------
+- modeTattooMystiqueBase
+- modeTattooMystiquePurple
+- modeTattooMystiqueOrange
+- modeTattooMystiqueSandbox
+# COLLECT MID-GAME BONUS
+- modeTattooMystiqueExponentialBonus
+
+#-----------------
+# MODES::BUILT-IN
+#-----------------
+- credits
+- bonus
+- high_score

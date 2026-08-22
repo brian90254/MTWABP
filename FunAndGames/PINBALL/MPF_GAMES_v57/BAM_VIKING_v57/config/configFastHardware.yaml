@@ -1,0 +1,699 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ---------------
+# HARDWARE
+# ---------------
+hardware:
+  #driverboards: fast
+  platform: fast
+  lights: fadecandy
+  
+fast:
+  net:
+    controller: nano
+    port: auto
+    baud: 921600
+    #debug: false
+    debug: true
+    watchdog: 1s
+    io_loop:
+      # THESE "fastBoard" NAMES ARE VARIABLE
+      fastBoard_0:
+        model: FP-I/O-1616
+        order: 1
+      fastBoard_1:
+        model: FP-I/O-3208
+        order: 2
+      # fastBoard_2:
+      #   model: FP-I/O-0804
+      #   order: 3
+  
+
+# ******************************************
+# ------------------------------------------
+# HARDWARE / SWITCHES
+# ------------------------------------------
+# ******************************************
+
+switches:
+
+  # *************************
+  # BOARD ZERO - 1616
+  # *************************
+  # HARDWARE / SWITCHES
+  # *************************
+  # ------------- BANK 0-7 ---------------
+  s_0_0:
+    number: fastBoard_0-0
+    # N/A
+  s_0_1:
+    number: fastBoard_0-1
+    # TILT
+    tags: sTilt, tagTilt
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+  s_0_2:
+    number: fastBoard_0-2
+    # N/A
+
+  s_0_3:
+    number: fastBoard_0-3
+    #N/A
+
+  s_0_4:
+    number: fastBoard_0-4
+    tags: sInlineD, tagDropInline
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+  s_0_5:
+    number: fastBoard_0-5
+    tags: sInlineC, tagDropInline
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+  s_0_6:
+    number: fastBoard_0-6
+    tags: sInlineB, tagDropInline
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+  s_0_7:
+    number: fastBoard_0-7
+    tags: sInlineA, tagDropInline
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+    
+  # ------------- BANK 8-15 ---------------
+  s_0_8:
+    number: fastBoard_0-8
+    tags: start, player, tagStart
+    platform_settings:
+      debounce_open:   0
+      debounce_close:  200
+  s_0_9:
+    number: fastBoard_0-9
+    #tags: player, flipper_right, right_flipper
+    tags: player, flipper_left, left_flipper
+    platform_settings:
+      debounce_open:   0
+      debounce_close:  0
+  s_0_10:
+    number: fastBoard_0-10
+    #tags: player, flipper_left, left_flipper
+    tags: player, flipper_right, right_flipper
+    platform_settings:
+      debounce_open:   0
+      debounce_close:  0
+  s_0_11:
+    number: fastBoard_0-11
+    tags: tagLaunch
+    platform_settings:
+      debounce_open:   0
+      debounce_close:  200
+  s_0_12:
+    number: fastBoard_0-12
+    #N/A
+  s_0_13:
+    number: fastBoard_0-13
+    #N/A
+  s_0_14:
+    number: fastBoard_0-14
+    #N/A
+  s_0_15:
+    number: fastBoard_0-15
+    #N/A
+
+
+  # *************************
+  # BOARD ONE - 3208
+  # *************************
+  # HARDWARE / SWITCHES
+  # *************************
+  # ------------- BANK 0-7 ---------------
+  s_1_0:
+    number: fastBoard_1-0
+    #N/A
+  s_1_1:
+    number: fastBoard_1-1
+    #N/A
+  s_1_2:
+    number: fastBoard_1-2
+    tags: sTopLaneB, tagLane
+    platform_settings:
+      debounce_open:   1
+      debounce_close:  200
+      #debounce_open:   200
+      #debounce_close:  1
+  s_1_3:
+    number: fastBoard_1-3
+    tags: sLeftRollover, tagRollover
+    platform_settings:
+      debounce_open:   1
+      debounce_close:  200
+  s_1_4:
+    number: fastBoard_1-4
+    tags: sDropRight3, tagDropRight
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+  s_1_5:
+    number: fastBoard_1-5
+    tags: sDropRight1, tagDropRight
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+  s_1_6:
+    number: fastBoard_1-6
+    #N/A
+  s_1_7:
+    number: fastBoard_1-7
+    #N/A
+    
+  # ------------- BANK 8-15 ---------------
+  s_1_8:
+    number: fastBoard_1-8
+    #N/A
+  s_1_9:
+    number: fastBoard_1-9
+    #N/A
+  s_1_10:
+    number: fastBoard_1-10
+    tags: sDropRightTarget, tagTarget
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+  s_1_11:
+    number: fastBoard_1-11
+    #RT_DROP_2
+    tags: sDropRight2, tagDropRight
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+  s_1_12:
+    number: fastBoard_1-12
+    #TOP_SAUCER
+    tags: sSaucerTop, tagSaucer
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+  s_1_13:
+    number: fastBoard_1-13
+    tags: sSpinner, tagSpinner
+    platform_settings:
+      debounce_open:   1
+      debounce_close:  10
+      # debounce_open:   250
+      # debounce_close:  250
+  s_1_14:
+    number: fastBoard_1-14
+    tags: sTopLaneA, tagLane
+    platform_settings:
+      debounce_open:   1
+      debounce_close:  200
+      #debounce_open:   200
+      #debounce_close:  1
+  s_1_15:
+    number: fastBoard_1-15
+    #N/A
+
+  # ------------- BANK 16-23 ---------------
+  s_1_16:
+    number: fastBoard_1-16
+    tags: sTargetLeft, tagTarget
+    platform_settings:
+      debounce_open:   1
+      debounce_close:  200
+  s_1_17:
+    number: fastBoard_1-17
+    tags: sRightReturn, tagReturnLane
+    platform_settings:
+      debounce_open:   1
+      debounce_close:  200
+  s_1_18:
+    number: fastBoard_1-18
+    tags: sLeftOutline, tagOutlane
+    platform_settings:
+      debounce_open:   5
+      debounce_close:  200
+  s_1_19:
+    number: fastBoard_1-19
+    # INLINE_TARGET
+    tags: sInlineTarget, tagTarget
+    platform_settings:
+      debounce_open:   5
+      debounce_close:  200
+  s_1_20:
+    number: fastBoard_1-20
+    #N/A
+  s_1_21:
+    number: fastBoard_1-21
+    tags: sRightSling, tagSling
+    platform_settings:
+      debounce_open:   5
+      debounce_close:  200
+  s_1_22:
+    number: fastBoard_1-22
+    tags: sBottomRightThumper, tagThumper
+    platform_settings:
+      debounce_open:   1
+      debounce_close:  200
+  s_1_23:
+    number: fastBoard_1-23
+    tags: sTopRightThumper, tagThumper
+    platform_settings:
+      debounce_open:   1
+      debounce_close:  200
+    
+  # ------------- BANK 24-31 ---------------
+  s_1_24:
+    number: fastBoard_1-24
+    tags: sTopLeftThumper, tagThumper
+    platform_settings:
+      debounce_open:   1
+      debounce_close:  200
+  s_1_25:
+    number: fastBoard_1-25
+    tags: sBottomLeftThumper, tagThumper
+    platform_settings:
+      debounce_open:   1
+      debounce_close:  200
+  s_1_26:
+    number: fastBoard_1-26
+    tags: sLeftSling, tagSling
+    platform_settings:
+      debounce_open:   5
+      debounce_close:  200
+  s_1_27:
+    number: fastBoard_1-27
+    # OUTHOLE
+    tags: sOuthole, tagDrain
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+  s_1_28:
+    number: fastBoard_1-28
+    tags: sSaucerLeft, tagSaucer
+    platform_settings:
+      debounce_open:   50
+      debounce_close:  200
+  s_1_29:
+    number: fastBoard_1-29
+    tags: sRightLane, tagLane
+    platform_settings:
+      debounce_open:   10
+      debounce_close:  200
+  s_1_30:
+    number: fastBoard_1-30
+    tags: sLeftReturn, tagReturnLane
+    platform_settings:
+      debounce_open:   10
+      debounce_close:  200
+  s_1_31:
+    number: fastBoard_1-31
+    tags: sRightOutlane, tagOutlane
+    platform_settings:
+      debounce_open:   10
+      debounce_close:  200
+    
+
+  # BOARD TWO - 1616
+  # *************************
+  # HARDWARE / SWITCHES
+  # *************************
+  # ------------- BANK 0-7 ---------------
+  #s_2_0:
+  #  number: fastBoard_2-0
+  #  #N/A
+  #s_2_1:
+  #  number: fastBoard_2-1
+  #  #N/A
+  #s_2_2:
+  #  number: fastBoard_2-2
+  #  #N/A
+      
+
+# ******************************************
+# ------------------------------------------
+# HARDWARE / COIL
+# ------------------------------------------
+# ******************************************
+coils:
+  # *************************
+  # BOARD ZERO - 1616
+  # *************************
+  # HARDWARE / COILS
+  # *************************
+  # ------------- BANK 0-7 ---------------
+  c_0_0:
+    number: fastBoard_0-0
+    # KNOCKDOWN_3
+    default_pulse_ms: 50
+    max_pulse_ms: 50
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    
+  c_0_1:
+    number: fastBoard_0-1
+    # KNOCKDOWN_2
+    default_pulse_ms: 50
+    max_pulse_ms: 50
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    
+  c_0_2:
+    number: fastBoard_0-2
+    # KNOCKDOWN_1
+    default_pulse_ms: 50
+    max_pulse_ms: 50
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    
+  c_0_3:
+    number: fastBoard_0-3
+    # INLINE_RESET
+    default_pulse_ms: 250
+    max_pulse_ms: 250
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    
+  c_0_4:
+    number: fastBoard_0-4
+    # N/U
+  c_0_5:
+    number: fastBoard_0-5
+    # N/U
+  c_0_6:
+    number: fastBoard_0-6
+    # N/U
+  c_0_7:
+    number: fastBoard_0-7
+    # N/U
+    
+  # ------------- BANK 8-15 ---------------
+
+  c_0_8:
+    number: fastBoard_0-8
+    # LEFT_FLIPPER
+    default_pulse_ms: 250
+    max_pulse_ms: 250
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    default_hold_power: 1.0
+    max_hold_power: 1.0
+    allow_enable: true
+    enable_events: ball_started
+    disable_events: ball_will_end
+    
+  c_0_9:
+    number: fastBoard_0-9
+    # RIGHT_FLIPPER
+    default_pulse_ms: 250
+    max_pulse_ms: 250
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    default_hold_power: 1.0
+    max_hold_power: 1.0
+    allow_enable: true
+    enable_events: ball_started
+    disable_events: ball_will_end
+    
+  c_0_10:
+    number: fastBoard_0-10
+    # N/A
+    
+  c_0_11:
+    number: fastBoard_0-11
+    # DROP_RESET
+    default_pulse_ms: 250
+    max_pulse_ms: 250
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    
+  c_0_12:
+    number: fastBoard_0-12
+    # TOP_SAUCER
+    #default_pulse_ms: 250
+    #max_pulse_ms: 250
+    #default_pulse_power: 1.0
+    #max_pulse_power: 1.0
+    default_pulse_ms: 80
+    max_pulse_ms: 80
+    default_pulse_power: 0.8
+    max_pulse_power: 0.8
+    
+  c_0_13:
+    number: fastBoard_0-13
+    # GI LAMPS
+    default_pulse_ms: 250
+    max_pulse_ms: 250
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    default_hold_power: 1.0
+    max_hold_power: 1.0
+    allow_enable: true
+    enable_events: mode_attract_started
+    
+  c_0_14:
+    number: fastBoard_0-14
+    # N/A
+    
+  c_0_15:
+    number: fastBoard_0-15
+    # OUTHOLE
+    default_pulse_ms: 250
+    max_pulse_ms: 250
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    
+  # *************************
+  # BOARD ONE - 3208
+  # *************************
+  # HARDWARE / COILS
+  # *************************
+  # ------------- BANK 0-7 ---------------
+  c_1_0:
+    number: fastBoard_1-0
+    # BOTTOM_LEFT_THUMPER
+    default_pulse_ms: 50
+    max_pulse_ms: 50
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    
+  c_1_1:
+    number: fastBoard_1-1
+    # LEFT_SLING
+    default_pulse_ms: 50
+    max_pulse_ms: 50
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    #default_hold_power: 1.0
+    #max_hold_power: 1.0
+    #allow_enable: true
+    
+  c_1_2:
+    number: fastBoard_1-2
+    # BOTTOM_RIGHT_THUMPER
+    default_pulse_ms: 50
+    max_pulse_ms: 50
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    #default_hold_power: 1.0
+    #max_hold_power: 1.0
+    #allow_enable: true
+    #enable_events: ball_started
+    #disable_events: ball_will_end
+    
+  c_1_3:
+    number: fastBoard_1-3
+    # LEFT_DOWN_SAUCER
+    #default_pulse_ms: 50
+    #max_pulse_ms: 50
+    default_pulse_ms: 100
+    max_pulse_ms: 100
+    default_pulse_power: 0.6
+    max_pulse_power: 0.6
+    #default_pulse_power: 0.7
+    #max_pulse_power: 0.7
+    
+  c_1_4:
+    number: fastBoard_1-4
+    # TOP_LEFT_THUMPER
+    default_pulse_ms: 50
+    max_pulse_ms: 50
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    #default_hold_power: 1.0
+    #max_hold_power: 1.0
+    #allow_enable: true
+    #enable_events: mode_attract_started
+    
+  c_1_5:
+    number: fastBoard_1-5
+    # LEFT_UP_SAUCER
+    #default_pulse_ms: 50
+    #max_pulse_ms: 50
+    default_pulse_ms: 100
+    max_pulse_ms: 100
+    default_pulse_power: 0.6
+    max_pulse_power: 0.6
+    #default_pulse_power: 0.7
+    #max_pulse_power: 0.7
+    
+  c_1_6:
+    number: fastBoard_1-6
+    # TOP_RIGHT_THUMPER
+    default_pulse_ms: 50
+    max_pulse_ms: 50
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    
+  c_1_7:
+    number: fastBoard_1-7
+    # RIGHT_SLING
+    default_pulse_ms: 50
+    max_pulse_ms: 50
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+    
+
+# ******************************************
+# ------------------------------------------
+# HARDWARE / AUTOFIRE 
+# ------------------------------------------
+# ******************************************
+
+autofire_coils:
+
+# ------------------------------------------
+# HARDWARE / AUTOFIRE / THUMPERS
+# ------------------------------------------
+  autofireBottomRightThumper:
+    coil: c_1_2
+    switch: s_1_22
+    
+  autofireTopRightThumper:
+    coil: c_1_6
+    switch: s_1_23
+    
+  autofireTopLeftThumper:
+    coil: c_1_4
+    switch: s_1_24
+    
+  autofireBottomLeftThumper:
+    coil: c_1_0
+    switch: s_1_25
+
+# ------------------------------------------
+# HARDWARE / AUTOFIRE / SLINGS
+# ------------------------------------------
+  autofireLeftSling:
+    coil: c_1_1
+    switch: s_1_26
+    
+  autofireRightSling:
+    coil: c_1_7
+    switch: s_1_21
+    
+
+# ---------------------
+# DROP::TARGETS
+# ---------------------
+drop_targets:
+  
+  # RED
+  dropTargetRight1:
+    switch: s_1_5
+  dropTargetRight2:
+    switch: s_1_11
+  dropTargetRight3:
+    switch: s_1_4
+
+  # YELLOW
+  dropTargetInlineA:
+    switch: s_0_7
+  dropTargetInlineB:
+    switch: s_0_6
+  dropTargetInlineC:
+    switch: s_0_5
+  dropTargetInlineD:
+    switch: s_0_4
+    
+# ---------------------
+# DROP::TARGET::BANKS
+# ---------------------
+drop_target_banks:
+  
+  dropTargetBankRight:
+    drop_targets: dropTargetRight1, dropTargetRight2, dropTargetRight3
+    reset_coils: c_0_11
+    reset_on_complete: 1000ms
+    reset_events:
+      ball_starting: 500ms
+      eventResetDropTargetBankRight: 100ms
+  dropTargetBankInline:
+    drop_targets: dropTargetInlineA, dropTargetInlineB, dropTargetInlineC, dropTargetInlineD
+    # TODO FIX THIS
+    reset_coils: c_0_3
+    #reset_on_complete: 1s
+    reset_events:
+      ball_starting: 1000ms
+      eventResetDropTargetBankInline: 100ms
+      
+# ******************************************
+# ------------------------------------------
+# HARDWARE / BALL DEVICES
+# ------------------------------------------
+# ******************************************
+
+ball_devices:
+  ballDeviceTrough:
+    tags: trough, home, drain
+    ball_switches: s_1_27
+    eject_coil: c_0_15
+    entrance_count_delay: 130ms
+    exit_count_delay: 1000ms
+    eject_targets: playfield
+    confirm_eject_type: target
+    eject_timeouts: 5s
+
+  ballDeviceSaucerTop:
+    ball_switches: s_1_12
+    eject_coil: c_0_12
+    debug: true
+
+  ballDeviceSaucerLeft:
+    ball_switches: s_1_28
+    eject_coil: c_1_5
+    debug: true
+    
+# ---------------------
+# BALL::HOLDS
+# ---------------------
+ball_holds:
+
+  ballHoldSaucerTop:
+    balls_to_hold: 1
+    hold_devices: ballDeviceSaucerTop
+    enable_events: mode_modeBase_started
+    release_one_events: releaseBallHoldSaucerTop
+    #request_new_balls_to_pf: false
+
+  ballHoldSaucerLeft:
+    balls_to_hold: 1
+    hold_devices: ballDeviceSaucerLeft
+    enable_events: mode_modeBase_started
+    release_one_events: releaseBallHoldSaucerLeft
+    #request_new_balls_to_pf: false
+    
+# ---------------------
+# PLAYFIELDS
+# ---------------------
+playfields:
+  playfield:
+    default_source_device: ballDeviceTrough
+    tags: default

@@ -1,0 +1,322 @@
+#config_version=6
+
+config:
+# -------------
+- configModeCarouselBackglass.yaml
+# -------------
+# -------------
+- configModeCarouselSlide1954.yaml
+- configModeCarouselSlide1955.yaml
+- configModeCarouselSlide1956.yaml
+- configModeCarouselSlide1957.yaml
+- configModeCarouselSlide1958.yaml
+- configModeCarouselSlide1959.yaml
+# -------------
+- configModeCarouselSlide1960.yaml
+- configModeCarouselSlide1961.yaml
+- configModeCarouselSlide1962.yaml
+- configModeCarouselSlide1963.yaml
+- configModeCarouselSlide1964.yaml
+- configModeCarouselSlide1965.yaml
+- configModeCarouselSlide1966.yaml
+- configModeCarouselSlide1967.yaml
+- configModeCarouselSlide1968.yaml
+- configModeCarouselSlide1969.yaml
+# -------------
+- configModeCarouselSlide1970.yaml
+- configModeCarouselSlide1971.yaml
+- configModeCarouselSlide1972.yaml
+- configModeCarouselSlide1973.yaml
+- configModeCarouselSlide1974.yaml
+- configModeCarouselSlide1975.yaml
+- configModeCarouselSlide1976.yaml
+- configModeCarouselSlide1977.yaml
+- configModeCarouselSlide1978.yaml
+- configModeCarouselSlide1979.yaml
+# -------------
+- configModeCarouselSlide1980.yaml
+- configModeCarouselSlide1981.yaml
+- configModeCarouselSlide1982.yaml
+- configModeCarouselSlide1983.yaml
+- configModeCarouselSlide1984.yaml
+- configModeCarouselSlide1985.yaml
+- configModeCarouselSlide1986.yaml
+- configModeCarouselSlide1987.yaml
+- configModeCarouselSlide1988.yaml
+- configModeCarouselSlide1989.yaml
+# -------------
+- configModeCarouselSlide1990.yaml
+- configModeCarouselSlide1991.yaml
+- configModeCarouselSlide1992.yaml
+- configModeCarouselSlide1993.yaml
+#- configModeCarouselSlide1994.yaml
+#- configModeCarouselSlide1995.yaml
+#- configModeCarouselSlide1996.yaml
+#- configModeCarouselSlide1997.yaml
+#- configModeCarouselSlide1998.yaml
+#- configModeCarouselSlide1999.yaml
+# -------------
+
+mode:
+  start_events:
+    - eventStartModeCarousel
+  stop_events:
+    - eventStopModeCarousel
+  code: mpf.modes.carousel.code.carousel.Carousel
+  use_wait_queue: true
+  priority: 8000
+  
+mode_settings:
+  selectable_items:
+    ## -------------
+    #- year1954
+    #- year1955
+    #- year1956
+    #- year1957
+    #- year1958
+    #- year1959
+    ## -------------
+    #- year1960
+    #- year1961
+    #- year1962
+    #- year1963
+    #- year1964
+    #- year1965
+    #- year1966
+    #- year1967
+    - year1968
+    - year1969
+    # -------------
+    - year1970
+    - year1971
+    - year1972
+    - year1973
+    - year1974
+    - year1975
+    - year1976
+    - year1977
+    - year1978
+    - year1979
+    # -------------
+    - year1980
+    - year1981
+    - year1982
+    - year1983
+    - year1984
+    - year1985
+    - year1986
+    - year1987
+    - year1988
+    - year1989
+    # -------------
+    - year1990
+    - year1991
+    - year1992
+    - year1993
+    #- year1994
+    #- year1995
+    #- year1996
+    #- year1997
+    #- year1998
+    #- year1999
+    # -------------
+    
+  select_item_events: eventModeCarouselSelect
+  next_item_events: eventModeCarouselNext
+  previous_item_events: eventModeCarouselPrevious
+  # TESTING
+  block_events: flipper_cancel
+  release_events: both_flippers_inactive
+
+# -----------------------
+# EVENT::PLAYER::SELECT
+# -----------------------
+event_player:
+  # -----------------------------------
+  # MUSIC
+  # -----------------------------------
+  mode_modeCarousel_started:
+    # ------------
+    # MUSIC
+    # ------------
+    - eventPlaylistModePlayboyStart
+    # ------------
+    # BACKGLASS
+    # ------------
+    - eventShowSlideCarouselBackglass
+    
+  # -----------------------------------
+  # ROTATE
+  # -----------------------------------
+  sw_flipper_right_inactive:
+    # ROTATE
+    - eventModeCarouselPrevious
+    # PLAY SOUND
+    #- playPoolSoundStart
+    - playPoolSoundSingleMech
+    # RESTART TIMER
+    - eventRestartTimerModeCarouselSelectTimeout
+    
+  sw_flipper_left_inactive:
+    # ROTATE
+    - eventModeCarouselNext
+    # PLAY SOUND
+    #- playPoolSoundStart
+    - playPoolSoundSingleMech
+    # RESTART TIMER
+    - eventRestartTimerModeCarouselSelectTimeout
+    
+  # -----------------------------------
+  # SELECT
+  # -----------------------------------
+  sw_tagLaunch:
+    # SELECT
+    - eventModeCarouselSelect
+  # -------------------------
+  flipper_cancel:
+    # SELECT
+    - eventModeCarouselSelect
+  # -------------------------
+  timer_timerModeCarouselSelectTimeout_complete:
+    # SELECT
+    - eventModeCarouselSelect
+  # -------------------------
+
+    # RESTART QUEUE RELAY PLAYER
+  modeCarousel_item_selected:
+    # THIS ALSO WILL END THE CAROUSEL MODE
+    - eventQueueRelayBallStartingWaitFor
+    - eventStopModeCarousel
+        
+  #sw_flipper_left_inactive:
+  #  - playPoolSoundStart
+    
+# -----------------------
+# START BY YEAR SELECTED
+# -----------------------
+  # 1950's
+  #modeCarousel_year1954_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1955_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1956_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1957_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1958_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1959_selected:
+  #  - eventStartModePlayboy1955|100ms
+  # -------------
+  # 1960's
+  #modeCarousel_year1960_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1961_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1962_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1963_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1964_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1965_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1966_selected:
+  #  - eventStartModePlayboy1955|100ms
+  #modeCarousel_year1967_selected:
+  #  - eventStartModePlayboy1955|100ms
+  modeCarousel_year1968_selected:
+    - eventStartModePlayboy1968|100ms
+  modeCarousel_year1969_selected:
+    - eventStartModePlayboy1969|100ms
+  # -------------
+  # 1970's
+  modeCarousel_year1970_selected:
+    - eventStartModePlayboy1970|100ms
+  modeCarousel_year1971_selected:
+    - eventStartModePlayboy1971|100ms
+  modeCarousel_year1972_selected:
+    - eventStartModePlayboy1972|100ms
+  modeCarousel_year1973_selected:
+    - eventStartModePlayboy1973|100ms
+  modeCarousel_year1974_selected:
+    - eventStartModePlayboy1974|100ms
+  modeCarousel_year1975_selected:
+    - eventStartModePlayboy1975|100ms
+  modeCarousel_year1976_selected:
+    - eventStartModePlayboy1976|100ms
+  modeCarousel_year1977_selected:
+    - eventStartModePlayboy1977|100ms
+  modeCarousel_year1978_selected:
+    - eventStartModePlayboy1978|100ms
+  modeCarousel_year1979_selected:
+    - eventStartModePlayboy1979|100ms
+  # -------------
+  # 1980's
+  modeCarousel_year1980_selected:
+    - eventStartModePlayboy1980|100ms
+  modeCarousel_year1981_selected:
+    - eventStartModePlayboy1981|100ms
+  modeCarousel_year1982_selected:
+    - eventStartModePlayboy1982|100ms
+  modeCarousel_year1983_selected:
+    - eventStartModePlayboy1983|100ms
+  modeCarousel_year1984_selected:
+    - eventStartModePlayboy1984|100ms
+  modeCarousel_year1985_selected:
+    - eventStartModePlayboy1985|100ms
+  modeCarousel_year1986_selected:
+    - eventStartModePlayboy1986|100ms
+  modeCarousel_year1987_selected:
+    - eventStartModePlayboy1987|100ms
+  modeCarousel_year1988_selected:
+    - eventStartModePlayboy1988|100ms
+  modeCarousel_year1989_selected:
+    - eventStartModePlayboy1989|100ms
+  # -------------
+  # 1990's
+  modeCarousel_year1990_selected:
+    - eventStartModePlayboy1990|100ms
+  modeCarousel_year1991_selected:
+    - eventStartModePlayboy1991|100ms
+  modeCarousel_year1992_selected:
+    - eventStartModePlayboy1992|100ms
+  modeCarousel_year1993_selected:
+    - eventStartModePlayboy1993|100ms
+  #modeCarousel_year1994_selected:
+  #  - eventStartModePlayboy1994|100ms
+  #modeCarousel_year1995_selected:
+  #  - eventStartModePlayboy1995|100ms
+  #modeCarousel_year1996_selected:
+  #  - eventStartModePlayboy1996|100ms
+  #modeCarousel_year1997_selected:
+  #  - eventStartModePlayboy1997|100ms
+  #modeCarousel_year1998_selected:
+  #  - eventStartModePlayboy1998|100ms
+  #modeCarousel_year1999_selected:
+  #  - eventStartModePlayboy1999|100ms
+  # -------------
+  
+  #  # RESTART QUEUE RELAY PLAYER
+  #modeCarousel_item_selected:
+  #  # THIS ALSO WILL END THE CAROUSEL MODE
+  #  - eventQueueRelayBallStartingWaitFor
+    
+# ---------------------
+# TIMERS
+# ---------------------
+timers:
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # ----------------------------
+  timerModeCarouselSelectTimeout:
+    start_value: 6
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+    restart_on_complete: true
+    control_events:
+      - event: eventRestartTimerModeCarouselSelectTimeout
+        action: restart
+        

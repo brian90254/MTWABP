@@ -1,0 +1,337 @@
+# INSTALLATION OF MPF V0.57.0 ON A LINUX MACHINE
+
+# *******************************************
+# TERMINAL COMMANDS :: COPY AND PASTE THESE INTO A TERMINAL WINDOW
+# *******************************************
+
+# ------------------------------
+# UPDATE APT-GET
+# ------------------------------
+sudo apt-get update
+
+# ------------------------------
+# INSTALL GRAPHICS DEPENDENCIES
+# ------------------------------
+sudo apt-get install -y \
+  build-essential git curl \
+  libsqlite3-dev zlib1g-dev \
+  libjpeg-dev libtiff5-dev \
+  libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev \
+  gstreamer1.0-plugins-base gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly \
+  libgstreamer1.0-dev \
+  libswscale-dev libavformat-dev libavcodec-dev libavfilter-dev libavdevice-dev \
+  libgl1-mesa-dev libgles2-mesa-dev libgl1-mesa-dri \
+  pulseaudio libportaudio2 dbus-x11 libasound-dev \
+  libunwind-dev lsb-release
+
+# ------------------------------
+# INSTALL PYENV
+# ------------------------------
+curl https://pyenv.run | bash
+
+# ------------------------------
+# ADD PYENV TO SHELL CONFIG
+# ------------------------------
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+
+# ------------------------------
+# INSTALL PYTHON AND MAKE THIS VERSION GLOBAL
+# ------------------------------
+pyenv install 3.11.8
+pyenv global 3.11.8
+
+
+# ------------------------------
+# CREATE A CLEAN PYTHON ENVIRONMENT
+# The name "Py311_MPF057" is arbitrary, but keep it consistant
+# ------------------------------
+pyenv shell 3.11.8
+python -m venv ~/venvs/Py311_MPF057
+source ~/venvs/Py311_MPF057/bin/activate
+
+
+# ------------------------------
+# INSTALL DEPENDENCIES SPECIFIC TO V0.57.0
+# ------------------------------
+# This step need to be done while in the named venv created above
+# ------------------------------
+
+# SETUP TOOLS
+pip install 'setuptools==69.1.0'
+
+# CYTHON
+pip install Cython==0.29.36
+
+# RUAML.YAML
+pip install 'ruamel.yaml==0.18.6'
+
+# RUAML.YAML.CLIB
+pip install 'ruamel.yaml.clib==0.2.8'
+
+# PILLOW
+pip install pillow==9.5.0
+
+# STABLE VERSION OF MPF V0.57.0
+pip install mpf==0.57.0.dev41
+
+# STABLE VERSION OF MPF-MC
+pip install mpf-mc==0.57.0.dev14
+
+# ------------------------------
+# VERIFY INSTALL
+# ------------------------------
+mpf --version
+
+# ------------------------------
+# ...OR
+# ------------------------------
+pip list
+
+
+# ------------------------------
+# CREATE A SHELL SCRIPT TO RUN THE GAME
+# Copy the text below into a file called "Linux_BAM_GITHUB_v57_Both.sh"
+# ------------------------------
+
+#!/bin/bash
+
+#ACTIVATE VIRTUAL ENVIRONMENT
+source ~/venvs/Py311_MPF057/bin/activate
+
+# SET MAIN GAME DIRECTORY
+cd Dropbox/GitHub/MTWABP/FunAndGames/PINBALL/MPF_GAMES_v57/
+
+# GOTO SPECIFIC GAME FOLDER
+cd BAM_TOTEM_v57/
+
+sleep 2s
+mpf both -xvVaA
+
+
+# ------------------------------
+# ADD AUTO-LAUNCH ON POWERUP
+# ------------------------------
+
+1) Goto Menu > Search Bar > Startup Applications
+
+2) Click "+" > Custom Command
+
+3) Add Startup Program
+    Name > LaunchMPFv57
+    Command > gnome-terminal --title="MPFv57" -- bash -c "cd ~ && ./Linux_BAM_GITHUB_v57_Both.sh; exec bash"
+    Comment > none
+    Startup Delay > 2
+    Click "Add"
+
+4) Test the function of the startup command
+    Highlight the newly created command
+    Click the ">" play button
+
+
+# ------------------------------
+# INSTALL "MONITOR" IN SEPARATE PYTHON ENVIRONMENT
+# The name "Py311_MPF057_monitor" is arbitrary, but keep it consistant
+# ------------------------------
+
+# CREATE NEW CLEAN ENVIRONMENT
+python -m venv ~/venvs/Py311_MPF057_monitor
+source ~/venvs/Py311_MPF057_monitor/bin/activate
+
+# INSTALL ARBITRARY MPF VERSION
+# Only needed so that you can run the command "mpf monitor"
+pip install mpf==0.57.0.dev41
+
+# INSTALL NEWEST VERSION OF MONITOR
+# This will overwrite some previous dependency versions
+# Which is why we're in a separate venv
+pip install mpf-monitor==1.0.0.dev1
+
+# Test by running:
+mpf monitor
+
+# ------------------------------
+# CREATE A SHELL SCRIPT TO RUN "monitor"
+# Copy the text below into a file called "Linux_BAM_GITHUB_v57_monitor.sh"
+# ------------------------------
+
+#!/bin/bash
+
+#ACTIVATE VIRTUAL ENVIRONMENT
+source ~/venvs/Py311_MPF057_monitor/bin/activate
+
+# SET MAIN GAME DIRECTORY
+cd Dropbox/GitHub/MTWABP/FunAndGames/PINBALL/MPF_GAMES_v57/
+
+# GOTO SPECIFIC GAME FOLDER
+cd BAM_TOTEM_v57/
+
+sleep 2s
+mpf monitor
+
+
+# ------------------------------
+# BUILD A LINUX VERSION OF THE FADECANDY SERVER
+# ...TBD
+# ------------------------------
+
+# ------------------------------
+# SET PERMISSIONS TO ACCESS COMM PORTS
+# ...TBD
+# ------------------------------
+
+# ------------------------------
+# AUTO-LAUNCH FCSERVER ON POWERUP
+# ------------------------------
+
+1) Goto Menu > Search Bar > Startup Applications
+
+2) Click "+" > Custom Command
+
+3) Add Startup Program
+    Name > LaunchFadeCandy
+    Command > gnome-terminal --title="FadeCandy" -- bash -c "cd ~/fadecandyserver && ./fcserver; exec bash"
+    Comment > none
+    Startup Delay > 0
+    Click "Add"
+
+4) Test the function of the startup command
+    Highlight the newly created command
+    Click the ">" play button
+
+# ------------------------------
+# END
+# ------------------------------
+
+
+
+
+
+# ------------------------------
+# APPENDIX / REFERENCE NOTES BELOW
+# ------------------------------
+
+briancox@Brians-Mac-mini ~ % build --version
+zsh: command not found: build
+briancox@Brians-Mac-mini ~ % pip list          
+Package            Version
+------------------ ------------
+asciimatics        1.15.0
+certifi            2024.2.2
+charset-normalizer 3.3.2
+docutils           0.20.1
+ffpyplayer         4.5.1
+future             1.0.0
+idna               3.6
+Kivy               2.2.1
+Kivy-Garden        0.1.5
+mpf                0.57.0.dev41
+mpf-mc             0.57.0.dev14
+mpf-monitor        0.57.0.dev3
+numpy              1.26.4
+packaging          23.2
+Pillow             9.5.0
+pip                24.0
+prompt-toolkit     3.0.43
+psutil             5.9.8
+pycairo            1.26.0
+pyfiglet           1.0.2
+Pygments           2.16.1
+PyGObject          3.46.0
+PyQt6              6.6.1
+PyQt6-Qt6          6.6.2
+PyQt6-sip          13.6.0
+pyserial           3.5
+pyserial-asyncio   0.6
+requests           2.31.0
+ruamel.yaml        0.18.6
+ruamel.yaml.clib   0.2.8
+setuptools         69.1.0
+sortedcontainers   2.4.0
+style              1.1.0
+terminaltables     3.1.10
+update             0.0.1
+urllib3            2.2.1
+wcwidth            0.2.13
+wheel              0.42.0
+
+[notice] A new release of pip is available: 24.0 -> 26.1.2
+[notice] To update, run: python3.11 -m pip install --upgrade pip
+briancox@Brians-Mac-mini ~ % python --version
+Python 3.11.8
+briancox@Brians-Mac-mini ~ % 
+
+
+pip install 'setuptools==69.1.0'
+pip install Cython==0.29.36
+pip install 'ruamel.yaml==0.18.6'
+pip install 'ruamel.yaml.clib==0.2.8'
+pip install 'pillow==9.5.0’
+pip install mpf==0.57.0.dev41
+pip install mpf-mc==0.57.0.dev14
+pip install mpf-monitor==0.57.0.dev3
+
+
+For a normal Linux install, the relevant parts are basically:
+
+sudo apt-get update
+
+sudo apt-get install -y \
+  build-essential git curl \
+  libsqlite3-dev zlib1g-dev \
+  libjpeg-dev libtiff5-dev \
+  libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev \
+  gstreamer1.0-plugins-base gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly \
+  libgstreamer1.0-dev \
+  libswscale-dev libavformat-dev libavcodec-dev libavfilter-dev libavdevice-dev \
+  libgl1-mesa-dev libgles2-mesa-dev libgl1-mesa-dri \
+  pulseaudio libportaudio2 dbus-x11 libasound-dev \
+  libunwind-dev lsb-release
+
+Then install Python 3.10.15 using pyenv:
+
+curl https://pyenv.run | bash
+
+Add PyEnv to your shell config:
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+
+Install and select Python:
+
+pyenv install 3.10.15
+pyenv global 3.10.15
+
+Then create a clean virtual environment:
+
+python -m venv ~/venvs/mpf57
+source ~/venvs/mpf57/bin/activate
+
+Install the pinned/stable package versions:
+
+pip install --upgrade pip 'setuptools<73' wheel build
+pip install 'pillow<10' 'packaging<24'
+pip install Cython==0.29.36
+pip install mpf==0.57.4
+pip install mpf-mc==0.57.1
+
+Verify:
+
+mpf --version
+mpf both --version
+
+
+
+# --------------------------
+# MPF MONITOR TROUBLESHOOTING
+# --------------------------
+
+needs xcb-cursor0 or libxcb-cursor0
+
+    sudo apt install libxcb-cursor0
+
+

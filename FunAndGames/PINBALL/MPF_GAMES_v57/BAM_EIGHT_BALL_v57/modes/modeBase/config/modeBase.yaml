@@ -1,0 +1,81 @@
+#config_version=6
+
+config:
+- configBaseShows.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 100
+
+# ---------------------
+# SWITCHES::COMBO
+# ---------------------
+combo_switches:
+  
+  comboSwitchEndGame:
+    switches_1: s_0_10
+    switches_2: s_0_8
+    hold_time: 2s
+    events_when_both: end_game
+    
+  comboSwitchEnableAutofireKickerLeft:
+    switches_1: s_0_10
+    switches_2: s_0_9
+    hold_time: 2s
+    events_when_both: eventEnableAutofireKickerLeft
+    
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  ball_started:
+    - eventStartModeSkillShot
+    - eventResetMultipliers
+    # NEW
+    - eventShowSlideBaseShows
+    
+  # ----------------------------
+  # START MODE GLOBETROTTERS
+  # ----------------------------
+  mode_modeBase_started:
+    - eventStartModeEightBall
+    #- eventStartModeSkillShot
+    #- eventStartModeAwardWheel
+    - eventSelectNextMode|20ms
+    - eventStartTimerRotateRightGrpAchGlobeSaucer
+    # ACHIEVEMENT GLOBE SAUCER
+    - eventResetAchGlobeSaucer
+    - eventEnableAchGlobeSaucer
+
+
+  ball_hold_blKickerUpper_held_ball:
+    - eventCompletedAchGlobeSaucer
+
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # ----------------------------
+  timer_timerRotateRightGrpAchGlobeSaucer_complete:
+    - eventRotateRightGrpAchGlobeSaucer
+    #- eventStartTimerRotateRightGrpAchGlobeSaucer
+
+# ---------------------
+# TIMERS
+# ---------------------
+timers:
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # ----------------------------
+    timerRotateRightGrpAchGlobeSaucer:
+        start_value: 4
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        #start_running: no
+        start_running: true
+        restart_on_complete: true
+        #control_events:
+        #    - event: eventStartTimerRotateRightGrpAchGlobeSaucer
+        #      action: start
+            #- event: balldevice_plunger_lane_ball_eject_success
+            #  action: stop

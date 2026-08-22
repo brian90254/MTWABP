@@ -1,0 +1,314 @@
+#config_version=6
+
+# ---------------------
+# SHOTS
+# ---------------------
+shots:
+    # -------------------
+    # SHOTS::DROP MIDDLE::ENABLE SAUCERS
+    # -------------------
+    shotKravenSaucerMultiball1:
+        enable_events: eventEnableShotKravenSaucerMultiball1
+        disable_events: eventDisableShotKravenSaucerMultiball1
+        restart_events: eventRestartShotKravenSaucerMultiball1
+        reset_events: eventResetShotKravenSaucerMultiball1
+        hit_events: eventHitShotKravenSaucerMultiball1
+        advance_events: eventAdvanceShotKravenSaucerMultiball1
+        profile: spShotKravenSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop1A
+            led2: ledSaucerTop1B
+            led3: ledSaucerTop1C
+            led4: ledSaucerTop1D
+            led5: ledSaucerTop1E
+            
+    shotKravenSaucerMultiball2:
+        enable_events: eventEnableShotKravenSaucerMultiball2
+        disable_events: eventDisableShotKravenSaucerMultiball2
+        restart_events: eventRestartShotKravenSaucerMultiball2
+        reset_events: eventResetShotKravenSaucerMultiball2
+        hit_events: eventHitShotKravenSaucerMultiball2
+        advance_events: eventAdvanceShotKravenSaucerMultiball2
+        profile: spShotKravenSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop2A
+            led2: ledSaucerTop2B
+            led3: ledSaucerTop2C
+            led4: ledSaucerTop2D
+            led5: ledSaucerTop2E
+            
+    shotKravenSaucerMultiball3:
+        enable_events: eventEnableShotKravenSaucerMultiball3
+        disable_events: eventDisableShotKravenSaucerMultiball3
+        restart_events: eventRestartShotKravenSaucerMultiball3
+        reset_events: eventResetShotKravenSaucerMultiball3
+        hit_events: eventHitShotKravenSaucerMultiball3
+        advance_events: eventAdvanceShotKravenSaucerMultiball3
+        profile: spShotKravenSaucerMultiball
+        show_tokens:
+            led1: ledSaucerTop3A
+            led2: ledSaucerTop3B
+            led3: ledSaucerTop3C
+            led4: ledSaucerTop3D
+            led5: ledSaucerTop3E
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::OUTLANE::SPECIAL
+    # -----------------------------
+    spShotKravenSaucerMultiball:
+        states:
+          #- name: unlitSolid
+          #  show: ribbonFiveLedTwoColor
+          #  speed: 6
+          #  show_tokens:
+          #      color1: '000000'
+          #      color2: '000000'
+          - name: litFlashOne
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '000088'
+                color2: '00ffff'
+          #- name: litFlashTwo
+          #  show: ribbonFiveLedTwoColor
+          #  speed: 6
+          #  show_tokens:
+          #      color1: 'cc0000'
+          #      color2: 'ff00ff'
+          - name: litSolid
+            show: ribbonFiveLedTwoColor
+            speed: 6
+            show_tokens:
+                color1: '880000'
+                color2: 'ff00ff'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeSpidermanVillanKraven_started:
+    # ----------------------------------
+    # ENABLE MULTIBALLS
+    - eventEnableMultiballKravenSaucerTop1
+    #- eventEnableMultiballKravenSaucerTop2
+    #- eventEnableMultiballKravenSaucerTop3
+    # ----------------------------------
+    # ENABLE LOCK
+    #- eventEnableMultiballLockKravenSaucerTop1
+    #- eventEnableMultiballLockKravenSaucerTop2
+    #- eventEnableMultiballLockKravenSaucerTop3
+    # ----------------------------------
+    # SET WIDGETS TO GRAY
+    - eventAddWidgetSaucerOneGray
+    - eventAddWidgetSaucerTwoGray
+    - eventAddWidgetSaucerThreeGray
+
+# --------------
+# MULTIBALL
+# --------------
+  # ----------------------------------
+  # MULTIBALL ONE ENABLED
+  eventEnableMultiballKravenSaucerTop1:
+    # ENABLE SAUCER SHOT ONE
+    - eventRestartShotKravenSaucerMultiball1
+    # ENABLE LOCK ONE
+    - eventEnableMultiballLockKravenSaucerTop1
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerOneColor
+  # ---------------------
+  # ENDING MULTIBALL ONE
+  # ---------------------
+  multiball_multiballKravenSaucerTop1_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerOneX
+    # ENABLE NEXT MULTIBALL
+    - eventEnableMultiballKravenSaucerTop2
+    #- eventEnableMultiballLockKravenSaucerTop1
+    #- eventEnableMultiballLockKravenSaucerTop2
+    #- eventEnableMultiballLockKravenSaucerTop3
+    
+  # ----------------------------------
+  # MULTIBALL TWO ENABLED
+  eventEnableMultiballKravenSaucerTop2:
+    # ENABLE SAUCER SHOT TWO
+    - eventRestartShotKravenSaucerMultiball2
+    # ENABLE LOCK TWO
+    - eventEnableMultiballLockKravenSaucerTop2
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerTwoColor
+  # ---------------------
+  # ENDING MULTIBALL TWO
+  # ---------------------
+  multiball_multiballKravenSaucerTop2_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerTwoX
+    # ENABLE NEXT MULTIBALL
+    #- eventEnableMultiballLockKravenSaucerTop3
+    - eventEnableMultiballKravenSaucerTop3
+    
+  # ----------------------------------
+  # MULTIBALL THREE ENABLED
+  eventEnableMultiballKravenSaucerTop3:
+    # ENABLE SAUCER SHOT THREE
+    - eventRestartShotKravenSaucerMultiball3
+    # ENABLE LOCK THREE
+    - eventEnableMultiballLockKravenSaucerTop3
+    # SET WIDGETS COLOR
+    - eventAddWidgetSaucerThreeColor
+  # ---------------------
+  # ENDING MULTIBALL TWO
+  # ---------------------
+  multiball_multiballKravenSaucerTop3_ended:
+    # SET WIDGETS X
+    - eventAddWidgetSaucerThreeX
+    # ENABLE NEXT LOCK
+    #- eventEnableMultiballLockKravenSaucerTop1
+    
+  # ---------------------
+  # START MULTIBALL::SAUCER TOPS
+  # ---------------------
+  # TOP 1::THREE BALL
+  multiball_lock_multiballLockKravenSaucerTop1_full:
+    # HIT SAUCER SHOT
+    - eventHitShotKravenSaucerMultiball1
+    # START MULTIBALL
+    - eventStartMultiballKravenSaucerTop1|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockKravenSaucerTop1
+    - eventDisableMultiballLockKravenSaucerTop2
+    - eventDisableMultiballLockKravenSaucerTop3
+  # ---------------------
+  # TOP 2::THREE BALL
+  multiball_lock_multiballLockKravenSaucerTop2_full:
+    # HIT SAUCER SHOT
+    - eventHitShotKravenSaucerMultiball2
+    # START MULTIBALL
+    - eventStartMultiballKravenSaucerTop2|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockKravenSaucerTop1
+    - eventDisableMultiballLockKravenSaucerTop2
+    - eventDisableMultiballLockKravenSaucerTop3
+  # ---------------------
+  # TOP 3::THREE BALL
+  multiball_lock_multiballLockKravenSaucerTop3_full:
+    # HIT SAUCER SHOT
+    - eventHitShotKravenSaucerMultiball3
+    # START MULTIBALL
+    - eventStartMultiballKravenSaucerTop3|2000ms
+    # DISABLE OTHER LOCKS DURING MULTIBALL
+    - eventDisableMultiballLockKravenSaucerTop1
+    - eventDisableMultiballLockKravenSaucerTop2
+    - eventDisableMultiballLockKravenSaucerTop3
+
+  ## ---------------------
+  ## ENDING MULTIBALL
+  ## ---------------------
+  ## LEFT
+  #multiball_multiballKravenSaucerTop1_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockKravenSaucerTop1
+  #  - eventEnableMultiballLockKravenSaucerTop2
+  #  - eventEnableMultiballLockKravenSaucerTop3
+  ## RIGHT
+  #multiball_multiballKravenSaucerTop2_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockKravenSaucerTop1
+  #  - eventEnableMultiballLockKravenSaucerTop2
+  #  - eventEnableMultiballLockKravenSaucerTop3
+  ## BOTH
+  #multiball_multiballKravenSaucerTop3_ended:
+  #  # ENABLE LOCK
+  #  - eventEnableMultiballLockKravenSaucerTop1
+  #  - eventEnableMultiballLockKravenSaucerTop2
+  #  - eventEnableMultiballLockKravenSaucerTop3
+    
+  ball_will_end:
+    # ----------------------------
+    # REMOVE WIDGETS::GRAY
+    - eventRemoveWidgetSaucerOneGray
+    - eventRemoveWidgetSaucerTwoGray
+    - eventRemoveWidgetSaucerThreeGray
+    # REMOVE WIDGETS::COLOR
+    - eventRemoveWidgetSaucerOneColor
+    - eventRemoveWidgetSaucerTwoColor
+    - eventRemoveWidgetSaucerThreeColor
+    # REMOVE WIDGETS::X
+    - eventRemoveWidgetSaucerOneX
+    - eventRemoveWidgetSaucerTwoX
+    - eventRemoveWidgetSaucerThreeX
+    # DISABLE MULTIBALL SHOTS
+    - eventDisableShotKravenSaucerMultiball1
+    - eventDisableShotKravenSaucerMultiball2
+    - eventDisableShotKravenSaucerMultiball3
+    
+# ---------------------
+# MULTIBALL_LOCKS
+# ---------------------
+multiball_locks:
+
+  multiballLockKravenSaucerTop1:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop1
+    enable_events: eventEnableMultiballLockKravenSaucerTop1
+    disable_events: eventDisableMultiballLockKravenSaucerTop1
+    locked_ball_counting_strategy: physical_only
+    
+  multiballLockKravenSaucerTop2:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop2
+    enable_events: eventEnableMultiballLockKravenSaucerTop2
+    disable_events: eventDisableMultiballLockKravenSaucerTop2
+    locked_ball_counting_strategy: physical_only
+    
+  multiballLockKravenSaucerTop3:
+    balls_to_lock: 1
+    lock_devices: ballDeviceSaucerTop3
+    enable_events: eventEnableMultiballLockKravenSaucerTop3
+    disable_events: eventDisableMultiballLockKravenSaucerTop3
+    locked_ball_counting_strategy: physical_only
+    
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::UPPER KICKER::LEFT AND RIGHT
+  # ----------------------------
+  multiballKravenSaucerTop1:
+    ball_locks:
+      - ballDeviceSaucerTop1
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKravenSaucerTop1
+    disable_events: eventDisableMultiballKravenSaucerTop1
+    start_events: eventStartMultiballKravenSaucerTop1
+    stop_events: eventStopMultiballKravenSaucerTop1
+    
+  multiballKravenSaucerTop2:
+    ball_locks:
+      - ballDeviceSaucerTop2
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKravenSaucerTop2
+    disable_events: eventDisableMultiballKravenSaucerTop2
+    start_events: eventStartMultiballKravenSaucerTop2
+    stop_events: eventStopMultiballKravenSaucerTop2
+
+  multiballKravenSaucerTop3:
+    ball_locks:
+      - ballDeviceSaucerTop3
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballKravenSaucerTop3
+    disable_events: eventDisableMultiballKravenSaucerTop3
+    start_events: eventStartMultiballKravenSaucerTop3
+    stop_events: eventStopMultiballKravenSaucerTop3
+    

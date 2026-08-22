@@ -1,0 +1,168 @@
+#config_version=6
+
+config:
+# -------------
+- configModeCarouselBackglass.yaml
+# -------------
+#- configModeCarouselSlideKissBandMemberAceFrehley1.yaml
+#- configModeCarouselSlideKissBandMemberPaulStanley1.yaml
+#- configModeCarouselSlideKissBandMemberPeterCriss1.yaml
+#- configModeCarouselSlideKissBandMemberGeneSimmons1.yaml
+# -------------
+- configModeCarouselSlideJamesBondActorSeanConnery.yaml
+- configModeCarouselSlideJamesBondActorRogerMoore.yaml
+- configModeCarouselSlideJamesBondActorTimothyDalton.yaml
+- configModeCarouselSlideJamesBondActorPierceBrosnan.yaml
+- configModeCarouselSlideJamesBondActorDanielCraig.yaml
+- configModeCarouselSlideJamesBondActorGeorgeLazenby.yaml
+
+mode:
+  start_events:
+    - eventStartModeCarousel
+  stop_events:
+    - eventStopModeCarousel
+  code: mpf.modes.carousel.code.carousel.Carousel
+  use_wait_queue: true
+  priority: 8000
+  
+mode_settings:
+  selectable_items:
+    # -------------
+    #- kissBandMemberAceFrehley1
+    #- kissBandMemberPaulStanley1
+    #- kissBandMemberGeneSimmons1
+    #- kissBandMemberPeterCriss1
+    # -------------
+    - jamesBondActorSeanConnery
+    - jamesBondActorRogerMoore
+    - jamesBondActorTimothyDalton
+    - jamesBondActorPierceBrosnan
+    - jamesBondActorDanielCraig
+    - jamesBondActorGeorgeLazenby
+    
+  select_item_events: eventModeCarouselSelect
+  next_item_events: eventModeCarouselNext
+  previous_item_events: eventModeCarouselPrevious
+  # THIS PREVENTS A ROTATE DURING SELECT 
+  block_events: flipper_cancel
+  release_events: both_flippers_inactive
+
+# -----------------------
+# EVENT::PLAYER::SELECT
+# -----------------------
+event_player:
+  # -----------------------------------
+  # MODE START
+  # -----------------------------------
+  mode_modeCarousel_started:
+    # ------------
+    # MUSIC
+    # ------------
+    - eventPlaylistModeKissStart
+    # ------------
+    # BACKGLASS
+    # ------------
+    - eventShowSlideCarouselBackglass
+
+  # -----------------------------------
+  # ROTATE
+  # -----------------------------------
+  sw_flipper_right_inactive:
+    # ROTATE
+    - eventModeCarouselPrevious
+    # PLAY SOUND
+    - playPoolSoundStart
+    # RESTART TIMER
+    - eventRestartTimerModeCarouselSelectTimeout
+    
+  sw_flipper_left_inactive:
+    # ROTATE
+    - eventModeCarouselNext
+    # PLAY SOUND
+    - playPoolSoundStart
+    # RESTART TIMER
+    - eventRestartTimerModeCarouselSelectTimeout
+    
+  # -----------------------------------
+  # SELECT
+  # -----------------------------------
+  sw_tagLaunch:
+    # SELECT
+    - eventModeCarouselSelect
+  # -------------------------
+  flipper_cancel:
+    # SELECT
+    - eventModeCarouselSelect
+  # -------------------------
+  timer_timerModeCarouselSelectTimeout_complete:
+    # SELECT
+    - eventModeCarouselSelect
+  # -------------------------
+  
+# -----------------------
+# START BY BAND MEMBER SELECTED
+# -----------------------
+  # SELECT MODE::KISS
+  # -------------
+  modeCarousel_kissBandMemberAceFrehley1_selected:
+    - eventStartModeKissAceFrehley|100ms
+  # -------------
+  modeCarousel_kissBandMemberPaulStanley1_selected:
+    - eventStartModeKissPaulStanley|100ms
+  # -------------
+  modeCarousel_kissBandMemberPeterCriss1_selected:
+    - eventStartModeKissPeterCriss|100ms
+  # -------------
+  modeCarousel_kissBandMemberGeneSimmons1_selected:
+    - eventStartModeKissGeneSimmons|100ms
+  # -------------
+  # SELECT MODE::JAMES BOND
+  # -------------
+  modeCarousel_jamesBondActorSeanConnery_selected:
+    #- eventStartModeKissAceFrehley|100ms
+    - eventStartModeJamesBondSeanConnery|100ms
+  # -------------
+  modeCarousel_jamesBondActorRogerMoore_selected:
+    #- eventStartModeKissAceFrehley|100ms
+    - eventStartModeJamesBondRogerMoore|100ms
+  # -------------
+  modeCarousel_jamesBondActorTimothyDalton_selected:
+    #- eventStartModeKissAceFrehley|100ms
+    - eventStartModeJamesBondTimothyDalton|100ms
+  # -------------
+  modeCarousel_jamesBondActorPierceBrosnan_selected:
+    #- eventStartModeKissAceFrehley|100ms
+    - eventStartModeJamesBondPierceBrosnan|100ms
+  # -------------
+  modeCarousel_jamesBondActorDanielCraig_selected:
+    #- eventStartModeKissAceFrehley|100ms
+    - eventStartModeJamesBondDanielCraig|100ms
+  # -------------
+  modeCarousel_jamesBondActorGeorgeLazenby_selected:
+    #- eventStartModeKissAceFrehley|100ms
+    - eventStartModeJamesBondGeorgeLazenby|100ms
+  # -------------
+  
+  # RESTART QUEUE RELAY PLAYER
+  modeCarousel_item_selected:
+    # THIS ALSO WILL END THE CAROUSEL MODE
+    - eventQueueRelayBallStartingWaitFor
+    
+# ---------------------
+# TIMERS
+# ---------------------
+timers:
+  # ----------------------------
+  # FORCE AUTO PLUNGE EJECT
+  # ----------------------------
+  timerModeCarouselSelectTimeout:
+    #start_value: 6
+    start_value: 30
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+    restart_on_complete: true
+    control_events:
+      - event: eventRestartTimerModeCarouselSelectTimeout
+        action: restart

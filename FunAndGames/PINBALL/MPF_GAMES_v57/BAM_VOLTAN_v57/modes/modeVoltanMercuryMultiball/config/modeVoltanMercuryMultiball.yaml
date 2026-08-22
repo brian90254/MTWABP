@@ -1,0 +1,243 @@
+#config_version=6
+
+config:
+- configVoltanMercuryMultiballSlides.yaml
+
+mode:
+  start_events: eventStartModeVoltanMercuryMultiball
+  stop_events:
+    - eventStopModeVoltanMercuryMultiball
+    - ball_ending
+    
+  priority: 2100
+  
+# *****************************
+# SHOTS::PLANETS
+# *****************************
+shots:
+    # -------------------
+    # MATRIX SPOT
+    # -------------------
+    shotPlanetMercury:
+        switch: s_1_28
+        enable_events: eventEnableShotPlanetMercury
+        disable_events: eventDisableShotPlanetMercury
+        restart_events: eventRestartShotPlanetMercury
+        reset_events: eventResetShotPlanetMercury
+        profile: spShotPlanetsMercury
+        show_tokens:
+            led1: ledSpot1A
+            led2: ledSpot1B
+            led3: ledSpot1C
+            led4: ledSpot1D
+            led5: ledSpot1E
+            led6: ledLane1
+            
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::PLANETS
+    # -----------------------------
+    spShotPlanetsMercury:
+        states:
+          - name: litSolid
+            show: showPlanetsMercury
+            speed: 5
+            show_tokens:
+                color1: '886600'
+                color2: 'ffcc00'
+                color3: '886600'
+                color4: 'ffcc00'
+        loop: false
+        
+# ---------------------
+# EXTRA::BALLS
+# ---------------------
+extra_balls:
+  extraBallMultiballMercury:
+    light_events: eventExtraBallMultiballMercuryLit
+    award_events: eventExtraBallMultiballMercuryAward
+    max_per_game: 1
+    
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeVoltanMercuryMultiball_started:
+    # ----------------------------------
+    # LIT EXTRA BALL
+    - eventExtraBallMultiballMercuryLit
+    # AWARD EXTRA BALL
+    - eventExtraBallMultiballMercuryAward|1000ms
+    # ----------------------------------
+    # ENABLE MULTIBALL
+    - eventEnableMultiballMercury
+    - eventStartMultiballMercury|1000ms
+    # ----------------------------------
+    # SHOW SLIDE
+    - eventShowSlideMultiballMercury
+    # ----------------------------------
+    # RESTART SHOT
+    - eventRestartShotPlanetMercury
+    # ----------------------------------
+    
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+  # ---------------
+  # INITIALIZE MERCURY COUNT
+  # ---------------
+  multiball_multiballMercury_started:
+    # -------------------------
+    # RESET BONUS COUNT UPPER
+    bonusMercury:
+      int: 0
+      action: set
+  # ---------------
+  # ADD MERCURY COUNT
+  # ---------------
+  shotPlanetMercury_litSolid_hit:
+    bonusMercury: 1
+
+# ---------------------
+# MULTIBALLS
+# ---------------------
+multiballs:
+  # ----------------------------
+  # MULTIBALL::MERCURY
+  # ----------------------------
+  multiballMercury:
+    ball_locks:
+      - ballDeviceSaucerTopLeft
+      - ballDeviceSaucerTopRight
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: eventEnableMultiballMercury
+    disable_events: eventDisableMultiballMercury
+    start_events: eventStartMultiballMercury
+    stop_events: eventStopMultiballMercury
+
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showPlanetsMercury:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+        

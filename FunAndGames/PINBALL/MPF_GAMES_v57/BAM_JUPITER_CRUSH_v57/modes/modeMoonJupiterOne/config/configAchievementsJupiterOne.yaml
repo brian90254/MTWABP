@@ -1,0 +1,210 @@
+#config_version=6
+
+# JCv50 (Jupiter Crush v0.50)
+
+# *****************************
+# ACHIEVEMENTS
+# *****************************
+achievements:
+# -----------------------------
+# ACHIEVEMENT::BONUS::MULTI
+# -----------------------------
+  # -----------------------------
+  # BONUS::MULTI::ONE
+  # -----------------------------
+  achBonusMultiJupiterOne1:
+    start_events: mode_modeMoonJupiterOne_started
+    show_tokens:
+      led: ledBonusMultiplier2x
+    show_when_selected: flashLedTwoOrange
+    show_when_started: flashLedTwoOrange
+    show_when_completed: onLedOrange
+    restart_after_stop_possible: true
+    events_when_completed:
+      - eventSetMultiplier2X
+      - startAchBonusMulti2
+      - advMultiBonus
+    complete_events: sgDropLfJupiterOne_litSolid_complete
+    enable_events: mode_modeMoonJupiterOne_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # BONUS::MULTI::TWO
+  # -----------------------------
+  achBonusMultiJupiterOne2:
+    start_events: startAchBonusMulti2
+    show_tokens:
+      led: ledBonusMultiplier4x
+    show_when_selected: flashLedTwoOrange
+    show_when_started: flashLedTwoOrange
+    show_when_completed: onLedOrange
+    restart_after_stop_possible: true
+    events_when_completed:
+      - eventSetMultiplier4X
+      - startAchBonusMulti3
+      - advMultiBonus
+    complete_events: sgDropLfJupiterOne_litSolid_complete
+    enable_events: mode_modeMoonJupiterOne_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # BONUS::MULTI::THREE
+  # -----------------------------
+  achBonusMultiJupiterOne3:
+    start_events: startAchBonusMulti3
+    show_tokens:
+      led: ledBonusMultiplier8x
+    show_when_selected: flashLedTwoOrange
+    show_when_started: flashLedTwoOrange
+    show_when_completed: onLedOrange
+    restart_after_stop_possible: true
+    events_when_completed:
+      - eventSetMultiplier8X
+      - startAchBonusMulti4
+      - advMultiBonus
+    complete_events: sgDropLfJupiterOne_litSolid_complete
+    enable_events: mode_modeMoonJupiterOne_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # BONUS::MULTI::FOUR
+  # -----------------------------
+  achBonusMultiJupiterOne4:
+    start_events: startAchBonusMulti4
+    show_tokens:
+      led: ledBonusMultiplier16x
+    show_when_selected: flashLedTwoOrange
+    show_when_started: flashLedTwoOrange
+    show_when_completed: onLedOrange
+    restart_after_stop_possible: true
+    events_when_completed:
+      - eventSetMultiplier16X
+      - startAchBonusMulti5
+      - advMultiBonus
+    complete_events: sgDropLfJupiterOne_litSolid_complete
+    enable_events: mode_modeMoonJupiterOne_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # BONUS::MULTI::FIVE
+  # -----------------------------
+  achBonusMultiJupiterOne5:
+    start_events: startAchBonusMulti5
+    show_tokens:
+      led1: ledBonusMultiplier32x1
+      led2: ledBonusMultiplier32x2
+      led3: ledBonusMultiplier32x3
+      led4: ledBonusMultiplier32x4
+      led5: ledBonusMultiplier32x5
+      led6: ledBonusMultiplier32x6
+    show_when_selected: flashSixLedTwoRed
+    show_when_started: flashSixLedTwoRed
+    show_when_completed: onSixLedRed
+    restart_after_stop_possible: true
+    events_when_completed:
+      - eventSetMultiplier32X
+      - startAchBonusMulti6
+      - advMultiBonus
+    complete_events: sgDropLfJupiterOne_litSolid_complete
+    enable_events: mode_modeMoonJupiterOne_started
+    sync_ms: 1
+    reset_events: ball_ending
+    
+
+# -----------------------------
+# ACHIEVEMENT::NEWTON::BALL
+# -----------------------------
+  # -----------------------------
+  # NEWTON::BALL::ONE
+  # -----------------------------
+  achNewtonBallJupiterOne1:
+    start_events: mode_modeMoonJupiterOne_started
+    show_tokens:
+      led: ledAttackAdvance1
+    show_when_selected: flashLedTwoPink
+    show_when_started: flashLedTwoPink
+    show_when_completed: onLedPink
+    restart_after_stop_possible: true
+    events_when_completed:
+      - startAchNewtonBallJupiterOne2
+      - advMultiNewton
+    complete_events: s_target_newton_active
+    enable_events: mode_modeMoonJupiterOne_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # NEWTON::BALL::TWO
+  # -----------------------------
+  achNewtonBallJupiterOne2:
+    start_events: startAchNewtonBallJupiterOne2
+    show_tokens:
+      led: ledAttackAdvance2
+    show_when_selected: flashLedTwoPink
+    show_when_started: flashLedTwoPink
+    show_when_completed: onLedPink
+    restart_after_stop_possible: true
+    events_when_completed:
+      - startAchNewtonBallJupiterOne3
+      - advMultiNewton
+    complete_events: s_target_newton_active
+    enable_events: mode_modeMoonJupiterOne_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # NEWTON::BALL::THREE
+  # -----------------------------
+  achNewtonBallJupiterOne3:
+    start_events: startAchNewtonBallJupiterOne3
+    show_tokens:
+      led: ledAttackAdvance3
+    show_when_selected: flashLedTwoPink
+    show_when_started: flashLedTwoPink
+    show_when_completed: onLedPink
+    restart_after_stop_possible: true
+    events_when_completed:
+      - startAchNewtonBallJupiterOne4
+      - advMultiNewton
+    complete_events: s_target_newton_active
+    enable_events: mode_modeMoonJupiterOne_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # NEWTON::BALL::FOUR
+  # -----------------------------
+  achNewtonBallJupiterOne4:
+    start_events: startAchNewtonBallJupiterOne4
+    show_tokens:
+      led: ledAttackAdvance4
+    show_when_selected: flashLedTwoPink
+    show_when_started: flashLedTwoPink
+    show_when_completed: onLedPink
+    restart_after_stop_possible: true
+    events_when_completed:
+      - startAchNewtonBallJupiterOne5
+      - advMultiNewton
+    complete_events: s_target_newton_active
+    enable_events: mode_modeMoonJupiterOne_started
+    sync_ms: 1
+    reset_events: ball_ending
+  # -----------------------------
+  # NEWTON::BALL::FIVE
+  # -----------------------------
+  achNewtonBallJupiterOne5:
+    start_events: startAchNewtonBallJupiterOne5
+    show_tokens:
+      led: ledAttackAdvance5
+    show_when_selected: flashLedTwoPink
+    show_when_started: flashLedTwoPink
+    show_when_completed: onLedPink
+    restart_after_stop_possible: true
+    events_when_completed:
+      - startAchNewtonBallJupiterOne6
+      - advMultiNewton
+    complete_events: s_target_newton_active
+    enable_events: mode_modeMoonJupiterOne_started
+    sync_ms: 1
+    reset_events: ball_ending
+    
+# *****************************
+# END ACHIEVEMENTS
+# *****************************

@@ -1,0 +1,79 @@
+#config_version=6
+
+config:
+- configBaseShows.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 100
+
+# ---------------------
+# SWITCHES::COMBO
+# ---------------------
+combo_switches:
+  
+  comboSwitchEndGame:
+    # FLIPPER::RIGHT
+    switches_1: s_0_10
+    # START
+    switches_2: s_0_8
+    hold_time: 2s
+    events_when_both: end_game
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  #ball_started:
+    #- eventResetMultipliers
+    #- eventShowSlideBaseShows
+    ## RESET DROPS
+    #- eventResetDropTargetBankLeft|500
+    #- eventResetDropTargetBankRight|1000
+    
+  # ----------------------------
+  # START MODE BALLY VIKING
+  # ----------------------------
+  mode_modeBase_started:
+    #- eventStartModeBallyStarTrek
+    # ON BALL STARTED
+    - eventResetMultipliers
+    - eventShowSlideBaseShows
+    # ON MODE STARTED
+    - eventStartModeFlashGordon
+    - playPoolSoundHorn
+
+# ---------------------
+# PLAYLIST::PLAYER
+# ---------------------
+playlist_player:
+
+  eventPauseTrackPlaylist:
+    trackplaylist:
+      action: stop
+      
+  eventResumeTrackPlaylist:
+    trackplaylist:
+      #playlist: playlistModeBallyVikingMusic
+      #playlist: playlistModeBallyStarTrekMusic
+      #playlist: playlistModeBallyStrikesSparesMusic
+      playlist: playlistModeFlashGordonMusic
+      action: play
+
+# ************************************
+# VARIABLE::PLAYER
+# ************************************
+variable_player:
+   player_score:
+      playerScore:
+         int: (change)
+         #action: set
+         action: set_machine
+
+   player_added:
+      playerAddedNum:
+         int: (num)
+         #action: set
+         action: set_machine
+         

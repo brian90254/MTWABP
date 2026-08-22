@@ -1,0 +1,122 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# mpf:
+#   #default_show_sync_ms: 500
+#   default_show_sync_ms: 1000
+  
+# ---------------
+# MODES
+# ---------------
+config:
+# -----------------
+# HARDWARE
+- configVirtual.yaml
+#- configFastHardware.yaml
+- configFastHardwareReverseDebounce.yaml
+# -----------------
+# GAME
+- configModes.yaml
+# -----------------
+# SHOWS
+- configLeds.yaml
+- configShows.yaml
+- configEvents.yaml
+- configDisplays.yaml
+# -----------------
+# SOUNDS
+#- configMusic.yaml
+- configVoice.yaml
+- configSFX.yaml
+# -----------------
+# SOUNDS BY GAME
+- configGames_SFX/configSFX_BallyViking.yaml
+#- configGames_SFX/configSFX_Globetrotters.yaml
+#- configGames_SFX/configSFX_Bowling.yaml
+# -----------------
+# FONT / COLOR BY GAME
+- configGames_FontColor/configFontColor_BallyViking.yaml
+# -----------------
+# MUSIC BY GAME
+- configGames_Music/configMusic_BallyViking.yaml
+
+# ---------------
+# CONFIG
+# ---------------
+game:
+  balls_per_game: 3
+  max_players: 4
+  allow_start_with_loose_balls: true
+
+machine:
+  # Standard FAST trough is six balls
+  balls_installed: 1
+  min_balls: 1
+
+credits:
+  max_credits: 99
+  free_play: false
+  #------------
+  events:
+    - event: eventCreditStart
+      type: creditsStart
+      credits: 50
+  free_play_string: FREE PLAY
+  credits_string: CREDITS
+
+sound_system:
+  #buffer: 4096
+  buffer: 1024
+  frequency: 44100
+  channels: 2
+  ##master_volume: 1
+  tracks:
+    voice:
+      volume: 0.8
+      simultaneous_sounds: 1
+      preload: yes
+    sfx:
+      volume: 0.5
+      simultaneous_sounds: 8
+      preload: yes
+    music:
+      volume: 0.6
+      simultaneous_sounds: 8
+    # --------------------------
+    # THIS IS A BUG WORK-AROUND
+    use_sound_setting:
+      volume: 0.3
+      simultaneous_sounds: 8
+    # --------------------------
+    trackplaylist:
+      type: playlist
+      volume: 0.4
+      crossfade_time: 3.0s
+
+assets:
+  sounds:
+    default:
+      #load: on_demand
+      load: preload
+      #track: music
+    voice:
+      #load: on_demand
+      load: preload
+      track: voice
+    sfx:
+      #load: on_demand
+      load: preload
+      track: sfx
+    music:
+      load: on_demand
+      #load: preload
+      track: music
+  videos:
+    default:
+      load: on_demand
+      #load: preload
+  images:
+    default:
+      #load: on_demand
+      load: preload

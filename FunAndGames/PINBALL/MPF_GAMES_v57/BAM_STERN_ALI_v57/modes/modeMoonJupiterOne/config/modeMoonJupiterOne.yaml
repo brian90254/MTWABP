@@ -1,0 +1,306 @@
+#config_version=6
+
+config:
+- configShotsJupiterOne.yaml
+- configAchievementsJupiterOne.yaml
+- configScoringJupiterOne.yaml
+- configExtraBallJupiterOne.yaml
+- configSpecialShotsJupiterOne.yaml
+
+mode:
+  start_events: startModeJupiterOne
+  stop_events: stopModeJupiterOne
+  priority: 2000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  mode_modeMoonJupiterOne_started:
+    # ---------------------
+    # EVENT::START::SPECIAL MODES
+    # ---------------------
+    #- eventStartModeSkillShot
+    #- eventStartModeCollectMidGameBonus
+    - eventStartModeAwardWheel
+    # ---------------------
+    # START::LIGHT::SHOWS
+    # ---------------------
+    - showJupiterOneStarShooterLane
+    - showJupiterOneStarTurnAround
+    - showJupiterOneStarOrbitLeft1
+    - showJupiterOneStarOrbitLeft2
+    - showJupiterOneStarOrbitRight
+    # ---------------------
+    # EVENT::RESET::MULTIPLIERS
+    # ---------------------
+    - eventResetMultipliersJupiterOne
+    # ---------------------
+    # EVENT::PLAYER::FLIPPERS
+    # ---------------------
+    - eventEnableFlipperJupiterOne|250ms
+    # ----------------------------
+    #- eventDisableFlipperJupiterOne
+    - eventDisableFlipperEuropa
+    - eventDisableFlipperGanymede
+    - eventDisableFlipperCallisto
+    # ---------------------
+    # EVENT::RESET::DROPS
+    # ---------------------
+    - eventResetDropTargetLeft|1.5s
+    - eventResetDropTargetRight|1s
+    # ---------------------
+    # EVENT::START::MULTIBALLS
+    # ---------------------
+    - eventStartModeMultiball
+    #- eventEnableMultiballUpperKicker
+    - eventDisableMultiballUpperKicker
+    - eventDisableShotStartMultiballVukJupiterOne
+
+  # ---------------------
+  # EVENT::START::WHEEL_ACHIEVEMENT
+  # ---------------------
+  multiball_multiballUpperKicker_ended:
+    - eventEnableMultiballVuk
+    - eventEnableAwardWheel
+
+
+# ---------------------
+# VARIABLE::PLAYER
+# ---------------------
+variable_player:
+  mode_modeMoonJupiterOne_started:
+    nameMoon:
+      string: "Moon: Jupiter One"
+      action: set
+      
+# ---------------------
+# COIL::PLAYER
+# ---------------------
+coil_player:
+  # ----------------------------
+  # SAUCER MOTOR
+  # ----------------------------
+  eventStartSaucerVukShow:
+    c_spinner:
+      action: enable
+      
+  eventStopSaucerVukShow:
+    c_spinner:
+      action: disable
+      
+  eventStartSaucerKickerShow:
+    c_spinner:
+      action: enable
+      
+  eventStopSaucerKickerShow:
+    c_spinner:
+      action: disable
+      
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+# ---------------------
+# SHOW::PLAYER::COILS
+# ---------------------
+  ball_lock_blVUK_locked_ball:
+    showBallLockVUK:
+      loops: 0
+      speed: 1
+
+  ball_lock_blKickerUpper_locked_ball:
+    showBallLockKickerUpper:
+      loops: 0
+      speed: 1
+        
+  # ----------------------------
+  # VUK SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  eventStartSaucerVukShow:
+    showSaucerMotorLights:
+      loops: -1
+      speed: 16
+      show_tokens:
+        color1: '0000ff'
+        color2: '0000ff'
+        color3: '000000'
+        color4: '000000'
+      key: saucerVukShow
+      
+  eventStopSaucerVukShow:
+    saucerVukShow:
+      action: stop
+  # ----------------------------
+  
+  # ----------------------------
+  # KICKER SAUCER MOTOR SHOW LIGHTS
+  # ----------------------------
+  eventStartSaucerKickerShow:
+    showSaucerMotorLights:
+      loops: -1
+      speed: 16
+      show_tokens:
+        color1: 'ffff00'
+        color2: 'ffff00'
+        color3: '000000'
+        color4: '000000'
+      key: saucerKickerShow
+      
+  eventStopSaucerKickerShow:
+    saucerKickerShow:
+      action: stop
+  # ----------------------------
+      
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------
+    
+  mode_modeMoonJupiterOne_started:      
+    onThreeLedColor:
+      show_tokens:
+        led1: l_newton_ball_2
+        led2: l_newton_ball_3
+        led3: l_newton_ball_4
+        color: 'ffff88'
+      key: newtonBall
+      
+  showJupiterOneMoonMode:
+    pulseThreeLedTwoColor:
+      show_tokens:
+        led1: l_moon_modes_1_1
+        led2: l_moon_modes_1_2
+        led3: l_moon_modes_1_3
+        color1: 'cc00ff'
+        color2: '660088'
+      key: JupiterOne
+            
+  # -------------------------------
+  
+# ---------------------
+# SHOW::PLAYER::LEDS
+# ---------------------
+  # ---------------------
+  # MODE SPECIFIC::STAR::ROLLOVERS
+  # ---------------------
+  # JUPITER ONE::ORANGE
+  # ---------------------
+  showJupiterOneStarShooterLane:
+    swirlFourLedTwoColor:
+      show_tokens:
+        led1: l_lane_shooter_2_1
+        led2: l_lane_shooter_2_2
+        led3: l_lane_shooter_2_3
+        led4: l_lane_shooter_2_4
+        color1: 'cc6600'
+        color2: '664400'
+      key: starShooterLane
+      
+  showJupiterOneStarTurnAround:
+    swirlFourLedTwoColor:
+      show_tokens:
+        led1: l_turn_around_4_1
+        led2: l_turn_around_4_2
+        led3: l_turn_around_4_3
+        led4: l_turn_around_4_4
+        color1: 'cc6600'
+        color2: '664400'
+      key: starTurnAround
+      
+  showJupiterOneStarOrbitLeft1:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_left_4
+        color1: '885500'
+        color2: 'ffaa00'
+      key: starOrbitLeft1
+      
+  showJupiterOneStarOrbitLeft2:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_left_5
+        color1: '885500'
+        color2: 'ffaa00'
+      key: starOrbitLeft2
+      
+  showJupiterOneStarOrbitRight:
+    flashLedTwoColor:
+      show_tokens:
+        led: l_orbit_right_2
+        color1: '885500'
+        color2: 'ffaa00'
+      key: starOrbitRight
+  # ---------------------
+  # END MODE SPECIFIC::JUPITER ONE::ORANGE
+  # ---------------------
+      
+# ---------------------
+# SOUND::PLAYER
+# ---------------------
+sound_player:
+  mode_modeMoonJupiterOne_started:
+    musicJupiterOne001:
+      loops: -1
+      volume: 0.3
+      
+  mode_modeMoonJupiterOne_ending:
+    musicJupiterOne001:
+      action: stop
+  #---------------------
+  shotMusicHJupiterOne_loopOn_hit:
+    musicJupiterOne002:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicHJupiterOne_loopOff_hit:
+    musicJupiterOne002:
+      action: stop
+  # ---------------------      
+  shotMusicUJupiterOne_loopOn_hit:
+    musicJupiterOne003:
+      loops: -1
+      volume: 0.25
+      
+  shotMusicUJupiterOne_loopOff_hit:
+    musicJupiterOne003:
+      action: stop
+  # ---------------------
+  shotMusicNJupiterOne_loopOn_hit:
+    musicJupiterOne004:
+      loops: -1
+      volume: 0.6
+      
+  shotMusicNJupiterOne_loopOff_hit:
+    musicJupiterOne004:
+      action: stop
+  # ---------------------
+  shotMusicTJupiterOne_loopOn_hit:
+    musicJupiterOne005:
+      loops: -1
+      volume: 0.15
+      
+  shotMusicTJupiterOne_loopOff_hit:
+    musicJupiterOne005:
+      action: stop
+  # ---------------------
+  shotMusicEJupiterOne_loopOn_hit:
+    musicJupiterOne006:
+      loops: -1
+      volume: 0.45
+      
+  shotMusicEJupiterOne_loopOff_hit:
+    musicJupiterOne006:
+      action: stop
+  # ---------------------
+  shotMusicRJupiterOne_loopOn_hit:
+    musicJupiterOne007:
+      loops: -1
+      volume: 0.3
+      
+  shotMusicRJupiterOne_loopOff_hit:
+    musicJupiterOne007:
+      action: stop
+  # ---------------------
+  
+

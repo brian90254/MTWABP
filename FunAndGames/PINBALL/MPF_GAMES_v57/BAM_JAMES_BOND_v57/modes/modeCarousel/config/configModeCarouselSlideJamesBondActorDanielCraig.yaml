@@ -1,0 +1,155 @@
+#config_version=6
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  modeCarousel_jamesBondActorDanielCraig_highlighted:
+    slideJamesBondActorDanielCraig:
+      target: displayDMD
+
+slides:
+  slideJamesBondActorDanielCraig:
+    widgets:
+      - type: image
+        image: imageJamesBondActorDanielCraig
+        y: middle + 15
+        x: middle
+        z: 30
+      # ---------------
+      - type: image
+        image: imageJamesBondActorPierceBrosnan
+        y: middle + 15
+        x: middle - 110
+        z: 30
+      # ---------------
+      - type: image
+        image: imageJamesBondActorGeorgeLazenby
+        y: middle + 15
+        x: middle + 110
+        z: 30
+      # ---------------
+      # INNER
+      # ---------------
+      - type: text
+        text: "DANIEL CRAIG"
+        y: bottom + 18
+        x: middle
+        style: fontCarouselFooter
+        color: colorFontCarouselFooterInner
+        z: 20
+      # ---------------
+      # OUTER ONE
+      # ---------------
+      - type: text
+        text: "DANIEL CRAIG"
+        y: bottom + 19
+        x: middle + 1
+        style: fontCarouselFooter
+        color: colorFontCarouselFooterOuter1
+        z: 15
+      - type: text
+        text: "DANIEL CRAIG"
+        y: bottom + 17
+        x: middle + 1
+        style: fontCarouselFooter
+        color: colorFontCarouselFooterOuter1
+        z: 15
+      - type: text
+        text: "DANIEL CRAIG"
+        y: bottom + 19
+        x: middle - 1
+        style: fontCarouselFooter
+        color: colorFontCarouselFooterOuter1
+        z: 15
+      - type: text
+        text: "DANIEL CRAIG"
+        y: bottom + 17
+        x: middle - 1
+        style: fontCarouselFooter
+        color: colorFontCarouselFooterOuter1
+        z: 15
+      # ---------------
+      # OUTER TWO
+      # ---------------
+      - type: text
+        text: "DANIEL CRAIG"
+        y: bottom + 20
+        x: middle + 2
+        style: fontCarouselFooter
+        color: colorFontCarouselFooterOuter2
+        z: 10
+      - type: text
+        text: "DANIEL CRAIG"
+        y: bottom + 16
+        x: middle + 2
+        style: fontCarouselFooter
+        color: colorFontCarouselFooterOuter2
+        z: 10
+      - type: text
+        text: "DANIEL CRAIG"
+        y: bottom + 20
+        x: middle - 2
+        style: fontCarouselFooter
+        color: colorFontCarouselFooterOuter2
+        z: 10
+      - type: text
+        text: "DANIEL CRAIG"
+        y: bottom + 16
+        x: middle - 2
+        style: fontCarouselFooter
+        color: colorFontCarouselFooterOuter2
+        z: 10
+        
+        # --------------------
+        # COLOR OUTLINE
+        # --------------------
+      # ---------------
+      - type: image
+        image: imageJamesBondFrameRed2
+        y: middle
+        x: middle
+        z: 8
+        # --------------------
+        # WHITE INFILL
+        # --------------------
+      - type: rectangle
+        color: colorBoxCarouselFill
+        width: 240
+        height: 136
+        x: 120
+        y: 68
+        z: 7
+      ## ---------------
+      #- type: rectangle
+      #  color: colorBoxCarouselOuter
+      #  width: 236
+      #  height: 130
+      #  x: 120
+      #  y: 67
+      #  z: 3
+      #- type: rectangle
+      #  color: colorBoxCarouselMiddle
+      #  width: 232
+      #  height: 126
+      #  x: 120
+      #  y: 67
+      #  z: 5
+      #- type: rectangle
+      #  color: colorBoxCarouselInner
+      #  width: 228
+      #  height: 122
+      #  x: 120
+      #  y: 67
+      #  z: 6
+      #  # --------------------
+      #  # BLACK INFILL
+      #  # --------------------
+      #- type: rectangle
+      #  color: colorBoxCarouselFill
+      #  width: 224
+      #  height: 118
+      #  x: 120
+      #  y: 67
+      #  z: 7
+        

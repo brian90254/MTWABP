@@ -1,0 +1,1008 @@
+#config_version=6
+
+# VOLTAN
+
+# *****************************
+# SHOTS::LANES
+# *****************************
+shots:
+    # -------------------
+    # MATRIX SPOT
+    # -------------------
+    shotMatrixSpotAceFrehley1:
+        switch: s_1_28
+        enable_events: eventEnableShotMatrixSpotAceFrehley1
+        disable_events: eventDisableShotMatrixSpotAceFrehley1
+        restart_events: eventRestartShotMatrixSpotAceFrehley1
+        reset_events: eventResetShotMatrixSpotAceFrehley1
+        profile: spShotMatrixSpotAceFrehley
+        show_tokens:
+            led1: ledSpot1A
+            led2: ledSpot1B
+            led3: ledSpot1C
+            led4: ledSpot1D
+            led5: ledSpot1E
+            led6: ledLane1
+           
+    shotMatrixSpotAceFrehley2:
+        switch: s_1_30
+        enable_events: eventEnableShotMatrixSpotAceFrehley2
+        disable_events: eventDisableShotMatrixSpotAceFrehley2
+        restart_events: eventRestartShotMatrixSpotAceFrehley2
+        reset_events: eventResetShotMatrixSpotAceFrehley2
+        profile: spShotMatrixSpotAceFrehley
+        show_tokens:
+            led1: ledSpot2A
+            led2: ledSpot2B
+            led3: ledSpot2C
+            led4: ledSpot2D
+            led5: ledSpot2E
+            led6: ledTarget2
+            
+    shotMatrixSpotAceFrehley3:
+        switch: s_1_19
+        enable_events: eventEnableShotMatrixSpotAceFrehley3
+        disable_events: eventDisableShotMatrixSpotAceFrehley3
+        restart_events: eventRestartShotMatrixSpotAceFrehley3
+        reset_events: eventResetShotMatrixSpotAceFrehley3
+        profile: spShotMatrixSpotAceFrehley
+        show_tokens:
+            led1: ledSpot3A
+            led2: ledSpot3B
+            led3: ledSpot3C
+            led4: ledSpot3D
+            led5: ledSpot3E
+            led6: ledLane3
+            
+    shotMatrixSpotAceFrehley4:
+        switch: s_1_17
+        enable_events: eventEnableShotMatrixSpotAceFrehley4
+        disable_events: eventDisableShotMatrixSpotAceFrehley4
+        restart_events: eventRestartShotMatrixSpotAceFrehley4
+        reset_events: eventResetShotMatrixSpotAceFrehley4
+        profile: spShotMatrixSpotAceFrehley
+        show_tokens:
+            led1: ledSpot4A
+            led2: ledSpot4B
+            led3: ledSpot4C
+            led4: ledSpot4D
+            led5: ledSpot4E
+            led6: ledLane4
+           
+    shotMatrixSpotAceFrehley5:
+        switch: s_1_9
+        enable_events: eventEnableShotMatrixSpotAceFrehley5
+        disable_events: eventDisableShotMatrixSpotAceFrehley5
+        restart_events: eventRestartShotMatrixSpotAceFrehley5
+        reset_events: eventResetShotMatrixSpotAceFrehley5
+        profile: spShotMatrixSpotAceFrehley
+        show_tokens:
+            led1: ledSpot5A
+            led2: ledSpot5B
+            led3: ledSpot5C
+            led4: ledSpot5D
+            led5: ledSpot5E
+            led6: ledTarget5
+            
+    shotMatrixSpotAceFrehley6:
+        switch: s_1_31
+        enable_events: eventEnableShotMatrixSpotAceFrehley6
+        disable_events: eventDisableShotMatrixSpotAceFrehley6
+        restart_events: eventRestartShotMatrixSpotAceFrehley6
+        reset_events: eventResetShotMatrixSpotAceFrehley6
+        profile: spShotMatrixSpotAceFrehley
+        show_tokens:
+            led1: ledSpot6A
+            led2: ledSpot6B
+            led3: ledSpot6C
+            led4: ledSpot6D
+            led5: ledSpot6E
+            led6: ledLane6
+            
+    shotMatrixSpotAceFrehley7:
+        switch: s_1_29
+        enable_events: eventEnableShotMatrixSpotAceFrehley7
+        disable_events: eventDisableShotMatrixSpotAceFrehley7
+        restart_events: eventRestartShotMatrixSpotAceFrehley7
+        reset_events: eventResetShotMatrixSpotAceFrehley7
+        profile: spShotMatrixSpotAceFrehley
+        show_tokens:
+            led1: ledSpot7A
+            led2: ledSpot7B
+            led3: ledSpot7C
+            led4: ledSpot7D
+            led5: ledSpot7E
+            led6: ledLane7
+           
+    shotMatrixSpotAceFrehley8:
+        switch: s_1_16
+        enable_events: eventEnableShotMatrixSpotAceFrehley8
+        disable_events: eventDisableShotMatrixSpotAceFrehley8
+        restart_events: eventRestartShotMatrixSpotAceFrehley8
+        reset_events: eventResetShotMatrixSpotAceFrehley8
+        profile: spShotMatrixSpotAceFrehley
+        show_tokens:
+            led1: ledSpot8A
+            led2: ledSpot8B
+            led3: ledSpot8C
+            led4: ledSpot8D
+            led5: ledSpot8E
+            led6: ledTarget8
+            
+    shotMatrixSpotAceFrehley9:
+        switch: s_1_18
+        enable_events: eventEnableShotMatrixSpotAceFrehley9
+        disable_events: eventDisableShotMatrixSpotAceFrehley9
+        restart_events: eventRestartShotMatrixSpotAceFrehley9
+        reset_events: eventResetShotMatrixSpotAceFrehley9
+        profile: spShotMatrixSpotAceFrehley
+        show_tokens:
+            led1: ledSpot9A
+            led2: ledSpot9B
+            led3: ledSpot9C
+            led4: ledSpot9D
+            led5: ledSpot9E
+            led6: ledLane9
+            
+    # -------------------
+    # MATRIX SPOT::GROUPS
+    # -------------------
+    # DIAGONAL
+    shotMatrixSpotAceFrehleyDiagonalLeft:
+        enable_events: eventEnableShotMatrixSpotAceFrehleyDiagonalLeft
+        disable_events: eventDisableShotMatrixSpotAceFrehleyDiagonalLeft
+        restart_events: eventRestartShotMatrixSpotAceFrehleyDiagonalLeft
+        reset_events: eventResetShotMatrixSpotAceFrehleyDiagonalLeft
+        hit_events: eventHitShotMatrixSpotAceFrehleyDiagonalLeft
+        profile: spShotMatrixSpotAceFrehleyDiagonal
+            
+    shotMatrixSpotAceFrehleyDiagonalRight:
+        enable_events: eventEnableShotMatrixSpotAceFrehleyDiagonalRight
+        disable_events: eventDisableShotMatrixSpotAceFrehleyDiagonalRight
+        restart_events: eventRestartShotMatrixSpotAceFrehleyDiagonalRight
+        reset_events: eventResetShotMatrixSpotAceFrehleyDiagonalRight
+        hit_events: eventHitShotMatrixSpotAceFrehleyDiagonalRight
+        profile: spShotMatrixSpotAceFrehleyDiagonal
+        
+    # VERTICAL
+    shotMatrixSpotAceFrehleyVerticalLeft:
+        enable_events: eventEnableShotMatrixSpotAceFrehleyVerticalLeft
+        disable_events: eventDisableShotMatrixSpotAceFrehleyVerticalLeft
+        restart_events: eventRestartShotMatrixSpotAceFrehleyVerticalLeft
+        reset_events: eventResetShotMatrixSpotAceFrehleyVerticalLeft
+        hit_events: eventHitShotMatrixSpotAceFrehleyVerticalLeft
+        profile: spShotMatrixSpotAceFrehleyVertical
+            
+    shotMatrixSpotAceFrehleyVerticalMiddle:
+        enable_events: eventEnableShotMatrixSpotAceFrehleyVerticalMiddle
+        disable_events: eventDisableShotMatrixSpotAceFrehleyVerticalMiddle
+        restart_events: eventRestartShotMatrixSpotAceFrehleyVerticalMiddle
+        reset_events: eventResetShotMatrixSpotAceFrehleyVerticalMiddle
+        hit_events: eventHitShotMatrixSpotAceFrehleyVerticalMiddle
+        profile: spShotMatrixSpotAceFrehleyVertical
+        
+    shotMatrixSpotAceFrehleyVerticalRight:
+        enable_events: eventEnableShotMatrixSpotAceFrehleyVerticalRight
+        disable_events: eventDisableShotMatrixSpotAceFrehleyVerticalRight
+        restart_events: eventRestartShotMatrixSpotAceFrehleyVerticalRight
+        reset_events: eventResetShotMatrixSpotAceFrehleyVerticalRight
+        hit_events: eventHitShotMatrixSpotAceFrehleyVerticalRight
+        profile: spShotMatrixSpotAceFrehleyVertical
+        
+    # -------------------
+    # SHOTS::SPINNERS
+    # -------------------
+    shotSpinnerAceFrehleyLeft:
+        switch: s_1_11
+        enable_events: eventEnableShotSpinnerAceFrehleyLeft
+        disable_events: eventDisableShotSpinnerAceFrehleyLeft
+        restart_events: eventRestartShotSpinnerAceFrehleyLeft
+        reset_events: eventResetShotSpinnerAceFrehleyLeft
+        profile: spShotSpinnerAceFrehley
+        show_tokens:
+            led1: ledSpinnerLeft1
+            led2: ledSpinnerLeft2
+            led3: ledSpinnerLeft3
+        
+    shotSpinnerAceFrehleyRight:
+        switch: s_1_4
+        enable_events: eventEnableShotSpinnerAceFrehleyRight
+        disable_events: eventDisableShotSpinnerAceFrehleyRight
+        restart_events: eventRestartShotSpinnerAceFrehleyRight
+        reset_events: eventResetShotSpinnerAceFrehleyRight
+        profile: spShotSpinnerAceFrehley
+        show_tokens:
+            led1: ledSpinnerRight1
+            led2: ledSpinnerRight2
+            led3: ledSpinnerRight3
+        
+    # -------------------
+    # SHOTS::OUTLANES
+    # -------------------
+    shotOutlaneAceFrehleyLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlaneAceFrehleyLeft
+        disable_events: eventDisableShotOutlaneAceFrehleyLeft
+        restart_events: eventRestartShotOutlaneAceFrehleyLeft
+        reset_events: eventResetShotOutlaneAceFrehleyLeft
+        profile: spShotOutlaneAceFrehley
+            
+    shotOutlaneAceFrehleyRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlaneAceFrehleyRight
+        disable_events: eventDisableShotOutlaneAceFrehleyRight
+        restart_events: eventRestartShotOutlaneAceFrehleyRight
+        reset_events: eventResetShotOutlaneAceFrehleyRight
+        profile: spShotOutlaneAceFrehley
+            
+    # -------------------
+    # SHOTS::OUTLANE::SPECIAL
+    # -------------------
+    shotOutlaneAceFrehleySpecialLeft:
+        switch: s_1_21
+        enable_events: eventEnableShotOutlaneAceFrehleySpecialLeft
+        disable_events: eventDisableShotOutlaneAceFrehleySpecialLeft
+        restart_events: eventRestartShotOutlaneAceFrehleySpecialLeft
+        reset_events: eventResetShotOutlaneAceFrehleySpecialLeft
+        profile: spShotOutlaneAceFrehleySpecial
+        show_tokens:
+            led: ledOutlaneLeft
+            
+    shotOutlaneAceFrehleySpecialRight:
+        switch: s_1_27
+        enable_events: eventEnableShotOutlaneAceFrehleySpecialRight
+        disable_events: eventDisableShotOutlaneAceFrehleySpecialRight
+        restart_events: eventRestartShotOutlaneAceFrehleySpecialRight
+        reset_events: eventResetShotOutlaneAceFrehleySpecialRight
+        profile: spShotOutlaneAceFrehleySpecial
+        show_tokens:
+            led: ledOutlaneRight
+            
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotAceFrehleyAll:
+        shots:
+            - shotMatrixSpotAceFrehley7
+            - shotMatrixSpotAceFrehley2
+            - shotMatrixSpotAceFrehley1
+            - shotMatrixSpotAceFrehley4
+            - shotMatrixSpotAceFrehley6
+            - shotMatrixSpotAceFrehley9
+            - shotMatrixSpotAceFrehley8
+            - shotMatrixSpotAceFrehley3
+            - shotMatrixSpotAceFrehley5
+        enable_events:
+            - eventEnableShotGroupMatrixSpotAceFrehleyAll
+        disable_events:
+            - eventDisableShotGroupMatrixSpotAceFrehleyAll
+        reset_events:
+            - eventResetShotGroupMatrixSpotAceFrehleyAll
+        restart_events:
+            - eventRestartShotGroupMatrixSpotAceFrehleyAll
+        rotate_left_events:
+            - sw_right_flipper
+        rotate_right_events:
+            - sw_left_flipper
+        
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::LEFT
+    # -------------------
+    shotGroupMatrixSpotAceFrehleyDiagonalLeft:
+        shots:
+            - shotMatrixSpotAceFrehley1
+            - shotMatrixSpotAceFrehley5
+            - shotMatrixSpotAceFrehley9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotAceFrehleyDiagonalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotAceFrehleyDiagonalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotAceFrehleyDiagonalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotAceFrehleyDiagonalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotAceFrehleyDiagonalRight:
+        shots:
+            - shotMatrixSpotAceFrehley3
+            - shotMatrixSpotAceFrehley5
+            - shotMatrixSpotAceFrehley7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotAceFrehleyDiagonalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotAceFrehleyDiagonalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotAceFrehleyDiagonalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotAceFrehleyDiagonalRight
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotAceFrehleyVerticalLeft:
+        shots:
+            - shotMatrixSpotAceFrehley1
+            - shotMatrixSpotAceFrehley4
+            - shotMatrixSpotAceFrehley7
+        enable_events:
+            - eventEnableShotGroupMatrixSpotAceFrehleyVerticalLeft
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotAceFrehleyVerticalLeft
+        reset_events:
+            - eventResetShotGroupMatrixSpotAceFrehleyVerticalLeft
+        restart_events:
+            - eventRestartShotGroupMatrixSpotAceFrehleyVerticalLeft
+
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotAceFrehleyVerticalMiddle:
+        shots:
+            - shotMatrixSpotAceFrehley2
+            - shotMatrixSpotAceFrehley5
+            - shotMatrixSpotAceFrehley8
+        enable_events:
+            - eventEnableShotGroupMatrixSpotAceFrehleyVerticalMiddle
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotAceFrehleyVerticalMiddle
+        reset_events:
+            - eventResetShotGroupMatrixSpotAceFrehleyVerticalMiddle
+        restart_events:
+            - eventRestartShotGroupMatrixSpotAceFrehleyVerticalMiddle
+            
+    # -------------------
+    # SHOTGROUP::MATRIX::DIAGONAL::RIGHT
+    # -------------------
+    shotGroupMatrixSpotAceFrehleyVerticalRight:
+        shots:
+            - shotMatrixSpotAceFrehley3
+            - shotMatrixSpotAceFrehley6
+            - shotMatrixSpotAceFrehley9
+        enable_events:
+            - eventEnableShotGroupMatrixSpotAceFrehleyVerticalRight
+        disable_events:
+            - ball_ending
+            - eventDisableShotGroupMatrixSpotAceFrehleyVerticalRight
+        reset_events:
+            - eventResetShotGroupMatrixSpotAceFrehleyVerticalRight
+        restart_events:
+            - eventRestartShotGroupMatrixSpotAceFrehleyVerticalRight
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::MARTIX::SPOT
+    # -----------------------------
+    spShotMatrixSpotAceFrehley:
+        states:
+          - name: litFlash
+            show: showMatrixSpotAceFrehley
+            speed: 4
+            show_tokens:
+                color1: '880088'
+                color2: 'ff00ff'
+                color3: '000000'
+                color4: '000000'
+          - name: litSolid
+            show: showMatrixSpotAceFrehley
+            speed: 4
+            show_tokens:
+                color1: '660088'
+                color2: '660088'
+                color3: '008888'
+                color4: '00ffff'
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::MARTIX::GROUPS
+    # -----------------------------
+    spShotMatrixSpotAceFrehleyDiagonal:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    spShotMatrixSpotAceFrehleyVertical:
+        states:
+          - name: litFlash
+          - name: litSolid
+        loop: false
+        
+    # -----------------------------
+    # PROFILE::SPINNER
+    # -----------------------------
+    spShotSpinnerAceFrehley:
+        states:
+          - name: litSolid
+            show: triangleThreeLedTwoColor
+            speed: 3
+            show_tokens:
+                color1: 'ffff00'
+                color2: '888800'
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE
+    # -----------------------------
+    spShotOutlaneAceFrehley:
+        states:
+          #- name: litFlash
+          - name: litSolid
+        loop: false
+
+    # -----------------------------
+    # PROFILE::OUTLANE::SPECIAL
+    # -----------------------------
+    spShotOutlaneAceFrehleySpecial:
+        states:
+          - name: litFlash
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: '440066'
+                color2: '8800cc'
+          - name: litSolid
+            show: flashLedTwoColor
+            speed: 4
+            show_tokens:
+                color1: 'cc00ff'
+                color2: 'cc00ff'
+        loop: false
+        
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+    mode_modeVoltanAceFrehley_started:
+        # -----------
+        # OUTLANES
+        # -----------
+        - eventEnableShotOutlaneAceFrehleyLeft
+        - eventEnableShotOutlaneAceFrehleyRight
+        # -----------
+        # MATRIX
+        # -----------
+        - eventEnableShotMatrixSpotAceFrehley1
+        - eventEnableShotMatrixSpotAceFrehley2
+        - eventEnableShotMatrixSpotAceFrehley3
+        - eventEnableShotMatrixSpotAceFrehley4
+        - eventEnableShotMatrixSpotAceFrehley5
+        - eventEnableShotMatrixSpotAceFrehley6
+        - eventEnableShotMatrixSpotAceFrehley7
+        - eventEnableShotMatrixSpotAceFrehley8
+        - eventEnableShotMatrixSpotAceFrehley9
+        # -----------
+        # MATRIX::GROUPS
+        # -----------
+        # DIAGONAL
+        # TODO reserve this for higher level modes past AceFrehley
+        - eventEnableShotMatrixSpotAceFrehleyDiagonalLeft
+        - eventEnableShotMatrixSpotAceFrehleyDiagonalRight
+        #VERTICAL
+        - eventEnableShotMatrixSpotAceFrehleyVerticalLeft
+        - eventEnableShotMatrixSpotAceFrehleyVerticalMiddle
+        - eventEnableShotMatrixSpotAceFrehleyVerticalRight
+        
+# -----------
+# MATRIX::GROUPS::COMPLETE
+# -----------
+# -----------
+# DIAGONAL
+# -----------
+    # TODO this is not enables in AceFrehley
+    # -----------
+    # DIAGONAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotAceFrehleyDiagonalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotAceFrehleyDiagonalLeft
+        # -------------
+    shotMatrixSpotAceFrehleyDiagonalLeft_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotAceFrehley1
+        #- eventDisableShotMatrixSpotAceFrehley5
+        #- eventDisableShotMatrixSpotAceFrehley9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalLeft
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotAceFrehley1|3000ms
+        #- eventRestartShotMatrixSpotAceFrehley5|3000ms
+        #- eventRestartShotMatrixSpotAceFrehley9|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerAceFrehleyLeft
+    
+    # -----------
+    # DIAGONAL::RIGHT
+    # -----------
+    # TODO this is not enables in AceFrehley
+    shotGroupMatrixSpotAceFrehleyDiagonalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotAceFrehleyDiagonalRight
+        # -------------
+    shotMatrixSpotAceFrehleyDiagonalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotAceFrehley3
+        #- eventDisableShotMatrixSpotAceFrehley5
+        #- eventDisableShotMatrixSpotAceFrehley7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteDiagonalRight
+        # -------------
+        # RESET SHOTS
+        #- eventRestartShotMatrixSpotAceFrehley3|3000ms
+        #- eventRestartShotMatrixSpotAceFrehley5|3000ms
+        #- eventRestartShotMatrixSpotAceFrehley7|3000ms
+        # ---------------------
+        # SPINNERS
+        # ---------------------
+        - eventRestartShotSpinnerAceFrehleyRight
+        
+    # -----------
+    # GROUP::ALL
+    # -----------
+    shotGroupMatrixSpotAceFrehleyAll_litSolid_complete:
+        - eventVoltanAceFrehleyComplete|3000ms
+    
+# -----------
+# VERTICAL
+# -----------
+    # -----------
+    # VERTICAL::LEFT
+    # ----------- 
+    shotGroupMatrixSpotAceFrehleyVerticalLeft_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotAceFrehleyVerticalLeft
+        # -------------
+    shotMatrixSpotAceFrehleyVerticalLeft_litFlash_hit:
+        # TODO this is not enables in AceFrehley
+        # -------------
+        # DISABLE SHOT
+        #- eventDisableShotMatrixSpotAceFrehley1
+        #- eventDisableShotMatrixSpotAceFrehley4
+        #- eventDisableShotMatrixSpotAceFrehley7
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalLeft
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in AceFrehley
+        #- eventRestartShotMatrixSpotAceFrehley1|3000ms
+        #- eventRestartShotMatrixSpotAceFrehley4|3000ms
+        #- eventRestartShotMatrixSpotAceFrehley7|3000ms
+        
+    shotGroupMatrixSpotAceFrehleyVerticalMiddle_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotAceFrehleyVerticalMiddle
+        # -------------
+    shotMatrixSpotAceFrehleyVerticalMiddle_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in AceFrehley
+        #- eventDisableShotMatrixSpotAceFrehley2
+        #- eventDisableShotMatrixSpotAceFrehley5
+        #- eventDisableShotMatrixSpotAceFrehley8
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalMiddle
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in AceFrehley
+        #- eventRestartShotMatrixSpotAceFrehley2|3000ms
+        #- eventRestartShotMatrixSpotAceFrehley5|3000ms
+        #- eventRestartShotMatrixSpotAceFrehley8|3000ms
+        
+    shotGroupMatrixSpotAceFrehleyVerticalRight_litSolid_complete:
+        # -------------
+        # HIT
+        - eventHitShotMatrixSpotAceFrehleyVerticalRight
+        # -------------
+    shotMatrixSpotAceFrehleyVerticalRight_litFlash_hit:
+        # -------------
+        # DISABLE SHOT
+        # TODO this is not enables in AceFrehley
+        #- eventDisableShotMatrixSpotAceFrehley3
+        #- eventDisableShotMatrixSpotAceFrehley6
+        #- eventDisableShotMatrixSpotAceFrehley9
+        # -------------
+        # SHOW
+        - playShowMatrixSpotThreeCompleteVerticalRight
+        # -------------
+        # RESET SHOTS
+        # TODO this is not enables in AceFrehley
+        #- eventRestartShotMatrixSpotAceFrehley3|3000ms
+        #- eventRestartShotMatrixSpotAceFrehley6|3000ms
+        #- eventRestartShotMatrixSpotAceFrehley9|3000ms
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+# ---------------
+# VARIABLE::PLAYER::SCORING
+# ---------------
+    # ---------------------
+    # SPINNERS
+    # ---------------------
+    shotSpinnerAceFrehleyLeft_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotSpinnerAceFrehleyRight_litSolid_hit:
+        score: 1000 * current_player.multiPlayfield
+    sw_tagSpinner:
+      score: 1 * current_player.multiPlayfield
+
+    # ---------------------
+    # OUTLANES
+    # ---------------------
+    # STANDARD
+    shotOutlaneAceFrehleyLeft_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    shotOutlaneAceFrehleyRight_litSolid_hit:
+        score: 2000 * current_player.multiPlayfield
+    # SPECIAL
+    shotOutlaneAceFrehleySpecialLeft_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+    shotOutlaneAceFrehleySpecialRight_litFlash_hit:
+        score: 48000 * current_player.multiPlayfield
+
+    # ---------------------
+    # TARGETS AND LANES
+    # ---------------------
+    shotGroupMatrixSpotAceFrehleyAll_litFlash_hit:
+        score: 1000 * current_player.multiPlayfield
+    shotGroupMatrixSpotAceFrehleyAll_litSolid_hit:
+        score: 10 * current_player.multiPlayfield
+      
+# ---------------------
+# SHOW::PLAYER::
+# ---------------------
+show_player:
+    # ---------------------
+    # SHOW::DIAGONAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalLeft:
+        showMatrixSpotAceFrehleyThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotAceFrehleyThreeCompleteDiagonalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+        
+    # ---------------------
+    # SHOW::DIAGONAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteDiagonalRight:
+        showMatrixSpotAceFrehleyThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotAceFrehleyThreeCompleteDiagonalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::LEFT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalLeft:
+        showMatrixSpotAceFrehleyThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotAceFrehleyThreeCompleteVerticalLeft
+            show_tokens:
+                # --------------
+                led1A: ledSpot1A
+                led1B: ledSpot1B
+                led1C: ledSpot1C
+                led1D: ledSpot1D
+                led1E: ledSpot1E
+                # --------------
+                led2A: ledSpot4A
+                led2B: ledSpot4B
+                led2C: ledSpot4C
+                led2D: ledSpot4D
+                led2E: ledSpot4E
+                # --------------
+                led3A: ledSpot7A
+                led3B: ledSpot7B
+                led3C: ledSpot7C
+                led3D: ledSpot7D
+                led3E: ledSpot7E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::MIDDLE
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalMiddle:
+        showMatrixSpotAceFrehleyThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotAceFrehleyThreeCompleteVerticalMiddle
+            show_tokens:
+                # --------------
+                led1A: ledSpot2A
+                led1B: ledSpot2B
+                led1C: ledSpot2C
+                led1D: ledSpot2D
+                led1E: ledSpot2E
+                # --------------
+                led2A: ledSpot5A
+                led2B: ledSpot5B
+                led2C: ledSpot5C
+                led2D: ledSpot5D
+                led2E: ledSpot5E
+                # --------------
+                led3A: ledSpot8A
+                led3B: ledSpot8B
+                led3C: ledSpot8C
+                led3D: ledSpot8D
+                led3E: ledSpot8E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+    # ---------------------
+    # SHOW::VERTICAL::RIGHT
+    # ---------------------
+    playShowMatrixSpotThreeCompleteVerticalRight:
+        showMatrixSpotAceFrehleyThreeComplete:
+            speed: 2
+            loops: 3
+            action: play
+            key: showMatrixSpotAceFrehleyThreeCompleteVerticalRight
+            show_tokens:
+                # --------------
+                led1A: ledSpot3A
+                led1B: ledSpot3B
+                led1C: ledSpot3C
+                led1D: ledSpot3D
+                led1E: ledSpot3E
+                # --------------
+                led2A: ledSpot6A
+                led2B: ledSpot6B
+                led2C: ledSpot6C
+                led2D: ledSpot6D
+                led2E: ledSpot6E
+                # --------------
+                led3A: ledSpot9A
+                led3B: ledSpot9B
+                led3C: ledSpot9C
+                led3D: ledSpot9D
+                led3E: ledSpot9E
+                # --------------
+                color1: '440044'
+                color2: 'ff00ff'
+                
+# *********************
+# SHOWS
+# *********************
+shows:
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotAceFrehley:
+        - time: 0
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color4)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color4)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color4)
+            (led4): (color3)
+            (led5): (color3)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color4)
+            (led5): (color3)
+            # ----------------
+            (led6): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1): (color3)
+            (led2): (color3)
+            (led3): (color3)
+            (led4): (color3)
+            (led5): (color4)
+            # ----------------
+            (led6): (color2)
+            # ----------------
+        - time: "+1"
+
+    # -----------------------------------
+    # SHOW::LED::SPOT::BALLY
+    # -----------------------------------
+    showMatrixSpotAceFrehleyThreeComplete:
+        - time: 0
+          lights:
+            # ----------------
+            (led1A): (color1)
+            (led1B): (color1)
+            (led1C): (color1)
+            (led1D): (color1)
+            (led1E): (color1)
+            # ----------------
+            (led2A): (color1)
+            (led2B): (color1)
+            (led2C): (color1)
+            (led2D): (color1)
+            (led2E): (color1)
+            # ----------------
+            (led3A): (color1)
+            (led3B): (color1)
+            (led3C): (color1)
+            (led3D): (color1)
+            (led3E): (color1)
+            # ----------------
+        - time: "+1"
+          lights:
+            # ----------------
+            (led1A): (color2)
+            (led1B): (color2)
+            (led1C): (color2)
+            (led1D): (color2)
+            (led1E): (color2)
+            # ----------------
+            (led2A): (color2)
+            (led2B): (color2)
+            (led2C): (color2)
+            (led2D): (color2)
+            (led2E): (color2)
+            # ----------------
+            (led3A): (color2)
+            (led3B): (color2)
+            (led3C): (color2)
+            (led3D): (color2)
+            (led3E): (color2)
+            # ----------------
+        - time: "+1"

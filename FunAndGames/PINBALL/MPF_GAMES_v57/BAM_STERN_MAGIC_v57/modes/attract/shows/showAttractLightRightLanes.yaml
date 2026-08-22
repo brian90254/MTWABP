@@ -1,0 +1,241 @@
+#show_version=6
+- time: 0
+# ----------------------
+# 4-LED CHASE CYAN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '00ffff'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '00ffff'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '00ffff'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '00ffff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE BLUE
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '0000ff'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '0000ff'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '0000ff'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '0000ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE MAGENTA
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: 'ff00ff'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: 'ff00ff'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: 'ff00ff'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: 'ff00ff'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE RED
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: 'ff0000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: 'ff0000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: 'ff0000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: 'ff0000'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE YELLOW
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: 'ffff00'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: 'ffff00'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: 'ffff00'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: 'ffff00'
+    # ---------------------- 
+- time: "+1"
+
+# ----------------------
+# 4-LED CHASE GREEN
+# ----------------------
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '00ff00'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '00ff00'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '00ff00'
+    ledSpecialOutlane: '000000'
+    # ---------------------- 
+- time: "+1"
+
+  lights:
+    # ----------------------  
+    ledReturnLaneRight8000: '000000'   
+    ledReturnLaneRight6000: '000000'
+    ledReturnLaneRight4000: '000000'
+    ledSpecialOutlane: '00ff00'
+    # ---------------------- 
+- time: "+1"
+
+
+
+
+
+

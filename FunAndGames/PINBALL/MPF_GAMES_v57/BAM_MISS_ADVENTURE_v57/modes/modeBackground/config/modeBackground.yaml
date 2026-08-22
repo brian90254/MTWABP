@@ -1,0 +1,20 @@
+#config_version=6
+
+mode:
+  start_events: game_start
+  priority: 50
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+#slide_player:
+#  mode_modeBackground_started:
+#    slideBaseBackglass:
+#      target: displayBackglass
+      
+slides:
+  slideBaseBackglass:
+    widgets:
+    - type: image
+      image: imagebackglass
+    

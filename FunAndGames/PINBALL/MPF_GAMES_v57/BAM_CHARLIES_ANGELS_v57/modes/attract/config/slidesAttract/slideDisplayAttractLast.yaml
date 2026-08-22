@@ -1,0 +1,216 @@
+#config_version=6
+
+# *********************
+# TATTOO MYSTIQUE
+# *********************
+
+# ---------------------
+# SLIDES
+# ---------------------
+slides:
+  # *************************
+  # LAST GAME SCORE
+  # *************************
+  slideDisplayAttractLast:
+    target: displayDMD
+    widgets:
+    # -------------------------------------------------
+    #                       TOP
+    # -------------------------------------------------
+    # -----------------
+    # RED CENTER
+    # -----------------
+    - type: text
+      text: Player One
+      y: top - 30
+      x: middle
+      z: 40
+      style: fontAttractLastCharliesAngelsHeader
+      color: colorFontAttractLastCharliesAngelsHeaderInner
+    
+    # -----------------
+    # OUTLINE GREEN
+    # -----------------
+    - type: text
+      text: Player One
+      y: top - 31
+      x: middle - 1
+      z: 30
+      style: fontAttractLastCharliesAngelsHeader
+      color: colorFontAttractLastCharliesAngelsHeaderOuter1
+    
+    - type: text
+      text: Player One
+      y: top - 31
+      x: middle + 1
+      z: 30
+      style: fontAttractLastCharliesAngelsHeader
+      color: colorFontAttractLastCharliesAngelsHeaderOuter1
+    
+    - type: text
+      text: Player One
+      y: top - 29
+      x: middle - 1
+      z: 30
+      style: fontAttractLastCharliesAngelsHeader
+      color: colorFontAttractLastCharliesAngelsHeaderOuter1
+      
+    - type: text
+      text: Player One
+      y: top - 29
+      x: middle + 1
+      z: 30
+      style: fontAttractLastCharliesAngelsHeader
+      color: colorFontAttractLastCharliesAngelsHeaderOuter1
+    # -------------------------------------------------
+
+
+    # -------------------------------------------------
+    #                       MIDDLE
+    # -------------------------------------------------
+    # -----------------
+    # RED CENTER
+    # -----------------
+    - type: text
+      text: (machine|player1_score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 7
+      x: middle
+      z: 40
+      style: fontAttractLastCharliesAngelsMiddle
+      color: colorFontAttractLastCharliesAngelsMiddleInner
+      
+    # -----------------
+    # OUTLINE CYAN
+    # -----------------
+    - type: text
+      text: (machine|player1_score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 6
+      x: middle + 1
+      z: 30
+      style: fontAttractLastCharliesAngelsMiddle
+      color: colorFontAttractLastCharliesAngelsMiddleOuter1
+      
+    - type: text
+      text: (machine|player1_score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 6
+      x: middle - 1
+      z: 30
+      style: fontAttractLastCharliesAngelsMiddle
+      color: colorFontAttractLastCharliesAngelsMiddleOuter1
+      
+    - type: text
+      text: (machine|player1_score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 8
+      x: middle + 1
+      z: 30
+      style: fontAttractLastCharliesAngelsMiddle
+      color: colorFontAttractLastCharliesAngelsMiddleOuter1
+      
+    - type: text
+      text: (machine|player1_score)
+      number_grouping: true
+      min_digits: 2
+      y: middle - 8
+      x: middle - 1
+      z: 30
+      style: fontAttractLastCharliesAngelsMiddle
+      color: colorFontAttractLastCharliesAngelsMiddleOuter1
+    # -------------------------------------------------
+
+
+    # -------------------------------------------------
+    #                       BOTTOM
+    # -------------------------------------------------
+    # -----------------
+    # CENTER YELLOW
+    # -----------------
+    - type: text
+      text: (machine|credits_string)
+      anchor_y: bottom
+      y: bottom + 2
+      x: middle
+      z: 40
+      style: fontAttractLastCharliesAngelsFooter
+      color: colorFontAttractLastCharliesAngelsFooterInner
+      
+    # -----------------
+    # OUTLINE GREEN
+    # -----------------
+    - type: text
+      text: (machine|credits_string)
+      anchor_y: bottom
+      y: bottom + 3
+      x: middle - 1
+      z: 30
+      style: fontAttractLastCharliesAngelsFooter
+      color: colorFontAttractLastCharliesAngelsFooterOuter1
+      
+    - type: text
+      text: (machine|credits_string)
+      anchor_y: bottom
+      y: bottom + 3
+      x: middle + 1
+      z: 30
+      style: fontAttractLastCharliesAngelsFooter
+      color: colorFontAttractLastCharliesAngelsFooterOuter1
+      
+    - type: text
+      text: (machine|credits_string)
+      anchor_y: bottom
+      y: bottom + 1
+      x: middle - 1
+      z: 30
+      style: fontAttractLastCharliesAngelsFooter
+      color: colorFontAttractLastCharliesAngelsFooterOuter1
+      
+    - type: text
+      text: (machine|credits_string)
+      anchor_y: bottom
+      y: bottom + 1
+      x: middle + 1
+      z: 30 
+      style: fontAttractLastCharliesAngelsFooter
+      color: colorFontAttractLastCharliesAngelsFooterOuter1
+
+      # --------------------
+      # COLOR OUTLINE
+      # --------------------
+    - type: rectangle
+      color: colorBoxAttractLastCharliesAngelsOuter
+      width: 236
+      height: 130
+      x: 120
+      y: 67
+      z: 3
+    - type: rectangle
+      color: colorBoxAttractLastCharliesAngelsMiddle
+      width: 232
+      height: 126
+      x: 120
+      y: 67
+      z: 5
+    - type: rectangle
+      color: colorBoxAttractLastCharliesAngelsInner
+      width: 228
+      height: 122
+      x: 120
+      y: 67
+      z: 6
+      # --------------------
+      # BLACK INFILL
+      # --------------------
+    - type: rectangle
+      color: colorBoxAttractLastCharliesAngelsFill
+      width: 224
+      height: 118
+      x: 120
+      y: 67
+      z: 7

@@ -1,0 +1,296 @@
+#config_version=6
+
+# GLOBETROTTERS ACHIEVEMENTS
+
+# *****************************
+# ACHIEVEMENTS
+# *****************************
+achievements:
+  
+# -----------------------------
+# ACHIEVEMENT::BONUS
+# -----------------------------
+  # -----------------------------
+  # BONUS::BY::ONES
+  # -----------------------------
+  
+  achBonus0:
+    # --------------------------------
+    show_tokens:
+      led: ledDummy1
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus0
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus1
+    
+
+  achBonus1:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus1000
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus1
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus2
+    
+  achBonus2:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus2000
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus2
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus3
+    
+  achBonus3:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus3000
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus3
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus4
+    
+    
+  achBonus4:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus4000
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus4
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus5
+    
+    
+  achBonus5:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus5000
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus5
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus6
+    
+    
+  achBonus6:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus6000
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus6
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus7
+    
+    
+  achBonus7:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus7000
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus7
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus8
+    
+    
+  achBonus8:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus8000
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus8
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonus9
+    
+
+  achBonus9:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus9000
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    #show_when_completed: offLed
+    show_when_completed: onLedRed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusOnes
+    enable_events: eventEnableAchBonusOnes
+    start_events: eventStartAchBonus9
+    complete_events: eventCompleteBonusOnes
+    events_when_completed: eventStartAchBonusTens
+    
+    
+  # -----------------------------
+  # BONUS::BY::TENS
+  # -----------------------------
+  
+  achBonus10:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus10k
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus10
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus20
+  
+  achBonus20:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus20k
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus20
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus30
+    
+  achBonus30:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus30
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    show_when_completed: offLed
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus30
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus40
+    
+  achBonus40:
+    # --------------------------------
+    show_tokens:
+      led: ledBonus40
+    show_when_selected: onLedCyan
+    show_when_started: onLedCyan
+    #show_when_completed: offLed
+    show_when_completed: onLedCyan
+    sync_ms: 1
+    # ---------------------------------
+    restart_after_stop_possible: true
+    reset_events: eventResetAchBonusTens
+    enable_events: eventEnableAchBonusTens
+    start_events: eventStartAchBonus40
+    complete_events: eventCompleteBonusTens
+    events_when_completed: eventStartAchBonus50
+
+
+# *****************************
+# END ACHIEVEMENTS
+# *****************************
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  
+  # -----------------------------------
+  # THIS IS TO ADD TO BONUS ON INLINE DROP HIT
+  # -----------------------------------
+  sgShotDropRight_hit:
+    - eventCompleteBonusOnes
+    
+  # -----------------------------------
+  # BONUS LIGHTS
+  # -----------------------------------
+  shotGroupTopLanes_hit:
+    - eventCompleteBonusOnes
+    
+  sw_tagDropYellow:
+    - eventCompleteBonusOnes
+    
+  sw_tagStandupTarget:
+    - eventCompleteBonusOnes
+    
+    
+  # -----------------------------------
+  # RESET ONES ONCE TEN IS ACTIVE
+  # -----------------------------------
+  eventStartAchBonusTens:
+    # RESET ONES
+    - eventResetAchBonusOnes
+    - eventEnableAchBonusOnes
+    - eventStartAchBonus0
+    # ACHIEVE BY TENS
+    - eventCompleteBonusTens
+    - eventStartAchBonus10
+    
+    

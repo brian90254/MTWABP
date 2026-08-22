@@ -1,0 +1,160 @@
+2025-08-06 19:09:50,134 : kivy : Kivy: v2.2.1
+2025-08-06 19:09:50,134 : kivy : Kivy: Installed at "/opt/homebrew/lib/python3.11/site-packages/kivy/__init__.py"
+2025-08-06 19:09:50,134 : kivy : Python: v3.11.8 (main, Feb  6 2024, 21:21:21) [Clang 15.0.0 (clang-1500.1.0.2.5)]
+2025-08-06 19:09:50,134 : kivy : Python: Interpreter at "/opt/homebrew/opt/python@3.11/bin/python3.11"
+2025-08-06 19:09:50,139 : kivy : Factory: 190 symbols loaded
+2025-08-06 19:09:50,224 : kivy : ImageLoaderFFPy: Using ffpyplayer 4.5.1
+2025-08-06 19:09:50,224 : kivy : Image: Providers: img_tex, img_imageio, img_dds, img_sdl2, img_pil, img_ffpyplayer 
+2025-08-06 19:09:50,265 : kivy : VideoFFPy: Using ffpyplayer 4.5.1
+2025-08-06 19:09:50,266 : kivy : Video: Provider: ffpyplayer(['video_ffmpeg'] ignored)
+2025-08-06 19:09:50,284 : root : Loading MPF-MC controller
+2025-08-06 19:09:50,300 : YamlMultifileConfigLoader : Machine config file #1: config
+2025-08-06 19:09:50,301 : ConfigProcessor : Loading config from file /opt/homebrew/lib/python3.11/site-packages/mpfmc/mcconfig.yaml.
+2025-08-06 19:09:50,303 : ConfigProcessor : Loading config: /opt/homebrew/lib/python3.11/site-packages/mpfmc/mcconfig.yaml
+2025-08-06 19:09:50,303 : ConfigProcessor : Loading config from file /Users/briancox/Dropbox/MPF_GAMES_v57/BAM_TEST_v57/config/config.
+2025-08-06 19:09:50,304 : ConfigProcessor : Loading config: /Users/briancox/Dropbox/MPF_GAMES_v57/BAM_TEST_v57/config/config
+2025-08-06 19:09:50,304 : ConfigProcessor : Loading config from file /opt/homebrew/lib/python3.11/site-packages/mpf/modes/attract/config/attract.yaml.
+2025-08-06 19:09:50,304 : ConfigProcessor : Loading config: /opt/homebrew/lib/python3.11/site-packages/mpf/modes/attract/config/attract.yaml
+2025-08-06 19:09:50,304 : ConfigProcessor : Loading config from file /Users/briancox/Dropbox/MPF_GAMES_v57/BAM_TEST_v57/modes/attract/config/attract.yaml.
+2025-08-06 19:09:50,304 : ConfigProcessor : Loading config: /Users/briancox/Dropbox/MPF_GAMES_v57/BAM_TEST_v57/modes/attract/config/attract.yaml
+2025-08-06 19:09:50,304 : ConfigProcessor : Loading config from file /opt/homebrew/lib/python3.11/site-packages/mpf/modes/game/config/game.yaml.
+2025-08-06 19:09:50,304 : ConfigProcessor : Loading config: /opt/homebrew/lib/python3.11/site-packages/mpf/modes/game/config/game.yaml
+2025-08-06 19:09:50,305 : mpfmc : Mission Pinball Framework Media Controller (MPF-MC) v0.57.0.dev13. Requires MPF v0.57.0.dev34 or newer.
+2025-08-06 19:09:50,305 : mpfmc : Found MPF v0.57.0.dev39
+2025-08-06 19:09:50,305 : mpfmc : Machine path: /Users/briancox/Dropbox/MPF_GAMES_v57/BAM_TEST_v57
+2025-08-06 19:09:50,305 : mpfmc : Starting clock at 60.0Hz
+2025-08-06 19:09:50,308 : kivy : Text: Provider: sdl2
+2025-08-06 19:09:50,315 : kivy : Window: Provider: sdl2
+2025-08-06 19:09:50,391 : kivy : GL: Using the "OpenGL ES 2" graphics system
+2025-08-06 19:09:50,391 : kivy : GL: Backend used <sdl2>
+2025-08-06 19:09:50,391 : kivy : GL: OpenGL version <b'2.1 Metal - 88'>
+2025-08-06 19:09:50,391 : kivy : GL: OpenGL vendor <b'Apple'>
+2025-08-06 19:09:50,391 : kivy : GL: OpenGL renderer <b'Apple M3 Pro'>
+2025-08-06 19:09:50,391 : kivy : GL: OpenGL parsed version: 2, 1
+2025-08-06 19:09:50,391 : kivy : GL: Shading version <b'1.20'>
+2025-08-06 19:09:50,391 : kivy : GL: Texture max size <16384>
+2025-08-06 19:09:50,391 : kivy : GL: Texture max units <16>
+2025-08-06 19:09:50,400 : kivy : Window: auto add sdl2 input provider
+2025-08-06 19:09:50,400 : kivy : Window: virtual keyboard not allowed, single mode, not docked
+2025-08-06 19:09:50,402 : SoundSystem : SoundSystem: Using default 'sound_system' settings
+2025-08-06 19:09:50,479 : AudioInterface : Initialized
+2025-08-06 19:09:50,479 : AudioInterface : Loaded SDL 2.30.11
+2025-08-06 19:09:50,479 : AudioInterface : Loaded SDL_Mixer 2.8.0
+2025-08-06 19:09:50,479 : AudioInterface : Loaded GStreamer 1.24.10.0
+2025-08-06 19:09:50,479 : AudioInterface : Loaded GLib 2.82.4
+2025-08-06 19:09:50,479 : AudioInterface : Settings requested - rate: 44100, channels: 1, buffer: 2048 samples
+2025-08-06 19:09:50,479 : AudioInterface : Settings in use - rate: 44100, channels: 1, buffer: 2048 samples (4096 bytes @ 2 bytes per sample)
+2025-08-06 19:09:50,479 : SoundSystem : No audio tracks are specified in your machine config file. a track named 'default' has been created.
+2025-08-06 19:09:50,479 : SoundSystem : Setting master volume to 0.0
+2025-08-06 19:09:50,479 : AudioInterface : Enabling audio playback
+2025-08-06 19:09:50,481 : kivy : Base: Start application main loop
+2025-08-06 19:09:50,482 : EventManager : Event: ======'display_window_initialized'====== Args={}
+2025-08-06 19:09:50,482 : EventManager : Event: ======'display_displayDMD_initialized'====== Args={}
+2025-08-06 19:09:50,482 : EventManager : Event: ======'display_displayBackglass_initialized'====== Args={}
+2025-08-06 19:09:50,828 : mpfmc : Display: Setting 'window' as default display
+2025-08-06 19:09:50,833 : EventManager : Event: ======'displays_initialized'====== Args={}
+2025-08-06 19:09:50,834 : EventManager : Event: ======'slide_window_blank_created'====== Args={}
+2025-08-06 19:09:50,834 : EventManager : Event: ======'display_window_ready'====== Args={}
+2025-08-06 19:09:50,835 : EventManager : Event: ======'slide_displayDMD_blank_created'====== Args={}
+2025-08-06 19:09:50,835 : EventManager : Event: ======'display_displayDMD_ready'====== Args={}
+2025-08-06 19:09:50,835 : EventManager : Event: ======'slide_displayBackglass_blank_created'====== Args={}
+2025-08-06 19:09:50,836 : EventManager : Event: ======'display_displayBackglass_ready'====== Args={}
+2025-08-06 19:09:50,841 : EventManager : Event: ======'init_phase_1'====== Args={}
+2025-08-06 19:09:50,844 : EventManager : Event: ======'mc_ready'====== Args={}
+2025-08-06 19:09:50,847 : kivy : GL: NPOT texture support is available
+2025-08-06 19:09:50,855 : EventManager : Event: ======'slide_slideLayout_created'====== Args={}
+2025-08-06 19:09:50,860 : EventManager : Event: ======'slide_slideDisplayDMD_created'====== Args={}
+2025-08-06 19:09:50,861 : EventManager : Event: ======'slide_slideDisplayBackglass_created'====== Args={}
+2025-08-06 19:09:50,861 : EventManager : Event: ======'init_phase_2'====== Args={}
+2025-08-06 19:09:50,861 : EventManager : Event: ======'init_phase_3'====== Args={}
+2025-08-06 19:09:50,862 : EventManager : Event: ======'init_phase_4'====== Args={}
+2025-08-06 19:09:50,862 : EventManager : Event: ======'init_phase_5'====== Args={}
+2025-08-06 19:09:50,862 : EventManager : Event: ======'init_done'====== Args={}
+2025-08-06 19:09:50,862 : MPF-MC BCP Server : Starting up on localhost port 5050
+2025-08-06 19:09:50,863 : MPF-MC BCP Server : Waiting for a connection...
+2025-08-06 19:09:50,869 : MPF-MC BCP Server : Received connection from: 127.0.0.1:60289
+2025-08-06 19:09:50,889 : EventManager : Event: ======'slide_slideLayout_active'====== Args={}
+2025-08-06 19:09:50,889 : EventManager : Event: ======'slide_slideDisplayDMD_active'====== Args={}
+2025-08-06 19:09:50,889 : EventManager : Event: ======'slide_slideDisplayBackglass_active'====== Args={}
+2025-08-06 19:09:50,902 : EventManager : Event: ======'client_disconnected'====== Args={'host': '127.0.0.1', 'port': 5050}
+2025-08-06 19:09:50,905 : EventManager : Event: ======'client_connected'====== Args={'host': '127.0.0.1', 'port': 60289}
+2025-08-06 19:09:50,905 : EventManager : Event: ======'mc_reset_phase_1'====== Args={}
+2025-08-06 19:09:50,905 : EventManager : Event: ======'mc_reset_phase_2'====== Args={}
+2025-08-06 19:09:50,905 : EventManager : Event: ======'mc_reset_phase_3'====== Args={}
+2025-08-06 19:09:50,905 : EventManager : Event: ======'mc_reset_complete'====== Args={}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'Mission Pinball Framework v0.57.0.dev39', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'Mission Pinball Framework v0.57.0.dev39, Config version:6, Show version: 6, BCP version:1.1', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.11.8', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'macOS-14.1-arm64-arm-64bit', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Darwin', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '23.1.0', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': 'Darwin Kernel Version 23.1.0: Mon Oct  9 21:32:11 PDT 2023; root:xnu-10002.41.9~7/RELEASE_ARM64_T6030', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'arm64', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_audits_events_game_started'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_audits_events_game_ended'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_audits_player_score'====== Args={'value': {'top': [], 'average': 0, 'total': 0}, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mc_version'====== Args={'value': 'MPF-MC v0.57.0.dev13', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mc_extended_version'====== Args={'value': 'MPF-MC v0.57.0.dev13 (config_version=6, BCP v1.1,                      Requires MPF API compatibility v0.57.0.dev34 or newer)', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'Mission Pinball Framework v0.57.0.dev39', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'Mission Pinball Framework v0.57.0.dev39, Config version:6, Show version: 6, BCP version:1.1', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.11.8', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'macOS-14.1-arm64-arm-64bit', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Darwin', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '23.1.0', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': 'Darwin Kernel Version 23.1.0: Mon Oct  9 21:32:11 PDT 2023; root:xnu-10002.41.9~7/RELEASE_ARM64_T6030', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'arm64', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_audits_events_game_started'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_audits_events_game_ended'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_audits_player_score'====== Args={'value': {'top': [], 'average': 0, 'total': 0}, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mc_version'====== Args={'value': 'MPF-MC v0.57.0.dev13', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mc_extended_version'====== Args={'value': 'MPF-MC v0.57.0.dev13 (config_version=6, BCP v1.1,                      Requires MPF API compatibility v0.57.0.dev34 or newer)', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'Mission Pinball Framework v0.57.0.dev39', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'Mission Pinball Framework v0.57.0.dev39, Config version:6, Show version: 6, BCP version:1.1', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.11.8', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'macOS-14.1-arm64-arm-64bit', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Darwin', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '23.1.0', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': 'Darwin Kernel Version 23.1.0: Mon Oct  9 21:32:11 PDT 2023; root:xnu-10002.41.9~7/RELEASE_ARM64_T6030', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'arm64', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_audits_events_game_started'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_audits_events_game_ended'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_audits_player_score'====== Args={'value': {'top': [], 'average': 0, 'total': 0}, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mc_version'====== Args={'value': 'MPF-MC v0.57.0.dev13', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mc_extended_version'====== Args={'value': 'MPF-MC v0.57.0.dev13 (config_version=6, BCP v1.1,                      Requires MPF API compatibility v0.57.0.dev34 or newer)', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'Mission Pinball Framework v0.57.0.dev39', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,953 : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'Mission Pinball Framework v0.57.0.dev39, Config version:6, Show version: 6, BCP version:1.1', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.11.8', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'macOS-14.1-arm64-arm-64bit', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Darwin', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '23.1.0', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': 'Darwin Kernel Version 23.1.0: Mon Oct  9 21:32:11 PDT 2023; root:xnu-10002.41.9~7/RELEASE_ARM64_T6030', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'arm64', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : EventManager : Event: ======'machine_var_audits_events_game_started'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : EventManager : Event: ======'machine_var_audits_events_game_ended'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : EventManager : Event: ======'machine_var_audits_player_score'====== Args={'value': {'top': [], 'average': 0, 'total': 0}, 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : EventManager : Event: ======'machine_var_mc_version'====== Args={'value': 'MPF-MC v0.57.0.dev13', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : EventManager : Event: ======'machine_var_mc_extended_version'====== Args={'value': 'MPF-MC v0.57.0.dev13 (config_version=6, BCP v1.1,                      Requires MPF API compatibility v0.57.0.dev34 or newer)', 'prev_value': None, 'change': True}
+2025-08-06 19:09:50,954 : SoundSystem : Setting master volume to 0.5
+2025-08-06 19:09:50,954 : SoundSystem : Setting master volume to 0.5
+2025-08-06 19:09:50,954 : SoundSystem : Setting master volume to 0.5
+2025-08-06 19:09:50,954 : SoundSystem : Setting master volume to 0.5
+2025-08-06 19:10:33,306 : kivy : Base: Leaving application in progress...
+2025-08-06 19:10:33,340 : mpfmc : Stopping...
+2025-08-06 19:10:33,341 : EventManager : Event: ======'shutdown'====== Args={}
+2025-08-06 19:10:33,341 : AudioInterface : Disabling audio playback
+2025-08-06 19:10:33,403 : mpfmc : Loop rate 75.18 Hz
+2025-08-06 19:10:33,403 : root : MC run loop ended.
+2025-08-06 19:10:33,403 : root : Stopping child threads... (3 remaining)
+2025-08-06 19:10:33,621 : mpfmc : Stopping...
+2025-08-06 19:10:33,621 : EventManager : Event: ======'shutdown'====== Args={}
+2025-08-06 19:10:33,622 : mpfmc : Loop rate 74.8 Hz
+2025-08-06 19:10:33,633 : MPF-MC BCP Server : Stopping BCP sending thread
+2025-08-06 19:10:33,707 : root : All child threads stopped.

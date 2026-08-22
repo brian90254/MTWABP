@@ -1,0 +1,158 @@
+#show_version=6
+
+# -----------------------------
+# HIGH SCORES
+# -----------------------------
+- time: 0
+  slides:
+    showAttractBackglass1A:
+      target: displayBackglass
+      widgets:
+        # --------------------
+        # IMAGE BACKGLASS
+        # --------------------
+      - type: image
+        image: imageBackglass
+        z: 40
+        # --------------------
+        # BITMAP FONT TEST
+        # --------------------
+      - type: text
+        text: (machine|player1_score)
+        z: 30
+        x: left + 698
+        y: bottom + 880
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+      - type: text
+        text: (machine|player2_score)
+        z: 30
+        x: left + 1431
+        y: bottom + 883
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+      - type: text
+        text: (machine|player3_score)
+        z: 30
+        x: left + 706
+        y: bottom + 290
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+      - type: text
+        text: (machine|player4_score)
+        z: 30
+        x: left + 1438
+        y: bottom + 290
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+      - type: text
+        text: (player|ball)
+        min_digits: 2
+        z: 30
+        x: left + 1026
+        y: bottom + 159
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+  # -----------------------
+  # ADDED 200507
+      - type: text
+        text: (machine|credits_string)
+        min_digits: 1
+        z: 30
+        x: left + 959
+        y: bottom + 159
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+      
+# -----------------------------
+# LAST GAME
+# -----------------------------
+- time: '+4'
+  slides:
+  # -----------------------------
+  # LAST GAME
+  # -----------------------------
+    showAttractBackglass2A:
+      target: displayBackglass
+      widgets:
+        # --------------------
+        # IMAGE BACKGLASS
+        # --------------------
+      - type: image
+        image: imageBackglass
+        z: 40
+        # --------------------
+        # BITMAP FONT TEST
+        # --------------------
+      - type: text
+        text: (machine|score1_value)
+        z: 30
+        x: left + 698
+        y: bottom + 880
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+      - type: text
+        text: (machine|score2_value)
+        z: 30
+        x: left + 1431
+        y: bottom + 883
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+      - type: text
+        text: (machine|score3_value)
+        z: 30
+        x: left + 706
+        y: bottom + 290
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+      - type: text
+        text: (machine|score4_value)
+        z: 30
+        x: left + 1438
+        y: bottom + 290
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+      - type: text
+        text: (player|ball)
+        min_digits: 2
+        z: 30
+        x: left + 1026
+        y: bottom + 159
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+  # -----------------------
+  # ADDED 200507
+      - type: text
+        text: (machine|credits_string)
+        min_digits: 1
+        z: 30
+        x: left + 959
+        y: bottom + 159
+        anchor_x: right
+        anchor_y: middle
+        font_name: bitmapFontBallySevenSegment7
+        bitmap_font: true
+      
+- time: '+4'

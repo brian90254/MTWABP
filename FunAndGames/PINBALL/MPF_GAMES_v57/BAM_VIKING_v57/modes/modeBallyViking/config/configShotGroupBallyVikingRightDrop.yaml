@@ -1,0 +1,480 @@
+#config_version=6
+
+# BALLY VIKING
+
+shots:
+    # -------------------
+    # SHOTS::RIGHT::DROP
+    # -------------------
+    shotRightDrop1:
+        switch: s_1_5
+        enable_events: eventEnableShotRightDrop1
+        disable_events: eventDisableShotRightDrop1
+        restart_events: eventRestartShotRightDrop1
+        reset_events: eventResetShotShotRightDrop1
+            
+    shotRightDrop2:
+        switch: s_1_11
+        enable_events: eventEnableShotRightDrop2
+        disable_events: eventDisableShotRightDrop2
+        restart_events: eventRestartShotRightDrop2
+        reset_events: eventResetShotShotRightDrop2
+        
+    shotRightDrop3:
+        switch: s_1_4
+        enable_events: eventEnableShotRightDrop3
+        disable_events: eventDisableShotRightDrop3
+        restart_events: eventRestartShotRightDrop3
+        reset_events: eventResetShotShotRightDrop3
+        
+    # -------------------
+    # SHOTS::RIGHT::DROP:1-2-3
+    # -------------------
+    shotRightDrop123:
+        #switch: s_1_14
+        enable_events: eventEnableShotRtDrop123
+        disable_events: eventDisableShotRtDrop123
+        restart_events: eventRestartShotRtDrop123
+        reset_events: eventResetShotRtDrop123
+        #advance_events: eventAdvanceShotRightDrop123
+        hit_events: eventAdvanceShotRightDrop123
+        profile: spShotRightDrop123
+        show_tokens:
+            led1: ledDropRightAdvance1
+            led2: ledDropRightAdvance2
+            led3: ledDropRightAdvance3
+            led4: ledDropRightAdvance4
+            led5: ledDropRightAdvance5
+            led6: ledDummy6
+            led7: ledDummy7
+
+
+# *****************************
+# SHOT::PROFILES
+# *****************************
+shot_profiles:
+    # -----------------------------
+    # PROFILE::RIGHT::DROP:1-2-3
+    # -----------------------------
+    spShotRightDrop123:
+        states:
+            # -------------------------------
+          - name: stateZeroSpShotRtDrop123
+            show: showStateZeroSpShotRtDrop123
+            speed: 1
+            show_tokens:
+                color1: color1SpShotRtDrop123
+                color2: color2SpShotRtDrop123
+                color3: color3SpShotRtDrop123
+            # -------------------------------
+          - name: stateOneSpShotRtDrop123
+            show: showStateOneSpShotRtDrop123
+            speed: 1
+            show_tokens:
+                color1: color1SpShotRtDrop123
+                color2: color2SpShotRtDrop123
+                color3: color3SpShotRtDrop123
+            # -------------------------------
+          - name: stateTwoSpShotRtDrop123
+            show: showStateTwoSpShotRtDrop123
+            speed: 1
+            show_tokens:
+                color1: color1SpShotRtDrop123
+                color2: color2SpShotRtDrop123
+                color3: color3SpShotRtDrop123
+            # -------------------------------
+          - name: stateThreeSpShotRtDrop123
+            show: showStateThreeSpShotRtDrop123
+            speed: 1
+            show_tokens:
+                color1: color1SpShotRtDrop123
+                color2: color2SpShotRtDrop123
+                color3: color3SpShotRtDrop123
+            # -------------------------------
+          - name: stateFourSpShotRtDrop123
+            show: showStateFourSpShotRtDrop123
+            speed: 1
+            show_tokens:
+                color1: color1SpShotRtDrop123
+                color2: color2SpShotRtDrop123
+                color3: color3SpShotRtDrop123
+            # -------------------------------
+          - name: stateFiveSpShotRtDrop123
+            show: showStateFiveSpShotRtDrop123
+            speed: 1
+            show_tokens:
+                color1: color1SpShotRtDrop123
+                color2: color2SpShotRtDrop123
+                color3: color3SpShotRtDrop123
+            # -------------------------------
+        loop: false
+
+
+# ***************************** 
+# SHOTS::GROUPS
+# ***************************** 
+shot_groups:
+    # -------------------
+    # SHOTGROUP::RIGHT::DROP::1-2-3
+    # -------------------
+    shotGroupRightDrop:
+        shots:
+            - shotRightDrop1
+            - shotRightDrop2
+            - shotRightDrop3
+        enable_events:
+            - eventEnableShotGroupRightDrop
+        disable_events:
+            - ball_ending
+        reset_events:
+            - eventResetShotGroupRightDrop
+
+
+# ***************************** 
+# SEQUENCE::SHOTS
+# ***************************** 
+sequences:
+    sequenceShotRightDrop123:
+        events:
+            - shotRightDrop1_hit
+            - shotRightDrop2_hit
+            - shotRightDrop3_hit
+        disable_events: disableSequenceShotRightDrop123
+        disable_on_complete: false
+        enable_events: enableSequenceShotRightDrop123
+        events_when_complete: sequenceShotRightDrop123Complete
+        events_when_hit: sequenceShotRightDrop123Hit
+        persist_state: false
+        reset_events: resetSequenceShotRightDrop123
+        reset_on_complete: true
+        restart_events: restartSequenceShotRightDrop123
+        start_enabled: true
+
+
+# *********************
+# EVENT::PLAYER
+# *********************
+event_player:
+    
+    mode_modeBallyViking_started:
+        # -----------------------------
+        - eventResetShotRtDrop123
+        - eventEnableShotRtDrop123
+        # -----------------------------
+        - eventResetShotGroupRightDrop
+        - eventEnableShotGroupRightDrop
+        # -----------------------------
+        - enableSequenceShotRightDrop123
+        # -----------------------------
+        - eventResetShotRightDropMultiplier
+        - eventEnableShotRightDropMultiplier
+        
+    ball_ending:
+        - eventDisableShotRtDrop123
+        - eventDisableShotGroupRightDrop
+        
+    #shotGroupRightDrop_complete:
+    shotGroupRightDrop_lit_complete:
+        - eventAdvanceShotRightDrop123
+        - eventResetShotGroupRightDrop
+        - eventEnableShotGroupRightDrop
+        # -----------------------------
+        - restartSequenceShotRightDrop123|500ms
+        - eventResetShotRightDropMultiplier|1000ms
+
+
+    # ---------------------------
+    # SEQUENCE::HIT::EVENT::TESTS
+    # ---------------------------
+    # DRIVES THE SHOWS FOR THE MULTIPLIER
+    #shotGroupRightDrop_hit:
+    logicblock_sequenceShotRightDrop123_updated:
+        - eventSequenceShotRightDrop123Hit3{device.sequences.sequenceShotRightDrop123.value == 1}
+        
+    logicblock_sequenceShotRightDrop123_updated.2:
+        - eventSequenceShotRightDrop123Hit2{device.sequences.sequenceShotRightDrop123.value == 2}
+
+    # ---------------------------
+    # SEQUENCE::HIT::EVENT::TESTS
+    # ---------------------------
+    # DISABLES SEQUENCE SHOT WHEN HIT OUT OF SEQUENCE, RESTARTED ON DROP COMPLETE
+    shotRightDrop3_hit:
+        - disableSequenceShotRightDrop123{device.sequences.sequenceShotRightDrop123.value == 0}
+        
+    shotRightDrop2_hit:
+        - disableSequenceShotRightDrop123{device.sequences.sequenceShotRightDrop123.value == 0}   
+
+
+# *********************
+# VARIABLE::PLAYER
+# *********************
+variable_player:
+    # ---------------
+    # RIGHT::DROP::SET OR RESET MULTIPLIER
+    # ---------------
+    ball_started:
+        multiRightDrop:
+            int: 1
+            action: set
+
+    restartSequenceShotRightDrop123:
+        multiRightDrop:
+            int: 1
+            action: set
+            
+    sequenceShotRightDrop123Complete:
+        multiRightDrop:
+            int: 10
+            action: set
+            
+    # ---------------
+    # SCORING::RIGHT::DROP
+    # ---------------
+    shotRightDrop123_stateZeroSpShotRtDrop123_hit:
+        score: 2000 * current_player.multiRightDrop
+      
+    shotRightDrop123_stateOneSpShotRtDrop123_hit:
+        score: 4000 * current_player.multiRightDrop
+      
+    shotRightDrop123_stateTwoSpShotRtDrop123_hit:
+        score: 6000 * current_player.multiRightDrop
+      
+    shotRightDrop123_stateThreeSpShotRtDrop123_hit:
+        score: 8000 * current_player.multiRightDrop
+      
+    shotRightDrop123_stateFourSpShotRtDrop123_hit:
+        score: 10000 * current_player.multiRightDrop
+      
+    shotRightDrop123_stateFiveSpShotRtDrop123_hit:
+        score: 10000 * current_player.multiRightDrop
+
+
+# ---------------------
+# SHOW::PLAYER
+# ---------------------
+show_player:
+    # ---------------------
+    # SHOW::PLAYER::LEDS
+    # ---------------------
+    #restartSequenceShotRightDrop123:
+    eventSequenceShotRightDrop123Hit1:
+        showStateOneSpShotRightDropMultiplier:
+            action: play
+            speed: 1
+            loops: -1
+            show_tokens:
+                led1: ledDropRightMultiplier10XA
+                led2: ledDropRightMultiplier10XB
+                led3: ledDropRightMultiplier10XC
+                led4: ledDropRightMultiplier10XD
+                led5: ledDropRightMultiplier10XE
+                led6: ledDropRightMultiplier10XF
+                led7: ledDropRightMultiplier10XG
+                color1: '000000'
+                color2: '000000'
+                
+        showStateTwoSpShotRightDropMultiplier:
+            action: stop
+            
+        showStateThreeSpShotRightDropMultiplier:
+            action: stop
+            
+                
+    eventSequenceShotRightDrop123Hit2:
+        showStateTwoSpShotRightDropMultiplier:
+            action: play
+            speed: 6
+            loops: -1
+            show_tokens:
+                led1: ledDropRightMultiplier10XA
+                led2: ledDropRightMultiplier10XB
+                led3: ledDropRightMultiplier10XC
+                led4: ledDropRightMultiplier10XD
+                led5: ledDropRightMultiplier10XE
+                led6: ledDropRightMultiplier10XF
+                led7: ledDropRightMultiplier10XG
+                color1: '000000'
+                color2: '00ffff'
+
+        showStateOneSpShotRightDropMultiplier:
+            action: stop
+            
+        showStateThreeSpShotRightDropMultiplier:
+            action: stop
+            
+    sequenceShotRightDrop123Complete:
+        showStateThreeSpShotRightDropMultiplier:
+            action: play
+            speed: 4
+            loops: 5
+            show_tokens:
+                led1: ledDropRightMultiplier10XA
+                led2: ledDropRightMultiplier10XB
+                led3: ledDropRightMultiplier10XC
+                led4: ledDropRightMultiplier10XD
+                led5: ledDropRightMultiplier10XE
+                led6: ledDropRightMultiplier10XF
+                led7: ledDropRightMultiplier10XG
+                color1: '880088'
+                color2: 'ff00ff'
+                
+        showStateOneSpShotRightDropMultiplier:
+            action: stop
+            
+        showStateTwoSpShotRightDropMultiplier:
+            action: stop
+            
+
+# *********************
+# SHOWS
+# *********************
+shows:
+  # -----------------------------------
+  # SEQUENCE::RIGHT DROP::MULTIPLIER::ONE
+  # -----------------------------------
+    showStateZeroSpShotRightDropMultiplier:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 0.5s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+        - time: 1.0s
+        
+  # -----------------------------------
+  # SEQUENCE::RIGHT DROP::MULTIPLIER::ONE
+  # -----------------------------------
+    showStateOneSpShotRightDropMultiplier:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 0.5s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+        - time: 1.0s
+
+  # -----------------------------------
+  # SEQUENCE::RIGHT DROP::MULTIPLIER::TWO
+  # -----------------------------------
+    showStateTwoSpShotRightDropMultiplier:
+        - time: 0
+          lights:
+            (led1): '000000'
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 1.0s
+          lights:
+            (led1): '000000'
+            (led2): (color1)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 2.0s
+          lights:
+            (led1): '000000'
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 3.0s
+          lights:
+            (led1): '000000'
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color1)
+        - time: 4.0s
+          lights:
+            (led1): '000000'
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color2)
+            (led7): (color2)
+        - time: 5.0s
+          lights:
+            (led1): '000000'
+            (led2): (color2)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color2)
+        - time: 6.0s
+
+  # -----------------------------------
+  # SEQUENCE::RIGHT DROP::MULTIPLIER::THREE
+  # -----------------------------------
+    showStateThreeSpShotRightDropMultiplier:
+        - time: 0
+          lights:
+            (led1): (color1)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 1.0s
+          lights:
+            (led1): (color2)
+            (led2): (color1)
+            (led3): (color1)
+            (led4): (color1)
+            (led5): (color1)
+            (led6): (color1)
+            (led7): (color1)
+        - time: 2.0s
+          lights:
+            (led1): (color2)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+        - time: 3.0s
+          lights:
+            (led1): (color1)
+            (led2): (color2)
+            (led3): (color2)
+            (led4): (color2)
+            (led5): (color2)
+            (led6): (color2)
+            (led7): (color2)
+        - time: 4.0s

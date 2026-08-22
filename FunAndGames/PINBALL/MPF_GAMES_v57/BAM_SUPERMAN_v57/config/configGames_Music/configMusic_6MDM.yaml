@@ -1,0 +1,321 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+# ************************************
+# SOUNDS
+# ************************************
+sounds:
+# ---------------------
+# SOUNDS::MUSIC::THEME
+# ---------------------
+  music6MDM001:
+    file: music6MDMTheme_001.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  music6MDM002:
+    file: music6MDMTheme_002.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  music6MDM003:
+    file: music6MDMTheme_003.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+  music6MDM004:
+    file: music6MDMTheme_004.wav
+    track: music
+    volume: 0.7
+    mode_end_action: stop
+    
+# ---------------------
+# SOUNDS::MUSIC::RUNNING
+# ---------------------
+  music6MDM005:
+    file: music6MDM_Running_001.wav
+    track: music
+    volume: 1.0
+    mode_end_action: stop
+
+# ---------------------
+# SOUNDS::MUSIC::AMBIENT
+# ---------------------
+  music6MDMAmbient001:
+    file: music6MDMAmbient_001.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient002:
+    file: music6MDMAmbient_002.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient003:
+    file: music6MDMAmbient_003.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient004:
+    file: music6MDMAmbient_004.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient005:
+    file: music6MDMAmbient_005.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient006:
+    file: music6MDMAmbient_006.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient007:
+    file: music6MDMAmbient_007.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient008:
+    file: music6MDMAmbient_008.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient009:
+    file: music6MDMAmbient_009.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient010:
+    file: music6MDMAmbient_010.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient011:
+    file: music6MDMAmbient_011.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient012:
+    file: music6MDMAmbient_012.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient013:
+    file: music6MDMAmbient_013.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient014:
+    file: music6MDMAmbient_014.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient015:
+    file: music6MDMAmbient_015.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient016:
+    file: music6MDMAmbient_016.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient017:
+    file: music6MDMAmbient_017.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient018:
+    file: music6MDMAmbient_018.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient019:
+    file: music6MDMAmbient_019.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient020:
+    file: music6MDMAmbient_020.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient021:
+    file: music6MDMAmbient_021.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient022:
+    file: music6MDMAmbient_022.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient023:
+    file: music6MDMAmbient_023.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient024:
+    file: music6MDMAmbient_024.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+    
+  music6MDMAmbient025:
+    file: music6MDMAmbient_025.wav
+    track: music
+    volume: 0.8
+    mode_end_action: stop
+
+  #  
+  #music6MDM006:
+  #  file: musicBowlingTheme_TheBowlingSong.wav
+  #  track: music
+  #  volume: 0.7
+  #  mode_end_action: stop
+  #  
+  #music6MDM007:
+  #  file: musicBowlingTheme_CelebrityBowling.wav
+  #  track: music
+  #  volume: 0.6
+  #  mode_end_action: stop
+  #
+  #music6MDM008:
+  #  file: musicBowlingTheme_MackFieldsBowlingBallBlues.wav
+  #  track: music
+  #  volume: 0.6
+  #  mode_end_action: stop
+  #  
+  #music6MDM009:
+  #  file: musicBowlingTheme_CVBTakeTheSkinheadsBowling.wav
+  #  track: music
+  #  volume: 0.8
+  #  mode_end_action: stop
+  #  
+  #music6MDM010:
+  #  file: musicBowlingTheme_JoeMontgomeryTheBowlingSong.wav
+  #  track: music
+  #  volume: 0.7
+  #  mode_end_action: stop
+  #  
+  #music6MDM011:
+  #  file: musicBowlingTheme_TelefoneBowlingSong.wav
+  #  track: music
+  #  volume: 0.7
+  #  mode_end_action: stop
+  #
+  #music6MDM012:
+  #  file: 6MDM_Loop_8_Ambience.wav
+  #  track: music
+  #  volume: 0.9
+  #  mode_end_action: stop
+
+# ---------------------
+# SOUNDS::POOLS
+# ---------------------
+sound_pools:
+  poolMusicAttract:
+    track: music
+    type: random_force_all
+    sounds:
+      - music6MDM001
+      - music6MDM002
+      - music6MDM003
+      - music6MDM004
+
+  poolMusicBaseMode:
+    track: music
+    type: random_force_all
+    sounds:
+      - music6MDM001
+      - music6MDM002
+      - music6MDM003
+      - music6MDM004
+
+# ---------------------
+# SOUNDS::PLAYER
+# ---------------------
+sound_player:
+# ---------------------
+# SOUNDS::PLAYER::STAR TREK::BY MODE
+# ---------------------
+  playPoolMusicBaseMode:
+    poolMusicBaseMode:
+      loops: 0
+      volume: 0.7
+      
+## ---------------------
+## EVENT::PLAYER
+## ---------------------
+#event_player:
+#  eventPlaylistMode6MDMStart:
+#    playPoolMusicBaseMode
+    
+# ---------------------
+# MUSIC::PLAYLISTS
+# ---------------------
+playlists:
+  playlistMode6MDMMusic:
+    shuffle: true
+    repeat: true
+    sounds:
+      #- music6MDM001
+      #- music6MDM002
+      #- music6MDM003
+      #- music6MDM004
+      #- music6MDM005
+      - music6MDMAmbient001
+      - music6MDMAmbient002
+      - music6MDMAmbient003
+      - music6MDMAmbient004
+      - music6MDMAmbient005
+      - music6MDMAmbient006
+      - music6MDMAmbient007
+      - music6MDMAmbient008
+      - music6MDMAmbient009
+      - music6MDMAmbient010
+      - music6MDMAmbient011
+      - music6MDMAmbient012
+      - music6MDMAmbient013
+      - music6MDMAmbient014
+      - music6MDMAmbient015
+      - music6MDMAmbient016
+      - music6MDMAmbient017
+      - music6MDMAmbient018
+      - music6MDMAmbient019
+      - music6MDMAmbient020
+      - music6MDMAmbient021
+      - music6MDMAmbient022
+      - music6MDMAmbient023
+      - music6MDMAmbient024
+      - music6MDMAmbient025
+      
+

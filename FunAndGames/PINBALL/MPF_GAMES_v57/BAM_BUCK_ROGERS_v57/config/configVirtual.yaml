@@ -1,0 +1,168 @@
+#config_version=6
+
+# search for keyword "TODO" for easy things to customize your first game.
+
+
+
+# ******************************************
+# ------------------------------------------
+# VIRTUAL
+# ------------------------------------------
+# ******************************************
+keyboard:
+    
+    0:
+        event: debug_dump_stats
+      
+    z:
+        #switch: s_flipper_left_keyboard
+        event: eventFlipperLeftKeyboard
+    /:
+        #switch: s_flipper_right_keyboard
+        event: eventFlipperRightKeyboard
+    1:
+        #switch: s_trough_1
+        #switch: s_0_0
+        switch: s_2_0
+        toggle: true
+    2:
+        # YELLOW DROP 1
+        switch: s_1_31
+
+    3:
+        # YELLOW DROP 2
+        switch: s_1_27
+
+    4:
+        # YELLOW DROP 3
+        switch: s_1_17
+
+    5:
+        # YELLOW DROP 4
+        switch: s_1_21
+
+    6:
+        #RIGHT LANE
+        switch: s_1_19
+
+    7:
+        #SAUCER
+        switch: s_1_2
+        toggle: true
+        
+    p:
+        # TEST FOR VIDEO
+        event: eventShowSlideVideoTest1
+        #switch: s_plunger_lane
+        #toggle: true
+    s:
+        #switch: s_start
+        switch: s_0_8
+        
+
+    8:
+        switch: s_1_20
+    9:
+        switch: s_1_16
+
+    #7:
+    #    switch: s_drop_rt_1
+    #    toggle: true
+    #8:
+    #    switch: s_drop_rt_2
+    #    toggle: true
+    #9:
+    #    switch: s_drop_rt_3
+    #    toggle: true
+
+
+    f:
+        # VARI-TARGET
+        switch: s_0_6
+    g:
+        # VARI-TARGET
+        switch: s_0_5
+    h:
+        # VARI-TARGET
+        switch: s_0_4
+    j:
+        # VARI-TARGET
+        switch: s_0_3
+    k:
+        # VARI-TARGET
+        switch: s_0_2
+    l:
+        # VARI-TARGET
+        switch: s_0_1
+
+    t:
+        switch: s_target_reverse
+        
+    x:
+        #spinner
+        switch: s_1_4
+        
+    c:
+        #switch: s_kicker_upper
+        switch: s_1_8
+        toggle: true
+        
+        
+    v:
+        #RIGHT LANE
+        switch: s_1_19
+    b:
+        #switch: s_return_lane_left
+        event: eventRotateRightGrpAchGlobeSaucer
+    n:
+        #switch: s_return_lane_right
+        switch: s_1_9
+    m:
+        #switch: s_outlane_right
+        switch: s_1_7
+
+    q:
+        #THUMPER
+        #switch: s_thumper_right
+        switch: s_1_23
+    w:
+        #DROP
+        switch: s_0_4
+        #switch: s_thumper_left
+        
+    e:
+        #TARGET
+        switch: s_1_17
+        #switch: s_vuk
+    r:
+        #RETURN LANE
+        switch: s_1_9
+        #switch: s_target_newton
+        
+    y:
+        #TOP LANE B
+        switch: s_0_0
+    u:
+        #TOP LANE U
+        switch: s_1_12
+    i:
+        #TOP LANE C
+        switch: s_1_28
+    o:
+        #TOP LANE K
+        switch: s_1_24
+
+
+    a:
+        switch: s_hidden_lane
+        
+
+virtual_platform_start_active_switches:
+    s_2_0
+    #s_0_0
+    #s_trough_1
+    #s_trough_2
+    #s_trough_3
+    #s_trough_4
+    #s_trough_5
+    #s_trough_6

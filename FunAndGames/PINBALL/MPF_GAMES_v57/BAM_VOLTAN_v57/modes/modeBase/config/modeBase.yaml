@@ -1,0 +1,237 @@
+#config_version=6
+
+# VOLTAN
+
+config:
+- configBaseAchievements.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 100
+
+# ---------------------
+# SWITCHES::COMBO
+# ---------------------
+combo_switches:
+  comboSwitchEndGame:
+    switches_1: s_0_10
+    switches_2: s_0_8
+    hold_time: 2s
+    events_when_both: end_game
+    
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # ----------------------------
+  # START
+  # ----------------------------
+  mode_modeBase_started:
+    - playPoolSoundHorn
+    # ENABLE ACHIEVEMENTS
+    - eventEnableAchVoltanMercury
+    - eventEnableAchVoltanVenus
+    - eventEnableAchVoltanEarth
+    - eventEnableAchVoltanMars
+    - eventEnableAchVoltanJupiter
+    - eventEnableAchVoltanSaturn
+    - eventEnableAchVoltanUranus
+    - eventEnableAchVoltanNeptune
+    - eventEnableAchVoltanPluto
+    # SELECT MODE
+    - eventSelectNextMode|20ms
+    
+# *********
+# MERCURY
+# *********
+  # ----------------------------
+  # SELECT MODE VOLTAN MERCURY
+  # ----------------------------
+  eventSelectNextMode.1{device.achievements.achVoltanMercury.state!="completed"}:
+    - eventSelectAchVoltanMercury
+    - eventStartAchVoltanMercury
+  eventAchVoltanMercuryStarted:
+    - eventStartModeVoltanMercury
+  # ----------------------------
+  # MODE VOLTAN MERCURY COMPLETE
+  # ----------------------------
+  eventVoltanMercuryComplete:
+    - eventCompleteAchVoltanMercury
+  eventAchVoltanMercuryCompleted:
+    - eventStartModeVoltanMercuryMultiball
+    - eventStopModeVoltanMercury
+
+# *********
+# VENUS
+# *********
+  # ----------------------------
+  # SELECT MODE VOLTAN VENUS
+  # ----------------------------
+  eventSelectNextMode.2{device.achievements.achVoltanMercury.state=="completed" and device.achievements.achVoltanVenus.state!="completed"}:
+    - eventSelectAchVoltanVenus
+    - eventStartAchVoltanVenus
+  eventAchVoltanVenusStarted:
+    - eventStartModeVoltanVenus
+  # ----------------------------
+  # MODE VOLTAN VENUS COMPLETE
+  # ----------------------------
+  eventVoltanVenusComplete:
+    - eventCompleteAchVoltanVenus
+  eventAchVoltanVenusCompleted:
+    - eventStartModeVoltanVenusMultiball
+    - eventStopModeVoltanVenus
+
+# *********
+# EARTH
+# *********
+  # ----------------------------
+  # SELECT MODE VOLTAN EARTH
+  # ----------------------------
+  eventSelectNextMode.3{device.achievements.achVoltanVenus.state=="completed" and device.achievements.achVoltanEarth.state!="completed"}:
+    - eventSelectAchVoltanEarth
+    - eventStartAchVoltanEarth
+  eventAchVoltanEarthStarted:
+    - eventStartModeVoltanEarth
+  # ----------------------------
+  # MODE VOLTAN EARTH COMPLETE
+  # ----------------------------
+  eventVoltanEarthComplete:
+    - eventCompleteAchVoltanEarth
+  eventAchVoltanEarthCompleted:
+    - eventStartModeVoltanEarthMultiball
+    - eventStopModeVoltanEarth
+
+# *********
+# MARS
+# *********
+  # ----------------------------
+  # SELECT MODE VOLTAN MARS
+  # ----------------------------
+  eventSelectNextMode.4{device.achievements.achVoltanEarth.state=="completed" and device.achievements.achVoltanMars.state!="completed"}:
+    - eventSelectAchVoltanMars
+    - eventStartAchVoltanMars
+  eventAchVoltanMarsStarted:
+    - eventStartModeVoltanMars
+  # ----------------------------
+  # MODE VOLTAN MARS COMPLETE
+  # ----------------------------
+  eventVoltanMarsComplete:
+    - eventCompleteAchVoltanMars
+  eventAchVoltanMarsCompleted:
+    - eventStartModeVoltanMarsMultiball
+    - eventStopModeVoltanMars
+    
+# *********
+# JUPITER
+# *********
+  # ----------------------------
+  # SELECT MODE VOLTAN JUPITER
+  # ----------------------------
+  eventSelectNextMode.5{device.achievements.achVoltanMars.state=="completed" and device.achievements.achVoltanJupiter.state!="completed"}:
+    - eventSelectAchVoltanJupiter
+    - eventStartAchVoltanJupiter
+  eventAchVoltanJupiterStarted:
+    - eventStartModeVoltanJupiter
+  # ----------------------------
+  # MODE VOLTAN JUPITER COMPLETE
+  # ----------------------------
+  eventVoltanJupiterComplete:
+    - eventCompleteAchVoltanJupiter
+  eventAchVoltanJupiterCompleted:
+    - eventStartModeVoltanJupiterMultiball
+    - eventStopModeVoltanJupiter
+    
+# *********
+# SATURN
+# *********
+  # ----------------------------
+  # SELECT MODE VOLTAN SATURN
+  # ----------------------------
+  eventSelectNextMode.6{device.achievements.achVoltanJupiter.state=="completed" and device.achievements.achVoltanSaturn.state!="completed"}:
+    - eventSelectAchVoltanSaturn
+    - eventStartAchVoltanSaturn
+  eventAchVoltanSaturnStarted:
+    - eventStartModeVoltanSaturn
+  # ----------------------------
+  # MODE VOLTAN SATURN COMPLETE
+  # ----------------------------
+  eventVoltanSaturnComplete:
+    - eventCompleteAchVoltanSaturn
+  eventAchVoltanSaturnCompleted:
+    - eventStartModeVoltanSaturnMultiball
+    - eventStopModeVoltanSaturn
+    
+# *********
+# URANUS
+# *********
+  # ----------------------------
+  # SELECT MODE URANUS EARTH
+  # ----------------------------
+  eventSelectNextMode.7{device.achievements.achVoltanSaturn.state=="completed" and device.achievements.achVoltanUranus.state!="completed"}:
+    - eventSelectAchVoltanUranus
+    - eventStartAchVoltanUranus
+  eventAchVoltanUranusStarted:
+    - eventStartModeVoltanUranus
+  # ----------------------------
+  # MODE VOLTAN URANUS COMPLETE
+  # ----------------------------
+  eventVoltanUranusComplete:
+    - eventCompleteAchVoltanUranus
+  eventAchVoltanUranusCompleted:
+    - eventStartModeVoltanUranusMultiball
+    - eventStopModeVoltanUranus
+    
+# *********
+# NEPTUNE
+# *********
+  # ----------------------------
+  # SELECT MODE VOLTAN NEPTUNE
+  # ----------------------------
+  eventSelectNextMode.8{device.achievements.achVoltanUranus.state=="completed" and device.achievements.achVoltanNeptune.state!="completed"}:
+    - eventSelectAchVoltanNeptune
+    - eventStartAchVoltanNeptune
+  eventAchVoltanNeptuneStarted:
+    - eventStartModeVoltanNeptune
+  # ----------------------------
+  # MODE VOLTAN NEPTUNE COMPLETE
+  # ----------------------------
+  eventVoltanNeptuneComplete:
+    - eventCompleteAchVoltanNeptune
+  eventAchVoltanNeptuneCompleted:
+    - eventStartModeVoltanNeptuneMultiball
+    - eventStopModeVoltanNeptune
+    
+# *********
+# PLUTO
+# *********
+  # ----------------------------
+  # SELECT MODE VOLTAN PLUTO
+  # ----------------------------
+  eventSelectNextMode.9{device.achievements.achVoltanNeptune.state=="completed" and device.achievements.achVoltanPluto.state!="completed"}:
+    - eventSelectAchVoltanPluto
+    - eventStartAchVoltanPluto
+  eventAchVoltanPlutoStarted:
+    - eventStartModeVoltanPluto
+  # ----------------------------
+  # MODE VOLTAN PLUTO COMPLETE
+  # ----------------------------
+  eventVoltanPlutoComplete:
+    - eventCompleteAchVoltanPluto
+  eventAchVoltanPlutoCompleted:
+    - eventStartModeVoltanPlutoMultiball
+    - eventStopModeVoltanPluto
+
+# ---------------------
+# PLAYLIST::PLAYER
+# ---------------------
+playlist_player:
+
+  eventPauseTrackPlaylist:
+    trackplaylist:
+      action: stop
+      
+  eventResumeTrackPlaylist:
+    trackplaylist:
+      playlist: playlistModeFlashGordonMusic
+      action: play

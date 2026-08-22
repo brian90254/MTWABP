@@ -1,0 +1,75 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - STRIKES AND SPARES
+
+- time: 0
+# ----------------------
+# COLOR CHASE
+# ----------------------
+  lights:
+    # ------------------
+    ledStrikeValue5k: (color1)
+    ledStrikeValue10k: (color2)
+    ledStrikeValue15k: (color2)
+    ledStrikeValue20k: (color2)
+    ledStrikeValue50k: (color2)
+    ledStrikeValueSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledStrikeValue5k: (color2)
+    ledStrikeValue10k: (color1)
+    ledStrikeValue15k: (color2)
+    ledStrikeValue20k: (color2)
+    ledStrikeValue50k: (color2)
+    ledStrikeValueSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledStrikeValue5k: (color2)
+    ledStrikeValue10k: (color2)
+    ledStrikeValue15k: (color1)
+    ledStrikeValue20k: (color2)
+    ledStrikeValue50k: (color2)
+    ledStrikeValueSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledStrikeValue5k: (color2)
+    ledStrikeValue10k: (color2)
+    ledStrikeValue15k: (color2)
+    ledStrikeValue20k: (color1)
+    ledStrikeValue50k: (color2)
+    ledStrikeValueSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledStrikeValue5k: (color2)
+    ledStrikeValue10k: (color2)
+    ledStrikeValue15k: (color2)
+    ledStrikeValue20k: (color2)
+    ledStrikeValue50k: (color1)
+    ledStrikeValueSpecial: (color2)
+    # ------------------
+- time: "+1"
+
+  lights:
+    # ------------------
+    ledStrikeValue5k: (color2)
+    ledStrikeValue10k: (color2)
+    ledStrikeValue15k: (color2)
+    ledStrikeValue20k: (color2)
+    ledStrikeValue50k: (color2)
+    ledStrikeValueSpecial: (color1)
+    # ------------------
+- time: "+1"

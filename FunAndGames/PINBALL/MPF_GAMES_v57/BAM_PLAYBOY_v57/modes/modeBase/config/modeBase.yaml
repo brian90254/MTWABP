@@ -1,0 +1,48 @@
+#config_version=6
+
+# PLAYBOY
+
+config:
+#- configBaseAchievements.yaml
+- configBaseShots.yaml
+- configBaseBonus.yaml
+- configBaseExtraBall.yaml
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ending
+  priority: 5000
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # ----------------------------
+  # START
+  # ----------------------------
+  mode_modeBase_started:
+    - playPoolSoundHorn
+    # SELECT MODE
+    - eventStartModeCarousel
+    # RESET MULTIPLIERS
+    - eventResetMultipliersPlayboy|1000ms
+    #- eventCompleteBonusOnes|1000ms
+    # RESET DROP TARGETS
+    - eventResetDropTargetBankRight
+
+  ball_hold_ballHoldKickbackLeft_held_ball:
+    - releaseBallHoldKickbackLeft|2000ms
+    
+# ---------------------
+# PLAYLIST::PLAYER
+# ---------------------
+playlist_player:
+
+  eventPauseTrackPlaylist:
+    trackplaylist:
+      action: stop
+      
+  eventResumeTrackPlaylist:
+    trackplaylist:
+      playlist: playlistModePlayboyMusic
+      action: play

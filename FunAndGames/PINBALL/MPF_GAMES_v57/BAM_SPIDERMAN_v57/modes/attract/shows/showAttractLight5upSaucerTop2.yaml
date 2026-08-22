@@ -1,0 +1,117 @@
+#show_version=6
+
+- time: 0
+
+#-------------
+# RED
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedSaucerTop2
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledSaucerTop2A
+        led2: ledSaucerTop2B
+        led3: ledSaucerTop2C
+        led4: ledSaucerTop2D
+        led5: ledSaucerTop2E
+
+- time: "+4"
+
+#-------------
+# YELLOW
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedSaucerTop2
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledSaucerTop2A
+        led2: ledSaucerTop2B
+        led3: ledSaucerTop2C
+        led4: ledSaucerTop2D
+        led5: ledSaucerTop2E
+
+- time: "+4"
+
+#-------------
+# GREEN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedSaucerTop2
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledSaucerTop2A
+        led2: ledSaucerTop2B
+        led3: ledSaucerTop2C
+        led4: ledSaucerTop2D
+        led5: ledSaucerTop2E
+
+- time: "+4"
+
+#-------------
+# CYAN
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedSaucerTop2
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledSaucerTop2A
+        led2: ledSaucerTop2B
+        led3: ledSaucerTop2C
+        led4: ledSaucerTop2D
+        led5: ledSaucerTop2E
+
+- time: "+4"
+
+#-------------
+# BLUE
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedSaucerTop2
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledSaucerTop2A
+        led2: ledSaucerTop2B
+        led3: ledSaucerTop2C
+        led4: ledSaucerTop2D
+        led5: ledSaucerTop2E
+
+- time: "+4"
+
+#-------------
+# MAGENTA
+#-------------
+  shows:
+    ribbonFiveLedTwoColor:
+      loops: 0
+      speed: 3
+      key: keyLedSaucerTop2
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledSaucerTop2A
+        led2: ledSaucerTop2B
+        led3: ledSaucerTop2C
+        led4: ledSaucerTop2D
+        led5: ledSaucerTop2E
+
+- time: "+4"

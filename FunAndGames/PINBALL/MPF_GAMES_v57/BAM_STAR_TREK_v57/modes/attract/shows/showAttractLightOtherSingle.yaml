@@ -1,0 +1,360 @@
+#show_version=6
+
+# ----------------------
+# USED FOR:
+#   - SILVERBALL MANIA
+
+- time: 0
+# ----------------------
+# RED CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledLaneLeft2: 'ff0000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: 'ff0000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: 'ff0000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: 'ff0000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: 'ff0000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: 'ff0000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: 'ff0000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: 'ff0000'
+    # ----------------------
+- time: "+1.5"
+
+# ----------------------
+# YELLOW CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledLaneLeft2: 'ffff00'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: 'ffff00'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: 'ffff00'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: 'ffff00'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: 'ffff00'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: 'ffff00'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: 'ffff00'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: 'ffff00'
+    # ----------------------
+- time: "+1.5"
+
+# ----------------------
+# GREEN CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledLaneLeft2: '00ff00'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '00ff00'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '00ff00'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '00ff00'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '00ff00'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '00ff00'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '00ff00'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '00ff00'
+    # ----------------------
+- time: "+1.5"
+
+# ----------------------
+# CYAN CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledLaneLeft2: '00ffff'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '00ffff'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '00ffff'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '00ffff'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '00ffff'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '00ffff'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '00ffff'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '00ffff'
+    # ----------------------
+- time: "+1.5"
+
+# ----------------------
+# BLUE CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledLaneLeft2: '0000ff'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '0000ff'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '0000ff'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '0000ff'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '0000ff'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '0000ff'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '0000ff'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '0000ff'
+    # ----------------------
+- time: "+1.5"
+
+# ----------------------
+# MAGENTA CHASE
+# ----------------------
+  lights:
+    # ----------------------
+    ledLaneLeft2: 'ff00ff'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: 'ff00ff'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: 'ff00ff'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: 'ff00ff'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: 'ff00ff'
+    ledBonusMultiTarget3X: '000000'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: 'ff00ff'
+    ledOutlaneRight: '000000'
+    # ----------------------
+- time: "+1.5"
+
+  lights:
+    # ----------------------
+    ledLaneLeft2: '000000'
+    ledLaneLeft1: '000000'
+    ledBonusMultiTarget2X: '000000'
+    ledBonusMultiTarget3X: 'ff00ff'
+    # ----------------------    
+    ledOutlaneLeft: '000000'
+    ledReturnLaneLeft: '000000'
+    ledReturnLaneRight: '000000'
+    ledOutlaneRight: 'ff00ff'
+    # ----------------------
+- time: "+1.5"

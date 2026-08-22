@@ -1,0 +1,393 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledSuperTopU1
+        led2: ledSuperTopU2
+        led3: ledSuperTopU3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledSuperTopP1
+        led2: ledSuperTopP2
+        led3: ledSuperTopP3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledSuperTopE1
+        led2: ledSuperTopE2
+        led3: ledSuperTopE3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledSuperTopR1
+        led2: ledSuperTopR2
+        led3: ledSuperTopR3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledSuperTopS1
+        led2: ledSuperTopS2
+        led3: ledSuperTopS3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledSuperTopU1
+        led2: ledSuperTopU2
+        led3: ledSuperTopU3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledSuperTopP1
+        led2: ledSuperTopP2
+        led3: ledSuperTopP3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledSuperTopE1
+        led2: ledSuperTopE2
+        led3: ledSuperTopE3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '0000ff'
+        led1: ledSuperTopR1
+        led2: ledSuperTopR2
+        led3: ledSuperTopR3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledSuperTopS1
+        led2: ledSuperTopS2
+        led3: ledSuperTopS3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledSuperTopU1
+        led2: ledSuperTopU2
+        led3: ledSuperTopU3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledSuperTopP1
+        led2: ledSuperTopP2
+        led3: ledSuperTopP3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledSuperTopE1
+        led2: ledSuperTopE2
+        led3: ledSuperTopE3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ff00ff'
+        led1: ledSuperTopR1
+        led2: ledSuperTopR2
+        led3: ledSuperTopR3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledSuperTopS1
+        led2: ledSuperTopS2
+        led3: ledSuperTopS3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledSuperTopU1
+        led2: ledSuperTopU2
+        led3: ledSuperTopU3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledSuperTopP1
+        led2: ledSuperTopP2
+        led3: ledSuperTopP3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledSuperTopE1
+        led2: ledSuperTopE2
+        led3: ledSuperTopE3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledSuperTopR1
+        led2: ledSuperTopR2
+        led3: ledSuperTopR3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledSuperTopS1
+        led2: ledSuperTopS2
+        led3: ledSuperTopS3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledSuperTopU1
+        led2: ledSuperTopU2
+        led3: ledSuperTopU3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledSuperTopP1
+        led2: ledSuperTopP2
+        led3: ledSuperTopP3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledSuperTopE1
+        led2: ledSuperTopE2
+        led3: ledSuperTopE3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledSuperTopR1
+        led2: ledSuperTopR2
+        led3: ledSuperTopR3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledSuperTopS1
+        led2: ledSuperTopS2
+        led3: ledSuperTopS3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledSuperTopU1
+        led2: ledSuperTopU2
+        led3: ledSuperTopU3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledSuperTopP1
+        led2: ledSuperTopP2
+        led3: ledSuperTopP3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledSuperTopE1
+        led2: ledSuperTopE2
+        led3: ledSuperTopE3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledSuperTopR1
+        led2: ledSuperTopR2
+        led3: ledSuperTopR3
+
+- time: "+1"
+
+  shows:
+    triangleThreeLedTwoColor:
+      loops: -1
+      speed: 1
+      show_tokens:
+        color1: '000000'
+        color2: '00ffff'
+        led1: ledSuperTopS1
+        led2: ledSuperTopS2
+        led3: ledSuperTopS3
+
+- time: "+1"

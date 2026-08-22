@@ -1,0 +1,20 @@
+#show_version=6
+
+- time: 0
+  # ------------------------
+  # YELLOW
+  shows:
+    flashDiamondSixLedTwoColor:
+      loops: 0
+      speed: 12
+      show_tokens:
+        color1: colorLedTattooMystiqueSixUpYellow1
+        color2: colorLedTattooMystiqueSixUpYellow2
+        led1: ledDropTargetRight3A
+        led2: ledDropTargetRight3B
+        led3: ledDropTargetRight3C
+        led4: ledDropTargetRight3D
+        led5: ledDropTargetRight3E
+        led6: ledDropTargetRight3F
+
+- time: "+0.5"
