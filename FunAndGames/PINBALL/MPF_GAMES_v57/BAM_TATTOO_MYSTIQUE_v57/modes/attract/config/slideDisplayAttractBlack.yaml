@@ -13,7 +13,7 @@ slides:
   # *************************
   slideDisplayAttractBlack:
     - type: image
-      image: imageTigerHeadPurple
+      image: imageTigerHeadPurple2
       y: middle
       x: middle
       z: 50
@@ -47,7 +47,7 @@ slides:
       # TIGER HEAD :: ORANGE
       # ---------------------
     - type: image
-      image: imageTigerHeadOrange
+      image: imageTigerHeadOrange2
       y: middle
       x: middle
       z: 60
