@@ -1,0 +1,26 @@
+hardware:
+  platform: opp
+
+opp:
+  ports: /dev/ttyACM0
+  baud: 115200
+  poll_hz: 100
+
+switches:
+  s_portb_0:
+    number: 0
+
+  s_portb_1:
+    number: 1
+
+  s_portb_2:
+    number: 2
+
+  s_portb_3:
+    number: 3
+
+  s_portb_4:
+    number: 4
+
+  s_portb_5:
+    number: 5
