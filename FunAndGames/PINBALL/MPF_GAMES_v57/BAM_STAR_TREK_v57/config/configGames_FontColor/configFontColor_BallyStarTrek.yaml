@@ -62,6 +62,19 @@ widget_styles:
   #  font_size: 12
     
   # --------------------
+  # FONT::ATTRACT::LAST::4UP
+  # --------------------
+  fontAttractLast4upHeader:
+    font_name: AutoMission
+    font_size: 16
+  fontAttractLast4upMiddle:
+    font_name: MainframeSpore
+    font_size: 22
+  fontAttractLast4upFooter:
+    font_name: AutoMission
+    font_size: 16
+
+  # --------------------
   # FONT::ATTRACT::LAST
   # --------------------
   fontAttractLastHeader:
@@ -232,6 +245,26 @@ named_colors:
 # ---------------
 # ATTRACT COLORS
 # ---------------
+  # ---------------------
+  # ATTRACT::LAST
+  # ---------------------
+  colorFontAttractLast4upHeaderInner: ff0000
+  colorFontAttractLast4upHeaderOuter1: 80ff00
+  colorFontAttractLast4upHeaderOuter2: '000000'
+  
+  colorFontAttractLast4upMiddleInner: ff0000
+  colorFontAttractLast4upMiddleOuter1: '00ffff'
+  colorFontAttractLast4upMiddleOuter2: '000000'
+  
+  colorFontAttractLast4upFooterInner: 8000ff
+  colorFontAttractLast4upFooterOuter1: ffff00
+  colorFontAttractLast4upFooterOuter2: '000000'
+  
+  colorBoxAttractLast4upOuter: 8000ff
+  colorBoxAttractLast4upMiddle: '000000'
+  colorBoxAttractLast4upInner: '000000'
+  colorBoxAttractLast4upFill: '000000'
+
   # ---------------------
   # ATTRACT::LAST
   # ---------------------

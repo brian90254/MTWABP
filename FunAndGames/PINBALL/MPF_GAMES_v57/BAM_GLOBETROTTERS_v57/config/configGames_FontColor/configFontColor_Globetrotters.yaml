@@ -119,6 +119,19 @@ widget_styles:
     font_size: 12
   
   # --------------------
+  # FONT::ATTRACT::LAST::4UP
+  # --------------------
+  fontAttractLast4upHeader:
+    font_name: HighSchoolUSASerif
+    font_size: 12
+  fontAttractLast4upMiddle:
+    font_name: Jackport
+    font_size: 27
+  fontAttractLast4upFooter:
+    font_name: HighSchoolUSASerif
+    font_size: 18
+
+  # --------------------
   # FONT::ATTRACT::LAST
   # --------------------
   fontAttractLastHeader:
@@ -306,6 +319,26 @@ named_colors:
 # ---------------
 # ATTRACT COLORS
 # ---------------
+  # ---------------------
+  # ATTRACT::LAST::4UP
+  # ---------------------
+  colorFontAttractLast4upHeaderInner: 'ff0000'
+  colorFontAttractLast4upHeaderOuter1: '00ff00'
+  colorFontAttractLast4upHeaderOuter2: '000000'
+  
+  colorFontAttractLast4upMiddleInner: 'ff0000'
+  colorFontAttractLast4upMiddleOuter1: '00ffff'
+  colorFontAttractLast4upMiddleOuter2: '000000'
+  
+  colorFontAttractLast4upFooterInner: '8000ff'
+  colorFontAttractLast4upFooterOuter1: 'ffff00'
+  colorFontAttractLast4upFooterOuter2: '000000'
+  
+  colorBoxAttractLast4upOuter: '8000ff'
+  colorBoxAttractLast4upMiddle: '000000'
+  colorBoxAttractLast4upInner: '000000'
+  colorBoxAttractLast4upFill: '000000'
+
   # ---------------------
   # ATTRACT::LAST
   # ---------------------
