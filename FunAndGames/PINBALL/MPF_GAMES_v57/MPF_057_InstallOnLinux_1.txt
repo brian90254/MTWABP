@@ -90,6 +90,10 @@ mpf --version
 # ------------------------------
 pip list
 
+# ------------------------------
+# ENABLE PERMISSIONS FOR ACCESS TO SERIAL PORTS
+# ------------------------------
+sudo usermod -aG dialout $USER
 
 # ------------------------------
 # CREATE A SHELL SCRIPT TO RUN THE GAME

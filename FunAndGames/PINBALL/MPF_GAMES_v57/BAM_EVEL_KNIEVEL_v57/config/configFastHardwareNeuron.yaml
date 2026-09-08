@@ -15,6 +15,7 @@ fast:
     #controller: nano
     controller: neuron
     port: auto
+    #port: ttyACM0
     baud: 921600
     debug: false
     watchdog: 4s
