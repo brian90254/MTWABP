@@ -95,6 +95,26 @@ pip list
 # ------------------------------
 sudo usermod -aG dialout $USER
 
+...or
+
+sudo chmod 666 /dev/ttyACM0
+
+...or
+
+udevadm info --query=property --name=/dev/ttyACM0 | grep -E 'ID_VENDOR_ID|ID_MODEL_ID|ID_SERIAL'
+# MODEL==idProduct==103b, VENDOR==idVendor==2e8a
+
+sudo nano /etc/udev/rules.d/99-mpf.rules
+
+SUBSYSTEM=="tty", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="103b", MODE="0666"
+...or
+SUBSYSTEM=="tty", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="103b", GROUP="dialout", MODE="0660"
+
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
+
+
 # ------------------------------
 # CREATE A SHELL SCRIPT TO RUN THE GAME
 # Copy the text below into a file called "Linux_BAM_GITHUB_v57_Both.sh"
