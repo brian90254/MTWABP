@@ -445,7 +445,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461302.713807870
+2461303.551111111
   9
 $TDUCREATE
  40
@@ -453,7 +453,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461302.713807870
+2461303.551111111
   9
 $TDUUPDATE
  40
@@ -505,7 +505,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-64
+6A
   9
 $SURFTAB1
  70
@@ -2369,541 +2369,9 @@ SECTION
   2
 ENTITIES
   0
-LINE
+CIRCLE
   5
 36
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-106.895
- 20
-41.395
- 30
-0.0
- 11
-106.895
- 21
-42.0
- 31
-0.0
-  0
-LINE
-  5
-37
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-105.5125
- 20
-41.395
- 30
-0.0
- 11
-106.895
- 21
-41.395
- 31
-0.0
-  0
-LINE
-  5
-38
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-107.255
- 20
-41.395
- 30
-0.0
- 11
-108.6375
- 21
-41.395
- 31
-0.0
-  0
-LINE
-  5
-39
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-120.255
- 20
-42.0
- 30
-0.0
- 11
-128.31
- 21
-42.0
- 31
-0.0
-  0
-LINE
-  5
-3A
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-107.255
- 20
-42.0
- 30
-0.0
- 11
-119.895
- 21
-42.0
- 31
-0.0
-  0
-LINE
-  5
-3B
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-98.84
- 20
-42.0
- 30
-0.0
- 11
-106.895
- 21
-42.0
- 31
-0.0
-  0
-LINE
-  5
-3C
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-128.31
- 20
-42.0
- 30
-0.0
- 11
-128.31
- 21
-34.625
- 31
-0.0
-  0
-LINE
-  5
-3D
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-128.31
- 20
-34.625
- 30
-0.0
- 11
-98.84
- 21
-34.625
- 31
-0.0
-  0
-LINE
-  5
-3E
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-98.84
- 20
-42.0
- 30
-0.0
- 11
-98.84
- 21
-34.625
- 31
-0.0
-  0
-ARC
-  5
-3F
-100
-AcDbEntity
-  8
-8_250BIT_750TAB
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-116.41875
- 20
-41.15
- 30
-0.0
- 40
-0.125
-100
-AcDbArc
- 50
-0.0
- 51
-90.0
-  0
-LINE
-  5
-40
-100
-AcDbEntity
-  8
-8_250BIT_750TAB
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-110.73125
- 20
-41.275
- 30
-0.0
- 11
-116.41875
- 21
-41.275
- 31
-0.0
-  0
-ARC
-  5
-41
-100
-AcDbEntity
-  8
-8_250BIT_750TAB
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-110.73125
- 20
-41.15
- 30
-0.0
- 40
-0.125
-100
-AcDbArc
- 50
-90.0
- 51
-180.0
-  0
-LINE
-  5
-42
-100
-AcDbEntity
-  8
-8_250BIT_750TAB
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-110.60625
- 20
-37.325
- 30
-0.0
- 11
-110.60625
- 21
-41.15
- 31
-0.0
-  0
-LINE
-  5
-43
-100
-AcDbEntity
-  8
-8_250BIT_750TAB
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-116.54375
- 20
-41.15
- 30
-0.0
- 11
-116.54375
- 21
-37.325
- 31
-0.0
-  0
-ARC
-  5
-44
-100
-AcDbEntity
-  8
-8_250BIT_750TAB
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-116.41875
- 20
-37.325
- 30
-0.0
- 40
-0.125
-100
-AcDbArc
- 50
--90.0
- 51
-0.0
-  0
-LINE
-  5
-45
-100
-AcDbEntity
-  8
-8_250BIT_750TAB
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-116.41875
- 20
-37.2
- 30
-0.0
- 11
-110.73125
- 21
-37.2
- 31
-0.0
-  0
-ARC
-  5
-46
-100
-AcDbEntity
-  8
-8_250BIT_750TAB
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-110.73125
- 20
-37.325
- 30
-0.0
- 40
-0.125
-100
-AcDbArc
- 50
-180.0
- 51
--90.0
-  0
-CIRCLE
-  5
-47
-100
-AcDbEntity
-  8
-6_125BIT_750DEP
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-105.825
- 20
-35.344
- 30
-0.0
- 40
-0.0625
-  0
-CIRCLE
-  5
-48
-100
-AcDbEntity
-  8
-6_125BIT_750DEP
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-107.825
- 20
-35.344
- 30
-0.0
- 40
-0.0625
-  0
-CIRCLE
-  5
-49
 100
 AcDbEntity
   8
@@ -2927,7 +2395,7 @@ AcDbCircle
   0
 CIRCLE
   5
-4A
+37
 100
 AcDbEntity
   8
@@ -2949,529 +2417,9 @@ AcDbCircle
  40
 0.0625
   0
-CIRCLE
-  5
-4B
-100
-AcDbEntity
-  8
-6_125BIT_750DEP
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-119.15
- 20
-38.3125
- 30
-0.0
- 40
-0.0625
-  0
-CIRCLE
-  5
-4C
-100
-AcDbEntity
-  8
-6_125BIT_750DEP
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-125.15
- 20
-41.0
- 30
-0.0
- 40
-0.0625
-  0
-CIRCLE
-  5
-4D
-100
-AcDbEntity
-  8
-6_125BIT_750DEP
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-125.15
- 20
-36.0
- 30
-0.0
- 40
-0.0625
-  0
-CIRCLE
-  5
-4E
-100
-AcDbEntity
-  8
-6_125BIT_750DEP
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-102.0
- 20
-36.0
- 30
-0.0
- 40
-0.0625
-  0
-CIRCLE
-  5
-4F
-100
-AcDbEntity
-  8
-6_125BIT_750DEP
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-102.0
- 20
-41.0
- 30
-0.0
- 40
-0.0625
-  0
-CIRCLE
-  5
-50
-100
-AcDbEntity
-  8
-6_125BIT_750DEP
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-108.0
- 20
-38.3125
- 30
-0.0
- 40
-0.0625
-  0
 ARC
   5
-51
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-118.5125
- 20
-41.23
- 30
-0.0
- 40
-0.165
-100
-AcDbArc
- 50
-90.0
- 51
-180.0
-  0
-ARC
-  5
-52
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-121.6375
- 20
-41.23
- 30
-0.0
- 40
-0.165
-100
-AcDbArc
- 50
-0.0
- 51
-90.0
-  0
-ARC
-  5
-53
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-121.45
- 20
-40.9175
- 30
-0.0
- 40
-0.3525
-100
-AcDbArc
- 50
--90.0
- 51
--0.0
-  0
-ARC
-  5
-54
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-118.7
- 20
-40.9175
- 30
-0.0
- 40
-0.3525
-100
-AcDbArc
- 50
-180.0
- 51
--90.0
-  0
-LINE
-  5
-55
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-118.7
- 20
-40.565
- 30
-0.0
- 11
-121.45
- 21
-40.565
- 31
-0.0
-  0
-LINE
-  5
-56
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-118.3475
- 20
-40.9175
- 30
-0.0
- 11
-118.3475
- 21
-41.23
- 31
-0.0
-  0
-LINE
-  5
-57
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-121.8025
- 20
-40.9175
- 30
-0.0
- 11
-121.8025
- 21
-41.23
- 31
-0.0
-  0
-LINE
-  5
-58
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-120.255
- 20
-41.395
- 30
-0.0
- 11
-120.255
- 21
-42.0
- 31
-0.0
-  0
-LINE
-  5
-59
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-119.895
- 20
-41.395
- 30
-0.0
- 11
-119.895
- 21
-42.0
- 31
-0.0
-  0
-LINE
-  5
-5A
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-120.255
- 20
-41.395
- 30
-0.0
- 11
-121.6375
- 21
-41.395
- 31
-0.0
-  0
-LINE
-  5
-5B
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbLine
- 10
-118.5125
- 20
-41.395
- 30
-0.0
- 11
-119.895
- 21
-41.395
- 31
-0.0
-  0
-ARC
-  5
-5C
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-105.5125
- 20
-41.23
- 30
-0.0
- 40
-0.165
-100
-AcDbArc
- 50
-90.0
- 51
-180.0
-  0
-ARC
-  5
-5D
-100
-AcDbEntity
-  8
-7_250BIT_750OUTLINE
-370
-        25
-  6
-Continuous
- 62
-         7
-100
-AcDbCircle
- 10
-105.7
- 20
-40.9175
- 30
-0.0
- 40
-0.3525
-100
-AcDbArc
- 50
-180.0
- 51
--90.0
-  0
-ARC
-  5
-5E
+38
 100
 AcDbEntity
   8
@@ -3501,7 +2449,7 @@ AcDbArc
   0
 ARC
   5
-5F
+39
 100
 AcDbEntity
   8
@@ -3531,7 +2479,7 @@ AcDbArc
   0
 LINE
   5
-60
+3A
 100
 AcDbEntity
   8
@@ -3559,7 +2507,7 @@ AcDbLine
   0
 LINE
   5
-61
+3B
 100
 AcDbEntity
   8
@@ -3587,7 +2535,7 @@ AcDbLine
   0
 LINE
   5
-62
+3C
 100
 AcDbEntity
   8
@@ -3615,7 +2563,7 @@ AcDbLine
   0
 LINE
   5
-63
+3D
 100
 AcDbEntity
   8
@@ -3640,6 +2588,1202 @@ AcDbLine
 42.0
  31
 0.0
+  0
+LINE
+  5
+3E
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+106.895
+ 20
+41.395
+ 30
+0.0
+ 11
+106.895
+ 21
+42.0
+ 31
+0.0
+  0
+LINE
+  5
+3F
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+105.5125
+ 20
+41.395
+ 30
+0.0
+ 11
+106.895
+ 21
+41.395
+ 31
+0.0
+  0
+LINE
+  5
+40
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+107.255
+ 20
+41.395
+ 30
+0.0
+ 11
+108.6375
+ 21
+41.395
+ 31
+0.0
+  0
+LINE
+  5
+41
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+120.255
+ 20
+42.0
+ 30
+0.0
+ 11
+128.31
+ 21
+42.0
+ 31
+0.0
+  0
+LINE
+  5
+42
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+107.255
+ 20
+42.0
+ 30
+0.0
+ 11
+119.895
+ 21
+42.0
+ 31
+0.0
+  0
+LINE
+  5
+43
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+98.84
+ 20
+42.0
+ 30
+0.0
+ 11
+106.895
+ 21
+42.0
+ 31
+0.0
+  0
+LINE
+  5
+44
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+128.31
+ 20
+42.0
+ 30
+0.0
+ 11
+128.31
+ 21
+34.625
+ 31
+0.0
+  0
+LINE
+  5
+45
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+128.31
+ 20
+34.625
+ 30
+0.0
+ 11
+98.84
+ 21
+34.625
+ 31
+0.0
+  0
+LINE
+  5
+46
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+98.84
+ 20
+42.0
+ 30
+0.0
+ 11
+98.84
+ 21
+34.625
+ 31
+0.0
+  0
+ARC
+  5
+47
+100
+AcDbEntity
+  8
+8_250BIT_750TAB
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+116.41875
+ 20
+41.15
+ 30
+0.0
+ 40
+0.125
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+LINE
+  5
+48
+100
+AcDbEntity
+  8
+8_250BIT_750TAB
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+110.73125
+ 20
+41.275
+ 30
+0.0
+ 11
+116.41875
+ 21
+41.275
+ 31
+0.0
+  0
+ARC
+  5
+49
+100
+AcDbEntity
+  8
+8_250BIT_750TAB
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+110.73125
+ 20
+41.15
+ 30
+0.0
+ 40
+0.125
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+LINE
+  5
+4A
+100
+AcDbEntity
+  8
+8_250BIT_750TAB
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+110.60625
+ 20
+37.325
+ 30
+0.0
+ 11
+110.60625
+ 21
+41.15
+ 31
+0.0
+  0
+LINE
+  5
+4B
+100
+AcDbEntity
+  8
+8_250BIT_750TAB
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+116.54375
+ 20
+41.15
+ 30
+0.0
+ 11
+116.54375
+ 21
+37.325
+ 31
+0.0
+  0
+ARC
+  5
+4C
+100
+AcDbEntity
+  8
+8_250BIT_750TAB
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+116.41875
+ 20
+37.325
+ 30
+0.0
+ 40
+0.125
+100
+AcDbArc
+ 50
+-90.0
+ 51
+0.0
+  0
+LINE
+  5
+4D
+100
+AcDbEntity
+  8
+8_250BIT_750TAB
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+116.41875
+ 20
+37.2
+ 30
+0.0
+ 11
+110.73125
+ 21
+37.2
+ 31
+0.0
+  0
+ARC
+  5
+4E
+100
+AcDbEntity
+  8
+8_250BIT_750TAB
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+110.73125
+ 20
+37.325
+ 30
+0.0
+ 40
+0.125
+100
+AcDbArc
+ 50
+180.0
+ 51
+-90.0
+  0
+CIRCLE
+  5
+4F
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+105.825
+ 20
+35.344
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+50
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+107.825
+ 20
+35.344
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+51
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+126.95
+ 20
+41.25
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+52
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+126.95
+ 20
+38.75
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+53
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+126.95
+ 20
+36.25
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+54
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+100.2
+ 20
+36.25
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+55
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+100.2
+ 20
+38.75
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+56
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+100.2
+ 20
+41.25
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+57
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+119.15
+ 20
+38.3125
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+58
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+125.15
+ 20
+41.0
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+59
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+125.15
+ 20
+36.0
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+5A
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+102.0
+ 20
+36.0
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+5B
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+102.0
+ 20
+41.0
+ 30
+0.0
+ 40
+0.0625
+  0
+CIRCLE
+  5
+5C
+100
+AcDbEntity
+  8
+6_125BIT_750DEP
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+108.0
+ 20
+38.3125
+ 30
+0.0
+ 40
+0.0625
+  0
+ARC
+  5
+5D
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+118.5125
+ 20
+41.23
+ 30
+0.0
+ 40
+0.165
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+ARC
+  5
+5E
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+121.6375
+ 20
+41.23
+ 30
+0.0
+ 40
+0.165
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+ARC
+  5
+5F
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+121.45
+ 20
+40.9175
+ 30
+0.0
+ 40
+0.3525
+100
+AcDbArc
+ 50
+-90.0
+ 51
+-0.0
+  0
+ARC
+  5
+60
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+118.7
+ 20
+40.9175
+ 30
+0.0
+ 40
+0.3525
+100
+AcDbArc
+ 50
+180.0
+ 51
+-90.0
+  0
+LINE
+  5
+61
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+118.7
+ 20
+40.565
+ 30
+0.0
+ 11
+121.45
+ 21
+40.565
+ 31
+0.0
+  0
+LINE
+  5
+62
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+118.3475
+ 20
+40.9175
+ 30
+0.0
+ 11
+118.3475
+ 21
+41.23
+ 31
+0.0
+  0
+LINE
+  5
+63
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+121.8025
+ 20
+40.9175
+ 30
+0.0
+ 11
+121.8025
+ 21
+41.23
+ 31
+0.0
+  0
+LINE
+  5
+64
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+120.255
+ 20
+41.395
+ 30
+0.0
+ 11
+120.255
+ 21
+42.0
+ 31
+0.0
+  0
+LINE
+  5
+65
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+119.895
+ 20
+41.395
+ 30
+0.0
+ 11
+119.895
+ 21
+42.0
+ 31
+0.0
+  0
+LINE
+  5
+66
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+120.255
+ 20
+41.395
+ 30
+0.0
+ 11
+121.6375
+ 21
+41.395
+ 31
+0.0
+  0
+LINE
+  5
+67
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbLine
+ 10
+118.5125
+ 20
+41.395
+ 30
+0.0
+ 11
+119.895
+ 21
+41.395
+ 31
+0.0
+  0
+ARC
+  5
+68
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+105.5125
+ 20
+41.23
+ 30
+0.0
+ 40
+0.165
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+ARC
+  5
+69
+100
+AcDbEntity
+  8
+7_250BIT_750OUTLINE
+370
+        25
+  6
+Continuous
+ 62
+         7
+100
+AcDbCircle
+ 10
+105.7
+ 20
+40.9175
+ 30
+0.0
+ 40
+0.3525
+100
+AcDbArc
+ 50
+180.0
+ 51
+-90.0
   0
 ENDSEC
   0
