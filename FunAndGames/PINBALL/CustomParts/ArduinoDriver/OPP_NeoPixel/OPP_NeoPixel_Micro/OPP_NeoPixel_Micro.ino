@@ -1,37 +1,41 @@
-/* Arduino Micro (ATmega32U4) as a USB serial OPP NeoPixel controller for MPF.
-   Set LED_PIN and PIXEL_COUNT to match the strip. One OPP Gen2 card (0x20).
-   MPF LED 0 maps to NeoPixel 0; each LED occupies R, G, B OPP channels.
-   Requires the Adafruit NeoPixel library and an external 5 V LED supply.
+/*
+  Arduino Micro: 8 independent WS2812/NeoPixel chains x 64 LEDs = 512 RGB LEDs.
+  MPF sees one OPP Gen2 card at 0x20 with a NeoPixel wing.
+
+  OPP LED numbers 0..511 map as follows:
+    0..63: pin D2, 64..127: D3, ..., 448..511: D9.
+  Each LED uses three OPP channels in R,G,B order. The Adafruit library
+  converts RGB to the strip's physical GRB order (change NEO_GRB if needed).
+
+  SRAM is tight on the ATmega32U4: this version stores one 1536-byte RGB image,
+  one reusable 192-byte strip buffer, and a 137-byte MPF input frame.
+  MPF fade durations are accepted but colors are applied immediately. For
+  smooth simultaneous hardware fades across 512 LEDs, use a board with more
+  RAM and a suitable LED output engine.
 */
 #include <Adafruit_NeoPixel.h>
 
-const uint8_t LED_PIN = 6;
-const uint16_t PIXEL_COUNT = 16; // Keep modest on the Micro; see RAM and show() note below.
-const uint32_t OPP_SERIAL_NUMBER = 0x4D49434FUL; // "MICO"; change for additional units.
+// MPF LED = (chain * 64) + pixel; change pins to match your wiring.
+const uint8_t LED_PINS[8] = {2, 3, 4, 5, 6, 7, 8, 9};
+const uint8_t LEDS_PER_CHAIN = 64;
+const uint16_t CHANNEL_COUNT = 8U * LEDS_PER_CHAIN * 3U;
 const uint8_t BOARD = 0x20;
 const uint8_t EOM = 0xFF;
-const uint16_t CHANNEL_COUNT = PIXEL_COUNT * 3;
-const uint16_t MAX_BATCH_CHANNELS = 128; // MPF batches at most 128 channels.
-const uint16_t MAX_FRAME = 8 + MAX_BATCH_CHANNELS + 1; // header + data + CRC
-const uint8_t FADE_TICK_MS = 20;
+const uint32_t OPP_SERIAL_NUMBER = 0x4D49434FUL; // "MICO"
+const uint16_t MAX_BATCH_CHANNELS = 128; // MPF batch limit.
+const uint16_t MAX_FRAME = 9U + MAX_BATCH_CHANNELS;
 
-static_assert(PIXEL_COUNT > 0 && CHANNEL_COUNT <= 4096,
-              "OPP LED channels must fit the 12-bit NeoPixel range");
+static_assert(CHANNEL_COUNT <= 4096, "OPP NeoPixel channel range exceeded");
 
-Adafruit_NeoPixel strip(PIXEL_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
-
-// A fade is held per channel, allowing MPF to update different LEDs independently.
-uint8_t currentValue[CHANNEL_COUNT];
-uint8_t startValue[CHANNEL_COUNT];
-uint8_t targetValue[CHANNEL_COUNT];
-uint32_t fadeStarted[CHANNEL_COUNT];
-uint16_t fadeDuration[CHANNEL_COUNT];
+// Only one Adafruit pixel buffer is allocated; setPin() selects the chain.
+Adafruit_NeoPixel strip(LEDS_PER_CHAIN, LED_PINS[0], NEO_GRB + NEO_KHZ800);
+uint8_t rgb[CHANNEL_COUNT];
 uint8_t frame[MAX_FRAME];
 uint16_t frameLength = 0;
 uint16_t frameExpected = 0;
 uint32_t lastByteAt = 0;
-uint32_t lastShowAt = 0;
-bool dirty = false;
+uint8_t dirtyChains = 0;
+uint8_t nextChain = 0;
 
 uint8_t crc8(const uint8_t *bytes, uint16_t length) {
   uint8_t crc = 0xFF;
@@ -52,38 +56,21 @@ void reply(uint8_t command, uint32_t value) {
   // The request's trailing EOM gets its own echo after this packet.
 }
 
-uint8_t interpolated(uint16_t index, uint32_t now) {
-  uint16_t duration = fadeDuration[index];
-  if (duration == 0) return targetValue[index];
-  uint32_t elapsed = now - fadeStarted[index];
-  if (elapsed >= duration) {
-    fadeDuration[index] = 0;
-    return targetValue[index];
-  }
-  int16_t delta = (int16_t)targetValue[index] - startValue[index];
-  return (uint8_t)(startValue[index] + (int32_t)delta * elapsed / duration);
-}
-
 void applyLedFrame() {
   if (crc8(frame, frameExpected - 1) != frame[frameExpected - 1]) return;
   uint16_t first = ((uint16_t)frame[2] << 8) | frame[3];
   uint16_t count = ((uint16_t)frame[4] << 8) | frame[5];
-  uint16_t duration = ((uint16_t)frame[6] << 8) | frame[7];
+  // frame[6..7] is MPF fade duration. See the SRAM note above.
   if (count == 0 || count > MAX_BATCH_CHANNELS ||
       first >= CHANNEL_COUNT || count > CHANNEL_COUNT - first) return;
 
-  uint32_t now = millis();
   for (uint16_t i = 0; i < count; ++i) {
     uint16_t channel = first + i;
     uint8_t value = frame[8 + i];
-    // A new fade starts from the current interpolated value, not the previous target.
-    uint8_t from = interpolated(channel, now);
-    currentValue[channel] = from;
-    startValue[channel] = from;
-    targetValue[channel] = value;
-    fadeStarted[channel] = now;
-    fadeDuration[channel] = duration;
-    dirty = true;
+    if (rgb[channel] != value) {
+      rgb[channel] = value;
+      dirtyChains |= (uint8_t)(1U << (channel / (LEDS_PER_CHAIN * 3U)));
+    }
   }
 }
 
@@ -97,22 +84,21 @@ void processFrame() {
   switch (frame[1]) {
     case 0x00: reply(0x00, OPP_SERIAL_NUMBER); break;
     case 0x02: reply(0x02, 0x02010000UL); break;
-    case 0x0D: { // NeoPixel wing. MPF also polls its advertised input pins.
+    case 0x0D: {
       uint8_t response[7] = {BOARD, 0x0D, 0x06, 0, 0, 0, 0};
       response[6] = crc8(response, 6);
       Serial.write(response, sizeof(response));
       break;
     }
-    case 0x08: reply(0x08, 0xFFFFFFFFUL); break; // All inputs inactive.
-    default: break; // e.g. 0x13: turn off unused incandescent outputs.
+    case 0x08: reply(0x08, 0xFFFFFFFFUL); break; // Neo wing's inputs inactive.
+    default: break; // MPF may send 0x13 to disable incandescent outputs.
   }
 }
 
 void readOpp() {
-  // A damaged or truncated frame cannot block later requests indefinitely.
-  if (frameLength && (uint32_t)(millis() - lastByteAt) > 50) {
+  if (frameLength && (uint32_t)(millis() - lastByteAt) > 50)
     frameLength = frameExpected = 0;
-  }
+
   while (Serial.available()) {
     uint8_t byte = (uint8_t)Serial.read();
     lastByteAt = millis();
@@ -121,13 +107,13 @@ void readOpp() {
       if (byte == 0xF0) {
         const uint8_t inventory[] = {0xF0, BOARD};
         Serial.write(inventory, sizeof(inventory));
-        continue; // Request EOM will complete the inventory response.
+        continue;
       }
       if (byte != BOARD) continue;
     }
     frame[frameLength++] = byte;
     if (frameLength == 2) {
-      if (frame[1] == 0x40) frameExpected = 0; // Read count at bytes 4 and 5.
+      if (frame[1] == 0x40) frameExpected = 0;
       else if (frame[1] == 0x13) frameExpected = 8;
       else frameExpected = 7;
     }
@@ -137,7 +123,7 @@ void readOpp() {
         frameLength = frameExpected = 0;
         continue;
       }
-      frameExpected = 9 + count;
+      frameExpected = 9U + count;
     }
     if (frameExpected && frameLength == frameExpected) {
       processFrame();
@@ -146,38 +132,38 @@ void readOpp() {
   }
 }
 
-void updatePixels() {
-  uint32_t now = millis();
-  if ((uint32_t)(now - lastShowAt) < FADE_TICK_MS) return;
-  lastShowAt = now;
-  bool changed = dirty;
-  dirty = false;
-  for (uint16_t channel = 0; channel < CHANNEL_COUNT; ++channel) {
-    uint8_t value = interpolated(channel, now);
-    if (value != currentValue[channel]) changed = true;
-    currentValue[channel] = value;
+void refreshOneChain() {
+  if (!dirtyChains) return;
+  for (uint8_t attempt = 0; attempt < 8; ++attempt) {
+    uint8_t chain = (nextChain + attempt) & 7;
+    uint8_t bit = (uint8_t)(1U << chain);
+    if (!(dirtyChains & bit)) continue;
+    nextChain = (chain + 1) & 7;
+    dirtyChains &= (uint8_t)~bit;
+    strip.setPin(LED_PINS[chain]);
+    uint16_t base = (uint16_t)chain * LEDS_PER_CHAIN * 3U;
+    for (uint8_t pixel = 0; pixel < LEDS_PER_CHAIN; ++pixel) {
+      uint16_t index = base + (uint16_t)pixel * 3U;
+      strip.setPixelColor(pixel, rgb[index], rgb[index + 1], rgb[index + 2]);
+    }
+    strip.show(); // About 2 ms per 64-pixel chain; USB timing needs real testing.
+    return; // Service USB before updating another chain.
   }
-  if (!changed) return;
-  for (uint16_t pixel = 0; pixel < PIXEL_COUNT; ++pixel) {
-    uint16_t channel = pixel * 3;
-    strip.setPixelColor(pixel, currentValue[channel], currentValue[channel + 1],
-                        currentValue[channel + 2]);
-  }
-  strip.show(); // May interrupt USB reception briefly for long LED strips.
 }
 
 void setup() {
   strip.begin();
   strip.clear();
-  strip.show();
+  for (uint8_t chain = 0; chain < 8; ++chain) {
+    strip.setPin(LED_PINS[chain]);
+    strip.show();
+  }
   Serial.begin(115200);
-  // Arduino Micro has native USB. Do not wait for Serial: MPF can connect later.
-  // A startup EOM also releases MPF if the first sync byte was lost at reset.
   delay(50);
-  Serial.write(EOM);
+  Serial.write(EOM); // Recover from MPF's first sync byte arriving during reset.
 }
 
 void loop() {
   readOpp();
-  updatePixels();
+  refreshOneChain();
 }
