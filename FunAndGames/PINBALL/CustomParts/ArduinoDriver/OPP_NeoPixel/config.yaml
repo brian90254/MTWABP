@@ -1,0 +1,23 @@
+#config_version=6
+
+hardware:
+  platform: fast
+
+opp:
+  ports:
+    - /dev/cu.usbmodem11301   # existing matrix Arduino
+    - /dev/cu.usbmodemXXXXX   # NeoPixel Micro; replace with its actual port
+  baud: 115200
+
+lights:
+  l_micro_0:
+    platform: opp
+    number: 0-0
+    subtype: led
+    type: rgb
+
+  l_micro_1:
+    platform: opp
+    number: 0-1
+    subtype: led
+    type: rgb

@@ -1,8 +1,10 @@
+#config_version=6
+
 hardware:
   platform: opp
 
 opp:
-  ports: /dev/ttyACM0
+  ports: /dev/tty.usbmodem11301
   baud: 115200
   poll_hz: 100
 
