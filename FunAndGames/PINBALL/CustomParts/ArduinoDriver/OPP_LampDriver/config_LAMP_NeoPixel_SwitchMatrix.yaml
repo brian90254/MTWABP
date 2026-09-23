@@ -1,0 +1,3511 @@
+#config_version=6
+
+# FAST is the default platform. OPP is also loaded for the three USB Arduinos.
+hardware:
+  platform:
+    - fast
+    - opp
+
+# Change controller if your FAST main controller is not a NEURON.
+# Keep any additional FAST settings from your existing machine config.
+fast:
+  net:
+    controller: neuron
+    port: auto
+
+opp:
+  driverboards: gen2
+  ports:
+    - /dev/tty.usbmodem11301
+    - /dev/cu.usbmodemREPLACE_WITH_MICRO
+    - /dev/cu.usbmodemREPLACE_WITH_MEGA
+  baud: 115200
+  poll_hz: 100
+  # These labels are associated with port paths, not discovered board addresses.
+  chains:
+    matrix: /dev/tty.usbmodem11301
+    pixels: /dev/cu.usbmodemREPLACE_WITH_MICRO
+    lamps: /dev/cu.usbmodemREPLACE_WITH_MEGA
+
+# The matrix Arduino advertises OPP cards 0 and 1.
+# Numbers are chain-card-input; "matrix" distinguishes its USB port.
+switches:
+  s_matrix_0:
+    platform: opp
+    number: matrix-0-0
+
+  s_matrix_1:
+    platform: opp
+    number: matrix-0-1
+
+  s_matrix_2:
+    platform: opp
+    number: matrix-0-2
+
+  s_matrix_3:
+    platform: opp
+    number: matrix-0-3
+
+  s_matrix_4:
+    platform: opp
+    number: matrix-0-4
+
+  s_matrix_5:
+    platform: opp
+    number: matrix-0-5
+
+  s_matrix_6:
+    platform: opp
+    number: matrix-0-6
+
+  s_matrix_7:
+    platform: opp
+    number: matrix-0-7
+
+  s_matrix_8:
+    platform: opp
+    number: matrix-0-8
+
+  s_matrix_9:
+    platform: opp
+    number: matrix-0-9
+
+  s_matrix_10:
+    platform: opp
+    number: matrix-0-10
+
+  s_matrix_11:
+    platform: opp
+    number: matrix-0-11
+
+  s_matrix_12:
+    platform: opp
+    number: matrix-0-12
+
+  s_matrix_13:
+    platform: opp
+    number: matrix-0-13
+
+  s_matrix_14:
+    platform: opp
+    number: matrix-0-14
+
+  s_matrix_15:
+    platform: opp
+    number: matrix-0-15
+
+  s_matrix_16:
+    platform: opp
+    number: matrix-0-16
+
+  s_matrix_17:
+    platform: opp
+    number: matrix-0-17
+
+  s_matrix_18:
+    platform: opp
+    number: matrix-0-18
+
+  s_matrix_19:
+    platform: opp
+    number: matrix-0-19
+
+  s_matrix_20:
+    platform: opp
+    number: matrix-0-20
+
+  s_matrix_21:
+    platform: opp
+    number: matrix-0-21
+
+  s_matrix_22:
+    platform: opp
+    number: matrix-0-22
+
+  s_matrix_23:
+    platform: opp
+    number: matrix-0-23
+
+  s_matrix_24:
+    platform: opp
+    number: matrix-0-24
+
+  s_matrix_25:
+    platform: opp
+    number: matrix-0-25
+
+  s_matrix_26:
+    platform: opp
+    number: matrix-0-26
+
+  s_matrix_27:
+    platform: opp
+    number: matrix-0-27
+
+  s_matrix_28:
+    platform: opp
+    number: matrix-0-28
+
+  s_matrix_29:
+    platform: opp
+    number: matrix-0-29
+
+  s_matrix_30:
+    platform: opp
+    number: matrix-0-30
+
+  s_matrix_31:
+    platform: opp
+    number: matrix-0-31
+
+  s_matrix_32:
+    platform: opp
+    number: matrix-1-0
+
+  s_matrix_33:
+    platform: opp
+    number: matrix-1-1
+
+  s_matrix_34:
+    platform: opp
+    number: matrix-1-2
+
+  s_matrix_35:
+    platform: opp
+    number: matrix-1-3
+
+  s_matrix_36:
+    platform: opp
+    number: matrix-1-4
+
+  s_matrix_37:
+    platform: opp
+    number: matrix-1-5
+
+  s_matrix_38:
+    platform: opp
+    number: matrix-1-6
+
+  s_matrix_39:
+    platform: opp
+    number: matrix-1-7
+
+# The Arduino Micro advertises OPP card 0 with eight 64-LED outputs.
+# OPP LED indices are consecutive: 0..63 on D2, 64..127 on D3,
+# through 448..511 on D9. Adjust the sketch's LED_PINS to match wiring.
+lights:
+  l_pixel_0:
+    platform: opp
+    number: pixels-0-0
+    subtype: led
+    type: rgb
+
+  l_pixel_1:
+    platform: opp
+    number: pixels-0-1
+    subtype: led
+    type: rgb
+
+  l_pixel_2:
+    platform: opp
+    number: pixels-0-2
+    subtype: led
+    type: rgb
+
+  l_pixel_3:
+    platform: opp
+    number: pixels-0-3
+    subtype: led
+    type: rgb
+
+  l_pixel_4:
+    platform: opp
+    number: pixels-0-4
+    subtype: led
+    type: rgb
+
+  l_pixel_5:
+    platform: opp
+    number: pixels-0-5
+    subtype: led
+    type: rgb
+
+  l_pixel_6:
+    platform: opp
+    number: pixels-0-6
+    subtype: led
+    type: rgb
+
+  l_pixel_7:
+    platform: opp
+    number: pixels-0-7
+    subtype: led
+    type: rgb
+
+  l_pixel_8:
+    platform: opp
+    number: pixels-0-8
+    subtype: led
+    type: rgb
+
+  l_pixel_9:
+    platform: opp
+    number: pixels-0-9
+    subtype: led
+    type: rgb
+
+  l_pixel_10:
+    platform: opp
+    number: pixels-0-10
+    subtype: led
+    type: rgb
+
+  l_pixel_11:
+    platform: opp
+    number: pixels-0-11
+    subtype: led
+    type: rgb
+
+  l_pixel_12:
+    platform: opp
+    number: pixels-0-12
+    subtype: led
+    type: rgb
+
+  l_pixel_13:
+    platform: opp
+    number: pixels-0-13
+    subtype: led
+    type: rgb
+
+  l_pixel_14:
+    platform: opp
+    number: pixels-0-14
+    subtype: led
+    type: rgb
+
+  l_pixel_15:
+    platform: opp
+    number: pixels-0-15
+    subtype: led
+    type: rgb
+
+  l_pixel_16:
+    platform: opp
+    number: pixels-0-16
+    subtype: led
+    type: rgb
+
+  l_pixel_17:
+    platform: opp
+    number: pixels-0-17
+    subtype: led
+    type: rgb
+
+  l_pixel_18:
+    platform: opp
+    number: pixels-0-18
+    subtype: led
+    type: rgb
+
+  l_pixel_19:
+    platform: opp
+    number: pixels-0-19
+    subtype: led
+    type: rgb
+
+  l_pixel_20:
+    platform: opp
+    number: pixels-0-20
+    subtype: led
+    type: rgb
+
+  l_pixel_21:
+    platform: opp
+    number: pixels-0-21
+    subtype: led
+    type: rgb
+
+  l_pixel_22:
+    platform: opp
+    number: pixels-0-22
+    subtype: led
+    type: rgb
+
+  l_pixel_23:
+    platform: opp
+    number: pixels-0-23
+    subtype: led
+    type: rgb
+
+  l_pixel_24:
+    platform: opp
+    number: pixels-0-24
+    subtype: led
+    type: rgb
+
+  l_pixel_25:
+    platform: opp
+    number: pixels-0-25
+    subtype: led
+    type: rgb
+
+  l_pixel_26:
+    platform: opp
+    number: pixels-0-26
+    subtype: led
+    type: rgb
+
+  l_pixel_27:
+    platform: opp
+    number: pixels-0-27
+    subtype: led
+    type: rgb
+
+  l_pixel_28:
+    platform: opp
+    number: pixels-0-28
+    subtype: led
+    type: rgb
+
+  l_pixel_29:
+    platform: opp
+    number: pixels-0-29
+    subtype: led
+    type: rgb
+
+  l_pixel_30:
+    platform: opp
+    number: pixels-0-30
+    subtype: led
+    type: rgb
+
+  l_pixel_31:
+    platform: opp
+    number: pixels-0-31
+    subtype: led
+    type: rgb
+
+  l_pixel_32:
+    platform: opp
+    number: pixels-0-32
+    subtype: led
+    type: rgb
+
+  l_pixel_33:
+    platform: opp
+    number: pixels-0-33
+    subtype: led
+    type: rgb
+
+  l_pixel_34:
+    platform: opp
+    number: pixels-0-34
+    subtype: led
+    type: rgb
+
+  l_pixel_35:
+    platform: opp
+    number: pixels-0-35
+    subtype: led
+    type: rgb
+
+  l_pixel_36:
+    platform: opp
+    number: pixels-0-36
+    subtype: led
+    type: rgb
+
+  l_pixel_37:
+    platform: opp
+    number: pixels-0-37
+    subtype: led
+    type: rgb
+
+  l_pixel_38:
+    platform: opp
+    number: pixels-0-38
+    subtype: led
+    type: rgb
+
+  l_pixel_39:
+    platform: opp
+    number: pixels-0-39
+    subtype: led
+    type: rgb
+
+  l_pixel_40:
+    platform: opp
+    number: pixels-0-40
+    subtype: led
+    type: rgb
+
+  l_pixel_41:
+    platform: opp
+    number: pixels-0-41
+    subtype: led
+    type: rgb
+
+  l_pixel_42:
+    platform: opp
+    number: pixels-0-42
+    subtype: led
+    type: rgb
+
+  l_pixel_43:
+    platform: opp
+    number: pixels-0-43
+    subtype: led
+    type: rgb
+
+  l_pixel_44:
+    platform: opp
+    number: pixels-0-44
+    subtype: led
+    type: rgb
+
+  l_pixel_45:
+    platform: opp
+    number: pixels-0-45
+    subtype: led
+    type: rgb
+
+  l_pixel_46:
+    platform: opp
+    number: pixels-0-46
+    subtype: led
+    type: rgb
+
+  l_pixel_47:
+    platform: opp
+    number: pixels-0-47
+    subtype: led
+    type: rgb
+
+  l_pixel_48:
+    platform: opp
+    number: pixels-0-48
+    subtype: led
+    type: rgb
+
+  l_pixel_49:
+    platform: opp
+    number: pixels-0-49
+    subtype: led
+    type: rgb
+
+  l_pixel_50:
+    platform: opp
+    number: pixels-0-50
+    subtype: led
+    type: rgb
+
+  l_pixel_51:
+    platform: opp
+    number: pixels-0-51
+    subtype: led
+    type: rgb
+
+  l_pixel_52:
+    platform: opp
+    number: pixels-0-52
+    subtype: led
+    type: rgb
+
+  l_pixel_53:
+    platform: opp
+    number: pixels-0-53
+    subtype: led
+    type: rgb
+
+  l_pixel_54:
+    platform: opp
+    number: pixels-0-54
+    subtype: led
+    type: rgb
+
+  l_pixel_55:
+    platform: opp
+    number: pixels-0-55
+    subtype: led
+    type: rgb
+
+  l_pixel_56:
+    platform: opp
+    number: pixels-0-56
+    subtype: led
+    type: rgb
+
+  l_pixel_57:
+    platform: opp
+    number: pixels-0-57
+    subtype: led
+    type: rgb
+
+  l_pixel_58:
+    platform: opp
+    number: pixels-0-58
+    subtype: led
+    type: rgb
+
+  l_pixel_59:
+    platform: opp
+    number: pixels-0-59
+    subtype: led
+    type: rgb
+
+  l_pixel_60:
+    platform: opp
+    number: pixels-0-60
+    subtype: led
+    type: rgb
+
+  l_pixel_61:
+    platform: opp
+    number: pixels-0-61
+    subtype: led
+    type: rgb
+
+  l_pixel_62:
+    platform: opp
+    number: pixels-0-62
+    subtype: led
+    type: rgb
+
+  l_pixel_63:
+    platform: opp
+    number: pixels-0-63
+    subtype: led
+    type: rgb
+
+  l_pixel_64:
+    platform: opp
+    number: pixels-0-64
+    subtype: led
+    type: rgb
+
+  l_pixel_65:
+    platform: opp
+    number: pixels-0-65
+    subtype: led
+    type: rgb
+
+  l_pixel_66:
+    platform: opp
+    number: pixels-0-66
+    subtype: led
+    type: rgb
+
+  l_pixel_67:
+    platform: opp
+    number: pixels-0-67
+    subtype: led
+    type: rgb
+
+  l_pixel_68:
+    platform: opp
+    number: pixels-0-68
+    subtype: led
+    type: rgb
+
+  l_pixel_69:
+    platform: opp
+    number: pixels-0-69
+    subtype: led
+    type: rgb
+
+  l_pixel_70:
+    platform: opp
+    number: pixels-0-70
+    subtype: led
+    type: rgb
+
+  l_pixel_71:
+    platform: opp
+    number: pixels-0-71
+    subtype: led
+    type: rgb
+
+  l_pixel_72:
+    platform: opp
+    number: pixels-0-72
+    subtype: led
+    type: rgb
+
+  l_pixel_73:
+    platform: opp
+    number: pixels-0-73
+    subtype: led
+    type: rgb
+
+  l_pixel_74:
+    platform: opp
+    number: pixels-0-74
+    subtype: led
+    type: rgb
+
+  l_pixel_75:
+    platform: opp
+    number: pixels-0-75
+    subtype: led
+    type: rgb
+
+  l_pixel_76:
+    platform: opp
+    number: pixels-0-76
+    subtype: led
+    type: rgb
+
+  l_pixel_77:
+    platform: opp
+    number: pixels-0-77
+    subtype: led
+    type: rgb
+
+  l_pixel_78:
+    platform: opp
+    number: pixels-0-78
+    subtype: led
+    type: rgb
+
+  l_pixel_79:
+    platform: opp
+    number: pixels-0-79
+    subtype: led
+    type: rgb
+
+  l_pixel_80:
+    platform: opp
+    number: pixels-0-80
+    subtype: led
+    type: rgb
+
+  l_pixel_81:
+    platform: opp
+    number: pixels-0-81
+    subtype: led
+    type: rgb
+
+  l_pixel_82:
+    platform: opp
+    number: pixels-0-82
+    subtype: led
+    type: rgb
+
+  l_pixel_83:
+    platform: opp
+    number: pixels-0-83
+    subtype: led
+    type: rgb
+
+  l_pixel_84:
+    platform: opp
+    number: pixels-0-84
+    subtype: led
+    type: rgb
+
+  l_pixel_85:
+    platform: opp
+    number: pixels-0-85
+    subtype: led
+    type: rgb
+
+  l_pixel_86:
+    platform: opp
+    number: pixels-0-86
+    subtype: led
+    type: rgb
+
+  l_pixel_87:
+    platform: opp
+    number: pixels-0-87
+    subtype: led
+    type: rgb
+
+  l_pixel_88:
+    platform: opp
+    number: pixels-0-88
+    subtype: led
+    type: rgb
+
+  l_pixel_89:
+    platform: opp
+    number: pixels-0-89
+    subtype: led
+    type: rgb
+
+  l_pixel_90:
+    platform: opp
+    number: pixels-0-90
+    subtype: led
+    type: rgb
+
+  l_pixel_91:
+    platform: opp
+    number: pixels-0-91
+    subtype: led
+    type: rgb
+
+  l_pixel_92:
+    platform: opp
+    number: pixels-0-92
+    subtype: led
+    type: rgb
+
+  l_pixel_93:
+    platform: opp
+    number: pixels-0-93
+    subtype: led
+    type: rgb
+
+  l_pixel_94:
+    platform: opp
+    number: pixels-0-94
+    subtype: led
+    type: rgb
+
+  l_pixel_95:
+    platform: opp
+    number: pixels-0-95
+    subtype: led
+    type: rgb
+
+  l_pixel_96:
+    platform: opp
+    number: pixels-0-96
+    subtype: led
+    type: rgb
+
+  l_pixel_97:
+    platform: opp
+    number: pixels-0-97
+    subtype: led
+    type: rgb
+
+  l_pixel_98:
+    platform: opp
+    number: pixels-0-98
+    subtype: led
+    type: rgb
+
+  l_pixel_99:
+    platform: opp
+    number: pixels-0-99
+    subtype: led
+    type: rgb
+
+  l_pixel_100:
+    platform: opp
+    number: pixels-0-100
+    subtype: led
+    type: rgb
+
+  l_pixel_101:
+    platform: opp
+    number: pixels-0-101
+    subtype: led
+    type: rgb
+
+  l_pixel_102:
+    platform: opp
+    number: pixels-0-102
+    subtype: led
+    type: rgb
+
+  l_pixel_103:
+    platform: opp
+    number: pixels-0-103
+    subtype: led
+    type: rgb
+
+  l_pixel_104:
+    platform: opp
+    number: pixels-0-104
+    subtype: led
+    type: rgb
+
+  l_pixel_105:
+    platform: opp
+    number: pixels-0-105
+    subtype: led
+    type: rgb
+
+  l_pixel_106:
+    platform: opp
+    number: pixels-0-106
+    subtype: led
+    type: rgb
+
+  l_pixel_107:
+    platform: opp
+    number: pixels-0-107
+    subtype: led
+    type: rgb
+
+  l_pixel_108:
+    platform: opp
+    number: pixels-0-108
+    subtype: led
+    type: rgb
+
+  l_pixel_109:
+    platform: opp
+    number: pixels-0-109
+    subtype: led
+    type: rgb
+
+  l_pixel_110:
+    platform: opp
+    number: pixels-0-110
+    subtype: led
+    type: rgb
+
+  l_pixel_111:
+    platform: opp
+    number: pixels-0-111
+    subtype: led
+    type: rgb
+
+  l_pixel_112:
+    platform: opp
+    number: pixels-0-112
+    subtype: led
+    type: rgb
+
+  l_pixel_113:
+    platform: opp
+    number: pixels-0-113
+    subtype: led
+    type: rgb
+
+  l_pixel_114:
+    platform: opp
+    number: pixels-0-114
+    subtype: led
+    type: rgb
+
+  l_pixel_115:
+    platform: opp
+    number: pixels-0-115
+    subtype: led
+    type: rgb
+
+  l_pixel_116:
+    platform: opp
+    number: pixels-0-116
+    subtype: led
+    type: rgb
+
+  l_pixel_117:
+    platform: opp
+    number: pixels-0-117
+    subtype: led
+    type: rgb
+
+  l_pixel_118:
+    platform: opp
+    number: pixels-0-118
+    subtype: led
+    type: rgb
+
+  l_pixel_119:
+    platform: opp
+    number: pixels-0-119
+    subtype: led
+    type: rgb
+
+  l_pixel_120:
+    platform: opp
+    number: pixels-0-120
+    subtype: led
+    type: rgb
+
+  l_pixel_121:
+    platform: opp
+    number: pixels-0-121
+    subtype: led
+    type: rgb
+
+  l_pixel_122:
+    platform: opp
+    number: pixels-0-122
+    subtype: led
+    type: rgb
+
+  l_pixel_123:
+    platform: opp
+    number: pixels-0-123
+    subtype: led
+    type: rgb
+
+  l_pixel_124:
+    platform: opp
+    number: pixels-0-124
+    subtype: led
+    type: rgb
+
+  l_pixel_125:
+    platform: opp
+    number: pixels-0-125
+    subtype: led
+    type: rgb
+
+  l_pixel_126:
+    platform: opp
+    number: pixels-0-126
+    subtype: led
+    type: rgb
+
+  l_pixel_127:
+    platform: opp
+    number: pixels-0-127
+    subtype: led
+    type: rgb
+
+  l_pixel_128:
+    platform: opp
+    number: pixels-0-128
+    subtype: led
+    type: rgb
+
+  l_pixel_129:
+    platform: opp
+    number: pixels-0-129
+    subtype: led
+    type: rgb
+
+  l_pixel_130:
+    platform: opp
+    number: pixels-0-130
+    subtype: led
+    type: rgb
+
+  l_pixel_131:
+    platform: opp
+    number: pixels-0-131
+    subtype: led
+    type: rgb
+
+  l_pixel_132:
+    platform: opp
+    number: pixels-0-132
+    subtype: led
+    type: rgb
+
+  l_pixel_133:
+    platform: opp
+    number: pixels-0-133
+    subtype: led
+    type: rgb
+
+  l_pixel_134:
+    platform: opp
+    number: pixels-0-134
+    subtype: led
+    type: rgb
+
+  l_pixel_135:
+    platform: opp
+    number: pixels-0-135
+    subtype: led
+    type: rgb
+
+  l_pixel_136:
+    platform: opp
+    number: pixels-0-136
+    subtype: led
+    type: rgb
+
+  l_pixel_137:
+    platform: opp
+    number: pixels-0-137
+    subtype: led
+    type: rgb
+
+  l_pixel_138:
+    platform: opp
+    number: pixels-0-138
+    subtype: led
+    type: rgb
+
+  l_pixel_139:
+    platform: opp
+    number: pixels-0-139
+    subtype: led
+    type: rgb
+
+  l_pixel_140:
+    platform: opp
+    number: pixels-0-140
+    subtype: led
+    type: rgb
+
+  l_pixel_141:
+    platform: opp
+    number: pixels-0-141
+    subtype: led
+    type: rgb
+
+  l_pixel_142:
+    platform: opp
+    number: pixels-0-142
+    subtype: led
+    type: rgb
+
+  l_pixel_143:
+    platform: opp
+    number: pixels-0-143
+    subtype: led
+    type: rgb
+
+  l_pixel_144:
+    platform: opp
+    number: pixels-0-144
+    subtype: led
+    type: rgb
+
+  l_pixel_145:
+    platform: opp
+    number: pixels-0-145
+    subtype: led
+    type: rgb
+
+  l_pixel_146:
+    platform: opp
+    number: pixels-0-146
+    subtype: led
+    type: rgb
+
+  l_pixel_147:
+    platform: opp
+    number: pixels-0-147
+    subtype: led
+    type: rgb
+
+  l_pixel_148:
+    platform: opp
+    number: pixels-0-148
+    subtype: led
+    type: rgb
+
+  l_pixel_149:
+    platform: opp
+    number: pixels-0-149
+    subtype: led
+    type: rgb
+
+  l_pixel_150:
+    platform: opp
+    number: pixels-0-150
+    subtype: led
+    type: rgb
+
+  l_pixel_151:
+    platform: opp
+    number: pixels-0-151
+    subtype: led
+    type: rgb
+
+  l_pixel_152:
+    platform: opp
+    number: pixels-0-152
+    subtype: led
+    type: rgb
+
+  l_pixel_153:
+    platform: opp
+    number: pixels-0-153
+    subtype: led
+    type: rgb
+
+  l_pixel_154:
+    platform: opp
+    number: pixels-0-154
+    subtype: led
+    type: rgb
+
+  l_pixel_155:
+    platform: opp
+    number: pixels-0-155
+    subtype: led
+    type: rgb
+
+  l_pixel_156:
+    platform: opp
+    number: pixels-0-156
+    subtype: led
+    type: rgb
+
+  l_pixel_157:
+    platform: opp
+    number: pixels-0-157
+    subtype: led
+    type: rgb
+
+  l_pixel_158:
+    platform: opp
+    number: pixels-0-158
+    subtype: led
+    type: rgb
+
+  l_pixel_159:
+    platform: opp
+    number: pixels-0-159
+    subtype: led
+    type: rgb
+
+  l_pixel_160:
+    platform: opp
+    number: pixels-0-160
+    subtype: led
+    type: rgb
+
+  l_pixel_161:
+    platform: opp
+    number: pixels-0-161
+    subtype: led
+    type: rgb
+
+  l_pixel_162:
+    platform: opp
+    number: pixels-0-162
+    subtype: led
+    type: rgb
+
+  l_pixel_163:
+    platform: opp
+    number: pixels-0-163
+    subtype: led
+    type: rgb
+
+  l_pixel_164:
+    platform: opp
+    number: pixels-0-164
+    subtype: led
+    type: rgb
+
+  l_pixel_165:
+    platform: opp
+    number: pixels-0-165
+    subtype: led
+    type: rgb
+
+  l_pixel_166:
+    platform: opp
+    number: pixels-0-166
+    subtype: led
+    type: rgb
+
+  l_pixel_167:
+    platform: opp
+    number: pixels-0-167
+    subtype: led
+    type: rgb
+
+  l_pixel_168:
+    platform: opp
+    number: pixels-0-168
+    subtype: led
+    type: rgb
+
+  l_pixel_169:
+    platform: opp
+    number: pixels-0-169
+    subtype: led
+    type: rgb
+
+  l_pixel_170:
+    platform: opp
+    number: pixels-0-170
+    subtype: led
+    type: rgb
+
+  l_pixel_171:
+    platform: opp
+    number: pixels-0-171
+    subtype: led
+    type: rgb
+
+  l_pixel_172:
+    platform: opp
+    number: pixels-0-172
+    subtype: led
+    type: rgb
+
+  l_pixel_173:
+    platform: opp
+    number: pixels-0-173
+    subtype: led
+    type: rgb
+
+  l_pixel_174:
+    platform: opp
+    number: pixels-0-174
+    subtype: led
+    type: rgb
+
+  l_pixel_175:
+    platform: opp
+    number: pixels-0-175
+    subtype: led
+    type: rgb
+
+  l_pixel_176:
+    platform: opp
+    number: pixels-0-176
+    subtype: led
+    type: rgb
+
+  l_pixel_177:
+    platform: opp
+    number: pixels-0-177
+    subtype: led
+    type: rgb
+
+  l_pixel_178:
+    platform: opp
+    number: pixels-0-178
+    subtype: led
+    type: rgb
+
+  l_pixel_179:
+    platform: opp
+    number: pixels-0-179
+    subtype: led
+    type: rgb
+
+  l_pixel_180:
+    platform: opp
+    number: pixels-0-180
+    subtype: led
+    type: rgb
+
+  l_pixel_181:
+    platform: opp
+    number: pixels-0-181
+    subtype: led
+    type: rgb
+
+  l_pixel_182:
+    platform: opp
+    number: pixels-0-182
+    subtype: led
+    type: rgb
+
+  l_pixel_183:
+    platform: opp
+    number: pixels-0-183
+    subtype: led
+    type: rgb
+
+  l_pixel_184:
+    platform: opp
+    number: pixels-0-184
+    subtype: led
+    type: rgb
+
+  l_pixel_185:
+    platform: opp
+    number: pixels-0-185
+    subtype: led
+    type: rgb
+
+  l_pixel_186:
+    platform: opp
+    number: pixels-0-186
+    subtype: led
+    type: rgb
+
+  l_pixel_187:
+    platform: opp
+    number: pixels-0-187
+    subtype: led
+    type: rgb
+
+  l_pixel_188:
+    platform: opp
+    number: pixels-0-188
+    subtype: led
+    type: rgb
+
+  l_pixel_189:
+    platform: opp
+    number: pixels-0-189
+    subtype: led
+    type: rgb
+
+  l_pixel_190:
+    platform: opp
+    number: pixels-0-190
+    subtype: led
+    type: rgb
+
+  l_pixel_191:
+    platform: opp
+    number: pixels-0-191
+    subtype: led
+    type: rgb
+
+  l_pixel_192:
+    platform: opp
+    number: pixels-0-192
+    subtype: led
+    type: rgb
+
+  l_pixel_193:
+    platform: opp
+    number: pixels-0-193
+    subtype: led
+    type: rgb
+
+  l_pixel_194:
+    platform: opp
+    number: pixels-0-194
+    subtype: led
+    type: rgb
+
+  l_pixel_195:
+    platform: opp
+    number: pixels-0-195
+    subtype: led
+    type: rgb
+
+  l_pixel_196:
+    platform: opp
+    number: pixels-0-196
+    subtype: led
+    type: rgb
+
+  l_pixel_197:
+    platform: opp
+    number: pixels-0-197
+    subtype: led
+    type: rgb
+
+  l_pixel_198:
+    platform: opp
+    number: pixels-0-198
+    subtype: led
+    type: rgb
+
+  l_pixel_199:
+    platform: opp
+    number: pixels-0-199
+    subtype: led
+    type: rgb
+
+  l_pixel_200:
+    platform: opp
+    number: pixels-0-200
+    subtype: led
+    type: rgb
+
+  l_pixel_201:
+    platform: opp
+    number: pixels-0-201
+    subtype: led
+    type: rgb
+
+  l_pixel_202:
+    platform: opp
+    number: pixels-0-202
+    subtype: led
+    type: rgb
+
+  l_pixel_203:
+    platform: opp
+    number: pixels-0-203
+    subtype: led
+    type: rgb
+
+  l_pixel_204:
+    platform: opp
+    number: pixels-0-204
+    subtype: led
+    type: rgb
+
+  l_pixel_205:
+    platform: opp
+    number: pixels-0-205
+    subtype: led
+    type: rgb
+
+  l_pixel_206:
+    platform: opp
+    number: pixels-0-206
+    subtype: led
+    type: rgb
+
+  l_pixel_207:
+    platform: opp
+    number: pixels-0-207
+    subtype: led
+    type: rgb
+
+  l_pixel_208:
+    platform: opp
+    number: pixels-0-208
+    subtype: led
+    type: rgb
+
+  l_pixel_209:
+    platform: opp
+    number: pixels-0-209
+    subtype: led
+    type: rgb
+
+  l_pixel_210:
+    platform: opp
+    number: pixels-0-210
+    subtype: led
+    type: rgb
+
+  l_pixel_211:
+    platform: opp
+    number: pixels-0-211
+    subtype: led
+    type: rgb
+
+  l_pixel_212:
+    platform: opp
+    number: pixels-0-212
+    subtype: led
+    type: rgb
+
+  l_pixel_213:
+    platform: opp
+    number: pixels-0-213
+    subtype: led
+    type: rgb
+
+  l_pixel_214:
+    platform: opp
+    number: pixels-0-214
+    subtype: led
+    type: rgb
+
+  l_pixel_215:
+    platform: opp
+    number: pixels-0-215
+    subtype: led
+    type: rgb
+
+  l_pixel_216:
+    platform: opp
+    number: pixels-0-216
+    subtype: led
+    type: rgb
+
+  l_pixel_217:
+    platform: opp
+    number: pixels-0-217
+    subtype: led
+    type: rgb
+
+  l_pixel_218:
+    platform: opp
+    number: pixels-0-218
+    subtype: led
+    type: rgb
+
+  l_pixel_219:
+    platform: opp
+    number: pixels-0-219
+    subtype: led
+    type: rgb
+
+  l_pixel_220:
+    platform: opp
+    number: pixels-0-220
+    subtype: led
+    type: rgb
+
+  l_pixel_221:
+    platform: opp
+    number: pixels-0-221
+    subtype: led
+    type: rgb
+
+  l_pixel_222:
+    platform: opp
+    number: pixels-0-222
+    subtype: led
+    type: rgb
+
+  l_pixel_223:
+    platform: opp
+    number: pixels-0-223
+    subtype: led
+    type: rgb
+
+  l_pixel_224:
+    platform: opp
+    number: pixels-0-224
+    subtype: led
+    type: rgb
+
+  l_pixel_225:
+    platform: opp
+    number: pixels-0-225
+    subtype: led
+    type: rgb
+
+  l_pixel_226:
+    platform: opp
+    number: pixels-0-226
+    subtype: led
+    type: rgb
+
+  l_pixel_227:
+    platform: opp
+    number: pixels-0-227
+    subtype: led
+    type: rgb
+
+  l_pixel_228:
+    platform: opp
+    number: pixels-0-228
+    subtype: led
+    type: rgb
+
+  l_pixel_229:
+    platform: opp
+    number: pixels-0-229
+    subtype: led
+    type: rgb
+
+  l_pixel_230:
+    platform: opp
+    number: pixels-0-230
+    subtype: led
+    type: rgb
+
+  l_pixel_231:
+    platform: opp
+    number: pixels-0-231
+    subtype: led
+    type: rgb
+
+  l_pixel_232:
+    platform: opp
+    number: pixels-0-232
+    subtype: led
+    type: rgb
+
+  l_pixel_233:
+    platform: opp
+    number: pixels-0-233
+    subtype: led
+    type: rgb
+
+  l_pixel_234:
+    platform: opp
+    number: pixels-0-234
+    subtype: led
+    type: rgb
+
+  l_pixel_235:
+    platform: opp
+    number: pixels-0-235
+    subtype: led
+    type: rgb
+
+  l_pixel_236:
+    platform: opp
+    number: pixels-0-236
+    subtype: led
+    type: rgb
+
+  l_pixel_237:
+    platform: opp
+    number: pixels-0-237
+    subtype: led
+    type: rgb
+
+  l_pixel_238:
+    platform: opp
+    number: pixels-0-238
+    subtype: led
+    type: rgb
+
+  l_pixel_239:
+    platform: opp
+    number: pixels-0-239
+    subtype: led
+    type: rgb
+
+  l_pixel_240:
+    platform: opp
+    number: pixels-0-240
+    subtype: led
+    type: rgb
+
+  l_pixel_241:
+    platform: opp
+    number: pixels-0-241
+    subtype: led
+    type: rgb
+
+  l_pixel_242:
+    platform: opp
+    number: pixels-0-242
+    subtype: led
+    type: rgb
+
+  l_pixel_243:
+    platform: opp
+    number: pixels-0-243
+    subtype: led
+    type: rgb
+
+  l_pixel_244:
+    platform: opp
+    number: pixels-0-244
+    subtype: led
+    type: rgb
+
+  l_pixel_245:
+    platform: opp
+    number: pixels-0-245
+    subtype: led
+    type: rgb
+
+  l_pixel_246:
+    platform: opp
+    number: pixels-0-246
+    subtype: led
+    type: rgb
+
+  l_pixel_247:
+    platform: opp
+    number: pixels-0-247
+    subtype: led
+    type: rgb
+
+  l_pixel_248:
+    platform: opp
+    number: pixels-0-248
+    subtype: led
+    type: rgb
+
+  l_pixel_249:
+    platform: opp
+    number: pixels-0-249
+    subtype: led
+    type: rgb
+
+  l_pixel_250:
+    platform: opp
+    number: pixels-0-250
+    subtype: led
+    type: rgb
+
+  l_pixel_251:
+    platform: opp
+    number: pixels-0-251
+    subtype: led
+    type: rgb
+
+  l_pixel_252:
+    platform: opp
+    number: pixels-0-252
+    subtype: led
+    type: rgb
+
+  l_pixel_253:
+    platform: opp
+    number: pixels-0-253
+    subtype: led
+    type: rgb
+
+  l_pixel_254:
+    platform: opp
+    number: pixels-0-254
+    subtype: led
+    type: rgb
+
+  l_pixel_255:
+    platform: opp
+    number: pixels-0-255
+    subtype: led
+    type: rgb
+
+  l_pixel_256:
+    platform: opp
+    number: pixels-0-256
+    subtype: led
+    type: rgb
+
+  l_pixel_257:
+    platform: opp
+    number: pixels-0-257
+    subtype: led
+    type: rgb
+
+  l_pixel_258:
+    platform: opp
+    number: pixels-0-258
+    subtype: led
+    type: rgb
+
+  l_pixel_259:
+    platform: opp
+    number: pixels-0-259
+    subtype: led
+    type: rgb
+
+  l_pixel_260:
+    platform: opp
+    number: pixels-0-260
+    subtype: led
+    type: rgb
+
+  l_pixel_261:
+    platform: opp
+    number: pixels-0-261
+    subtype: led
+    type: rgb
+
+  l_pixel_262:
+    platform: opp
+    number: pixels-0-262
+    subtype: led
+    type: rgb
+
+  l_pixel_263:
+    platform: opp
+    number: pixels-0-263
+    subtype: led
+    type: rgb
+
+  l_pixel_264:
+    platform: opp
+    number: pixels-0-264
+    subtype: led
+    type: rgb
+
+  l_pixel_265:
+    platform: opp
+    number: pixels-0-265
+    subtype: led
+    type: rgb
+
+  l_pixel_266:
+    platform: opp
+    number: pixels-0-266
+    subtype: led
+    type: rgb
+
+  l_pixel_267:
+    platform: opp
+    number: pixels-0-267
+    subtype: led
+    type: rgb
+
+  l_pixel_268:
+    platform: opp
+    number: pixels-0-268
+    subtype: led
+    type: rgb
+
+  l_pixel_269:
+    platform: opp
+    number: pixels-0-269
+    subtype: led
+    type: rgb
+
+  l_pixel_270:
+    platform: opp
+    number: pixels-0-270
+    subtype: led
+    type: rgb
+
+  l_pixel_271:
+    platform: opp
+    number: pixels-0-271
+    subtype: led
+    type: rgb
+
+  l_pixel_272:
+    platform: opp
+    number: pixels-0-272
+    subtype: led
+    type: rgb
+
+  l_pixel_273:
+    platform: opp
+    number: pixels-0-273
+    subtype: led
+    type: rgb
+
+  l_pixel_274:
+    platform: opp
+    number: pixels-0-274
+    subtype: led
+    type: rgb
+
+  l_pixel_275:
+    platform: opp
+    number: pixels-0-275
+    subtype: led
+    type: rgb
+
+  l_pixel_276:
+    platform: opp
+    number: pixels-0-276
+    subtype: led
+    type: rgb
+
+  l_pixel_277:
+    platform: opp
+    number: pixels-0-277
+    subtype: led
+    type: rgb
+
+  l_pixel_278:
+    platform: opp
+    number: pixels-0-278
+    subtype: led
+    type: rgb
+
+  l_pixel_279:
+    platform: opp
+    number: pixels-0-279
+    subtype: led
+    type: rgb
+
+  l_pixel_280:
+    platform: opp
+    number: pixels-0-280
+    subtype: led
+    type: rgb
+
+  l_pixel_281:
+    platform: opp
+    number: pixels-0-281
+    subtype: led
+    type: rgb
+
+  l_pixel_282:
+    platform: opp
+    number: pixels-0-282
+    subtype: led
+    type: rgb
+
+  l_pixel_283:
+    platform: opp
+    number: pixels-0-283
+    subtype: led
+    type: rgb
+
+  l_pixel_284:
+    platform: opp
+    number: pixels-0-284
+    subtype: led
+    type: rgb
+
+  l_pixel_285:
+    platform: opp
+    number: pixels-0-285
+    subtype: led
+    type: rgb
+
+  l_pixel_286:
+    platform: opp
+    number: pixels-0-286
+    subtype: led
+    type: rgb
+
+  l_pixel_287:
+    platform: opp
+    number: pixels-0-287
+    subtype: led
+    type: rgb
+
+  l_pixel_288:
+    platform: opp
+    number: pixels-0-288
+    subtype: led
+    type: rgb
+
+  l_pixel_289:
+    platform: opp
+    number: pixels-0-289
+    subtype: led
+    type: rgb
+
+  l_pixel_290:
+    platform: opp
+    number: pixels-0-290
+    subtype: led
+    type: rgb
+
+  l_pixel_291:
+    platform: opp
+    number: pixels-0-291
+    subtype: led
+    type: rgb
+
+  l_pixel_292:
+    platform: opp
+    number: pixels-0-292
+    subtype: led
+    type: rgb
+
+  l_pixel_293:
+    platform: opp
+    number: pixels-0-293
+    subtype: led
+    type: rgb
+
+  l_pixel_294:
+    platform: opp
+    number: pixels-0-294
+    subtype: led
+    type: rgb
+
+  l_pixel_295:
+    platform: opp
+    number: pixels-0-295
+    subtype: led
+    type: rgb
+
+  l_pixel_296:
+    platform: opp
+    number: pixels-0-296
+    subtype: led
+    type: rgb
+
+  l_pixel_297:
+    platform: opp
+    number: pixels-0-297
+    subtype: led
+    type: rgb
+
+  l_pixel_298:
+    platform: opp
+    number: pixels-0-298
+    subtype: led
+    type: rgb
+
+  l_pixel_299:
+    platform: opp
+    number: pixels-0-299
+    subtype: led
+    type: rgb
+
+  l_pixel_300:
+    platform: opp
+    number: pixels-0-300
+    subtype: led
+    type: rgb
+
+  l_pixel_301:
+    platform: opp
+    number: pixels-0-301
+    subtype: led
+    type: rgb
+
+  l_pixel_302:
+    platform: opp
+    number: pixels-0-302
+    subtype: led
+    type: rgb
+
+  l_pixel_303:
+    platform: opp
+    number: pixels-0-303
+    subtype: led
+    type: rgb
+
+  l_pixel_304:
+    platform: opp
+    number: pixels-0-304
+    subtype: led
+    type: rgb
+
+  l_pixel_305:
+    platform: opp
+    number: pixels-0-305
+    subtype: led
+    type: rgb
+
+  l_pixel_306:
+    platform: opp
+    number: pixels-0-306
+    subtype: led
+    type: rgb
+
+  l_pixel_307:
+    platform: opp
+    number: pixels-0-307
+    subtype: led
+    type: rgb
+
+  l_pixel_308:
+    platform: opp
+    number: pixels-0-308
+    subtype: led
+    type: rgb
+
+  l_pixel_309:
+    platform: opp
+    number: pixels-0-309
+    subtype: led
+    type: rgb
+
+  l_pixel_310:
+    platform: opp
+    number: pixels-0-310
+    subtype: led
+    type: rgb
+
+  l_pixel_311:
+    platform: opp
+    number: pixels-0-311
+    subtype: led
+    type: rgb
+
+  l_pixel_312:
+    platform: opp
+    number: pixels-0-312
+    subtype: led
+    type: rgb
+
+  l_pixel_313:
+    platform: opp
+    number: pixels-0-313
+    subtype: led
+    type: rgb
+
+  l_pixel_314:
+    platform: opp
+    number: pixels-0-314
+    subtype: led
+    type: rgb
+
+  l_pixel_315:
+    platform: opp
+    number: pixels-0-315
+    subtype: led
+    type: rgb
+
+  l_pixel_316:
+    platform: opp
+    number: pixels-0-316
+    subtype: led
+    type: rgb
+
+  l_pixel_317:
+    platform: opp
+    number: pixels-0-317
+    subtype: led
+    type: rgb
+
+  l_pixel_318:
+    platform: opp
+    number: pixels-0-318
+    subtype: led
+    type: rgb
+
+  l_pixel_319:
+    platform: opp
+    number: pixels-0-319
+    subtype: led
+    type: rgb
+
+  l_pixel_320:
+    platform: opp
+    number: pixels-0-320
+    subtype: led
+    type: rgb
+
+  l_pixel_321:
+    platform: opp
+    number: pixels-0-321
+    subtype: led
+    type: rgb
+
+  l_pixel_322:
+    platform: opp
+    number: pixels-0-322
+    subtype: led
+    type: rgb
+
+  l_pixel_323:
+    platform: opp
+    number: pixels-0-323
+    subtype: led
+    type: rgb
+
+  l_pixel_324:
+    platform: opp
+    number: pixels-0-324
+    subtype: led
+    type: rgb
+
+  l_pixel_325:
+    platform: opp
+    number: pixels-0-325
+    subtype: led
+    type: rgb
+
+  l_pixel_326:
+    platform: opp
+    number: pixels-0-326
+    subtype: led
+    type: rgb
+
+  l_pixel_327:
+    platform: opp
+    number: pixels-0-327
+    subtype: led
+    type: rgb
+
+  l_pixel_328:
+    platform: opp
+    number: pixels-0-328
+    subtype: led
+    type: rgb
+
+  l_pixel_329:
+    platform: opp
+    number: pixels-0-329
+    subtype: led
+    type: rgb
+
+  l_pixel_330:
+    platform: opp
+    number: pixels-0-330
+    subtype: led
+    type: rgb
+
+  l_pixel_331:
+    platform: opp
+    number: pixels-0-331
+    subtype: led
+    type: rgb
+
+  l_pixel_332:
+    platform: opp
+    number: pixels-0-332
+    subtype: led
+    type: rgb
+
+  l_pixel_333:
+    platform: opp
+    number: pixels-0-333
+    subtype: led
+    type: rgb
+
+  l_pixel_334:
+    platform: opp
+    number: pixels-0-334
+    subtype: led
+    type: rgb
+
+  l_pixel_335:
+    platform: opp
+    number: pixels-0-335
+    subtype: led
+    type: rgb
+
+  l_pixel_336:
+    platform: opp
+    number: pixels-0-336
+    subtype: led
+    type: rgb
+
+  l_pixel_337:
+    platform: opp
+    number: pixels-0-337
+    subtype: led
+    type: rgb
+
+  l_pixel_338:
+    platform: opp
+    number: pixels-0-338
+    subtype: led
+    type: rgb
+
+  l_pixel_339:
+    platform: opp
+    number: pixels-0-339
+    subtype: led
+    type: rgb
+
+  l_pixel_340:
+    platform: opp
+    number: pixels-0-340
+    subtype: led
+    type: rgb
+
+  l_pixel_341:
+    platform: opp
+    number: pixels-0-341
+    subtype: led
+    type: rgb
+
+  l_pixel_342:
+    platform: opp
+    number: pixels-0-342
+    subtype: led
+    type: rgb
+
+  l_pixel_343:
+    platform: opp
+    number: pixels-0-343
+    subtype: led
+    type: rgb
+
+  l_pixel_344:
+    platform: opp
+    number: pixels-0-344
+    subtype: led
+    type: rgb
+
+  l_pixel_345:
+    platform: opp
+    number: pixels-0-345
+    subtype: led
+    type: rgb
+
+  l_pixel_346:
+    platform: opp
+    number: pixels-0-346
+    subtype: led
+    type: rgb
+
+  l_pixel_347:
+    platform: opp
+    number: pixels-0-347
+    subtype: led
+    type: rgb
+
+  l_pixel_348:
+    platform: opp
+    number: pixels-0-348
+    subtype: led
+    type: rgb
+
+  l_pixel_349:
+    platform: opp
+    number: pixels-0-349
+    subtype: led
+    type: rgb
+
+  l_pixel_350:
+    platform: opp
+    number: pixels-0-350
+    subtype: led
+    type: rgb
+
+  l_pixel_351:
+    platform: opp
+    number: pixels-0-351
+    subtype: led
+    type: rgb
+
+  l_pixel_352:
+    platform: opp
+    number: pixels-0-352
+    subtype: led
+    type: rgb
+
+  l_pixel_353:
+    platform: opp
+    number: pixels-0-353
+    subtype: led
+    type: rgb
+
+  l_pixel_354:
+    platform: opp
+    number: pixels-0-354
+    subtype: led
+    type: rgb
+
+  l_pixel_355:
+    platform: opp
+    number: pixels-0-355
+    subtype: led
+    type: rgb
+
+  l_pixel_356:
+    platform: opp
+    number: pixels-0-356
+    subtype: led
+    type: rgb
+
+  l_pixel_357:
+    platform: opp
+    number: pixels-0-357
+    subtype: led
+    type: rgb
+
+  l_pixel_358:
+    platform: opp
+    number: pixels-0-358
+    subtype: led
+    type: rgb
+
+  l_pixel_359:
+    platform: opp
+    number: pixels-0-359
+    subtype: led
+    type: rgb
+
+  l_pixel_360:
+    platform: opp
+    number: pixels-0-360
+    subtype: led
+    type: rgb
+
+  l_pixel_361:
+    platform: opp
+    number: pixels-0-361
+    subtype: led
+    type: rgb
+
+  l_pixel_362:
+    platform: opp
+    number: pixels-0-362
+    subtype: led
+    type: rgb
+
+  l_pixel_363:
+    platform: opp
+    number: pixels-0-363
+    subtype: led
+    type: rgb
+
+  l_pixel_364:
+    platform: opp
+    number: pixels-0-364
+    subtype: led
+    type: rgb
+
+  l_pixel_365:
+    platform: opp
+    number: pixels-0-365
+    subtype: led
+    type: rgb
+
+  l_pixel_366:
+    platform: opp
+    number: pixels-0-366
+    subtype: led
+    type: rgb
+
+  l_pixel_367:
+    platform: opp
+    number: pixels-0-367
+    subtype: led
+    type: rgb
+
+  l_pixel_368:
+    platform: opp
+    number: pixels-0-368
+    subtype: led
+    type: rgb
+
+  l_pixel_369:
+    platform: opp
+    number: pixels-0-369
+    subtype: led
+    type: rgb
+
+  l_pixel_370:
+    platform: opp
+    number: pixels-0-370
+    subtype: led
+    type: rgb
+
+  l_pixel_371:
+    platform: opp
+    number: pixels-0-371
+    subtype: led
+    type: rgb
+
+  l_pixel_372:
+    platform: opp
+    number: pixels-0-372
+    subtype: led
+    type: rgb
+
+  l_pixel_373:
+    platform: opp
+    number: pixels-0-373
+    subtype: led
+    type: rgb
+
+  l_pixel_374:
+    platform: opp
+    number: pixels-0-374
+    subtype: led
+    type: rgb
+
+  l_pixel_375:
+    platform: opp
+    number: pixels-0-375
+    subtype: led
+    type: rgb
+
+  l_pixel_376:
+    platform: opp
+    number: pixels-0-376
+    subtype: led
+    type: rgb
+
+  l_pixel_377:
+    platform: opp
+    number: pixels-0-377
+    subtype: led
+    type: rgb
+
+  l_pixel_378:
+    platform: opp
+    number: pixels-0-378
+    subtype: led
+    type: rgb
+
+  l_pixel_379:
+    platform: opp
+    number: pixels-0-379
+    subtype: led
+    type: rgb
+
+  l_pixel_380:
+    platform: opp
+    number: pixels-0-380
+    subtype: led
+    type: rgb
+
+  l_pixel_381:
+    platform: opp
+    number: pixels-0-381
+    subtype: led
+    type: rgb
+
+  l_pixel_382:
+    platform: opp
+    number: pixels-0-382
+    subtype: led
+    type: rgb
+
+  l_pixel_383:
+    platform: opp
+    number: pixels-0-383
+    subtype: led
+    type: rgb
+
+  l_pixel_384:
+    platform: opp
+    number: pixels-0-384
+    subtype: led
+    type: rgb
+
+  l_pixel_385:
+    platform: opp
+    number: pixels-0-385
+    subtype: led
+    type: rgb
+
+  l_pixel_386:
+    platform: opp
+    number: pixels-0-386
+    subtype: led
+    type: rgb
+
+  l_pixel_387:
+    platform: opp
+    number: pixels-0-387
+    subtype: led
+    type: rgb
+
+  l_pixel_388:
+    platform: opp
+    number: pixels-0-388
+    subtype: led
+    type: rgb
+
+  l_pixel_389:
+    platform: opp
+    number: pixels-0-389
+    subtype: led
+    type: rgb
+
+  l_pixel_390:
+    platform: opp
+    number: pixels-0-390
+    subtype: led
+    type: rgb
+
+  l_pixel_391:
+    platform: opp
+    number: pixels-0-391
+    subtype: led
+    type: rgb
+
+  l_pixel_392:
+    platform: opp
+    number: pixels-0-392
+    subtype: led
+    type: rgb
+
+  l_pixel_393:
+    platform: opp
+    number: pixels-0-393
+    subtype: led
+    type: rgb
+
+  l_pixel_394:
+    platform: opp
+    number: pixels-0-394
+    subtype: led
+    type: rgb
+
+  l_pixel_395:
+    platform: opp
+    number: pixels-0-395
+    subtype: led
+    type: rgb
+
+  l_pixel_396:
+    platform: opp
+    number: pixels-0-396
+    subtype: led
+    type: rgb
+
+  l_pixel_397:
+    platform: opp
+    number: pixels-0-397
+    subtype: led
+    type: rgb
+
+  l_pixel_398:
+    platform: opp
+    number: pixels-0-398
+    subtype: led
+    type: rgb
+
+  l_pixel_399:
+    platform: opp
+    number: pixels-0-399
+    subtype: led
+    type: rgb
+
+  l_pixel_400:
+    platform: opp
+    number: pixels-0-400
+    subtype: led
+    type: rgb
+
+  l_pixel_401:
+    platform: opp
+    number: pixels-0-401
+    subtype: led
+    type: rgb
+
+  l_pixel_402:
+    platform: opp
+    number: pixels-0-402
+    subtype: led
+    type: rgb
+
+  l_pixel_403:
+    platform: opp
+    number: pixels-0-403
+    subtype: led
+    type: rgb
+
+  l_pixel_404:
+    platform: opp
+    number: pixels-0-404
+    subtype: led
+    type: rgb
+
+  l_pixel_405:
+    platform: opp
+    number: pixels-0-405
+    subtype: led
+    type: rgb
+
+  l_pixel_406:
+    platform: opp
+    number: pixels-0-406
+    subtype: led
+    type: rgb
+
+  l_pixel_407:
+    platform: opp
+    number: pixels-0-407
+    subtype: led
+    type: rgb
+
+  l_pixel_408:
+    platform: opp
+    number: pixels-0-408
+    subtype: led
+    type: rgb
+
+  l_pixel_409:
+    platform: opp
+    number: pixels-0-409
+    subtype: led
+    type: rgb
+
+  l_pixel_410:
+    platform: opp
+    number: pixels-0-410
+    subtype: led
+    type: rgb
+
+  l_pixel_411:
+    platform: opp
+    number: pixels-0-411
+    subtype: led
+    type: rgb
+
+  l_pixel_412:
+    platform: opp
+    number: pixels-0-412
+    subtype: led
+    type: rgb
+
+  l_pixel_413:
+    platform: opp
+    number: pixels-0-413
+    subtype: led
+    type: rgb
+
+  l_pixel_414:
+    platform: opp
+    number: pixels-0-414
+    subtype: led
+    type: rgb
+
+  l_pixel_415:
+    platform: opp
+    number: pixels-0-415
+    subtype: led
+    type: rgb
+
+  l_pixel_416:
+    platform: opp
+    number: pixels-0-416
+    subtype: led
+    type: rgb
+
+  l_pixel_417:
+    platform: opp
+    number: pixels-0-417
+    subtype: led
+    type: rgb
+
+  l_pixel_418:
+    platform: opp
+    number: pixels-0-418
+    subtype: led
+    type: rgb
+
+  l_pixel_419:
+    platform: opp
+    number: pixels-0-419
+    subtype: led
+    type: rgb
+
+  l_pixel_420:
+    platform: opp
+    number: pixels-0-420
+    subtype: led
+    type: rgb
+
+  l_pixel_421:
+    platform: opp
+    number: pixels-0-421
+    subtype: led
+    type: rgb
+
+  l_pixel_422:
+    platform: opp
+    number: pixels-0-422
+    subtype: led
+    type: rgb
+
+  l_pixel_423:
+    platform: opp
+    number: pixels-0-423
+    subtype: led
+    type: rgb
+
+  l_pixel_424:
+    platform: opp
+    number: pixels-0-424
+    subtype: led
+    type: rgb
+
+  l_pixel_425:
+    platform: opp
+    number: pixels-0-425
+    subtype: led
+    type: rgb
+
+  l_pixel_426:
+    platform: opp
+    number: pixels-0-426
+    subtype: led
+    type: rgb
+
+  l_pixel_427:
+    platform: opp
+    number: pixels-0-427
+    subtype: led
+    type: rgb
+
+  l_pixel_428:
+    platform: opp
+    number: pixels-0-428
+    subtype: led
+    type: rgb
+
+  l_pixel_429:
+    platform: opp
+    number: pixels-0-429
+    subtype: led
+    type: rgb
+
+  l_pixel_430:
+    platform: opp
+    number: pixels-0-430
+    subtype: led
+    type: rgb
+
+  l_pixel_431:
+    platform: opp
+    number: pixels-0-431
+    subtype: led
+    type: rgb
+
+  l_pixel_432:
+    platform: opp
+    number: pixels-0-432
+    subtype: led
+    type: rgb
+
+  l_pixel_433:
+    platform: opp
+    number: pixels-0-433
+    subtype: led
+    type: rgb
+
+  l_pixel_434:
+    platform: opp
+    number: pixels-0-434
+    subtype: led
+    type: rgb
+
+  l_pixel_435:
+    platform: opp
+    number: pixels-0-435
+    subtype: led
+    type: rgb
+
+  l_pixel_436:
+    platform: opp
+    number: pixels-0-436
+    subtype: led
+    type: rgb
+
+  l_pixel_437:
+    platform: opp
+    number: pixels-0-437
+    subtype: led
+    type: rgb
+
+  l_pixel_438:
+    platform: opp
+    number: pixels-0-438
+    subtype: led
+    type: rgb
+
+  l_pixel_439:
+    platform: opp
+    number: pixels-0-439
+    subtype: led
+    type: rgb
+
+  l_pixel_440:
+    platform: opp
+    number: pixels-0-440
+    subtype: led
+    type: rgb
+
+  l_pixel_441:
+    platform: opp
+    number: pixels-0-441
+    subtype: led
+    type: rgb
+
+  l_pixel_442:
+    platform: opp
+    number: pixels-0-442
+    subtype: led
+    type: rgb
+
+  l_pixel_443:
+    platform: opp
+    number: pixels-0-443
+    subtype: led
+    type: rgb
+
+  l_pixel_444:
+    platform: opp
+    number: pixels-0-444
+    subtype: led
+    type: rgb
+
+  l_pixel_445:
+    platform: opp
+    number: pixels-0-445
+    subtype: led
+    type: rgb
+
+  l_pixel_446:
+    platform: opp
+    number: pixels-0-446
+    subtype: led
+    type: rgb
+
+  l_pixel_447:
+    platform: opp
+    number: pixels-0-447
+    subtype: led
+    type: rgb
+
+  l_pixel_448:
+    platform: opp
+    number: pixels-0-448
+    subtype: led
+    type: rgb
+
+  l_pixel_449:
+    platform: opp
+    number: pixels-0-449
+    subtype: led
+    type: rgb
+
+  l_pixel_450:
+    platform: opp
+    number: pixels-0-450
+    subtype: led
+    type: rgb
+
+  l_pixel_451:
+    platform: opp
+    number: pixels-0-451
+    subtype: led
+    type: rgb
+
+  l_pixel_452:
+    platform: opp
+    number: pixels-0-452
+    subtype: led
+    type: rgb
+
+  l_pixel_453:
+    platform: opp
+    number: pixels-0-453
+    subtype: led
+    type: rgb
+
+  l_pixel_454:
+    platform: opp
+    number: pixels-0-454
+    subtype: led
+    type: rgb
+
+  l_pixel_455:
+    platform: opp
+    number: pixels-0-455
+    subtype: led
+    type: rgb
+
+  l_pixel_456:
+    platform: opp
+    number: pixels-0-456
+    subtype: led
+    type: rgb
+
+  l_pixel_457:
+    platform: opp
+    number: pixels-0-457
+    subtype: led
+    type: rgb
+
+  l_pixel_458:
+    platform: opp
+    number: pixels-0-458
+    subtype: led
+    type: rgb
+
+  l_pixel_459:
+    platform: opp
+    number: pixels-0-459
+    subtype: led
+    type: rgb
+
+  l_pixel_460:
+    platform: opp
+    number: pixels-0-460
+    subtype: led
+    type: rgb
+
+  l_pixel_461:
+    platform: opp
+    number: pixels-0-461
+    subtype: led
+    type: rgb
+
+  l_pixel_462:
+    platform: opp
+    number: pixels-0-462
+    subtype: led
+    type: rgb
+
+  l_pixel_463:
+    platform: opp
+    number: pixels-0-463
+    subtype: led
+    type: rgb
+
+  l_pixel_464:
+    platform: opp
+    number: pixels-0-464
+    subtype: led
+    type: rgb
+
+  l_pixel_465:
+    platform: opp
+    number: pixels-0-465
+    subtype: led
+    type: rgb
+
+  l_pixel_466:
+    platform: opp
+    number: pixels-0-466
+    subtype: led
+    type: rgb
+
+  l_pixel_467:
+    platform: opp
+    number: pixels-0-467
+    subtype: led
+    type: rgb
+
+  l_pixel_468:
+    platform: opp
+    number: pixels-0-468
+    subtype: led
+    type: rgb
+
+  l_pixel_469:
+    platform: opp
+    number: pixels-0-469
+    subtype: led
+    type: rgb
+
+  l_pixel_470:
+    platform: opp
+    number: pixels-0-470
+    subtype: led
+    type: rgb
+
+  l_pixel_471:
+    platform: opp
+    number: pixels-0-471
+    subtype: led
+    type: rgb
+
+  l_pixel_472:
+    platform: opp
+    number: pixels-0-472
+    subtype: led
+    type: rgb
+
+  l_pixel_473:
+    platform: opp
+    number: pixels-0-473
+    subtype: led
+    type: rgb
+
+  l_pixel_474:
+    platform: opp
+    number: pixels-0-474
+    subtype: led
+    type: rgb
+
+  l_pixel_475:
+    platform: opp
+    number: pixels-0-475
+    subtype: led
+    type: rgb
+
+  l_pixel_476:
+    platform: opp
+    number: pixels-0-476
+    subtype: led
+    type: rgb
+
+  l_pixel_477:
+    platform: opp
+    number: pixels-0-477
+    subtype: led
+    type: rgb
+
+  l_pixel_478:
+    platform: opp
+    number: pixels-0-478
+    subtype: led
+    type: rgb
+
+  l_pixel_479:
+    platform: opp
+    number: pixels-0-479
+    subtype: led
+    type: rgb
+
+  l_pixel_480:
+    platform: opp
+    number: pixels-0-480
+    subtype: led
+    type: rgb
+
+  l_pixel_481:
+    platform: opp
+    number: pixels-0-481
+    subtype: led
+    type: rgb
+
+  l_pixel_482:
+    platform: opp
+    number: pixels-0-482
+    subtype: led
+    type: rgb
+
+  l_pixel_483:
+    platform: opp
+    number: pixels-0-483
+    subtype: led
+    type: rgb
+
+  l_pixel_484:
+    platform: opp
+    number: pixels-0-484
+    subtype: led
+    type: rgb
+
+  l_pixel_485:
+    platform: opp
+    number: pixels-0-485
+    subtype: led
+    type: rgb
+
+  l_pixel_486:
+    platform: opp
+    number: pixels-0-486
+    subtype: led
+    type: rgb
+
+  l_pixel_487:
+    platform: opp
+    number: pixels-0-487
+    subtype: led
+    type: rgb
+
+  l_pixel_488:
+    platform: opp
+    number: pixels-0-488
+    subtype: led
+    type: rgb
+
+  l_pixel_489:
+    platform: opp
+    number: pixels-0-489
+    subtype: led
+    type: rgb
+
+  l_pixel_490:
+    platform: opp
+    number: pixels-0-490
+    subtype: led
+    type: rgb
+
+  l_pixel_491:
+    platform: opp
+    number: pixels-0-491
+    subtype: led
+    type: rgb
+
+  l_pixel_492:
+    platform: opp
+    number: pixels-0-492
+    subtype: led
+    type: rgb
+
+  l_pixel_493:
+    platform: opp
+    number: pixels-0-493
+    subtype: led
+    type: rgb
+
+  l_pixel_494:
+    platform: opp
+    number: pixels-0-494
+    subtype: led
+    type: rgb
+
+  l_pixel_495:
+    platform: opp
+    number: pixels-0-495
+    subtype: led
+    type: rgb
+
+  l_pixel_496:
+    platform: opp
+    number: pixels-0-496
+    subtype: led
+    type: rgb
+
+  l_pixel_497:
+    platform: opp
+    number: pixels-0-497
+    subtype: led
+    type: rgb
+
+  l_pixel_498:
+    platform: opp
+    number: pixels-0-498
+    subtype: led
+    type: rgb
+
+  l_pixel_499:
+    platform: opp
+    number: pixels-0-499
+    subtype: led
+    type: rgb
+
+  l_pixel_500:
+    platform: opp
+    number: pixels-0-500
+    subtype: led
+    type: rgb
+
+  l_pixel_501:
+    platform: opp
+    number: pixels-0-501
+    subtype: led
+    type: rgb
+
+  l_pixel_502:
+    platform: opp
+    number: pixels-0-502
+    subtype: led
+    type: rgb
+
+  l_pixel_503:
+    platform: opp
+    number: pixels-0-503
+    subtype: led
+    type: rgb
+
+  l_pixel_504:
+    platform: opp
+    number: pixels-0-504
+    subtype: led
+    type: rgb
+
+  l_pixel_505:
+    platform: opp
+    number: pixels-0-505
+    subtype: led
+    type: rgb
+
+  l_pixel_506:
+    platform: opp
+    number: pixels-0-506
+    subtype: led
+    type: rgb
+
+  l_pixel_507:
+    platform: opp
+    number: pixels-0-507
+    subtype: led
+    type: rgb
+
+  l_pixel_508:
+    platform: opp
+    number: pixels-0-508
+    subtype: led
+    type: rgb
+
+  l_pixel_509:
+    platform: opp
+    number: pixels-0-509
+    subtype: led
+    type: rgb
+
+  l_pixel_510:
+    platform: opp
+    number: pixels-0-510
+    subtype: led
+    type: rgb
+
+  l_pixel_511:
+    platform: opp
+    number: pixels-0-511
+    subtype: led
+    type: rgb
+
+
+# Mega card 0 supplies 32 lamps (D22-D53); card 1 supplies eight (A8-A15).
+# These are binary outputs: any MPF brightness above zero sets the pin HIGH.
+  l_lamp_0:
+    platform: opp
+    number: lamps-0-0
+    subtype: incand
+    type: w
+
+  l_lamp_1:
+    platform: opp
+    number: lamps-0-1
+    subtype: incand
+    type: w
+
+  l_lamp_2:
+    platform: opp
+    number: lamps-0-2
+    subtype: incand
+    type: w
+
+  l_lamp_3:
+    platform: opp
+    number: lamps-0-3
+    subtype: incand
+    type: w
+
+  l_lamp_4:
+    platform: opp
+    number: lamps-0-4
+    subtype: incand
+    type: w
+
+  l_lamp_5:
+    platform: opp
+    number: lamps-0-5
+    subtype: incand
+    type: w
+
+  l_lamp_6:
+    platform: opp
+    number: lamps-0-6
+    subtype: incand
+    type: w
+
+  l_lamp_7:
+    platform: opp
+    number: lamps-0-7
+    subtype: incand
+    type: w
+
+  l_lamp_8:
+    platform: opp
+    number: lamps-0-8
+    subtype: incand
+    type: w
+
+  l_lamp_9:
+    platform: opp
+    number: lamps-0-9
+    subtype: incand
+    type: w
+
+  l_lamp_10:
+    platform: opp
+    number: lamps-0-10
+    subtype: incand
+    type: w
+
+  l_lamp_11:
+    platform: opp
+    number: lamps-0-11
+    subtype: incand
+    type: w
+
+  l_lamp_12:
+    platform: opp
+    number: lamps-0-12
+    subtype: incand
+    type: w
+
+  l_lamp_13:
+    platform: opp
+    number: lamps-0-13
+    subtype: incand
+    type: w
+
+  l_lamp_14:
+    platform: opp
+    number: lamps-0-14
+    subtype: incand
+    type: w
+
+  l_lamp_15:
+    platform: opp
+    number: lamps-0-15
+    subtype: incand
+    type: w
+
+  l_lamp_16:
+    platform: opp
+    number: lamps-0-16
+    subtype: incand
+    type: w
+
+  l_lamp_17:
+    platform: opp
+    number: lamps-0-17
+    subtype: incand
+    type: w
+
+  l_lamp_18:
+    platform: opp
+    number: lamps-0-18
+    subtype: incand
+    type: w
+
+  l_lamp_19:
+    platform: opp
+    number: lamps-0-19
+    subtype: incand
+    type: w
+
+  l_lamp_20:
+    platform: opp
+    number: lamps-0-20
+    subtype: incand
+    type: w
+
+  l_lamp_21:
+    platform: opp
+    number: lamps-0-21
+    subtype: incand
+    type: w
+
+  l_lamp_22:
+    platform: opp
+    number: lamps-0-22
+    subtype: incand
+    type: w
+
+  l_lamp_23:
+    platform: opp
+    number: lamps-0-23
+    subtype: incand
+    type: w
+
+  l_lamp_24:
+    platform: opp
+    number: lamps-0-24
+    subtype: incand
+    type: w
+
+  l_lamp_25:
+    platform: opp
+    number: lamps-0-25
+    subtype: incand
+    type: w
+
+  l_lamp_26:
+    platform: opp
+    number: lamps-0-26
+    subtype: incand
+    type: w
+
+  l_lamp_27:
+    platform: opp
+    number: lamps-0-27
+    subtype: incand
+    type: w
+
+  l_lamp_28:
+    platform: opp
+    number: lamps-0-28
+    subtype: incand
+    type: w
+
+  l_lamp_29:
+    platform: opp
+    number: lamps-0-29
+    subtype: incand
+    type: w
+
+  l_lamp_30:
+    platform: opp
+    number: lamps-0-30
+    subtype: incand
+    type: w
+
+  l_lamp_31:
+    platform: opp
+    number: lamps-0-31
+    subtype: incand
+    type: w
+
+  l_lamp_32:
+    platform: opp
+    number: lamps-1-0
+    subtype: incand
+    type: w
+
+  l_lamp_33:
+    platform: opp
+    number: lamps-1-1
+    subtype: incand
+    type: w
+
+  l_lamp_34:
+    platform: opp
+    number: lamps-1-2
+    subtype: incand
+    type: w
+
+  l_lamp_35:
+    platform: opp
+    number: lamps-1-3
+    subtype: incand
+    type: w
+
+  l_lamp_36:
+    platform: opp
+    number: lamps-1-4
+    subtype: incand
+    type: w
+
+  l_lamp_37:
+    platform: opp
+    number: lamps-1-5
+    subtype: incand
+    type: w
+
+  l_lamp_38:
+    platform: opp
+    number: lamps-1-6
+    subtype: incand
+    type: w
+
+  l_lamp_39:
+    platform: opp
+    number: lamps-1-7
+    subtype: incand
+    type: w
+
