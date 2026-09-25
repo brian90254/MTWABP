@@ -33,168 +33,167 @@
 hardware:
   platform: opp
 
+# ---------------
+# HARDWARE
+# ---------------
+# hardware:
+#   #driverboards: fast
+#   platform: fast
+#   lights: fadecandy
+
+# opp:
+#   ports: /dev/tty.usbmodem11301
+#   baud: 115200
+#   poll_hz: 100
+
+# The Arduino presents the 5x8 matrix as two OPP input cards:
+# card 0 = matrix switches 0-31; card 1 = matrix switches 32-39.
 opp:
-  ports: /dev/tty.usbmodem11301
+  driverboards: gen2
+  ports:
+    - /dev/tty.usbmodem11301
   baud: 115200
   poll_hz: 100
+  chains:
+    matrix: /dev/tty.usbmodem11301
+
+
+# ******************************************
+# ------------------------------------------
+# HARDWARE / SWITCHES
+# ------------------------------------------
+# ******************************************
 
 switches:
-  s_matrix_0:
+  # *************************
+  # HARDWARE / SWITCHES
+  # *************************
+  # ------------- BANK 0-7 ---------------
+  s_0_0:
     platform: opp
-    number: 0-0
+    number: matrix-0-7
+  s_0_1:
+    platform: opp
+    number: matrix-0-6
+  s_0_2:
+    platform: opp
+    number: matrix-0-5
+  s_0_3:
+    platform: opp
+    number: matrix-0-4
+  s_0_4:
+    platform: opp
+    number: matrix-0-3
+  s_0_5:
+    platform: opp
+    number: matrix-0-2
+  s_0_6:
+    platform: opp
+    number: matrix-0-1
+  s_0_7:
+    platform: opp
+    number: matrix-0-0
 
-  s_matrix_1:
+  # ------------- BANK 8-15 ---------------
+  s_1_0:
     platform: opp
-    number: 0-1
+    number: matrix-0-8
+  s_1_1:
+    platform: opp
+    number: matrix-0-10
+  s_1_2:
+    platform: opp
+    number: matrix-0-12
+  s_1_3:
+    platform: opp
+    number: matrix-0-14
+  s_1_4:
+    platform: opp
+    number: matrix-0-16
+  s_1_5:
+    platform: opp
+    number: matrix-0-18
+  s_1_6:
+    platform: opp
+    number: matrix-0-20
+  s_1_7:
+    platform: opp
+    number: matrix-0-22
+    
+  # ------------- BANK 16-23 ---------------
+  s_1_8:
+    platform: opp
+    number: matrix-0-23
+  s_1_9:
+    platform: opp
+    number: matrix-0-21
+  s_1_10:
+    platform: opp
+    number: matrix-0-19
+  s_1_11:
+    platform: opp
+    number: matrix-0-17
+  s_1_12:
+    platform: opp
+    number: matrix-0-15
+  s_1_13:
+    platform: opp
+    number: matrix-0-13
+  s_1_14:
+    platform: opp
+    number: matrix-0-11
+  s_1_15:
+    platform: opp
+    number: matrix-0-9
 
-  s_matrix_2:
+  # ------------- BANK 24-31 ---------------
+  s_1_16:
     platform: opp
-    number: 0-2
-
-  s_matrix_3:
+    number: matrix-0-24
+  s_1_17:
     platform: opp
-    number: 0-3
-
-  s_matrix_4:
+    number: matrix-0-26
+  s_1_18:
     platform: opp
-    number: 0-4
-
-  s_matrix_5:
+    number: matrix-0-28
+  s_1_19:
     platform: opp
-    number: 0-5
-
-  s_matrix_6:
+    number: matrix-0-30
+  s_1_20:
     platform: opp
-    number: 0-6
-
-  s_matrix_7:
+    number: matrix-1-0
+  s_1_21:
     platform: opp
-    number: 0-7
-
-  s_matrix_8:
+    number: matrix-1-2
+  s_1_22:
     platform: opp
-    number: 0-8
-
-  s_matrix_9:
+    number: matrix-1-4
+  s_1_23:
     platform: opp
-    number: 0-9
-
-  s_matrix_10:
+    number: matrix-1-6
+    
+  # ------------- BANK 32-39 ---------------
+  s_1_24:
     platform: opp
-    number: 0-10
-
-  s_matrix_11:
+    number: matrix-1-7
+  s_1_25:
     platform: opp
-    number: 0-11
-
-  s_matrix_12:
+    number: matrix-1-5
+  s_1_26:
     platform: opp
-    number: 0-12
-
-  s_matrix_13:
+    number: matrix-1-3
+  s_1_27:
     platform: opp
-    number: 0-13
-
-  s_matrix_14:
+    number: matrix-1-1
+  s_1_28:
     platform: opp
-    number: 0-14
-
-  s_matrix_15:
+    number: matrix-0-31
+  s_1_29:
     platform: opp
-    number: 0-15
-
-  s_matrix_16:
+    number: matrix-0-29
+  s_1_30:
     platform: opp
-    number: 0-16
-
-  s_matrix_17:
+    number: matrix-0-27
+  s_1_31:
     platform: opp
-    number: 0-17
-
-  s_matrix_18:
-    platform: opp
-    number: 0-18
-
-  s_matrix_19:
-    platform: opp
-    number: 0-19
-
-  s_matrix_20:
-    platform: opp
-    number: 0-20
-
-  s_matrix_21:
-    platform: opp
-    number: 0-21
-
-  s_matrix_22:
-    platform: opp
-    number: 0-22
-
-  s_matrix_23:
-    platform: opp
-    number: 0-23
-
-  s_matrix_24:
-    platform: opp
-    number: 0-24
-
-  s_matrix_25:
-    platform: opp
-    number: 0-25
-
-  s_matrix_26:
-    platform: opp
-    number: 0-26
-
-  s_matrix_27:
-    platform: opp
-    number: 0-27
-
-  s_matrix_28:
-    platform: opp
-    number: 0-28
-
-  s_matrix_29:
-    platform: opp
-    number: 0-29
-
-  s_matrix_30:
-    platform: opp
-    number: 0-30
-
-  s_matrix_31:
-    platform: opp
-    number: 0-31
-
-  s_matrix_32:
-    platform: opp
-    number: 1-0
-
-  s_matrix_33:
-    platform: opp
-    number: 1-1
-
-  s_matrix_34:
-    platform: opp
-    number: 1-2
-
-  s_matrix_35:
-    platform: opp
-    number: 1-3
-
-  s_matrix_36:
-    platform: opp
-    number: 1-4
-
-  s_matrix_37:
-    platform: opp
-    number: 1-5
-
-  s_matrix_38:
-    platform: opp
-    number: 1-6
-
-  s_matrix_39:
-    platform: opp
-    number: 1-7
+    number: matrix-0-25
