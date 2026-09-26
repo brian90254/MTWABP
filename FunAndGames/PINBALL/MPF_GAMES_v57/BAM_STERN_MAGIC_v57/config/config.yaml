@@ -15,7 +15,8 @@ config:
 # HARDWARE
 - configVirtual.yaml
 #- configFastHardware.yaml
-- configFastHardwareReverseDebounce.yaml
+#- configFastHardwareReverseDebounce.yaml
+- configFastHardwareOppSwitches.yaml
 # -----------------
 # GAME
 - configModes.yaml

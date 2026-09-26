@@ -6,10 +6,11 @@
 # HARDWARE
 # ---------------
 hardware:
-  #driverboards: fast
+  driverboards: fast
   platform: fast
   lights: fadecandy
-  
+  switches: opp
+
 fast:
   net:
     controller: nano
@@ -32,13 +33,15 @@ fast:
 # The Arduino presents the 5x8 matrix as two OPP input cards:
 # card 0 = matrix switches 0-31; card 1 = matrix switches 32-39.
 opp:
-  driverboards: gen2
+  #driverboards: gen2
+  #switches: opp
   ports:
-    - /dev/tty.usbmodem11301
+    #- /dev/tty.usbmodem11301
+    - /dev/ttyACM0
   baud: 115200
   poll_hz: 100
   chains:
-    matrix: /dev/tty.usbmodem11301
+    matrix: /dev/ttyACM0
 
 # ******************************************
 # ------------------------------------------

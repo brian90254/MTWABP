@@ -51,11 +51,12 @@ hardware:
 opp:
   driverboards: gen2
   ports:
-    - /dev/tty.usbmodem11301
+    #- /dev/tty.usbmodem11301
+    - /dev/ttyACM0
   baud: 115200
   poll_hz: 100
   chains:
-    matrix: /dev/tty.usbmodem11301
+    matrix: /dev/ttyACM0
 
 
 # ******************************************
