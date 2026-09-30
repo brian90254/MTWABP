@@ -396,10 +396,14 @@ coils:
     platform: fast
     number: fastBoard_1-0
     # SLING LF 
-    default_pulse_ms: 50
-    max_pulse_ms: 50
-    default_pulse_power: 0.8
-    max_pulse_power: 0.8
+    # default_pulse_ms: 50
+    # max_pulse_ms: 50
+    # default_pulse_power: 0.8
+    # max_pulse_power: 0.8
+    default_pulse_ms: 75
+    max_pulse_ms: 75
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
 
   c_1_1:
     platform: fast
@@ -436,11 +440,15 @@ coils:
     platform: fast
     number: fastBoard_1-4
     # SLING RT 
-    default_pulse_ms: 50
-    max_pulse_ms: 50
-    default_pulse_power: 0.8
-    max_pulse_power: 0.8
-    
+    # default_pulse_ms: 50
+    # max_pulse_ms: 50
+    # default_pulse_power: 0.8
+    # max_pulse_power: 0.8
+    default_pulse_ms: 75
+    max_pulse_ms: 75
+    default_pulse_power: 1.0
+    max_pulse_power: 1.0
+
   c_1_5:
     platform: fast
     number: fastBoard_1-5
@@ -537,7 +545,7 @@ coil_player:
   s_1_2_active:
     c_1_4:
       action: pulse
-      
+
 # ---------------------
 # DROP::TARGETS
 # ---------------------
