@@ -359,3 +359,75 @@ needs xcb-cursor0 or libxcb-cursor0
     sudo apt install libxcb-cursor0
 
 
+# --------------------------
+# PIP LIST AFTER 0.57.5 INSTALL
+# --------------------------
+(Py311_MPF0575) briancox@briancox-ThinkCentre-M75q-1:~$ pip list
+Package            Version
+------------------ ---------
+asciimatics        1.15.0
+certifi            2026.7.22
+charset-normalizer 3.5.1
+Cython             0.29.36
+docutils           0.23
+ffpyplayer         4.5.1
+idna               3.20
+Kivy               2.2.1
+Kivy-Garden        0.1.5
+mpf                0.57.5
+mpf-mc             0.57.1
+packaging          23.2
+pillow             12.3.0
+pip                24.0
+prompt-toolkit     3.0.43
+psutil             5.9.8
+pyfiglet           1.0.4
+Pygments           2.16.1
+pyserial           3.5
+pyserial-asyncio   0.6
+requests           2.34.2
+ruamel.yaml        0.18.6
+ruamel.yaml.clib   0.2.8
+setuptools         72.2.0
+sortedcontainers   2.4.0
+terminaltables     3.1.10
+urllib3            2.8.0
+wcwidth            0.9.1
+
+
+# --------------------------
+# PIP LIST AFTER 0.57.4 INSTALL
+# --------------------------
+(Py311_MPF0574) briancox@briancox-ThinkCentre-M75q-1:~$ pip list
+Package            Version
+------------------ ---------
+asciimatics        1.15.0
+certifi            2026.7.22
+charset-normalizer 3.5.1
+Cython             0.29.36
+docutils           0.23
+ffpyplayer         4.5.1
+idna               3.20
+Kivy               2.2.1
+Kivy-Garden        0.1.5
+mpf                0.57.4
+mpf-mc             0.57.1
+packaging          23.2
+Pillow             9.5.0
+pip                24.0
+prompt-toolkit     3.0.43
+psutil             5.9.8
+pyfiglet           1.0.4
+Pygments           2.16.1
+pyserial           3.5
+pyserial-asyncio   0.6
+requests           2.34.2
+ruamel.yaml        0.18.6
+ruamel.yaml.clib   0.2.8
+setuptools         72.2.0
+sortedcontainers   2.4.0
+terminaltables     3.1.10
+urllib3            2.8.0
+wcwidth            0.9.1
+
+

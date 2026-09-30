@@ -8,13 +8,16 @@
 hardware:
   # driverboards: fast
   platform: 
-    #- fast
-    - opp
     - fast
-  driverboards: fast
-  switches: opp
-  coils: fast
-  lights: fadecandy
+    - opp
+  #driverboards: fast
+  switches:
+    - fast
+    - opp
+  coils:
+    - fast
+  lights: 
+    - fadecandy
 
 fast:
   net:
@@ -472,33 +475,69 @@ coils:
 # ------------------------------------------
 # ******************************************
 
-autofire_coils:
-# ------------------------------------------
-# HARDWARE / AUTOFIRE / THUMPERS
-# ------------------------------------------
-  autofireThumperLeft:
-    coil: c_1_5
-    switch: s_1_12
+# autofire_coils:
+# # ------------------------------------------
+# # HARDWARE / AUTOFIRE / THUMPERS
+# # ------------------------------------------
+#   autofireThumperLeft:
+#     coil: c_1_5
+#     switch: s_1_12
     
-  autofireThumperRight:
-    coil: c_1_3
-    switch: s_1_3
+#   autofireThumperRight:
+#     coil: c_1_3
+#     switch: s_1_3
     
-  autofireThumperMiddle:
-    coil: c_1_6
-    switch: s_1_14
+#   autofireThumperMiddle:
+#     coil: c_1_6
+#     switch: s_1_14
     
-# ------------------------------------------
-# HARDWARE / AUTOFIRE / SLINGS
-# ------------------------------------------
-  autofireSlingLeft:
-    coil: c_1_0
-    switch: s_1_13
+# # ------------------------------------------
+# # HARDWARE / AUTOFIRE / SLINGS
+# # ------------------------------------------
+#   autofireSlingLeft:
+#     coil: c_1_0
+#     switch: s_1_13
     
-  autofireSlingRight:
-    coil: c_1_4
-    switch: s_1_2
+#   autofireSlingRight:
+#     coil: c_1_4
+#     switch: s_1_2
 
+# ******************************************
+# ------------------------------------------
+# SOFTWARE-CONTROLLED COIL RULES
+# ------------------------------------------
+# ******************************************
+
+coil_player:
+
+  # ----------------------------------------
+  # THUMPERS
+  # ----------------------------------------
+
+  s_1_12_active:
+    c_1_5:
+      action: pulse
+
+  s_1_3_active:
+    c_1_3:
+      action: pulse
+
+  s_1_14_active:
+    c_1_6:
+      action: pulse
+
+  # ----------------------------------------
+  # SLINGSHOTS
+  # ----------------------------------------
+
+  s_1_13_active:
+    c_1_0:
+      action: pulse
+
+  s_1_2_active:
+    c_1_4:
+      action: pulse
+      
 # ---------------------
 # DROP::TARGETS
 # ---------------------
