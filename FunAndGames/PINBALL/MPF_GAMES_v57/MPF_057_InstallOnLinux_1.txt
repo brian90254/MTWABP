@@ -160,6 +160,9 @@ mpf both -xvVaA
 # The name "Py311_MPF057_monitor" is arbitrary, but keep it consistant
 # ------------------------------
 
+# TODO: Might need to install Python 3.13 and use that to create the venv
+pyenv install 3.11.8
+
 # CREATE NEW CLEAN ENVIRONMENT
 python -m venv ~/venvs/Py311_MPF057_monitor
 source ~/venvs/Py311_MPF057_monitor/bin/activate
@@ -167,6 +170,8 @@ source ~/venvs/Py311_MPF057_monitor/bin/activate
 # INSTALL ARBITRARY MPF VERSION
 # Only needed so that you can run the command "mpf monitor"
 pip install mpf==0.57.0.dev41
+..or
+pip install mpf==0.57.4
 
 # INSTALL NEWEST VERSION OF MONITOR
 # This will overwrite some previous dependency versions
