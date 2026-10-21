@@ -7,3 +7,6 @@ Thumbs.db
 
 # PDFs
 *.pdf
+
+# SVGs in DXF folder
+*.svg
