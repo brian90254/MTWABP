@@ -10,3 +10,6 @@ Thumbs.db
 
 # SVGs in DXF folder
 *.svg
+
+# PNG in DXF folder
+*.png
