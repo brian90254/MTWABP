@@ -1,464 +1,647 @@
 #!/usr/bin/env python3
-"""Vellum-inspired 2D workflow prototype. Python 3 + tkinter; inches internally."""
+"""BrianCAD: a Vellum-inspired 2D desktop drafting application."""
 import copy
 import json
 import math
-from fractions import Fraction
+import os
+import tempfile
 import tkinter as tk
-from tkinter import ttk, filedialog, messagebox
-
-
-def distance(a, b):
-    return math.hypot(a[0]-b[0], a[1]-b[1])
-
-
-def anchors(obj):
-    if obj['type'] == 'line':
-        a, b = obj['a'], obj['b']
-        return [(a, 'endpoint'), (b, 'endpoint'),
-                ([(a[0]+b[0])/2, (a[1]+b[1])/2], 'midpoint')]
-    c, r = obj['center'], obj['radius']
-    return [(c, 'center')] + [([c[0]+r*x, c[1]+r*y], 'quadrant')
-                               for x, y in [(1,0), (0,1), (-1,0), (0,-1)]]
-
-
-def hit_distance(p, obj):
-    if obj['type'] == 'circle':
-        return abs(distance(p, obj['center'])-obj['radius'])
-    a, b = obj['a'], obj['b']
-    dx, dy = b[0]-a[0], b[1]-a[1]
-    t = max(0, min(1, ((p[0]-a[0])*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy or 1)))
-    return distance(p, [a[0]+t*dx, a[1]+t*dy])
-
-
-def grid_values(spacing, subdivisions):
-    """Validate dialog values; a subdivision is one division of a major interval."""
-    try:
-        spacing = float(Fraction(str(spacing).strip().rstrip('"').strip()))
-        divisions = float(subdivisions)
-    except (ValueError, TypeError, ZeroDivisionError, OverflowError):
-        raise ValueError('Enter a positive spacing in inches and a whole subdivision count.')
-    if not math.isfinite(spacing) or not 1e-6 <= spacing <= 1e7:
-        raise ValueError('Grid spacing must be between 0.000001 and 10,000,000 inches.')
-    if not math.isfinite(divisions) or not divisions.is_integer() or not 1 <= divisions <= 100:
-        raise ValueError('Subdivisions must be a whole number from 1 to 100.')
-    return spacing, int(divisions)
-
-
-def grid_candidates(p, step):
-    """Nearest intersection, vertical grid line, and horizontal grid line."""
-    x, y = (round(v / step) * step for v in p)
-    return [([x, y], 'grid intersection'), ([x, p[1]], 'vertical grid line'),
-            ([p[0], y], 'horizontal grid line')]
-
-
-def line_grid_candidates(p, obj, step):
-    """Nearest segment/grid crossing in each grid direction, without enumeration.
-
-    Project onto the infinite line first. Rounding its coordinate to a grid
-    multiple, clamped to the segment's crossing range, gives the nearest
-    crossing in that direction. This remains bounded even for very fine grids.
-    """
-    a, b = obj['a'], obj['b']
-    d = [b[i]-a[i] for i in (0, 1)]
-    length2 = sum(v*v for v in d)
-    if length2 == 0:
-        return []
-    t = sum((p[i]-a[i])*d[i] for i in (0, 1)) / length2
-    result = []
-    for axis in (0, 1):
-        if d[axis] == 0:
-            continue
-        low, high = sorted((a[axis]/step, b[axis]/step))
-        first, last = math.ceil(low-1e-10), math.floor(high+1e-10)
-        if first > last:
-            continue
-        k = max(first, min(last, round((a[axis]+t*d[axis])/step)))
-        u = (k*step-a[axis])/d[axis]
-        if -1e-10 <= u <= 1+1e-10:
-            q = [a[i]+max(0, min(1, u))*d[i] for i in (0, 1)]
-            q[axis] = k*step
-            result.append((q, 'line/grid intersection'))
-    return result
-
-
-def alignment_candidates(p, start):
-    dx, dy = p[0]-start[0], p[1]-start[1]
-    plus, minus = (dx+dy)/2, (dx-dy)/2
-    return [([p[0], start[1]], 'horizontal'),
-            ([start[0], p[1]], 'vertical'),
-            ([start[0]+plus, start[1]+plus], '45°'),
-            ([start[0]+minus, start[1]-minus], '135°')]
-
-
-def grid_positions(low, high, step, scale, min_pixels):
-    """Cull dense lines for display only; snapping always uses the actual step."""
-    if step*scale < min_pixels:
-        return range(0)
-    return range(math.ceil(low/step), math.floor(high/step)+1)
+from tkinter import ttk, filedialog, messagebox, simpledialog
+import cad_geometry as geo
+from cad_geometry import dist as distance, anchors, hit_distance
+from cad_document import Document, COLORS
+from cad_tools import METHODS, THREE, DEFAULTS, LABELS, fields_for, point_values, construct
+from grid_snap import grid_values, grid_positions, grid_candidates, line_grid_candidates, alignment_candidates
 
 
 def validate(data):
-    if not isinstance(data, dict) or data.get('format') != 'draft-prototype-1':
-        raise ValueError('This is not a prototype drawing.')
-    objects = data.get('objects')
-    if not isinstance(objects, list) or len(objects) > 100000:
-        raise ValueError('Invalid object list.')
-    def number(v):
-        if isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v) or abs(v)>1e9:
-            raise ValueError('Invalid coordinate or radius.')
-    def point(v):
-        if not isinstance(v, list) or len(v) != 2: raise ValueError('Invalid point.')
-        for n in v: number(n)
-    for o in objects:
-        if not isinstance(o, dict): raise ValueError('Invalid object.')
-        if o.get('color') not in ['#202b36', '#2465d8', '#198548', '#c44236']:
-            raise ValueError('Invalid pen color.')
-        if o.get('type') == 'line':
-            point(o.get('a')); point(o.get('b'))
-        elif o.get('type') == 'circle':
-            point(o.get('center')); number(o.get('radius'))
-            if o['radius'] <= 0: raise ValueError('Radius must be positive.')
-        else: raise ValueError('Unsupported object type.')
-    return objects
+    """Compatibility entry point for the first prototype's object-only validator."""
+    return Document.from_payload(data).objects
 
 
 class Draft:
-    def __init__(self, root):
-        self.root = root
-        root.title('Draft — 2D workflow prototype')
-        root.geometry('1180x780')
-        self.objects = []
-        self.history = []
-        self.future = []
-        self.selected = None
-        self.start = None
-        self.mouse = None
-        self.marker = None
-        self.scale = 90.0
-        self.origin = [480., 330.]
-        self.path = None
-        self.saved = []
-        self.pan = None
-        self.tool = tk.StringVar(value='Select')
-        self.color = tk.StringVar(value='#202b36')
-        self.snap = tk.BooleanVar(value=True)
-        self.grid = tk.BooleanVar(value=True)
-        self.grid_snap = tk.BooleanVar(value=True)
-        self.grid_spacing = 1.0
-        self.grid_subdivisions = 4
-        self.chain = tk.BooleanVar(value=False)
-        self.status = tk.StringVar()
-        self.fields = {}
-        bar = ttk.Frame(root, padding=7); bar.pack(fill='x')
-        for label, fn in [('New', self.new), ('Open', self.open), ('Save', self.save),
-                          ('Undo', self.undo), ('Redo', self.redo), ('Fit', self.fit)]:
-            ttk.Button(bar, text=label, command=fn).pack(side='left', padx=2)
-        ttk.Label(bar, text='   Pen ').pack(side='left')
-        for name, color in [('Black','#202b36'), ('Blue','#2465d8'), ('Green','#198548'), ('Red','#c44236')]:
-            ttk.Radiobutton(bar, text=name, variable=self.color, value=color).pack(side='left')
-        body = ttk.Frame(root); body.pack(fill='both', expand=True)
-        side = ttk.Frame(body, padding=10, width=210); side.pack(side='left', fill='y')
-        ttk.Label(side, text='DRAWING TOOLS', font=('',11,'bold')).pack(anchor='w', pady=8)
-        for name in ['Select', 'Line', 'Circle', 'Move']:
-            ttk.Radiobutton(side, text=name, variable=self.tool, value=name,
-                            command=self.cancel).pack(anchor='w', pady=5)
-        ttk.Checkbutton(side, text='Connected lines', variable=self.chain).pack(anchor='w', pady=6)
-        ttk.Separator(side).pack(fill='x', pady=12)
-        ttk.Checkbutton(side, text='Object snaps / alignment', variable=self.snap).pack(anchor='w')
-        ttk.Checkbutton(side, text='Show grid', variable=self.grid, command=self.draw).pack(anchor='w', pady=6)
-        ttk.Checkbutton(side, text='Snap to grid', variable=self.grid_snap).pack(anchor='w')
-        ttk.Button(side, text='Grid preferences…', command=self.grid_dialog).pack(fill='x', pady=6)
-        ttk.Label(side, text='EXACT ENTRY • INCHES', font=('',10,'bold')).pack(anchor='w', pady=(20,8))
-        for key, label in [('x','X'), ('y','Y'), ('length','Length'), ('angle','Angle °'), ('diameter','Diameter')]:
-            row = ttk.Frame(side); row.pack(fill='x', pady=3)
-            ttk.Label(row, text=label, width=10).pack(side='left')
-            v = tk.StringVar(value={'x':'0','y':'0','length':'2','angle':'0','diameter':'1'}[key])
-            self.fields[key] = v
-            ent = ttk.Entry(row, textvariable=v, width=11); ent.pack(side='left')
-            ent.bind('<Return>', lambda e: self.exact())
-        ttk.Button(side, text='Apply exact entry', command=self.exact).pack(fill='x', pady=12)
-        ttk.Label(side, text='Line: X/Y is start; length + angle.\nCircle: X/Y is center; diameter.\nMove: X/Y is displacement.', wraplength=195).pack(anchor='w')
-        ttk.Button(side, text='Load 2-inch line / 1-inch circle', command=self.demo).pack(fill='x', pady=(24,8))
-        ttk.Label(side, text='Wheel: zoom\nMiddle drag: pan\nEsc: cancel\nDelete: remove selection\nCtrl+Z / Ctrl+Y: undo / redo\nCtrl+S: save', justify='left').pack(anchor='w', pady=10)
-        self.canvas = tk.Canvas(body, bg='white', highlightthickness=0)
-        self.canvas.pack(side='left', fill='both', expand=True)
-        ttk.Label(root, textvariable=self.status, padding=6).pack(fill='x')
-        self.canvas.bind('<Configure>', lambda e: self.draw())
-        self.canvas.bind('<Motion>', self.motion)
-        self.canvas.bind('<Button-1>', self.click)
-        self.canvas.bind('<ButtonPress-2>', self.pan_start)
-        self.canvas.bind('<B2-Motion>', self.pan_move)
-        self.canvas.bind('<MouseWheel>', lambda e: self.zoom(e, 1.15 if e.delta>0 else 1/1.15))
-        self.canvas.bind('<Button-4>', lambda e: self.zoom(e, 1.15))
-        self.canvas.bind('<Button-5>', lambda e: self.zoom(e, 1/1.15))
-        root.bind('<Escape>', lambda e: self.cancel())
-        self.canvas.bind('<Delete>', lambda e: self.delete())
-        root.bind('<Control-z>', lambda e: self.undo())
-        root.bind('<Control-y>', lambda e: self.redo())
-        root.bind('<Control-s>', lambda e: self.save())
-        root.protocol('WM_DELETE_WINDOW', self.close)
+    def __init__(self,root):
+        self.root=root; self.doc=Document(); self.path=None
+        self.scale=90.; self.origin=[470.,320.]; self.pan=None
+        self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
+        self.family=tk.StringVar(value='Select'); self.tool=tk.StringVar(value='Select')
+        self.color=tk.StringVar(value=COLORS['Black']); self.snap=tk.BooleanVar(value=True)
+        self.grid=tk.BooleanVar(value=True); self.grid_snap=tk.BooleanVar(value=True)
+        self.clockwise=tk.BooleanVar(value=False); self.copy_mode=tk.BooleanVar(value=False)
+        self.status=tk.StringVar(); self.layer_status=tk.StringVar(); self.params={}; self.last_parameter=None
+        self.layer_window=None; self.edit_window=None; self.box_start=None; self.box_end=None
+        root.title('BrianCAD'); root.geometry('1220x820'); root.minsize(850,620)
+        self.build_ui(); self.configure_parameters()
+        root.protocol('WM_DELETE_WINDOW',self.close)
+        for key,action in [('z',self.undo),('y',self.redo),('s',self.save),('o',self.open)]:
+            root.bind('<Control-'+key+'>',lambda e,f=action:self.shortcut(e,f))
+            if root.tk.call('tk','windowingsystem')=='aqua':
+                root.bind('<Command-'+key+'>',lambda e,f=action:self.shortcut(e,f))
+        root.bind('<Escape>',lambda e:self.cancel())
         self.draw()
 
-    def world(self, x, y):
-        return [(x-self.origin[0])/self.scale, (self.origin[1]-y)/self.scale]
+    @property
+    def objects(self): return self.doc.objects
+    @objects.setter
+    def objects(self,v): self.doc.objects=v
+    @property
+    def selected(self): return self.doc.selected
+    @selected.setter
+    def selected(self,v): self.doc.selected=set() if v is None else {v} if isinstance(v,int) else set(v)
+    @property
+    def grid_spacing(self): return self.doc.grid_spacing
+    @grid_spacing.setter
+    def grid_spacing(self,v): self.doc.grid_spacing=v
+    @property
+    def grid_subdivisions(self): return self.doc.grid_subdivisions
+    @grid_subdivisions.setter
+    def grid_subdivisions(self,v): self.doc.grid_subdivisions=v
 
-    def screen(self, p):
-        return [self.origin[0]+p[0]*self.scale, self.origin[1]-p[1]*self.scale]
+    def build_ui(self):
+        bar=ttk.Frame(self.root,padding=6); bar.pack(fill='x')
+        for label,fn in [('New',self.new),('Open',self.open),('Save',self.save),('Save as',lambda:self.save(True)),
+                         ('Undo',self.undo),('Redo',self.redo),('Fit',self.fit),('Layers...',self.layers_dialog),('Edit objects...',self.edit_dialog)]:
+            ttk.Button(bar,text=label,command=fn).pack(side='left',padx=2)
+        ttk.Label(self.root,textvariable=self.status,padding=5).pack(side='bottom',fill='x')
+        self.parameter_frame=ttk.LabelFrame(self.root,text='Drawing parameters  |  inches',padding=6)
+        self.parameter_frame.pack(side='bottom',fill='x')
+        body=ttk.Frame(self.root); body.pack(fill='both',expand=True)
+        side=ttk.Frame(body,padding=10,width=215); side.pack(side='left',fill='y')
+        ttk.Label(side,text='TOOLS',font=('',11,'bold')).pack(anchor='w',pady=(0,6))
+        families=ttk.Frame(side); families.pack(fill='x')
+        for i,family in enumerate(METHODS):
+            ttk.Radiobutton(families,text=family,variable=self.family,value=family,command=self.family_changed).grid(row=i//2,column=i%2,sticky='w',pady=3,padx=(0,8))
+        ttk.Label(side,text='Construction method').pack(anchor='w',pady=(14,3))
+        self.method_box=ttk.Combobox(side,textvariable=self.tool,values=METHODS['Select'],state='readonly',width=25)
+        self.method_box.pack(fill='x'); self.method_box.bind('<<ComboboxSelected>>',lambda e:self.method_changed())
+        self.direction_check=ttk.Checkbutton(side,text='Clockwise center arc',variable=self.clockwise)
+        self.direction_check.pack(anchor='w',pady=(8,2))
+        ttk.Checkbutton(side,text='Copy when transforming',variable=self.copy_mode).pack(anchor='w')
+        ttk.Separator(side).pack(fill='x',pady=12)
+        pens=ttk.Frame(side); pens.pack(fill='x')
+        for i,(name,color) in enumerate(COLORS.items()):
+            ttk.Radiobutton(pens,text=name,variable=self.color,value=color).grid(row=i//2,column=i%2,sticky='w',padx=(0,14))
+        ttk.Separator(side).pack(fill='x',pady=10)
+        ttk.Checkbutton(side,text='Object snaps / alignment',variable=self.snap).pack(anchor='w')
+        ttk.Checkbutton(side,text='Show grid',variable=self.grid,command=self.draw).pack(anchor='w',pady=3)
+        ttk.Checkbutton(side,text='Snap to grid',variable=self.grid_snap).pack(anchor='w')
+        ttk.Button(side,text='Grid preferences...',command=self.grid_dialog).pack(fill='x',pady=8)
+        ttk.Label(side,textvariable=self.layer_status,wraplength=200).pack(anchor='w',pady=6)
+        ttk.Label(side,text='Shift-click: add/remove selection\nDrag empty area: select in box\nDouble-click: edit object\nWheel: zoom  |  Middle drag: pan\nEsc: cancel  |  Delete: delete\nSpline: Enter/right-click to finish',wraplength=205).pack(anchor='w',pady=8)
+        self.canvas=tk.Canvas(body,bg='white',highlightthickness=0)
+        self.canvas.pack(fill='both',expand=True)
+        for event,fn in [('<Configure>',lambda e:self.draw()),('<Motion>',self.motion),
+                         ('<ButtonPress-1>',self.click),('<B1-Motion>',self.drag_select),
+                         ('<ButtonRelease-1>',self.release_select),('<Double-Button-1>',self.double_click),
+                         ('<ButtonPress-2>',self.pan_start),('<B2-Motion>',self.pan_move),
+                         ('<Delete>',lambda e:self.delete()),('<BackSpace>',lambda e:self.delete()),
+                         ('<Return>',lambda e:self.finish()),('<Button-3>',lambda e:self.finish())]:
+            self.canvas.bind(event,fn)
+        self.canvas.bind('<MouseWheel>',lambda e:self.zoom(e,1.15 if e.delta>0 else 1/1.15))
+        if self.root.tk.call('tk','windowingsystem')!='aqua':
+            self.canvas.bind('<Button-4>',lambda e:self.zoom(e,1.15))
+            self.canvas.bind('<Button-5>',lambda e:self.zoom(e,1/1.15))
 
-    def grid_dialog(self):
-        dialog = tk.Toplevel(self.root)
-        dialog.title('Grid')
-        dialog.transient(self.root)
-        dialog.resizable(False, False)
-        frame = ttk.Frame(dialog, padding=16)
-        frame.pack(fill='both', expand=True)
-        spacing = tk.StringVar(value=f'{self.grid_spacing:g}')
-        divisions = tk.StringVar(value=str(self.grid_subdivisions))
-        ttk.Label(frame, text='Grid spacing (inches)').grid(row=0, column=0, sticky='w', padx=(0,16), pady=5)
-        entry = ttk.Entry(frame, textvariable=spacing, width=14)
-        entry.grid(row=0, column=1, pady=5)
-        ttk.Label(frame, text='# of subdivisions').grid(row=1, column=0, sticky='w', pady=5)
-        ttk.Entry(frame, textvariable=divisions, width=14).grid(row=1, column=1, pady=5)
-        def apply():
-            try:
-                major, count = grid_values(spacing.get(), divisions.get())
-            except ValueError as ex:
-                messagebox.showerror('Grid preferences', str(ex), parent=dialog)
-                return
-            self.grid_spacing, self.grid_subdivisions = major, count
-            self.mouse = None; self.marker = None
-            dialog.destroy()
-            self.draw()
-        buttons = ttk.Frame(frame)
-        buttons.grid(row=2, column=0, columnspan=2, sticky='e', pady=(12,0))
-        ttk.Button(buttons, text='Cancel', command=dialog.destroy).pack(side='left', padx=5)
-        ttk.Button(buttons, text='OK', command=apply).pack(side='left')
-        dialog.bind('<Return>', lambda e: apply())
-        dialog.bind('<Escape>', lambda e: dialog.destroy())
-        dialog.grab_set()
-        entry.focus_set(); entry.selection_range(0, 'end')
+    def shortcut(self,event,fn):
+        if event.widget.winfo_class() in ['Entry','TEntry','Text','TCombobox'] and fn in [self.undo,self.redo]: return
+        fn(); return 'break'
 
-    def snap_point(self, p):
-        # Ordered tiers: object anchors, line/grid crossings, grid intersections,
-        # angular alignment, then grid lines. Each must be within 9 pixels.
-        tolerance = 9 / self.scale
+    def family_changed(self):
+        self.tool.set(METHODS[self.family.get()][0]); self.method_box.configure(values=METHODS[self.family.get()])
+        self.method_changed()
+
+    def method_changed(self):
+        self.cancel(); self.configure_parameters()
+
+    def configure_parameters(self):
+        for child in self.parameter_frame.winfo_children(): child.destroy()
+        self.params={}; self.last_parameter=None
+        fields=fields_for(self.family.get(),self.tool.get())
+        for i,key in enumerate(fields):
+            row,col=divmod(i,4)
+            cell=ttk.Frame(self.parameter_frame); cell.grid(row=row,column=col,sticky='w',padx=5,pady=3)
+            label=LABELS[key]
+            if self.family.get()=='Modify' and key in ['x','y']: label='Pivot '+key.upper() if self.tool.get()!='Move' else 'Ref '+key.upper()
+            if self.family.get()=='Arcs' and self.tool.get()=='Center + start + end':
+                label={'x':'Center X','y':'Center Y','x2':'Start X','y2':'Start Y','x3':'End X','y3':'End Y'}.get(key,label)
+            elif key in ('x','y') and (self.family.get() in ['Circles','Ovals'] or 'polygon' in self.tool.get()):
+                label='Center '+key.upper() if self.tool.get() not in ['Diameter endpoints','Three-point circle','Two tangent lines','Opposite corners','Axis endpoints + width'] else key.upper()
+            ttk.Label(cell,text=label,width=9).pack(side='left')
+            var=tk.StringVar(value=f'{DEFAULTS.get(key,0):g}'); self.params[key]=var
+            ent=ttk.Entry(cell,textvariable=var,width=10); ent.pack(side='left')
+            ent.bind('<KeyRelease>',lambda e,k=key:self.parameter_changed(k))
+            ent.bind('<Return>',lambda e:self.apply_parameters())
+        actions=ttk.Frame(self.parameter_frame); actions.grid(row=(len(fields)+3)//4,column=0,columnspan=4,padx=5,pady=4,sticky='w')
+        if fields:
+            if self.family.get()!='Modify':
+                ttk.Button(actions,text='Use entered point',command=self.enter_point).pack(side='left',padx=3)
+            ttk.Button(actions,text='Apply / Create',command=self.apply_parameters).pack(side='left',padx=3)
+        if self.family.get()=='Splines':
+            ttk.Button(actions,text='Finish spline',command=self.finish).pack(side='left',padx=3)
+        if not fields: ttk.Label(self.parameter_frame,text='Select objects, then double-click to edit or choose a Modify method.').grid(row=0,column=0,sticky='w')
+        self.draw()
+
+    def parameter_changed(self,key): self.last_parameter=key
+
+    def values(self):
+        vals={k:float(v.get()) for k,v in self.params.items()}
+        if any(not math.isfinite(v) or abs(v)>1e7 for v in vals.values()): raise ValueError('Enter finite values within ±10,000,000.')
+        return vals
+
+    def field_point(self,index):
+        values=self.values(); suffix=str(index+1) if index else ''
+        return [values['x'+suffix],values['y'+suffix]]
+
+    def set_point_fields(self,index,p):
+        suffix=str(index+1) if index else ''
+        for key,value in zip(['x'+suffix,'y'+suffix],p):
+            if key in self.params: self.params[key].set(f'{value:.12g}')
+
+    def update_line_fields(self,a,b):
+        dx,dy=geo.sub(b,a)
+        for k,v in [('dx',dx),('dy',dy),('length',math.hypot(dx,dy)),('angle',math.degrees(math.atan2(dy,dx)))]:
+            if k in self.params: self.params[k].set(f'{v:.12g}')
+
+    def world(self,x,y): return [(x-self.origin[0])/self.scale,(self.origin[1]-y)/self.scale]
+    def screen(self,p): return [self.origin[0]+p[0]*self.scale,self.origin[1]-p[1]*self.scale]
+
+    def snap_point(self,p):
+        tolerance=9/self.scale
         def nearest(candidates):
-            best = min(candidates, key=lambda a: distance(p, a[0]), default=None)
-            if best is not None and distance(p, best[0]) <= tolerance:
-                return list(best[0]), best[1]
-            return None
+            best=min(candidates,key=lambda v:distance(p,v[0]),default=None)
+            return (list(best[0]),best[1]) if best and distance(p,best[0])<=tolerance else None
+        ids=[i for i in range(len(self.objects)) if self.doc.visible(i) and not (self.family.get()=='Modify' and i in self.selected)]
         if self.snap.get():
-            candidates = [([0,0], 'origin')]
-            for i, o in enumerate(self.objects):
-                if self.tool.get() == 'Move' and i == self.selected:
-                    continue
-                candidates.extend(anchors(o))
-            best = nearest(candidates)
+            candidates=[([0,0],'origin')]
+            for i in ids: candidates.extend(anchors(self.objects[i]))
+            best=nearest(candidates)
             if best: return best
-        grid = None
+        grid=None
         if self.grid_snap.get():
-            step = self.grid_spacing / self.grid_subdivisions
-            crossings = []
-            for i, o in enumerate(self.objects):
-                if o['type'] == 'line' and not (self.tool.get() == 'Move' and i == self.selected):
-                    crossings.extend(line_grid_candidates(p, o, step))
-            best = nearest(crossings)
+            step=self.grid_spacing/self.grid_subdivisions
+            crossings=[]
+            for i in ids:
+                if self.objects[i]['type']=='line': crossings.extend(line_grid_candidates(p,self.objects[i],step))
+            best=nearest(crossings)
             if best: return best
-            grid = grid_candidates(p, step)
-            best = nearest(grid[:1])
+            grid=grid_candidates(p,step); best=nearest(grid[:1])
             if best: return best
-        if self.snap.get() and self.start is not None and self.tool.get() in ['Line','Move']:
-            best = nearest(alignment_candidates(p, self.start))
+        if self.snap.get() and self.start is not None and self.family.get() in ['Lines','Modify']:
+            best=nearest(alignment_candidates(p,self.start))
             if best: return best
         if grid:
-            best = nearest(grid[1:])
+            best=nearest(grid[1:])
             if best: return best
-        return p, ''
+        return p,''
 
-    def motion(self, e):
-        self.mouse, self.marker = self.snap_point(self.world(e.x,e.y))
+    def hit(self,p,lines_only=False):
+        hits=[(hit_distance(p,o),i) for i,o in enumerate(self.objects)
+              if self.doc.visible(i) and (not lines_only or o['type']=='line')]
+        best=min(hits,default=(float('inf'),None))
+        return best[1] if best[0]*self.scale<=9 else None
+
+    def motion(self,e):
+        self.mouse,self.marker=self.snap_point(self.world(e.x,e.y)); self.draw()
+
+    def click(self,e):
+        self.canvas.focus_set(); raw=self.world(e.x,e.y)
+        if self.family.get()=='Select':
+            i=self.hit(raw); extend=bool(e.state & 0x0001)
+            if i is None:
+                self.box_start=raw; self.box_end=raw; self.box_extend=extend
+                if not extend: self.selected=set()
+            elif extend:
+                if i in self.selected: self.selected.remove(i)
+                else: self.selected.add(i)
+            else: self.selected={i}
+            self.draw(); return
+        if self.family.get()=='Modify' and not self.doc.editable_selection():
+            self.error('Select visible, unlocked geometry first.'); return
+        p,_=self.snap_point(raw)
+        before=(copy.deepcopy(self.points),copy.deepcopy(self.refs),self.start)
+        try: self.pick(p,raw)
+        except (ValueError,KeyError) as ex:
+            self.points,self.refs,self.start=before
+            self.error(str(ex))
         self.draw()
 
-    def checkpoint(self):
-        self.history.append(copy.deepcopy(self.objects)); self.future.clear()
+    def drag_select(self,e):
+        if self.box_start is not None:
+            self.box_end=self.world(e.x,e.y); self.draw()
+
+    def release_select(self,e):
+        if self.box_start is None: return
+        a=self.box_start; b=self.world(e.x,e.y)
+        if distance(a,b)*self.scale>4:
+            low=[min(a[i],b[i]) for i in (0,1)]; high=[max(a[i],b[i]) for i in (0,1)]
+            for i,o in enumerate(self.objects):
+                if self.doc.visible(i) and all(low[0]<=p[0]<=high[0] and low[1]<=p[1]<=high[1] for p in geo.path(o)):
+                    self.selected.add(i)
+        self.box_start=None; self.box_end=None; self.draw()
+
+    def double_click(self,e):
+        if self.family.get()=='Select': self.edit_dialog()
+
+    def pick(self,p,raw=None):
+        family=self.family.get(); method=self.tool.get(); raw=p if raw is None else raw
+        if family=='Modify':
+            self.points.append(p); self.start=self.points[0]
+            if len(self.points)==1: self.set_point_fields(0,p)
+            needed=3 if method in ['Rotate','Scale'] else 2
+            if len(self.points)==needed:
+                pivot=self.field_point(0)
+                a,b=self.points[-2:]
+                if method=='Move':
+                    dx,dy=geo.sub(p,pivot); self.params['dx'].set(f'{dx:.12g}'); self.params['dy'].set(f'{dy:.12g}')
+                elif method=='Rotate':
+                    u,v=geo.sub(a,pivot),geo.sub(b,pivot); geo.unit(u); geo.unit(v)
+                    self.params['angle'].set(f'{math.degrees(math.atan2(geo.cross(u,v),geo.dot(u,v))):.12g}')
+                elif method=='Scale':
+                    d=distance(pivot,a)
+                    if d<geo.EPS: raise ValueError('Reference point must differ from the scale pivot.')
+                    self.params['factor'].set(f'{distance(pivot,b)/d:.12g}')
+                else:
+                    geo.unit(geo.sub(p,pivot)); self.params['angle'].set(f'{math.degrees(geo.angle(pivot,p)):.12g}')
+                self.apply_parameters()
+            return
+        if family=='Splines':
+            if len(self.points)>=200: raise ValueError('Use at most 200 points per spline.')
+            if self.points and distance(self.points[-1],p)<geo.EPS: raise ValueError('Choose a different next point.')
+            self.points.append(p); self.start=p; self.set_point_fields(0,p); return
+        # Existing entered coordinates remain authoritative for already-picked points.
+        for i in range(len(self.points)):
+            if 'x'+(str(i+1) if i else '') in self.params: self.points[i]=self.field_point(i)
+        ref=None
+        needs_line=(method in ['Offset from line','Start tangent + end'] and not self.points) or method=='Two tangent lines'
+        if needs_line:
+            idx=self.hit(raw,True)
+            if idx is None: raise ValueError('Click close to an existing visible line.')
+            ref=copy.deepcopy(self.objects[idx]); p=geo.project(p,ref['a'],ref['b'],True)
+        self.set_point_fields(len(self.points),p)
+        self.points.append(p); self.refs.append(ref); self.start=self.points[0]
+        if len(self.points)==1: return
+        a,b=self.points[:2]
+        if family=='Lines' and method!='Offset from line': self.update_line_fields(a,b)
+        if method=='Center + diameter': self.params['diameter'].set(f'{2*distance(a,b):.12g}')
+        if method=='Offset from line':
+            n=geo.normal(geo.unit(geo.sub(self.refs[0]['b'],self.refs[0]['a'])))
+            self.params['offset'].set(f'{geo.dot(geo.sub(b,self.refs[0]["a"]),n):.12g}')
+        if len(self.points)==(3 if method in THREE else 2):
+            self.create_object(self.points)
+
+    def enter_point(self):
+        before=(copy.deepcopy(self.points),copy.deepcopy(self.refs),self.start)
+        try:
+            if self.tool.get()=='Center + diameter' and self.points:
+                self.apply_parameters(); return
+            index=0 if self.family.get() in ['Splines','Modify'] else len(self.points)
+            if 'x'+(str(index+1) if index else '') not in self.params: index=0
+            self.pick(self.field_point(index)); self.draw()
+        except (ValueError,KeyError) as ex:
+            self.points,self.refs,self.start=before
+            self.error(str(ex))
+
+    def create_object(self,points):
+        obj=construct(self.tool.get(),points,self.values(),self.refs,self.clockwise.get())
+        obj['color']=self.color.get(); self.doc.add([obj])
+        end=list(points[-1]); connected=self.tool.get()=='Connected points'
+        self.points=[end] if connected else []; self.refs=[None] if connected else []
+        self.start=end if connected else None; self.mouse=None; self.marker=''
+        if connected: self.set_point_fields(0,end)
+        self.refresh_layers(); self.draw()
+
+    def apply_parameters(self):
+        try:
+            family=self.family.get(); method=self.tool.get(); v=self.values()
+            if family=='Select': return
+            if family=='Modify':
+                self.doc.transform_selected(method,copy_objects=self.copy_mode.get(),pivot=[v['x'],v['y']],
+                                            dx=v.get('dx',0),dy=v.get('dy',0),angle=v.get('angle',0),factor=v.get('factor',1))
+                self.cancel(); return
+            if family=='Splines':
+                self.enter_point(); return
+            pts=point_values(v,3 if method in THREE else 2)
+            if family=='Lines' and method!='Offset from line':
+                if self.last_parameter in ['length','angle']:
+                    if v['length']<=0: raise ValueError('Length must be positive.')
+                    pts[1]=geo.polar(pts[0],v['length'],math.radians(v['angle']))
+                elif self.last_parameter in ['dx','dy']: pts[1]=geo.add(pts[0],[v['dx'],v['dy']])
+                self.set_point_fields(1,pts[1]); self.update_line_fields(*pts)
+            self.create_object(pts)
+        except (ValueError,KeyError) as ex: self.error(str(ex))
+
+    def finish(self):
+        if self.family.get()=='Splines':
+            try:
+                if len(self.points)<2: raise ValueError('Pick at least two spline points.')
+                self.create_object(self.points)
+            except ValueError as ex: self.error(str(ex))
+        elif self.tool.get()=='Connected points': self.cancel()
 
     def cancel(self):
-        self.start = None; self.mouse = None; self.marker = None; self.draw()
+        self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
+        self.box_start=None; self.box_end=None; self.draw()
 
-    def add(self, obj):
-        self.checkpoint(); self.objects.append(obj); self.selected = len(self.objects)-1
-        self.draw()
+    def error(self,text): messagebox.showerror('BrianCAD',text,parent=self.root)
 
-    def click(self, e):
-        self.canvas.focus_set()
-        p, _ = self.snap_point(self.world(e.x,e.y))
-        tool = self.tool.get()
-        if tool == 'Select':
-            raw = self.world(e.x,e.y)
-            hits = [(hit_distance(raw,o),i) for i,o in enumerate(self.objects)]
-            best = min(hits, default=(float('inf'),None))
-            self.selected = best[1] if best[0]*self.scale <= 9 else None
-        elif tool == 'Move' and self.selected is None:
-            messagebox.showinfo('Move', 'Select an object with the Select tool first.'); return
-        elif self.start is None:
-            self.start = p
-        elif tool == 'Line':
-            if distance(self.start,p)>1e-10:
-                self.add({'type':'line','a':self.start[:],'b':p,'color':self.color.get()})
-                self.start = p if self.chain.get() else None
-        elif tool == 'Circle':
-            r = distance(self.start,p)
-            if r>1e-10:
-                self.add({'type':'circle','center':self.start[:],'radius':r,'color':self.color.get()}); self.start=None
-        elif tool == 'Move':
-            self.move(p[0]-self.start[0], p[1]-self.start[1]); self.start=None
-        self.draw()
+    def prompt(self):
+        method=self.tool.get(); n=len(self.points)
+        if self.family.get()=='Select': return 'Click or box-select; Shift adds/removes; double-click edits'
+        if self.family.get()=='Modify':
+            prompts={'Move':['Pick reference point','Pick destination'], 'Rotate':['Pick pivot','Pick reference direction','Pick new direction'],
+                     'Scale':['Pick pivot','Pick reference length','Pick new length'], 'Mirror':['Pick first axis point','Pick second axis point']}
+            return prompts[method][min(n,len(prompts[method])-1)]
+        if self.family.get()=='Splines': return f'{n} points  |  pick next; Enter/right-click finishes'
+        if method=='Offset from line': return 'Pick source line' if not n else 'Pick offset side/distance, or enter Offset and Apply'
+        if method=='Start tangent + end': return 'Pick start on tangent line (line direction defines tangent)' if not n else 'Pick arc endpoint'
+        if method=='Two tangent lines': return 'Pick exact first contact on a line' if not n else 'Pick second tangent line near desired contact'
+        if method=='Center + start + end': return ['Pick center','Pick arc start','Pick end direction (projected to radius)'][min(n,2)]
+        if method in ['Three-point arc','Three-point circle']: return ['Pick first point','Pick second point','Pick third point'][min(n,2)]
+        if method in ['Center + axis + width','Axis endpoints + width']: return ['Pick center / first axis endpoint','Pick axis endpoint','Pick minor-axis width'][min(n,2)]
+        if method=='Center + diameter': return 'Pick center, or enter center and diameter' if not n else 'Pick circumference point'
+        return 'Pick first point / center' if not n else 'Pick second point'
 
-    def move(self, dx, dy):
-        if self.selected is None: raise ValueError('Select an object first.')
-        self.checkpoint()
-        o = self.objects[self.selected]
-        for k in (['a','b'] if o['type']=='line' else ['center']):
-            o[k] = [o[k][0]+dx,o[k][1]+dy]
-        self.draw()
-
-    def exact(self):
+    def preview(self):
+        if self.mouse is None or not self.points or self.family.get() in ['Select','Modify']: return None
         try:
-            tool = self.tool.get()
-            keys = ['x','y'] + (['length','angle'] if tool=='Line' else ['diameter'] if tool=='Circle' else [])
-            v = {k:float(self.fields[k].get()) for k in keys}
-            if any(not math.isfinite(n) or abs(n)>1e7 for n in v.values()): raise ValueError('Enter finite values within ±10,000,000.')
-            p=[v['x'],v['y']]
-            if tool=='Line':
-                if v['length']<=0: raise ValueError('Length must be positive.')
-                a=math.radians(v['angle'])
-                self.add({'type':'line','a':p,'b':[p[0]+v['length']*math.cos(a),p[1]+v['length']*math.sin(a)],'color':self.color.get()})
-            elif tool=='Circle':
-                if v['diameter']<=0: raise ValueError('Diameter must be positive.')
-                self.add({'type':'circle','center':p,'radius':v['diameter']/2,'color':self.color.get()})
-            elif tool=='Move': self.move(*p)
-            else: raise ValueError('Choose Line, Circle, or Move for exact entry.')
-            self.cancel()
-        except ValueError as ex: messagebox.showerror('Exact entry', str(ex))
+            pts=self.points+[self.mouse]
+            if self.family.get()=='Splines':
+                if len(pts)<2: return None
+                return construct(self.tool.get(),pts,{},self.refs)
+            if len(pts)!=(3 if self.tool.get() in THREE else 2):
+                return {'type':'line','a':self.points[-1],'b':self.mouse}
+            vals=self.values()
+            if self.tool.get()=='Center + diameter': vals['diameter']=2*distance(pts[0],self.mouse)
+            if self.tool.get()=='Offset from line': return geo.offset_line(self.refs[0],p=self.mouse)
+            if self.tool.get()=='Two tangent lines': return None
+            return construct(self.tool.get(),pts,vals,self.refs,self.clockwise.get())
+        except (ValueError,KeyError): return None
 
-    def draw_object(self, o, color=None, dash=None):
-        opts={'fill':color or o['color'],'width':2}
-        if dash: opts['dash']=dash
-        if o['type']=='line': self.canvas.create_line(*self.screen(o['a']),*self.screen(o['b']),**opts)
-        else:
-            x,y=self.screen(o['center']); r=o['radius']*self.scale
-            opts['outline']=opts.pop('fill'); opts['fill']=''
-            self.canvas.create_oval(x-r,y-r,x+r,y+r,**opts)
+    def draw_object(self,o,color=None,dash=None):
+        pts=geo.path(o); coords=[v for p in pts for v in self.screen(p)]
+        pattern=dash or {'Solid':None,'Dashed':(6,4),'Dotted':(1,3)}.get(o.get('pattern','Solid'))
+        width=max(1,min(5,o.get('weight',.01)*self.scale))
+        opts={'fill':color or o.get('color',COLORS['Black']),'width':width}
+        if pattern: opts['dash']=pattern
+        self.canvas.create_line(*coords,**opts)
 
     def draw(self):
+        if not hasattr(self,'canvas'): return
         c=self.canvas; c.delete('all'); w=c.winfo_width(); h=c.winfo_height()
-        step = self.grid_spacing / self.grid_subdivisions
-        major_visible = self.grid_spacing*self.scale >= 8
-        minor_visible = self.grid_subdivisions > 1 and step*self.scale >= 8
+        step=self.grid_spacing/self.grid_subdivisions
+        major_visible=self.grid_spacing*self.scale>=8
+        minor_visible=self.grid_subdivisions>1 and step*self.scale>=8
         if self.grid.get():
             lo=self.world(0,h); hi=self.world(w,0)
-            for axis in [0,1]:
-                for spacing, major in [(step, False), (self.grid_spacing, True)]:
-                    if not major and not minor_visible:
-                        continue
-                    for i in grid_positions(lo[axis], hi[axis], spacing, self.scale, 8):
-                        if not major and i % self.grid_subdivisions == 0:
-                            continue
+            for axis in (0,1):
+                for spacing,major in [(step,False),(self.grid_spacing,True)]:
+                    if not major and not minor_visible: continue
+                    for i in grid_positions(lo[axis],hi[axis],spacing,self.scale,8):
+                        if not major and i%self.grid_subdivisions==0: continue
                         q=self.screen([i*spacing,0] if axis==0 else [0,i*spacing])
                         coords=(q[0],0,q[0],h) if axis==0 else (0,q[1],w,q[1])
-                        c.create_line(*coords, fill='#bcc8d5' if major else '#e4e9ef',
-                                      dash=(2,3) if major else (1,4))
+                        c.create_line(*coords,fill='#bcc8d5' if major else '#e4e9ef',dash=(2,3) if major else (1,4))
         x,y=self.origin
         c.create_line(0,y,w,y,fill='#cbd2db'); c.create_line(x,0,x,h,fill='#cbd2db')
-        c.create_text(x+12,y+12,text='0,0',anchor='nw',fill='#8b929a')
+        c.create_text(x+10,y+10,text='0,0',anchor='nw',fill='#8b929a')
         for i,o in enumerate(self.objects):
-            self.draw_object(o)
-            if i==self.selected:
+            if not self.doc.visible(i): continue
+            self.draw_object(o,color='#d08213' if i in self.selected else None)
+            if i in self.selected or o.get('controls'):
                 for p,_ in anchors(o):
-                    a,b=self.screen(p); c.create_rectangle(a-3,b-3,a+3,b+3,outline='#e69d20',fill='#fff2c9')
-        if self.start is not None and self.mouse is not None:
-            if self.tool.get()=='Line': self.draw_object({'type':'line','a':self.start,'b':self.mouse,'color':'#708296'},dash=(5,3))
-            elif self.tool.get()=='Circle': self.draw_object({'type':'circle','center':self.start,'radius':distance(self.start,self.mouse),'color':'#708296'},dash=(5,3))
+                    a,b=self.screen(p); c.create_rectangle(a-3,b-3,a+3,b+3,outline='#d08213',fill='#fff2c9')
+        preview=self.preview()
+        if preview: self.draw_object(preview,color='#708296',dash=(5,3))
+        if self.family.get()=='Splines' and self.points:
+            coords=[v for p in self.points for v in self.screen(p)]
+            if len(coords)>=4: c.create_line(*coords,fill='#b0becb',dash=(2,4))
+            for p in self.points:
+                a,b=self.screen(p); c.create_rectangle(a-3,b-3,a+3,b+3,outline='#708296')
+        if self.start is not None and self.family.get() in ['Lines','Modify']:
             a,b=self.screen(self.start)
             c.create_line(0,b,w,b,fill='#b8cddd',dash=(3,5)); c.create_line(a,0,a,h,fill='#b8cddd',dash=(3,5))
-            if self.tool.get() in ['Line', 'Move'] and self.marker in ['45°', '135°']:
-                slope = -1 if self.marker == '45°' else 1
+            if self.marker in ['45°','135°']:
+                slope=-1 if self.marker=='45°' else 1
                 c.create_line(0,b-slope*a,w,b+slope*(w-a),fill='#9dbcd5',dash=(3,5))
         if self.mouse is not None and self.marker:
-            a,b=self.screen(self.mouse)
-            c.create_rectangle(a-5,b-5,a+5,b+5,outline='#bf7300',width=2)
+            a,b=self.screen(self.mouse); c.create_rectangle(a-5,b-5,a+5,b+5,outline='#bf7300',width=2)
             c.create_text(a+12,b-14,text=self.marker,anchor='w',fill='#9a5b00')
-        info = 'Select an object' if self.tool.get()=='Select' else 'Choose first point' if self.start is None else 'Choose second point'
-        pos = '' if self.mouse is None else f'   X {self.mouse[0]:.4f}   Y {self.mouse[1]:.4f}'
-        hidden = ' (dense lines hidden)' if self.grid.get() and (not major_visible or (self.grid_subdivisions > 1 and not minor_visible)) else ''
-        self.status.set(f'{self.tool.get()} • {info}   |   {len(self.objects)} objects   |   inches   |   grid {self.grid_spacing:g} in / {self.grid_subdivisions} = {step:g} in{hidden}{pos}')
-        self.root.title(('• ' if self.objects!=self.saved else '')+'Draft — 2D workflow prototype')
+        if self.box_start is not None and self.box_end is not None:
+            c.create_rectangle(*self.screen(self.box_start),*self.screen(self.box_end),outline='#397cc1',dash=(4,3))
+        hidden=' (dense lines hidden)' if self.grid.get() and (not major_visible or (self.grid_subdivisions>1 and not minor_visible)) else ''
+        pos='' if self.mouse is None else f' | X {self.mouse[0]:.4f} Y {self.mouse[1]:.4f}'
+        self.status.set(f'{self.tool.get()}  |  {self.prompt()} | {len(self.selected)} selected | grid {self.grid_spacing:g}/{self.grid_subdivisions}{hidden}{pos}')
+        self.layer_status.set('Active layer: '+self.doc.active)
+        self.root.title((' |  ' if self.doc.dirty else '')+'BrianCAD - '+(os.path.basename(self.path) if self.path else 'Untitled'))
 
-    def delete(self):
-        if self.selected is not None:
-            self.checkpoint(); del self.objects[self.selected]; self.selected=None; self.cancel()
-
-    def undo(self):
-        if self.history:
-            self.future.append(copy.deepcopy(self.objects)); self.objects=self.history.pop(); self.selected=None; self.cancel()
-
-    def redo(self):
-        if self.future:
-            self.history.append(copy.deepcopy(self.objects)); self.objects=self.future.pop(); self.selected=None; self.cancel()
+    def delete(self): self.doc.delete_selected(); self.cancel(); self.refresh_layers()
+    def undo(self): self.doc.undo(); self.cancel(); self.refresh_layers()
+    def redo(self): self.doc.redo(); self.cancel(); self.refresh_layers()
 
     def zoom(self,e,factor):
         p=self.world(e.x,e.y); self.scale=max(.01,min(100000,self.scale*factor))
         self.origin=[e.x-p[0]*self.scale,e.y+p[1]*self.scale]; self.draw()
-
     def pan_start(self,e): self.pan=[e.x,e.y]
-
     def pan_move(self,e):
         if self.pan:
             self.origin[0]+=e.x-self.pan[0]; self.origin[1]+=e.y-self.pan[1]
             self.pan=[e.x,e.y]; self.draw()
-
     def fit(self):
-        pts=[p for o in self.objects for p,_ in anchors(o)]
+        self.root.update_idletasks()
+        pts=[p for i,o in enumerate(self.objects) if self.doc.visible(i) for p in geo.path(o)]
         if not pts: return
-        x0=min(p[0] for p in pts); x1=max(p[0] for p in pts)
-        y0=min(p[1] for p in pts); y1=max(p[1] for p in pts)
+        low=[min(p[k] for p in pts) for k in (0,1)]; high=[max(p[k] for p in pts) for k in (0,1)]
         w=max(100,self.canvas.winfo_width()); h=max(100,self.canvas.winfo_height())
-        self.scale=min((w-80)/max(x1-x0,.5),(h-80)/max(y1-y0,.5))
-        self.origin=[w/2-(x0+x1)*self.scale/2,h/2+(y0+y1)*self.scale/2]; self.draw()
+        self.scale=min((w-80)/max(high[0]-low[0],.5),(h-80)/max(high[1]-low[1],.5))
+        self.origin=[w/2-(low[0]+high[0])*self.scale/2,h/2+(low[1]+high[1])*self.scale/2]; self.draw()
 
-    def discard(self):
-        return self.objects==self.saved or messagebox.askyesno('Unsaved drawing','Discard unsaved changes?')
+    def grid_dialog(self):
+        dlg=tk.Toplevel(self.root); dlg.title('Grid'); dlg.transient(self.root); dlg.resizable(False,False)
+        f=ttk.Frame(dlg,padding=16); f.pack()
+        spacing=tk.StringVar(value=f'{self.grid_spacing:g}'); divisions=tk.StringVar(value=str(self.grid_subdivisions))
+        first=None
+        for i,(label,var) in enumerate([('Grid spacing (inches)',spacing),('# of subdivisions',divisions)]):
+            ttk.Label(f,text=label).grid(row=i,column=0,padx=6,pady=5)
+            e=ttk.Entry(f,textvariable=var,width=14); e.grid(row=i,column=1,pady=5)
+            if first is None: first=e
+        def apply():
+            try: major,count=grid_values(spacing.get(),divisions.get())
+            except ValueError as ex: messagebox.showerror('Grid',str(ex),parent=dlg); return
+            if (major,count)!=(self.grid_spacing,self.grid_subdivisions):
+                self.doc.checkpoint(); self.grid_spacing,self.grid_subdivisions=major,count
+            dlg.destroy(); self.draw()
+        ttk.Button(f,text='Cancel',command=dlg.destroy).grid(row=2,column=0,pady=10)
+        ttk.Button(f,text='OK',command=apply).grid(row=2,column=1,pady=10)
+        dlg.bind('<Return>',lambda e:apply()); dlg.bind('<Escape>',lambda e:dlg.destroy())
+        dlg.grab_set(); first.focus_set(); first.selection_range(0,'end')
 
+    def refresh_layers(self):
+        if self.layer_window is not None and self.layer_window.winfo_exists(): self.layer_refresh()
+
+    def layers_dialog(self):
+        if self.layer_window is not None and self.layer_window.winfo_exists(): self.layer_window.lift(); return
+        dlg=tk.Toplevel(self.root); self.layer_window=dlg; dlg.title('Layers'); dlg.transient(self.root)
+        f=ttk.Frame(dlg,padding=12); f.pack(fill='both',expand=True)
+        tree=ttk.Treeview(f,columns=('active','name'),show='tree headings',selectmode='browse',height=13)
+        tree.heading('#0',text='Eye'); tree.column('#0',width=45,stretch=False)
+        self.layer_icons=[]
+        for visible in (False,True):
+            icon=tk.PhotoImage(master=dlg,width=18,height=14)
+            for x in range(18):
+                for y in range(14):
+                    ellipse=((x-8.5)/8)**2+((y-6.5)/5)**2
+                    eye=(.65<ellipse<1.05 or (x-8.5)**2+(y-6.5)**2<5) if visible else (abs(y-6.5)<1 and 1<x<17) or (abs(y-x*.6-1)<.8 and 1<x<17)
+                    if eye: icon.put('#273543',to=(x,y))
+            self.layer_icons.append(icon)
+        for col,title,width in [('active','Active',55),('name','Layer',210)]:
+            tree.heading(col,text=title); tree.column(col,width=width,anchor='w')
+        self.layer_tree=tree
+        tree.grid(row=0,column=0,rowspan=5,sticky='nsew')
+        f.columnconfigure(0,weight=1); f.rowconfigure(0,weight=1)
+        rename=tk.StringVar(); ttk.Label(f,text='Layer name').grid(row=5,column=0,sticky='w',pady=(8,0))
+        ttk.Entry(f,textvariable=rename).grid(row=6,column=0,sticky='ew')
+        def selected_name():
+            items=tree.selection()
+            if not items: raise ValueError('Highlight a layer first.')
+            return tree.item(items[0],'values')[-1]
+        def refresh():
+            keep=selected_name() if tree.selection() else self.doc.active
+            if keep not in [l['name'] for l in self.doc.layers]: keep=self.doc.active
+            tree.delete(*tree.get_children())
+            for i,l in enumerate(self.doc.layers):
+                key=str(i); tree.insert('', 'end',iid=key,image=self.layer_icons[int(l['visible'])],values=('*' if l['name']==self.doc.active else '',l['name']))
+                if l['name']==keep: tree.selection_set(key)
+        self.layer_refresh=refresh
+        def action(kind):
+            try:
+                name=selected_name() if kind!='new' else None
+                if kind=='new': self.doc.add_layer(rename.get())
+                elif kind=='rename': self.doc.rename_layer(name,rename.get())
+                elif kind=='set': self.doc.set_layer(name)
+                elif kind=='hide': self.doc.toggle_layer(name)
+                elif kind=='delete':
+                    target=next((l['name'] for l in self.doc.layers if l['name']!=name),None)
+                    if target is None: raise ValueError('Keep at least one layer.')
+                    if not messagebox.askyesno('Delete layer',f'Delete {name}? Its objects will move to {target}.',parent=dlg): return
+                    self.doc.delete_layer(name)
+                refresh(); self.cancel()
+            except ValueError as ex: messagebox.showerror('Layers',str(ex),parent=dlg)
+        for i,(label,kind) in enumerate([('New','new'),('Delete','delete'),('Show / Hide','hide'),('Set Layer','set'),('Rename','rename')]):
+            ttk.Button(f,text=label,command=lambda k=kind:action(k)).grid(row=i,column=1,padx=(10,0),pady=4,sticky='ew')
+        def highlight(e):
+            if tree.selection(): rename.set(selected_name())
+        def double(e):
+            row=tree.identify_row(e.y)
+            if row:
+                tree.selection_set(row); action('hide' if tree.identify_column(e.x)=='#0' else 'set')
+            return 'break'
+        tree.bind('<<TreeviewSelect>>',highlight); tree.bind('<Double-1>',double)
+        ttk.Label(f,text='Single-click highlights. Double-click name: active. Double-click eye: show/hide.').grid(row=7,column=0,columnspan=2,pady=8)
+        refresh()
+
+    def edit_dialog(self):
+        ids=sorted(i for i in self.selected if self.doc.visible(i))
+        if not ids: self.error('Select at least one object first.'); return
+        if self.edit_window is not None and self.edit_window.winfo_exists(): self.edit_window.lift(); return
+        index=ids[0]; original=copy.deepcopy(self.objects[index])
+        dlg=tk.Toplevel(self.root); self.edit_window=dlg; dlg.title('Edit objects'); dlg.transient(self.root)
+        # Modal editing keeps the captured object index stable while fields are edited.
+        f=ttk.Frame(dlg,padding=14); f.pack(fill='both',expand=True)
+        ttk.Label(f,text=original['type'].title()+('  |  first selected object' if len(ids)>1 else ''),font=('',12,'bold')).grid(row=0,column=0,columnspan=2,sticky='w')
+        fields={}; row=1
+        def field(key,label,value,choices=None):
+            nonlocal row
+            ttk.Label(f,text=label).grid(row=row,column=0,sticky='w',padx=(0,12),pady=3)
+            var=tk.StringVar(value=str(value)); fields[key]=var
+            w=ttk.Combobox(f,textvariable=var,values=choices,state='readonly',width=27) if choices else ttk.Entry(f,textvariable=var,width=30)
+            w.grid(row=row,column=1,sticky='ew',pady=3); row+=1
+        reverse={v:k for k,v in COLORS.items()}
+        field('layer','Layer',original['layer'],[l['name'] for l in self.doc.layers])
+        field('color','Color',reverse[original['color']],list(COLORS))
+        field('locked','Locked',str(original['locked']),['False','True'])
+        field('pattern','Pattern',original['pattern'],['Solid','Dashed','Dotted'])
+        field('weight','Weight (inches)',original['weight'])
+        field('controls','Show control points',str(original['controls']),['False','True'])
+        kind=original['type']; geometry_fields=[]
+        def number(key,label,value): geometry_fields.append(key); field(key,label,f'{value:.12g}')
+        if kind=='line':
+            for key,p in [('a',original['a']),('b',original['b'])]:
+                for k,n in enumerate(['x','y']): number(key+n,('Start ' if key=='a' else 'End ')+n.upper(),p[k])
+        elif kind in ['circle','arc','ellipse']:
+            number('cx','Center X',original['center'][0]); number('cy','Center Y',original['center'][1])
+            if kind=='ellipse':
+                number('rx','X semi-axis',original['rx']); number('ry','Y semi-axis',original['ry']); number('angle','Rotation °',math.degrees(original['angle']))
+            else: number('diameter','Diameter',original['radius']*2)
+            if kind=='arc':
+                number('start','Start angle °',math.degrees(original['start'])); number('sweep','Signed sweep °',math.degrees(original['sweep']))
+        else:
+            field('points','Points: x,y; x,y; ...','; '.join(f'{p[0]:.12g},{p[1]:.12g}' for p in original['points']))
+            field('closed','Closed',str(original.get('closed',True)),['False','True'])
+            if kind=='spline': field('method','Spline method',original['method'],['through','bezier'])
+        self.edit_fields=fields
+        total=tk.StringVar(); self.edit_length=total
+        ttk.Label(f,textvariable=total).grid(row=row,column=0,columnspan=2,sticky='w',pady=8); row+=1
+        def proposed():
+            o=copy.deepcopy(original)
+            o.update(layer=fields['layer'].get(),color=COLORS[fields['color'].get()],locked=fields['locked'].get()=='True',
+                     pattern=fields['pattern'].get(),weight=float(fields['weight'].get()),controls=fields['controls'].get()=='True')
+            v={k:float(fields[k].get()) for k in geometry_fields}
+            if kind=='line': o['a']=[v['ax'],v['ay']]; o['b']=[v['bx'],v['by']]
+            elif kind in ['circle','arc','ellipse']:
+                o['center']=[v['cx'],v['cy']]
+                if kind=='ellipse': o.update(rx=v['rx'],ry=v['ry'],angle=math.radians(v['angle']))
+                else: o['radius']=v['diameter']/2
+                if kind=='arc': o.update(start=math.radians(v['start']),sweep=math.radians(v['sweep']))
+            else:
+                o['points']=[[float(n.strip()) for n in p.split(',')] for p in fields['points'].get().split(';')]
+                o['closed']=fields['closed'].get()=='True'
+                if kind=='spline': o['method']=fields['method'].get()
+            return self.doc.prepare(o)
+        def refresh_length(*args):
+            try:
+                o=proposed(); approx=' (approx.)' if kind in ['ellipse','spline'] else ''
+                text=f'Length: {geo.length(o):.6g} in{approx}'
+                if len(ids)>1:
+                    combined=geo.length(o)+sum(geo.length(self.objects[i]) for i in ids[1:])
+                    text+=f'  |  selected total: {combined:.6g} in'
+                total.set(text)
+            except (ValueError,KeyError,TypeError,OverflowError): total.set('Length: - (check entered values)')
+        def apply():
+            try: obj=proposed()
+            except (ValueError,KeyError,TypeError,OverflowError) as ex:
+                messagebox.showerror('Edit objects',str(ex),parent=dlg); return
+            self.doc.edit(index,obj); original.clear(); original.update(copy.deepcopy(obj))
+            self.refresh_layers(); self.draw(); refresh_length()
+        for var in fields.values(): var.trace_add('write',refresh_length)
+        refresh_length()
+        buttons=ttk.Frame(f); buttons.grid(row=row,column=0,columnspan=2,sticky='e',pady=8)
+        ttk.Button(buttons,text='Close',command=dlg.destroy).pack(side='left',padx=5)
+        ttk.Button(buttons,text='Apply',command=apply).pack(side='left')
+        dlg.bind('<Escape>',lambda e:dlg.destroy()); dlg.grab_set()
+
+    def discard(self): return not self.doc.dirty or messagebox.askyesno('Unsaved drawing','Discard unsaved changes?',parent=self.root)
     def new(self):
-        if self.discard():
-            self.objects=[]; self.saved=[]; self.history=[]; self.future=[]; self.path=None; self.selected=None; self.cancel()
-
-    def demo(self):
-        if not self.discard(): return
-        self.checkpoint()
-        self.objects=[{'type':'line','a':[-1,0],'b':[1,0],'color':'#198548'},
-                      {'type':'circle','center':[0,0],'radius':.5,'color':'#2465d8'}]
-        self.path=None; self.selected=None; self.cancel(); self.fit()
-
-    def save(self):
-        path=self.path or filedialog.asksaveasfilename(defaultextension='.draft.json',filetypes=[('Draft drawing','*.json')])
+        if self.discard(): self.doc=Document(); self.path=None; self.cancel(); self.refresh_layers()
+    def save(self,save_as=False):
+        path=None if save_as else self.path
+        path=path or filedialog.asksaveasfilename(defaultextension='.draft.json',filetypes=[('BrianCAD drawing','*.json')])
         if not path: return
+        temp=None
         try:
-            with open(path,'w',encoding='utf-8') as f: json.dump({'format':'draft-prototype-1','units':'inches','objects':self.objects},f,indent=2)
-            self.path=path; self.saved=copy.deepcopy(self.objects); self.draw()
-        except OSError as ex: messagebox.showerror('Save',str(ex))
-
+            with tempfile.NamedTemporaryFile('w',encoding='utf-8',dir=os.path.dirname(os.path.abspath(path)),delete=False) as f:
+                temp=f.name; json.dump(self.doc.payload(),f,indent=2,allow_nan=False)
+            os.replace(temp,path); self.path=path; self.doc.saved=self.doc.state(); self.draw()
+        except (OSError,ValueError) as ex:
+            if temp and os.path.exists(temp): os.unlink(temp)
+            self.error(str(ex))
     def open(self):
         if not self.discard(): return
-        path=filedialog.askopenfilename(filetypes=[('Draft drawing','*.json')])
+        path=filedialog.askopenfilename(filetypes=[('BrianCAD drawing','*.json')])
         if not path: return
         try:
-            with open(path,encoding='utf-8') as f: objects=validate(json.load(f))
-            self.objects=objects; self.saved=copy.deepcopy(objects); self.path=path
-            self.history=[]; self.future=[]; self.selected=None; self.cancel(); self.fit()
-        except (OSError,ValueError,TypeError) as ex: messagebox.showerror('Open',str(ex))
-
+            with open(path,encoding='utf-8') as f: doc=Document.from_payload(json.load(f))
+            self.doc=doc; self.path=path; self.cancel(); self.refresh_layers(); self.fit()
+        except (OSError,ValueError,TypeError,KeyError,OverflowError) as ex: self.error(str(ex))
     def close(self):
         if self.discard(): self.root.destroy()
 
