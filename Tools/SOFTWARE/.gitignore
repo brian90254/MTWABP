@@ -1,8 +1,12 @@
 # Virtual environment
 venv/
 .venv/
+#
 venv39/
 .venv39/
+#
+venv312/
+.venv312/
 
 # Python cache
 __pycache__/
