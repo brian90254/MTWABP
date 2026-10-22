@@ -1,0 +1,162 @@
+"""Drawing state, layers, validation, persistence, and atomic undo operations."""
+import copy
+import json
+from cad_geometry import validate_geometry, transform
+
+COLORS={'Black':'#202b36','Blue':'#2465d8','Green':'#198548','Red':'#c44236'}
+
+
+def default_layers():
+    return [{'name':n,'visible':True} for n in ['Constraints','Construction','Dimension','Layer1']]
+
+
+class Document:
+    def __init__(self):
+        self.objects=[]; self.layers=default_layers(); self.active='Layer1'
+        self.selected=set(); self.history=[]; self.future=[]
+        self.grid_spacing=1.; self.grid_subdivisions=4
+        self.saved=self.state()
+
+    def state(self):
+        return copy.deepcopy({'objects':self.objects,'layers':self.layers,'active_layer':self.active,
+                              'grid':{'spacing':self.grid_spacing,'subdivisions':self.grid_subdivisions}})
+
+    @property
+    def dirty(self): return self.state()!=self.saved
+
+    def checkpoint(self):
+        self.history.append(self.state()); self.future.clear()
+
+    def restore(self,state):
+        self.objects=copy.deepcopy(state['objects']); self.layers=copy.deepcopy(state['layers'])
+        self.active=state['active_layer']; self.grid_spacing=state['grid']['spacing']
+        self.grid_subdivisions=state['grid']['subdivisions']; self.selected=set()
+
+    def undo(self):
+        if self.history:
+            self.future.append(self.state()); self.restore(self.history.pop())
+
+    def redo(self):
+        if self.future:
+            self.history.append(self.state()); self.restore(self.future.pop())
+
+    def visible(self,index):
+        return any(l['name']==self.objects[index].get('layer',self.active) and l['visible'] for l in self.layers)
+
+    def editable_selection(self):
+        return sorted(i for i in self.selected if self.visible(i) and not self.objects[i].get('locked',False))
+
+    def prepare(self,obj):
+        n=copy.deepcopy(obj)
+        n.setdefault('layer',self.active); n.setdefault('color',COLORS['Black'])
+        n.setdefault('locked',False); n.setdefault('pattern','Solid'); n.setdefault('weight',.01)
+        n.setdefault('controls',False)
+        validate_geometry(n)
+        if n['layer'] not in [l['name'] for l in self.layers]: raise ValueError('Unknown layer.')
+        if n['color'] not in COLORS.values(): raise ValueError('Unknown pen color.')
+        if n['pattern'] not in ['Solid','Dashed','Dotted']: raise ValueError('Unknown line pattern.')
+        if isinstance(n['weight'],bool) or not isinstance(n['weight'],(int,float)) or not 0<n['weight']<=1:
+            raise ValueError('Pen weight must be greater than zero and at most one inch.')
+        if not isinstance(n['locked'],bool) or not isinstance(n['controls'],bool): raise ValueError('Invalid object flags.')
+        return n
+
+    def add(self,objects):
+        pending=[self.prepare(o) for o in objects]
+        if not pending: return
+        # Drawing always targets a visible active layer.
+        self.checkpoint()
+        for l in self.layers:
+            if l['name']==self.active: l['visible']=True
+        start=len(self.objects); self.objects.extend(pending)
+        self.selected=set(range(start,len(self.objects)))
+
+    def edit(self,index,obj):
+        n=self.prepare(obj)
+        self.checkpoint(); self.objects[index]=n
+        if not self.visible(index): self.selected.discard(index)
+
+    def delete_selected(self):
+        ids=set(self.editable_selection())
+        if not ids: return
+        self.checkpoint(); self.objects=[o for i,o in enumerate(self.objects) if i not in ids]; self.selected=set()
+
+    def transform_selected(self,mode,copy_objects=False,**kwargs):
+        ids=self.editable_selection()
+        if not ids: raise ValueError('Select at least one visible, unlocked object.')
+        pending=[self.prepare(transform(self.objects[i],mode,**kwargs)) for i in ids]
+        self.checkpoint()
+        if copy_objects:
+            start=len(self.objects); self.objects.extend(pending); self.selected=set(range(start,len(self.objects)))
+        else:
+            for i,o in zip(ids,pending): self.objects[i]=o
+            self.selected=set(ids)
+
+    def add_layer(self,name):
+        name=name.strip()
+        if not name or len(name)>100 or name in [l['name'] for l in self.layers]:
+            raise ValueError('Choose a unique layer name of 1–100 characters.')
+        self.checkpoint(); self.layers.append({'name':name,'visible':True})
+
+    def rename_layer(self,old,new):
+        new=new.strip()
+        if old==new: return
+        if not new or len(new)>100 or new in [l['name'] for l in self.layers]: raise ValueError('Choose a unique layer name of 1–100 characters.')
+        if old not in [l['name'] for l in self.layers]: raise ValueError('Unknown layer.')
+        self.checkpoint()
+        for l in self.layers:
+            if l['name']==old: l['name']=new
+        for o in self.objects:
+            if o['layer']==old: o['layer']=new
+        if self.active==old: self.active=new
+
+    def set_layer(self,name):
+        if name not in [l['name'] for l in self.layers]: raise ValueError('Unknown layer.')
+        self.checkpoint(); self.active=name
+        for l in self.layers:
+            if l['name']==name: l['visible']=True
+
+    def toggle_layer(self,name):
+        if name not in [l['name'] for l in self.layers]: raise ValueError('Unknown layer.')
+        self.checkpoint()
+        for l in self.layers:
+            if l['name']==name: l['visible']=not l['visible']
+        self.selected={i for i in self.selected if self.visible(i)}
+
+    def delete_layer(self,name):
+        if len(self.layers)==1: raise ValueError('Keep at least one layer.')
+        if name not in [l['name'] for l in self.layers]: raise ValueError('Unknown layer.')
+        target=next(l['name'] for l in self.layers if l['name']!=name)
+        self.checkpoint()
+        for o in self.objects:
+            if o['layer']==name: o['layer']=target
+        self.layers=[l for l in self.layers if l['name']!=name]
+        if self.active==name: self.active=target
+        self.selected={i for i in self.selected if self.visible(i)}
+
+    def payload(self): return dict(self.state(),format='briancad-2',units='inches')
+
+    @classmethod
+    def from_payload(cls,data):
+        if not isinstance(data,dict) or data.get('format') not in ['draft-prototype-1','briancad-2']:
+            raise ValueError('Not a supported BrianCAD drawing.')
+        d=cls()
+        if data.get('units','inches')!='inches': raise ValueError('Drawing units must be inches.')
+        layers=data.get('layers',default_layers())
+        if not isinstance(layers,list) or not 1<=len(layers)<=1000: raise ValueError('Invalid layer list.')
+        names=[]
+        for l in layers:
+            if not isinstance(l,dict) or not isinstance(l.get('name'),str) or not l['name'].strip() or len(l['name'])>100 or not isinstance(l.get('visible'),bool):
+                raise ValueError('Invalid layer.')
+            if l['name'] in names: raise ValueError('Duplicate layer name.')
+            names.append(l['name'])
+        d.layers=copy.deepcopy(layers); d.active=data.get('active_layer','Layer1' if 'Layer1' in names else names[0])
+        if d.active not in names: raise ValueError('Active layer does not exist.')
+        objs=data.get('objects')
+        if not isinstance(objs,list) or len(objs)>100000: raise ValueError('Invalid object list.')
+        if any(not isinstance(o,dict) for o in objs): raise ValueError('Invalid object.')
+        d.objects=[d.prepare(o) for o in objs]
+        grid=data.get('grid',{'spacing':1.,'subdivisions':4})
+        from grid_snap import grid_values
+        if not isinstance(grid,dict): raise ValueError('Invalid grid preferences.')
+        d.grid_spacing,d.grid_subdivisions=grid_values(grid.get('spacing'),grid.get('subdivisions'))
+        d.saved=d.state(); return d
