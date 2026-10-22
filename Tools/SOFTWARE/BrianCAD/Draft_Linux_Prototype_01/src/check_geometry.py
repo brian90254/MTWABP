@@ -26,6 +26,7 @@ for bad in [float('nan'),float('inf'),-1]:
 a=Draft.__new__(Draft)
 a.objects=copy.deepcopy(objects); a.history=[]; a.future=[]; a.selected=0
 a.scale=100; a.origin=[400,300]; a.snap=Value(True); a.tool=Value('Line'); a.start=None
+a.grid_snap=Value(False); a.grid_spacing=1.; a.grid_subdivisions=4
 a.draw=lambda:None
 for p in [[-1,0],[.123,-.789],[1000,2000]]:
     assert distance(a.world(*a.screen(p)),p)<1e-10
