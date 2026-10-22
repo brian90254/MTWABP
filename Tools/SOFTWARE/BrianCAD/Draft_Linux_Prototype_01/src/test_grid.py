@@ -2,6 +2,7 @@
 import math
 import random
 import unittest
+from cad_document import Document
 from draft import (Draft, alignment_candidates, distance, grid_candidates,
                    grid_positions, grid_values, line_grid_candidates)
 
@@ -14,6 +15,11 @@ class Value:
 
 def editor():
     app = Draft.__new__(Draft)
+    app.doc = Document()
+    app.family = Value('Lines')
+    app.layer_status = Value('')
+    app.points = []; app.refs = []; app.path = None
+    app.mouse = None; app.marker = ''; app.box_start = None; app.box_end = None
     app.objects = []
     app.selected = None
     app.start = None
@@ -126,7 +132,7 @@ class GridTests(unittest.TestCase):
         self.assertEqual(app.snap_point([.26,.27]),([.26,.27],''))
         app.grid_snap=Value(True)
         self.assertEqual(app.snap_point([.26,.27])[1],'grid intersection')
-        app.tool=Value('Move'); app.selected=0
+        app.tool=Value('Move'); app.family=Value('Modify'); app.selected=0
         app.objects=[{'type':'line','a':[.26,.27],'b':[2,1]}]
         app.snap=Value(True)
         self.assertEqual(app.snap_point([.26,.27])[1],'grid intersection')
