@@ -4,6 +4,7 @@ import cad_geometry as g
 
 METHODS={
     'Select':['Select'],
+    'Trim':['Trim'],
     'Lines':['Two points','Connected points','Offset from line'],
     'Arcs':['Center + start + end','Three-point arc','Start tangent + end'],
     'Circles':['Center + diameter','Diameter endpoints','Three-point circle','Two tangent lines'],
@@ -20,7 +21,7 @@ LABELS={'x':'X','y':'Y','x2':'End X','y2':'End Y','x3':'Third X','y3':'Third Y',
 
 
 def fields_for(family,method):
-    if family=='Select': return []
+    if family in ('Select','Trim'): return []
     if family=='Modify': return ['x','y','dx','dy'] if method=='Move' else ['x','y','factor'] if method=='Scale' else ['x','y','angle']
     if family=='Splines': return ['x','y']
     if method=='Center + diameter': return ['x','y','diameter']

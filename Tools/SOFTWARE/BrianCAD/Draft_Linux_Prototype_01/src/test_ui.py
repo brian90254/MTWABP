@@ -85,6 +85,62 @@ class WorkflowTests(unittest.TestCase):
         a.undo(); self.assertEqual(len(a.objects),1)
         self.assertFalse(self.errors)
 
+    def trim_mouse(self,p,time=10000):
+        x,y=self.app.screen(p)
+        self.app.canvas.event_generate('<ButtonPress-1>',x=round(x),y=round(y),time=time)
+        self.app.canvas.event_generate('<ButtonRelease-1>',x=round(x),y=round(y),time=time+10)
+        self.root.update()
+
+    def test_trim_circle_with_selected_line_and_right_click_exit(self):
+        import math
+        a=self.app
+        a.doc.add([{'type':'circle','center':[0,0],'radius':1},
+                   {'type':'line','a':[0,-2],'b':[0,2]}])
+        a.selected={1}; a.scale=100; a.origin=[400,300]
+        boundary=a.objects[1]; self.choose('Trim')
+        self.assertEqual(a.trim_cutters,[boundary]); self.assertEqual(a.params,{})
+        history=len(a.doc.history)
+        self.trim_mouse([1,0])
+        self.assertEqual(a.objects[0]['type'],'arc')
+        self.assertAlmostEqual(a.objects[0]['sweep'],math.pi)
+        self.assertIs(a.objects[1],boundary); self.assertEqual(a.selected,{1})
+        self.assertEqual(len(a.doc.history),history+1)
+        self.trim_mouse([0,-1.5],12000)  # active boundary is protected
+        self.assertEqual(len(a.doc.history),history+1)
+        self.right_click(); self.assertEqual(a.family.get(),'Select')
+        a.undo(); self.assertEqual(a.objects[0]['type'],'circle')
+        self.assertFalse(self.errors)
+
+    def test_trim_repeated_targets_reindexes_boundaries_and_undo_exits(self):
+        a=self.app; a.scale=100; a.origin=[400,300]
+        a.doc.add([{'type':'line','a':[-3,0],'b':[3,0]},
+                   {'type':'line','a':[-3,.5],'b':[3,.5]},
+                   {'type':'circle','center':[0,0],'radius':1}])
+        a.selected={2}; boundary=a.objects[2]; self.choose('Trim')
+        before=a.doc.state(); history=len(a.doc.history)
+        self.trim_mouse([0,0]); self.assertEqual(len(a.objects),4)
+        self.assertEqual(a.selected,{3}); self.assertIs(a.objects[3],boundary)
+        self.trim_mouse([0,.5],12000); self.assertEqual(len(a.objects),5)
+        self.assertEqual(a.selected,{4}); self.assertIs(a.objects[4],boundary)
+        self.assertEqual(a.trim_cutters,[boundary]); self.assertEqual(a.family.get(),'Trim')
+        self.assertEqual(len(a.doc.history),history+2)
+        a.undo(); self.assertEqual(a.family.get(),'Select'); self.assertEqual(len(a.objects),4)
+        a.undo(); self.assertEqual(a.doc.state(),before)
+        a.redo(); self.assertEqual(len(a.objects),4)
+        self.assertFalse(self.errors)
+
+    def test_trim_promotes_partial_boundary_and_leaves_locked_target(self):
+        a=self.app; a.scale=100; a.origin=[400,300]
+        a.doc.add([{'type':'line','a':[-3,0],'b':[3,0],'locked':True},
+                   {'type':'circle','center':[0,0],'radius':1}])
+        a.selected=set(); a.doc.point_selection={1:{'radius'}}
+        self.choose('Trim'); self.assertEqual(a.selected,{1}); self.assertFalse(a.doc.point_selection)
+        before=a.doc.state(); self.trim_mouse([0,0])
+        self.assertEqual(a.doc.state(),before)
+        a.root.event_generate('<Escape>'); self.root.update()
+        self.assertEqual(a.family.get(),'Select'); self.assertFalse(a.trim_cutters)
+        self.assertFalse(self.errors)
+
     def test_all_tool_controls_and_tab_order(self):
         for family,methods in METHODS.items():
             for method in methods:

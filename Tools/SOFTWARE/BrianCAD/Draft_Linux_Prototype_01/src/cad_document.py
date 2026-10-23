@@ -114,6 +114,24 @@ class Document:
         start=len(self.objects); self.objects.extend(pending)
         self.selected=set(range(start,len(self.objects))); self.point_selection={}
 
+    def trim_object(self,index,boundary_ids,click):
+        from cad_trim import trim, BOUNDARIES
+        ids={i for i in boundary_ids if 0<=i<len(self.objects) and self.visible(i)
+             and self.objects[i]['type'] in BOUNDARIES}
+        if not ids: raise ValueError('Select cutting boundaries, then choose Trim.')
+        if index in ids: raise ValueError('Cutting boundaries cannot be trimmed while active.')
+        if not self.visible(index) or self.objects[index].get('locked',False):
+            raise ValueError('The trim target must be visible and unlocked.')
+        pieces=[self.prepare(o) for o in trim(self.objects[index],
+                                             [self.objects[i] for i in sorted(ids)],click)]
+        self.checkpoint()
+        self.objects[index:index+1]=pieces
+        shift=len(pieces)-1
+        def remap(i): return i if i<index else i+shift
+        self.selected={remap(i) for i in self.selected if i!=index}
+        self.point_selection={remap(i):keys for i,keys in self.point_selection.items() if i!=index}
+        return pieces
+
     def edit(self,index,obj):
         n=self.prepare(obj)
         self.checkpoint(); self.objects[index]=n

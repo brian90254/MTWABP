@@ -9,6 +9,7 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, simpledialog, font as tkfont
 import cad_geometry as geo
 import cad_selection as selection
+import cad_trim
 from cad_geometry import dist as distance, anchors, hit_distance
 from cad_document import Document, COLORS
 from cad_tools import METHODS, THREE, DEFAULTS, LABELS, fields_for, point_values, construct
@@ -47,7 +48,7 @@ class Draft:
             root.bind('<Control-'+key+'>',lambda e,f=action:self.shortcut(e,f))
             if root.tk.call('tk','windowingsystem')=='aqua':
                 root.bind('<Command-'+key+'>',lambda e,f=action:self.shortcut(e,f))
-        root.bind('<Escape>',lambda e:self.cancel())
+        root.bind('<Escape>',lambda e:self.return_to_select() if self.family.get()=='Trim' else self.cancel())
         self.draw()
 
     @property
@@ -141,7 +142,13 @@ class Draft:
         self.method_changed()
 
     def method_changed(self):
-        self.cancel(); self.configure_parameters()
+        self.cancel()
+        if self.family.get()=='Trim':
+            ids=set(self.selected)|set(self.doc.point_selection)
+            ids={i for i in ids if self.doc.visible(i) and self.objects[i]['type'] in cad_trim.BOUNDARIES}
+            self.trim_cutters=[self.objects[i] for i in sorted(ids)]
+            self.selected=ids; self.doc.point_selection={}
+        self.configure_parameters()
 
     def configure_parameters(self):
         for child in self.parameter_frame.winfo_children(): child.destroy()
@@ -168,7 +175,9 @@ class Draft:
             ttk.Button(actions,text='Apply / Create',command=self.apply_parameters).pack(side='left',padx=3)
         if self.family.get()=='Splines':
             ttk.Button(actions,text='Finish spline',command=self.finish).pack(side='left',padx=3)
-        if not fields: ttk.Label(self.parameter_frame,text='Select objects, then double-click to edit or choose a Modify method.').grid(row=0,column=0,sticky='w')
+        if not fields:
+            hint='Select cutting boundaries before choosing Trim; click a section to remove. Right-click exits.' if self.family.get()=='Trim' else 'Select objects, then double-click to edit or choose a Modify method.'
+            ttk.Label(self.parameter_frame,text=hint).grid(row=0,column=0,sticky='w')
         self.draw()
 
     def parameter_changed(self,key): self.last_parameter=key
@@ -315,6 +324,8 @@ class Draft:
     def click(self,e):
         self.cancel_snap_hover()
         self.canvas.focus_set(); raw=self.world(e.x,e.y)
+        if self.family.get()=='Trim':
+            self.trim_click(raw); return
         if self.family.get()=='Select':
             handle=self.selected_handle(raw); i=handle[1] if handle else self.hit(raw)
             extend=bool(e.state & 0x0001)
@@ -345,6 +356,22 @@ class Draft:
             self.points,self.refs,self.start=before
             self.error(str(ex))
         self.draw()
+
+    def trim_click(self,raw):
+        ids={i for i,o in enumerate(self.objects)
+             if any(o is boundary for boundary in getattr(self,'trim_cutters',[])) and self.doc.visible(i)}
+        if not ids:
+            self.error('Select cutting boundaries, then choose Trim.'); return
+        hits=[(distance(raw,selection.nearest_point(raw,o)),i)
+              for i,o in enumerate(self.objects)
+              if i not in ids and self.doc.visible(i) and not o.get('locked',False)
+              and selection.box_distance(raw,self.object_bounds(o))<=9/self.scale]
+        d,i=min(hits,default=(float('inf'),None))
+        if d>9/self.scale: return
+        try:
+            self.doc.trim_object(i,ids,selection.nearest_point(raw,self.objects[i]))
+            self.mouse=None; self.marker=''; self.refresh_layers(); self.draw()
+        except ValueError as ex: self.error(str(ex))
 
     def update_drag(self,e):
         if self.drag is None: return
@@ -488,6 +515,7 @@ class Draft:
 
     def cancel(self):
         self.cancel_snap_hover()
+        self.trim_cutters=[]
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
         self.box_start=None; self.box_end=None
         self.drag=None; self.drag_preview={}; self.drag_error=''
@@ -497,6 +525,9 @@ class Draft:
 
     def prompt(self):
         method=self.tool.get(); n=len(self.points)
+        if self.family.get()=='Trim':
+            count=len(getattr(self,'trim_cutters',[]))
+            return f'{count} active cutting boundaries | Click section to remove; right-click exits' if count else 'Select cutting boundaries, then choose Trim'
         if self.family.get()=='Select':
             if getattr(self,'drag',None) and self.drag['active']:
                 return self.drag_error or 'Drag selection; release to drop; Esc cancels'
@@ -597,8 +628,16 @@ class Draft:
         self.root.title((' |  ' if self.doc.dirty else '')+'BrianCAD - '+(os.path.basename(self.path) if self.path else 'Untitled'))
 
     def delete(self): self.doc.delete_selected(); self.cancel(); self.refresh_layers()
-    def undo(self): self.doc.undo(); self.cancel(); self.refresh_layers()
-    def redo(self): self.doc.redo(); self.cancel(); self.refresh_layers()
+    def undo(self):
+        self.doc.undo()
+        if self.family.get()=='Trim': self.return_to_select()
+        else: self.cancel()
+        self.refresh_layers()
+    def redo(self):
+        self.doc.redo()
+        if self.family.get()=='Trim': self.return_to_select()
+        else: self.cancel()
+        self.refresh_layers()
 
     def zoom(self,e,factor):
         self.cancel_snap_hover()
