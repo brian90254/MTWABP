@@ -72,7 +72,30 @@ Layer definitions, visibility, active layer, and grid preferences save with the 
 
 ## Selection and object editing
 
-Click an outline to select it. **Shift-click** toggles membership in a selection. Drag a box from blank space to select geometry fully contained in the box; Shift adds to the existing selection.
+Click an outline **or any of its handles** to select the whole object. A plain click on an already-selected handle also promotes its owner to whole-object selection; pressing and dragging that handle preserves the partial selection instead. **Shift-click** toggles whole-object membership.
+
+Drag a window from blank space in either direction:
+
+- Objects **wholly contained** in the window become whole-object selections; they are not decomposed into selected handles.
+- For other objects, only editable handles inside the window are selected. For example, a small window around a circle's right-hand radius point selects that handle, leaving its center fixed.
+- Shift adds the window's results to the existing selection. Whole-object selection takes precedence over that object's handle subset.
+
+Whole-object selections are highlighted orange. Selected handles are filled orange; unselected handles are hollow. The status bar separately counts whole objects and handles. Selection itself is transient and does not mark a drawing unsaved.
+
+With **Select** still active, press and drag a selected object or selected handle to move the entire current selection (including mixed whole-object and handle selections). The snapped point at the initial press becomes the movement handle. Snaps remain live during the drag, the drawing previews the result, and release commits it as **one undo step**. A small 4-pixel movement threshold separates clicks from drags. Escape discards the preview. Invalid deformations, such as collapsing a line or circle to zero size, leave the original drawing intact.
+
+Editable handles are distinct from snap points:
+
+| Geometry | Editable handles | Partial-handle behavior |
+| --- | --- | --- |
+| Line | Two endpoints | Selected endpoints move; unselected endpoints stay fixed |
+| Circle | Center and one radius point (initially positive X) | Radius handle changes radius and retains its picked direction; center handle translates the circle |
+| Arc | Center, start, through point, end | Rim handles reconstruct a circular arc through the three points; unselected rim points remain fixed. Center translates the arc. |
+| Ellipse | Center, positive-axis endpoints | Center translates it; axis handles change size/rotation while preserving perpendicular axes. Minor-axis movement is projected perpendicular to the major axis. |
+| Polygon | Vertices | Selected vertices move |
+| Spline | Fit or Bézier control points | Selected defining points move |
+
+Circles' four global horizontal/vertical **quadrants remain snap targets**, not four independent editable radius points. Midpoints are also snap targets rather than independent line endpoints. Moving a center handle necessarily moves the dependent curve. The explicit Modify tools still operate on whole-object selections; use Select-drag for handle deformation. Delete removes whole-object selections only.
 
 Double-click an object or choose **Edit objects...**. The editor exposes the first selected object's geometry and common attributes: layer, color, lock, line pattern, weight in inches, and control-point display. Polygons and splines expose a point list formatted as `x,y; x,y; ...`. Ellipses expose semi-axis lengths and rotation; arcs expose diameter, start angle, and signed sweep.
 
@@ -89,13 +112,13 @@ Choose **Modify**, then Move, Rotate, Scale, or Mirror. Set **Copy when transfor
 | Scale | Pivot, reference length, new length | Pivot X/Y, positive uniform Factor |
 | Mirror | Two points defining the reflection axis | Axis through X/Y at Angle |
 
-Scale is uniform; ellipses, circles, arcs, polygons, and spline definitions retain their analytic/control representation. Mirror reverses an arc's sweep correctly. There is currently no live transformed-object preview; the status bar describes the active pick stage.
+Scale is uniform; ellipses, circles, arcs, polygons, and spline definitions retain their analytic/control representation. Mirror reverses an arc's sweep correctly. The explicit Modify tools commit after their final pick without a live geometry preview; Select-drag provides a live movement preview.
 
 ## Grid, snaps, and view
 
 **Grid preferences...** sets major spacing (default 1 inch) and subdivisions (default 4, giving quarter-inch minor spacing). Major/minor lines remain anchored to the origin while zooming. Lines denser than 8 pixels are hidden without changing the logical snap spacing.
 
-**Snap to grid** is independent of **Show grid** and **Object snaps / alignment**. Snap priority within 9 screen pixels is: object anchors, existing line-segment/grid crossings, grid intersections, angular alignment, then individual grid lines. Grid-line snaps retain the other coordinate. Angular guides include all eight directions in 45-degree increments through the active line/move start point. Exact typed values are not rounded to snaps.
+**Snap to grid** is independent of **Show grid** and **Object snaps / alignment**. Snap priority within 9 screen pixels is: object anchors (including circle quadrants), existing line-segment/grid crossings, grid intersections, points **on an object**, angular alignment, then individual grid lines. Grid-line snaps retain the other coordinate. Angular guides include all eight directions in 45-degree increments through the active line/move start point. Exact typed values are not rounded to snaps. Hovering near a line or curve away from another snap point shows **on line** or **on curve** and projects onto its geometry. Line/circle/arc projections are analytic; ellipse/spline projections are refined numerically rather than snapping to rendered polyline chords. During Select-drag, moving objects are excluded from target snapping so the selection does not stick to its own previous position; other visible geometry and the origin/grid remain available.
 
 Wheel zooms around the pointer; middle-button drag pans; **Fit** frames visible geometry. Delete/Backspace removes unlocked selected objects while the canvas has focus. Control+Z / Control+Y undo/redo; Control+S saves; Control+O opens. macOS also supports the equivalent Command shortcuts. Trackpad panning may require a mouse with a middle button.
 
@@ -111,6 +134,6 @@ python3 -m unittest discover -s src -p 'test_*.py' -v
 python3 -m py_compile src/*.py
 ```
 
-The suite includes geometry/construction, layer/history, legacy and new JSON, grid, and Tkinter workflow tests. Tkinter tests skip if `DISPLAY` is unset (except on macOS, where Tk uses the native display). They were exercised on a temporary Linux X display, including actual layer double-click events, Tab traversal, parameter edits, object dialogs, and save/reopen. Visual inspection covered the drawing window and the layer/object dialogs. Native macOS testing is still needed.
+The suite includes geometry/construction, layer/history, legacy and new JSON, grid, and Tkinter workflow tests. Tkinter tests skip if `DISPLAY` is unset (except on macOS, where Tk uses the native display). They were exercised on a temporary Linux X display, including actual layer double-click events, Tab traversal, parameter edits, object dialogs, and save/reopen. Selection regressions additionally cover whole/partial windows, control deformations, immutable drag previews, snapping and final-release coordinates, cancellation, and one-step undo. Visual inspection covered the drawing window, layer/object dialogs, partial handle highlighting, and a live radius drag snapped to another circle quadrant. Native macOS testing is still needed.
 
 Deferred tools include trim/extend, fillets, dimensions, text, nonuniform scaling, and printing to scale. Splines use explicitly documented interpolation/control algorithms; this is not a claim of exact historical Vellum spline behavior.

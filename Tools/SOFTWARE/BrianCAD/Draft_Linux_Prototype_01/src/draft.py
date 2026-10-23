@@ -8,6 +8,7 @@ import tempfile
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, simpledialog
 import cad_geometry as geo
+import cad_selection as selection
 from cad_geometry import dist as distance, anchors, hit_distance
 from cad_document import Document, COLORS
 from cad_tools import METHODS, THREE, DEFAULTS, LABELS, fields_for, point_values, construct
@@ -30,6 +31,7 @@ class Draft:
         self.clockwise=tk.BooleanVar(value=False); self.copy_mode=tk.BooleanVar(value=False)
         self.status=tk.StringVar(); self.layer_status=tk.StringVar(); self.params={}; self.last_parameter=None
         self.layer_window=None; self.edit_window=None; self.box_start=None; self.box_end=None
+        self.drag=None; self.drag_preview={}; self.drag_error=''; self._bounds_cache={}
         root.title('BrianCAD'); root.geometry('1220x820'); root.minsize(850,620)
         self.build_ui(); self.configure_parameters()
         root.protocol('WM_DELETE_WINDOW',self.close)
@@ -47,7 +49,9 @@ class Draft:
     @property
     def selected(self): return self.doc.selected
     @selected.setter
-    def selected(self,v): self.doc.selected=set() if v is None else {v} if isinstance(v,int) else set(v)
+    def selected(self,v):
+        self.doc.selected=set() if v is None else {v} if isinstance(v,int) else set(v)
+        self.doc.point_selection={}
     @property
     def grid_spacing(self): return self.doc.grid_spacing
     @grid_spacing.setter
@@ -87,7 +91,7 @@ class Draft:
         ttk.Checkbutton(side,text='Snap to grid',variable=self.grid_snap).pack(anchor='w')
         ttk.Button(side,text='Grid preferences...',command=self.grid_dialog).pack(fill='x',pady=8)
         ttk.Label(side,textvariable=self.layer_status,wraplength=200).pack(anchor='w',pady=6)
-        ttk.Label(side,text='Shift-click: add/remove selection\nDrag empty area: select in box\nDouble-click: edit object\nWheel: zoom  |  Middle drag: pan\nEsc: cancel  |  Delete: delete\nSpline: Enter/right-click to finish',wraplength=205).pack(anchor='w',pady=8)
+        ttk.Label(side,text='Shift-click: add/remove\nDrag blank: window selection\nDrag selection: move\nDouble-click: edit\nWheel: zoom; middle drag: pan\nEsc: cancel; Delete: objects\nSpline: Enter/right-click finishes',wraplength=205).pack(anchor='w',pady=8)
         self.canvas=tk.Canvas(body,bg='white',highlightthickness=0)
         self.canvas.pack(fill='both',expand=True)
         for event,fn in [('<Configure>',lambda e:self.draw()),('<Motion>',self.motion),
@@ -165,12 +169,32 @@ class Draft:
     def world(self,x,y): return [(x-self.origin[0])/self.scale,(self.origin[1]-y)/self.scale]
     def screen(self,p): return [self.origin[0]+p[0]*self.scale,self.origin[1]-p[1]*self.scale]
 
-    def snap_point(self,p):
+    def object_bounds(self,o):
+        if not hasattr(self,'_bounds_cache'): self._bounds_cache={}
+        if len(self._bounds_cache)>2*len(self.objects)+32: self._bounds_cache.clear()
+        cached=self._bounds_cache.get(id(o))
+        if cached is None or cached[0] is not o:
+            cached=(o,selection.bounds(o)); self._bounds_cache[id(o)]=cached
+        return cached[1]
+
+    def on_object(self,p,ids):
+        candidates=[]; tolerance=9/self.scale
+        for i in ids:
+            o=self.objects[i]
+            if selection.box_distance(p,self.object_bounds(o))>tolerance: continue
+            q=selection.nearest_point(p,o)
+            if distance(p,q)<=tolerance:
+                candidates.append((q,'on line' if o['type']=='line' else 'on curve'))
+        return min(candidates,key=lambda v:distance(p,v[0]),default=None)
+
+    def snap_point(self,p,exclude=None):
         tolerance=9/self.scale
         def nearest(candidates):
             best=min(candidates,key=lambda v:distance(p,v[0]),default=None)
             return (list(best[0]),best[1]) if best and distance(p,best[0])<=tolerance else None
-        ids=[i for i in range(len(self.objects)) if self.doc.visible(i) and not (self.family.get()=='Modify' and i in self.selected)]
+        excluded=set(exclude or [])
+        if self.family.get()=='Modify': excluded.update(self.selected)
+        ids=[i for i in range(len(self.objects)) if self.doc.visible(i) and i not in excluded]
         if self.snap.get():
             candidates=[([0,0],'origin')]
             for i in ids: candidates.extend(anchors(self.objects[i]))
@@ -186,7 +210,10 @@ class Draft:
             if best: return best
             grid=grid_candidates(p,step); best=nearest(grid[:1])
             if best: return best
-        if self.snap.get() and self.start is not None and self.family.get() in ['Lines','Modify']:
+        if self.snap.get():
+            best=self.on_object(p,ids)
+            if best: return best
+        if self.snap.get() and self.start is not None and (self.family.get() in ['Lines','Modify'] or getattr(self,'drag',None)):
             best=nearest(alignment_candidates(p,self.start))
             if best: return best
         if grid:
@@ -195,10 +222,34 @@ class Draft:
         return p,''
 
     def hit(self,p,lines_only=False):
-        hits=[(hit_distance(p,o),i) for i,o in enumerate(self.objects)
-              if self.doc.visible(i) and (not lines_only or o['type']=='line')]
+        hits=[]; tolerance=9/self.scale
+        for i,o in enumerate(self.objects):
+            if not self.doc.visible(i) or (lines_only and o['type']!='line'): continue
+            # Control handles (including off-curve spline handles) select owners.
+            d=min((distance(p,q) for _,q in selection.controls(o)),default=float('inf'))
+            if not lines_only: d=min(d,min(distance(p,q) for q,_ in anchors(o)))
+            if selection.box_distance(p,self.object_bounds(o))<=tolerance:
+                d=min(d,distance(p,selection.nearest_point(p,o)))
+            hits.append((d,i))
         best=min(hits,default=(float('inf'),None))
-        return best[1] if best[0]*self.scale<=9 else None
+        return best[1] if best[0]<=tolerance else None
+
+    def selected_handle(self,p):
+        hits=[(distance(p,q),i,key,q) for i,keys in self.doc.point_selection.items()
+              if self.doc.visible(i) for key,q in selection.controls(self.objects[i]) if key in keys]
+        best=min(hits,key=lambda item:item[0],default=None)
+        return best if best and best[0]*self.scale<=9 else None
+
+    def drag_handle(self,p,owner):
+        if self.snap.get():
+            candidates=anchors(self.objects[owner])
+            best=min(candidates,key=lambda v:distance(p,v[0]))
+            if distance(p,best[0])*self.scale<=9: return list(best[0]),best[1]
+        if self.grid_snap.get() and self.objects[owner]['type']=='line':
+            candidates=line_grid_candidates(p,self.objects[owner],self.grid_spacing/self.grid_subdivisions)
+            best=min(candidates,key=lambda v:distance(p,v[0]),default=None)
+            if best and distance(p,best[0])*self.scale<=9: return list(best[0]),best[1]
+        return (selection.nearest_point(p,self.objects[owner]),'on object') if self.snap.get() else (list(p),'')
 
     def motion(self,e):
         self.mouse,self.marker=self.snap_point(self.world(e.x,e.y)); self.draw()
@@ -206,14 +257,24 @@ class Draft:
     def click(self,e):
         self.canvas.focus_set(); raw=self.world(e.x,e.y)
         if self.family.get()=='Select':
-            i=self.hit(raw); extend=bool(e.state & 0x0001)
+            handle=self.selected_handle(raw); i=handle[1] if handle else self.hit(raw)
+            extend=bool(e.state & 0x0001)
+            self.drag=None; self.drag_preview={}; self.drag_error=''
             if i is None:
                 self.box_start=raw; self.box_end=raw; self.box_extend=extend
-                if not extend: self.selected=set()
+                if not extend: self.doc.clear_selection()
             elif extend:
+                self.doc.point_selection.pop(i,None)
                 if i in self.selected: self.selected.remove(i)
                 else: self.selected.add(i)
-            else: self.selected={i}
+            else:
+                # Keep a picked point subset/group for a possible drag; a plain
+                # click is promoted to whole-owner selection on button release.
+                if i not in self.selected and not handle: self.selected={i}
+                source,label=(list(handle[3]),'control point') if handle else self.drag_handle(raw,i)
+                ids=set(self.doc.editable_selection())|set(self.doc.editable_point_selection())
+                self.drag={'owner':i,'raw':raw,'handle':source,'active':False,'ids':ids}
+                self.mouse,self.marker=source,label
             self.draw(); return
         if self.family.get()=='Modify' and not self.doc.editable_selection():
             self.error('Select visible, unlocked geometry first.'); return
@@ -225,22 +286,46 @@ class Draft:
             self.error(str(ex))
         self.draw()
 
+    def update_drag(self,e):
+        if self.drag is None: return
+        raw=self.world(e.x,e.y)
+        if distance(raw,self.drag['raw'])*self.scale>4: self.drag['active']=True
+        if not self.drag['active']: return
+        self.start=self.drag['handle']
+        desired=geo.add(self.drag['handle'],geo.sub(raw,self.drag['raw']))
+        target,label=self.snap_point(desired,exclude=self.drag['ids'])
+        self.mouse,self.marker=target,label
+        dx,dy=geo.sub(target,self.drag['handle'])
+        try:
+            self.drag_preview=self.doc.selection_updates(dx,dy); self.drag_error=''
+        except ValueError as ex:
+            self.drag_preview={}; self.drag_error=str(ex)
+
     def drag_select(self,e):
-        if self.box_start is not None:
+        if self.drag is not None:
+            self.update_drag(e); self.draw()
+        elif self.box_start is not None:
             self.box_end=self.world(e.x,e.y); self.draw()
 
     def release_select(self,e):
+        if self.drag is not None:
+            self.update_drag(e)
+            if self.drag['active']:
+                if self.drag_error: self.error(self.drag_error)
+                else: self.doc.commit_updates(self.drag_preview)
+            else:
+                self.selected={self.drag['owner']}
+            self.drag=None; self.drag_preview={}; self.drag_error=''; self.start=None
+            self.draw(); return
         if self.box_start is None: return
         a=self.box_start; b=self.world(e.x,e.y)
         if distance(a,b)*self.scale>4:
-            low=[min(a[i],b[i]) for i in (0,1)]; high=[max(a[i],b[i]) for i in (0,1)]
-            for i,o in enumerate(self.objects):
-                if self.doc.visible(i) and all(low[0]<=p[0]<=high[0] and low[1]<=p[1]<=high[1] for p in geo.path(o)):
-                    self.selected.add(i)
+            self.doc.select_window(a,b,extend=self.box_extend)
         self.box_start=None; self.box_end=None; self.draw()
 
     def double_click(self,e):
-        if self.family.get()=='Select': self.edit_dialog()
+        if self.family.get()=='Select':
+            self.cancel(); self.edit_dialog()
 
     def pick(self,p,raw=None):
         family=self.family.get(); method=self.tool.get(); raw=p if raw is None else raw
@@ -340,13 +425,18 @@ class Draft:
 
     def cancel(self):
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
-        self.box_start=None; self.box_end=None; self.draw()
+        self.box_start=None; self.box_end=None
+        self.drag=None; self.drag_preview={}; self.drag_error=''
+        self.draw()
 
     def error(self,text): messagebox.showerror('BrianCAD',text,parent=self.root)
 
     def prompt(self):
         method=self.tool.get(); n=len(self.points)
-        if self.family.get()=='Select': return 'Click or box-select; Shift adds/removes; double-click edits'
+        if self.family.get()=='Select':
+            if getattr(self,'drag',None) and self.drag['active']:
+                return self.drag_error or 'Drag selection; release to drop; Esc cancels'
+            return 'Click: whole object | box: whole objects / partial handles | drag: move'
         if self.family.get()=='Modify':
             prompts={'Move':['Pick reference point','Pick destination'], 'Rotate':['Pick pivot','Pick reference direction','Pick new direction'],
                      'Scale':['Pick pivot','Pick reference length','Pick new length'], 'Mirror':['Pick first axis point','Pick second axis point']}
@@ -404,12 +494,17 @@ class Draft:
         x,y=self.origin
         c.create_line(0,y,w,y,fill='#cbd2db'); c.create_line(x,0,x,h,fill='#cbd2db')
         c.create_text(x+10,y+10,text='0,0',anchor='nw',fill='#8b929a')
-        for i,o in enumerate(self.objects):
+        for i,original in enumerate(self.objects):
             if not self.doc.visible(i): continue
+            o=getattr(self,'drag_preview',{}).get(i,original)
             self.draw_object(o,color='#d08213' if i in self.selected else None)
-            if i in self.selected or o.get('controls'):
-                for p,_ in anchors(o):
-                    a,b=self.screen(p); c.create_rectangle(a-3,b-3,a+3,b+3,outline='#d08213',fill='#fff2c9')
+            partial=self.doc.point_selection.get(i,set())
+            if i in self.selected or partial or o.get('controls'):
+                for key,p in selection.controls(o):
+                    a,b=self.screen(p)
+                    chosen=i in self.selected or key in partial
+                    c.create_rectangle(a-4,b-4,a+4,b+4,outline='#b66b00' if chosen else '#708296',
+                                       fill='#eaa23d' if chosen else 'white')
         preview=self.preview()
         if preview: self.draw_object(preview,color='#708296',dash=(5,3))
         if self.family.get()=='Splines' and self.points:
@@ -417,7 +512,7 @@ class Draft:
             if len(coords)>=4: c.create_line(*coords,fill='#b0becb',dash=(2,4))
             for p in self.points:
                 a,b=self.screen(p); c.create_rectangle(a-3,b-3,a+3,b+3,outline='#708296')
-        if self.start is not None and self.family.get() in ['Lines','Modify']:
+        if self.start is not None and (self.family.get() in ['Lines','Modify'] or getattr(self,'drag',None)):
             a,b=self.screen(self.start)
             c.create_line(0,b,w,b,fill='#b8cddd',dash=(3,5)); c.create_line(a,0,a,h,fill='#b8cddd',dash=(3,5))
             if self.marker in ['45°','135°']:
@@ -430,7 +525,8 @@ class Draft:
             c.create_rectangle(*self.screen(self.box_start),*self.screen(self.box_end),outline='#397cc1',dash=(4,3))
         hidden=' (dense lines hidden)' if self.grid.get() and (not major_visible or (self.grid_subdivisions>1 and not minor_visible)) else ''
         pos='' if self.mouse is None else f' | X {self.mouse[0]:.4f} Y {self.mouse[1]:.4f}'
-        self.status.set(f'{self.tool.get()}  |  {self.prompt()} | {len(self.selected)} selected | grid {self.grid_spacing:g}/{self.grid_subdivisions}{hidden}{pos}')
+        point_count=sum(len(keys) for keys in self.doc.point_selection.values())
+        self.status.set(f'{self.tool.get()}  |  {self.prompt()} | {len(self.selected)} objects + {point_count} handles selected | grid {self.grid_spacing:g}/{self.grid_subdivisions}{hidden}{pos}')
         self.layer_status.set('Active layer: '+self.doc.active)
         self.root.title((' |  ' if self.doc.dirty else '')+'BrianCAD - '+(os.path.basename(self.path) if self.path else 'Untitled'))
 
