@@ -160,7 +160,10 @@ class GridTests(unittest.TestCase):
         vertical=[(coords[0],opts['fill']) for coords,opts in app.canvas.lines
                   if coords[0]==coords[2] and coords[1]==0 and coords[3]==400]
         self.assertIn((350.,'#bcc8d5'),vertical)  # major: one inch at 100 px/in
-        self.assertIn((275.,'#e4e9ef'),vertical)  # minor: one quarter inch
+        self.assertIn((275.,'#bcc8d5'),vertical)  # same color, one quarter inch
+        major=next(opts for coords,opts in app.canvas.lines if coords==(350.,0,350.,400))
+        minor=next(opts for coords,opts in app.canvas.lines if coords==(275.,0,275.,400))
+        self.assertEqual(major['dash'],(2,3)); self.assertEqual(minor['dash'],(1,9))
         app.scale=.01; app.draw()
         self.assertEqual(len(app.canvas.lines),2)  # axes only; no dense loop
         self.assertIn('dense lines hidden', app.status.get())

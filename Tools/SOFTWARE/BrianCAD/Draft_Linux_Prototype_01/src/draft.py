@@ -6,7 +6,7 @@ import math
 import os
 import tempfile
 import tkinter as tk
-from tkinter import ttk, filedialog, messagebox, simpledialog
+from tkinter import ttk, filedialog, messagebox, simpledialog, font as tkfont
 import cad_geometry as geo
 import cad_selection as selection
 from cad_geometry import dist as distance, anchors, hit_distance
@@ -14,6 +14,10 @@ from cad_document import Document, COLORS
 from cad_tools import METHODS, THREE, DEFAULTS, LABELS, fields_for, point_values, construct
 from grid_snap import grid_values, grid_positions, grid_candidates, line_grid_candidates, alignment_candidates
 
+
+SNAP_HOVER_MS=1200
+GRID_COLOR='#bcc8d5'
+SNAP_LABEL_COLOR='#626a73'
 
 def validate(data):
     """Compatibility entry point for the first prototype's object-only validator."""
@@ -25,6 +29,10 @@ class Draft:
         self.root=root; self.doc=Document(); self.path=None
         self.scale=90.; self.origin=[470.,320.]; self.pan=None
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
+        self._snap_hover_job=None; self._snap_hover_state=None; self._snap_label_visible=False
+        self.snap_label_font=tkfont.nametofont('TkDefaultFont').copy()
+        font_size=self.snap_label_font.cget('size')
+        self.snap_label_font.configure(size=max(8,font_size-1) if font_size>0 else min(-8,font_size+2))
         self.family=tk.StringVar(value='Select'); self.tool=tk.StringVar(value='Select')
         self.color=tk.StringVar(value=COLORS['Black']); self.snap=tk.BooleanVar(value=True)
         self.grid=tk.BooleanVar(value=True); self.grid_snap=tk.BooleanVar(value=True)
@@ -101,6 +109,8 @@ class Draft:
                          ('<Delete>',lambda e:self.delete()),('<BackSpace>',lambda e:self.delete()),
                          ('<Return>',lambda e:self.finish()),('<Button-3>',lambda e:self.finish())]:
             self.canvas.bind(event,fn)
+        self.canvas.bind('<Leave>',self.leave_canvas)
+        self.canvas.bind('<Destroy>',lambda e:self.cancel_snap_hover())
         self.canvas.bind('<MouseWheel>',lambda e:self.zoom(e,1.15 if e.delta>0 else 1/1.15))
         if self.root.tk.call('tk','windowingsystem')!='aqua':
             self.canvas.bind('<Button-4>',lambda e:self.zoom(e,1.15))
@@ -251,10 +261,33 @@ class Draft:
             if best and distance(p,best[0])*self.scale<=9: return list(best[0]),best[1]
         return (selection.nearest_point(p,self.objects[owner]),'on object') if self.snap.get() else (list(p),'')
 
+    def cancel_snap_hover(self):
+        job=getattr(self,'_snap_hover_job',None)
+        if job is not None:
+            self.root.after_cancel(job)
+        self._snap_hover_job=None; self._snap_hover_state=None; self._snap_label_visible=False
+
+    def track_snap_hover(self,e):
+        state=(e.x,e.y,tuple(self.mouse) if self.mouse is not None else None,self.marker)
+        if state==self._snap_hover_state: return
+        self.cancel_snap_hover()
+        self._snap_hover_state=state
+        if self.mouse is None or not self.marker: return
+        def show():
+            self._snap_hover_job=None
+            current=(tuple(self.mouse) if self.mouse is not None else None,self.marker)
+            if self._snap_hover_state==state and current==state[2:]:
+                self._snap_label_visible=True; self.draw()
+        self._snap_hover_job=self.root.after(SNAP_HOVER_MS,show)
+
+    def leave_canvas(self,e):
+        self.cancel_snap_hover(); self.draw()
+
     def motion(self,e):
-        self.mouse,self.marker=self.snap_point(self.world(e.x,e.y)); self.draw()
+        self.mouse,self.marker=self.snap_point(self.world(e.x,e.y)); self.track_snap_hover(e); self.draw()
 
     def click(self,e):
+        self.cancel_snap_hover()
         self.canvas.focus_set(); raw=self.world(e.x,e.y)
         if self.family.get()=='Select':
             handle=self.selected_handle(raw); i=handle[1] if handle else self.hit(raw)
@@ -275,6 +308,7 @@ class Draft:
                 ids=set(self.doc.editable_selection())|set(self.doc.editable_point_selection())
                 self.drag={'owner':i,'raw':raw,'handle':source,'active':False,'ids':ids}
                 self.mouse,self.marker=source,label
+                self.track_snap_hover(e)
             self.draw(); return
         if self.family.get()=='Modify' and not self.doc.editable_selection():
             self.error('Select visible, unlocked geometry first.'); return
@@ -295,6 +329,7 @@ class Draft:
         desired=geo.add(self.drag['handle'],geo.sub(raw,self.drag['raw']))
         target,label=self.snap_point(desired,exclude=self.drag['ids'])
         self.mouse,self.marker=target,label
+        self.track_snap_hover(e)
         dx,dy=geo.sub(target,self.drag['handle'])
         try:
             self.drag_preview=self.doc.selection_updates(dx,dy); self.drag_error=''
@@ -305,6 +340,7 @@ class Draft:
         if self.drag is not None:
             self.update_drag(e); self.draw()
         elif self.box_start is not None:
+            self.cancel_snap_hover()
             self.box_end=self.world(e.x,e.y); self.draw()
 
     def release_select(self,e):
@@ -387,6 +423,7 @@ class Draft:
             self.error(str(ex))
 
     def create_object(self,points):
+        self.cancel_snap_hover()
         obj=construct(self.tool.get(),points,self.values(),self.refs,self.clockwise.get())
         obj['color']=self.color.get(); self.doc.add([obj])
         end=list(points[-1]); connected=self.tool.get()=='Connected points'
@@ -424,6 +461,7 @@ class Draft:
         elif self.tool.get()=='Connected points': self.cancel()
 
     def cancel(self):
+        self.cancel_snap_hover()
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
         self.box_start=None; self.box_end=None
         self.drag=None; self.drag_preview={}; self.drag_error=''
@@ -490,7 +528,7 @@ class Draft:
                         if not major and i%self.grid_subdivisions==0: continue
                         q=self.screen([i*spacing,0] if axis==0 else [0,i*spacing])
                         coords=(q[0],0,q[0],h) if axis==0 else (0,q[1],w,q[1])
-                        c.create_line(*coords,fill='#bcc8d5' if major else '#e4e9ef',dash=(2,3) if major else (1,4))
+                        c.create_line(*coords,fill=GRID_COLOR,dash=(2,3) if major else (1,9))
         x,y=self.origin
         c.create_line(0,y,w,y,fill='#cbd2db'); c.create_line(x,0,x,h,fill='#cbd2db')
         c.create_text(x+10,y+10,text='0,0',anchor='nw',fill='#8b929a')
@@ -519,8 +557,10 @@ class Draft:
                 slope=-1 if self.marker=='45°' else 1
                 c.create_line(0,b-slope*a,w,b+slope*(w-a),fill='#9dbcd5',dash=(3,5))
         if self.mouse is not None and self.marker:
-            a,b=self.screen(self.mouse); c.create_rectangle(a-5,b-5,a+5,b+5,outline='#bf7300',width=2)
-            c.create_text(a+12,b-14,text=self.marker,anchor='w',fill='#9a5b00')
+            a,b=self.screen(self.mouse); c.create_rectangle(a-5,b-5,a+5,b+5,outline='#bf7300',width=2,tags=('snap-marker',))
+            if getattr(self,'_snap_label_visible',False):
+                c.create_text(a+12,b-14,text=self.marker,anchor='w',fill=SNAP_LABEL_COLOR,
+                              font=self.snap_label_font,tags=('snap-label',))
         if self.box_start is not None and self.box_end is not None:
             c.create_rectangle(*self.screen(self.box_start),*self.screen(self.box_end),outline='#397cc1',dash=(4,3))
         hidden=' (dense lines hidden)' if self.grid.get() and (not major_visible or (self.grid_subdivisions>1 and not minor_visible)) else ''
@@ -535,10 +575,13 @@ class Draft:
     def redo(self): self.doc.redo(); self.cancel(); self.refresh_layers()
 
     def zoom(self,e,factor):
+        self.cancel_snap_hover()
         p=self.world(e.x,e.y); self.scale=max(.01,min(100000,self.scale*factor))
-        self.origin=[e.x-p[0]*self.scale,e.y+p[1]*self.scale]; self.draw()
-    def pan_start(self,e): self.pan=[e.x,e.y]
+        self.origin=[e.x-p[0]*self.scale,e.y+p[1]*self.scale]; self.motion(e)
+    def pan_start(self,e):
+        self.cancel_snap_hover(); self.pan=[e.x,e.y]; self.draw()
     def pan_move(self,e):
+        self.cancel_snap_hover()
         if self.pan:
             self.origin[0]+=e.x-self.pan[0]; self.origin[1]+=e.y-self.pan[1]
             self.pan=[e.x,e.y]; self.draw()
@@ -739,7 +782,8 @@ class Draft:
             self.doc=doc; self.path=path; self.cancel(); self.refresh_layers(); self.fit()
         except (OSError,ValueError,TypeError,KeyError,OverflowError) as ex: self.error(str(ex))
     def close(self):
-        if self.discard(): self.root.destroy()
+        if self.discard():
+            self.cancel_snap_hover(); self.root.destroy()
 
 
 if __name__=='__main__':
