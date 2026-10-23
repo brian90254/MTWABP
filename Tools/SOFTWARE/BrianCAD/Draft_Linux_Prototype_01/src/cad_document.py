@@ -2,6 +2,7 @@
 import copy
 import json
 from cad_geometry import validate_geometry, transform
+from cad_selection import controls, move_controls, wholly_inside, in_box
 
 COLORS={'Black':'#202b36','Blue':'#2465d8','Green':'#198548','Red':'#c44236'}
 
@@ -13,7 +14,7 @@ def default_layers():
 class Document:
     def __init__(self):
         self.objects=[]; self.layers=default_layers(); self.active='Layer1'
-        self.selected=set(); self.history=[]; self.future=[]
+        self.selected=set(); self.point_selection={}; self.history=[]; self.future=[]
         self.grid_spacing=1.; self.grid_subdivisions=4
         self.saved=self.state()
 
@@ -30,7 +31,7 @@ class Document:
     def restore(self,state):
         self.objects=copy.deepcopy(state['objects']); self.layers=copy.deepcopy(state['layers'])
         self.active=state['active_layer']; self.grid_spacing=state['grid']['spacing']
-        self.grid_subdivisions=state['grid']['subdivisions']; self.selected=set()
+        self.grid_subdivisions=state['grid']['subdivisions']; self.clear_selection()
 
     def undo(self):
         if self.history:
@@ -45,6 +46,49 @@ class Document:
 
     def editable_selection(self):
         return sorted(i for i in self.selected if self.visible(i) and not self.objects[i].get('locked',False))
+
+    def clear_selection(self):
+        self.selected=set(); self.point_selection={}
+
+    def prune_selection(self):
+        self.selected={i for i in self.selected if i<len(self.objects) and self.visible(i)}
+        self.point_selection={i:set(keys)&{key for key,_ in controls(self.objects[i])}
+                              for i,keys in self.point_selection.items()
+                              if i<len(self.objects) and i not in self.selected and self.visible(i)}
+        self.point_selection={i:keys for i,keys in self.point_selection.items() if keys}
+
+    def select_window(self,a,b,extend=False):
+        box=[min(a[0],b[0]),min(a[1],b[1]),max(a[0],b[0]),max(a[1],b[1])]
+        if not extend: self.clear_selection()
+        for i,obj in enumerate(self.objects):
+            if not self.visible(i): continue
+            if wholly_inside(obj,box):
+                self.selected.add(i); self.point_selection.pop(i,None)
+            elif i not in self.selected:
+                keys={key for key,p in controls(obj) if in_box(p,box)}
+                if keys: self.point_selection.setdefault(i,set()).update(keys)
+
+    def editable_point_selection(self):
+        return {i:keys for i,keys in self.point_selection.items()
+                if i not in self.selected and self.visible(i) and not self.objects[i].get('locked',False)}
+
+    def selection_updates(self,dx,dy):
+        if abs(dx)<1e-12 and abs(dy)<1e-12: return {}
+        updates={i:self.prepare(transform(self.objects[i],'Move',dx=dx,dy=dy))
+                 for i in self.editable_selection()}
+        for i,keys in self.editable_point_selection().items():
+            updates[i]=self.prepare(move_controls(self.objects[i],keys,dx,dy))
+        return updates
+
+    def commit_updates(self,updates):
+        pending={i:self.prepare(obj) for i,obj in updates.items()}
+        if not any(obj!=self.objects[i] for i,obj in pending.items()): return False
+        self.checkpoint()
+        for i,obj in pending.items(): self.objects[i]=obj
+        return True
+
+    def move_selection(self,dx,dy):
+        return self.commit_updates(self.selection_updates(dx,dy))
 
     def prepare(self,obj):
         n=copy.deepcopy(obj)
@@ -68,17 +112,18 @@ class Document:
         for l in self.layers:
             if l['name']==self.active: l['visible']=True
         start=len(self.objects); self.objects.extend(pending)
-        self.selected=set(range(start,len(self.objects)))
+        self.selected=set(range(start,len(self.objects))); self.point_selection={}
 
     def edit(self,index,obj):
         n=self.prepare(obj)
         self.checkpoint(); self.objects[index]=n
+        self.point_selection.pop(index,None)
         if not self.visible(index): self.selected.discard(index)
 
     def delete_selected(self):
         ids=set(self.editable_selection())
         if not ids: return
-        self.checkpoint(); self.objects=[o for i,o in enumerate(self.objects) if i not in ids]; self.selected=set()
+        self.checkpoint(); self.objects=[o for i,o in enumerate(self.objects) if i not in ids]; self.clear_selection()
 
     def transform_selected(self,mode,copy_objects=False,**kwargs):
         ids=self.editable_selection()
@@ -120,7 +165,7 @@ class Document:
         self.checkpoint()
         for l in self.layers:
             if l['name']==name: l['visible']=not l['visible']
-        self.selected={i for i in self.selected if self.visible(i)}
+        self.prune_selection()
 
     def delete_layer(self,name):
         if len(self.layers)==1: raise ValueError('Keep at least one layer.')
@@ -131,7 +176,7 @@ class Document:
             if o['layer']==name: o['layer']=target
         self.layers=[l for l in self.layers if l['name']!=name]
         if self.active==name: self.active=target
-        self.selected={i for i in self.selected if self.visible(i)}
+        self.prune_selection()
 
     def payload(self): return dict(self.state(),format='briancad-2',units='inches')
 

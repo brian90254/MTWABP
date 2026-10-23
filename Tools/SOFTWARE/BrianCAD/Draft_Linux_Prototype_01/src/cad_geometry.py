@@ -52,7 +52,9 @@ def arc_three(a,b,c):
     o=circle_three(a,b,c); start=angle(o['center'],a)
     end=(angle(o['center'],c)-start)%TAU
     mid=(angle(o['center'],b)-start)%TAU
-    return dict(o,type='arc',start=start,sweep=end if mid<end else end-TAU)
+    sweep=end if mid<end else end-TAU
+    through=mid if sweep>0 else mid-TAU
+    return dict(o,type='arc',start=start,sweep=sweep,through_fraction=through/sweep)
 
 
 def arc_tangent(start,direction,end):
@@ -158,9 +160,16 @@ def anchors(o):
     kind=o['type']
     if kind=='line':
         return [(o['a'],'endpoint'),(o['b'],'endpoint'),(mul(add(o['a'],o['b']),.5),'midpoint')]
-    if kind=='circle': return [(o['center'],'center')]+[(polar(o['center'],o['radius'],i*math.pi/2),'quadrant') for i in range(4)]
+    if kind=='circle':
+        pts=[(o['center'],'center')]+[(polar(o['center'],o['radius'],i*math.pi/2),'quadrant') for i in range(4)]
+        if abs(o.get('handle_angle',0.) % (math.pi/2))>1e-10:
+            pts.append((polar(o['center'],o['radius'],o['handle_angle']),'radius handle'))
+        return pts
     if kind=='arc':
-        return [(o['center'],'center')]+[(polar(o['center'],o['radius'],o['start']+o['sweep']*t),label) for t,label in [(0,'endpoint'),(.5,'midpoint'),(1,'endpoint')]]
+        pts=[(o['center'],'center')]+[(polar(o['center'],o['radius'],o['start']+o['sweep']*t),label) for t,label in [(0,'endpoint'),(.5,'midpoint'),(1,'endpoint')]]
+        if abs(o.get('through_fraction',.5)-.5)>1e-10:
+            pts.append((polar(o['center'],o['radius'],o['start']+o['sweep']*o['through_fraction']),'through point'))
+        return pts
     if kind=='ellipse':
         pts=path(o,4)
         return [(o['center'],'center')]+[(p,'axis endpoint') for p in pts[:-1]]
@@ -205,6 +214,9 @@ def transform(o,mode,pivot=(0,0),dx=0,dy=0,angle=0,factor=1):
     if mode=='Scale':
         for k in ('radius','rx','ry'):
             if k in n: n[k]*=factor
+    if o['type']=='circle':
+        if mode=='Rotate': n['handle_angle']=o.get('handle_angle',0.)+a
+        elif mode=='Mirror': n['handle_angle']=2*a-o.get('handle_angle',0.)
     if o['type']=='arc':
         if mode=='Rotate': n['start']+=a
         elif mode=='Mirror': n['start']=2*a-o['start']; n['sweep']=-o['sweep']
@@ -230,9 +242,12 @@ def validate_geometry(o):
         for key in (('rx','ry') if kind=='ellipse' else ('radius',)):
             number(o.get(key))
             if o[key]<EPS: raise ValueError('Radii must be positive.')
+        if kind=='circle': number(o.get('handle_angle',0.))
         if kind=='ellipse': number(o.get('angle'))
         if kind=='arc':
             number(o.get('start')); number(o.get('sweep'))
+            number(o.get('through_fraction',.5))
+            if not 0<o.get('through_fraction',.5)<1: raise ValueError('Arc through fraction must lie between its endpoints.')
             if not EPS<=abs(o['sweep'])<=TAU+EPS: raise ValueError('Arc sweep must be between 0 and 360 degrees, excluding zero.')
     elif kind in ('polygon','spline'):
         pts=o.get('points')
