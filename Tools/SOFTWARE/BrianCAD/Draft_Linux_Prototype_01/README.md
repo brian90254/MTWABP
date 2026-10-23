@@ -70,6 +70,16 @@ Collinear or coincident points and ambiguous tangent cases show an error instead
 
 Layer definitions, visibility, active layer, and grid preferences save with the drawing and participate in undo/redo.
 
+## Trim
+
+1. With **Select**, select one or more cutting boundaries, then choose **Trim** in the toolbox. Selected handles promote their whole owning object to a boundary. The active boundaries stay highlighted orange.
+2. Click directly on the portion of a line, circle, or arc to remove. The clicked interval between crossings is removed; the retained pieces keep their layer, pen settings, and other attributes. Active boundaries remain unchanged and available for repeated clicks on other targets.
+3. **Right-click or Escape** returns to Select. Each successful click is one undo step. Undo/redo exits Trim; reselect boundaries to start another trim session.
+
+For example, select a line crossing a circle, choose Trim, and click the unwanted side of the circle to leave an arc. Alternatively, select the circle and click the middle of a crossing line to leave two outside segments. Clicking an outside segment instead removes that end up to the nearest crossing; click the other outside section separately if desired. Multiple boundaries divide a target into intervals, and only the clicked interval is removed.
+
+This version trims **lines, circles, and arcs** using exact intersections. Lines, circles, arcs, and polygon edges can be cutting boundaries; other selected types are ignored. Lines and arcs use their **finite drawn extents**, without automatic extension. Hidden geometry is ignored. Locked objects can be boundaries but cannot be trimmed. Ellipse, spline, and polygon targets are not supported yet. Coincident curves, circular tangent touches, and targets with no usable crossing produce no geometry/history changes. A closed circle requires at least two distinct crossings.
+
 ## Selection and object editing
 
 Click an outline **or any of its handles** to select the whole object. A plain click on an already-selected handle also promotes its owner to whole-object selection; pressing and dragging that handle preserves the partial selection instead. **Shift-click** toggles whole-object membership.
