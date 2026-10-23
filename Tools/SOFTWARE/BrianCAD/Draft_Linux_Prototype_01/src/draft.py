@@ -15,7 +15,7 @@ from cad_tools import METHODS, THREE, DEFAULTS, LABELS, fields_for, point_values
 from grid_snap import grid_values, grid_positions, grid_candidates, line_grid_candidates, alignment_candidates
 
 
-SNAP_HOVER_MS=1200
+SNAP_HOVER_MS=600
 GRID_COLOR='#bcc8d5'
 SNAP_LABEL_COLOR='#626a73'
 
@@ -99,15 +99,25 @@ class Draft:
         ttk.Checkbutton(side,text='Snap to grid',variable=self.grid_snap).pack(anchor='w')
         ttk.Button(side,text='Grid preferences...',command=self.grid_dialog).pack(fill='x',pady=8)
         ttk.Label(side,textvariable=self.layer_status,wraplength=200).pack(anchor='w',pady=6)
-        ttk.Label(side,text='Shift-click: add/remove\nDrag blank: window selection\nDrag selection: move\nDouble-click: edit\nWheel: zoom; middle drag: pan\nEsc: cancel; Delete: objects\nSpline: Enter/right-click finishes',wraplength=205).pack(anchor='w',pady=8)
+        ttk.Label(side,text='Shift-click: add/remove\nDrag blank: window selection\nDrag selection: move\nDouble-click: edit\nWheel: zoom; middle drag: pan\nEsc: cancel; Delete: objects\nRight-click: Select\nSpline: Enter finishes',wraplength=205).pack(anchor='w',pady=8)
         self.canvas=tk.Canvas(body,bg='white',highlightthickness=0)
         self.canvas.pack(fill='both',expand=True)
+        aqua=self.root.tk.call('tk','windowingsystem')=='aqua'
+        # Tk 8.6 Aqua swaps middle/right; Tk 8.7+ uses the standard mapping.
+        legacy_aqua=aqua and int(self.root.tk.call('package','vcompare',
+            self.root.tk.call('package','provide','Tk'),'8.7a0'))<0
+        middle_button=3 if legacy_aqua else 2
+        right_button=2 if legacy_aqua else 3
+        self.root.bind(f'<Button-{right_button}>',self.return_to_select)
+        if aqua:
+            self.canvas.bind('<Control-Button-1>',self.return_to_select)
+            self.root.bind('<Control-Button-1>',self.return_to_select)
         for event,fn in [('<Configure>',lambda e:self.draw()),('<Motion>',self.motion),
                          ('<ButtonPress-1>',self.click),('<B1-Motion>',self.drag_select),
                          ('<ButtonRelease-1>',self.release_select),('<Double-Button-1>',self.double_click),
-                         ('<ButtonPress-2>',self.pan_start),('<B2-Motion>',self.pan_move),
+                         (f'<ButtonPress-{middle_button}>',self.pan_start),(f'<B{middle_button}-Motion>',self.pan_move),
                          ('<Delete>',lambda e:self.delete()),('<BackSpace>',lambda e:self.delete()),
-                         ('<Return>',lambda e:self.finish()),('<Button-3>',lambda e:self.finish())]:
+                         ('<Return>',lambda e:self.finish())]:
             self.canvas.bind(event,fn)
         self.canvas.bind('<Leave>',self.leave_canvas)
         self.canvas.bind('<Destroy>',lambda e:self.cancel_snap_hover())
@@ -119,6 +129,12 @@ class Draft:
     def shortcut(self,event,fn):
         if event.widget.winfo_class() in ['Entry','TEntry','Text','TCombobox'] and fn in [self.undo,self.redo]: return
         fn(); return 'break'
+
+    def return_to_select(self,event=None):
+        self.pan=None
+        self.family.set('Select'); self.family_changed()
+        self.canvas.focus_set()
+        return 'break'
 
     def family_changed(self):
         self.tool.set(METHODS[self.family.get()][0]); self.method_box.configure(values=METHODS[self.family.get()])
@@ -479,7 +495,7 @@ class Draft:
             prompts={'Move':['Pick reference point','Pick destination'], 'Rotate':['Pick pivot','Pick reference direction','Pick new direction'],
                      'Scale':['Pick pivot','Pick reference length','Pick new length'], 'Mirror':['Pick first axis point','Pick second axis point']}
             return prompts[method][min(n,len(prompts[method])-1)]
-        if self.family.get()=='Splines': return f'{n} points  |  pick next; Enter/right-click finishes'
+        if self.family.get()=='Splines': return f'{n} points  |  pick next; Enter finishes'
         if method=='Offset from line': return 'Pick source line' if not n else 'Pick offset side/distance, or enter Offset and Apply'
         if method=='Start tangent + end': return 'Pick start on tangent line (line direction defines tangent)' if not n else 'Pick arc endpoint'
         if method=='Two tangent lines': return 'Pick exact first contact on a line' if not n else 'Pick second tangent line near desired contact'

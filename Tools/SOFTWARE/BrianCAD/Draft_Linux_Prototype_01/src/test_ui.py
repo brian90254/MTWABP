@@ -39,6 +39,30 @@ class WorkflowTests(unittest.TestCase):
             if found: return found
         return None
 
+    def right_click(self):
+        legacy=(self.root.tk.call('tk','windowingsystem')=='aqua' and
+                int(self.root.tk.call('package','vcompare',
+                    self.root.tk.call('package','provide','Tk'),'8.7a0'))<0)
+        self.app.canvas.event_generate(f'<Button-{2 if legacy else 3}>',x=100,y=100)
+        self.root.update()
+
+    def test_right_click_cancels_construction_and_preserves_selection(self):
+        a=self.app; self.choose('Lines'); a.pick([0,0]); a.pick([2,0])
+        a.selected={0}; before=a.doc.state(); history=len(a.doc.history)
+        for family,points in [('Lines',[[3,3]]),('Splines',[[0,0],[1,2],[2,0]])]:
+            self.choose(family)
+            for point in points: a.pick(point)
+            self.right_click()
+            self.assertEqual(a.family.get(),'Select'); self.assertEqual(a.tool.get(),'Select')
+            self.assertEqual(a.points,[]); self.assertEqual(a.selected,{0})
+            self.assertEqual(a.doc.state(),before); self.assertEqual(len(a.doc.history),history)
+        self.choose('Splines')
+        for point in [[0,0],[1,2],[2,0]]: a.pick(point)
+        a.canvas.focus_force(); self.root.update()
+        a.canvas.event_generate('<Return>'); self.root.update()
+        self.assertEqual(a.objects[-1]['type'],'spline')
+        self.assertFalse(self.errors)
+
     def test_all_tool_controls_and_tab_order(self):
         for family,methods in METHODS.items():
             for method in methods:

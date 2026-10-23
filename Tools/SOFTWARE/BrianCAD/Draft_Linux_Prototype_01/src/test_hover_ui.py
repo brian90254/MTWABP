@@ -27,12 +27,12 @@ class HoverTests(unittest.TestCase):
         self.root.after(ms,self.root.quit); self.root.mainloop()
 
     def test_real_delay_and_subtle_style(self):
-        a=self.app; self.assertEqual(SNAP_HOVER_MS,1200)
+        a=self.app; self.assertEqual(SNAP_HOVER_MS,600)
         a.motion(self.event([1.02,.01]))
         self.assertEqual(a.mouse,[1.,0.]); self.assertEqual(a.marker,'quadrant')
         self.assertTrue(a.canvas.find_withtag('snap-marker'))
         self.assertFalse(a.canvas.find_withtag('snap-label'))
-        self.wait(1250)
+        self.wait(650)
         label=a.canvas.find_withtag('snap-label')
         self.assertEqual(len(label),1)
         self.assertEqual(a.canvas.itemcget(label[0],'fill'),SNAP_LABEL_COLOR)
