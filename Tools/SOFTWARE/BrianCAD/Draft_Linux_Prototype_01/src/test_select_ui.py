@@ -34,6 +34,17 @@ class SelectWorkflowTests(unittest.TestCase):
     def add_circle(self):
         self.app.doc.add([{'type':'circle','center':[0,0],'radius':1}]); self.app.doc.clear_selection()
 
+    def test_right_click_cancels_drag_without_committing(self):
+        a=self.app; self.add_circle(); a.selected={0}
+        before=a.doc.state(); history=len(a.doc.history)
+        a.click(self.event([0,0])); a.drag_select(self.event([2,1]))
+        self.assertTrue(a.drag_preview)
+        a.return_to_select()
+        a.release_select(self.event([2,1]))
+        self.assertIsNone(a.drag); self.assertEqual(a.drag_preview,{})
+        self.assertEqual(a.selected,{0}); self.assertEqual(a.doc.state(),before)
+        self.assertEqual(len(a.doc.history),history)
+
     def test_click_controls_and_off_curve_handles_select_owner(self):
         a=self.app; self.add_circle()
         for p in [[0,0],[1,0],[0,1]]:
