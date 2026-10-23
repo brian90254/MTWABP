@@ -222,6 +222,16 @@ class Draft:
         if self.family.get()=='Modify': excluded.update(self.selected)
         ids=[i for i in range(len(self.objects)) if self.doc.visible(i) and i not in excluded]
         if self.snap.get():
+            if self.family.get()=='Lines' and self.tool.get() in ('Two points','Connected points') and self.points:
+                try:
+                    start=self.field_point(0)
+                except (ValueError,KeyError,AttributeError):
+                    start=None
+                if start is not None:
+                    tangents=[(q,'tangent') for i in ids
+                              for q in geo.tangent_points(start,self.objects[i])]
+                    best=nearest(tangents)
+                    if best: return best
             candidates=[([0,0],'origin')]
             for i in ids: candidates.extend(anchors(self.objects[i]))
             best=nearest(candidates)

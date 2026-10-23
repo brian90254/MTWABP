@@ -21,6 +21,25 @@ def polar(c,r,a): return add(c,[r*math.cos(a),r*math.sin(a)])
 def angle(c,p): return math.atan2(p[1]-c[1],p[0]-c[0])
 
 
+def tangent_points(start,obj):
+    """Contact points of nonzero tangents from start, restricted to an arc's sweep."""
+    if obj['type'] not in ('circle','arc'): return []
+    c,r=obj['center'],obj['radius']
+    v=sub(start,c); d=math.hypot(*v)
+    if d<=r or r<=0: return []
+    u=mul(v,1/d); ratio=r/d
+    base=mul(u,r*ratio)
+    offset=mul(normal(u),r*math.sqrt(max(0.,1-ratio*ratio)))
+    points=[add(c,add(base,offset)),add(c,sub(base,offset))]
+    if obj['type']=='arc':
+        sweep=obj['sweep']; direction=1 if sweep>=0 else -1
+        def on_arc(q):
+            delta=((angle(c,q)-obj['start'])*direction)%TAU
+            return delta<=abs(sweep)+EPS or TAU-delta<=EPS
+        points=[q for q in points if on_arc(q)]
+    return points
+
+
 def project(p,a,b,segment=False):
     v=sub(b,a); d=dot(v,v)
     if d<EPS**2: return list(a)

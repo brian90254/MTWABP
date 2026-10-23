@@ -63,6 +63,28 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(a.objects[-1]['type'],'spline')
         self.assertFalse(self.errors)
 
+    def test_tangent_line_mouse_preview_commit_and_connected_start(self):
+        import math
+        import cad_geometry as g
+        a=self.app
+        a.doc.add([{'type':'circle','center':[0,0],'radius':1}])
+        a.scale=150; a.origin=[400,300]
+        self.choose('Lines','Connected points'); a.pick([2,0])
+        q=[.5,math.sqrt(3)/2]
+        x,y=a.screen([q[0]+.02,q[1]-.01])
+        a.canvas.event_generate('<Motion>',x=round(x),y=round(y)); self.root.update()
+        self.assertEqual(a.marker,'tangent')
+        self.assertAlmostEqual(g.dist(a.mouse,q),0)
+        a.canvas.event_generate('<ButtonPress-1>',x=round(x),y=round(y))
+        a.canvas.event_generate('<ButtonRelease-1>',x=round(x),y=round(y)); self.root.update()
+        line=a.objects[-1]
+        self.assertEqual(line['type'],'line')
+        self.assertAlmostEqual(g.dist(line['b'],q),0)
+        self.assertAlmostEqual(g.dot(g.sub(line['b'],line['a']),line['b']),0)
+        self.assertEqual(a.points,[line['b']])
+        a.undo(); self.assertEqual(len(a.objects),1)
+        self.assertFalse(self.errors)
+
     def test_all_tool_controls_and_tab_order(self):
         for family,methods in METHODS.items():
             for method in methods:
