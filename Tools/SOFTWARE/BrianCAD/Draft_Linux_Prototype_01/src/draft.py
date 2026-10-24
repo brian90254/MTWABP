@@ -243,6 +243,17 @@ class Draft:
                 candidates.append((q,'on line' if o['type']=='line' else 'on curve'))
         return min(candidates,key=lambda v:distance(p,v[0]),default=None)
 
+    def line_constraint_candidates(self,start,obj):
+        if not hasattr(self,'_constraint_cache'): self._constraint_cache={}
+        if len(self._constraint_cache)>2*len(self.objects)+32: self._constraint_cache.clear()
+        key=(id(obj),tuple(start))
+        cached=self._constraint_cache.get(key)
+        if cached is None or cached[0] is not obj:
+            points=[(q,mode) for mode in ('tangent','perpendicular')
+                    for q in selection.constraint_points(start,obj,mode)]
+            cached=(obj,points); self._constraint_cache[key]=cached
+        return cached[1]
+
     def tracking_exclusions(self,ids):
         history=getattr(self,'snap_history',None)
         if not history: return []
@@ -266,9 +277,10 @@ class Draft:
                 except (ValueError,KeyError,AttributeError):
                     start=None
                 if start is not None:
-                    tangents=[(q,'tangent') for i in ids
-                              for q in geo.tangent_points(start,self.objects[i])]
-                    best=nearest(tangents)
+                    contacts=[candidate for i in ids
+                              if selection.box_distance(p,self.object_bounds(self.objects[i]))<=tolerance
+                              for candidate in self.line_constraint_candidates(start,self.objects[i])]
+                    best=nearest(contacts)
                     if best: return best
             candidates=[]
             for i in ids: candidates.extend(anchors(self.objects[i]))

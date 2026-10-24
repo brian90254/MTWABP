@@ -3,7 +3,7 @@ import math
 from cad_selection import axis_intersections, bounds
 
 OBJECT_SNAPS={'endpoint','midpoint','center','quadrant','radius handle','through point',
-              'axis endpoint','vertex','control point','fit point','tangent',
+              'axis endpoint','vertex','control point','fit point','tangent','perpendicular',
               'intersection'}
 
 

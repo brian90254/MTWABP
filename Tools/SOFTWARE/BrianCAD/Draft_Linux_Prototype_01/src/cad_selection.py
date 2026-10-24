@@ -195,3 +195,79 @@ def axis_intersections(o,axis,value):
         p[axis]=value
         if not any(g.dist(p,q)<1e-9 for q in result): result.append(p)
     return result
+
+
+def _bernstein_product(a,b):
+    n,m=len(a)-1,len(b)-1
+    result=[0.]*(n+m+1)
+    for i,x in enumerate(a):
+        for j,y in enumerate(b):
+            result[i+j]+=x*y*math.comb(n,i)*math.comb(m,j)/math.comb(n+m,i+j)
+    return result
+
+
+def _constraint_span(start,span,weights,mode):
+    # Work relative to start. V/W is the contact vector; D/W² its derivative.
+    v=[[w*(p[k]-start[k]) for p,w in zip(span,weights)] for k in (0,1)]
+    n=len(span)-1; dw=[n*(b-a) for a,b in zip(weights,weights[1:])]
+    derivative=[]
+    for values in v:
+        dv=[n*(b-a) for a,b in zip(values,values[1:])]
+        left=_bernstein_product(dv,weights); right=_bernstein_product(values,dw)
+        derivative.append([a-b for a,b in zip(left,right)])
+    if mode=='tangent':
+        a=_bernstein_product(v[0],derivative[1]); b=_bernstein_product(v[1],derivative[0])
+        coeffs=[x-y for x,y in zip(a,b)]
+    else:
+        a=_bernstein_product(v[0],derivative[0]); b=_bernstein_product(v[1],derivative[1])
+        coeffs=[x+y for x,y in zip(a,b)]
+    scale=max(abs(x) for x in coeffs)
+    magnitude=max(abs(x) for x in a+b)
+    if scale<=max(1e-300,1e-12*magnitude): return []  # No distinct contact in a continuum.
+    points=[]
+    for t in _bernstein_roots([x/scale for x in coeffs]):
+        w=_bezier_point([[x,0] for x in weights],t)[0]
+        offset=_bezier_point(list(zip(*v)),t); offset=g.mul(offset,1/w)
+        d=_bezier_point(list(zip(*derivative)),t)
+        if math.hypot(*d)<g.EPS or math.hypot(*offset)<g.EPS: continue
+        error=abs(g.cross(g.unit(offset),g.unit(d))) if mode=='tangent' else abs(g.dot(g.unit(offset),g.unit(d)))
+        if error<1e-6: points.append(g.add(start,offset))
+    return points
+
+
+def constraint_points(start,o,mode):
+    """Nonzero line contacts tangent/perpendicular to finite existing geometry."""
+    kind=o['type']; points=[]
+    if mode=='tangent' and kind in ('circle','arc','ellipse'):
+        return g.tangent_points(start,o)
+    if kind in ('line','polygon'):
+        if mode=='tangent': return []
+        pts=g.path(o)
+        for a,b in zip(pts,pts[1:]):
+            length2=g.dot(g.sub(b,a),g.sub(b,a))
+            if length2<g.EPS**2: continue
+            q=g.project(start,a,b)
+            if -1e-10<=g.dot(g.sub(q,a),g.sub(b,a))/length2<=1+1e-10:
+                points.append(q)
+    elif kind in ('circle','arc'):
+        if g.dist(start,o['center'])<g.EPS: return []
+        a=g.angle(o['center'],start)
+        points=[g.polar(o['center'],o['radius'],a+delta) for delta in (0,math.pi)]
+        points=[q for q in points if g.arc_contains(o,q)]
+    elif kind=='ellipse':
+        ca,sa=math.cos(o['angle']),math.sin(o['angle'])
+        def world(p):
+            x,y=p[0]*o['rx'],p[1]*o['ry']
+            return g.add(o['center'],[ca*x-sa*y,sa*x+ca*y])
+        for i in range(4):
+            a=i*math.pi/2; b=a+math.pi/2
+            span=[world([math.cos(a),math.sin(a)]),
+                  world([math.cos(a)+math.cos(b),math.sin(a)+math.sin(b)]),
+                  world([math.cos(b),math.sin(b)])]
+            points.extend(_constraint_span(start,span,[1.,math.sqrt(.5),1.],mode))
+    elif kind=='spline':
+        for span in _spline_spans(o): points.extend(_constraint_span(start,span,[1.]*len(span),mode))
+    result=[]
+    for q in points:
+        if g.dist(start,q)>g.EPS and not any(g.dist(q,p)<1e-9 for p in result): result.append(q)
+    return result
