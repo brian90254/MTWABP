@@ -27,6 +27,23 @@ def arc_contains(obj,p):
     return delta<=abs(obj['sweep'])+EPS or TAU-delta<=EPS
 
 
+def ellipse_angle(o,p):
+    x,y=sub(p,o['center']); ca,sa=math.cos(o['angle']),math.sin(o['angle'])
+    return math.atan2((-sa*x+ca*y)/o['ry'],(ca*x+sa*y)/o['rx'])
+
+
+def ellipse_contains(o,p):
+    if 'sweep' not in o: return True
+    delta=((ellipse_angle(o,p)-o['start'])*(1 if o['sweep']>0 else -1))%TAU
+    return delta<=abs(o['sweep'])+EPS or TAU-delta<=EPS
+
+
+def ellipse_point(o,t):
+    a=o.get('start',0.)+o.get('sweep',TAU)*t
+    x,y=o['rx']*math.cos(a),o['ry']*math.sin(a); ca,sa=math.cos(o['angle']),math.sin(o['angle'])
+    return add(o['center'],[ca*x-sa*y,sa*x+ca*y])
+
+
 def tangent_points(start,obj):
     """Contact points of nonzero tangents from start, restricted to an arc's sweep."""
     if obj['type']=='ellipse':
@@ -34,7 +51,8 @@ def tangent_points(start,obj):
         dx,dy=sub(start,c)
         local=[(ca*dx+sa*dy)/obj['rx'],(-sa*dx+ca*dy)/obj['ry']]
         contacts=tangent_points(local,{'type':'circle','center':[0,0],'radius':1})
-        return [add(c,[ca*obj['rx']*x-sa*obj['ry']*y,sa*obj['rx']*x+ca*obj['ry']*y]) for x,y in contacts]
+        points=[add(c,[ca*obj['rx']*x-sa*obj['ry']*y,sa*obj['rx']*x+ca*obj['ry']*y]) for x,y in contacts]
+        return [p for p in points if ellipse_contains(obj,p)]
     if obj['type'] not in ('circle','arc'): return []
     c,r=obj['center'],obj['radius']
     v=sub(start,c); d=math.hypot(*v)
@@ -178,8 +196,7 @@ def path(o,samples=128):
         sweep=o.get('sweep',TAU); start=o.get('start',0.)
         count=max(16,math.ceil(samples*abs(sweep)/TAU))
         return [polar(o['center'],o['radius'],start+sweep*i/count) for i in range(count+1)]
-    c=o['center']; a=o['angle']; u=[math.cos(a),math.sin(a)]; v=normal(u)
-    return [add(c,add(mul(u,o['rx']*math.cos(TAU*i/samples)),mul(v,o['ry']*math.sin(TAU*i/samples)))) for i in range(samples+1)]
+    return [ellipse_point(o,i/samples) for i in range(samples+1)]
 
 
 def anchors(o):
@@ -199,6 +216,10 @@ def anchors(o):
             pts.append((polar(o['center'],o['radius'],o['start']+o['sweep']*o['through_fraction']),'through point'))
         return pts
     if kind=='ellipse':
+        if 'sweep' in o:
+            pts=[(o['center'],'center')]+[(ellipse_point(o,t),label) for t,label in [(0,'endpoint'),(.5,'midpoint'),(1,'endpoint')]]
+            full=dict(o); full.pop('start'); full.pop('sweep')
+            return pts+[(p,'axis endpoint') for p in path(full,4)[:-1] if ellipse_contains(o,p)]
         pts=path(o,4)
         return [(o['center'],'center')]+[(p,'axis endpoint') for p in pts[:-1]]
     if kind=='polygon': return [(p,'vertex') for p in o['points']]
@@ -250,7 +271,9 @@ def transform(o,mode,pivot=(0,0),dx=0,dy=0,angle=0,factor=1):
         elif mode=='Mirror': n['start']=2*a-o['start']; n['sweep']=-o['sweep']
     if o['type']=='ellipse':
         if mode=='Rotate': n['angle']+=a
-        elif mode=='Mirror': n['angle']=2*a-o['angle']
+        elif mode=='Mirror':
+            n['angle']=2*a-o['angle']
+            if 'sweep' in o: n['start']=-o['start']; n['sweep']=-o['sweep']
     return n
 
 
@@ -271,7 +294,11 @@ def validate_geometry(o):
             number(o.get(key))
             if o[key]<EPS: raise ValueError('Radii must be positive.')
         if kind=='circle': number(o.get('handle_angle',0.))
-        if kind=='ellipse': number(o.get('angle'))
+        if kind=='ellipse':
+            number(o.get('angle'))
+            if 'start' in o or 'sweep' in o:
+                number(o.get('start')); number(o.get('sweep'))
+                if not EPS<=abs(o['sweep'])<=TAU+EPS: raise ValueError('Oval arc sweep must be nonzero and at most 360 degrees.')
         if kind=='arc':
             number(o.get('start')); number(o.get('sweep'))
             number(o.get('through_fraction',.5))
@@ -282,7 +309,9 @@ def validate_geometry(o):
         if not isinstance(pts,list) or not (3 if kind=='polygon' else 2)<=len(pts)<=200:
             raise ValueError('Use 3–200 polygon vertices or 2–200 spline points.')
         for p in pts: point(p)
-        if any(dist(a,b)<EPS for a,b in zip(pts,pts[1:])): raise ValueError('Consecutive points must be distinct.')
+        if kind=='spline' and o.get('method')=='bezier':
+            if all(dist(pts[0],p)<EPS for p in pts): raise ValueError('A Bézier curve must have distinct points.')
+        elif any(dist(a,b)<EPS for a,b in zip(pts,pts[1:])): raise ValueError('Consecutive points must be distinct.')
         if kind=='spline':
             if o.get('method') not in ('through','bezier'): raise ValueError('Unknown spline method.')
             if o['method']=='bezier' and len(pts)>32: raise ValueError('Use at most 32 Bézier control points.')
