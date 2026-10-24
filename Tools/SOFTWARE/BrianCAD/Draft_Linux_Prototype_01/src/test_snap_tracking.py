@@ -35,7 +35,7 @@ class SnapTrackingTests(unittest.TestCase):
         from test_grid import editor
         a=editor(); a.snap_history=SnapHistory()
         a.snap_history.remember([.27,4],'endpoint')
-        self.assertEqual(a.snap_point([.26,.51]),([.27,.51],'align x'))
+        self.assertEqual(a.snap_point([.26,.51]),([.27,.5],'align x / grid intersection'))
         a.snap.set(False)
         self.assertEqual(a.snap_point([.26,.51]),([.25,.5],'grid intersection'))
         a.snap.set(True)

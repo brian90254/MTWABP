@@ -149,3 +149,49 @@ def nearest_point(p,o):
         return _minimum(fn,p,64)
     candidates=[_minimum(lambda t,span=span:_bezier_point(span,t),p,max(32,8*len(span))) for span in _spline_spans(o)]
     return min(candidates,key=lambda q:g.dist(p,q))
+
+
+def axis_intersections(o,axis,value):
+    """Finite intersections with an infinite horizontal/vertical guide.
+
+    Circular and elliptical curves are analytic. Spline coordinates are solved
+    in Bernstein form, including tangent roots, rather than display chords.
+    Coincident spans have no distinct intersection and are omitted.
+    """
+    kind=o['type']; other=1-axis; points=[]
+    if kind in ('line','polygon'):
+        pts=[o['a'],o['b']] if kind=='line' else o['points']+([o['points'][0]] if o.get('closed',True) else [])
+        for a,b in zip(pts,pts[1:]):
+            delta=b[axis]-a[axis]
+            if abs(delta)<1e-12: continue
+            t=(value-a[axis])/delta
+            if -1e-10<=t<=1+1e-10:
+                points.append(g.add(a,g.mul(g.sub(b,a),max(0,min(1,t)))))
+    elif kind in ('circle','arc'):
+        c=o['center']; r=o['radius']; d=value-c[axis]
+        h2=r*r-d*d
+        if h2>=-1e-12*r*r:
+            h=math.sqrt(max(0,h2))
+            for sign in (-1,1):
+                p=list(c); p[axis]=value; p[other]+=sign*h
+                if kind=='arc':
+                    delta=((g.angle(c,p)-o['start'])*(1 if o['sweep']>0 else -1))%g.TAU
+                    if delta>abs(o['sweep'])+1e-10 and g.TAU-delta>1e-10: continue
+                points.append(p)
+    elif kind=='ellipse':
+        a=o['angle']; c=o['center']
+        u=[o['rx']*math.cos(a),o['rx']*math.sin(a)]
+        v=[-o['ry']*math.sin(a),o['ry']*math.cos(a)]
+        amplitude=math.hypot(u[axis],v[axis]); ratio=(value-c[axis])/amplitude
+        if abs(ratio)<=1+1e-12:
+            phase=math.atan2(v[axis],u[axis]); offset=math.acos(max(-1,min(1,ratio)))
+            points=[g.add(c,g.add(g.mul(u,math.cos(t)),g.mul(v,math.sin(t)))) for t in (phase-offset,phase+offset)]
+    elif kind=='spline':
+        for span in _spline_spans(o):
+            ts=_bernstein_roots([p[axis]-value for p in span])
+            points.extend(_bezier_point(span,t) for t in ts)
+    result=[]
+    for p in points:
+        p[axis]=value
+        if not any(g.dist(p,q)<1e-9 for q in result): result.append(p)
+    return result

@@ -277,7 +277,12 @@ class Draft:
             if best: return best
         history=getattr(self,'snap_history',None)
         if self.snap.get() and history:
-            tracked=history.snap(p,self.scale,self.tracking_exclusions(excluded))
+            ignored=self.tracking_exclusions(excluded)
+            step=self.grid_spacing/self.grid_subdivisions if self.grid_snap.get() else None
+            nearby=[self.objects[i] for i in ids if selection.box_distance(p,self.object_bounds(self.objects[i]))<=tolerance]
+            crossing=nearest(history.crossings(p,self.scale,nearby,step,ignored,self.object_bounds))
+            if crossing: return crossing
+            tracked=history.snap(p,self.scale,ignored)
             if tracked: return tracked
         grid=None
         if self.grid_snap.get():
