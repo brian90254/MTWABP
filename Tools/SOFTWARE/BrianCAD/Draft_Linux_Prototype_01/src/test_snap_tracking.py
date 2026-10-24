@@ -17,7 +17,7 @@ class SnapTrackingTests(unittest.TestCase):
         for label in OBJECT_SNAPS:
             point=[2,3]; h.remember(point,label); point[0]=99
             self.assertEqual(h.points,[[2,3]])
-        for label in ['origin','grid intersection','horizontal grid line','vertical',
+        for label in ['line/grid intersection','origin','grid intersection','horizontal grid line','vertical',
                       'horizontal','45°','on line','on curve','on object','']:
             h.remember([10,20],label)
             self.assertEqual(h.points,[[2,3]])

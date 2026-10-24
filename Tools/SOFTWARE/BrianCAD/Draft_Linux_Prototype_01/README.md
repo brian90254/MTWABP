@@ -82,7 +82,7 @@ This version trims **lines, circles, and arcs** using exact intersections. Lines
 
 ## Selection and object editing
 
-The Select tool uses an arrow with a tail in the toolbox and on the canvas.
+The Select tool keeps its arrow-with-tail toolbox icon and uses an explicit arrow-with-tail mouse pointer on the canvas. Its tip follows the raw mouse position independently of the snap marker. Other tools retain their standard mouse pointer.
 
 Click an outline **or any of its handles** to select the whole object. A plain click on an already-selected handle also promotes its owner to whole-object selection; pressing and dragging that handle preserves the partial selection instead. **Shift-click** toggles whole-object membership.
 
@@ -130,7 +130,7 @@ Scale is uniform; ellipses, circles, arcs, polygons, and spline definitions reta
 
 **Grid preferences...** sets major spacing (default 1 inch) and subdivisions (default 4, giving quarter-inch minor spacing). Major/minor lines remain anchored to the origin while zooming. Lines denser than 8 pixels are hidden without changing the logical snap spacing. Both levels use the same color; major lines have a denser dotted pattern and minor lines use fewer dots.
 
-**Recent snap alignment guides:** Hovering or clicking a discrete object snap remembers its location. The four most recent distinct locations are kept; revisiting one makes it most recent. Eligible snaps include endpoints, midpoints, centers, quadrants, tangent contacts, vertices, fit/control points, and line/grid intersections. Ordinary grid/origin snaps and continuously moving on-line/on-curve projections do not fill the history. An object anchor at the origin still counts as an object point.
+**Recent snap alignment guides:** Hovering or clicking a discrete object snap remembers its location. The four most recent distinct locations are kept; revisiting one makes it most recent. Eligible snaps include endpoints, midpoints, centers, quadrants, tangent contacts, vertices, fit/control points, and object intersections. Grid-derived snaps (including line/grid intersections), ordinary origin snaps and continuously moving on-line/on-curve projections do not fill the history. An object anchor at the origin still counts as an object point.
 
 When the pointer's current drawing position is within 6 screen pixels of a remembered X or Y coordinate, an immediate dotted guide spans the canvas: a vertical guide labeled **align x** shares X, and a horizontal guide labeled **align y** shares Y. Both can appear together. These are visual guides; existing snapping and exact typed coordinates keep their behavior. Guides hide when the pointer leaves the canvas, during panning, or when Object snaps / alignment is disabled. History remains available within the same tool, including after completing a drawing operation or cancelling pending picks. Changing tools or construction methods, or starting/opening a drawing, clears it. History is transient and is not saved in drawing files.
 
