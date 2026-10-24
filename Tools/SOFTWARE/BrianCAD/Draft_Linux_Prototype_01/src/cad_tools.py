@@ -5,6 +5,7 @@ import cad_geometry as g
 METHODS={
     'Select':['Select'],
     'Trim':['Trim'],
+    'Chamfer':['Chamfer'],
     'Lines':['Two points','Connected points','Offset from line'],
     'Arcs':['Center + start + end','Three-point arc','Start tangent + end'],
     'Circles':['Center + diameter','Diameter endpoints','Three-point circle','Two tangent lines'],
@@ -15,13 +16,14 @@ METHODS={
 }
 THREE={'Start tangent + end','Center + start + end','Three-point arc','Three-point circle','Center + axis + width','Axis endpoints + width'}
 DEFAULTS={'x':0,'y':0,'x2':1,'y2':0,'x3':1,'y3':1,'dx':1,'dy':0,'length':1,'angle':0,
-          'diameter':1,'offset':.25,'sides':6,'factor':1}
+          'diameter':1,'radius':.25,'offset':.25,'sides':6,'factor':1}
 LABELS={'x':'X','y':'Y','x2':'End X','y2':'End Y','x3':'Third X','y3':'Third Y','dx':'dX','dy':'dY',
-        'length':'Length','angle':'Angle °','diameter':'Diameter','offset':'Offset','sides':'Sides','factor':'Factor'}
+        'length':'Length','angle':'Angle °','diameter':'Diameter','radius':'Radius','offset':'Offset','sides':'Sides','factor':'Factor'}
 
 
 def fields_for(family,method):
     if family in ('Select','Trim'): return []
+    if family=='Chamfer': return ['radius']
     if family=='Modify': return ['x','y','dx','dy'] if method=='Move' else ['x','y','factor'] if method=='Scale' else ['x','y','angle']
     if family=='Splines': return ['x','y']
     if method=='Center + diameter': return ['x','y','diameter']
