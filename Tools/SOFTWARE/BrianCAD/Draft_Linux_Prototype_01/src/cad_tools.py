@@ -13,7 +13,7 @@ METHODS={
     'Splines':['Through points','Closed through points','Bezier controls'],
     'Modify':['Move','Rotate','Scale','Mirror'],
 }
-THREE={'Center + start + end','Three-point arc','Three-point circle','Center + axis + width','Axis endpoints + width'}
+THREE={'Start tangent + end','Center + start + end','Three-point arc','Three-point circle','Center + axis + width','Axis endpoints + width'}
 DEFAULTS={'x':0,'y':0,'x2':1,'y2':0,'x3':1,'y3':1,'dx':1,'dy':0,'length':1,'angle':0,
           'diameter':1,'offset':.25,'sides':6,'factor':1}
 LABELS={'x':'X','y':'Y','x2':'End X','y2':'End Y','x3':'Third X','y3':'Third Y','dx':'dX','dy':'dY',
@@ -47,9 +47,7 @@ def construct(method,pts,values,refs=None,clockwise=False):
     elif method=='Center + start + end': o=g.arc_center(a,b,pts[2],clockwise)
     elif method=='Three-point arc': o=g.arc_three(a,b,pts[2])
     elif method=='Start tangent + end':
-        if not refs or refs[0] is None: raise ValueError('Pick a start point on an existing line first.')
-        if g.dist(a,g.project(a,refs[0]['a'],refs[0]['b']))>1e-8: raise ValueError('Arc start must remain on its tangent line.')
-        o=g.arc_tangent(a,g.sub(refs[0]['b'],refs[0]['a']),b)
+        o=g.arc_tangent(a,g.sub(b,a),pts[2])
     elif method=='Center + diameter':
         if values['diameter']<=0: raise ValueError('Diameter must be positive.')
         o={'type':'circle','center':a,'radius':values['diameter']/2}

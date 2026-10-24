@@ -141,6 +141,54 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(a.family.get(),'Select'); self.assertFalse(a.trim_cutters)
         self.assertFalse(self.errors)
 
+    def test_three_click_tangent_arc_preview_and_auto_direction(self):
+        import cad_geometry as g
+        a=self.app; a.scale=100; a.origin=[400,300]
+        a.snap.set(False); a.grid_snap.set(False)
+        self.choose('Arcs','Start tangent + end')
+        self.assertEqual(list(a.params),['x','y','x2','y2','x3','y3'])
+        for p in [[0,0],[2,0]]:
+            self.trim_mouse(p)
+        self.assertEqual(a.objects,[]); self.assertEqual(len(a.points),2)
+        self.assertIn('arc endpoint',a.prompt())
+        for end,positive in [([1,1],True),([1,-1],False)]:
+            x,y=a.screen(end); a.canvas.event_generate('<Motion>',x=x,y=y); self.root.update()
+            preview=a.preview(); self.assertEqual(preview['type'],'arc')
+            self.assertEqual(preview['sweep']>0,positive)
+            self.assertTrue(a.canvas.find_withtag('tangent-guide'))
+        a.clockwise.set(False)  # Third click below the tangent still chooses clockwise.
+        self.trim_mouse([1,-1],14000)
+        self.assertEqual(len(a.objects),1); self.assertLess(a.objects[0]['sweep'],0)
+        self.assertAlmostEqual(g.dist(g.path(a.objects[0])[-1],[1,-1]),0)
+        self.assertFalse(a.canvas.find_withtag('tangent-guide'))
+        a.undo(); self.assertEqual(a.objects,[])
+        self.assertFalse(self.errors)
+
+    def test_tangent_arc_typed_parameters_and_edited_preview(self):
+        import cad_geometry as g
+        a=self.app; self.choose('Arcs','Start tangent + end')
+        a.pick([0,0]); a.pick([1,0])
+        a.params['x'].set('3'); a.params['y'].set('-4')
+        a.params['x2'].set('3'); a.params['y2'].set('-2')
+        a.mouse=[2,-3]
+        self.assertAlmostEqual(g.dist(a.preview()['center'],[2,-4]),0)
+        a.params['x3'].set('2'); a.params['y3'].set('-3')
+        a.apply_parameters()
+        self.assertEqual(len(a.objects),1)
+        self.assertAlmostEqual(g.dist(a.objects[0]['center'],[2,-4]),0)
+        self.assertFalse(self.errors)
+
+    def test_tangent_arc_rejects_degenerate_clicks_and_can_retry(self):
+        a=self.app; self.choose('Arcs','Start tangent + end')
+        a.snap.set(False); a.grid_snap.set(False); a.scale=100; a.origin=[400,300]
+        self.trim_mouse([0,0]); self.trim_mouse([0,0],12000)
+        self.assertEqual(a.points,[[0,0]]); self.assertTrue(self.errors); self.errors.clear()
+        self.trim_mouse([1,0],14000); self.trim_mouse([2,0],16000)
+        self.assertEqual(len(a.points),2); self.assertEqual(a.objects,[])
+        self.assertTrue(self.errors); self.errors.clear()
+        self.trim_mouse([1,1],18000); self.assertEqual(len(a.objects),1)
+        self.assertFalse(self.errors)
+
     def test_all_tool_controls_and_tab_order(self):
         for family,methods in METHODS.items():
             for method in methods:
@@ -174,7 +222,7 @@ class WorkflowTests(unittest.TestCase):
         a.finish(); self.assertEqual(a.points,[])
         self.choose('Lines','Offset from line'); a.pick([1,0]); a.pick([1,.25])
         self.assertAlmostEqual(a.objects[-1]['a'][1],.25)
-        self.choose('Arcs','Start tangent + end'); a.pick([1,0]); a.pick([2,1])
+        self.choose('Arcs','Start tangent + end'); a.pick([1,0]); a.pick([2,0]); a.pick([2,1])
         self.assertEqual(a.objects[-1]['type'],'arc')
         self.assertFalse(self.errors)
 
