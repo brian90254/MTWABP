@@ -22,7 +22,7 @@ def parameter(obj,p):
 
 
 def intersections(a,b):
-    """Finite crossings; coincident curves and tangential touches do not cut."""
+    """Finite crossings and tangent contacts; coincident curves do not cut."""
     if a['type']=='polygon' or b['type']=='polygon':
         polygon,other=(a,b) if a['type']=='polygon' else (b,a)
         pts=polygon['points']
@@ -39,18 +39,23 @@ def intersections(a,b):
         u=g.unit(g.sub(line['b'],line['a'])); w=g.sub(circle['center'],line['a'])
         along=g.dot(w,u); perpendicular=g.cross(w,u)
         h2=circle['radius']**2-perpendicular**2
-        if h2<=1e-12*circle['radius']**2: return []
-        h=math.sqrt(h2)
-        pts=[g.add(line['a'],g.mul(u,along+s*h)) for s in (-1,1)]
+        tolerance=1e-12*circle['radius']**2
+        if h2 < -tolerance: return []
+        h=math.sqrt(max(0.,h2)) if h2>tolerance else 0.
+        pts=[g.add(line['a'],g.mul(u,along+s*h)) for s in ((0,) if h==0 else (-1,1))]
     else:
         c1,c2=a['center'],b['center']; r1,r2=a['radius'],b['radius']
         d=g.dist(c1,c2)
-        if d<=abs(r1-r2) or d>=r1+r2: return []
+        tolerance=1e-12*max(r1,r2,d)
+        if d==0 or d<abs(r1-r2)-tolerance or d>r1+r2+tolerance: return []
         u=g.mul(g.sub(c2,c1),1/d)
         x=(d*d+(r1-r2)*(r1+r2))/(2*d); h2=r1*r1-x*x
-        if h2<=1e-12*r1*r1: return []
-        base=g.add(c1,g.mul(u,x)); offset=g.mul(g.normal(u),math.sqrt(h2))
-        pts=[g.add(base,offset),g.sub(base,offset)]
+        if h2 < -1e-12*r1*r1: return []
+        base=g.add(c1,g.mul(u,x))
+        if h2<=1e-12*r1*r1: pts=[base]
+        else:
+            offset=g.mul(g.normal(u),math.sqrt(h2))
+            pts=[g.add(base,offset),g.sub(base,offset)]
     return [p for p in pts if parameter(a,p) is not None and parameter(b,p) is not None]
 
 
@@ -80,7 +85,8 @@ def trim(obj,boundaries,click):
     closed=obj['type']=='circle' or (obj['type']=='arc' and abs(abs(obj['sweep'])-g.TAU)<TOL)
     if closed:
         if cuts and cuts[-1]-cuts[0]>1-TOL: cuts.pop()
-        if len(cuts)<2: raise ValueError('The circle needs at least two distinct cutting crossings.')
+        if not cuts: raise ValueError('No cutting contact on this circle; nothing was trimmed.')
+        if len(cuts)==1: return []  # One contact bounds the entire circumference.
         i=bisect.bisect_right(cuts,t)
         lo=cuts[i-1] if i else cuts[-1]-1
         hi=cuts[i] if i<len(cuts) else cuts[0]+1

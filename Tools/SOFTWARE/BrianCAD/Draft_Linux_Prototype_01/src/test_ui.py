@@ -49,7 +49,7 @@ class WorkflowTests(unittest.TestCase):
     def test_right_click_cancels_construction_and_preserves_selection(self):
         a=self.app; self.choose('Lines'); a.pick([0,0]); a.pick([2,0])
         a.selected={0}; before=a.doc.state(); history=len(a.doc.history)
-        for family,points in [('Lines',[[3,3]]),('Splines',[[0,0],[1,2],[2,0]])]:
+        for family,points in [('Lines',[[3,3]])]:
             self.choose(family)
             for point in points: a.pick(point)
             self.right_click()
@@ -61,6 +61,44 @@ class WorkflowTests(unittest.TestCase):
         a.canvas.focus_force(); self.root.update()
         a.canvas.event_generate('<Return>'); self.root.update()
         self.assertEqual(a.objects[-1]['type'],'spline')
+        self.assertFalse(self.errors)
+
+    def test_right_click_finishes_spline_then_returns_to_select(self):
+        a=self.app
+        for method in ['Through points','Closed through points','Bezier controls']:
+            self.choose('Splines',method)
+            for p in [[0,0],[1,2],[2,0]]: a.pick(p)
+            n=len(a.objects); history=len(a.doc.history)
+            self.right_click()
+            self.assertEqual(len(a.objects),n+1); self.assertEqual(len(a.doc.history),history+1)
+            self.assertEqual(a.family.get(),'Splines'); self.assertEqual(a.points,[])
+            self.right_click()
+            self.assertEqual(a.family.get(),'Select'); self.assertEqual(len(a.objects),n+1)
+        self.choose('Splines'); self.right_click()
+        self.assertEqual(a.family.get(),'Select')
+        self.assertFalse(self.errors)
+
+    def test_right_click_incomplete_spline_preserves_picks_for_retry(self):
+        a=self.app; self.choose('Splines'); a.pick([0,0]); self.right_click()
+        self.assertEqual(a.family.get(),'Splines'); self.assertEqual(a.points,[[0,0]])
+        self.assertTrue(self.errors); self.errors.clear()
+        a.pick([1,1]); self.right_click(); self.assertEqual(len(a.objects),1)
+        self.assertEqual(a.family.get(),'Splines')
+        self.assertFalse(self.errors)
+
+    def test_trim_tangent_contacts_and_whole_circle_single_contact(self):
+        import math
+        a=self.app; a.scale=100; a.origin=[400,300]
+        a.doc.add([{'type':'circle','center':[0,0],'radius':1},
+                   {'type':'line','a':[-2,1],'b':[2,1]},
+                   {'type':'line','a':[-2,-1],'b':[2,-1]}])
+        a.selected={1,2}; self.choose('Trim'); before=a.doc.state()
+        self.trim_mouse([1,0]); self.assertEqual(a.objects[0]['type'],'arc')
+        self.assertAlmostEqual(a.objects[0]['sweep'],math.pi)
+        a.undo(); self.assertEqual(a.doc.state(),before)
+        a.selected={1}; self.choose('Trim'); self.trim_mouse([1,0],14000)
+        self.assertEqual(len(a.objects),2); self.assertEqual(a.selected,{0})
+        a.undo(); self.assertEqual(a.doc.state(),before)
         self.assertFalse(self.errors)
 
     def test_tangent_line_mouse_preview_commit_and_connected_start(self):
