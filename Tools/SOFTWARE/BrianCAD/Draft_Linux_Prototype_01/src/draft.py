@@ -10,6 +10,7 @@ from tkinter import ttk, filedialog, messagebox, simpledialog, font as tkfont
 import cad_geometry as geo
 import cad_selection as selection
 import cad_trim
+from snap_tracking import SnapHistory
 from cad_geometry import dist as distance, anchors, hit_distance
 from cad_document import Document, COLORS
 from cad_tools import METHODS, THREE, DEFAULTS, LABELS, fields_for, point_values, construct
@@ -30,6 +31,7 @@ class Draft:
         self.root=root; self.doc=Document(); self.path=None
         self.scale=90.; self.origin=[470.,320.]; self.pan=None
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
+        self.snap_history=SnapHistory(); self.tracking_cursor=None
         self._snap_hover_job=None; self._snap_hover_state=None; self._snap_label_visible=False
         self.snap_label_font=tkfont.nametofont('TkDefaultFont').copy()
         font_size=self.snap_label_font.cget('size')
@@ -156,6 +158,7 @@ class Draft:
         self.method_changed()
 
     def method_changed(self):
+        self.snap_history.clear()
         self.canvas.configure(cursor='top_left_arrow' if self.family.get()=='Select' else 'arrow')
         self.cancel()
         if self.family.get()=='Trim':
@@ -258,8 +261,9 @@ class Draft:
                               for q in geo.tangent_points(start,self.objects[i])]
                     best=nearest(tangents)
                     if best: return best
-            candidates=[([0,0],'origin')]
+            candidates=[]
             for i in ids: candidates.extend(anchors(self.objects[i]))
+            candidates.append(([0,0],'origin'))
             best=nearest(candidates)
             if best: return best
         grid=None
@@ -320,6 +324,8 @@ class Draft:
         self._snap_hover_job=None; self._snap_hover_state=None; self._snap_label_visible=False
 
     def track_snap_hover(self,e):
+        self.snap_history.remember(self.mouse,self.marker)
+        self.tracking_cursor=list(self.mouse) if self.mouse is not None else None
         state=(e.x,e.y,tuple(self.mouse) if self.mouse is not None else None,self.marker)
         if state==self._snap_hover_state: return
         self.cancel_snap_hover()
@@ -333,6 +339,7 @@ class Draft:
         self._snap_hover_job=self.root.after(SNAP_HOVER_MS,show)
 
     def leave_canvas(self,e):
+        self.tracking_cursor=None
         self.cancel_snap_hover(); self.draw()
 
     def motion(self,e):
@@ -366,7 +373,9 @@ class Draft:
             self.draw(); return
         if self.family.get()=='Modify' and not self.doc.editable_selection():
             self.error('Select visible, unlocked geometry first.'); return
-        p,_=self.snap_point(raw)
+        p,label=self.snap_point(raw)
+        self.snap_history.remember(p,label)
+        self.tracking_cursor=list(p)
         before=(copy.deepcopy(self.points),copy.deepcopy(self.refs),self.start)
         try: self.pick(p,raw)
         except (ValueError,KeyError) as ex:
@@ -534,7 +543,7 @@ class Draft:
 
     def cancel(self):
         self.cancel_snap_hover()
-        self.trim_cutters=[]
+        self.trim_cutters=[]; self.tracking_cursor=None
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
         self.box_start=None; self.box_end=None
         self.drag=None; self.drag_preview={}; self.drag_error=''
@@ -639,6 +648,17 @@ class Draft:
             if self.marker in ['45°','135°']:
                 slope=-1 if self.marker=='45°' else 1
                 c.create_line(0,b-slope*a,w,b+slope*(w-a),fill='#9dbcd5',dash=(3,5))
+        history=getattr(self,'snap_history',None)
+        guides=history.guides(getattr(self,'tracking_cursor',None),self.scale) if history and self.snap.get() else []
+        label_counts=[0,0]
+        for axis,value in guides:
+            sx,sy=self.screen([value,0] if axis==0 else [0,value])
+            coords=(sx,0,sx,h) if axis==0 else (0,sy,w,sy)
+            c.create_line(*coords,fill='#8a929b',dash=(1,5),tags=('tracking-guide',))
+            tx,ty=(sx+5,16+12*label_counts[axis]) if axis==0 else (10+52*label_counts[axis],sy-5)
+            c.create_text(tx,ty,text='align x' if axis==0 else 'align y',anchor='sw',
+                          fill=SNAP_LABEL_COLOR,font=self.snap_label_font,tags=('tracking-label',))
+            label_counts[axis]+=1
         if self.mouse is not None and self.marker:
             a,b=self.screen(self.mouse)
             c.create_line(a-3,b-3,a+3,b+3,fill='black',width=1,tags=('snap-marker',))
@@ -668,10 +688,12 @@ class Draft:
         self.refresh_layers()
 
     def zoom(self,e,factor):
+        self.tracking_cursor=None
         self.cancel_snap_hover()
         p=self.world(e.x,e.y); self.scale=max(.01,min(100000,self.scale*factor))
         self.origin=[e.x-p[0]*self.scale,e.y+p[1]*self.scale]; self.motion(e)
     def pan_start(self,e):
+        self.tracking_cursor=None
         self.cancel_snap_hover(); self.pan=[e.x,e.y]; self.draw()
     def pan_move(self,e):
         self.cancel_snap_hover()
@@ -853,7 +875,7 @@ class Draft:
 
     def discard(self): return not self.doc.dirty or messagebox.askyesno('Unsaved drawing','Discard unsaved changes?',parent=self.root)
     def new(self):
-        if self.discard(): self.doc=Document(); self.path=None; self.cancel(); self.refresh_layers()
+        if self.discard(): self.snap_history.clear(); self.doc=Document(); self.path=None; self.cancel(); self.refresh_layers()
     def save(self,save_as=False):
         path=None if save_as else self.path
         path=path or filedialog.asksaveasfilename(defaultextension='.draft.json',filetypes=[('BrianCAD drawing','*.json')])
@@ -872,7 +894,7 @@ class Draft:
         if not path: return
         try:
             with open(path,encoding='utf-8') as f: doc=Document.from_payload(json.load(f))
-            self.doc=doc; self.path=path; self.cancel(); self.refresh_layers(); self.fit()
+            self.snap_history.clear(); self.doc=doc; self.path=path; self.cancel(); self.refresh_layers(); self.fit()
         except (OSError,ValueError,TypeError,KeyError,OverflowError) as ex: self.error(str(ex))
     def close(self):
         if self.discard():

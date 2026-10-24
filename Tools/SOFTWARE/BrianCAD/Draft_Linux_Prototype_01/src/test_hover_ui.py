@@ -48,6 +48,51 @@ class HoverTests(unittest.TestCase):
         a.motion(self.event([1.03,.01]))
         self.assertFalse(a.canvas.find_withtag('snap-label'))
 
+    def test_object_snap_history_and_tracking_guides(self):
+        a=self.app
+        a.motion(self.event([1.01,.01]))
+        self.assertEqual(a.snap_history.points,[[1.,0.]])
+        a.motion(self.event([1.04,2.0]))  # free space, close to remembered X
+        guides=a.canvas.find_withtag('tracking-guide')
+        self.assertEqual(len(guides),1)
+        self.assertEqual(a.canvas.coords(guides[0]),[500.,0.,500.,float(a.canvas.winfo_height())])
+        self.assertEqual(a.canvas.itemcget(guides[0],'dash'),'1 5')
+        labels=a.canvas.find_withtag('tracking-label')
+        self.assertEqual([a.canvas.itemcget(i,'text') for i in labels],['align x'])
+        # Guides are immediate and visual: no change to existing snap coordinates.
+        self.assertAlmostEqual(a.mouse[0],1.04)
+        a.motion(self.event([3,.04]))
+        labels=a.canvas.find_withtag('tracking-label')
+        self.assertEqual([a.canvas.itemcget(i,'text') for i in labels],['align y'])
+        self.assertEqual(a.snap_history.points,[[1.,0.]])
+        a.leave_canvas(self.event([3,.04]))
+        self.assertFalse(a.canvas.find_withtag('tracking-guide'))
+        self.assertEqual(a.snap_history.points,[[1.,0.]])
+        a.motion(self.event([1.,2.])); a.snap.set(False); a.draw()
+        self.assertFalse(a.canvas.find_withtag('tracking-guide'))
+        a.snap.set(True); a.draw(); self.assertTrue(a.canvas.find_withtag('tracking-guide'))
+        a.family.set('Lines'); a.family_changed()
+        self.assertEqual(a.snap_history.points,[])
+        self.assertFalse(a.canvas.find_withtag('tracking-guide'))
+        a.motion(self.event([1.,0.])); self.assertTrue(a.snap_history.points)
+        a.tool.set('Connected points'); a.method_changed()
+        self.assertEqual(a.snap_history.points,[])
+
+    def test_memory_acquires_tangent_and_line_grid_but_not_plain_grid(self):
+        a=self.app; a.family.set('Lines'); a.family_changed()
+        a.pick([2,0])
+        import math
+        tangent=[.5,math.sqrt(3)/2]
+        a.motion(self.event(tangent)); self.assertEqual(a.marker,'tangent')
+        self.assertAlmostEqual(a.snap_history.points[0][1],tangent[1])
+        a.cancel(); self.assertTrue(a.snap_history.points)  # same tool retains memory
+        a.doc.add([{'type':'line','a':[3,.1],'b':[5,.1]}]); a.grid_snap.set(True)
+        a.motion(self.event([3.5,.12])); self.assertEqual(a.marker,'line/grid intersection')
+        self.assertEqual(a.snap_history.points[0],[3.5,.1])
+        before=list(a.snap_history.points)
+        a.motion(self.event([6.25,6.25])); self.assertEqual(a.marker,'grid intersection')
+        self.assertEqual(a.snap_history.points,before)
+
     def test_movement_restarts_and_leave_cancels(self):
         a=self.app
         with patch('draft.SNAP_HOVER_MS',60):
