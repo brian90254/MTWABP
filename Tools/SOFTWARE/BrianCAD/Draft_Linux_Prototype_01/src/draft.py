@@ -11,6 +11,7 @@ import cad_geometry as geo
 import cad_selection as selection
 import cad_trim
 import cad_chamfer
+import cad_properties
 from snap_tracking import SnapHistory
 from cad_geometry import dist as distance, anchors, hit_distance
 from cad_document import Document, COLORS
@@ -761,6 +762,7 @@ class Draft:
         self.status.set(f'{self.tool.get()}  |  {self.prompt()} | {len(self.selected)} objects + {point_count} handles selected | grid {self.grid_spacing:g}/{self.grid_subdivisions}{hidden}{pos}')
         self.layer_status.set('Active layer: '+self.doc.active)
         self.root.title((' |  ' if self.doc.dirty else '')+'BrianCAD - '+(os.path.basename(self.path) if self.path else 'Untitled'))
+        if getattr(self,'edit_window',None) is not None: self.refresh_edit()
 
     def delete(self): self.doc.delete_selected(); self.cancel(); self.refresh_layers()
     def undo(self):
@@ -883,88 +885,96 @@ class Draft:
         refresh()
 
     def edit_dialog(self):
-        ids=sorted(i for i in self.selected if self.doc.visible(i))
-        if not ids: self.error('Select at least one object first.'); return
-        if self.edit_window is not None and self.edit_window.winfo_exists(): self.edit_window.lift(); return
-        index=ids[0]; original=copy.deepcopy(self.objects[index])
+        if self.edit_window is not None and self.edit_window.winfo_exists():
+            self.refresh_edit(); self.edit_window.lift(); return
         dlg=tk.Toplevel(self.root); self.edit_window=dlg; dlg.title('Edit objects'); dlg.transient(self.root)
-        # Modal editing keeps the captured object index stable while fields are edited.
-        f=ttk.Frame(dlg,padding=14); f.pack(fill='both',expand=True)
-        ttk.Label(f,text=original['type'].title()+('  |  first selected object' if len(ids)>1 else ''),font=('',12,'bold')).grid(row=0,column=0,columnspan=2,sticky='w')
-        fields={}; row=1
-        def field(key,label,value,choices=None):
-            nonlocal row
-            ttk.Label(f,text=label).grid(row=row,column=0,sticky='w',padx=(0,12),pady=3)
-            var=tk.StringVar(value=str(value)); fields[key]=var
-            w=ttk.Combobox(f,textvariable=var,values=choices,state='readonly',width=27) if choices else ttk.Entry(f,textvariable=var,width=30)
-            w.grid(row=row,column=1,sticky='ew',pady=3); row+=1
-        reverse={v:k for k,v in COLORS.items()}
-        field('layer','Layer',original['layer'],[l['name'] for l in self.doc.layers])
-        field('color','Color',reverse[original['color']],list(COLORS))
-        field('locked','Locked',str(original['locked']),['False','True'])
-        field('pattern','Pattern',original['pattern'],['Solid','Dashed','Dotted'])
-        field('weight','Weight (inches)',original['weight'])
-        field('controls','Show control points',str(original['controls']),['False','True'])
-        kind=original['type']; geometry_fields=[]
-        def number(key,label,value): geometry_fields.append(key); field(key,label,f'{value:.12g}')
-        if kind=='line':
-            for key,p in [('a',original['a']),('b',original['b'])]:
-                for k,n in enumerate(['x','y']): number(key+n,('Start ' if key=='a' else 'End ')+n.upper(),p[k])
-        elif kind in ['circle','arc','ellipse']:
-            number('cx','Center X',original['center'][0]); number('cy','Center Y',original['center'][1])
-            if kind=='ellipse':
-                number('rx','X semi-axis',original['rx']); number('ry','Y semi-axis',original['ry']); number('angle','Rotation °',math.degrees(original['angle']))
-                if 'sweep' in original:
-                    number('start','Start °',math.degrees(original['start'])); number('sweep','Sweep °',math.degrees(original['sweep']))
-            else: number('diameter','Diameter',original['radius']*2)
-            if kind=='arc':
-                number('start','Start angle °',math.degrees(original['start'])); number('sweep','Signed sweep °',math.degrees(original['sweep']))
-        else:
-            field('points','Points: x,y; x,y; ...','; '.join(f'{p[0]:.12g},{p[1]:.12g}' for p in original['points']))
-            field('closed','Closed',str(original.get('closed',True)),['False','True'])
-            if kind=='spline': field('method','Spline method',original['method'],['through','bezier'])
-        self.edit_fields=fields
-        total=tk.StringVar(); self.edit_length=total
-        ttk.Label(f,textvariable=total).grid(row=row,column=0,columnspan=2,sticky='w',pady=8); row+=1
-        def proposed():
-            o=copy.deepcopy(original)
-            o.update(layer=fields['layer'].get(),color=COLORS[fields['color'].get()],locked=fields['locked'].get()=='True',
-                     pattern=fields['pattern'].get(),weight=float(fields['weight'].get()),controls=fields['controls'].get()=='True')
-            v={k:float(fields[k].get()) for k in geometry_fields}
-            if kind=='line': o['a']=[v['ax'],v['ay']]; o['b']=[v['bx'],v['by']]
-            elif kind in ['circle','arc','ellipse']:
-                o['center']=[v['cx'],v['cy']]
-                if kind=='ellipse':
-                    o.update(rx=v['rx'],ry=v['ry'],angle=math.radians(v['angle']))
-                    if 'sweep' in original: o.update(start=math.radians(v['start']),sweep=math.radians(v['sweep']))
-                else: o['radius']=v['diameter']/2
-                if kind=='arc': o.update(start=math.radians(v['start']),sweep=math.radians(v['sweep']))
-            else:
-                o['points']=[[float(n.strip()) for n in p.split(',')] for p in fields['points'].get().split(';')]
-                o['closed']=fields['closed'].get()=='True'
-                if kind=='spline': o['method']=fields['method'].get()
-            return self.doc.prepare(o)
-        def refresh_length(*args):
-            try:
-                o=proposed(); approx=' (approx.)' if kind in ['ellipse','spline'] else ''
-                text=f'Length: {geo.length(o):.6g} in{approx}'
-                if len(ids)>1:
-                    combined=geo.length(o)+sum(geo.length(self.objects[i]) for i in ids[1:])
-                    text+=f'  |  selected total: {combined:.6g} in'
-                total.set(text)
-            except (ValueError,KeyError,TypeError,OverflowError): total.set('Length: - (check entered values)')
-        def apply():
-            try: obj=proposed()
-            except (ValueError,KeyError,TypeError,OverflowError) as ex:
-                messagebox.showerror('Edit objects',str(ex),parent=dlg); return
-            self.doc.edit(index,obj); original.clear(); original.update(copy.deepcopy(obj))
-            self.refresh_layers(); self.draw(); refresh_length()
-        for var in fields.values(): var.trace_add('write',refresh_length)
-        refresh_length()
-        buttons=ttk.Frame(f); buttons.grid(row=row,column=0,columnspan=2,sticky='e',pady=8)
-        ttk.Button(buttons,text='Close',command=dlg.destroy).pack(side='left',padx=5)
-        ttk.Button(buttons,text='Apply',command=apply).pack(side='left')
-        dlg.bind('<Escape>',lambda e:dlg.destroy()); dlg.grab_set()
+        self.edit_frame=ttk.Frame(dlg,padding=14); self.edit_frame.pack(fill='both',expand=True)
+        buttons=ttk.Frame(dlg,padding=(14,0,14,14)); buttons.pack(fill='x')
+        ttk.Button(buttons,text='Close',command=self.close_edit).pack(side='right',padx=5)
+        self.edit_apply=ttk.Button(buttons,text='Apply',command=self.apply_edit); self.edit_apply.pack(side='right')
+        dlg.protocol('WM_DELETE_WINDOW',self.close_edit)
+        dlg.bind('<Escape>',lambda e:(self.close_edit(),'break')[1])
+        dlg.bind('<Return>',lambda e:self.apply_edit())
+        self._edit_doc=None; self.refresh_edit()
+
+    def close_edit(self):
+        if self.edit_window is not None and self.edit_window.winfo_exists(): self.edit_window.destroy()
+        self.edit_window=None; self._edit_doc=None; self._edit_originals=[]
+        self.edit_fields={}; self.edit_widgets={}; self._edit_dirty=set()
+
+    def edit_selection(self):
+        return sorted(i for i in set(self.selected)|set(self.doc.point_selection)
+                      if 0<=i<len(self.objects) and self.doc.visible(i))
+
+    def edit_matches(self):
+        ids=self.edit_selection()
+        return (getattr(self,'_edit_doc',None) is self.doc and ids==self._edit_ids
+                and all(self.objects[i]==o for i,o in zip(ids,self._edit_originals)))
+
+    def refresh_edit(self):
+        if self.edit_window is None or not self.edit_window.winfo_exists(): return
+        if self.edit_matches():
+            layers=tuple(l['name'] for l in self.doc.layers)
+            if layers!=self._edit_layers:
+                self._edit_layers=layers
+                if 'layer' in self.edit_widgets: self.edit_widgets['layer'].configure(values=('',)+layers)
+            return
+        self._edit_doc=self.doc; self._edit_ids=self.edit_selection()
+        self._edit_layers=tuple(l['name'] for l in self.doc.layers)
+        self._edit_originals=[copy.deepcopy(self.objects[i]) for i in self._edit_ids]
+        self._edit_dirty=set(); self.edit_fields={}; self.edit_widgets={}; self._edit_initial={}
+        for widget in self.edit_frame.winfo_children(): widget.destroy()
+        originals=self._edit_originals; shared=cad_properties.common(originals)
+        title=('No objects selected' if not originals else originals[0]['type'].title() if len(originals)==1
+               else f'{len(originals)} objects | mixed values are blank')
+        ttk.Label(self.edit_frame,text=title,font=('',12,'bold')).grid(row=0,column=0,columnspan=2,sticky='w',pady=(0,6))
+        properties=[cad_properties.values(o) for o in originals]
+        for row,(key,(label,kind)) in enumerate(shared.items(),1):
+            vals=[v[key] for v in properties]
+            text=cad_properties.display(vals[0],kind) if all(v==vals[0] for v in vals) else ''
+            self._edit_initial[key]=text
+            ttk.Label(self.edit_frame,text=label).grid(row=row,column=0,sticky='w',padx=(0,12),pady=3)
+            var=tk.StringVar(value=text); self.edit_fields[key]=var
+            options=cad_properties.choices(key,self._edit_layers)
+            widget=(ttk.Combobox(self.edit_frame,textvariable=var,values=['']+options,state='readonly',width=27)
+                    if options is not None else ttk.Entry(self.edit_frame,textvariable=var,width=30))
+            widget.grid(row=row,column=1,sticky='ew',pady=3); self.edit_widgets[key]=widget
+            var.trace_add('write',lambda *args,k=key:self.edit_changed(k))
+        self.edit_length=tk.StringVar()
+        ttk.Label(self.edit_frame,textvariable=self.edit_length).grid(row=len(shared)+1,column=0,columnspan=2,sticky='w',pady=8)
+        if not originals:
+            ttk.Label(self.edit_frame,text='Select objects on the canvas to edit their shared properties.').grid(row=2,column=0,columnspan=2,sticky='w')
+        self.edit_apply.configure(state='normal' if originals else 'disabled')
+        self.refresh_edit_length()
+
+    def edit_changed(self,key):
+        if self.edit_fields[key].get()!=self._edit_initial[key]: self._edit_dirty.add(key)
+        else: self._edit_dirty.discard(key)
+        self.refresh_edit_length()
+
+    def proposed_edits(self):
+        changes={key:self.edit_fields[key].get() for key in self._edit_dirty if self.edit_fields[key].get().strip()}
+        return {i:self.doc.prepare(cad_properties.apply_changes(o,changes))
+                for i,o in zip(self._edit_ids,self._edit_originals)}
+
+    def refresh_edit_length(self):
+        try:
+            proposed=list(self.proposed_edits().values())
+            approx=' (approx.)' if any(o['type'] in ('ellipse','spline') for o in proposed) else ''
+            prefix='Length' if len(proposed)==1 else 'Selected total length'
+            self.edit_length.set(f'{prefix}: {sum(geo.length(o) for o in proposed):.6g} in{approx}')
+        except (ValueError,KeyError,TypeError,OverflowError):
+            self.edit_length.set('Length: - (check entered values)')
+
+    def apply_edit(self):
+        if not self.edit_matches(): self.refresh_edit(); return
+        try:
+            updates=self.proposed_edits()
+            self.doc.commit_updates(updates)
+        except (ValueError,KeyError,TypeError,OverflowError) as ex:
+            messagebox.showerror('Edit objects',str(ex),parent=self.edit_window); return
+        self.doc.prune_selection(); self._edit_doc=None
+        self.refresh_layers(); self.draw()
 
     def discard(self): return not self.doc.dirty or messagebox.askyesno('Unsaved drawing','Discard unsaved changes?',parent=self.root)
     def new(self):
