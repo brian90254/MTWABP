@@ -96,7 +96,7 @@ Trim supports **lines, circles, arcs, ovals, and splines** as targets and cuttin
 
 ## Selection and object editing
 
-The Select tool keeps its arrow-with-tail toolbox icon and uses an explicit arrow-with-tail mouse pointer on the canvas. Its tip follows the raw mouse position independently of the snap marker. Other tools retain their standard mouse pointer.
+Select temporarily uses the standard native mouse cursor, matching the other tools. The arrow-with-tail toolbox icon remains. The previous custom pointer was a canvas polygon recreated after snapping and the full scene redraw on every mouse motion, so its movement depended on application rendering time. A future custom cursor should use a native cursor resource or an independent lightweight rendering path; the full-scene pointer overlay has been removed.
 
 Click an outline **or any of its handles** to select the whole object. A plain click on an already-selected handle also promotes its owner to whole-object selection; pressing and dragging that handle preserves the partial selection instead. **Shift-click** toggles whole-object membership.
 

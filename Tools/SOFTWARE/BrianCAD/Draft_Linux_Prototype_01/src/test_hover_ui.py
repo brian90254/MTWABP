@@ -37,7 +37,7 @@ class HoverTests(unittest.TestCase):
             self.assertEqual(a.canvas.itemcget(marker,'fill'),'black')
         self.assertEqual(a.canvas.coords(markers[0]),[497.,297.,503.,303.])
         self.assertEqual(a.canvas.coords(markers[1]),[497.,303.,503.,297.])
-        self.assertEqual(a.canvas.cget('cursor'),'none')
+        self.assertEqual(a.canvas.cget('cursor'),'arrow')
         self.assertGreater(a.select_icon.width(),0)
         self.assertFalse(a.canvas.find_withtag('snap-label'))
         self.wait(650)
@@ -130,27 +130,21 @@ class HoverTests(unittest.TestCase):
         a.motion(self.event([6.25,6.25])); self.assertEqual(a.marker,'grid intersection')
         self.assertEqual(a.snap_history.points,before)
 
-    def test_select_pointer_has_tail_and_tracks_raw_mouse(self):
-        a=self.app
-        e=self.event([1.02,.01]); a.motion(e)
-        pointer=a.canvas.find_withtag('select-pointer')
-        self.assertEqual(len(pointer),1)
-        self.assertEqual(a.canvas.type(pointer[0]),'polygon')
-        coords=a.canvas.coords(pointer[0])
-        self.assertEqual(coords[:2],[e.x,e.y])
-        self.assertEqual(coords[6:8],[e.x+8,e.y+20])  # tail, beyond the arrowhead
-        self.assertNotEqual(coords[:2],a.screen(a.mouse))
+    def test_select_uses_native_cursor_during_motion_drag_and_tool_changes(self):
+        a=self.app; e=self.event([1.02,.01])
+        self.assertEqual(a.canvas.cget('cursor'),'arrow')
+        a.motion(e)
+        self.assertFalse(a.canvas.find_withtag('select-pointer'))
+        self.assertTrue(a.canvas.find_withtag('snap-marker'))
         a.click(e); a.drag_select(self.event([2.02,1.01]))
-        pointer=a.canvas.find_withtag('select-pointer')
-        self.assertEqual(a.canvas.coords(pointer[0])[:2],[602.,199.])
-        a.release_select(self.event([2.02,1.01]))
-        a.leave_canvas(e); self.assertFalse(a.canvas.find_withtag('select-pointer'))
-        a.family.set('Lines'); a.family_changed()
         self.assertEqual(a.canvas.cget('cursor'),'arrow')
         self.assertFalse(a.canvas.find_withtag('select-pointer'))
+        a.release_select(self.event([2.02,1.01])); a.leave_canvas(e)
+        a.family.set('Lines'); a.family_changed()
+        self.assertEqual(a.canvas.cget('cursor'),'arrow')
         a.return_to_select(); a.motion(e)
-        self.assertEqual(a.canvas.cget('cursor'),'none')
-        self.assertTrue(a.canvas.find_withtag('select-pointer'))
+        self.assertEqual(a.canvas.cget('cursor'),'arrow')
+        self.assertFalse(a.canvas.find_withtag('select-pointer'))
         self.assertGreater(a.select_icon.width(),0)
 
     def test_movement_restarts_and_leave_cancels(self):
