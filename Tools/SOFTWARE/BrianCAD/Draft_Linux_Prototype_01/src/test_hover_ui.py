@@ -95,6 +95,26 @@ class HoverTests(unittest.TestCase):
         a.release_select(self.event([3.03,4.04]))
         self.assertEqual(a.objects[0]['center'],[3,4])
 
+    def test_single_guide_intersections_commit_exact_line_endpoints(self):
+        import math
+        a=self.app; a.family.set('Lines'); a.family_changed()
+        a.snap_history.remember([.5,4],'endpoint'); before=list(a.snap_history.points)
+        a.pick([3,3]); e=self.event([.52,.88]); a.motion(e)
+        self.assertEqual(a.marker,'align x / object intersection')
+        self.assertEqual(a.mouse[0],.5)
+        self.assertAlmostEqual(a.mouse[1],math.sqrt(3)/2)
+        a.click(e)
+        self.assertEqual(a.objects[-1]['b'][0],.5)
+        self.assertAlmostEqual(a.objects[-1]['b'][1],math.sqrt(3)/2)
+        self.assertEqual(a.snap_history.points,before)
+        a.method_changed(); a.grid_snap.set(True)
+        a.snap_history.remember([2.13,5],'endpoint'); before=list(a.snap_history.points)
+        a.pick([4,4]); e=self.event([2.15,1.02]); a.motion(e)
+        self.assertEqual(a.marker,'align x / grid intersection')
+        self.assertEqual(a.mouse,[2.13,1.]); a.click(e)
+        self.assertEqual(a.objects[-1]['b'],[2.13,1.])
+        self.assertEqual(a.snap_history.points,before)
+
     def test_memory_acquires_tangent_but_ignores_all_grid_snaps(self):
         a=self.app; a.family.set('Lines'); a.family_changed()
         a.pick([2,0])
