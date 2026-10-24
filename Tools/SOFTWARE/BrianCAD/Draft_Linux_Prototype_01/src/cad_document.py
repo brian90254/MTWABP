@@ -114,6 +114,24 @@ class Document:
         start=len(self.objects); self.objects.extend(pending)
         self.selected=set(range(start,len(self.objects))); self.point_selection={}
 
+    def chamfer_objects(self,first,second,click_first,click_second,radius):
+        from cad_chamfer import chamfer
+        if first==second: raise ValueError('Choose two different segments.')
+        for index in (first,second):
+            if not 0<=index<len(self.objects) or not self.visible(index) or self.objects[index].get('locked',False):
+                raise ValueError('Choose visible, unlocked segments.')
+        a,b,arc=chamfer(self.objects[first],self.objects[second],click_first,click_second,radius)
+        for key in ('layer','color','pattern','weight','controls'):
+            if key in self.objects[first]: arc[key]=self.objects[first][key]
+        replacements={first:[self.prepare(o) for o in a],second:[self.prepare(o) for o in b]}
+        arc=self.prepare(arc)
+        pending=[]
+        for i,obj in enumerate(self.objects): pending.extend(replacements[i] if i in replacements else [obj])
+        pending.append(arc)
+        self.checkpoint(); self.objects=pending
+        self.selected={len(pending)-1}; self.point_selection={}
+        return arc
+
     def trim_object(self,index,boundary_ids,click):
         from cad_trim import trim, BOUNDARIES
         ids={i for i in boundary_ids if 0<=i<len(self.objects) and self.visible(i)

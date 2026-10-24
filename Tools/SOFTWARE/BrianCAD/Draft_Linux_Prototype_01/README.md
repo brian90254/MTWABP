@@ -70,6 +70,20 @@ Collinear or coincident points and ambiguous tangent cases show an error instead
 
 Layer definitions, visibility, active layer, and grid preferences save with the drawing and participate in undo/redo.
 
+## Chamfer (rounded tangent corner)
+
+Choose **Chamfer** to show a single **Radius** field at the bottom left (default 0.25 inch). This tool makes the rounded tangent connection commonly called a fillet.
+
+1. Set Radius, then click the first line or curve **on the side to keep**. It highlights; this first pick does not change geometry.
+2. Click the second segment on its keep side. The tool finds a tangent arc with the specified radius, trims both adjoining pieces to its contact points, and adds the arc. Click locations choose between possible corner solutions. You can change Radius after the first pick.
+3. Chamfer stays active for another pair. **Right-click** returns to Select; Escape cancels the pending first pick. The radius field's Enter key validates the value; the two canvas clicks perform the operation.
+
+Line segments, circular arcs, oval arcs, and Bézier/open/closed through-point splines are supported. Full circles and ovals can be used where the two source curves have an existing corner intersection; a closed curve's retained side ends at the next such intersection. Trim a closed curve into an open segment first when it has no suitable existing intersection. Polygon objects are not directly chamfered.
+
+The tool uses finite geometry and a minor circular arc, without extending the sources. Radius must fit the chosen segments and keep sides. Invalid radii, locked/hidden geometry, and cases without a suitable tangent connection do not change the drawing. On a failed fit the first pick remains available so you can adjust Radius and retry the second pick. Curved offset intersections are found numerically and checked against the actual source tangents and requested radius before committing.
+
+Both source trims and the new arc are **one undo step**. Retained pieces keep their layer and pen settings; the new arc inherits those of the first source. Spline trims may yield multiple exact Bézier pieces. The result is ordinary editable geometry and saves with the drawing.
+
 ## Trim
 
 1. With **Select**, select one or more cutting boundaries, then choose **Trim** in the toolbox. Selected handles promote their whole owning object to a boundary. The active boundaries stay highlighted orange.

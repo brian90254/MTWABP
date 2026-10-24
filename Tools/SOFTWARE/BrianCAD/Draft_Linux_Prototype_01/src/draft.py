@@ -10,6 +10,7 @@ from tkinter import ttk, filedialog, messagebox, simpledialog, font as tkfont
 import cad_geometry as geo
 import cad_selection as selection
 import cad_trim
+import cad_chamfer
 from snap_tracking import SnapHistory
 from cad_geometry import dist as distance, anchors, hit_distance
 from cad_document import Document, COLORS
@@ -190,7 +191,9 @@ class Draft:
             ent.bind('<KeyRelease>',lambda e,k=key:self.parameter_changed(k))
             ent.bind('<Return>',lambda e:self.apply_parameters())
         actions=ttk.Frame(self.parameter_frame); actions.grid(row=(len(fields)+3)//4,column=0,columnspan=4,padx=5,pady=4,sticky='w')
-        if fields:
+        if self.family.get()=='Chamfer':
+            ttk.Label(actions,text='Click two segments on the sides to keep. Right-click: Select.').pack(side='left')
+        elif fields:
             if self.family.get()!='Modify':
                 ttk.Button(actions,text='Use entered point',command=self.enter_point).pack(side='left',padx=3)
             ttk.Button(actions,text='Apply / Create',command=self.apply_parameters).pack(side='left',padx=3)
@@ -389,6 +392,8 @@ class Draft:
         self.update_pointer(e)
         self.cancel_snap_hover()
         self.canvas.focus_set(); raw=self.world(e.x,e.y)
+        if self.family.get()=='Chamfer':
+            self.chamfer_click(raw); return
         if self.family.get()=='Trim':
             self.trim_click(raw); return
         if self.family.get()=='Select':
@@ -423,6 +428,28 @@ class Draft:
             self.points,self.refs,self.start=before
             self.error(str(ex))
         self.draw()
+
+    def chamfer_click(self,raw):
+        try:
+            radius=self.values()['radius']
+            if not 1e-6<=radius<=1e7: raise ValueError('Enter a positive radius between 0.000001 and 10,000,000 inches.')
+            hits=[(distance(raw,selection.nearest_point(raw,o)),i)
+                  for i,o in enumerate(self.objects) if self.doc.visible(i) and not o.get('locked',False)
+                  and o['type'] in cad_chamfer.SUPPORTED
+                  and selection.box_distance(raw,self.object_bounds(o))<=9/self.scale]
+            d,index=min(hits,default=(float('inf'),None))
+            if d>9/self.scale: return
+            first=getattr(self,'chamfer_first',None)
+            if first is None:
+                self.chamfer_first=(self.objects[index],selection.nearest_point(raw,self.objects[index]))
+                self.selected={index}; self.doc.point_selection={}; self.draw(); return
+            first_index=next((i for i,o in enumerate(self.objects) if o is first[0]),None)
+            if first_index is None: self.chamfer_first=None; raise ValueError('The first segment changed. Choose it again.')
+            if first_index==index: raise ValueError('Choose a different second segment.')
+            self.doc.chamfer_objects(first_index,index,first[1],selection.nearest_point(raw,self.objects[index]),radius)
+            self.chamfer_first=None; self.mouse=None; self.marker=''; self.tracking_cursor=None
+            self.refresh_layers(); self.draw()
+        except (ValueError,KeyError) as ex: self.error(str(ex))
 
     def trim_click(self,raw):
         ids={i for i,o in enumerate(self.objects)
@@ -557,6 +584,11 @@ class Draft:
         self.refresh_layers(); self.draw()
 
     def apply_parameters(self):
+        if self.family.get()=='Chamfer':
+            try:
+                if not 1e-6<=self.values()['radius']<=1e7: raise ValueError('Enter a positive radius between 0.000001 and 10,000,000 inches.')
+            except ValueError as ex: self.error(str(ex))
+            return
         try:
             family=self.family.get(); method=self.tool.get(); v=self.values()
             if family=='Select': return
@@ -586,7 +618,7 @@ class Draft:
 
     def cancel(self):
         self.cancel_snap_hover()
-        self.trim_cutters=[]; self.tracking_cursor=None
+        self.trim_cutters=[]; self.chamfer_first=None; self.tracking_cursor=None
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
         self.box_start=None; self.box_end=None
         self.drag=None; self.drag_preview={}; self.drag_error=''
@@ -596,6 +628,8 @@ class Draft:
 
     def prompt(self):
         method=self.tool.get(); n=len(self.points)
+        if self.family.get()=='Chamfer':
+            return 'Pick second segment on the side to keep' if getattr(self,'chamfer_first',None) else 'Set Radius; pick first segment on the side to keep'
         if self.family.get()=='Trim':
             count=len(getattr(self,'trim_cutters',[]))
             return f'{count} active cutting boundaries | Click section to remove; right-click exits' if count else 'Select cutting boundaries, then choose Trim'

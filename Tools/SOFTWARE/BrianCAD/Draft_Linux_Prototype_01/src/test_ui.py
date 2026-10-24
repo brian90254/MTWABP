@@ -290,6 +290,62 @@ class WorkflowTests(unittest.TestCase):
         self.assertAlmostEqual(a.objects[1]['a'][0],2)
         self.assertFalse(self.errors)
 
+    def chamfer_setup(self):
+        from cad_document import Document
+        a=self.app; a.doc=Document(); a.scale=100; a.origin=[400,300]
+        a.doc.add([{'type':'line','a':[0,0],'b':[4,0]},
+                   {'type':'line','a':[0,0],'b':[0,4]}])
+        self.choose('Chamfer'); return a
+
+    def test_chamfer_single_radius_field_two_clicks_and_undo(self):
+        a=self.chamfer_setup(); self.assertEqual(list(a.params),['radius'])
+        entries=[w for frame in a.parameter_frame.winfo_children() for w in frame.winfo_children() if w.winfo_class()=='TEntry']
+        self.assertEqual(len(entries),1)
+        self.assertIsNone(self.button(a.parameter_frame,'Apply / Create'))
+        before=a.doc.state(); history=len(a.doc.history)
+        self.trim_mouse([2,0]); self.assertEqual(a.doc.state(),before)
+        self.assertIsNotNone(a.chamfer_first); self.assertIn('second segment',a.prompt())
+        a.params['radius'].set('.5')  # the value at the second pick defines the result
+        self.trim_mouse([0,2],12000)
+        self.assertEqual(len(a.objects),3); self.assertEqual(a.objects[-1]['type'],'arc')
+        self.assertAlmostEqual(a.objects[-1]['radius'],.5)
+        self.assertEqual(a.family.get(),'Chamfer'); self.assertIsNone(a.chamfer_first)
+        self.assertEqual(len(a.doc.history),history+1)
+        self.assertAlmostEqual(a.objects[0]['a'][0],.5)
+        self.assertAlmostEqual(a.objects[1]['a'][1],.5)
+        a.undo(); self.assertEqual(a.doc.state(),before)
+        a.redo(); self.assertEqual(len(a.objects),3)
+        self.assertFalse(self.errors)
+
+    def test_chamfer_invalid_radius_retry_and_right_click_cancel(self):
+        a=self.chamfer_setup(); before=a.doc.state(); history=len(a.doc.history)
+        a.params['radius'].set('0'); self.trim_mouse([2,0])
+        self.assertIsNone(a.chamfer_first); self.assertTrue(self.errors); self.errors.clear()
+        a.params['radius'].set('.5'); self.trim_mouse([2,0],12000)
+        self.trim_mouse([2,0],14000); self.assertTrue(self.errors); self.errors.clear()
+        a.params['radius'].set('10'); self.trim_mouse([0,2],16000)
+        self.assertTrue(self.errors); self.errors.clear(); self.assertIsNotNone(a.chamfer_first)
+        self.assertEqual(a.doc.state(),before); self.assertEqual(len(a.doc.history),history)
+        a.params['radius'].set('.5'); self.trim_mouse([0,2],18000)
+        self.assertEqual(len(a.objects),3)
+        a.undo(); self.trim_mouse([2,0],20000); self.right_click()
+        self.assertEqual(a.family.get(),'Select'); self.assertIsNone(a.chamfer_first)
+        self.assertEqual(a.doc.state(),before)
+        self.assertFalse(self.errors)
+
+    def test_chamfer_curve_mouse_workflow(self):
+        from cad_document import Document
+        a=self.app; a.doc=Document(); a.scale=100; a.origin=[400,300]
+        a.doc.add([{'type':'line','a':[1,-2],'b':[1,2]},
+                   {'type':'spline','method':'bezier','closed':False,'points':[[-2,5],[0,-3],[2,5]]}])
+        self.choose('Chamfer'); a.params['radius'].set('1')
+        self.trim_mouse([1,-.5]); self.trim_mouse([-.4,1.16],12000)
+        self.assertEqual(len(a.objects),3); self.assertEqual(a.objects[-1]['type'],'arc')
+        self.assertAlmostEqual(a.objects[-1]['radius'],1)
+        self.assertAlmostEqual(a.objects[-1]['center'][0],0,places=6)
+        self.assertAlmostEqual(a.objects[-1]['center'][1],0,places=6)
+        self.assertFalse(self.errors)
+
     def test_all_tool_controls_and_tab_order(self):
         for family,methods in METHODS.items():
             for method in methods:
