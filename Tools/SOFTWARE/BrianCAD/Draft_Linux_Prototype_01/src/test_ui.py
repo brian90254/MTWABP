@@ -227,6 +227,31 @@ class WorkflowTests(unittest.TestCase):
         self.trim_mouse([1,1],18000); self.assertEqual(len(a.objects),1)
         self.assertFalse(self.errors)
 
+    def test_curve_constraint_snaps_commit_exact_line_endpoints(self):
+        import math
+        import cad_geometry as g
+        from cad_document import Document
+        a=self.app; a.scale=100; a.origin=[400,300]
+        a.grid_snap.set(False)
+        cases=[({'type':'ellipse','center':[0,0],'rx':2,'ry':1,'angle':0},
+                [3,0],[4/3,math.sqrt(5)/3],'tangent'),
+               ({'type':'spline','method':'bezier','closed':False,'points':[[0,0],[1,2],[2,0]]},
+                [3,1],[1,1],'tangent'),
+               ({'type':'spline','method':'bezier','closed':False,'points':[[0,0],[1,2],[2,0]]},
+                [1,3],[1,1],'perpendicular')]
+        for obj,start,q,label in cases:
+            with self.subTest(kind=obj['type'],mode=label):
+                a.doc=Document(); a.doc.add([obj]); self.choose('Lines')
+                a.pick(start)
+                x,y=a.screen([q[0]+.01,q[1]+.01])
+                a.motion(SimpleNamespace(x=x,y=y)); self.assertEqual(a.marker,label)
+                self.assertLess(g.dist(a.mouse,q),1e-7)
+                a.click(SimpleNamespace(x=x,y=y,state=0))
+                self.assertLess(g.dist(a.objects[-1]['b'],q),1e-7)
+                self.assertTrue(any(g.dist(p,q)<1e-7 for p in a.snap_history.points))
+                a.undo(); self.assertEqual(len(a.objects),1)
+        self.assertFalse(self.errors)
+
     def test_all_tool_controls_and_tab_order(self):
         for family,methods in METHODS.items():
             for method in methods:

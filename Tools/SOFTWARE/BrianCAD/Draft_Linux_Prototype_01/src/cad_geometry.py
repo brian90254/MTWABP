@@ -21,8 +21,20 @@ def polar(c,r,a): return add(c,[r*math.cos(a),r*math.sin(a)])
 def angle(c,p): return math.atan2(p[1]-c[1],p[0]-c[0])
 
 
+def arc_contains(obj,p):
+    if obj['type']!='arc': return True
+    delta=((angle(obj['center'],p)-obj['start'])*(1 if obj['sweep']>0 else -1))%TAU
+    return delta<=abs(obj['sweep'])+EPS or TAU-delta<=EPS
+
+
 def tangent_points(start,obj):
     """Contact points of nonzero tangents from start, restricted to an arc's sweep."""
+    if obj['type']=='ellipse':
+        c=obj['center']; a=obj['angle']; ca,sa=math.cos(a),math.sin(a)
+        dx,dy=sub(start,c)
+        local=[(ca*dx+sa*dy)/obj['rx'],(-sa*dx+ca*dy)/obj['ry']]
+        contacts=tangent_points(local,{'type':'circle','center':[0,0],'radius':1})
+        return [add(c,[ca*obj['rx']*x-sa*obj['ry']*y,sa*obj['rx']*x+ca*obj['ry']*y]) for x,y in contacts]
     if obj['type'] not in ('circle','arc'): return []
     c,r=obj['center'],obj['radius']
     v=sub(start,c); d=math.hypot(*v)
@@ -31,12 +43,7 @@ def tangent_points(start,obj):
     base=mul(u,r*ratio)
     offset=mul(normal(u),r*math.sqrt(max(0.,1-ratio*ratio)))
     points=[add(c,add(base,offset)),add(c,sub(base,offset))]
-    if obj['type']=='arc':
-        sweep=obj['sweep']; direction=1 if sweep>=0 else -1
-        def on_arc(q):
-            delta=((angle(c,q)-obj['start'])*direction)%TAU
-            return delta<=abs(sweep)+EPS or TAU-delta<=EPS
-        points=[q for q in points if on_arc(q)]
+    points=[q for q in points if arc_contains(obj,q)]
     return points
 
 
@@ -185,7 +192,9 @@ def anchors(o):
             pts.append((polar(o['center'],o['radius'],o['handle_angle']),'radius handle'))
         return pts
     if kind=='arc':
-        pts=[(o['center'],'center')]+[(polar(o['center'],o['radius'],o['start']+o['sweep']*t),label) for t,label in [(0,'endpoint'),(.5,'midpoint'),(1,'endpoint')]]
+        quadrants=[(polar(o['center'],o['radius'],i*math.pi/2),'quadrant') for i in range(4)
+                   if arc_contains(o,polar(o['center'],o['radius'],i*math.pi/2))]
+        pts=[(o['center'],'center')]+quadrants+[(polar(o['center'],o['radius'],o['start']+o['sweep']*t),label) for t,label in [(0,'endpoint'),(.5,'midpoint'),(1,'endpoint')]]
         if abs(o.get('through_fraction',.5)-.5)>1e-10:
             pts.append((polar(o['center'],o['radius'],o['start']+o['sweep']*o['through_fraction']),'through point'))
         return pts
