@@ -161,6 +161,8 @@ class Draft:
             if self.family.get()=='Modify' and key in ['x','y']: label='Pivot '+key.upper() if self.tool.get()!='Move' else 'Ref '+key.upper()
             if self.family.get()=='Arcs' and self.tool.get()=='Center + start + end':
                 label={'x':'Center X','y':'Center Y','x2':'Start X','y2':'Start Y','x3':'End X','y3':'End Y'}.get(key,label)
+            elif self.family.get()=='Arcs' and self.tool.get()=='Start tangent + end':
+                label={'x':'Start X','y':'Start Y','x2':'Tangent X','y2':'Tangent Y','x3':'End X','y3':'End Y'}.get(key,label)
             elif key in ('x','y') and (self.family.get() in ['Circles','Ovals'] or 'polygon' in self.tool.get()):
                 label='Center '+key.upper() if self.tool.get() not in ['Diameter endpoints','Three-point circle','Two tangent lines','Opposite corners','Axis endpoints + width'] else key.upper()
             ttk.Label(cell,text=label,width=9).pack(side='left')
@@ -446,7 +448,9 @@ class Draft:
         for i in range(len(self.points)):
             if 'x'+(str(i+1) if i else '') in self.params: self.points[i]=self.field_point(i)
         ref=None
-        needs_line=(method in ['Offset from line','Start tangent + end'] and not self.points) or method=='Two tangent lines'
+        if method=='Start tangent + end' and len(self.points)==1:
+            geo.unit(geo.sub(p,self.points[0]))
+        needs_line=(method=='Offset from line' and not self.points) or method=='Two tangent lines'
         if needs_line:
             idx=self.hit(raw,True)
             if idx is None: raise ValueError('Click close to an existing visible line.')
@@ -538,7 +542,7 @@ class Draft:
             return prompts[method][min(n,len(prompts[method])-1)]
         if self.family.get()=='Splines': return f'{n} points  |  pick next; Enter finishes'
         if method=='Offset from line': return 'Pick source line' if not n else 'Pick offset side/distance, or enter Offset and Apply'
-        if method=='Start tangent + end': return 'Pick start on tangent line (line direction defines tangent)' if not n else 'Pick arc endpoint'
+        if method=='Start tangent + end': return ['Pick arc start','Pick tangent direction point','Pick arc endpoint (direction is automatic)'][min(n,2)]
         if method=='Two tangent lines': return 'Pick exact first contact on a line' if not n else 'Pick second tangent line near desired contact'
         if method=='Center + start + end': return ['Pick center','Pick arc start','Pick end direction (projected to radius)'][min(n,2)]
         if method in ['Three-point arc','Three-point circle']: return ['Pick first point','Pick second point','Pick third point'][min(n,2)]
@@ -550,6 +554,8 @@ class Draft:
         if self.mouse is None or not self.points or self.family.get() in ['Select','Modify']: return None
         try:
             pts=self.points+[self.mouse]
+            if self.tool.get()=='Start tangent + end':
+                pts=[self.field_point(i) for i in range(len(self.points))]+[self.mouse]
             if self.family.get()=='Splines':
                 if len(pts)<2: return None
                 return construct(self.tool.get(),pts,{},self.refs)
@@ -600,6 +606,11 @@ class Draft:
                     chosen=i in self.selected or key in partial
                     c.create_rectangle(a-4,b-4,a+4,b+4,outline='#b66b00' if chosen else '#708296',
                                        fill='#eaa23d' if chosen else 'white')
+        if self.tool.get()=='Start tangent + end' and len(self.points)>=2:
+            try:
+                c.create_line(*self.screen(self.field_point(0)),*self.screen(self.field_point(1)),
+                              fill='#9dbcd5',dash=(3,5),tags=('tangent-guide',))
+            except (ValueError,KeyError): pass
         preview=self.preview()
         if preview: self.draw_object(preview,color='#708296',dash=(5,3))
         if self.family.get()=='Splines' and self.points:

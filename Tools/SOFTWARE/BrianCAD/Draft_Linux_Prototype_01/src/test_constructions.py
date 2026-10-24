@@ -36,12 +36,26 @@ class ConstructionTests(unittest.TestCase):
             self.assertLess(g.hit_distance(pts[1],o),1e-8)
 
     def test_tangent_arc(self):
-        line={'a':[0,0],'b':[1,0]}
-        for end in [[1,1],[1,-1]]:
-            o=construct('Start tangent + end',[[0,0],end],{},[line])
-            self.close(o['center'],[0,end[1]]); self.close(g.path(o)[-1],end)
-        with self.assertRaises(ValueError): construct('Start tangent + end',[[0,1],[1,1]],{},[line])
-        with self.assertRaises(ValueError): g.arc_tangent([0,0],[1,0],[2,0])
+        for end in [[1,1],[1,-1],[-1,1],[-1,-1]]:
+            for clockwise in [False,True]:
+                o=construct('Start tangent + end',[[0,0],[2,0],end],{},clockwise=clockwise)
+                self.close(o['center'],[0,end[1]]); self.close(g.path(o)[-1],end)
+                self.close(g.path(o)[0],[0,0])
+                self.assertEqual(o['sweep']>0,end[1]>0)
+                # The directed tangent at the start points toward the second click,
+                # including endpoints requiring an arc greater than 180 degrees.
+                radial=g.sub([0,0],o['center'])
+                tangent=g.mul(g.normal(radial),1 if o['sweep']>0 else -1)
+                self.close(g.unit(tangent),[1,0])
+        with self.assertRaises(ValueError): construct('Start tangent + end',[[0,0],[0,0],[1,1]],{})
+        with self.assertRaises(ValueError): construct('Start tangent + end',[[0,0],[1,0],[2,0]],{})
+        with self.assertRaises(ValueError): construct('Start tangent + end',[[0,0],[1,0],[0,0]],{})
+
+    def test_rotated_translated_tangent_arc(self):
+        start=[3,-4]; tangent=[3,-2]; end=[2,-3]
+        o=construct('Start tangent + end',[start,tangent,end],{})
+        self.close(o['center'],[2,-4]); self.close(g.path(o)[-1],end)
+        self.assertGreater(o['sweep'],0)
 
     def test_circle_methods(self):
         o=construct('Center + diameter',[[2,3],[0,0]],{'diameter':1})

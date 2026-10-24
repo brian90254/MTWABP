@@ -39,7 +39,7 @@ Choose a tool family and a construction method. Its numeric parameters appear al
 | Lines | Offset from line | Pick an existing line, then the offset side/distance; or enter a signed Offset and Apply. Positive is left of source start-to-end direction. |
 | Arcs | Center + start + end | Center, start, end direction. The last pick is projected onto the start radius. Clockwise checkbox chooses the sweep. |
 | Arcs | Three-point arc | Start, point on the arc, end; the sweep passes through the middle point |
-| Arcs | Start tangent + end | Pick the start on an existing line, then the endpoint. Source start-to-end direction defines the initial tangent. |
+| Arcs | Start tangent + end | Pick the arc start, a tangent direction point, then the arc endpoint. The tangent guide points from the first pick toward the second; only the arc is created. Endpoint side determines clockwise/counterclockwise automatically (the center-arc Clockwise checkbox does not apply). |
 | Circles | Center + diameter | Pick center then circumference, or enter center and diameter and Apply |
 | Circles | Diameter endpoints | Two opposite points |
 | Circles | Three-point circle | Three distinct, noncollinear points |
@@ -56,7 +56,7 @@ Choose a tool family and a construction method. Its numeric parameters appear al
 | Splines | Closed through points | Closed interpolating curve (3–200 points); finish explicitly |
 | Splines | Bezier controls | A Bézier curve defined by 2–32 control points; finish explicitly |
 
-Collinear or coincident points and ambiguous tangent cases show an error instead of creating invalid geometry. Tangent methods need existing straight lines; they use the supporting lines where necessary. Circle tangencies to other circles and general spline constraint solving are not implemented. Arbitrary pairs of exact contact points do not always admit a common tangent circle, which is why the second line pick chooses a solution rather than forcing a second exact contact.
+Collinear or coincident points and ambiguous tangent cases show an error instead of creating invalid geometry. The tangent-arc method uses three freely chosen points and needs no existing geometry. The start and tangent direction point must differ, and the arc endpoint must be off their tangent line. Circle tangent construction still needs existing straight lines and uses their supporting lines where necessary. Circle tangencies to other circles and general spline constraint solving are not implemented. Arbitrary pairs of exact contact points do not always admit a common tangent circle, which is why the second line pick chooses a solution rather than forcing a second exact contact.
 
 ## Layers
 
