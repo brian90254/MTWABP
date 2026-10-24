@@ -880,6 +880,8 @@ class Draft:
             number('cx','Center X',original['center'][0]); number('cy','Center Y',original['center'][1])
             if kind=='ellipse':
                 number('rx','X semi-axis',original['rx']); number('ry','Y semi-axis',original['ry']); number('angle','Rotation °',math.degrees(original['angle']))
+                if 'sweep' in original:
+                    number('start','Start °',math.degrees(original['start'])); number('sweep','Sweep °',math.degrees(original['sweep']))
             else: number('diameter','Diameter',original['radius']*2)
             if kind=='arc':
                 number('start','Start angle °',math.degrees(original['start'])); number('sweep','Signed sweep °',math.degrees(original['sweep']))
@@ -898,7 +900,9 @@ class Draft:
             if kind=='line': o['a']=[v['ax'],v['ay']]; o['b']=[v['bx'],v['by']]
             elif kind in ['circle','arc','ellipse']:
                 o['center']=[v['cx'],v['cy']]
-                if kind=='ellipse': o.update(rx=v['rx'],ry=v['ry'],angle=math.radians(v['angle']))
+                if kind=='ellipse':
+                    o.update(rx=v['rx'],ry=v['ry'],angle=math.radians(v['angle']))
+                    if 'sweep' in original: o.update(start=math.radians(v['start']),sweep=math.radians(v['sweep']))
                 else: o['radius']=v['diameter']/2
                 if kind=='arc': o.update(start=math.radians(v['start']),sweep=math.radians(v['sweep']))
             else:

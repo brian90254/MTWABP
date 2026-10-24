@@ -1,16 +1,19 @@
-"""Exact finite intersections and click-directed trimming of lines/circular curves."""
+"""Finite intersections and click-directed trimming of lines and curves."""
 import bisect
 import copy
 import math
 import cad_geometry as g
 
-TARGETS={'line','circle','arc'}
+TARGETS={'line','circle','arc','ellipse','spline'}
 BOUNDARIES=TARGETS|{'polygon'}
 TOL=1e-10
 
 
 def parameter(obj,p):
     """Curve parameter in [0,1], or None when outside a finite curve."""
+    if obj['type'] in ('ellipse','spline'):
+        from curve_trim import parameter as curve_parameter
+        return curve_parameter(obj,p)
     if obj['type']=='line':
         v=g.sub(obj['b'],obj['a']); t=g.dot(g.sub(p,obj['a']),v)/g.dot(v,v)
     else:
@@ -29,6 +32,9 @@ def intersections(a,b):
         return [p for x,y in zip(pts,pts[1:]+pts[:1])
                 for p in intersections({'type':'line','a':x,'b':y},other)]
     if a['type'] not in TARGETS or b['type'] not in TARGETS: return []
+    if a['type'] in ('ellipse','spline') or b['type'] in ('ellipse','spline'):
+        from curve_trim import crossings
+        return [p for _,_,p in crossings(a,b)]
     if a['type']=='line' and b['type']=='line':
         u=g.sub(a['b'],a['a']); v=g.sub(b['b'],b['a']); det=g.cross(u,v)
         if abs(det)<=1e-12*math.hypot(*u)*math.hypot(*v): return []
@@ -66,33 +72,46 @@ def fragment(obj,lo,hi):
         n['a']=g.add(obj['a'],g.mul(v,lo)); n['b']=g.add(obj['a'],g.mul(v,hi))
     else:
         sweep=obj.get('sweep',g.TAU)
-        n.update(type='arc',start=obj.get('start',0.)+sweep*lo,sweep=sweep*(hi-lo))
+        n.update(type='ellipse' if obj['type']=='ellipse' else 'arc',start=obj.get('start',0.)+sweep*lo,sweep=sweep*(hi-lo))
         n.pop('handle_angle',None); n.pop('through_fraction',None)
     return g.validate_geometry(n)
+
+
+def fragments(obj,lo,hi):
+    if obj['type']=='spline':
+        from curve_trim import spline_fragments
+        return spline_fragments(obj,lo,hi)
+    return [fragment(obj,lo,hi)]
 
 
 def trim(obj,boundaries,click):
     """Return retained pieces, removing only the interval beneath the click."""
     if obj['type'] not in TARGETS:
-        raise ValueError('Trim currently supports line, circle, and arc targets.')
-    values=sorted(parameter(obj,p) for b in boundaries for p in intersections(obj,b))
+        raise ValueError('Trim supports line, circle, arc, oval, and spline targets.')
+    values=[]
+    for b in boundaries:
+        if obj['type'] in ('ellipse','spline') or b['type'] in ('ellipse','spline'):
+            from curve_trim import crossings
+            values.extend(t for t,_,_ in crossings(obj,b))
+        else: values.extend(parameter(obj,p) for p in intersections(obj,b))
+    values=sorted(values)
     cuts=[]
     for t in values:
         if not cuts or t-cuts[-1]>TOL: cuts.append(t)
     t=parameter(obj,click)
     # Clicks are projected by the UI; also accept nearby angular/line positions.
     if t is None: raise ValueError('Click on the part of the object to remove.')
-    closed=obj['type']=='circle' or (obj['type']=='arc' and abs(abs(obj['sweep'])-g.TAU)<TOL)
+    closed=(obj['type'] in ('circle','ellipse') and abs(abs(obj.get('sweep',g.TAU))-g.TAU)<TOL) or (obj['type']=='arc' and abs(abs(obj['sweep'])-g.TAU)<TOL) or (obj['type']=='spline' and obj.get('closed',False))
     if closed:
         if cuts and cuts[-1]-cuts[0]>1-TOL: cuts.pop()
-        if not cuts: raise ValueError('No cutting contact on this circle; nothing was trimmed.')
+        if not cuts: raise ValueError('No cutting contact on this closed curve; nothing was trimmed.')
         if len(cuts)==1: return []  # One contact bounds the entire circumference.
         i=bisect.bisect_right(cuts,t)
         lo=cuts[i-1] if i else cuts[-1]-1
         hi=cuts[i] if i<len(cuts) else cuts[0]+1
-        return [fragment(obj,hi,lo+1)]
+        return fragments(obj,hi,lo+1)
     cuts=[x for x in cuts if TOL<x<1-TOL]
     if not cuts: raise ValueError('No cutting crossing on this object; nothing was trimmed.')
     ends=[0.]+cuts+[1.]; i=min(len(ends)-2,bisect.bisect_right(ends,t)-1)
     lo,hi=ends[i:i+2]
-    return [fragment(obj,a,b) for a,b in [(0.,lo),(hi,1.)] if b-a>TOL]
+    return [piece for a,b in [(0.,lo),(hi,1.)] if b-a>TOL for piece in fragments(obj,a,b)]

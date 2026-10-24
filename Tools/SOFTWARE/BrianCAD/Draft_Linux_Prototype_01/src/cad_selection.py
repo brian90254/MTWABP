@@ -12,6 +12,7 @@ def controls(o):
         return [('center',list(o['center']))]+[(key,g.polar(o['center'],o['radius'],o['start']+o['sweep']*t))
                                               for key,t in [('start',0),('through',o.get('through_fraction',.5)),('end',1)]]
     if kind=='ellipse':
+        if 'sweep' in o: return [('center',list(o['center']))]+[(key,g.ellipse_point(o,t)) for key,t in [('start',0),('end',1)]]
         return [('center',list(o['center'])),('axis_x',g.polar(o['center'],o['rx'],o['angle'])),
                 ('axis_y',g.polar(o['center'],o['ry'],o['angle']+math.pi/2))]
     return [('p'+str(i),list(p)) for i,p in enumerate(o['points'])]
@@ -35,7 +36,12 @@ def move_controls(o,keys,dx,dy):
     elif kind=='circle':
         n['radius']=g.dist(o['center'],new['radius']); n['handle_angle']=g.angle(o['center'],new['radius'])
     elif kind=='arc': n.update(g.arc_three(new['start'],new['through'],new['end']))
-    elif kind=='ellipse': n.update(g.ellipse_axes(new['center'],new['axis_x'],new['axis_y']))
+    elif kind=='ellipse':
+        if 'sweep' in o:
+            start=g.ellipse_angle(o,new['start']); end=g.ellipse_angle(o,new['end'])
+            sweep=(end-start)%g.TAU if o['sweep']>0 else -((start-end)%g.TAU)
+            n.update(start=start,sweep=sweep)
+        else: n.update(g.ellipse_axes(new['center'],new['axis_x'],new['axis_y']))
     else: n['points']=[new['p'+str(i)] for i in range(len(o['points']))]
     return g.validate_geometry(n)
 
@@ -77,6 +83,14 @@ def bounds(o):
         c=o['center']; r=o['radius']; return [c[0]-r,c[1]-r,c[0]+r,c[1]+r]
     if kind=='ellipse':
         c=o['center']; a=o['angle']
+        if 'sweep' in o:
+            pts=[g.ellipse_point(o,t) for t in (0,1)]
+            full=dict(o); full.pop('start'); full.pop('sweep')
+            for angle in [math.atan2(-o['ry']*math.sin(a),o['rx']*math.cos(a)),math.atan2(o['ry']*math.cos(a),o['rx']*math.sin(a))]:
+                for v in (angle,angle+math.pi):
+                    p=g.ellipse_point(full,v/g.TAU)
+                    if g.ellipse_contains(o,p): pts.append(p)
+            return [min(p[0] for p in pts),min(p[1] for p in pts),max(p[0] for p in pts),max(p[1] for p in pts)]
         ex=math.hypot(o['rx']*math.cos(a),o['ry']*math.sin(a))
         ey=math.hypot(o['rx']*math.sin(a),o['ry']*math.cos(a))
         return [c[0]-ex,c[1]-ey,c[0]+ex,c[1]+ey]
@@ -110,7 +124,7 @@ def box_distance(p,box):
     return math.hypot(max(box[0]-p[0],0,p[0]-box[2]),max(box[1]-p[1],0,p[1]-box[3]))
 
 
-def _minimum(fn,p,steps):
+def _minimum_parameter(fn,p,steps):
     """Bracket local minima, then refine parameter-space distances (no chord snaps)."""
     def score(t):
         q=fn(t); return (q[0]-p[0])**2+(q[1]-p[1])**2
@@ -125,7 +139,10 @@ def _minimum(fn,p,steps):
             if fx<fy: b,y,fy=y,x,fx; x=b-ratio*(b-a); fx=score(x)
             else: a,x,fx=x,y,fy; y=a+ratio*(b-a); fy=score(y)
         t=(a+b)/2; candidates.append((score(t),t))
-    return fn(min(candidates,key=lambda v:v[0])[1])
+    return min(candidates,key=lambda v:v[0])[1]
+
+
+def _minimum(fn,p,steps): return fn(_minimum_parameter(fn,p,steps))
 
 
 def nearest_point(p,o):
@@ -141,12 +158,7 @@ def nearest_point(p,o):
     if kind=='polygon':
         pts=g.path(o)
         return min([g.project(p,a,b,True) for a,b in zip(pts,pts[1:])],key=lambda q:g.dist(p,q))
-    if kind=='ellipse':
-        def fn(t):
-            a=g.TAU*t; ca,sa=math.cos(o['angle']),math.sin(o['angle'])
-            x,y=o['rx']*math.cos(a),o['ry']*math.sin(a)
-            return g.add(o['center'],[ca*x-sa*y,sa*x+ca*y])
-        return _minimum(fn,p,64)
+    if kind=='ellipse': return _minimum(lambda t:g.ellipse_point(o,t),p,64)
     candidates=[_minimum(lambda t,span=span:_bezier_point(span,t),p,max(32,8*len(span))) for span in _spline_spans(o)]
     return min(candidates,key=lambda q:g.dist(p,q))
 
@@ -192,6 +204,7 @@ def axis_intersections(o,axis,value):
             points.extend(_bezier_point(span,t) for t in ts)
     result=[]
     for p in points:
+        if kind=='ellipse' and not g.ellipse_contains(o,p): continue
         p[axis]=value
         if not any(g.dist(p,q)<1e-9 for q in result): result.append(p)
     return result
@@ -269,5 +282,6 @@ def constraint_points(start,o,mode):
         for span in _spline_spans(o): points.extend(_constraint_span(start,span,[1.]*len(span),mode))
     result=[]
     for q in points:
+        if kind=='ellipse' and not g.ellipse_contains(o,q): continue
         if g.dist(start,q)>g.EPS and not any(g.dist(q,p)<1e-9 for p in result): result.append(q)
     return result

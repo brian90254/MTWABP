@@ -252,6 +252,44 @@ class WorkflowTests(unittest.TestCase):
                 a.undo(); self.assertEqual(len(a.objects),1)
         self.assertFalse(self.errors)
 
+    def test_trim_oval_mouse_and_arc_editor(self):
+        import math
+        from cad_document import Document
+        a=self.app; a.doc=Document(); a.scale=100; a.origin=[400,300]
+        a.doc.add([{'type':'ellipse','center':[0,0],'rx':2,'ry':1,'angle':0},
+                   {'type':'line','a':[0,-3],'b':[0,3]}])
+        a.selected={1}; self.choose('Trim'); before=a.doc.state()
+        self.trim_mouse([2,0]); self.assertEqual(a.objects[0]['type'],'ellipse')
+        self.assertAlmostEqual(a.objects[0]['sweep'],math.pi)
+        self.right_click(); a.selected={0}; a.edit_dialog(); self.root.update()
+        self.assertIn('start',a.edit_fields); self.assertIn('sweep',a.edit_fields)
+        a.edit_fields['sweep'].set('90'); self.button(a.edit_window,'Apply').invoke()
+        self.assertAlmostEqual(a.objects[0]['sweep'],math.pi/2)
+        self.button(a.edit_window,'Close').invoke()
+        a.undo(); a.undo(); self.assertEqual(a.doc.state(),before)
+        self.assertFalse(self.errors)
+
+    def test_trim_spline_mouse_split_and_oval_boundary(self):
+        from cad_document import Document
+        a=self.app; a.doc=Document(); a.scale=100; a.origin=[400,300]
+        a.doc.add([{'type':'spline','method':'bezier','closed':False,'points':[[0,0],[1,2],[2,0]]},
+                   {'type':'line','a':[.5,-2],'b':[.5,3]},
+                   {'type':'line','a':[1.5,-2],'b':[1.5,3]}])
+        a.selected={1,2}; self.choose('Trim'); before=a.doc.state(); history=len(a.doc.history)
+        self.trim_mouse([1,1]); self.assertEqual(len(a.objects),4)
+        self.assertEqual(a.selected,{2,3}); self.assertEqual(len(a.doc.history),history+1)
+        self.assertAlmostEqual(a.objects[0]['points'][-1][0],.5)
+        self.assertAlmostEqual(a.objects[1]['points'][0][0],1.5)
+        a.undo(); self.assertEqual(a.doc.state(),before)
+        a.doc=Document()
+        a.doc.add([{'type':'line','a':[-3,0],'b':[3,0]},
+                   {'type':'ellipse','center':[0,0],'rx':2,'ry':1,'angle':0}])
+        a.selected={1}; self.choose('Trim'); self.trim_mouse([0,0],14000)
+        self.assertEqual(len(a.objects),3); self.assertEqual(a.selected,{2})
+        self.assertAlmostEqual(a.objects[0]['b'][0],-2)
+        self.assertAlmostEqual(a.objects[1]['a'][0],2)
+        self.assertFalse(self.errors)
+
     def test_all_tool_controls_and_tab_order(self):
         for family,methods in METHODS.items():
             for method in methods:
