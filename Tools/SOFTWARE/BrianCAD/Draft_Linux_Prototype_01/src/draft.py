@@ -82,8 +82,16 @@ class Draft:
         side=ttk.Frame(body,padding=10,width=215); side.pack(side='left',fill='y')
         ttk.Label(side,text='TOOLS',font=('',11,'bold')).pack(anchor='w',pady=(0,6))
         families=ttk.Frame(side); families.pack(fill='x')
+        # Small arrow with a distinct shaft; keep the image alive with the app.
+        self.select_icon=tk.PhotoImage(master=self.root,width=18,height=20)
+        rows=['#','##','###','####','#####','######','#######','########',
+              '#########','##########','######','##  ###','#   ###','     ###','     ###','      ##']
+        for y,row in enumerate(rows,2):
+            for x,pixel in enumerate(row,2):
+                if pixel=='#': self.select_icon.put('#202b36',to=(x,y))
         for i,family in enumerate(METHODS):
-            ttk.Radiobutton(families,text=family,variable=self.family,value=family,command=self.family_changed).grid(row=i//2,column=i%2,sticky='w',pady=3,padx=(0,8))
+            opts={'image':self.select_icon,'compound':'left'} if family=='Select' else {}
+            ttk.Radiobutton(families,**opts,text=family,variable=self.family,value=family,command=self.family_changed).grid(row=i//2,column=i%2,sticky='w',pady=3,padx=(0,8))
         ttk.Label(side,text='Construction method').pack(anchor='w',pady=(14,3))
         self.method_box=ttk.Combobox(side,textvariable=self.tool,values=METHODS['Select'],state='readonly',width=25)
         self.method_box.pack(fill='x'); self.method_box.bind('<<ComboboxSelected>>',lambda e:self.method_changed())
@@ -100,8 +108,8 @@ class Draft:
         ttk.Checkbutton(side,text='Snap to grid',variable=self.grid_snap).pack(anchor='w')
         ttk.Button(side,text='Grid preferences...',command=self.grid_dialog).pack(fill='x',pady=8)
         ttk.Label(side,textvariable=self.layer_status,wraplength=200).pack(anchor='w',pady=6)
-        ttk.Label(side,text='Shift-click: add/remove\nDrag blank: window selection\nDrag selection: move\nDouble-click: edit\nWheel: zoom; middle drag: pan\nEsc: cancel; Delete: objects\nRight-click: Select\nSpline: Enter finishes',wraplength=205).pack(anchor='w',pady=8)
-        self.canvas=tk.Canvas(body,bg='white',highlightthickness=0)
+        ttk.Label(side,text='Shift-click: add/remove\nDrag blank: window selection\nDrag selection: move\nDouble-click: edit\nWheel: zoom; middle drag: pan\nEsc: cancel; Delete: objects\nRight-click: Select\nSpline: right-click/Enter finishes',wraplength=205).pack(anchor='w',pady=8)
+        self.canvas=tk.Canvas(body,bg='white',highlightthickness=0,cursor='top_left_arrow')
         self.canvas.pack(fill='both',expand=True)
         aqua=self.root.tk.call('tk','windowingsystem')=='aqua'
         # Tk 8.6 Aqua swaps middle/right; Tk 8.7+ uses the standard mapping.
@@ -109,10 +117,10 @@ class Draft:
             self.root.tk.call('package','provide','Tk'),'8.7a0'))<0
         middle_button=3 if legacy_aqua else 2
         right_button=2 if legacy_aqua else 3
-        self.root.bind(f'<Button-{right_button}>',self.return_to_select)
+        self.root.bind(f'<Button-{right_button}>',self.right_click)
         if aqua:
-            self.canvas.bind('<Control-Button-1>',self.return_to_select)
-            self.root.bind('<Control-Button-1>',self.return_to_select)
+            self.canvas.bind('<Control-Button-1>',self.right_click)
+            self.root.bind('<Control-Button-1>',self.right_click)
         for event,fn in [('<Configure>',lambda e:self.draw()),('<Motion>',self.motion),
                          ('<ButtonPress-1>',self.click),('<B1-Motion>',self.drag_select),
                          ('<ButtonRelease-1>',self.release_select),('<Double-Button-1>',self.double_click),
@@ -131,6 +139,12 @@ class Draft:
         if event.widget.winfo_class() in ['Entry','TEntry','Text','TCombobox'] and fn in [self.undo,self.redo]: return
         fn(); return 'break'
 
+    def right_click(self,event=None):
+        if self.family.get()=='Splines' and self.points:
+            self.finish()
+            return 'break'
+        return self.return_to_select(event)
+
     def return_to_select(self,event=None):
         self.pan=None
         self.family.set('Select'); self.family_changed()
@@ -142,6 +156,7 @@ class Draft:
         self.method_changed()
 
     def method_changed(self):
+        self.canvas.configure(cursor='top_left_arrow' if self.family.get()=='Select' else 'arrow')
         self.cancel()
         if self.family.get()=='Trim':
             ids=set(self.selected)|set(self.doc.point_selection)
@@ -625,7 +640,9 @@ class Draft:
                 slope=-1 if self.marker=='45°' else 1
                 c.create_line(0,b-slope*a,w,b+slope*(w-a),fill='#9dbcd5',dash=(3,5))
         if self.mouse is not None and self.marker:
-            a,b=self.screen(self.mouse); c.create_rectangle(a-5,b-5,a+5,b+5,outline='#bf7300',width=2,tags=('snap-marker',))
+            a,b=self.screen(self.mouse)
+            c.create_line(a-3,b-3,a+3,b+3,fill='black',width=1,tags=('snap-marker',))
+            c.create_line(a-3,b+3,a+3,b-3,fill='black',width=1,tags=('snap-marker',))
             if getattr(self,'_snap_label_visible',False):
                 c.create_text(a+12,b-14,text=self.marker,anchor='w',fill=SNAP_LABEL_COLOR,
                               font=self.snap_label_font,tags=('snap-label',))

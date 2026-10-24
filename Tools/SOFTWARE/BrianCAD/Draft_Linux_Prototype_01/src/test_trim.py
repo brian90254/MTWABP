@@ -61,13 +61,40 @@ class TrimTests(unittest.TestCase):
         self.assertAlmostEqual(opposite['sweep'],2*math.pi/3)
         self.assertAlmostEqual(g.hit_distance([1,0],opposite),0)
 
-    def test_noop_tangent_coincident_and_finite_nonintersection(self):
-        for a,b in [(circle(),line([-2,1],[2,1])),(circle(),circle((2,0))),
-                    (circle(),circle()),(circle(),line([0,2],[0,3])),
+    def test_noop_coincident_and_finite_nonintersection(self):
+        for a,b in [(circle(),circle()),(circle(),line([0,2],[0,3])),
                     (line([0,0],[1,0]),line([0,1],[1,1])),
                     (line([0,0],[1,0]),line([1,-1],[1,1]))]:
             with self.assertRaises(ValueError): trim(a,[b],[0,0])
-        with self.assertRaises(ValueError): trim(circle(),[line([0,0],[0,2])],[1,0])
+        self.assertEqual(trim(circle(),[line([0,0],[0,2])],[1,0]),[])
+
+    def test_tangent_line_and_circle_contacts_are_finite_and_unique(self):
+        self.assertEqual(intersections(circle(),line([-2,1],[2,1])),[[0,1]])
+        self.assertEqual(intersections(circle(),line([0,1],[2,1])),[[0,1]])
+        self.assertEqual(intersections(circle(),line([.1,1],[2,1])),[])
+        self.assertEqual(intersections(circle(),circle((2,0))),[[1,0]])
+        self.assertEqual(intersections(circle(),circle((1,0),2)),[[-1,0]])
+        self.assertEqual(intersections(circle(),line([-2,1.00001],[2,1.00001])),[])
+        self.assertEqual(intersections(arc(math.pi,math.pi),line([-2,1],[2,1])),[])
+        self.assertEqual(trim(circle(),[line([-2,1],[2,1])],[1,0]),[])
+
+    def test_two_tangents_and_mixed_contacts_leave_arcs(self):
+        bounds=[line([-2,1],[2,1]),line([-2,-1],[2,-1])]
+        for click,kept in [([1,0],[-1,0]),([-1,0],[1,0])]:
+            o=trim(circle(),bounds,click)[0]
+            self.assertAlmostEqual(o['sweep'],math.pi)
+            self.assertAlmostEqual(g.hit_distance(kept,o),0)
+        # A segment ending exactly at a computed (non-axis-aligned) tangent contact.
+        contact=g.tangent_points([2,0],circle())[0]
+        tangent=line([2,0],contact)
+        self.assertEqual(len(intersections(circle(),tangent)),1)
+        kept=trim(circle(),[tangent,line([0,-2],[0,2])],[1,0])[0]
+        self.assertEqual(kept['type'],'arc')
+        # Tangent contact splits an open arc and a tangent line at its interior.
+        kept=trim(arc(0,math.pi),[bounds[0]],[math.sqrt(.5),math.sqrt(.5)])[0]
+        self.assertAlmostEqual(kept['sweep'],math.pi/2)
+        kept=trim(bounds[0],[circle()],[-1,1])[0]
+        self.assertEqual(kept['a'],[0,1]); self.assertEqual(kept['b'],[2,1])
 
     def test_polygon_as_boundary_deduplicates_corner_crossings(self):
         box={'type':'polygon','points':[[-1,-1],[1,-1],[1,1],[-1,1]]}
