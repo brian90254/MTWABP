@@ -243,6 +243,14 @@ class Draft:
                 candidates.append((q,'on line' if o['type']=='line' else 'on curve'))
         return min(candidates,key=lambda v:distance(p,v[0]),default=None)
 
+    def tracking_exclusions(self,ids):
+        history=getattr(self,'snap_history',None)
+        if not history: return []
+        objects=[self.objects[i] for i in ids]
+        return [p for p in history.points if any(
+            hit_distance(p,o)<1e-8 or any(distance(p,q)<1e-8 for q,_ in anchors(o))
+            for o in objects)]
+
     def snap_point(self,p,exclude=None):
         tolerance=9/self.scale
         def nearest(candidates):
@@ -267,6 +275,10 @@ class Draft:
             candidates.append(([0,0],'origin'))
             best=nearest(candidates)
             if best: return best
+        history=getattr(self,'snap_history',None)
+        if self.snap.get() and history:
+            tracked=history.snap(p,self.scale,self.tracking_exclusions(excluded))
+            if tracked: return tracked
         grid=None
         if self.grid_snap.get():
             step=self.grid_spacing/self.grid_subdivisions
@@ -663,7 +675,9 @@ class Draft:
                 slope=-1 if self.marker=='45°' else 1
                 c.create_line(0,b-slope*a,w,b+slope*(w-a),fill='#9dbcd5',dash=(3,5))
         history=getattr(self,'snap_history',None)
-        guides=history.guides(getattr(self,'tracking_cursor',None),self.scale) if history and self.snap.get() else []
+        excluded=set(self.selected) if self.family.get()=='Modify' else set()
+        if getattr(self,'drag',None): excluded.update(self.drag['ids'])
+        guides=history.guides(getattr(self,'tracking_cursor',None),self.scale,self.tracking_exclusions(excluded)) if history and self.snap.get() else []
         label_counts=[0,0]
         for axis,value in guides:
             sx,sy=self.screen([value,0] if axis==0 else [0,value])

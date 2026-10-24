@@ -59,8 +59,8 @@ class HoverTests(unittest.TestCase):
         self.assertEqual(a.canvas.itemcget(guides[0],'dash'),'1 5')
         labels=a.canvas.find_withtag('tracking-label')
         self.assertEqual([a.canvas.itemcget(i,'text') for i in labels],['align x'])
-        # Guides are immediate and visual: no change to existing snap coordinates.
-        self.assertAlmostEqual(a.mouse[0],1.04)
+        # Tracking guides now constrain the corresponding coordinate immediately.
+        self.assertEqual(a.mouse,[1.,2.]); self.assertEqual(a.marker,'align x')
         a.motion(self.event([3,.04]))
         labels=a.canvas.find_withtag('tracking-label')
         self.assertEqual([a.canvas.itemcget(i,'text') for i in labels],['align y'])
@@ -77,6 +77,23 @@ class HoverTests(unittest.TestCase):
         a.motion(self.event([1.,0.])); self.assertTrue(a.snap_history.points)
         a.tool.set('Connected points'); a.method_changed()
         self.assertEqual(a.snap_history.points,[])
+
+    def test_alignment_snap_mouse_commit_and_drag(self):
+        a=self.app; a.family.set('Lines'); a.family_changed()
+        a.snap_history.remember([2,4],'endpoint')
+        a.snap_history.remember([5,3],'quadrant')
+        before=list(a.snap_history.points)
+        a.pick([6,6]); a.motion(self.event([2.04,3.03]))
+        self.assertEqual(a.mouse,[2,3]); self.assertEqual(a.marker,'align x + align y')
+        self.assertEqual(a.snap_history.points,before)
+        a.click(self.event([2.04,3.03]))
+        self.assertEqual(a.objects[-1]['b'],[2,3])
+        a.return_to_select(); a.snap_history.remember([3,4],'endpoint')
+        a.selected={0}; a.click(self.event([0,0]))
+        a.drag_select(self.event([3.03,4.04]))
+        self.assertEqual(a.drag_preview[0]['center'],[3,4])
+        a.release_select(self.event([3.03,4.04]))
+        self.assertEqual(a.objects[0]['center'],[3,4])
 
     def test_memory_acquires_tangent_but_ignores_all_grid_snaps(self):
         a=self.app; a.family.set('Lines'); a.family_changed()
