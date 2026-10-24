@@ -3,7 +3,7 @@ import math
 
 OBJECT_SNAPS={'endpoint','midpoint','center','quadrant','radius handle','through point',
               'axis endpoint','vertex','control point','fit point','tangent',
-              'intersection','line/grid intersection'}
+              'intersection'}
 
 
 class SnapHistory:

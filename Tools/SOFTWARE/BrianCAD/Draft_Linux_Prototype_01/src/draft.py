@@ -31,7 +31,7 @@ class Draft:
         self.root=root; self.doc=Document(); self.path=None
         self.scale=90.; self.origin=[470.,320.]; self.pan=None
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
-        self.snap_history=SnapHistory(); self.tracking_cursor=None
+        self.snap_history=SnapHistory(); self.tracking_cursor=None; self.pointer_position=None
         self._snap_hover_job=None; self._snap_hover_state=None; self._snap_label_visible=False
         self.snap_label_font=tkfont.nametofont('TkDefaultFont').copy()
         font_size=self.snap_label_font.cget('size')
@@ -111,7 +111,7 @@ class Draft:
         ttk.Button(side,text='Grid preferences...',command=self.grid_dialog).pack(fill='x',pady=8)
         ttk.Label(side,textvariable=self.layer_status,wraplength=200).pack(anchor='w',pady=6)
         ttk.Label(side,text='Shift-click: add/remove\nDrag blank: window selection\nDrag selection: move\nDouble-click: edit\nWheel: zoom; middle drag: pan\nEsc: cancel; Delete: objects\nRight-click: Select\nSpline: right-click/Enter finishes',wraplength=205).pack(anchor='w',pady=8)
-        self.canvas=tk.Canvas(body,bg='white',highlightthickness=0,cursor='top_left_arrow')
+        self.canvas=tk.Canvas(body,bg='white',highlightthickness=0,cursor='none')
         self.canvas.pack(fill='both',expand=True)
         aqua=self.root.tk.call('tk','windowingsystem')=='aqua'
         # Tk 8.6 Aqua swaps middle/right; Tk 8.7+ uses the standard mapping.
@@ -123,7 +123,7 @@ class Draft:
         if aqua:
             self.canvas.bind('<Control-Button-1>',self.right_click)
             self.root.bind('<Control-Button-1>',self.right_click)
-        for event,fn in [('<Configure>',lambda e:self.draw()),('<Motion>',self.motion),
+        for event,fn in [('<Configure>',lambda e:self.draw()),('<Motion>',self.motion),('<Enter>',self.motion),
                          ('<ButtonPress-1>',self.click),('<B1-Motion>',self.drag_select),
                          ('<ButtonRelease-1>',self.release_select),('<Double-Button-1>',self.double_click),
                          (f'<ButtonPress-{middle_button}>',self.pan_start),(f'<B{middle_button}-Motion>',self.pan_move),
@@ -159,7 +159,8 @@ class Draft:
 
     def method_changed(self):
         self.snap_history.clear()
-        self.canvas.configure(cursor='top_left_arrow' if self.family.get()=='Select' else 'arrow')
+        self.canvas.configure(cursor='none' if self.family.get()=='Select' else 'arrow')
+        self.update_pointer()
         self.cancel()
         if self.family.get()=='Trim':
             ids=set(self.selected)|set(self.doc.point_selection)
@@ -338,14 +339,25 @@ class Draft:
                 self._snap_label_visible=True; self.draw()
         self._snap_hover_job=self.root.after(SNAP_HOVER_MS,show)
 
+    def update_pointer(self,e=None):
+        if self.family.get()!='Select':
+            self.pointer_position=None; return
+        if e is None:
+            x,y=self.canvas.winfo_pointerxy()
+            x-=self.canvas.winfo_rootx(); y-=self.canvas.winfo_rooty()
+        else: x,y=e.x,e.y
+        self.pointer_position=(x,y) if 0<=x<self.canvas.winfo_width() and 0<=y<self.canvas.winfo_height() else None
+
     def leave_canvas(self,e):
-        self.tracking_cursor=None
+        self.pointer_position=None; self.tracking_cursor=None
         self.cancel_snap_hover(); self.draw()
 
     def motion(self,e):
+        self.update_pointer(e)
         self.mouse,self.marker=self.snap_point(self.world(e.x,e.y)); self.track_snap_hover(e); self.draw()
 
     def click(self,e):
+        self.update_pointer(e)
         self.cancel_snap_hover()
         self.canvas.focus_set(); raw=self.world(e.x,e.y)
         if self.family.get()=='Trim':
@@ -416,6 +428,7 @@ class Draft:
             self.drag_preview={}; self.drag_error=str(ex)
 
     def drag_select(self,e):
+        self.update_pointer(e)
         if self.drag is not None:
             self.update_drag(e); self.draw()
         elif self.box_start is not None:
@@ -423,6 +436,7 @@ class Draft:
             self.box_end=self.world(e.x,e.y); self.draw()
 
     def release_select(self,e):
+        self.update_pointer(e)
         if self.drag is not None:
             self.update_drag(e)
             if self.drag['active']:
@@ -668,6 +682,14 @@ class Draft:
                               font=self.snap_label_font,tags=('snap-label',))
         if self.box_start is not None and self.box_end is not None:
             c.create_rectangle(*self.screen(self.box_start),*self.screen(self.box_end),outline='#397cc1',dash=(4,3))
+        pointer=getattr(self,'pointer_position',None)
+        if self.family.get()=='Select' and pointer is not None:
+            # Raw screen coordinates keep the arrow tip at the physical mouse,
+            # independently of the snapped target marker.
+            px,py=pointer
+            shape=[(0,0),(0,16),(4,12),(8,20),(11,18),(7,10),(13,10)]
+            c.create_polygon(*[v for dx,dy in shape for v in (px+dx,py+dy)],
+                             fill='#202b36',outline='white',width=1,tags=('select-pointer',))
         hidden=' (dense lines hidden)' if self.grid.get() and (not major_visible or (self.grid_subdivisions>1 and not minor_visible)) else ''
         pos='' if self.mouse is None else f' | X {self.mouse[0]:.4f} Y {self.mouse[1]:.4f}'
         point_count=sum(len(keys) for keys in self.doc.point_selection.values())
@@ -693,9 +715,11 @@ class Draft:
         p=self.world(e.x,e.y); self.scale=max(.01,min(100000,self.scale*factor))
         self.origin=[e.x-p[0]*self.scale,e.y+p[1]*self.scale]; self.motion(e)
     def pan_start(self,e):
+        self.update_pointer(e)
         self.tracking_cursor=None
         self.cancel_snap_hover(); self.pan=[e.x,e.y]; self.draw()
     def pan_move(self,e):
+        self.update_pointer(e)
         self.cancel_snap_hover()
         if self.pan:
             self.origin[0]+=e.x-self.pan[0]; self.origin[1]+=e.y-self.pan[1]
