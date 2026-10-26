@@ -1,6 +1,9 @@
 # Ref IMAGES
 ReferenceImages/
 
+# Inkscape
+SVG/
+
 # OS-specific files
 .DS_Store
 Thumbs.db
