@@ -12,6 +12,7 @@ import cad_selection as selection
 import cad_trim
 import cad_chamfer
 import cad_properties
+import cad_dxf
 from snap_tracking import SnapHistory
 from cad_geometry import dist as distance, anchors, hit_distance
 from cad_document import Document, COLORS
@@ -76,7 +77,7 @@ class Draft:
 
     def build_ui(self):
         bar=ttk.Frame(self.root,padding=6); bar.pack(fill='x')
-        for label,fn in [('New',self.new),('Open',self.open),('Save',self.save),('Save as',lambda:self.save(True)),
+        for label,fn in [('New',self.new),('Open',self.open),('Save',self.save),('Save as',lambda:self.save(True)),('Export DXF...',self.export_dxf_dialog),
                          ('Undo',self.undo),('Redo',self.redo),('Fit',self.fit),('Layers...',self.layers_dialog),('Edit objects...',self.edit_dialog)]:
             ttk.Button(bar,text=label,command=fn).pack(side='left',padx=2)
         ttk.Label(self.root,textvariable=self.status,padding=5).pack(side='bottom',fill='x')
@@ -951,6 +952,41 @@ class Draft:
             messagebox.showerror('Edit objects',str(ex),parent=self.edit_window); return
         self.doc.prune_selection(); self._edit_doc=None
         self.refresh_layers(); self.draw()
+
+    def export_dxf_dialog(self):
+        snapshot=cad_dxf.snapshot_drawing(self.doc)
+        if not snapshot['objects']: self.error('The drawing is empty.'); return
+        dlg=tk.Toplevel(self.root); dlg.title('Export DXF'); dlg.transient(self.root)
+        self.export_window=dlg
+        frame=ttk.Frame(dlg,padding=14); frame.pack(fill='both',expand=True)
+        scope=tk.StringVar(value='all'); self.export_scope=scope
+        ttk.Radiobutton(frame,text=f"Whole drawing ({len(snapshot['objects'])} objects)",
+                        variable=scope,value='all').pack(anchor='w',pady=4)
+        ttk.Radiobutton(frame,text=f"Selected objects ({len(snapshot['selected'])} objects)",variable=scope,
+                        value='selected',state='normal' if snapshot['selected'] else 'disabled').pack(anchor='w',pady=4)
+        ttk.Label(frame,text='Units: inches. Whole drawing includes hidden layers.').pack(anchor='w',pady=(8,2))
+        ttk.Label(frame,text='Control-point selections export their entire objects.').pack(anchor='w',pady=(0,8))
+        buttons=ttk.Frame(frame); buttons.pack(fill='x')
+        def export():
+            try: cad_dxf.require_ezdxf()
+            except cad_dxf.DXFDependencyError as ex:
+                messagebox.showerror('Export DXF',str(ex),parent=dlg); return
+            stem=os.path.basename(self.path) if self.path else 'drawing'
+            stem=stem[:-11] if stem.endswith('.draft.json') else os.path.splitext(stem)[0] if '.' in stem else stem
+            path=filedialog.asksaveasfilename(parent=dlg,title='Export DXF',initialfile=stem+'.dxf',
+                    defaultextension='.dxf',filetypes=[('DXF drawing','*.dxf')])
+            if not path: return
+            try: report=cad_dxf.export_dxf(path,snapshot,selected_only=scope.get()=='selected')
+            except Exception as ex:
+                messagebox.showerror('Export DXF','Could not export DXF:\n'+str(ex),parent=dlg); return
+            dlg.destroy()
+            text=f"Exported {report['objects']} objects to:\n{path}"
+            if report['approximated']: text+=f"\n\n{report['approximated']} high-degree spline(s) exported as polylines (0.00001 inch tolerance)."
+            messagebox.showinfo('Export DXF',text,parent=self.root)
+        ttk.Button(buttons,text='Cancel',command=dlg.destroy).pack(side='right',padx=4)
+        ttk.Button(buttons,text='Export...',command=export).pack(side='right',padx=4)
+        dlg.bind('<Escape>',lambda e:dlg.destroy()); dlg.bind('<Return>',lambda e:export())
+        dlg.grab_set()
 
     def discard(self): return not self.doc.dirty or messagebox.askyesno('Unsaved drawing','Discard unsaved changes?',parent=self.root)
     def new(self):

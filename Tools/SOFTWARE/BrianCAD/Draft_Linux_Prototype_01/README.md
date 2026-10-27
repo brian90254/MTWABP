@@ -1,6 +1,6 @@
 # BrianCAD — 2D drafting
 
-An independent desktop drafting application inspired by Vellum's construction workflow. Python 3.9 or newer and Tkinter are required. Geometry is stored in inches. No pip packages are needed.
+An independent desktop drafting application inspired by Vellum's construction workflow. Python 3.9 or newer and Tkinter are required. Geometry is stored in inches. No pip packages are needed for drafting. DXF export uses the optional `ezdxf` package (see below).
 
 ## Run the current source
 
@@ -163,6 +163,24 @@ Wheel zooms around the pointer; middle-button drag pans; **Fit** frames visible 
 ## Drawing files
 
 Save/Open use JSON in the `briancad-2` format with geometry, styles, layers, active layer, and grid preferences. Original `draft-prototype-1` JSON drawings still open and get a default layer. Save As creates a separate file; saves write a temporary file before replacing the destination. Unsaved changes trigger a discard prompt for New/Open/Exit. VC6 compatibility is outside this implementation.
+
+## Export DXF
+
+Install the optional exporter using the **same Python interpreter** that launches BrianCAD. From this project folder:
+
+```bash
+python3 -m pip install -r requirements-dxf.txt
+```
+
+For example, use `python3.13 -m pip ...` if you launch with Python 3.13. The requirements select the older ezdxf 1.3 series on Python 3.9 and the 1.4 series or newer compatible 1.x releases on newer Python. Drafting and JSON save/open continue to work without ezdxf; attempting DXF export then shows the installation command for the running interpreter.
+
+Click **Export DXF...**, choose **Whole drawing** or **Selected objects**, then **Export...** and choose a `.dxf` filename. Whole drawing is the default and includes hidden and locked objects; hidden layers remain off in the DXF. Selected-only export is disabled with no selection. Selected handles export their complete owning objects, once per object. The drawing and selection are captured when the export dialog opens. Export includes committed geometry, without grid lines, snap guides, handles, pending construction previews, or unapplied Edit fields.
+
+Exports use DXF R2018, with coordinates and units in **inches**, preserving the origin and scale. Lines, circles, clockwise/counterclockwise arcs, polygons, rotated ovals, trimmed oval arcs, Bézier splines, and open/closed through-point splines are supported. Clockwise curves are written with equivalent counterclockwise DXF parameterization. Through-point splines become exact cubic spline spans. Béziers up to degree 10 remain exact SPLINE entities; higher degrees become polylines within **0.00001 inch** of the curve for reader compatibility, identified in the completion message.
+
+Layer assignments and visibility, true-color pen values, dashed/dotted patterns, and the nearest supported DXF lineweight are preserved. DXF-incompatible layer names are sanitized, with distinct names for case-insensitive collisions. Unused layers are omitted. DXF is a geometry export; keep the JSON drawing for BrianCAD editing state and object flags. Like the referenced BallyPlayfieldDesigner exporter, this uses ezdxf and an R2018 output document, creating entities directly from BrianCAD geometry rather than importing existing DXF documents.
+
+Export writes a temporary file before replacing the destination. Cancelling or a failed export leaves the drawing, JSON save path, and undo history unchanged. DXF tests require the optional package and validate read-back geometry and file auditing; without it, the native DXF round-trip tests skip while installation-error handling remains tested.
 
 ## Validation
 
