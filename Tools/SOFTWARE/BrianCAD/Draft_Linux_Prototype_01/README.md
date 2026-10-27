@@ -1,5 +1,8 @@
 # BrianCAD — 2D drafting
 
+# OPTIONAL
+# python3 -m pip install -r requirements-dxf.txt
+
 An independent desktop drafting application inspired by Vellum's construction workflow. Python 3.9 or newer and Tkinter are required. Geometry is stored in inches. No pip packages are needed for drafting. DXF export uses the optional `ezdxf` package (see below).
 
 ## Run the current source
