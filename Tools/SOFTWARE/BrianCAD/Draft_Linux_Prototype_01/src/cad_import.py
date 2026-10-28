@@ -49,10 +49,7 @@ def _pen(entity,layer,block_pen=None):
         exact='#{:02x}{:02x}{:02x}'.format(*rgb)
         standard={1:'Red',2:'Yellow',3:'Green',4:'Cyan',5:'Blue',6:'Magenta',7:'Black'}
         if indexed and aci in standard: color=COLORS[standard[aci]]
-        elif exact in COLORS.values(): color=exact
-        else:
-            def distance(hexcode): return sum((int(hexcode[i:i+2],16)-rgb[n])**2 for n,i in enumerate((1,3,5)))
-            color=min(COLORS.values(),key=distance)
+        else: color=exact
     pattern=entity.dxf.get('linetype','BYLAYER').upper()
     if pattern=='BYLAYER': pattern=layer.dxf.linetype.upper()
     if pattern=='BYBLOCK' and block_pen: pattern=block_pen['pattern'].upper()

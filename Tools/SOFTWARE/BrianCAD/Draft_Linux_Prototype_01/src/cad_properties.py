@@ -1,7 +1,7 @@
 """Shared property schemas and sparse object edits for the selection inspector."""
 import copy
 import math
-from cad_document import COLORS
+from cad_document import COLORS, rgb_color
 
 
 BASE={'layer':('Layer','choice'),'color':('Color','choice'),'locked':('Locked','choice'),
@@ -28,7 +28,7 @@ def schema(o):
 
 def values(o):
     result={k:o[k] for k in BASE}
-    result['color']=next(name for name,color in COLORS.items() if color==o['color'])
+    result['color']=next((name for name,color in COLORS.items() if color==o['color']),o['color'])
     for key in ('locked','controls'): result[key]=str(result[key])
     kind=o['type']
     if kind=='line':
@@ -71,8 +71,7 @@ def apply_changes(original,changes):
         text=text.strip()
         if not text: continue
         if key=='color':
-            if text not in COLORS: raise ValueError('Choose a listed color.')
-            o['color']=COLORS[text]
+            o['color']=COLORS[text] if text in COLORS else rgb_color(text)
         elif key in ('locked','controls','closed'):
             if text not in ('False','True'): raise ValueError('Choose True or False.')
             o[key]=text=='True'

@@ -36,6 +36,24 @@ class EditInspectorTests(unittest.TestCase):
             self.app.canvas.event_generate(event,x=round(x),y=round(y),state=1 if shift else 0,time=time)
         self.root.update()
 
+    def test_custom_rgb_display_edit_render_and_atomic_failure(self):
+        a=self.app
+        a.doc.commit_updates({0:dict(a.objects[0],color='#12abef')})
+        self.select({0});a.edit_dialog();self.root.update()
+        self.assertEqual(a.edit_fields['color'].get(),'#12abef')
+        self.assertEqual(str(a.edit_widgets['color'].cget('state')),'normal')
+        a.edit_widgets['color'].set('#A03C91');a.edit_apply.invoke()
+        self.assertEqual(a.objects[0]['color'],'#a03c91')
+        a.edit_fields['weight'].set('.02');a.edit_apply.invoke()
+        self.assertEqual(a.objects[0]['color'],'#a03c91')
+        before=a.doc.state();n=len(a.doc.history)
+        a.edit_widgets['color'].set('#badRGB');a.edit_apply.invoke()
+        self.assertEqual(a.doc.state(),before);self.assertEqual(len(a.doc.history),n)
+        self.assertTrue(self.errors);self.errors.clear()
+        a.doc.clear_selection();a.draw();self.root.update()
+        colors=[a.canvas.itemcget(i,'fill') for i in a.canvas.find_all() if a.canvas.type(i)=='line']
+        self.assertIn('#a03c91',colors)
+
     def test_open_empty_and_follow_real_mouse_selection_without_grab(self):
         a=self.app; a.edit_dialog(); self.root.update(); window=a.edit_window
         self.assertIsNone(self.root.grab_current()); self.assertEqual(a.edit_fields,{})
