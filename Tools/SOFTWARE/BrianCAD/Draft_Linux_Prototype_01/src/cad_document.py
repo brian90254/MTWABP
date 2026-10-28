@@ -4,7 +4,7 @@ import json
 from cad_geometry import validate_geometry, transform
 from cad_selection import controls, move_controls, wholly_inside, in_box
 
-COLORS={'Black':'#202b36','Blue':'#2465d8','Green':'#198548','Red':'#c44236'}
+COLORS={'Black':'#202b36','Blue':'#2465d8','Green':'#198548','Red':'#c44236','Cyan':'#00bfc4','Magenta':'#cf36b5','Yellow':'#d8b400'}
 
 
 def default_layers():
@@ -174,14 +174,14 @@ class Document:
 
     def add_layer(self,name):
         name=name.strip()
-        if not name or len(name)>100 or name in [l['name'] for l in self.layers]:
-            raise ValueError('Choose a unique layer name of 1–100 characters.')
+        if not name or len(name)>255 or name in [l['name'] for l in self.layers]:
+            raise ValueError('Choose a unique layer name of 1–255 characters.')
         self.checkpoint(); self.layers.append({'name':name,'visible':True})
 
     def rename_layer(self,old,new):
         new=new.strip()
         if old==new: return
-        if not new or len(new)>100 or new in [l['name'] for l in self.layers]: raise ValueError('Choose a unique layer name of 1–100 characters.')
+        if not new or len(new)>255 or new in [l['name'] for l in self.layers]: raise ValueError('Choose a unique layer name of 1–255 characters.')
         if old not in [l['name'] for l in self.layers]: raise ValueError('Unknown layer.')
         self.checkpoint()
         for l in self.layers:
@@ -226,7 +226,7 @@ class Document:
         if not isinstance(layers,list) or not 1<=len(layers)<=1000: raise ValueError('Invalid layer list.')
         names=[]
         for l in layers:
-            if not isinstance(l,dict) or not isinstance(l.get('name'),str) or not l['name'].strip() or len(l['name'])>100 or not isinstance(l.get('visible'),bool):
+            if not isinstance(l,dict) or not isinstance(l.get('name'),str) or not l['name'].strip() or len(l['name'])>255 or not isinstance(l.get('visible'),bool):
                 raise ValueError('Invalid layer.')
             if l['name'] in names: raise ValueError('Duplicate layer name.')
             names.append(l['name'])

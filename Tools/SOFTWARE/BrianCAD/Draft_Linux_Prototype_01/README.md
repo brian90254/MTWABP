@@ -3,7 +3,7 @@
 # OPTIONAL
 # python3 -m pip install -r requirements-dxf.txt
 
-An independent desktop drafting application inspired by Vellum's construction workflow. Python 3.9 or newer and Tkinter are required. Geometry is stored in inches. No pip packages are needed for drafting. DXF export uses the optional `ezdxf` package (see below).
+An independent desktop drafting application inspired by Vellum's construction workflow. Python 3.9 or newer and Tkinter are required. Geometry is stored in inches. No pip packages are needed for drafting. DXF import/export uses the optional `ezdxf` package (see below).
 
 ## Run the current source
 
@@ -196,3 +196,16 @@ python3 -m py_compile src/*.py
 The suite includes geometry/construction, layer/history, legacy and new JSON, grid, and Tkinter workflow tests. Tkinter tests skip if `DISPLAY` is unset (except on macOS, where Tk uses the native display). They were exercised on a temporary Linux X display, including actual layer double-click events, Tab traversal, parameter edits, object dialogs, and save/reopen. Selection regressions additionally cover whole/partial windows, control deformations, immutable drag previews, snapping and final-release coordinates, cancellation, and one-step undo. Visual inspection covered the drawing window, layer/object dialogs, partial handle highlighting, and a live radius drag snapped to another circle quadrant. Native macOS testing is still needed.
 
 Deferred tools include trim/extend, fillets, dimensions, text, nonuniform scaling, and printing to scale. Splines use explicitly documented interpolation/control algorithms; this is not a claim of exact historical Vellum spline behavior.
+
+
+## Import drawings
+
+Click **Import...** to add a DXF (`.dxf`) or BrianCAD save file (`.draft.json` / `.json`) to the current drawing at its original coordinates. **Open** continues to replace the current drawing. Import keeps your current save filename, active layer, grid and existing geometry. One Undo removes all imported geometry and newly created layers together; Redo restores them. Imported visible objects are selected.
+
+Missing named layers are created only if they contain successfully imported geometry. Exact matching layer names reuse the current layer and its visibility; new layers retain source visibility. Empty source layers are ignored. Layer names up to 255 characters are supported and saved. Native files preserve object properties and support both BrianCAD save formats.
+
+DXF import uses the same optional `requirements-dxf.txt` dependency as export. Modelspace lines, circles, arcs, ellipses/elliptical arcs, 2D/planar polylines (including bulge arcs), and splines are supported. Block references are expanded, preserving transformed geometry, layer-0 inheritance and BYBLOCK pen colors. Non-XY geometry, text, dimensions, images, meshes and other unsupported entities are skipped and listed in the completion message. Paper-space layouts are not imported.
+
+DXF declared units are converted to inches; unitless DXFs are interpreted as inches with a notice. Counter-clockwise DXF arcs and reversed normals are respected. Simple clamped non-rational Bézier splines remain editable Béziers; other B-splines/NURBS become line segments using ezdxf adaptive flattening with a **0.00001 inch** tolerance, reported on completion. DXF imports are geometry imports and do not restore BrianCAD-only editing flags.
+
+Pen choices now include **Cyan, Magenta and Yellow** alongside Black, Blue, Green and Red. DXF ACI colors 1–7 map to these named pens; matching BrianCAD RGB values round-trip exactly. Other RGB/indexed colors map to the closest available pen. BYLAYER colors and lineweights are resolved; dashed/dotted named line patterns map to the corresponding BrianCAD pattern. Custom DXF line patterns use Solid. Existing layers keep their current settings.
