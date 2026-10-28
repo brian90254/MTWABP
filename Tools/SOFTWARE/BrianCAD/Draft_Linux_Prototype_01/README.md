@@ -208,4 +208,11 @@ DXF import uses the same optional `requirements-dxf.txt` dependency as export. M
 
 DXF declared units are converted to inches; unitless DXFs are interpreted as inches with a notice. Counter-clockwise DXF arcs and reversed normals are respected. Simple clamped non-rational Bézier splines remain editable Béziers; other B-splines/NURBS become line segments using ezdxf adaptive flattening with a **0.00001 inch** tolerance, reported on completion. DXF imports are geometry imports and do not restore BrianCAD-only editing flags.
 
-Pen choices now include **Cyan, Magenta and Yellow** alongside Black, Blue, Green and Red. DXF ACI colors 1–7 map to these named pens; matching BrianCAD RGB values round-trip exactly. Other RGB/indexed colors map to the closest available pen. BYLAYER colors and lineweights are resolved; dashed/dotted named line patterns map to the corresponding BrianCAD pattern. Custom DXF line patterns use Solid. Existing layers keep their current settings.
+Pen choices now include **Cyan, Magenta and Yellow** alongside Black, Blue, Green and Red. DXF ACI colors 1–7 map to these named pens; matching BrianCAD RGB values round-trip exactly. Explicit DXF RGB colors are preserved exactly as #RRGGBB values, including BYLAYER/BYBLOCK inheritance; additional indexed colors use their DXF RGB equivalents. BYLAYER colors and lineweights are resolved; dashed/dotted named line patterns map to the corresponding BrianCAD pattern. Custom DXF line patterns use Solid. Existing layers keep their current settings.
+
+
+### True RGB colors
+
+Imported DXF true colors retain their exact 24-bit RGB values rather than being reduced to the named pen palette. These colors render directly, survive BrianCAD JSON save/open/import and geometry edits/transforms, and export with the same DXF true-color value. Standard ACI 1–7 colors still use the named BrianCAD pens; other indexed colors use the DXF palette RGB value.
+
+The Edit objects Color field shows named pens where applicable, otherwise `#RRGGBB`. Choose a named color or type an RGB hex value to apply it to the selection. Mixed colors remain blank until changed. The seven named drawing pens remain available as shortcuts. As with other colors, selected objects use the selection highlight until deselected.
