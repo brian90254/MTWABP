@@ -2,6 +2,7 @@
 import copy
 import json
 import re
+import cad_groups
 from cad_geometry import validate_geometry, transform
 from cad_selection import controls, move_controls, wholly_inside, in_box
 
@@ -57,14 +58,54 @@ class Document:
     def visible(self,index):
         return any(l['name']==self.objects[index].get('layer',self.active) and l['visible'] for l in self.layers)
 
+    def group_members(self,indices):
+        ids={i for i in indices if 0<=i<len(self.objects)}
+        groups={self.objects[i]['group'] for i in ids if self.objects[i].get('group')}
+        if groups:ids.update(i for i,o in enumerate(self.objects) if o.get('group') in groups)
+        return ids
+
     def editable_selection(self):
-        return sorted(i for i in self.selected if self.visible(i) and not self.objects[i].get('locked',False))
+        ids=self.group_members(i for i in self.selected if self.visible(i))
+        blocked={self.objects[i]['group'] for i in ids if self.objects[i].get('group') and self.objects[i].get('locked',False)}
+        return sorted(i for i in ids if not self.objects[i].get('locked',False) and self.objects[i].get('group') not in blocked)
+
+    def group_selection(self):
+        ids=self.group_members(set(self.selected)|set(self.point_selection))
+        if any(self.objects[i].get('locked',False) for i in ids):raise ValueError('Unlock every selected group member before grouping.')
+        if len(ids)<2:
+            if ids and self.objects[next(iter(ids))]['type']=='polygon':return False
+            raise ValueError('Select at least two components to group.')
+        old={self.objects[i].get('group') for i in ids}
+        if len(old)==1 and None not in old:return False
+        group=cad_groups.new_id();updates={i:dict(self.objects[i],group=group) for i in ids}
+        self.commit_updates(updates);self.selected=ids;self.point_selection={};return True
+
+    def ungroup_selection(self):
+        ids=self.group_members(set(self.selected)|set(self.point_selection))
+        if any(self.objects[i].get('locked',False) for i in ids):raise ValueError('Unlock every selected group member before ungrouping.')
+        if not any(self.objects[i].get('group') or self.objects[i]['type']=='polygon' for i in ids):return False
+        pending=[];selected=set()
+        for i,obj in enumerate(self.objects):
+            pieces=[obj]
+            if i in ids:
+                n=copy.deepcopy(obj);n.pop('group',None)
+                if n['type']=='polygon':
+                    points=n.pop('points');closed=n.pop('closed',True)
+                    pairs=list(zip(points,points[1:]))
+                    if closed:pairs.append((points[-1],points[0]))
+                    pieces=[dict(n,type='line',a=a,b=b) for a,b in pairs if a!=b]
+                else:pieces=[n]
+                pieces=[self.prepare(piece) for piece in pieces]
+                selected.update(range(len(pending),len(pending)+len(pieces)))
+            pending.extend(pieces)
+        if len(pending)>100000:raise ValueError('Ungroup would exceed 100000 objects.')
+        self.checkpoint();self.objects=pending;self.selected=selected;self.point_selection={};return True
 
     def clear_selection(self):
         self.selected=set(); self.point_selection={}
 
     def prune_selection(self):
-        self.selected={i for i in self.selected if i<len(self.objects) and self.visible(i)}
+        self.selected=self.group_members(i for i in self.selected if i<len(self.objects) and self.visible(i))
         self.point_selection={i:set(keys)&{key for key,_ in controls(self.objects[i])}
                               for i,keys in self.point_selection.items()
                               if i<len(self.objects) and i not in self.selected and self.visible(i)}
@@ -73,8 +114,16 @@ class Document:
     def select_window(self,a,b,extend=False):
         box=[min(a[0],b[0]),min(a[1],b[1]),max(a[0],b[0]),max(a[1],b[1])]
         if not extend: self.clear_selection()
+        groups={}
         for i,obj in enumerate(self.objects):
-            if not self.visible(i): continue
+            if obj.get('group'):groups.setdefault(obj['group'],[]).append(i)
+        for members in groups.values():
+            visible=[i for i in members if self.visible(i)]
+            if visible and all(wholly_inside(self.objects[i],box) for i in visible):
+                self.selected.update(members)
+                for i in members:self.point_selection.pop(i,None)
+        for i,obj in enumerate(self.objects):
+            if not self.visible(i) or obj.get('group'): continue
             if wholly_inside(obj,box):
                 self.selected.add(i); self.point_selection.pop(i,None)
             elif i not in self.selected:
@@ -109,6 +158,7 @@ class Document:
         n.setdefault('locked',False); n.setdefault('pattern','Solid'); n.setdefault('weight',.01)
         n.setdefault('controls',False)
         validate_geometry(n)
+        if 'group' in n and (not isinstance(n['group'],str) or not n['group'] or len(n['group'])>100):raise ValueError('Invalid group identity.')
         if n['layer'] not in [l['name'] for l in self.layers]: raise ValueError('Unknown layer.')
         n['color']=rgb_color(n['color'])
         if n['pattern'] not in ['Solid','Dashed','Dotted']: raise ValueError('Unknown line pattern.')
@@ -148,6 +198,8 @@ class Document:
         for key in ('layer','color','pattern','weight','controls'):
             if key in self.objects[first]: arc[key]=self.objects[first][key]
         replacements={first:[self.prepare(o) for o in a],second:[self.prepare(o) for o in b]}
+        if self.objects[first].get('group') and self.objects[first].get('group')==self.objects[second].get('group'):
+            arc['group']=self.objects[first]['group']
         arc=self.prepare(arc)
         pending=[]
         for i,obj in enumerate(self.objects): pending.extend(replacements[i] if i in replacements else [obj])
@@ -191,6 +243,7 @@ class Document:
         pending=[self.prepare(transform(self.objects[i],mode,**kwargs)) for i in ids]
         self.checkpoint()
         if copy_objects:
+            pending=cad_groups.remap(pending)
             start=len(self.objects); self.objects.extend(pending); self.selected=set(range(start,len(self.objects)))
         else:
             for i,o in zip(ids,pending): self.objects[i]=o
