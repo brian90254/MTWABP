@@ -216,3 +216,12 @@ Pen choices now include **Cyan, Magenta and Yellow** alongside Black, Blue, Gree
 Imported DXF true colors retain their exact 24-bit RGB values rather than being reduced to the named pen palette. These colors render directly, survive BrianCAD JSON save/open/import and geometry edits/transforms, and export with the same DXF true-color value. Standard ACI 1–7 colors still use the named BrianCAD pens; other indexed colors use the DXF palette RGB value.
 
 The Edit objects Color field shows named pens where applicable, otherwise `#RRGGBB`. Choose a named color or type an RGB hex value to apply it to the selection. Mixed colors remain blank until changed. The seven named drawing pens remain available as shortcuts. As with other colors, selected objects use the selection highlight until deselected.
+
+
+## Workspace redraw performance
+
+Mouse movement updates snap markers, guides and previews separately from the retained grid and drawing. Unchanged geometry stays on the canvas; edits, selection/handle changes, layer visibility, dragging, zoom, pan, resize and grid preferences invalidate the relevant scene. Offscreen objects without selected/displayed handles are culled from rendering, while snap targets remain available independently of rendering.
+
+Hidden layers are filtered using a visible-layer set before geometry work. Object anchor and bounds calculations are cached and refreshed when objects change. The unsaved-changes check compares current data directly with the saved snapshot instead of deep-copying all visible and hidden geometry on every redraw. Save/open and undo history still keep independent snapshots.
+
+A local synthetic benchmark uses 10,000 hidden circles and 200 visible circles, a saved/clean drawing, a warmed canvas, and 20 cursor snap+draw updates. This checks CPU event-handler time, not display FPS or a guarantee for every drawing. Regression tests cover retained canvas items, overlay cleanup, visibility, offscreen culling, geometry and viewport changes, selection handles, undo, and nested edits to saved-state comparisons.
