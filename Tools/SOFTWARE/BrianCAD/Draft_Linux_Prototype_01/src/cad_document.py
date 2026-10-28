@@ -113,7 +113,7 @@ class Document:
         n['color']=rgb_color(n['color'])
         if n['pattern'] not in ['Solid','Dashed','Dotted']: raise ValueError('Unknown line pattern.')
         if isinstance(n['weight'],bool) or not isinstance(n['weight'],(int,float)) or not 0<n['weight']<=1:
-            raise ValueError('Pen weight must be greater than zero and at most one inch.')
+            raise ValueError('Line width must be greater than zero and at most one inch.')
         if not isinstance(n['locked'],bool) or not isinstance(n['controls'],bool): raise ValueError('Invalid object flags.')
         return n
 

@@ -961,7 +961,7 @@ class Draft:
             var=tk.StringVar(value=text); self.edit_fields[key]=var
             options=cad_properties.choices(key,self._edit_layers)
             if key=='color': options+=sorted({v['color'] for v in properties if v['color'] not in options})
-            widget=(ttk.Combobox(self.edit_frame,textvariable=var,values=['']+options,state='normal' if key=='color' else 'readonly',width=27)
+            widget=(ttk.Combobox(self.edit_frame,textvariable=var,values=['']+options,state='normal' if key in ('color','weight') else 'readonly',width=27)
                     if options is not None else ttk.Entry(self.edit_frame,textvariable=var,width=30))
             widget.grid(row=row,column=1,sticky='ew',pady=3); self.edit_widgets[key]=widget
             var.trace_add('write',lambda *args,k=key:self.edit_changed(k))
