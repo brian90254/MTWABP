@@ -11,6 +11,7 @@ import cad_geometry as geo
 import cad_selection as selection
 import cad_trim
 import cad_chamfer
+import cad_offset
 import cad_properties
 import cad_dxf
 import cad_import
@@ -182,6 +183,10 @@ class Draft:
             ids={i for i in ids if self.doc.visible(i) and self.objects[i]['type'] in cad_trim.BOUNDARIES}
             self.trim_cutters=[self.objects[i] for i in sorted(ids)]
             self.selected=ids; self.doc.point_selection={}
+        if self.family.get()=='Offset':
+            ids=sorted(set(self.doc.editable_selection())|set(self.doc.editable_point_selection()))
+            self.offset_sources=[self.objects[i] for i in ids]
+            self.selected=set(ids);self.doc.point_selection={}
         self.configure_parameters()
 
     def configure_parameters(self):
@@ -199,13 +204,18 @@ class Draft:
                 label={'x':'Start X','y':'Start Y','x2':'Tangent X','y2':'Tangent Y','x3':'End X','y3':'End Y'}.get(key,label)
             elif key in ('x','y') and (self.family.get() in ['Circles','Ovals'] or 'polygon' in self.tool.get()):
                 label='Center '+key.upper() if self.tool.get() not in ['Diameter endpoints','Three-point circle','Two tangent lines','Opposite corners','Axis endpoints + width'] else key.upper()
-            ttk.Label(cell,text=label,width=9).pack(side='left')
+            if self.family.get()=='Offset': label={'offset':'Distance','x':'Direction X','y':'Direction Y'}[key]
+            ttk.Label(cell,text=label,width=12 if self.family.get()=='Offset' else 9).pack(side='left')
             var=tk.StringVar(value=f'{DEFAULTS.get(key,0):g}'); self.params[key]=var
             ent=ttk.Entry(cell,textvariable=var,width=10); ent.pack(side='left')
             ent.bind('<KeyRelease>',lambda e,k=key:self.parameter_changed(k))
             ent.bind('<Return>',lambda e:self.apply_parameters())
         actions=ttk.Frame(self.parameter_frame); actions.grid(row=(len(fields)+3)//4,column=0,columnspan=4,padx=5,pady=4,sticky='w')
-        if self.family.get()=='Chamfer':
+        if self.family.get()=='Offset':
+            ttk.Button(actions,text='Preview offset',command=self.preview_offset).pack(side='left',padx=3)
+            ttk.Button(actions,text='Apply offset',command=self.apply_offset).pack(side='left',padx=3)
+            ttk.Label(actions,text='Click a curve if none selected; click a side point for direction.').pack(side='left',padx=6)
+        elif self.family.get()=='Chamfer':
             ttk.Label(actions,text='Click two segments on the sides to keep. Right-click: Select.').pack(side='left')
         elif fields:
             if self.family.get()!='Modify':
@@ -218,7 +228,9 @@ class Draft:
             ttk.Label(self.parameter_frame,text=hint).grid(row=0,column=0,sticky='w')
         self.draw()
 
-    def parameter_changed(self,key): self.last_parameter=key
+    def parameter_changed(self,key):
+        self.last_parameter=key
+        if self.family.get()=='Offset': self.offset_preview=[];self.draw()
 
     def values(self):
         vals={k:float(v.get()) for k,v in self.params.items()}
@@ -408,6 +420,8 @@ class Draft:
     def click(self,e):
         self.cancel_snap_hover()
         self.canvas.focus_set(); raw=self.world(e.x,e.y)
+        if self.family.get()=='Offset':
+            self.offset_click(raw,e.state); return
         if self.family.get()=='Chamfer':
             self.chamfer_click(raw); return
         if self.family.get()=='Trim':
@@ -444,6 +458,47 @@ class Draft:
             self.points,self.refs,self.start=before
             self.error(str(ex))
         self.draw()
+
+    def offset_indices(self):
+        sources=getattr(self,'offset_sources',[])
+        ids=[];lookup={id(o):i for i,o in enumerate(self.objects)}
+        for source in sources:
+            index=lookup.get(id(source))
+            if index is None or not self.doc.visible(index) or source.get('locked',False):
+                raise ValueError('An offset source changed or is hidden/locked. Select sources and activate Offset again.')
+            ids.append(index)
+        return ids
+
+    def offset_click(self,raw,state=0):
+        try:
+            if not getattr(self,'offset_sources',[]) or state & 0x0001:
+                i=self.hit(raw)
+                if i is None: raise ValueError('Click a source curve first, or preselect a connected chain.')
+                if self.objects[i].get('locked',False): raise ValueError('Choose an unlocked source.')
+                if not any(o is self.objects[i] for o in getattr(self,'offset_sources',[])):
+                    self.offset_sources=getattr(self,'offset_sources',[])+[self.objects[i]]
+                self.selected=set(self.offset_indices());self.doc.point_selection={};self.offset_preview=[];self.draw();return
+            point,label=self.snap_point(raw,exclude=self.offset_indices())
+            self.set_point_fields(0,point);self.mouse=point;self.marker=label
+            self.preview_offset()
+        except (ValueError,KeyError) as ex:self.error(str(ex))
+
+    def preview_offset(self):
+        try:
+            ids=self.offset_indices();v=self.values()
+            self.offset_preview,self.offset_approximate=cad_offset.offset([self.objects[i] for i in ids],v['offset'],[v['x'],v['y']])
+            self.draw()
+        except Exception as ex:
+            self.offset_preview=[];self.draw();self.error(str(ex))
+
+    def apply_offset(self):
+        try:
+            ids=self.offset_indices();v=self.values()
+            approximate=self.doc.offset_objects(ids,v['offset'],[v['x'],v['y']])
+            self.offset_preview=[];self.refresh_layers();self.draw()
+            if approximate:
+                messagebox.showinfo('Offset curves','Created a polyline approximation. Source curves were sampled with a 0.0001 inch chord criterion.',parent=self.root)
+        except Exception as ex:self.error(str(ex))
 
     def chamfer_click(self,raw):
         try:
@@ -598,6 +653,7 @@ class Draft:
         self.refresh_layers(); self.draw()
 
     def apply_parameters(self):
+        if self.family.get()=='Offset': self.apply_offset(); return
         if self.family.get()=='Chamfer':
             try:
                 if not 1e-6<=self.values()['radius']<=1e7: raise ValueError('Enter a positive radius between 0.000001 and 10,000,000 inches.')
@@ -632,6 +688,7 @@ class Draft:
 
     def cancel(self):
         self.cancel_snap_hover()
+        self.offset_sources=[];self.offset_preview=[]
         self.trim_cutters=[]; self.chamfer_first=None; self.tracking_cursor=None
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
         self.box_start=None; self.box_end=None
@@ -642,6 +699,8 @@ class Draft:
 
     def prompt(self):
         method=self.tool.get(); n=len(self.points)
+        if self.family.get()=='Offset':
+            return f'{len(getattr(self,"offset_sources",[]))} source curves | Set distance and direction X/Y; click side point; Apply offset'
         if self.family.get()=='Chamfer':
             return 'Pick second segment on the side to keep' if getattr(self,'chamfer_first',None) else 'Set Radius; pick first segment on the side to keep'
         if self.family.get()=='Trim':
@@ -666,6 +725,7 @@ class Draft:
         return 'Pick first point / center' if not n else 'Pick second point'
 
     def preview(self):
+        if self.family.get()=='Offset': return None
         if self.mouse is None or not self.points or self.family.get() in ['Select','Modify']: return None
         try:
             pts=self.points+[self.mouse]
@@ -747,6 +807,7 @@ class Draft:
                 c.create_line(*self.screen(self.field_point(0)),*self.screen(self.field_point(1)),
                               fill='#9dbcd5',dash=(3,5),tags=('tangent-guide',))
             except (ValueError,KeyError): pass
+        for obj in getattr(self,'offset_preview',[]): self.draw_object(obj,color='#708296',dash=(5,3))
         preview=self.preview()
         if preview: self.draw_object(preview,color='#708296',dash=(5,3))
         if self.family.get()=='Splines' and self.points:

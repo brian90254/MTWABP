@@ -127,6 +127,17 @@ class Document:
         start=len(self.objects); self.objects.extend(pending)
         self.selected=set(range(start,len(self.objects))); self.point_selection={}
 
+    def offset_objects(self,indices,distance,reference):
+        from cad_offset import offset
+        if any(not 0<=i<len(self.objects) or not self.visible(i) or self.objects[i].get('locked',False) for i in indices):
+            raise ValueError('Choose visible, unlocked offset sources.')
+        objects,approximate=offset([self.objects[i] for i in indices],distance,reference)
+        pending=[self.prepare(o) for o in objects]
+        if len(self.objects)+len(pending)>100000: raise ValueError('Offset would exceed 100000 drawing objects.')
+        self.checkpoint();start=len(self.objects);self.objects.extend(pending)
+        self.selected=set(range(start,len(self.objects)));self.point_selection={}
+        return approximate
+
     def chamfer_objects(self,first,second,click_first,click_second,radius):
         from cad_chamfer import chamfer
         if first==second: raise ValueError('Choose two different segments.')
