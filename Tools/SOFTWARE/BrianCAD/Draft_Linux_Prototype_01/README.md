@@ -248,3 +248,9 @@ Use the same Python interpreter that runs BrianCAD. This dependency is loaded on
 Ovals and splines, and circular arcs within joined chains, are adaptively sampled with a **0.0001 inch source-chord criterion**. This is a numerical approximation, not an exact ellipse/spline offset or a strict bound on final offset error. The result consists of editable polylines, or line segments when a boundary exceeds the polygon vertex limit, with an approximation notice on Apply. Sharp chain corners use mitre joins, beveled when the mitre exceeds five times the distance. Endpoint connections use a 0.000001 inch tolerance.
 
 Closed boundaries offset inward when the reference point is inside, outward when outside. Inward offsets may split into multiple boundaries; all resulting components are kept. Empty/collapsed offsets, branched/disconnected selections and self-intersecting source chains are rejected without modifying the drawing. For an open chain, choose a point beside the curve; a point directly along an endpoint's tangent can be ambiguous.
+
+### Zoom and pan redraws
+
+Zoom/pan transforms retained drawing items directly in Tk rather than rebuilding every visible curve. Only entering, edited or newly selected objects need their canvas items rebuilt; objects leaving the viewport are removed. Curve display paths are cached for re-entry, with an LRU budget of 250,000 sampled points to bound additional cache memory. Drawing order, fixed-size selection handles and the existing 1–5 pixel pen-width limits are maintained. Grid lines and transient snap/preview overlays still refresh for the current view. Zoom and pan do not change saved geometry, drafting precision, snapping or DXF data.
+
+Fit uses cached analytic object bounds instead of computing every display path. This can frame curved extrema more accurately than the previous sampled-path Fit. Rendering keeps the existing curve sampling density; this change does not reduce geometry detail to gain speed.
