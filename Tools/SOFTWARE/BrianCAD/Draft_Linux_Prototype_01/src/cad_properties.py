@@ -5,7 +5,7 @@ from cad_document import COLORS, rgb_color
 
 
 BASE={'layer':('Layer','choice'),'color':('Color','choice'),'locked':('Locked','choice'),
-      'pattern':('Pattern','choice'),'weight':('Weight (inches)','number'),
+      'pattern':('Pattern','choice'),'weight':('Line width (inches)','number'),
       'controls':('Show control points','choice')}
 
 
@@ -54,6 +54,7 @@ def display(value,kind):
 def choices(key,layers):
     return {'layer':list(layers),'color':list(COLORS),'locked':['False','True'],
             'controls':['False','True'],'closed':['False','True'],
+            'weight':['0.005','0.01','0.02','0.03','0.05','0.1'],
             'pattern':['Solid','Dashed','Dotted'],'method':['through','bezier']}.get(key)
 
 

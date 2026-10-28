@@ -225,3 +225,8 @@ Mouse movement updates snap markers, guides and previews separately from the ret
 Hidden layers are filtered using a visible-layer set before geometry work. Object anchor and bounds calculations are cached and refreshed when objects change. The unsaved-changes check compares current data directly with the saved snapshot instead of deep-copying all visible and hidden geometry on every redraw. Save/open and undo history still keep independent snapshots.
 
 A local synthetic benchmark uses 10,000 hidden circles and 200 visible circles, a saved/clean drawing, a warmed canvas, and 20 cursor snap+draw updates. This checks CPU event-handler time, not display FPS or a guarantee for every drawing. Regression tests cover retained canvas items, overlay cleanup, visibility, offscreen culling, geometry and viewport changes, selection handles, undo, and nested edits to saved-state comparisons.
+
+
+## Edit line widths
+
+Select any objects, open **Edit objects...**, and set **Line width (inches)**. This shared property applies to lines, circles, arcs, ovals, polygons and splines, including imported geometry. Choose a preset or type any positive width up to one inch, then click **Apply**. A blank field means mixed widths (or leave unchanged); entering a width applies it to the entire selection in one undoable operation. Other object properties stay intact. Widths remain stored in native files and export to the nearest supported DXF lineweight. The workspace display retains its existing 1–5 pixel width limits as you zoom.

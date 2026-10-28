@@ -54,6 +54,28 @@ class EditInspectorTests(unittest.TestCase):
         colors=[a.canvas.itemcget(i,'fill') for i in a.canvas.find_all() if a.canvas.type(i)=='line']
         self.assertIn('#a03c91',colors)
 
+    def test_universal_line_width_presets_custom_mixed_and_undo(self):
+        a=self.app
+        a.doc.add([{'type':'arc','center':[0,0],'radius':1,'start':0,'sweep':1},
+                   {'type':'ellipse','center':[0,0],'rx':2,'ry':1,'angle':0},
+                   {'type':'polygon','points':[[0,0],[1,0],[0,1]],'closed':True},
+                   {'type':'spline','method':'bezier','points':[[0,0],[1,1],[2,0]],'closed':False}])
+        self.select(set(range(6)));a.edit_dialog();self.root.update()
+        field=a.edit_widgets['weight']
+        self.assertEqual(field.winfo_class(),'TCombobox');self.assertEqual(str(field.cget('state')),'normal')
+        self.assertIn('0.01',field.cget('values'));self.assertEqual(a.edit_fields['weight'].get(),'')
+        before=a.doc.state();n=len(a.doc.history)
+        field.set('0.0123');a.edit_apply.invoke()
+        self.assertEqual(len(a.doc.history),n+1)
+        for old,new in zip(before['objects'],a.objects):
+            expected=copy.deepcopy(old);expected['weight']=.0123;self.assertEqual(new,expected)
+        # Invalid widths cannot partially modify a mixed selection.
+        a.edit_widgets['weight'].set('0');a.edit_apply.invoke()
+        self.assertTrue(self.errors);self.errors.clear()
+        self.assertTrue(all(o['weight']==.0123 for o in a.objects))
+        self.assertEqual(len(a.doc.history),n+1)
+        a.undo();self.assertEqual(a.doc.state(),before)
+
     def test_open_empty_and_follow_real_mouse_selection_without_grab(self):
         a=self.app; a.edit_dialog(); self.root.update(); window=a.edit_window
         self.assertIsNone(self.root.grab_current()); self.assertEqual(a.edit_fields,{})
