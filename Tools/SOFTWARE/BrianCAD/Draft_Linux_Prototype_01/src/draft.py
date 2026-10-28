@@ -13,6 +13,7 @@ import cad_trim
 import cad_chamfer
 import cad_properties
 import cad_dxf
+import cad_import
 from snap_tracking import SnapHistory
 from cad_geometry import dist as distance, anchors, hit_distance
 from cad_document import Document, COLORS
@@ -77,7 +78,7 @@ class Draft:
 
     def build_ui(self):
         bar=ttk.Frame(self.root,padding=6); bar.pack(fill='x')
-        for label,fn in [('New',self.new),('Open',self.open),('Save',self.save),('Save as',lambda:self.save(True)),('Export DXF...',self.export_dxf_dialog),
+        for label,fn in [('New',self.new),('Open',self.open),('Save',self.save),('Save as',lambda:self.save(True)),('Import...',self.import_drawing),('Export DXF...',self.export_dxf_dialog),
                          ('Undo',self.undo),('Redo',self.redo),('Fit',self.fit),('Layers...',self.layers_dialog),('Edit objects...',self.edit_dialog)]:
             ttk.Button(bar,text=label,command=fn).pack(side='left',padx=2)
         ttk.Label(self.root,textvariable=self.status,padding=5).pack(side='bottom',fill='x')
@@ -952,6 +953,20 @@ class Draft:
             messagebox.showerror('Edit objects',str(ex),parent=self.edit_window); return
         self.doc.prune_selection(); self._edit_doc=None
         self.refresh_layers(); self.draw()
+
+    def import_drawing(self):
+        path=filedialog.askopenfilename(parent=self.root,title='Import into current drawing',
+            filetypes=[('DXF or BrianCAD drawing','*.dxf *.json'),('DXF drawing','*.dxf'),('BrianCAD drawing','*.json')])
+        if not path: return
+        try:
+            source,warnings=cad_import.read_drawing(path)
+            count=cad_import.merge(self.doc,source)
+        except Exception as ex:
+            self.error('Could not import drawing:\n'+str(ex)); return
+        if count:
+            self.snap_history.clear(); self.cancel(); self.refresh_layers(); self.fit()
+        messagebox.showinfo('Import drawing',f'Imported {count} objects into the current drawing.'+
+                            ('\n\n'+'\n'.join(warnings) if warnings else ''),parent=self.root)
 
     def export_dxf_dialog(self):
         snapshot=cad_dxf.snapshot_drawing(self.doc)

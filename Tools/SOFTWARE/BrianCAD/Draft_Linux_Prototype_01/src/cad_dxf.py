@@ -24,7 +24,7 @@ def require_ezdxf():
     except ImportError as ex:
         requirements=Path(__file__).resolve().parent.parent/'requirements-dxf.txt'
         command=f'{shlex.quote(sys.executable)} -m pip install -r {shlex.quote(str(requirements))}'
-        raise DXFDependencyError('DXF export requires the optional ezdxf package. Install it for this Python interpreter:\n\n'+command) from ex
+        raise DXFDependencyError('DXF import/export requires the optional ezdxf package. Install it for this Python interpreter:\n\n'+command) from ex
     return ezdxf
 
 
@@ -64,7 +64,7 @@ def _layer_names(document,layers):
 
 def _attributes(obj,layer_map):
     from ezdxf.lldxf.const import VALID_DXF_LINEWEIGHTS
-    aci={COLORS['Black']:7,COLORS['Blue']:5,COLORS['Green']:3,COLORS['Red']:1}
+    aci={COLORS['Black']:7,COLORS['Blue']:5,COLORS['Green']:3,COLORS['Red']:1,COLORS['Cyan']:4,COLORS['Magenta']:6,COLORS['Yellow']:2}
     width=obj.get('weight',.01)*25.4*100
     return {'layer':layer_map[obj['layer']], 'color':aci.get(obj['color'],7),
             'true_color':int(obj['color'].lstrip('#'),16),

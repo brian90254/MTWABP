@@ -1,3 +1,3 @@
-# Optional: only required for Export DXF; install using the interpreter running BrianCAD.
+# Optional: only required for DXF import/export; install using the interpreter running BrianCAD.
 ezdxf>=1.3.5,<1.4; python_version < "3.10"
 ezdxf>=1.4,<2; python_version >= "3.10"
