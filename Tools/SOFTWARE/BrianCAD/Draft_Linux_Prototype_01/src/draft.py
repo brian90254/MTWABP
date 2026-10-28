@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """BrianCAD: a Vellum-inspired 2D desktop drafting application."""
 import copy
+from collections import OrderedDict
 import json
 import math
 import os
@@ -24,6 +25,7 @@ from grid_snap import grid_values, grid_positions, grid_candidates, line_grid_ca
 
 SNAP_HOVER_MS=600
 GRID_COLOR='#bcc8d5'
+DISPLAY_PATH_POINT_LIMIT=250000
 SNAP_LABEL_COLOR='#626a73'
 
 def validate(data):
@@ -743,13 +745,67 @@ class Draft:
             return construct(self.tool.get(),pts,vals,self.refs,self.clockwise.get())
         except (ValueError,KeyError): return None
 
+    def object_path(self,o):
+        if not hasattr(self,'_path_cache'):
+            self._path_cache=OrderedDict();self._path_cache_points=0
+        key=id(o);cached=self._path_cache.get(key)
+        if cached is None or cached[0]!=o:
+            if cached is not None:self._path_cache_points-=len(cached[1])
+            cached=(copy.deepcopy(o),geo.path(o));self._path_cache[key]=cached
+            self._path_cache_points+=len(cached[1])
+        self._path_cache.move_to_end(key)
+        while self._path_cache and (len(self._path_cache)>2*len(self.objects)+32 or self._path_cache_points>DISPLAY_PATH_POINT_LIMIT):
+            _,removed=self._path_cache.popitem(last=False);self._path_cache_points-=len(removed[1])
+        return cached[1]
+
+    def render_geometry(self,visible):
+        c=self.canvas
+        records=getattr(self,'_rendered_objects',{})
+        view=(self.scale,tuple(self.origin));previous=getattr(self,'_geometry_view',None)
+        moved=previous is not None and previous!=view
+        if moved and records:
+            factor=self.scale/previous[0]
+            c.scale('geometry',0,0,factor,factor)
+            c.move('geometry',self.origin[0]-previous[1][0]*factor,self.origin[1]-previous[1][1]*factor)
+        keep=set(visible);changed=False
+        for i in list(records):
+            if i not in keep:
+                c.delete(*records.pop(i)[1]);changed=True
+        for i in visible:
+            obj=getattr(self,'drag_preview',{}).get(i,self.objects[i])
+            chosen=i in self.selected;partial=self.doc.point_selection.get(i,set())
+            state=(obj,chosen,partial);old=records.get(i)
+            if old is None or old[0]!=state:
+                if old is not None:c.delete(*old[1])
+                tag=f'entity:{i}';weight=float(obj.get('weight',.01));width_tag='stroke:'+str(weight)
+                item=self.draw_object(obj,color='#d08213' if chosen else None,tags=('geometry',tag,width_tag))
+                items=[item];handles=[]
+                if chosen or partial or obj.get('controls'):
+                    for key,p in selection.controls(obj):
+                        x,y=self.screen(p);selected=chosen or key in partial
+                        item=c.create_rectangle(x-4,y-4,x+4,y+4,outline='#b66b00' if selected else '#708296',
+                                                fill='#eaa23d' if selected else 'white',tags=('geometry',tag))
+                        items.append(item);handles.append((item,list(p)))
+                records[i]=(copy.deepcopy(state),items,handles,weight);changed=True
+            elif moved:
+                # Canvas.scale scales rectangle extents too: restore 8-pixel handles.
+                for item,p in old[2]:
+                    x,y=self.screen(p);c.coords(item,x-4,y-4,x+4,y+4)
+        if moved:
+            for weight in {record[3] for record in records.values()}:
+                c.itemconfigure('stroke:'+str(weight),width=max(1,min(5,weight*self.scale)))
+        if changed:
+            # Recreated/new objects must retain the document's stacking order.
+            for i in visible:c.tag_raise(f'entity:{i}')
+        self._rendered_objects=records;self._geometry_view=view
+
     def draw_object(self,o,color=None,dash=None,tags=('overlay',)):
-        pts=geo.path(o); coords=[v for p in pts for v in self.screen(p)]
+        pts=self.object_path(o); coords=[v for p in pts for v in self.screen(p)]
         pattern=dash or {'Solid':None,'Dashed':(6,4),'Dotted':(1,3)}.get(o.get('pattern','Solid'))
         width=max(1,min(5,o.get('weight',.01)*self.scale))
         opts={'fill':color or o.get('color',COLORS['Black']),'width':width,'tags':tags}
         if pattern: opts['dash']=pattern
-        self.canvas.create_line(*coords,**opts)
+        return self.canvas.create_line(*coords,**opts)
 
     def draw(self):
         if not hasattr(self,'canvas'): return
@@ -784,22 +840,7 @@ class Draft:
             box=self.object_bounds(o)
             return box[2]>=low[0] and box[0]<=high[0] and box[3]>=low[1] and box[1]<=high[1]
         visible=[i for i in self.visible_ids() if in_view(i)]
-        scene=(grid_key,[(i,getattr(self,'drag_preview',{}).get(i,self.objects[i])) for i in visible],
-               self.selected,self.doc.point_selection)
-        if scene!=getattr(self,'_geometry_render_state',None):
-            self.canvas.delete('geometry'); c=CanvasLayer(self.canvas,'geometry')
-            for i in visible:
-                original=self.objects[i]
-                o=getattr(self,'drag_preview',{}).get(i,original)
-                self.draw_object(o,color='#d08213' if i in self.selected else None,tags=('geometry',))
-                partial=self.doc.point_selection.get(i,set())
-                if i in self.selected or partial or o.get('controls'):
-                    for key,p in selection.controls(o):
-                        a,b=self.screen(p)
-                        chosen=i in self.selected or key in partial
-                        c.create_rectangle(a-4,b-4,a+4,b+4,outline='#b66b00' if chosen else '#708296',
-                                           fill='#eaa23d' if chosen else 'white')
-            self._geometry_render_state=copy.deepcopy(scene)
+        self.render_geometry(visible)
         self.canvas.tag_lower('background')
         c=CanvasLayer(self.canvas,'overlay')
         if self.tool.get()=='Start tangent + end' and len(self.points)>=2:
@@ -878,9 +919,9 @@ class Draft:
             self.pan=[e.x,e.y]; self.draw()
     def fit(self):
         self.root.update_idletasks()
-        pts=[p for i in self.visible_ids() for p in geo.path(self.objects[i])]
-        if not pts: return
-        low=[min(p[k] for p in pts) for k in (0,1)]; high=[max(p[k] for p in pts) for k in (0,1)]
+        boxes=[self.object_bounds(self.objects[i]) for i in self.visible_ids()]
+        if not boxes: return
+        low=[min(box[k] for box in boxes) for k in (0,1)];high=[max(box[k+2] for box in boxes) for k in (0,1)]
         w=max(100,self.canvas.winfo_width()); h=max(100,self.canvas.winfo_height())
         self.scale=min((w-80)/max(high[0]-low[0],.5),(h-80)/max(high[1]-low[1],.5))
         self.origin=[w/2-(low[0]+high[0])*self.scale/2,h/2+(low[1]+high[1])*self.scale/2]; self.draw()
