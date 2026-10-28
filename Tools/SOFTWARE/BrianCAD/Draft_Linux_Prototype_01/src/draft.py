@@ -30,6 +30,18 @@ def validate(data):
     return Document.from_payload(data).objects
 
 
+class CanvasLayer:
+    """Assign ownership tags so redraws can retain the static canvas scene."""
+    def __init__(self,canvas,tag): self.canvas=canvas; self.tag=tag
+    def __getattr__(self,name):
+        method=getattr(self.canvas,name)
+        if not name.startswith('create_'): return method
+        def create(*args,**kwargs):
+            kwargs['tags']=(self.tag,)+tuple(kwargs.get('tags',()))
+            return method(*args,**kwargs)
+        return create
+
+
 class Draft:
     def __init__(self,root):
         self.root=root; self.doc=Document(); self.path=None
@@ -230,12 +242,24 @@ class Draft:
     def world(self,x,y): return [(x-self.origin[0])/self.scale,(self.origin[1]-y)/self.scale]
     def screen(self,p): return [self.origin[0]+p[0]*self.scale,self.origin[1]-p[1]*self.scale]
 
+    def visible_ids(self):
+        layers={l['name'] for l in self.doc.layers if l['visible']}
+        return [i for i,o in enumerate(self.objects) if o.get('layer',self.doc.active) in layers]
+
+    def object_anchors(self,o):
+        if not hasattr(self,'_anchor_cache'): self._anchor_cache={}
+        if len(self._anchor_cache)>2*len(self.objects)+32: self._anchor_cache.clear()
+        cached=self._anchor_cache.get(id(o))
+        if cached is None or cached[0]!=o:
+            cached=(copy.deepcopy(o),anchors(o)); self._anchor_cache[id(o)]=cached
+        return cached[1]
+
     def object_bounds(self,o):
         if not hasattr(self,'_bounds_cache'): self._bounds_cache={}
         if len(self._bounds_cache)>2*len(self.objects)+32: self._bounds_cache.clear()
         cached=self._bounds_cache.get(id(o))
-        if cached is None or cached[0] is not o:
-            cached=(o,selection.bounds(o)); self._bounds_cache[id(o)]=cached
+        if cached is None or cached[0]!=o:
+            cached=(copy.deepcopy(o),selection.bounds(o)); self._bounds_cache[id(o)]=cached
         return cached[1]
 
     def on_object(self,p,ids):
@@ -274,7 +298,7 @@ class Draft:
             return (list(best[0]),best[1]) if best and distance(p,best[0])<=tolerance else None
         excluded=set(exclude or [])
         if self.family.get()=='Modify': excluded.update(self.selected)
-        ids=[i for i in range(len(self.objects)) if self.doc.visible(i) and i not in excluded]
+        ids=[i for i in self.visible_ids() if i not in excluded]
         if self.snap.get():
             if self.family.get()=='Lines' and self.tool.get() in ('Two points','Connected points') and self.points:
                 try:
@@ -288,7 +312,7 @@ class Draft:
                     best=nearest(contacts)
                     if best: return best
             candidates=[]
-            for i in ids: candidates.extend(anchors(self.objects[i]))
+            for i in ids: candidates.extend(self.object_anchors(self.objects[i]))
             candidates.append(([0,0],'origin'))
             best=nearest(candidates)
             if best: return best
@@ -306,7 +330,8 @@ class Draft:
             step=self.grid_spacing/self.grid_subdivisions
             crossings=[]
             for i in ids:
-                if self.objects[i]['type']=='line': crossings.extend(line_grid_candidates(p,self.objects[i],step))
+                if self.objects[i]['type']=='line' and selection.box_distance(p,self.object_bounds(self.objects[i]))<=tolerance:
+                    crossings.extend(line_grid_candidates(p,self.objects[i],step))
             best=nearest(crossings)
             if best: return best
             grid=grid_candidates(p,step); best=nearest(grid[:1])
@@ -658,44 +683,65 @@ class Draft:
             return construct(self.tool.get(),pts,vals,self.refs,self.clockwise.get())
         except (ValueError,KeyError): return None
 
-    def draw_object(self,o,color=None,dash=None):
+    def draw_object(self,o,color=None,dash=None,tags=('overlay',)):
         pts=geo.path(o); coords=[v for p in pts for v in self.screen(p)]
         pattern=dash or {'Solid':None,'Dashed':(6,4),'Dotted':(1,3)}.get(o.get('pattern','Solid'))
         width=max(1,min(5,o.get('weight',.01)*self.scale))
-        opts={'fill':color or o.get('color',COLORS['Black']),'width':width}
+        opts={'fill':color or o.get('color',COLORS['Black']),'width':width,'tags':tags}
         if pattern: opts['dash']=pattern
         self.canvas.create_line(*coords,**opts)
 
     def draw(self):
         if not hasattr(self,'canvas'): return
-        c=self.canvas; c.delete('all'); w=c.winfo_width(); h=c.winfo_height()
-        step=self.grid_spacing/self.grid_subdivisions
+        w=self.canvas.winfo_width(); h=self.canvas.winfo_height()
+        self.canvas.delete('overlay')
+        grid_key=(w,h,tuple(self.origin),self.scale,self.grid.get(),self.grid_spacing,self.grid_subdivisions)
+        if grid_key!=getattr(self,'_grid_render_key',None):
+            self.canvas.delete('background'); c=CanvasLayer(self.canvas,'background')
+            step=self.grid_spacing/self.grid_subdivisions
+            major_visible=self.grid_spacing*self.scale>=8
+            minor_visible=self.grid_subdivisions>1 and step*self.scale>=8
+            if self.grid.get():
+                lo=self.world(0,h); hi=self.world(w,0)
+                for axis in (0,1):
+                    for spacing,major in [(step,False),(self.grid_spacing,True)]:
+                        if not major and not minor_visible: continue
+                        for i in grid_positions(lo[axis],hi[axis],spacing,self.scale,8):
+                            if not major and i%self.grid_subdivisions==0: continue
+                            q=self.screen([i*spacing,0] if axis==0 else [0,i*spacing])
+                            coords=(q[0],0,q[0],h) if axis==0 else (0,q[1],w,q[1])
+                            c.create_line(*coords,fill=GRID_COLOR,dash=(2,3) if major else (1,9))
+            x,y=self.origin
+            c.create_line(0,y,w,y,fill='#cbd2db'); c.create_line(x,0,x,h,fill='#cbd2db')
+            c.create_text(x+10,y+10,text='0,0',anchor='nw',fill='#8b929a')
+            self._grid_render_key=grid_key
         major_visible=self.grid_spacing*self.scale>=8
-        minor_visible=self.grid_subdivisions>1 and step*self.scale>=8
-        if self.grid.get():
-            lo=self.world(0,h); hi=self.world(w,0)
-            for axis in (0,1):
-                for spacing,major in [(step,False),(self.grid_spacing,True)]:
-                    if not major and not minor_visible: continue
-                    for i in grid_positions(lo[axis],hi[axis],spacing,self.scale,8):
-                        if not major and i%self.grid_subdivisions==0: continue
-                        q=self.screen([i*spacing,0] if axis==0 else [0,i*spacing])
-                        coords=(q[0],0,q[0],h) if axis==0 else (0,q[1],w,q[1])
-                        c.create_line(*coords,fill=GRID_COLOR,dash=(2,3) if major else (1,9))
-        x,y=self.origin
-        c.create_line(0,y,w,y,fill='#cbd2db'); c.create_line(x,0,x,h,fill='#cbd2db')
-        c.create_text(x+10,y+10,text='0,0',anchor='nw',fill='#8b929a')
-        for i,original in enumerate(self.objects):
-            if not self.doc.visible(i): continue
-            o=getattr(self,'drag_preview',{}).get(i,original)
-            self.draw_object(o,color='#d08213' if i in self.selected else None)
-            partial=self.doc.point_selection.get(i,set())
-            if i in self.selected or partial or o.get('controls'):
-                for key,p in selection.controls(o):
-                    a,b=self.screen(p)
-                    chosen=i in self.selected or key in partial
-                    c.create_rectangle(a-4,b-4,a+4,b+4,outline='#b66b00' if chosen else '#708296',
-                                       fill='#eaa23d' if chosen else 'white')
+        minor_visible=self.grid_subdivisions>1 and self.grid_spacing/self.grid_subdivisions*self.scale>=8
+        low=self.world(-10,h+10); high=self.world(w+10,-10)
+        def in_view(i):
+            o=getattr(self,'drag_preview',{}).get(i,self.objects[i])
+            if i in self.selected or self.doc.point_selection.get(i) or o.get('controls'): return True
+            box=self.object_bounds(o)
+            return box[2]>=low[0] and box[0]<=high[0] and box[3]>=low[1] and box[1]<=high[1]
+        visible=[i for i in self.visible_ids() if in_view(i)]
+        scene=(grid_key,[(i,getattr(self,'drag_preview',{}).get(i,self.objects[i])) for i in visible],
+               self.selected,self.doc.point_selection)
+        if scene!=getattr(self,'_geometry_render_state',None):
+            self.canvas.delete('geometry'); c=CanvasLayer(self.canvas,'geometry')
+            for i in visible:
+                original=self.objects[i]
+                o=getattr(self,'drag_preview',{}).get(i,original)
+                self.draw_object(o,color='#d08213' if i in self.selected else None,tags=('geometry',))
+                partial=self.doc.point_selection.get(i,set())
+                if i in self.selected or partial or o.get('controls'):
+                    for key,p in selection.controls(o):
+                        a,b=self.screen(p)
+                        chosen=i in self.selected or key in partial
+                        c.create_rectangle(a-4,b-4,a+4,b+4,outline='#b66b00' if chosen else '#708296',
+                                           fill='#eaa23d' if chosen else 'white')
+            self._geometry_render_state=copy.deepcopy(scene)
+        self.canvas.tag_lower('background')
+        c=CanvasLayer(self.canvas,'overlay')
         if self.tool.get()=='Start tangent + end' and len(self.points)>=2:
             try:
                 c.create_line(*self.screen(self.field_point(0)),*self.screen(self.field_point(1)),
@@ -771,7 +817,7 @@ class Draft:
             self.pan=[e.x,e.y]; self.draw()
     def fit(self):
         self.root.update_idletasks()
-        pts=[p for i,o in enumerate(self.objects) if self.doc.visible(i) for p in geo.path(o)]
+        pts=[p for i in self.visible_ids() for p in geo.path(self.objects[i])]
         if not pts: return
         low=[min(p[k] for p in pts) for k in (0,1)]; high=[max(p[k] for p in pts) for k in (0,1)]
         w=max(100,self.canvas.winfo_width()); h=max(100,self.canvas.winfo_height())

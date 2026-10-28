@@ -147,7 +147,8 @@ class GridTests(unittest.TestCase):
     def test_grid_rendering_uses_configured_spacing(self):
         class Canvas:
             def __init__(self): self.lines = []
-            def delete(self, tag): self.lines.clear()
+            def delete(self, tag): self.lines=[(c,o) for c,o in self.lines if tag not in o.get('tags',())]
+            def tag_lower(self,tag): pass
             def winfo_width(self): return 500
             def winfo_height(self): return 400
             def create_line(self, *coords, **opts): self.lines.append((coords, opts))

@@ -31,7 +31,12 @@ class Document:
                               'grid':{'spacing':self.grid_spacing,'subdivisions':self.grid_subdivisions}})
 
     @property
-    def dirty(self): return self.state()!=self.saved
+    def dirty(self):
+        # Compare without allocating a deep copy of the entire drawing on mouse motion.
+        return (self.objects!=self.saved['objects'] or self.layers!=self.saved['layers']
+                or self.active!=self.saved['active_layer']
+                or self.grid_spacing!=self.saved['grid']['spacing']
+                or self.grid_subdivisions!=self.saved['grid']['subdivisions'])
 
     def checkpoint(self):
         self.history.append(self.state()); self.future.clear()
