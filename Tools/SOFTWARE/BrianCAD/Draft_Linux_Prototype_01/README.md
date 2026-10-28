@@ -230,3 +230,21 @@ A local synthetic benchmark uses 10,000 hidden circles and 200 visible circles, 
 ## Edit line widths
 
 Select any objects, open **Edit objects...**, and set **Line width (inches)**. This shared property applies to lines, circles, arcs, ovals, polygons and splines, including imported geometry. Choose a preset or type any positive width up to one inch, then click **Apply**. A blank field means mixed widths (or leave unchanged); entering a width applies it to the entire selection in one undoable operation. Other object properties stay intact. Widths remain stored in native files and export to the nearest supported DXF lineweight. The workspace display retains its existing 1–5 pixel width limits as you zoom.
+
+## Offset curves
+
+Select a curve or an endpoint-connected chain, then choose **Offset**. Partial handle selections use the entire owning curve. Enter **Distance**, **Direction X**, and **Direction Y** in inches. With either direction field active, left-click the workspace to fill both coordinates and preview the side to offset toward. The direction point chooses a side, not the offset magnitude. You can also type the coordinates and click **Preview offset**; **Apply offset** creates the result in one undoable step. Enter in a parameter field applies the offset. Right-click returns to Select, and Esc cancels the preview. Originals remain unchanged.
+
+If nothing was preselected, click a curve first; Shift-click can add more source curves to the chain. Subsequent clicks choose direction points. Sources remain the same until cancelled or the tool is changed, allowing multiple offsets from the original chain. Only visible, unlocked sources are accepted. New geometry uses the first source object's layer, RGB color, pattern and line width; output objects can be edited normally afterward.
+
+Single lines, circles and circular arcs are offset analytically and retain their original types (including signed arc sweeps). Other curves and joined chains use the optional Shapely geometry engine:
+
+```bash
+python3 -m pip install -r requirements-offset.txt
+```
+
+Use the same Python interpreter that runs BrianCAD. This dependency is loaded only when needed; single line/circle/arc offsets work without it. The requirements select the Shapely 2.0 series on Python 3.9 and a compatible 2.x release on newer Python versions.
+
+Ovals and splines, and circular arcs within joined chains, are adaptively sampled with a **0.0001 inch source-chord criterion**. This is a numerical approximation, not an exact ellipse/spline offset or a strict bound on final offset error. The result consists of editable polylines, or line segments when a boundary exceeds the polygon vertex limit, with an approximation notice on Apply. Sharp chain corners use mitre joins, beveled when the mitre exceeds five times the distance. Endpoint connections use a 0.000001 inch tolerance.
+
+Closed boundaries offset inward when the reference point is inside, outward when outside. Inward offsets may split into multiple boundaries; all resulting components are kept. Empty/collapsed offsets, branched/disconnected selections and self-intersecting source chains are rejected without modifying the drawing. For an open chain, choose a point beside the curve; a point directly along an endpoint's tangent can be ambiguous.

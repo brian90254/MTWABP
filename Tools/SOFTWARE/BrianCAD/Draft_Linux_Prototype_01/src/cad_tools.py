@@ -6,6 +6,7 @@ METHODS={
     'Select':['Select'],
     'Trim':['Trim'],
     'Chamfer':['Chamfer'],
+    'Offset':['Offset curves'],
     'Lines':['Two points','Connected points','Offset from line'],
     'Arcs':['Center + start + end','Three-point arc','Start tangent + end'],
     'Circles':['Center + diameter','Diameter endpoints','Three-point circle','Two tangent lines'],
@@ -24,6 +25,7 @@ LABELS={'x':'X','y':'Y','x2':'End X','y2':'End Y','x3':'Third X','y3':'Third Y',
 def fields_for(family,method):
     if family in ('Select','Trim'): return []
     if family=='Chamfer': return ['radius']
+    if family=='Offset': return ['offset','x','y']
     if family=='Modify': return ['x','y','dx','dy'] if method=='Move' else ['x','y','factor'] if method=='Scale' else ['x','y','angle']
     if family=='Splines': return ['x','y']
     if method=='Center + diameter': return ['x','y','diameter']
