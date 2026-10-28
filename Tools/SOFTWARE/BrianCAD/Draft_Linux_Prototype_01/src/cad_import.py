@@ -2,6 +2,7 @@
 from collections import Counter
 import copy
 import json
+import cad_groups
 import math
 from pathlib import Path
 from cad_document import Document, COLORS
@@ -19,11 +20,11 @@ def merge(document,source):
     names={l['name'] for l in candidate.layers}
     candidate.layers.extend(copy.deepcopy(l) for l in source.layers if l['name'] in used and l['name'] not in names)
     if len(candidate.layers)>1000: raise ValueError('Import would exceed 1000 layers.')
-    pending=[candidate.prepare(o) for o in source.objects]
+    pending=[candidate.prepare(o) for o in cad_groups.remap(source.objects)]
     if len(candidate.objects)+len(pending)>100000: raise ValueError('Import would exceed 100000 objects.')
     document.checkpoint(); start=len(document.objects)
     document.layers=candidate.layers; document.objects.extend(pending)
-    document.selected={i for i in range(start,len(document.objects)) if document.visible(i)}
+    document.selected=document.group_members(i for i in range(start,len(document.objects)) if document.visible(i))
     document.point_selection={}
     return len(pending)
 

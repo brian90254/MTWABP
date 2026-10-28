@@ -12,6 +12,7 @@ import cad_geometry as geo
 import cad_selection as selection
 import cad_trim
 import cad_chamfer
+import cad_groups
 import cad_offset
 import cad_properties
 import cad_dxf
@@ -65,10 +66,13 @@ class Draft:
         root.title('BrianCAD'); root.geometry('1220x820'); root.minsize(850,620)
         self.build_ui(); self.configure_parameters()
         root.protocol('WM_DELETE_WINDOW',self.close)
-        for key,action in [('z',self.undo),('y',self.redo),('s',self.save),('o',self.open)]:
+        for key,action in [('z',self.undo),('y',self.redo),('s',self.save),('o',self.open),('g',self.group_selected)]:
             root.bind('<Control-'+key+'>',lambda e,f=action:self.shortcut(e,f))
             if root.tk.call('tk','windowingsystem')=='aqua':
                 root.bind('<Command-'+key+'>',lambda e,f=action:self.shortcut(e,f))
+        root.bind('<Control-Shift-G>',lambda e:self.shortcut(e,self.ungroup_selected))
+        if root.tk.call('tk','windowingsystem')=='aqua':
+            root.bind('<Command-Shift-G>',lambda e:self.shortcut(e,self.ungroup_selected))
         root.bind('<Escape>',lambda e:self.return_to_select() if self.family.get()=='Trim' else self.cancel())
         self.draw()
 
@@ -94,7 +98,7 @@ class Draft:
     def build_ui(self):
         bar=ttk.Frame(self.root,padding=6); bar.pack(fill='x')
         for label,fn in [('New',self.new),('Open',self.open),('Save',self.save),('Save as',lambda:self.save(True)),('Import...',self.import_drawing),('Export DXF...',self.export_dxf_dialog),
-                         ('Undo',self.undo),('Redo',self.redo),('Fit',self.fit),('Layers...',self.layers_dialog),('Edit objects...',self.edit_dialog)]:
+                         ('Undo',self.undo),('Redo',self.redo),('Fit',self.fit),('Group',self.group_selected),('Ungroup',self.ungroup_selected),('Layers...',self.layers_dialog),('Edit objects...',self.edit_dialog)]:
             ttk.Button(bar,text=label,command=fn).pack(side='left',padx=2)
         ttk.Label(self.root,textvariable=self.status,padding=5).pack(side='bottom',fill='x')
         self.parameter_frame=ttk.LabelFrame(self.root,text='Drawing parameters  |  inches',padding=6)
@@ -436,13 +440,14 @@ class Draft:
                 self.box_start=raw; self.box_end=raw; self.box_extend=extend
                 if not extend: self.doc.clear_selection()
             elif extend:
-                self.doc.point_selection.pop(i,None)
-                if i in self.selected: self.selected.remove(i)
-                else: self.selected.add(i)
+                members=self.doc.group_members({i})
+                for member in members:self.doc.point_selection.pop(member,None)
+                if i in self.selected:self.selected.difference_update(members)
+                else:self.selected.update(members)
             else:
                 # Keep a picked point subset/group for a possible drag; a plain
                 # click is promoted to whole-owner selection on button release.
-                if i not in self.selected and not handle: self.selected={i}
+                if i not in self.selected and not handle: self.selected=self.doc.group_members({i})
                 source,label=(list(handle[3]),'control point') if handle else self.drag_handle(raw,i)
                 ids=set(self.doc.editable_selection())|set(self.doc.editable_point_selection())
                 self.drag={'owner':i,'raw':raw,'handle':source,'active':False,'ids':ids}
@@ -570,7 +575,7 @@ class Draft:
                 if self.drag_error: self.error(self.drag_error)
                 else: self.doc.commit_updates(self.drag_preview)
             else:
-                self.selected={self.drag['owner']}
+                self.selected=self.doc.group_members({self.drag['owner']})
             self.drag=None; self.drag_preview={}; self.drag_error=''; self.start=None
             self.draw(); return
         if self.box_start is None: return
@@ -892,6 +897,14 @@ class Draft:
         self.root.title((' |  ' if self.doc.dirty else '')+'BrianCAD - '+(os.path.basename(self.path) if self.path else 'Untitled'))
         if getattr(self,'edit_window',None) is not None: self.refresh_edit()
 
+    def group_selected(self):
+        try:self.doc.group_selection();self.cancel()
+        except ValueError as ex:self.error(str(ex))
+
+    def ungroup_selected(self):
+        try:self.doc.ungroup_selection();self.cancel()
+        except ValueError as ex:self.error(str(ex))
+
     def delete(self): self.doc.delete_selected(); self.cancel(); self.refresh_layers()
     def undo(self):
         self.doc.undo()
@@ -1029,8 +1042,8 @@ class Draft:
         self.edit_fields={}; self.edit_widgets={}; self._edit_dirty=set()
 
     def edit_selection(self):
-        return sorted(i for i in set(self.selected)|set(self.doc.point_selection)
-                      if 0<=i<len(self.objects) and self.doc.visible(i))
+        return sorted(self.doc.group_members(i for i in set(self.selected)|set(self.doc.point_selection)
+                      if 0<=i<len(self.objects) and self.doc.visible(i)))
 
     def edit_matches(self):
         ids=self.edit_selection()
@@ -1053,6 +1066,9 @@ class Draft:
         originals=self._edit_originals; shared=cad_properties.common(originals)
         title=('No objects selected' if not originals else originals[0]['type'].title() if len(originals)==1
                else f'{len(originals)} objects | mixed values are blank')
+        group_ids={o.get('group') for o in originals}
+        if originals and len(group_ids)==1 and None not in group_ids:
+            title+=' | '+('closed group' if cad_groups.is_closed(originals) else 'open/disconnected group')
         ttk.Label(self.edit_frame,text=title,font=('',12,'bold')).grid(row=0,column=0,columnspan=2,sticky='w',pady=(0,6))
         properties=[cad_properties.values(o) for o in originals]
         for row,(key,(label,kind)) in enumerate(shared.items(),1):
