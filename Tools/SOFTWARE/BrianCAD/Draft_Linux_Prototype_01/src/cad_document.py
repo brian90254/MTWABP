@@ -1,10 +1,18 @@
 """Drawing state, layers, validation, persistence, and atomic undo operations."""
 import copy
 import json
+import re
 from cad_geometry import validate_geometry, transform
 from cad_selection import controls, move_controls, wholly_inside, in_box
 
 COLORS={'Black':'#202b36','Blue':'#2465d8','Green':'#198548','Red':'#c44236','Cyan':'#00bfc4','Magenta':'#cf36b5','Yellow':'#d8b400'}
+
+
+def rgb_color(value):
+    """Canonical, portable Tk/JSON/DXF color; reject shorthand and Tk expressions."""
+    if not isinstance(value,str) or re.fullmatch(r'#[0-9a-fA-F]{6}',value) is None:
+        raise ValueError('Color must be an RGB value in #RRGGBB format.')
+    return value.lower()
 
 
 def default_layers():
@@ -97,7 +105,7 @@ class Document:
         n.setdefault('controls',False)
         validate_geometry(n)
         if n['layer'] not in [l['name'] for l in self.layers]: raise ValueError('Unknown layer.')
-        if n['color'] not in COLORS.values(): raise ValueError('Unknown pen color.')
+        n['color']=rgb_color(n['color'])
         if n['pattern'] not in ['Solid','Dashed','Dotted']: raise ValueError('Unknown line pattern.')
         if isinstance(n['weight'],bool) or not isinstance(n['weight'],(int,float)) or not 0<n['weight']<=1:
             raise ValueError('Pen weight must be greater than zero and at most one inch.')
