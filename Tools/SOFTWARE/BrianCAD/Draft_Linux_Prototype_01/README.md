@@ -177,7 +177,7 @@ python3 -m pip install -r requirements-dxf.txt
 
 For example, use `python3.13 -m pip ...` if you launch with Python 3.13. The requirements select the older ezdxf 1.3 series on Python 3.9 and the 1.4 series or newer compatible 1.x releases on newer Python. Drafting and JSON save/open continue to work without ezdxf; attempting DXF export then shows the installation command for the running interpreter.
 
-Click **Export DXF...**, choose **Whole drawing** or **Selected objects**, then **Export...** and choose a `.dxf` filename. Whole drawing is the default and includes hidden and locked objects; hidden layers remain off in the DXF. Selected-only export is disabled with no selection. Selected handles export their complete owning objects, once per object. The drawing and selection are captured when the export dialog opens. Export includes committed geometry, without grid lines, snap guides, handles, pending construction previews, or unapplied Edit fields.
+Choose **File → Export...**, choose **Whole drawing** or **Selected objects**, then **Export...** and choose a `.dxf` filename. Whole drawing is the default and includes hidden and locked objects; hidden layers remain off in the DXF. Selected-only export is disabled with no selection. Selected handles export their complete owning objects, once per object. The drawing and selection are captured when the export dialog opens. Export includes committed geometry, without grid lines, snap guides, handles, pending construction previews, or unapplied Edit fields.
 
 Exports use DXF R2018, with coordinates and units in **inches**, preserving the origin and scale. Lines, circles, clockwise/counterclockwise arcs, polygons, rotated ovals, trimmed oval arcs, Bézier splines, and open/closed through-point splines are supported. Clockwise curves are written with equivalent counterclockwise DXF parameterization. Through-point splines become exact cubic spline spans. Béziers up to degree 10 remain exact SPLINE entities; higher degrees become polylines within **0.00001 inch** of the curve for reader compatibility, identified in the completion message.
 
@@ -200,7 +200,7 @@ Deferred tools include trim/extend, fillets, dimensions, text, nonuniform scalin
 
 ## Import drawings
 
-Click **Import...** to add a DXF (`.dxf`) or BrianCAD save file (`.draft.json` / `.json`) to the current drawing at its original coordinates. **Open** continues to replace the current drawing. Import keeps your current save filename, active layer, grid and existing geometry. One Undo removes all imported geometry and newly created layers together; Redo restores them. Imported visible objects are selected.
+Choose **File → Import...** to add a DXF (`.dxf`) or BrianCAD save file (`.draft.json` / `.json`) to the current drawing at its original coordinates. **Open** continues to replace the current drawing. Import keeps your current save filename, active layer, grid and existing geometry. One Undo removes all imported geometry and newly created layers together; Redo restores them. Imported visible objects are selected.
 
 Missing named layers are created only if they contain successfully imported geometry. Exact matching layer names reuse the current layer and its visibility; new layers retain source visibility. Empty source layers are ignored. Layer names up to 255 characters are supported and saved. Native files preserve object properties and support both BrianCAD save formats.
 
@@ -257,10 +257,26 @@ Fit uses cached analytic object bounds instead of computing every display path. 
 
 ## Groups and polygon edges
 
-Select components and press **Ctrl+G** to group; **Ctrl+Shift+G** ungroups. Group/Ungroup buttons are also on the toolbar, and Command+G / Command+Shift+G are available on macOS. Groups are flat: grouping existing groups merges their members into one new group. Grouping and ungrouping are undoable and saved in BrianCAD JSON drawings. Copies and native imports receive new group identities so they stay independent. DXF import/export continues to transfer geometry without BrianCAD group metadata.
+Select components and press **Ctrl+G** to group; **Ctrl+Shift+G** ungroups. Group/Ungroup commands are also in the Objects menu, and Command+G / Command+Shift+G are available on macOS. Groups are flat: grouping existing groups merges their members into one new group. Grouping and ungrouping are undoable and saved in BrianCAD JSON drawings. Copies and native imports receive new group identities so they stay independent. DXF import/export continues to transfer geometry without BrianCAD group metadata.
 
 Clicking any member (including its controls) selects the group. Shift-click adds/removes the entire group, and dragging moves its members together with the existing snap behavior. A selection window must contain all visible members to select the group; it does not pick individual grouped handles. Hidden members follow group moves/transforms/deletion; any locked member prevents movement/transformation/deletion of that group. Shared-property Edit includes hidden group members too. Ungroup before editing individual component positions. Standalone objects retain their existing selection/partial-handle behavior.
 
 Polygons already behave as single objects. **Ungroup** converts a selected polygon into independent line segments, including the closing edge for a closed polygon, preserving layer, RGB color, pattern and width. Ungrouping an explicit group also explodes any polygons in that group.
 
 A group is recognized as a **closed group** only when its geometry forms one connected, unbranched endpoint loop (0.000001 inch endpoint tolerance), or one intrinsically closed curve. The Edit window displays `closed group` or `open/disconnected group` for a selected group. Grouping does not fill gaps, join disconnected loops or make an open chain closed. This recognition is topological; self-crossing boundaries can still be rejected by Offset. A grouped rectangle of four separate lines is recognized and offsets as a closed boundary; tests also cover complementary arcs and a grouped rectangle with a rounded corner. Closed-boundary Offset still requires all sources visible/unlocked and the optional general-offset dependency.
+
+
+## Application menus
+
+The top-row action buttons have been replaced with a native menu bar (the system menu bar on macOS):
+
+- **File:** New, Open..., Open Recent..., Save, Save As..., Import..., Export...
+- **Edit:** Undo, Redo
+- **Objects:** Group, Ungroup, Layers..., Edit Objects...
+- **View:** Fit, Zoom In, Zoom Out, Window
+
+Open Recent keeps the ten most recently opened/saved native BrianCAD drawings, newest first, across sessions. Choosing one uses the normal unsaved-changes prompt. Cancelled or failed file operations do not add history entries. Clear Recent clears the list without deleting drawing files. Import still merges DXF/native geometry into the current drawing; Export opens the existing DXF scope dialog.
+
+Zoom In/Out use the center of the drawing workspace; mouse-wheel zoom remains centered at the pointer. **View → Window** switches temporarily to a crosshair: drag a rectangle in either direction to fit that world area to the workspace. Selection, drawing data and unfinished drawing parameters are preserved. Esc or right-click cancels window zoom without finishing an unfinished spline. Tiny/flat drags leave window mode active for another attempt. The normal tool resumes after a successful zoom. Ctrl+N and Ctrl+Shift+S (Command equivalents on macOS) invoke New and Save As; existing shortcuts remain available.
+
+Recent-file preferences are stored separately from drawings in the platform's per-user BrianCAD configuration folder. Unreadable preferences fall back to an empty list, and a preferences write failure does not prevent saving/opening a drawing.

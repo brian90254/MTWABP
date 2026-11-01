@@ -2,6 +2,7 @@
 """BrianCAD: a Vellum-inspired 2D desktop drafting application."""
 import copy
 from collections import OrderedDict
+from types import SimpleNamespace
 import json
 import math
 import os
@@ -17,6 +18,7 @@ import cad_offset
 import cad_properties
 import cad_dxf
 import cad_import
+from cad_recent import RecentFiles
 from snap_tracking import SnapHistory
 from cad_geometry import dist as distance, anchors, hit_distance
 from cad_document import Document, COLORS
@@ -49,6 +51,7 @@ class CanvasLayer:
 class Draft:
     def __init__(self,root):
         self.root=root; self.doc=Document(); self.path=None
+        self.recent_files=RecentFiles();self._zoom_window=False;self._view_box_start=None;self._view_box_end=None
         self.scale=90.; self.origin=[470.,320.]; self.pan=None
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
         self.snap_history=SnapHistory(); self.tracking_cursor=None
@@ -66,14 +69,17 @@ class Draft:
         root.title('BrianCAD'); root.geometry('1220x820'); root.minsize(850,620)
         self.build_ui(); self.configure_parameters()
         root.protocol('WM_DELETE_WINDOW',self.close)
-        for key,action in [('z',self.undo),('y',self.redo),('s',self.save),('o',self.open),('g',self.group_selected)]:
+        for key,action in [('z',self.undo),('y',self.redo),('s',self.save),('o',self.open),('g',self.group_selected),('n',self.new)]:
             root.bind('<Control-'+key+'>',lambda e,f=action:self.shortcut(e,f))
             if root.tk.call('tk','windowingsystem')=='aqua':
                 root.bind('<Command-'+key+'>',lambda e,f=action:self.shortcut(e,f))
+        root.bind('<Control-Shift-S>',lambda e:self.shortcut(e,lambda:self.save(True)))
+        if root.tk.call('tk','windowingsystem')=='aqua':
+            root.bind('<Command-Shift-S>',lambda e:self.shortcut(e,lambda:self.save(True)))
         root.bind('<Control-Shift-G>',lambda e:self.shortcut(e,self.ungroup_selected))
         if root.tk.call('tk','windowingsystem')=='aqua':
             root.bind('<Command-Shift-G>',lambda e:self.shortcut(e,self.ungroup_selected))
-        root.bind('<Escape>',lambda e:self.return_to_select() if self.family.get()=='Trim' else self.cancel())
+        root.bind('<Escape>',self.escape)
         self.draw()
 
     @property
@@ -95,11 +101,54 @@ class Draft:
     @grid_subdivisions.setter
     def grid_subdivisions(self,v): self.doc.grid_subdivisions=v
 
+    def build_menus(self):
+        self.menu_bar=tk.Menu(self.root,tearoff=False);self.menus={}
+        prefix='Cmd' if self.root.tk.call('tk','windowingsystem')=='aqua' else 'Ctrl'
+        for name in ('File','Edit','Objects','View'):
+            menu=tk.Menu(self.menu_bar,tearoff=False);self.menus[name]=menu
+            self.menu_bar.add_cascade(label=name,menu=menu)
+        file=self.menus['File']
+        file.add_command(label='New',accelerator=prefix+'+N',command=self.new)
+        file.add_command(label='Open...',accelerator=prefix+'+O',command=self.open)
+        self.recent_menu=tk.Menu(file,tearoff=False,postcommand=self.refresh_recent_menu)
+        file.add_cascade(label='Open Recent...',menu=self.recent_menu)
+        file.add_separator()
+        file.add_command(label='Save',accelerator=prefix+'+S',command=self.save)
+        file.add_command(label='Save As...',accelerator=prefix+'+Shift+S',command=lambda:self.save(True))
+        file.add_separator()
+        file.add_command(label='Import...',command=self.import_drawing)
+        file.add_command(label='Export...',command=self.export_dxf_dialog)
+        edit=self.menus['Edit']
+        edit.add_command(label='Undo',accelerator=prefix+'+Z',command=self.undo)
+        edit.add_command(label='Redo',accelerator=prefix+'+Y',command=self.redo)
+        objects=self.menus['Objects']
+        objects.add_command(label='Group',accelerator=prefix+'+G',command=self.group_selected)
+        objects.add_command(label='Ungroup',accelerator=prefix+'+Shift+G',command=self.ungroup_selected)
+        objects.add_separator()
+        objects.add_command(label='Layers...',command=self.layers_dialog)
+        objects.add_command(label='Edit Objects...',command=self.edit_dialog)
+        view=self.menus['View']
+        view.add_command(label='Fit',command=self.fit)
+        view.add_command(label='Zoom In',command=lambda:self.zoom_center(1.25))
+        view.add_command(label='Zoom Out',command=lambda:self.zoom_center(.8))
+        view.add_command(label='Window',command=self.begin_window_zoom)
+        self.root.configure(menu=self.menu_bar);self.refresh_recent_menu()
+
+    def refresh_recent_menu(self):
+        self.recent_menu.delete(0,'end')
+        if not self.recent_files.paths:
+            self.recent_menu.add_command(label='No recent drawings',state='disabled');return
+        for path in self.recent_files.paths:
+            self.recent_menu.add_command(label=path,command=lambda p=path:self.open(p))
+        self.recent_menu.add_separator()
+        self.recent_menu.add_command(label='Clear Recent',command=self.clear_recent)
+
+    def clear_recent(self):self.recent_files.clear();self.refresh_recent_menu()
+
+    def remember_drawing(self,path):self.recent_files.remember(path);self.refresh_recent_menu()
+
     def build_ui(self):
-        bar=ttk.Frame(self.root,padding=6); bar.pack(fill='x')
-        for label,fn in [('New',self.new),('Open',self.open),('Save',self.save),('Save as',lambda:self.save(True)),('Import...',self.import_drawing),('Export DXF...',self.export_dxf_dialog),
-                         ('Undo',self.undo),('Redo',self.redo),('Fit',self.fit),('Group',self.group_selected),('Ungroup',self.ungroup_selected),('Layers...',self.layers_dialog),('Edit objects...',self.edit_dialog)]:
-            ttk.Button(bar,text=label,command=fn).pack(side='left',padx=2)
+        self.build_menus()
         ttk.Label(self.root,textvariable=self.status,padding=5).pack(side='bottom',fill='x')
         self.parameter_frame=ttk.LabelFrame(self.root,text='Drawing parameters  |  inches',padding=6)
         self.parameter_frame.pack(side='bottom',fill='x')
@@ -164,7 +213,12 @@ class Draft:
         if event.widget.winfo_class() in ['Entry','TEntry','Text','TCombobox'] and fn in [self.undo,self.redo]: return
         fn(); return 'break'
 
+    def escape(self,event=None):
+        if getattr(self,'_zoom_window',False):self.cancel_window_zoom();return 'break'
+        return self.return_to_select() if self.family.get()=='Trim' else self.cancel()
+
     def right_click(self,event=None):
+        if getattr(self,'_zoom_window',False):self.cancel_window_zoom();return 'break'
         if self.family.get()=='Splines' and self.points:
             self.finish()
             return 'break'
@@ -421,11 +475,14 @@ class Draft:
         self.cancel_snap_hover(); self.draw()
 
     def motion(self,e):
+        if getattr(self,'_zoom_window',False):return
         self.mouse,self.marker=self.snap_point(self.world(e.x,e.y)); self.track_snap_hover(e); self.draw()
 
     def click(self,e):
         self.cancel_snap_hover()
         self.canvas.focus_set(); raw=self.world(e.x,e.y)
+        if getattr(self,'_zoom_window',False):
+            self._view_box_start=raw;self._view_box_end=raw;self.draw();return
         if self.family.get()=='Offset':
             self.offset_click(raw,e.state); return
         if self.family.get()=='Chamfer':
@@ -562,6 +619,9 @@ class Draft:
             self.drag_preview={}; self.drag_error=str(ex)
 
     def drag_select(self,e):
+        if getattr(self,'_zoom_window',False):
+            if self._view_box_start is not None:self._view_box_end=self.world(e.x,e.y);self.draw()
+            return
         if self.drag is not None:
             self.update_drag(e); self.draw()
         elif self.box_start is not None:
@@ -569,6 +629,14 @@ class Draft:
             self.box_end=self.world(e.x,e.y); self.draw()
 
     def release_select(self,e):
+        if getattr(self,'_zoom_window',False):
+            if self._view_box_start is None:return
+            a=self._view_box_start;b=self.world(e.x,e.y)
+            self._view_box_start=None;self._view_box_end=None
+            if abs(a[0]-b[0])*self.scale>=4 and abs(a[1]-b[1])*self.scale>=4:
+                self.cancel_window_zoom(draw=False);self.zoom_to_box(a,b)
+            else:self.draw()
+            return
         if self.drag is not None:
             self.update_drag(e)
             if self.drag['active']:
@@ -585,6 +653,7 @@ class Draft:
         self.box_start=None; self.box_end=None; self.draw()
 
     def double_click(self,e):
+        if getattr(self,'_zoom_window',False):return
         if self.family.get()=='Select':
             self.cancel(); self.edit_dialog()
 
@@ -694,6 +763,7 @@ class Draft:
         elif self.tool.get()=='Connected points': self.cancel()
 
     def cancel(self):
+        self.cancel_window_zoom(draw=False)
         self.cancel_snap_hover()
         self.offset_sources=[];self.offset_preview=[]
         self.trim_cutters=[]; self.chamfer_first=None; self.tracking_cursor=None
@@ -705,6 +775,7 @@ class Draft:
     def error(self,text): messagebox.showerror('BrianCAD',text,parent=self.root)
 
     def prompt(self):
+        if getattr(self,'_zoom_window',False):return 'Zoom window: drag an area; Esc/right-click cancels'
         method=self.tool.get(); n=len(self.points)
         if self.family.get()=='Offset':
             return f'{len(getattr(self,"offset_sources",[]))} source curves | Set distance and direction X/Y; click side point; Apply offset'
@@ -889,6 +960,9 @@ class Draft:
                               font=self.snap_label_font,tags=('snap-label',))
         if self.box_start is not None and self.box_end is not None:
             c.create_rectangle(*self.screen(self.box_start),*self.screen(self.box_end),outline='#397cc1',dash=(4,3))
+        if getattr(self,'_view_box_start',None) is not None and self._view_box_end is not None:
+            c.create_rectangle(*self.screen(self._view_box_start),*self.screen(self._view_box_end),
+                               outline='#397cc1',dash=(4,3),tags=('zoom-window',))
         hidden=' (dense lines hidden)' if self.grid.get() and (not major_visible or (self.grid_subdivisions>1 and not minor_visible)) else ''
         pos='' if self.mouse is None else f' | X {self.mouse[0]:.4f} Y {self.mouse[1]:.4f}'
         point_count=sum(len(keys) for keys in self.doc.point_selection.values())
@@ -917,12 +991,37 @@ class Draft:
         else: self.cancel()
         self.refresh_layers()
 
+    def zoom_center(self,factor):
+        self.zoom(SimpleNamespace(x=self.canvas.winfo_width()/2,y=self.canvas.winfo_height()/2),factor)
+
+    def begin_window_zoom(self):
+        self.cancel_snap_hover();self._zoom_window=True
+        self._view_box_start=None;self._view_box_end=None
+        self.drag=None;self.drag_preview={};self.box_start=None;self.box_end=None
+        self.mouse=None;self.marker='';self.tracking_cursor=None
+        self.canvas.configure(cursor='crosshair');self.canvas.focus_set();self.draw()
+
+    def cancel_window_zoom(self,draw=True):
+        active=getattr(self,'_zoom_window',False)
+        self._zoom_window=False;self._view_box_start=None;self._view_box_end=None
+        if active:
+            self.canvas.configure(cursor='arrow')
+            if draw:self.draw()
+
+    def zoom_to_box(self,a,b):
+        low=[min(a[k],b[k]) for k in (0,1)];high=[max(a[k],b[k]) for k in (0,1)]
+        w=self.canvas.winfo_width();h=self.canvas.winfo_height()
+        self.scale=max(.01,min(100000,(w-40)/max(high[0]-low[0],1e-9),(h-40)/max(high[1]-low[1],1e-9)))
+        self.origin=[w/2-(low[0]+high[0])*self.scale/2,h/2+(low[1]+high[1])*self.scale/2];self.draw()
+
     def zoom(self,e,factor):
+        self.cancel_window_zoom(draw=False)
         self.tracking_cursor=None
         self.cancel_snap_hover()
         p=self.world(e.x,e.y); self.scale=max(.01,min(100000,self.scale*factor))
         self.origin=[e.x-p[0]*self.scale,e.y+p[1]*self.scale]; self.motion(e)
     def pan_start(self,e):
+        self.cancel_window_zoom(draw=False)
         self.tracking_cursor=None
         self.cancel_snap_hover(); self.pan=[e.x,e.y]; self.draw()
     def pan_move(self,e):
@@ -931,6 +1030,7 @@ class Draft:
             self.origin[0]+=e.x-self.pan[0]; self.origin[1]+=e.y-self.pan[1]
             self.pan=[e.x,e.y]; self.draw()
     def fit(self):
+        self.cancel_window_zoom(draw=False)
         self.root.update_idletasks()
         boxes=[self.object_bounds(self.objects[i]) for i in self.visible_ids()]
         if not boxes: return
@@ -1179,17 +1279,17 @@ class Draft:
         try:
             with tempfile.NamedTemporaryFile('w',encoding='utf-8',dir=os.path.dirname(os.path.abspath(path)),delete=False) as f:
                 temp=f.name; json.dump(self.doc.payload(),f,indent=2,allow_nan=False)
-            os.replace(temp,path); self.path=path; self.doc.saved=self.doc.state(); self.draw()
+            os.replace(temp,path); self.path=path; self.doc.saved=self.doc.state(); self.remember_drawing(path); self.draw()
         except (OSError,ValueError) as ex:
             if temp and os.path.exists(temp): os.unlink(temp)
             self.error(str(ex))
-    def open(self):
+    def open(self,path=None):
         if not self.discard(): return
-        path=filedialog.askopenfilename(filetypes=[('BrianCAD drawing','*.json')])
+        path=path or filedialog.askopenfilename(filetypes=[('BrianCAD drawing','*.json')])
         if not path: return
         try:
             with open(path,encoding='utf-8') as f: doc=Document.from_payload(json.load(f))
-            self.snap_history.clear(); self.doc=doc; self.path=path; self.cancel(); self.refresh_layers(); self.fit()
+            self.snap_history.clear(); self.doc=doc; self.path=path; self.cancel(); self.refresh_layers(); self.fit();self.remember_drawing(path)
         except (OSError,ValueError,TypeError,KeyError,OverflowError) as ex: self.error(str(ex))
     def close(self):
         if self.discard():
