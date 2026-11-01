@@ -272,7 +272,7 @@ The top-row action buttons have been replaced with a native menu bar (the system
 
 - **File:** New, Open..., Open Recent..., Save, Save As..., Import..., Export...
 - **Edit:** Undo, Redo
-- **Objects:** Group, Ungroup, Layers..., Edit Objects...
+- **Objects:** Group, Ungroup, Divide..., Layers..., Edit Objects...
 - **View:** Fit, Zoom In, Zoom Out, Window
 
 Open Recent keeps the ten most recently opened/saved native BrianCAD drawings, newest first, across sessions. Choosing one uses the normal unsaved-changes prompt. Cancelled or failed file operations do not add history entries. Clear Recent clears the list without deleting drawing files. Import still merges DXF/native geometry into the current drawing; Export opens the existing DXF scope dialog.
@@ -280,3 +280,11 @@ Open Recent keeps the ten most recently opened/saved native BrianCAD drawings, n
 Zoom In/Out use the center of the drawing workspace; mouse-wheel zoom remains centered at the pointer. **View → Window** switches temporarily to a crosshair: drag a rectangle in either direction to fit that world area to the workspace. Selection, drawing data and unfinished drawing parameters are preserved. Esc or right-click cancels window zoom without finishing an unfinished spline. Tiny/flat drags leave window mode active for another attempt. The normal tool resumes after a successful zoom. Ctrl+N and Ctrl+Shift+S (Command equivalents on macOS) invoke New and Save As; existing shortcuts remain available.
 
 Recent-file preferences are stored separately from drawings in the platform's per-user BrianCAD configuration folder. Unreadable preferences fall back to an empty list, and a preferences write failure does not prevent saving/opening a drawing.
+
+## Divide objects
+
+Select one or more objects and choose **Objects → Divide...**. Enter a whole **Number of segments** from 2 to 1000 and click **Apply**. Each selected object is replaced independently by that many equal-length sections measured along its path. For example, dividing two selected circles into four sections produces eight arcs. Apply is one undoable operation for the entire selection; Cancel/Esc leave the drawing and unfinished tool input unchanged. Invalid counts, hidden/locked selected members, excessively small segments or object-limit failures leave all sources unchanged.
+
+Lines remain lines; circles become arcs; arcs and oval arcs retain their curves and direction. Ovals are divided by arc length rather than by equal angles. Bézier sections use exact subdivision; through-point splines become exact Bézier spans. When one requested spline section crosses several native spans, its spans form one new independent selectable group. Polygons are divided along their open path or closed perimeter, retaining corners within open polyline sections; use Ungroup to split a polygon specifically at every existing edge instead.
+
+Output keeps source layers, RGB colors, widths, patterns and object flags. Existing source groups are removed from the resulting independent sections; any multi-span section receives its own new identity. A selected group's members are divided individually, and partial-handle selections divide their entire owning objects. New sections are selected after Apply. Native save/open and DXF export use the existing arc, ellipse, spline and polyline representations. Equal lengths on general curves use numerical arc-length integration; curve geometry is not flattened or approximated. No additional dependency is required.
