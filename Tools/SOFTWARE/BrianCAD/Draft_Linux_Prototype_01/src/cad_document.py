@@ -177,6 +177,24 @@ class Document:
         start=len(self.objects); self.objects.extend(pending)
         self.selected=set(range(start,len(self.objects))); self.point_selection={}
 
+    def divide_objects(self,indices,count):
+        from cad_divide import divide_object,segment_count
+        count=segment_count(count);ids=set(indices)
+        if not ids:raise ValueError('Select at least one object to divide.')
+        if any(not 0<=i<len(self.objects) or not self.visible(i) or self.objects[i].get('locked',False) for i in ids):
+            raise ValueError('Divide requires visible, unlocked objects. Show and unlock every selected group member first.')
+        if len(self.objects)+len(ids)*(count-1)>100000:raise ValueError('Divide would exceed 100000 drawing objects.')
+        replacements={i:[self.prepare(part) for section in divide_object(self.objects[i],count) for part in section] for i in sorted(ids)}
+        size=len(self.objects)-len(ids)+sum(map(len,replacements.values()))
+        if size>100000:raise ValueError('Divide would exceed 100000 drawing objects.')
+        pending=[];selected=set()
+        for i,obj in enumerate(self.objects):
+            parts=replacements.get(i,[obj])
+            if i in ids:selected.update(range(len(pending),len(pending)+len(parts)))
+            pending.extend(parts)
+        self.checkpoint();self.objects=pending;self.selected=selected;self.point_selection={}
+        return len(ids)*count
+
     def offset_objects(self,indices,distance,reference):
         from cad_offset import offset
         if any(not 0<=i<len(self.objects) or not self.visible(i) or self.objects[i].get('locked',False) for i in indices):

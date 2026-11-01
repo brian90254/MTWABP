@@ -124,6 +124,7 @@ class Draft:
         objects=self.menus['Objects']
         objects.add_command(label='Group',accelerator=prefix+'+G',command=self.group_selected)
         objects.add_command(label='Ungroup',accelerator=prefix+'+Shift+G',command=self.ungroup_selected)
+        objects.add_command(label='Divide...',command=self.divide_dialog)
         objects.add_separator()
         objects.add_command(label='Layers...',command=self.layers_dialog)
         objects.add_command(label='Edit Objects...',command=self.edit_dialog)
@@ -970,6 +971,33 @@ class Draft:
         self.layer_status.set('Active layer: '+self.doc.active)
         self.root.title((' |  ' if self.doc.dirty else '')+'BrianCAD - '+(os.path.basename(self.path) if self.path else 'Untitled'))
         if getattr(self,'edit_window',None) is not None: self.refresh_edit()
+
+    def divide_dialog(self):
+        existing=getattr(self,'divide_window',None)
+        if existing is not None and existing.winfo_exists():existing.lift();return
+        ids=self.doc.group_members(set(self.selected)|set(self.doc.point_selection))
+        if not ids:self.error('Select at least one object to divide.');return
+        originals={i:self.objects[i] for i in ids};document=self.doc
+        dlg=tk.Toplevel(self.root);self.divide_window=dlg;dlg.title('Divide objects');dlg.transient(self.root);dlg.resizable(False,False)
+        frame=ttk.Frame(dlg,padding=14);frame.pack(fill='both',expand=True)
+        ttk.Label(frame,text=f'Divide each of {len(ids)} selected objects independently.').grid(row=0,column=0,columnspan=2,sticky='w',pady=(0,8))
+        ttk.Label(frame,text='Number of segments').grid(row=1,column=0,sticky='w',padx=(0,10))
+        count=tk.StringVar(value='2');self.divide_count=count
+        entry=ttk.Entry(frame,textvariable=count,width=12);entry.grid(row=1,column=1,sticky='ew')
+        ttk.Label(frame,text='Equal lengths along each object. Curves remain curved.\nMulti-span spline sections select as independent groups.',wraplength=370).grid(row=2,column=0,columnspan=2,sticky='w',pady=10)
+        def close(event=None):dlg.destroy();return 'break'
+        def apply(event=None):
+            try:
+                if self.doc is not document or any(i>=len(self.objects) or self.objects[i] is not o for i,o in originals.items()):
+                    raise ValueError('The selected objects changed. Close Divide and select them again.')
+                self.doc.divide_objects(ids,count.get())
+            except (ValueError,TypeError,KeyError,OverflowError) as ex:
+                messagebox.showerror('Divide objects',str(ex),parent=dlg);return 'break'
+            dlg.destroy();self.snap_history.clear();self.cancel();self.refresh_layers();return 'break'
+        ttk.Button(frame,text='Cancel',command=close).grid(row=3,column=0,pady=(4,0))
+        ttk.Button(frame,text='Apply',command=apply).grid(row=3,column=1,pady=(4,0))
+        dlg.bind('<Return>',apply);dlg.bind('<Escape>',close);dlg.protocol('WM_DELETE_WINDOW',close)
+        dlg.grab_set();entry.focus_set();entry.selection_range(0,'end')
 
     def group_selected(self):
         try:self.doc.group_selection();self.cancel()
