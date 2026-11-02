@@ -328,3 +328,10 @@ Numeric fields accept `+`, `-`, `*`, `/`, unary signs and parentheses, using sta
 Inches also accept `in`, `inch`, `inches` or `"`; feet accept `ft` or `'`; metric unit names and common plurals are supported. Numeric terms with explicit units are converted to the active display units before calculator arithmetic. Products of lengths/areas and other dimensional algebra are not a separate supported quantity system. Drawing-parameter and inspector fields normalize on leaving the field or applying/pressing Enter; incomplete expressions stay editable and are reported on Apply. Grid and Divide dialogs calculate their expressions on Apply. Invalid expressions and division by zero leave the drawing unchanged.
 
 Parsing uses a bounded arithmetic grammar, without executing Python or accepting functions, variables or exponentiation. No new dependency is needed. Geometry, native coordinate storage, clipboard geometry and DXF export remain physically expressed in inches internally; `display_unit` is a separate native-file preference. Imports/paste retain the destination drawing's display-unit preference and existing physical conversion behavior.
+
+
+## Session drawing defaults
+
+Drawing tools remember their last successfully used numeric settings while BrianCAD remains open: circle diameter, Chamfer/fillet radius, polygon side count, offsets, line length/direction and Modify distances/angles/scale factors. Switching tools, New/Open and Undo do not clear this memory; restarting the application restores the built-in defaults. Invalid input, failed operations and values merely typed then cancelled do not replace successful defaults.
+
+Settings are kept per construction method, with circle diameter shared from the last constructed circle and regular-polygon side count shared between inscribed/circumscribed methods. Dimensions are retained in physical units and displayed in the drawing's current units. Absolute starting positions retain their normal defaults; line endpoints are rebuilt from the remembered relative displacement so the displayed length/direction and geometry remain consistent. These defaults are not stored in drawing files or preferences.

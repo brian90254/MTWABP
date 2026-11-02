@@ -52,7 +52,7 @@ class CanvasLayer:
 
 class Draft:
     def __init__(self,root):
-        self.root=root; self.doc=Document(); self.path=None
+        self.root=root; self.doc=Document(); self.path=None;self._tool_defaults={}
         self.recent_files=RecentFiles();self._zoom_window=False;self._view_box_start=None;self._view_box_end=None
         self.scale=90.; self.origin=[470.,320.]; self.pan=None
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
@@ -275,11 +275,16 @@ class Draft:
                 label='Center '+key.upper() if self.tool.get() not in ['Diameter endpoints','Three-point circle','Two tangent lines','Opposite corners','Axis endpoints + width'] else key.upper()
             if self.family.get()=='Offset': label={'offset':'Distance','x':'Direction X','y':'Direction Y'}[key]
             ttk.Label(cell,text=label,width=12 if self.family.get()=='Offset' else 9).pack(side='left')
-            var=tk.StringVar(value=format_value(DEFAULTS.get(key,0),self.doc.display_unit,field_kind(key))); self.params[key]=var
+            var=tk.StringVar(value=format_value(getattr(self,'_tool_defaults',{}).get((self.family.get(),self.tool.get(),key),DEFAULTS.get(key,0)),self.doc.display_unit,field_kind(key))); self.params[key]=var
             ent=ttk.Entry(cell,textvariable=var,width=10); ent.pack(side='left')
             ent.bind('<KeyRelease>',lambda e,k=key:self.parameter_changed(k))
             ent.bind('<FocusOut>',lambda e,k=key:self.normalize_parameter(k))
             ent.bind('<Return>',lambda e:self.apply_parameters())
+        saved=getattr(self,'_tool_defaults',{})
+        family,method=self.family.get(),self.tool.get()
+        if family=='Lines' and method in ('Two points','Connected points') and (family,method,'dx') in saved:
+            a=self.field_point(0);b=geo.add(a,[saved[(family,method,'dx')],saved[(family,method,'dy')]])
+            self.set_point_fields(1,b);self.update_line_fields(a,b)
         actions=ttk.Frame(self.parameter_frame); actions.grid(row=(len(fields)+3)//4,column=0,columnspan=4,padx=5,pady=4,sticky='w')
         if self.family.get()=='Offset':
             ttk.Button(actions,text='Preview offset',command=self.preview_offset).pack(side='left',padx=3)
@@ -301,6 +306,17 @@ class Draft:
     def parameter_changed(self,key):
         self.last_parameter=key
         if self.family.get()=='Offset': self.offset_preview=[];self.draw()
+
+    def remember_parameters(self,values,obj=None):
+        if not hasattr(self,'_tool_defaults'):self._tool_defaults={}
+        family,method=self.family.get(),self.tool.get()
+        for key in ('diameter','radius','offset','sides','length','angle','factor','dx','dy'):
+            if key in values:self._tool_defaults[(family,method,key)]=values[key]
+        if family=='Circles' and obj is not None and obj['type']=='circle':
+            self._tool_defaults[(family,'Center + diameter','diameter')]=2*obj['radius']
+        if family=='Polygons' and 'sides' in values:
+            for mode in ('Inscribed polygon','Circumscribed polygon'):
+                self._tool_defaults[(family,mode,'sides')]=values['sides']
 
     def values(self):
         vals={k:parse_number(v.get(),self.doc.display_unit,field_kind(k)) for k,v in self.params.items()}
@@ -577,6 +593,7 @@ class Draft:
         try:
             ids=self.offset_indices();v=self.values()
             approximate=self.doc.offset_objects(ids,v['offset'],[v['x'],v['y']])
+            self.remember_parameters(v)
             self.offset_preview=[];self.refresh_layers();self.draw()
             if approximate:
                 messagebox.showinfo('Offset curves','Created a polyline approximation. Source curves were sampled with a 0.0001 inch chord criterion.',parent=self.root)
@@ -600,6 +617,7 @@ class Draft:
             if first_index is None: self.chamfer_first=None; raise ValueError('The first segment changed. Choose it again.')
             if first_index==index: raise ValueError('Choose a different second segment.')
             self.doc.chamfer_objects(first_index,index,first[1],selection.nearest_point(raw,self.objects[index]),radius)
+            self.remember_parameters({'radius':radius})
             self.chamfer_first=None; self.mouse=None; self.marker=''; self.tracking_cursor=None
             self.refresh_layers(); self.draw()
         except (ValueError,KeyError) as ex: self.error(str(ex))
@@ -738,8 +756,9 @@ class Draft:
 
     def create_object(self,points):
         self.cancel_snap_hover()
-        obj=construct(self.tool.get(),points,self.values(),self.refs,self.clockwise.get())
+        values=self.values();obj=construct(self.tool.get(),points,values,self.refs,self.clockwise.get())
         obj['color']=self.color.get(); self.doc.add([obj])
+        self.remember_parameters(values,obj)
         end=list(points[-1]); connected=self.tool.get()=='Connected points'
         self.points=[end] if connected else []; self.refs=[None] if connected else []
         self.start=end if connected else None; self.mouse=None; self.marker=''
@@ -760,6 +779,7 @@ class Draft:
             if family=='Modify':
                 self.doc.transform_selected(method,copy_objects=self.copy_mode.get(),pivot=[v['x'],v['y']],
                                             dx=v.get('dx',0),dy=v.get('dy',0),angle=v.get('angle',0),factor=v.get('factor',1))
+                self.remember_parameters(v)
                 self.cancel(); return
             if family=='Splines':
                 self.enter_point(); return
