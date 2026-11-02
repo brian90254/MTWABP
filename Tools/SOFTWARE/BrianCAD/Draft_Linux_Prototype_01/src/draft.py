@@ -22,7 +22,7 @@ import cad_clipboard
 from cad_recent import RecentFiles
 from snap_tracking import SnapHistory
 from cad_geometry import dist as distance, anchors, hit_distance
-from cad_document import Document, COLORS
+from cad_document import Document, COLORS, layer_sort_key
 from cad_tools import METHODS, THREE, DEFAULTS, LABELS, fields_for, point_values, construct
 from grid_snap import grid_values, grid_positions, grid_candidates, line_grid_candidates, alignment_candidates
 
@@ -1176,11 +1176,14 @@ class Draft:
             items=tree.selection()
             if not items: raise ValueError('Highlight a layer first.')
             return tree.item(items[0],'values')[-1]
+        sort_reverse=None
         def refresh():
             keep=selected_name() if tree.selection() else self.doc.active
             if keep not in [l['name'] for l in self.doc.layers]: keep=self.doc.active
             tree.delete(*tree.get_children())
-            for i,l in enumerate(self.doc.layers):
+            rows=list(enumerate(self.doc.layers))
+            if sort_reverse is not None:rows.sort(key=lambda item:layer_sort_key(item[1]['name']),reverse=sort_reverse)
+            for i,l in rows:
                 key=str(i); tree.insert('', 'end',iid=key,image=self.layer_icons[int(l['visible'])],values=('*' if l['name']==self.doc.active else '',l['name']))
                 if l['name']==keep: tree.selection_set(key)
         self.layer_refresh=refresh
@@ -1203,12 +1206,22 @@ class Draft:
         def highlight(e):
             if tree.selection(): rename.set(selected_name())
         def double(e):
+            nonlocal sort_reverse
+            column=tree.identify_column(e.x)
+            if tree.identify_region(e.x,e.y)=='heading':
+                if column=='#2':
+                    current=[tree.item(row,'values')[-1] for row in tree.get_children()]
+                    sort_reverse=current==sorted(current,key=layer_sort_key)
+                    refresh()
+                elif column=='#0':
+                    self.doc.toggle_other_layers();refresh();self.cancel()
+                return 'break'
             row=tree.identify_row(e.y)
             if row:
                 tree.selection_set(row); action('hide' if tree.identify_column(e.x)=='#0' else 'set')
             return 'break'
         tree.bind('<<TreeviewSelect>>',highlight); tree.bind('<Double-1>',double)
-        ttk.Label(f,text='Single-click highlights. Double-click name: active. Double-click eye: show/hide.').grid(row=7,column=0,columnspan=2,pady=8)
+        ttk.Label(f,text='Double-click row name: active; row eye: show/hide.\nDouble-click Layer header: sort/reverse; Eye header: isolate active/show all.').grid(row=7,column=0,columnspan=2,pady=8)
         refresh()
 
     def edit_dialog(self):

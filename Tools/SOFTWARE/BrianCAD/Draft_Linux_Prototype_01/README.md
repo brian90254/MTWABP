@@ -299,3 +299,9 @@ Copies preserve geometry, RGB colors, named layers, line widths, patterns and ob
 Geometry uses a native BrianCAD JSON clipboard payload, allowing copies between BrianCAD drawings while the system clipboard contains that payload. Normal Copy/Paste in focused text fields continues to use the text clipboard; incompatible clipboard contents produce a message without modifying the drawing. Pasting does not change the current save filename or import the source grid/active layer. Ghost geometry is retained on the canvas and moved/scaled during placement rather than resampling curves on every mouse move.
 
 The shared property editor is now **Edit → Edit Objects...** (also available by double-clicking an object), rather than under Objects. Command+C / Command+V are available on macOS alongside the Ctrl shortcuts.
+
+### Layers window header actions
+
+Double-click the **Layer** column heading for case-insensitive natural alphanumeric order: numeric-leading names first, then A–Z, with `Layer2` before `Layer10`. If the displayed list is already ascending, the same action reverses it. The highlighted layer and active layer are preserved. Sorting affects only the list view, stays in effect while that window is open (including layer additions/renames), and does not dirty the drawing or change saved layer order.
+
+Double-click the **Eye** column heading to hide every layer except the active layer. If all non-active layers are already hidden, it shows every layer instead. The active layer is always made visible by this action. Each visibility change is one undoable operation and updates the workspace immediately. Individual row double-clicks retain their existing behavior: layer name sets the active layer; eye icon toggles that one layer.
