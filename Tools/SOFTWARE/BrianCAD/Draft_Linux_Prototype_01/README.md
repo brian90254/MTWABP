@@ -271,8 +271,8 @@ A group is recognized as a **closed group** only when its geometry forms one con
 The top-row action buttons have been replaced with a native menu bar (the system menu bar on macOS):
 
 - **File:** New, Open..., Open Recent..., Save, Save As..., Import..., Export...
-- **Edit:** Undo, Redo
-- **Objects:** Group, Ungroup, Divide..., Layers..., Edit Objects...
+- **Edit:** Undo, Redo, Copy, Paste, Edit Objects...
+- **Objects:** Group, Ungroup, Divide..., Layers...
 - **View:** Fit, Zoom In, Zoom Out, Window
 
 Open Recent keeps the ten most recently opened/saved native BrianCAD drawings, newest first, across sessions. Choosing one uses the normal unsaved-changes prompt. Cancelled or failed file operations do not add history entries. Clear Recent clears the list without deleting drawing files. Import still merges DXF/native geometry into the current drawing; Export opens the existing DXF scope dialog.
@@ -288,3 +288,14 @@ Select one or more objects and choose **Objects → Divide...**. Enter a whole *
 Lines remain lines; circles become arcs; arcs and oval arcs retain their curves and direction. Ovals are divided by arc length rather than by equal angles. Bézier sections use exact subdivision; through-point splines become exact Bézier spans. When one requested spline section crosses several native spans, its spans form one new independent selectable group. Polygons are divided along their open path or closed perimeter, retaining corners within open polyline sections; use Ungroup to split a polygon specifically at every existing edge instead.
 
 Output keeps source layers, RGB colors, widths, patterns and object flags. Existing source groups are removed from the resulting independent sections; any multi-span section receives its own new identity. A selected group's members are divided individually, and partial-handle selections divide their entire owning objects. New sections are selected after Apply. Native save/open and DXF export use the existing arc, ellipse, spline and polyline representations. Equal lengths on general curves use numerical arc-length integration; curve geometry is not flattened or approximated. No additional dependency is required.
+
+
+## Copy and place pasted geometry
+
+**Edit → Copy** / **Ctrl+C** copies selected objects, including full owners of selected handles and complete groups. **Edit → Paste** / **Ctrl+V** enters placement mode: a ghost copy follows the mouse with an actual object anchor attached to the cursor. The anchor is chosen from the copied objects' anchors nearest the last workspace cursor location, or the first object's first anchor if no cursor location is available. Existing snaps remain live. Left-click to place, or Esc/right-click to cancel without changing the drawing. Paste switches to Select and ends unfinished construction; placement itself is a single undoable action. Use Paste again for another copy.
+
+Copies preserve geometry, RGB colors, named layers, line widths, patterns and object flags. Groups stay intact but receive independent identities for every placement. Missing used layers are created on placement; existing layer visibility/settings are retained. The placement preview shows the copied geometry; components on hidden target layers remain hidden after placement. New geometry is selected. A batch of separate, ungrouped objects moves together while being placed, then remains ungrouped.
+
+Geometry uses a native BrianCAD JSON clipboard payload, allowing copies between BrianCAD drawings while the system clipboard contains that payload. Normal Copy/Paste in focused text fields continues to use the text clipboard; incompatible clipboard contents produce a message without modifying the drawing. Pasting does not change the current save filename or import the source grid/active layer. Ghost geometry is retained on the canvas and moved/scaled during placement rather than resampling curves on every mouse move.
+
+The shared property editor is now **Edit → Edit Objects...** (also available by double-clicking an object), rather than under Objects. Command+C / Command+V are available on macOS alongside the Ctrl shortcuts.

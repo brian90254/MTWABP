@@ -50,15 +50,15 @@ class MenuUITests(unittest.TestCase):
         a=self.a
         self.assertEqual(self.labels(a.menu_bar),['File','Edit','Objects','View'])
         self.assertEqual(self.labels(a.menus['File']),['New','Open...','Open Recent...','Save','Save As...','Import...','Export...'])
-        self.assertEqual(self.labels(a.menus['Edit']),['Undo','Redo'])
-        self.assertEqual(self.labels(a.menus['Objects']),['Group','Ungroup','Divide...','Layers...','Edit Objects...'])
+        self.assertEqual(self.labels(a.menus['Edit']),['Undo','Redo','Copy','Paste','Edit Objects...'])
+        self.assertEqual(self.labels(a.menus['Objects']),['Group','Ungroup','Divide...','Layers...'])
         self.assertEqual(self.labels(a.menus['View']),['Fit','Zoom In','Zoom Out','Window'])
         before=a.doc.state();scale=a.scale;center=(a.canvas.winfo_width()/2,a.canvas.winfo_height()/2)
         world=a.world(*center);self.invoke('View','Zoom In');self.assertAlmostEqual(a.scale,scale*1.25)
         for p,q in zip(world,a.world(*center)):self.assertAlmostEqual(p,q)
         self.invoke('View','Zoom Out');self.assertAlmostEqual(a.scale,scale);self.assertEqual(a.doc.state(),before)
         self.invoke('Objects','Layers...');self.assertTrue(a.layer_window.winfo_exists())
-        self.invoke('Objects','Edit Objects...');self.assertTrue(a.edit_window.winfo_exists())
+        self.invoke('Edit','Edit Objects...');self.assertTrue(a.edit_window.winfo_exists())
         self.invoke('Edit','Undo');self.assertEqual(len(a.objects),0)
         self.invoke('Edit','Redo');self.assertEqual(len(a.objects),1)
     def test_import_export_menu_routes_and_new_save_as_shortcuts(self):

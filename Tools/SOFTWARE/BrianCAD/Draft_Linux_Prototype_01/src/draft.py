@@ -18,6 +18,7 @@ import cad_offset
 import cad_properties
 import cad_dxf
 import cad_import
+import cad_clipboard
 from cad_recent import RecentFiles
 from snap_tracking import SnapHistory
 from cad_geometry import dist as distance, anchors, hit_distance
@@ -69,7 +70,7 @@ class Draft:
         root.title('BrianCAD'); root.geometry('1220x820'); root.minsize(850,620)
         self.build_ui(); self.configure_parameters()
         root.protocol('WM_DELETE_WINDOW',self.close)
-        for key,action in [('z',self.undo),('y',self.redo),('s',self.save),('o',self.open),('g',self.group_selected),('n',self.new)]:
+        for key,action in [('z',self.undo),('y',self.redo),('s',self.save),('o',self.open),('g',self.group_selected),('n',self.new),('c',self.copy_objects),('v',self.paste_objects)]:
             root.bind('<Control-'+key+'>',lambda e,f=action:self.shortcut(e,f))
             if root.tk.call('tk','windowingsystem')=='aqua':
                 root.bind('<Command-'+key+'>',lambda e,f=action:self.shortcut(e,f))
@@ -121,13 +122,17 @@ class Draft:
         edit=self.menus['Edit']
         edit.add_command(label='Undo',accelerator=prefix+'+Z',command=self.undo)
         edit.add_command(label='Redo',accelerator=prefix+'+Y',command=self.redo)
+        edit.add_separator()
+        edit.add_command(label='Copy',accelerator=prefix+'+C',command=self.copy_objects)
+        edit.add_command(label='Paste',accelerator=prefix+'+V',command=self.paste_objects)
+        edit.add_separator()
+        edit.add_command(label='Edit Objects...',command=self.edit_dialog)
         objects=self.menus['Objects']
         objects.add_command(label='Group',accelerator=prefix+'+G',command=self.group_selected)
         objects.add_command(label='Ungroup',accelerator=prefix+'+Shift+G',command=self.ungroup_selected)
         objects.add_command(label='Divide...',command=self.divide_dialog)
         objects.add_separator()
         objects.add_command(label='Layers...',command=self.layers_dialog)
-        objects.add_command(label='Edit Objects...',command=self.edit_dialog)
         view=self.menus['View']
         view.add_command(label='Fit',command=self.fit)
         view.add_command(label='Zoom In',command=lambda:self.zoom_center(1.25))
@@ -211,7 +216,7 @@ class Draft:
             self.canvas.bind('<Button-5>',lambda e:self.zoom(e,1/1.15))
 
     def shortcut(self,event,fn):
-        if event.widget.winfo_class() in ['Entry','TEntry','Text','TCombobox'] and fn in [self.undo,self.redo]: return
+        if event.widget.winfo_class() in ['Entry','TEntry','Text','TCombobox'] and fn in [self.undo,self.redo,self.copy_objects,self.paste_objects]: return
         fn(); return 'break'
 
     def escape(self,event=None):
@@ -220,6 +225,7 @@ class Draft:
 
     def right_click(self,event=None):
         if getattr(self,'_zoom_window',False):self.cancel_window_zoom();return 'break'
+        if getattr(self,'_paste',None):self.cancel();return 'break'
         if self.family.get()=='Splines' and self.points:
             self.finish()
             return 'break'
@@ -477,13 +483,21 @@ class Draft:
 
     def motion(self,e):
         if getattr(self,'_zoom_window',False):return
-        self.mouse,self.marker=self.snap_point(self.world(e.x,e.y)); self.track_snap_hover(e); self.draw()
+        self.mouse,self.marker=self.snap_point(self.world(e.x,e.y))
+        if getattr(self,'_paste',None):
+            self._paste['point']=list(self.mouse);self.marker=self.marker or 'paste anchor'
+        self.track_snap_hover(e);self.draw()
 
     def click(self,e):
         self.cancel_snap_hover()
         self.canvas.focus_set(); raw=self.world(e.x,e.y)
         if getattr(self,'_zoom_window',False):
             self._view_box_start=raw;self._view_box_end=raw;self.draw();return
+        if getattr(self,'_paste',None):
+            try:
+                point,label=self.snap_point(raw);cad_clipboard.place(self.doc,self._paste['snapshot'],point)
+            except (ValueError,TypeError,KeyError,OverflowError) as ex:self.error(str(ex));return
+            self.snap_history.clear();self.cancel();self.refresh_layers();return
         if self.family.get()=='Offset':
             self.offset_click(raw,e.state); return
         if self.family.get()=='Chamfer':
@@ -654,7 +668,7 @@ class Draft:
         self.box_start=None; self.box_end=None; self.draw()
 
     def double_click(self,e):
-        if getattr(self,'_zoom_window',False):return
+        if getattr(self,'_zoom_window',False) or getattr(self,'_paste',None):return
         if self.family.get()=='Select':
             self.cancel(); self.edit_dialog()
 
@@ -764,6 +778,8 @@ class Draft:
         elif self.tool.get()=='Connected points': self.cancel()
 
     def cancel(self):
+        self._paste=None
+        if hasattr(self,'canvas'):self.canvas.delete('paste-preview')
         self.cancel_window_zoom(draw=False)
         self.cancel_snap_hover()
         self.offset_sources=[];self.offset_preview=[]
@@ -777,6 +793,7 @@ class Draft:
 
     def prompt(self):
         if getattr(self,'_zoom_window',False):return 'Zoom window: drag an area; Esc/right-click cancels'
+        if getattr(self,'_paste',None):return 'Paste: anchor follows cursor | click to place | Esc/right-click cancels'
         method=self.tool.get(); n=len(self.points)
         if self.family.get()=='Offset':
             return f'{len(getattr(self,"offset_sources",[]))} source curves | Set distance and direction X/Y; click side point; Apply offset'
@@ -919,6 +936,7 @@ class Draft:
         visible=[i for i in self.visible_ids() if in_view(i)]
         self.render_geometry(visible)
         self.canvas.tag_lower('background')
+        self.render_paste_preview()
         c=CanvasLayer(self.canvas,'overlay')
         if self.tool.get()=='Start tangent + end' and len(self.points)>=2:
             try:
@@ -971,6 +989,48 @@ class Draft:
         self.layer_status.set('Active layer: '+self.doc.active)
         self.root.title((' |  ' if self.doc.dirty else '')+'BrianCAD - '+(os.path.basename(self.path) if self.path else 'Untitled'))
         if getattr(self,'edit_window',None) is not None: self.refresh_edit()
+
+    def text_clipboard(self,action):
+        widget=self.root.focus_get()
+        if widget is not None and widget.winfo_class() in ('Entry','TEntry','Text','TCombobox'):
+            widget.event_generate('<<'+action+'>>');return True
+        return False
+
+    def copy_objects(self):
+        if self.text_clipboard('Copy'):return
+        try:
+            data=cad_clipboard.snapshot(self.doc,set(self.selected)|set(self.doc.point_selection),self.mouse)
+            text=cad_clipboard.encode(data);self.root.clipboard_clear();self.root.clipboard_append(text)
+        except (ValueError,TypeError,KeyError,tk.TclError) as ex:self.error(str(ex))
+
+    def paste_objects(self):
+        if self.text_clipboard('Paste'):return
+        try:data=cad_clipboard.decode(self.root.clipboard_get())
+        except (ValueError,tk.TclError) as ex:self.error(str(ex));return
+        point=list(self.mouse) if self.mouse is not None else self.world(self.canvas.winfo_width()/2,self.canvas.winfo_height()/2)
+        self.return_to_select()
+        self._paste={'snapshot':data,'point':point,'rendered':False}
+        self.mouse=point;self.marker='paste anchor';self.draw()
+
+    def render_paste_preview(self):
+        session=getattr(self,'_paste',None)
+        if not session:return
+        c=self.canvas;point=session['point'];view=(self.scale,tuple(self.origin))
+        if not session['rendered']:
+            objects=session['snapshot']['drawing']['objects'];session['weights']={float(o['weight']) for o in objects}
+            for obj in objects:
+                self.draw_object(obj,color='#708296',dash=(5,3),tags=('paste-preview','paste-stroke:'+str(float(obj['weight']))))
+            dx,dy=geo.sub(point,session['snapshot']['anchor']);c.move('paste-preview',dx*self.scale,-dy*self.scale)
+            session['rendered']=True
+        else:
+            old_scale,old_origin=session['view'];factor=self.scale/old_scale
+            if factor!=1:c.scale('paste-preview',0,0,factor,factor)
+            dx,dy=geo.sub(point,session['last_point'])
+            c.move('paste-preview',self.origin[0]-old_origin[0]*factor+dx*self.scale,
+                   self.origin[1]-old_origin[1]*factor-dy*self.scale)
+            if factor!=1:
+                for weight in session['weights']:c.itemconfigure('paste-stroke:'+str(weight),width=max(1,min(5,weight*self.scale)))
+        session['view']=view;session['last_point']=list(point);c.tag_raise('paste-preview')
 
     def divide_dialog(self):
         existing=getattr(self,'divide_window',None)
