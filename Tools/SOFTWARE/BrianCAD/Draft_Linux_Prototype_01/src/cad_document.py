@@ -16,6 +16,14 @@ def rgb_color(value):
     return value.lower()
 
 
+def layer_sort_key(name):
+    """Case-insensitive natural order: numeric-leading names, then A–Z, then symbols."""
+    rank=0 if name[:1] in '0123456789' and name else 1 if name[:1].isalpha() else 2
+    chunks=tuple((0,int(part)) if re.fullmatch(r'[0-9]+',part) else (1,part)
+                 for part in re.split(r'([0-9]+)',name.casefold()) if part)
+    return rank,chunks,name
+
+
 def default_layers():
     return [{'name':n,'visible':True} for n in ['Constraints','Construction','Dimension','Layer1']]
 
@@ -290,6 +298,13 @@ class Document:
         self.checkpoint(); self.active=name
         for l in self.layers:
             if l['name']==name: l['visible']=True
+
+    def toggle_other_layers(self):
+        show=not any(l['visible'] for l in self.layers if l['name']!=self.active)
+        if not any(l['visible']!=(True if l['name']==self.active else show) for l in self.layers):return False
+        self.checkpoint()
+        for layer in self.layers:layer['visible']=True if layer['name']==self.active else show
+        self.prune_selection();return True
 
     def toggle_layer(self,name):
         if name not in [l['name'] for l in self.layers]: raise ValueError('Unknown layer.')
