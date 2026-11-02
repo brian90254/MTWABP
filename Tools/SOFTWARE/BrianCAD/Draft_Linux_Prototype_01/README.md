@@ -31,7 +31,7 @@ Choose a tool family and a construction method. Its numeric parameters appear al
 - **Apply / Create**, or Enter in a field, creates geometry from the current fields. For a spline it appends the entered point; **Finish spline** or Enter on the canvas commits the spline. **Right-click** finishes a pending spline and stays in Splines; a subsequent right-click with no pending points returns to Select. In other tools, right-click cancels pending picks/previews and returns to Select, retaining completed geometry and the selection. An incomplete spline keeps its points and reports what is needed. On macOS, Control-click has the same behavior.
 - For lines, editing Length/Angle makes those values define the endpoint. Editing dX/dY uses that displacement. Editing End X/End Y uses that endpoint. The most recently edited field chooses the interpretation.
 - Already-picked points can be amended in their fields before clicking the next point. Picked constructions are committed after their final point. Escape cancels pending points; completed objects remain.
-- Numeric values are decimal inches; angles are degrees counterclockwise from positive X. Grid preferences additionally accept simple fractions, such as `1/2`.
+- Numeric lengths use the drawing display units (inches by default); angles are degrees counterclockwise from positive X. Numeric fields accept unit suffixes, arithmetic and fractions such as `12mm`, `6 + 4` and `5/8`.
 
 ## Construction methods
 
@@ -229,11 +229,11 @@ A local synthetic benchmark uses 10,000 hidden circles and 200 visible circles, 
 
 ## Edit line widths
 
-Select any objects, open **Edit objects...**, and set **Line width (inches)**. This shared property applies to lines, circles, arcs, ovals, polygons and splines, including imported geometry. Choose a preset or type any positive width up to one inch, then click **Apply**. A blank field means mixed widths (or leave unchanged); entering a width applies it to the entire selection in one undoable operation. Other object properties stay intact. Widths remain stored in native files and export to the nearest supported DXF lineweight. The workspace display retains its existing 1–5 pixel width limits as you zoom.
+Select any objects, open **Edit objects...**, and set **Line width** (in the current drawing units). This shared property applies to lines, circles, arcs, ovals, polygons and splines, including imported geometry. Choose a preset or type any positive width up to one inch, then click **Apply**. A blank field means mixed widths (or leave unchanged); entering a width applies it to the entire selection in one undoable operation. Other object properties stay intact. Widths remain stored in native files and export to the nearest supported DXF lineweight. The workspace display retains its existing 1–5 pixel width limits as you zoom.
 
 ## Offset curves
 
-Select a curve or an endpoint-connected chain, then choose **Offset**. Partial handle selections use the entire owning curve. Enter **Distance**, **Direction X**, and **Direction Y** in inches. With either direction field active, left-click the workspace to fill both coordinates and preview the side to offset toward. The direction point chooses a side, not the offset magnitude. You can also type the coordinates and click **Preview offset**; **Apply offset** creates the result in one undoable step. Enter in a parameter field applies the offset. Right-click returns to Select, and Esc cancels the preview. Originals remain unchanged.
+Select a curve or an endpoint-connected chain, then choose **Offset**. Partial handle selections use the entire owning curve. Enter **Distance**, **Direction X**, and **Direction Y** in the current drawing units. With either direction field active, left-click the workspace to fill both coordinates and preview the side to offset toward. The direction point chooses a side, not the offset magnitude. You can also type the coordinates and click **Preview offset**; **Apply offset** creates the result in one undoable step. Enter in a parameter field applies the offset. Right-click returns to Select, and Esc cancels the preview. Originals remain unchanged.
 
 If nothing was preselected, click a curve first; Shift-click can add more source curves to the chain. Subsequent clicks choose direction points. Sources remain the same until cancelled or the tool is changed, allowing multiple offsets from the original chain. Only visible, unlocked sources are accepted. New geometry uses the first source object's layer, RGB color, pattern and line width; output objects can be edited normally afterward.
 
@@ -271,7 +271,7 @@ A group is recognized as a **closed group** only when its geometry forms one con
 The top-row action buttons have been replaced with a native menu bar (the system menu bar on macOS):
 
 - **File:** New, Open..., Open Recent..., Save, Save As..., Import..., Export...
-- **Edit:** Undo, Redo, Copy, Paste, Edit Objects...
+- **Edit:** Undo, Redo, Copy, Paste, Edit Objects..., Units...
 - **Objects:** Group, Ungroup, Divide..., Layers...
 - **View:** Fit, Zoom In, Zoom Out, Window
 
@@ -305,3 +305,26 @@ The shared property editor is now **Edit → Edit Objects...** (also available b
 Double-click the **Layer** column heading for case-insensitive natural alphanumeric order: numeric-leading names first, then A–Z, with `Layer2` before `Layer10`. If the displayed list is already ascending, the same action reverses it. The highlighted layer and active layer are preserved. Sorting affects only the list view, stays in effect while that window is open (including layer additions/renames), and does not dirty the drawing or change saved layer order.
 
 Double-click the **Eye** column heading to hide every layer except the active layer. If all non-active layers are already hidden, it shows every layer instead. The active layer is always made visible by this action. Each visibility change is one undoable operation and updates the workspace immediately. Individual row double-clicks retain their existing behavior: layer name sets the active layer; eye icon toggles that one layer.
+
+
+## Drawing units and numeric expressions
+
+Choose **Edit → Units...** to select inches (`in`), millimeters (`mm`), centimeters (`cm`), meters (`m`) or feet (`ft`). This changes displayed measurements and how bare numbers are interpreted; it does not rescale existing geometry, the viewport, major grid spacing or subdivision count. For example, a one-inch major grid with four subdivisions becomes a 25.4 mm major grid with 6.35 mm minor spacing at exactly the same screen locations. The choice is saved with each native drawing and is undoable. Legacy drawings default to inches.
+
+Drawing parameters, coordinates, grid spacing, line widths and the shared Edit Objects inspector use the selected units. Mouse-picked coordinates and calculated dimensions are displayed in those units too. Pending valid parameter and inspector edits are converted when units change. Counts and scale factors remain dimensionless; angles remain degrees (optional `deg`/`rad` suffixes are accepted).
+
+Numeric fields accept `+`, `-`, `*`, `/`, unary signs and parentheses, using standard arithmetic precedence. They also accept fractions and mixed fractions. Explicit unit suffixes override the current display unit for that measurement. Examples:
+
+| Input | Drawing units | Displayed result |
+| --- | --- | --- |
+| `12mm` | inches | `0.472440944882` |
+| `12"` | millimeters | `304.8` |
+| `6 + 4` | inches | `10` |
+| `5/8` | inches | `0.625` |
+| `5/8"` | millimeters | `15.875` |
+| `2 * (3 + 4)mm` | inches | `0.551181102362` |
+| `2in + 12mm` | millimeters | `62.8` |
+
+Inches also accept `in`, `inch`, `inches` or `"`; feet accept `ft` or `'`; metric unit names and common plurals are supported. Numeric terms with explicit units are converted to the active display units before calculator arithmetic. Products of lengths/areas and other dimensional algebra are not a separate supported quantity system. Drawing-parameter and inspector fields normalize on leaving the field or applying/pressing Enter; incomplete expressions stay editable and are reported on Apply. Grid and Divide dialogs calculate their expressions on Apply. Invalid expressions and division by zero leave the drawing unchanged.
+
+Parsing uses a bounded arithmetic grammar, without executing Python or accepting functions, variables or exponentiation. No new dependency is needed. Geometry, native coordinate storage, clipboard geometry and DXF export remain physically expressed in inches internally; `display_unit` is a separate native-file preference. Imports/paste retain the destination drawing's display-unit preference and existing physical conversion behavior.

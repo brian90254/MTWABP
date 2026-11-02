@@ -3,6 +3,7 @@ import bisect
 import copy
 import math
 import cad_geometry as g
+from cad_units import parse_number
 import cad_groups
 from cad_chamfer import evaluate,_PreparedCurve
 from cad_trim import fragment
@@ -12,7 +13,7 @@ from curve_trim import spline_fragments
 def segment_count(value):
     try:
         if isinstance(value,bool):raise ValueError()
-        number=float(value)
+        number=parse_number(value,kind='scalar')
         if not math.isfinite(number) or not number.is_integer() or not 2<=number<=1000:raise ValueError()
     except (ValueError,TypeError,OverflowError):raise ValueError('Enter a whole number of segments from 2 to 1000.')
     return int(number)

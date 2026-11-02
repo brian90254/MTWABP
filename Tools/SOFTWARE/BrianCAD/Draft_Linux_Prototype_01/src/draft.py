@@ -20,6 +20,7 @@ import cad_dxf
 import cad_import
 import cad_clipboard
 from cad_recent import RecentFiles
+from cad_units import UNITS, parse_number, format_value, display_value, field_kind
 from snap_tracking import SnapHistory
 from cad_geometry import dist as distance, anchors, hit_distance
 from cad_document import Document, COLORS, layer_sort_key
@@ -127,6 +128,7 @@ class Draft:
         edit.add_command(label='Paste',accelerator=prefix+'+V',command=self.paste_objects)
         edit.add_separator()
         edit.add_command(label='Edit Objects...',command=self.edit_dialog)
+        edit.add_command(label='Units...',command=self.units_dialog)
         objects=self.menus['Objects']
         objects.add_command(label='Group',accelerator=prefix+'+G',command=self.group_selected)
         objects.add_command(label='Ungroup',accelerator=prefix+'+Shift+G',command=self.ungroup_selected)
@@ -258,7 +260,7 @@ class Draft:
 
     def configure_parameters(self):
         for child in self.parameter_frame.winfo_children(): child.destroy()
-        self.params={}; self.last_parameter=None
+        self.params={}; self.last_parameter=None;self._parameter_unit=self.doc.display_unit
         fields=fields_for(self.family.get(),self.tool.get())
         for i,key in enumerate(fields):
             row,col=divmod(i,4)
@@ -273,9 +275,10 @@ class Draft:
                 label='Center '+key.upper() if self.tool.get() not in ['Diameter endpoints','Three-point circle','Two tangent lines','Opposite corners','Axis endpoints + width'] else key.upper()
             if self.family.get()=='Offset': label={'offset':'Distance','x':'Direction X','y':'Direction Y'}[key]
             ttk.Label(cell,text=label,width=12 if self.family.get()=='Offset' else 9).pack(side='left')
-            var=tk.StringVar(value=f'{DEFAULTS.get(key,0):g}'); self.params[key]=var
+            var=tk.StringVar(value=format_value(DEFAULTS.get(key,0),self.doc.display_unit,field_kind(key))); self.params[key]=var
             ent=ttk.Entry(cell,textvariable=var,width=10); ent.pack(side='left')
             ent.bind('<KeyRelease>',lambda e,k=key:self.parameter_changed(k))
+            ent.bind('<FocusOut>',lambda e,k=key:self.normalize_parameter(k))
             ent.bind('<Return>',lambda e:self.apply_parameters())
         actions=ttk.Frame(self.parameter_frame); actions.grid(row=(len(fields)+3)//4,column=0,columnspan=4,padx=5,pady=4,sticky='w')
         if self.family.get()=='Offset':
@@ -300,7 +303,7 @@ class Draft:
         if self.family.get()=='Offset': self.offset_preview=[];self.draw()
 
     def values(self):
-        vals={k:float(v.get()) for k,v in self.params.items()}
+        vals={k:parse_number(v.get(),self.doc.display_unit,field_kind(k)) for k,v in self.params.items()}
         if any(not math.isfinite(v) or abs(v)>1e7 for v in vals.values()): raise ValueError('Enter finite values within ±10,000,000.')
         return vals
 
@@ -311,12 +314,12 @@ class Draft:
     def set_point_fields(self,index,p):
         suffix=str(index+1) if index else ''
         for key,value in zip(['x'+suffix,'y'+suffix],p):
-            if key in self.params: self.params[key].set(f'{value:.12g}')
+            if key in self.params: self.params[key].set(format_value(value,self.doc.display_unit,field_kind(key)))
 
     def update_line_fields(self,a,b):
         dx,dy=geo.sub(b,a)
         for k,v in [('dx',dx),('dy',dy),('length',math.hypot(dx,dy)),('angle',math.degrees(math.atan2(dy,dx)))]:
-            if k in self.params: self.params[k].set(f'{v:.12g}')
+            if k in self.params: self.params[k].set(format_value(v,self.doc.display_unit,field_kind(k)))
 
     def world(self,x,y): return [(x-self.origin[0])/self.scale,(self.origin[1]-y)/self.scale]
     def screen(self,p): return [self.origin[0]+p[0]*self.scale,self.origin[1]-p[1]*self.scale]
@@ -682,7 +685,7 @@ class Draft:
                 pivot=self.field_point(0)
                 a,b=self.points[-2:]
                 if method=='Move':
-                    dx,dy=geo.sub(p,pivot); self.params['dx'].set(f'{dx:.12g}'); self.params['dy'].set(f'{dy:.12g}')
+                    dx,dy=geo.sub(p,pivot); self.params['dx'].set(format_value(dx,self.doc.display_unit)); self.params['dy'].set(format_value(dy,self.doc.display_unit))
                 elif method=='Rotate':
                     u,v=geo.sub(a,pivot),geo.sub(b,pivot); geo.unit(u); geo.unit(v)
                     self.params['angle'].set(f'{math.degrees(math.atan2(geo.cross(u,v),geo.dot(u,v))):.12g}')
@@ -714,10 +717,10 @@ class Draft:
         if len(self.points)==1: return
         a,b=self.points[:2]
         if family=='Lines' and method!='Offset from line': self.update_line_fields(a,b)
-        if method=='Center + diameter': self.params['diameter'].set(f'{2*distance(a,b):.12g}')
+        if method=='Center + diameter': self.params['diameter'].set(format_value(2*distance(a,b),self.doc.display_unit))
         if method=='Offset from line':
             n=geo.normal(geo.unit(geo.sub(self.refs[0]['b'],self.refs[0]['a'])))
-            self.params['offset'].set(f'{geo.dot(geo.sub(b,self.refs[0]["a"]),n):.12g}')
+            self.params['offset'].set(format_value(geo.dot(geo.sub(b,self.refs[0]["a"]),n),self.doc.display_unit))
         if len(self.points)==(3 if method in THREE else 2):
             self.create_object(self.points)
 
@@ -744,6 +747,7 @@ class Draft:
         self.refresh_layers(); self.draw()
 
     def apply_parameters(self):
+        for key in self.params:self.normalize_parameter(key)
         if self.family.get()=='Offset': self.apply_offset(); return
         if self.family.get()=='Chamfer':
             try:
@@ -903,6 +907,7 @@ class Draft:
 
     def draw(self):
         if not hasattr(self,'canvas'): return
+        self.sync_units()
         w=self.canvas.winfo_width(); h=self.canvas.winfo_height()
         self.canvas.delete('overlay')
         grid_key=(w,h,tuple(self.origin),self.scale,self.grid.get(),self.grid_spacing,self.grid_subdivisions)
@@ -983,9 +988,9 @@ class Draft:
             c.create_rectangle(*self.screen(self._view_box_start),*self.screen(self._view_box_end),
                                outline='#397cc1',dash=(4,3),tags=('zoom-window',))
         hidden=' (dense lines hidden)' if self.grid.get() and (not major_visible or (self.grid_subdivisions>1 and not minor_visible)) else ''
-        pos='' if self.mouse is None else f' | X {self.mouse[0]:.4f} Y {self.mouse[1]:.4f}'
+        pos='' if self.mouse is None else f' | X {display_value(self.mouse[0],self.doc.display_unit):.4f} Y {display_value(self.mouse[1],self.doc.display_unit):.4f} {self.doc.display_unit}'
         point_count=sum(len(keys) for keys in self.doc.point_selection.values())
-        self.status.set(f'{self.tool.get()}  |  {self.prompt()} | {len(self.selected)} objects + {point_count} handles selected | grid {self.grid_spacing:g}/{self.grid_subdivisions}{hidden}{pos}')
+        self.status.set(f'{self.tool.get()}  |  {self.prompt()} | {len(self.selected)} objects + {point_count} handles selected | grid {format_value(self.grid_spacing,self.doc.display_unit)}/{self.grid_subdivisions} {self.doc.display_unit}{hidden}{pos}')
         self.layer_status.set('Active layer: '+self.doc.active)
         self.root.title((' |  ' if self.doc.dirty else '')+'BrianCAD - '+(os.path.basename(self.path) if self.path else 'Untitled'))
         if getattr(self,'edit_window',None) is not None: self.refresh_edit()
@@ -1127,17 +1132,73 @@ class Draft:
         self.scale=min((w-80)/max(high[0]-low[0],.5),(h-80)/max(high[1]-low[1],.5))
         self.origin=[w/2-(low[0]+high[0])*self.scale/2,h/2+(low[1]+high[1])*self.scale/2]; self.draw()
 
+    def normalize_parameter(self,key):
+        try:
+            unit=self.doc.display_unit
+            self.params[key].set(format_value(parse_number(self.params[key].get(),unit,field_kind(key)),unit,field_kind(key)))
+        except (ValueError,KeyError):pass  # Incomplete input is reported on Apply, not on each keystroke.
+
+    def sync_units(self):
+        unit=self.doc.display_unit;old=getattr(self,'_parameter_unit',unit)
+        if old!=unit:
+            for key,var in self.params.items():
+                try:var.set(format_value(parse_number(var.get(),old,field_kind(key)),unit,field_kind(key)))
+                except ValueError:pass
+        self._parameter_unit=unit
+        if hasattr(self,'parameter_frame'):self.parameter_frame.configure(text=f'Drawing parameters | {UNITS[unit][0].lower()} ({unit})')
+
+    def change_units(self,unit):
+        old=self.doc.display_unit
+        if unit==old:return
+        parameters={key:format_value(parse_number(var.get(),old,field_kind(key)),unit,field_kind(key)) for key,var in self.params.items()}
+        pending={}
+        if getattr(self,'edit_window',None) is not None and self.edit_window.winfo_exists() and self.edit_matches():
+            for key in self._edit_dirty:
+                text=self.edit_fields[key].get()
+                if text.strip() and self._edit_originals:
+                    obj=cad_properties.apply_changes(self._edit_originals[0],{key:text},old)
+                    pending[key]=cad_properties.display(cad_properties.values(obj,unit)[key],cad_properties.schema(obj)[key][1])
+                else:pending[key]=text
+        self.doc.set_display_unit(unit)
+        for key,text in parameters.items():self.params[key].set(text)
+        self._parameter_unit=unit
+        if getattr(self,'edit_window',None) is not None and self.edit_window.winfo_exists():
+            self.refresh_edit()
+            for key,text in pending.items():
+                if key in self.edit_fields:self.edit_fields[key].set(text)
+        self.draw()
+
+    def units_dialog(self):
+        existing=getattr(self,'units_window',None)
+        if existing is not None and existing.winfo_exists():existing.lift();return
+        dlg=tk.Toplevel(self.root);self.units_window=dlg;dlg.title('Drawing units');dlg.transient(self.root);dlg.resizable(False,False)
+        frame=ttk.Frame(dlg,padding=14);frame.pack(fill='both',expand=True)
+        choices={f'{label} ({key})':key for key,(label,scale) in UNITS.items()}
+        choice=tk.StringVar(value=next(label for label,key in choices.items() if key==self.doc.display_unit));self.unit_choice=choice
+        ttk.Label(frame,text='Drawing units').grid(row=0,column=0,padx=(0,10))
+        ttk.Combobox(frame,textvariable=choice,values=list(choices),state='readonly',width=25).grid(row=0,column=1)
+        ttk.Label(frame,text='Changes displayed measurements and bare-number input.\nGeometry and major/minor grid keep their physical size.').grid(row=1,column=0,columnspan=2,pady=12)
+        def close(e=None):dlg.destroy();return 'break'
+        def apply(e=None):
+            try:self.change_units(choices[choice.get()])
+            except (ValueError,KeyError) as ex:messagebox.showerror('Drawing units',str(ex),parent=dlg);return 'break'
+            return close()
+        ttk.Button(frame,text='Cancel',command=close).grid(row=2,column=0)
+        ttk.Button(frame,text='Apply',command=apply).grid(row=2,column=1)
+        dlg.bind('<Return>',apply);dlg.bind('<Escape>',close);dlg.grab_set()
+
     def grid_dialog(self):
         dlg=tk.Toplevel(self.root); dlg.title('Grid'); dlg.transient(self.root); dlg.resizable(False,False)
         f=ttk.Frame(dlg,padding=16); f.pack()
-        spacing=tk.StringVar(value=f'{self.grid_spacing:g}'); divisions=tk.StringVar(value=str(self.grid_subdivisions))
+        dialog_unit=self.doc.display_unit
+        spacing=tk.StringVar(value=format_value(self.grid_spacing,dialog_unit)); divisions=tk.StringVar(value=str(self.grid_subdivisions))
         first=None
-        for i,(label,var) in enumerate([('Grid spacing (inches)',spacing),('# of subdivisions',divisions)]):
+        for i,(label,var) in enumerate([(f'Grid spacing ({dialog_unit})',spacing),('# of subdivisions',divisions)]):
             ttk.Label(f,text=label).grid(row=i,column=0,padx=6,pady=5)
             e=ttk.Entry(f,textvariable=var,width=14); e.grid(row=i,column=1,pady=5)
             if first is None: first=e
         def apply():
-            try: major,count=grid_values(spacing.get(),divisions.get())
+            try: major,count=grid_values(parse_number(spacing.get(),dialog_unit),parse_number(divisions.get(),kind='scalar'))
             except ValueError as ex: messagebox.showerror('Grid',str(ex),parent=dlg); return
             if (major,count)!=(self.grid_spacing,self.grid_subdivisions):
                 self.doc.checkpoint(); self.grid_spacing,self.grid_subdivisions=major,count
@@ -1248,7 +1309,7 @@ class Draft:
 
     def edit_matches(self):
         ids=self.edit_selection()
-        return (getattr(self,'_edit_doc',None) is self.doc and ids==self._edit_ids
+        return (getattr(self,'_edit_doc',None) is self.doc and ids==self._edit_ids and getattr(self,'_edit_unit','in')==self.doc.display_unit
                 and all(self.objects[i]==o for i,o in zip(ids,self._edit_originals)))
 
     def refresh_edit(self):
@@ -1259,7 +1320,7 @@ class Draft:
                 self._edit_layers=layers
                 if 'layer' in self.edit_widgets: self.edit_widgets['layer'].configure(values=('',)+layers)
             return
-        self._edit_doc=self.doc; self._edit_ids=self.edit_selection()
+        self._edit_doc=self.doc; self._edit_ids=self.edit_selection();self._edit_unit=self.doc.display_unit
         self._edit_layers=tuple(l['name'] for l in self.doc.layers)
         self._edit_originals=[copy.deepcopy(self.objects[i]) for i in self._edit_ids]
         self._edit_dirty=set(); self.edit_fields={}; self.edit_widgets={}; self._edit_initial={}
@@ -1271,18 +1332,21 @@ class Draft:
         if originals and len(group_ids)==1 and None not in group_ids:
             title+=' | '+('closed group' if cad_groups.is_closed(originals) else 'open/disconnected group')
         ttk.Label(self.edit_frame,text=title,font=('',12,'bold')).grid(row=0,column=0,columnspan=2,sticky='w',pady=(0,6))
-        properties=[cad_properties.values(o) for o in originals]
+        properties=[cad_properties.values(o,self.doc.display_unit) for o in originals]
         for row,(key,(label,kind)) in enumerate(shared.items(),1):
             vals=[v[key] for v in properties]
             text=cad_properties.display(vals[0],kind) if all(v==vals[0] for v in vals) else ''
             self._edit_initial[key]=text
+            if key=='weight':label=f'Line width ({self.doc.display_unit})'
             ttk.Label(self.edit_frame,text=label).grid(row=row,column=0,sticky='w',padx=(0,12),pady=3)
             var=tk.StringVar(value=text); self.edit_fields[key]=var
             options=cad_properties.choices(key,self._edit_layers)
+            if key=='weight':options=[format_value(float(value),self.doc.display_unit) for value in options]
             if key=='color': options+=sorted({v['color'] for v in properties if v['color'] not in options})
             widget=(ttk.Combobox(self.edit_frame,textvariable=var,values=['']+options,state='normal' if key in ('color','weight') else 'readonly',width=27)
                     if options is not None else ttk.Entry(self.edit_frame,textvariable=var,width=30))
             widget.grid(row=row,column=1,sticky='ew',pady=3); self.edit_widgets[key]=widget
+            if kind in ('number','points'):widget.bind('<FocusOut>',lambda e,k=key:self.normalize_edit_field(k))
             var.trace_add('write',lambda *args,k=key:self.edit_changed(k))
         self.edit_length=tk.StringVar()
         ttk.Label(self.edit_frame,textvariable=self.edit_length).grid(row=len(shared)+1,column=0,columnspan=2,sticky='w',pady=8)
@@ -1291,6 +1355,18 @@ class Draft:
         self.edit_apply.configure(state='normal' if originals else 'disabled')
         self.refresh_edit_length()
 
+    def normalize_edit_field(self,key):
+        try:
+            text=self.edit_fields[key].get()
+            if not text.strip() or not self._edit_originals:return
+            kind=cad_properties.schema(self._edit_originals[0])[key][1]
+            if kind=='number':value=format_value(parse_number(text,self.doc.display_unit,field_kind(key)),self.doc.display_unit,field_kind(key))
+            else:
+                obj=cad_properties.apply_changes(self._edit_originals[0],{key:text},self.doc.display_unit)
+                value=cad_properties.display(cad_properties.values(obj,self.doc.display_unit)[key],kind)
+            self.edit_fields[key].set(value)
+        except (ValueError,KeyError,TypeError):pass
+
     def edit_changed(self,key):
         if self.edit_fields[key].get()!=self._edit_initial[key]: self._edit_dirty.add(key)
         else: self._edit_dirty.discard(key)
@@ -1298,7 +1374,7 @@ class Draft:
 
     def proposed_edits(self):
         changes={key:self.edit_fields[key].get() for key in self._edit_dirty if self.edit_fields[key].get().strip()}
-        return {i:self.doc.prepare(cad_properties.apply_changes(o,changes))
+        return {i:self.doc.prepare(cad_properties.apply_changes(o,changes,self.doc.display_unit))
                 for i,o in zip(self._edit_ids,self._edit_originals)}
 
     def refresh_edit_length(self):
@@ -1306,7 +1382,7 @@ class Draft:
             proposed=list(self.proposed_edits().values())
             approx=' (approx.)' if any(o['type'] in ('ellipse','spline') for o in proposed) else ''
             prefix='Length' if len(proposed)==1 else 'Selected total length'
-            self.edit_length.set(f'{prefix}: {sum(geo.length(o) for o in proposed):.6g} in{approx}')
+            self.edit_length.set(f'{prefix}: {display_value(sum(geo.length(o) for o in proposed),self.doc.display_unit):.6g} {self.doc.display_unit}{approx}')
         except (ValueError,KeyError,TypeError,OverflowError):
             self.edit_length.set('Length: - (check entered values)')
 

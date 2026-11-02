@@ -3,6 +3,7 @@ import copy
 import json
 import re
 import cad_groups
+from cad_units import UNITS
 from cad_geometry import validate_geometry, transform
 from cad_selection import controls, move_controls, wholly_inside, in_box
 
@@ -32,12 +33,12 @@ class Document:
     def __init__(self):
         self.objects=[]; self.layers=default_layers(); self.active='Layer1'
         self.selected=set(); self.point_selection={}; self.history=[]; self.future=[]
-        self.grid_spacing=1.; self.grid_subdivisions=4
+        self.grid_spacing=1.; self.grid_subdivisions=4;self.display_unit='in'
         self.saved=self.state()
 
     def state(self):
         return copy.deepcopy({'objects':self.objects,'layers':self.layers,'active_layer':self.active,
-                              'grid':{'spacing':self.grid_spacing,'subdivisions':self.grid_subdivisions}})
+                              'display_unit':self.display_unit,'grid':{'spacing':self.grid_spacing,'subdivisions':self.grid_subdivisions}})
 
     @property
     def dirty(self):
@@ -45,13 +46,15 @@ class Document:
         return (self.objects!=self.saved['objects'] or self.layers!=self.saved['layers']
                 or self.active!=self.saved['active_layer']
                 or self.grid_spacing!=self.saved['grid']['spacing']
-                or self.grid_subdivisions!=self.saved['grid']['subdivisions'])
+                or self.grid_subdivisions!=self.saved['grid']['subdivisions']
+                or self.display_unit!=self.saved.get('display_unit','in'))
 
     def checkpoint(self):
         self.history.append(self.state()); self.future.clear()
 
     def restore(self,state):
         self.objects=copy.deepcopy(state['objects']); self.layers=copy.deepcopy(state['layers'])
+        self.display_unit=state.get('display_unit','in')
         self.active=state['active_layer']; self.grid_spacing=state['grid']['spacing']
         self.grid_subdivisions=state['grid']['subdivisions']; self.clear_selection()
 
@@ -65,6 +68,11 @@ class Document:
 
     def visible(self,index):
         return any(l['name']==self.objects[index].get('layer',self.active) and l['visible'] for l in self.layers)
+
+    def set_display_unit(self,unit):
+        if unit not in UNITS:raise ValueError('Choose a supported drawing unit.')
+        if unit==self.display_unit:return False
+        self.checkpoint();self.display_unit=unit;return True
 
     def group_members(self,indices):
         ids={i for i in indices if 0<=i<len(self.objects)}
@@ -331,6 +339,9 @@ class Document:
         if not isinstance(data,dict) or data.get('format') not in ['draft-prototype-1','briancad-2']:
             raise ValueError('Not a supported BrianCAD drawing.')
         d=cls()
+        unit=data.get('display_unit','in')
+        if not isinstance(unit,str) or unit not in UNITS:raise ValueError('Invalid display unit.')
+        d.display_unit=unit
         if data.get('units','inches')!='inches': raise ValueError('Drawing units must be inches.')
         layers=data.get('layers',default_layers())
         if not isinstance(layers,list) or not 1<=len(layers)<=1000: raise ValueError('Invalid layer list.')

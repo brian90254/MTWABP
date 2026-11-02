@@ -2,6 +2,7 @@
 import copy
 import math
 from cad_document import COLORS, rgb_color
+from cad_units import parse_number,display_value,field_kind
 
 
 BASE={'layer':('Layer','choice'),'color':('Color','choice'),'locked':('Locked','choice'),
@@ -26,7 +27,7 @@ def schema(o):
     return result
 
 
-def values(o):
+def values(o,unit='in'):
     result={k:o[k] for k in BASE}
     result['color']=next((name for name,color in COLORS.items() if color==o['color']),o['color'])
     for key in ('locked','controls'): result[key]=str(result[key])
@@ -42,6 +43,9 @@ def values(o):
     else:
         result.update(points=copy.deepcopy(o['points']),closed=str(o.get('closed',True)))
         if kind=='spline': result['method']=o['method']
+    for key,value in list(result.items()):
+        if key=='points':result[key]=[[display_value(n,unit) for n in p] for p in value]
+        elif schema(o).get(key,(None,None))[1]=='number':result[key]=display_value(value,unit,field_kind(key))
     return result
 
 
@@ -64,7 +68,7 @@ def common(objects):
     return {key:spec for key,spec in result.items() if all(schema(o).get(key)==spec for o in objects[1:])}
 
 
-def apply_changes(original,changes):
+def apply_changes(original,changes,unit='in'):
     """Blank/untouched fields leave every object's individual value intact."""
     o=copy.deepcopy(original); specs=schema(o)
     for key,text in changes.items():
@@ -77,13 +81,16 @@ def apply_changes(original,changes):
             if text not in ('False','True'): raise ValueError('Choose True or False.')
             o[key]=text=='True'
         elif specs[key][1]=='number':
-            value=float(text)
+            value=parse_number(text,unit,field_kind(key))
             if not math.isfinite(value): raise ValueError('Enter finite numeric values.')
             if key in ('ax','ay','bx','by'): o[key[0]][0 if key[1]=='x' else 1]=value
             elif key in ('cx','cy'): o['center'][0 if key=='cx' else 1]=value
             elif key=='diameter': o['radius']=value/2
             elif key in ('angle','start','sweep'): o[key]=math.radians(value)
             else: o[key]=value
-        elif key=='points': o['points']=[[float(n.strip()) for n in p.split(',')] for p in text.split(';')]
+        elif key=='points':
+            points=[[parse_number(n.strip(),unit) for n in p.split(',')] for p in text.split(';')]
+            if any(len(p)!=2 for p in points):raise ValueError('Enter X/Y pairs separated by semicolons.')
+            o['points']=points
         else: o[key]=text
     return o
