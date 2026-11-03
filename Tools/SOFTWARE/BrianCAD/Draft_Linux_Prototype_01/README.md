@@ -335,3 +335,11 @@ Parsing uses a bounded arithmetic grammar, without executing Python or accepting
 Drawing tools remember their last successfully used numeric settings while BrianCAD remains open: circle diameter, Chamfer/fillet radius, polygon side count, offsets, line length/direction and Modify distances/angles/scale factors. Switching tools, New/Open and Undo do not clear this memory; restarting the application restores the built-in defaults. Invalid input, failed operations and values merely typed then cancelled do not replace successful defaults.
 
 Settings are kept per construction method, with circle diameter shared from the last constructed circle and regular-polygon side count shared between inscribed/circumscribed methods. Dimensions are retained in physical units and displayed in the drawing's current units. Absolute starting positions retain their normal defaults; line endpoints are rebuilt from the remembered relative displacement so the displayed length/direction and geometry remain consistent. These defaults are not stored in drawing files or preferences.
+
+### Duplicating and mirroring
+
+In **Layers**, highlight a layer and click **Duplicate Layer**. Its objects are copied to a visible, active layer named with `_copy` (or `_copy2`, etc. when needed). The original layer stays intact.
+
+**Edit → Flip Horizontal** reverses left/right and **Flip Vertical** reverses top/bottom about the selection's bounding-box center. For an arbitrary axis, choose **Modify → Mirror** and click two distinct points. The existing copy option also works with Mirror.
+
+**Edit → Polar Duplicate…** accepts a typed or mouse-picked center and a total count including the original. The copies are rotated at equal intervals through 360°, preserving layer and styling. Each operation can be undone in one step.

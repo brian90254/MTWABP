@@ -283,6 +283,38 @@ class Document:
             for i,o in zip(ids,pending): self.objects[i]=o
             self.selected=set(ids)
 
+    def polar_duplicate(self,center,total):
+        from cad_divide import segment_count
+        total=segment_count(total)
+        ids=self.editable_selection()
+        if not ids:raise ValueError('Select at least one visible, unlocked object.')
+        if len(self.objects)+len(ids)*(total-1)>100000:raise ValueError('Polar Duplicate would exceed 100000 drawing objects.')
+        pending=[]
+        for step in range(1,total):
+            copies=[self.prepare(transform(self.objects[i],'Rotate',pivot=center,angle=360*step/total)) for i in ids]
+            pending.extend(cad_groups.remap(copies))
+        self.checkpoint();start=len(self.objects);self.objects.extend(pending)
+        self.selected=set(ids)|set(range(start,len(self.objects)));self.point_selection={}
+
+    def duplicate_layer(self,name):
+        source=next((l for l in self.layers if l['name']==name),None)
+        if source is None:raise ValueError('Unknown layer.')
+        if len(self.layers)>=1000:raise ValueError('Duplicate Layer would exceed 1000 layers.')
+        names={l['name'].casefold() for l in self.layers}
+        number=1
+        while True:
+            suffix='_copy' if number==1 else f'_copy{number}'
+            target=name[:255-len(suffix)]+suffix
+            if target.casefold() not in names:break
+            number+=1
+        originals=[o for o in self.objects if o['layer']==name]
+        if len(self.objects)+len(originals)>100000:raise ValueError('Duplicate Layer would exceed 100000 drawing objects.')
+        copies=cad_groups.remap(originals)
+        for obj in copies:obj['layer']=target
+        layer=dict(copy.deepcopy(source),name=target,visible=True)
+        self.checkpoint();self.layers.append(layer);self.objects.extend(copies);self.active=target
+        return target
+
     def add_layer(self,name):
         name=name.strip()
         if not name or len(name)>255 or name in [l['name'] for l in self.layers]:
