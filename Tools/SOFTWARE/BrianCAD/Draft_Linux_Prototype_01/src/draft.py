@@ -128,6 +128,9 @@ class Draft:
         edit.add_command(label='Paste',accelerator=prefix+'+V',command=self.paste_objects)
         edit.add_separator()
         edit.add_command(label='Edit Objects...',command=self.edit_dialog)
+        edit.add_command(label='Flip Horizontal',command=lambda:self.flip_selection(True))
+        edit.add_command(label='Flip Vertical',command=lambda:self.flip_selection(False))
+        edit.add_command(label='Polar Duplicate...',command=self.polar_dialog)
         edit.add_command(label='Units...',command=self.units_dialog)
         objects=self.menus['Objects']
         objects.add_command(label='Group',accelerator=prefix+'+G',command=self.group_selected)
@@ -222,10 +225,12 @@ class Draft:
         fn(); return 'break'
 
     def escape(self,event=None):
+        if getattr(self,'polar_window',None):return self.close_polar()
         if getattr(self,'_zoom_window',False):self.cancel_window_zoom();return 'break'
         return self.return_to_select() if self.family.get()=='Trim' else self.cancel()
 
     def right_click(self,event=None):
+        if getattr(self,'polar_window',None):return self.close_polar()
         if getattr(self,'_zoom_window',False):self.cancel_window_zoom();return 'break'
         if getattr(self,'_paste',None):self.cancel();return 'break'
         if self.family.get()=='Splines' and self.points:
@@ -510,6 +515,10 @@ class Draft:
     def click(self,e):
         self.cancel_snap_hover()
         self.canvas.focus_set(); raw=self.world(e.x,e.y)
+        if getattr(self,'polar_window',None):
+            point,_=self.snap_point(raw)
+            for var,value in zip(self.polar_fields,point):var.set(format_value(value,self.polar_unit))
+            return
         if getattr(self,'_zoom_window',False):
             self._view_box_start=raw;self._view_box_end=raw;self.draw();return
         if getattr(self,'_paste',None):
@@ -689,6 +698,7 @@ class Draft:
         self.box_start=None; self.box_end=None; self.draw()
 
     def double_click(self,e):
+        if getattr(self,'polar_window',None):return
         if getattr(self,'_zoom_window',False) or getattr(self,'_paste',None):return
         if self.family.get()=='Select':
             self.cancel(); self.edit_dialog()
@@ -802,6 +812,7 @@ class Draft:
         elif self.tool.get()=='Connected points': self.cancel()
 
     def cancel(self):
+        self.close_polar()
         self._paste=None
         if hasattr(self,'canvas'):self.canvas.delete('paste-preview')
         self.cancel_window_zoom(draw=False)
@@ -1057,6 +1068,51 @@ class Draft:
                 for weight in session['weights']:c.itemconfigure('paste-stroke:'+str(weight),width=max(1,min(5,weight*self.scale)))
         session['view']=view;session['last_point']=list(point);c.tag_raise('paste-preview')
 
+    def flip_selection(self,horizontal):
+        try:
+            ids=self.doc.editable_selection()
+            if not ids:raise ValueError('Select at least one visible, unlocked object.')
+            boxes=[self.object_bounds(self.objects[i]) for i in ids]
+            pivot=[(min(b[k] for b in boxes)+max(b[k+2] for b in boxes))/2 for k in (0,1)]
+            self.doc.transform_selected('Mirror',pivot=pivot,angle=90 if horizontal else 0)
+            self.cancel()
+        except ValueError as ex:self.error(str(ex))
+
+    def close_polar(self,event=None):
+        dlg=getattr(self,'polar_window',None)
+        self.polar_window=None
+        if dlg is not None and dlg.winfo_exists():dlg.destroy()
+        return 'break'
+
+    def polar_dialog(self):
+        existing=getattr(self,'polar_window',None)
+        if existing is not None and existing.winfo_exists():existing.lift();return
+        ids=self.doc.editable_selection()
+        if not ids:self.error('Select at least one visible, unlocked object.');return
+        self.cancel()
+        document=self.doc;originals=[self.objects[i] for i in ids];unit=document.display_unit
+        dlg=tk.Toplevel(self.root);self.polar_window=dlg;dlg.title('Polar Duplicate');dlg.transient(self.root);dlg.resizable(False,False)
+        frame=ttk.Frame(dlg,padding=14);frame.pack()
+        self.polar_fields=[tk.StringVar(value=v) for v in ('0','0','4')]
+        self.polar_unit=unit
+        for row,(label,var) in enumerate(zip((f'Center X ({unit})',f'Center Y ({unit})','Total (including original)'),self.polar_fields)):
+            ttk.Label(frame,text=label).grid(row=row,column=0,sticky='w',padx=(0,8),pady=3)
+            ttk.Entry(frame,textvariable=var,width=14).grid(row=row,column=1)
+        ttk.Label(frame,text='Click the drawing to pick the center. Copies are spaced over 360°.',wraplength=300).grid(row=3,columnspan=2,pady=8)
+        def apply(event=None):
+            try:
+                if self.doc is not document or self.doc.editable_selection()!=ids or any(self.objects[i] is not o for i,o in zip(ids,originals)):
+                    raise ValueError('The source selection changed. Reopen Polar Duplicate.')
+                center=[parse_number(v.get(),unit) for v in self.polar_fields[:2]]
+                self.doc.polar_duplicate(center,self.polar_fields[2].get())
+            except ValueError as ex:
+                messagebox.showerror('Polar Duplicate',str(ex),parent=dlg);return 'break'
+            self.cancel();return 'break'
+        ttk.Button(frame,text='Cancel',command=self.close_polar).grid(row=4,column=0)
+        ttk.Button(frame,text='Apply',command=apply).grid(row=4,column=1)
+        dlg.protocol('WM_DELETE_WINDOW',self.close_polar)
+        dlg.bind('<Escape>',self.close_polar);dlg.bind('<Return>',apply)
+
     def divide_dialog(self):
         existing=getattr(self,'divide_window',None)
         if existing is not None and existing.winfo_exists():existing.lift();return
@@ -1249,10 +1305,10 @@ class Draft:
         for col,title,width in [('active','Active',55),('name','Layer',210)]:
             tree.heading(col,text=title); tree.column(col,width=width,anchor='w')
         self.layer_tree=tree
-        tree.grid(row=0,column=0,rowspan=5,sticky='nsew')
+        tree.grid(row=0,column=0,rowspan=6,sticky='nsew')
         f.columnconfigure(0,weight=1); f.rowconfigure(0,weight=1)
-        rename=tk.StringVar(); ttk.Label(f,text='Layer name').grid(row=5,column=0,sticky='w',pady=(8,0))
-        ttk.Entry(f,textvariable=rename).grid(row=6,column=0,sticky='ew')
+        rename=tk.StringVar(); ttk.Label(f,text='Layer name').grid(row=6,column=0,sticky='w',pady=(8,0))
+        ttk.Entry(f,textvariable=rename).grid(row=7,column=0,sticky='ew')
         def selected_name():
             items=tree.selection()
             if not items: raise ValueError('Highlight a layer first.')
@@ -1272,6 +1328,10 @@ class Draft:
             try:
                 name=selected_name() if kind!='new' else None
                 if kind=='new': self.doc.add_layer(rename.get())
+                elif kind=='duplicate':
+                    target=self.doc.duplicate_layer(name);refresh()
+                    row=str(next(i for i,l in enumerate(self.doc.layers) if l['name']==target))
+                    tree.selection_set(row);tree.see(row);self.cancel();return
                 elif kind=='rename': self.doc.rename_layer(name,rename.get())
                 elif kind=='set': self.doc.set_layer(name)
                 elif kind=='hide': self.doc.toggle_layer(name)
@@ -1282,7 +1342,7 @@ class Draft:
                     self.doc.delete_layer(name)
                 refresh(); self.cancel()
             except ValueError as ex: messagebox.showerror('Layers',str(ex),parent=dlg)
-        for i,(label,kind) in enumerate([('New','new'),('Delete','delete'),('Show / Hide','hide'),('Set Layer','set'),('Rename','rename')]):
+        for i,(label,kind) in enumerate([('New','new'),('Delete','delete'),('Show / Hide','hide'),('Set Layer','set'),('Rename','rename'),('Duplicate Layer','duplicate')]):
             ttk.Button(f,text=label,command=lambda k=kind:action(k)).grid(row=i,column=1,padx=(10,0),pady=4,sticky='ew')
         def highlight(e):
             if tree.selection(): rename.set(selected_name())
@@ -1302,7 +1362,7 @@ class Draft:
                 tree.selection_set(row); action('hide' if tree.identify_column(e.x)=='#0' else 'set')
             return 'break'
         tree.bind('<<TreeviewSelect>>',highlight); tree.bind('<Double-1>',double)
-        ttk.Label(f,text='Double-click row name: active; row eye: show/hide.\nDouble-click Layer header: sort/reverse; Eye header: isolate active/show all.').grid(row=7,column=0,columnspan=2,pady=8)
+        ttk.Label(f,text='Double-click row name: active; row eye: show/hide.\nDouble-click Layer header: sort/reverse; Eye header: isolate active/show all.').grid(row=8,column=0,columnspan=2,pady=8)
         refresh()
 
     def edit_dialog(self):
