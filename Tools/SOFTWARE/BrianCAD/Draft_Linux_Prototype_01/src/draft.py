@@ -12,6 +12,8 @@ from tkinter import ttk, filedialog, messagebox, simpledialog, font as tkfont
 import cad_geometry as geo
 import cad_selection as selection
 import cad_trim
+import cad_guides
+from curve_trim import crossings
 import cad_chamfer
 import cad_groups
 import cad_offset
@@ -394,6 +396,30 @@ class Draft:
             hit_distance(p,o)<1e-8 or any(distance(p,q)<1e-8 for q,_ in anchors(o))
             for o in objects)]
 
+    def line_guide_start(self):
+        drag=getattr(self,'drag',None)
+        if drag and drag['active']:
+            points=self.doc.editable_point_selection()
+            i=drag['owner'];keys=points.get(i,set())
+            if len(drag['ids'])==1 and len(keys)==1 and self.objects[i]['type']=='line':
+                return self.objects[i]['b' if 'a' in keys else 'a'], self.objects[i]
+        if self.family.get()=='Lines' and self.tool.get() in ('Two points','Connected points') and self.points:
+            try:return self.field_point(0),None
+            except (ValueError,KeyError,AttributeError):pass
+        return None,None
+
+    def intersection_points(self,a,b):
+        cache=getattr(self,'_intersection_cache',None)
+        if cache is None:cache=self._intersection_cache=OrderedDict()
+        key=(id(a),id(b))
+        record=cache.get(key)
+        if record is None or record[:2]!=(a,b):
+            record=(copy.deepcopy(a),copy.deepcopy(b),[p for _,_,p in crossings(a,b)])
+            cache[key]=record
+        cache.move_to_end(key)
+        if len(cache)>2048:cache.popitem(last=False)
+        return record[2]
+
     def snap_point(self,p,exclude=None):
         tolerance=9/self.scale
         def nearest(candidates):
@@ -402,23 +428,36 @@ class Draft:
         excluded=set(exclude or [])
         if self.family.get()=='Modify': excluded.update(self.selected)
         ids=[i for i in self.visible_ids() if i not in excluded]
+        self._line_guides=(None,[])
+        guide_projections=[]
         if self.snap.get():
-            if self.family.get()=='Lines' and self.tool.get() in ('Two points','Connected points') and self.points:
-                try:
-                    start=self.field_point(0)
-                except (ValueError,KeyError,AttributeError):
-                    start=None
-                if start is not None:
-                    contacts=[candidate for i in ids
-                              if selection.box_distance(p,self.object_bounds(self.objects[i]))<=tolerance
-                              for candidate in self.line_constraint_candidates(start,self.objects[i])]
-                    best=nearest(contacts)
-                    if best: return best
+            nearby=[self.objects[i] for i in ids if selection.box_distance(p,self.object_bounds(self.objects[i]))<=tolerance]
+            start,original=self.line_guide_start()
+            if start is not None:
+                lines=[self.objects[i] for i in ids if self.objects[i]['type']=='line']
+                if original is not None:lines.append(original)
+                guides=cad_guides.directions(start,lines)
+                self._line_guides=(start,guides)
+                step=self.grid_spacing/self.grid_subdivisions if self.grid_snap.get() else None
+                history=getattr(self,'snap_history',None)
+                axes=history.guides(p,self.scale,self.tracking_exclusions(excluded)) if history else []
+                guide_hits,guide_projections=cad_guides.targets(start,guides,p,tolerance,nearby,step,axes)
+                best=nearest(guide_hits)
+                if best:return best
+                best=nearest(candidate for obj in nearby for candidate in self.line_constraint_candidates(start,obj))
+                if best:return best
+            best=nearest((q,'intersection') for i,a in enumerate(nearby) for b in nearby[i+1:]
+                         for q in self.intersection_points(a,b))
+            if best:return best
             candidates=[]
             for i in ids: candidates.extend(self.object_anchors(self.objects[i]))
             candidates.append(([0,0],'origin'))
             best=nearest(candidates)
             if best: return best
+        if guide_projections and self.start is not None:
+            guide_projections.extend(alignment_candidates(p,self.start))
+        best=nearest(guide_projections)
+        if best:return best
         history=getattr(self,'snap_history',None)
         if self.snap.get() and history:
             ignored=self.tracking_exclusions(excluded)
@@ -812,6 +851,7 @@ class Draft:
         elif self.tool.get()=='Connected points': self.cancel()
 
     def cancel(self):
+        self._line_guides=(None,[])
         self.close_polar()
         self._paste=None
         if hasattr(self,'canvas'):self.canvas.delete('paste-preview')
@@ -993,6 +1033,13 @@ class Draft:
             if self.marker in ['45°','135°']:
                 slope=-1 if self.marker=='45°' else 1
                 c.create_line(0,b-slope*a,w,b+slope*(w-a),fill='#9dbcd5',dash=(3,5))
+        guide_start,guide_vectors=getattr(self,'_line_guides',(None,[]))
+        if guide_start is not None and self.snap.get() and self.line_guide_start()[0] is not None:
+            extent=max(distance(guide_start,self.world(x,y)) for x,y in ((0,0),(w,0),(0,h),(w,h)))
+            for vector,label in guide_vectors:
+                delta=geo.mul(vector,extent)
+                c.create_line(*self.screen(geo.sub(guide_start,delta)),*self.screen(geo.add(guide_start,delta)),
+                              fill='#7693a7' if label=='extension guide' else '#a38bb1',dash=(2,5),tags=('line-guide',))
         history=getattr(self,'snap_history',None)
         excluded=set(self.selected) if self.family.get()=='Modify' else set()
         if getattr(self,'drag',None): excluded.update(self.drag['ids'])
