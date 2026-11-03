@@ -267,7 +267,7 @@ class Draft:
 
     def configure_parameters(self):
         for child in self.parameter_frame.winfo_children(): child.destroy()
-        self.params={}; self.last_parameter=None;self._parameter_unit=self.doc.display_unit
+        self.params={}; self.parameter_entries={}; self.last_parameter=None;self._parameter_unit=self.doc.display_unit
         fields=fields_for(self.family.get(),self.tool.get())
         for i,key in enumerate(fields):
             row,col=divmod(i,4)
@@ -285,8 +285,9 @@ class Draft:
             var=tk.StringVar(value=format_value(getattr(self,'_tool_defaults',{}).get((self.family.get(),self.tool.get(),key),DEFAULTS.get(key,0)),self.doc.display_unit,field_kind(key))); self.params[key]=var
             ent=ttk.Entry(cell,textvariable=var,width=10); ent.pack(side='left')
             ent.bind('<KeyRelease>',lambda e,k=key:self.parameter_changed(k))
-            ent.bind('<FocusOut>',lambda e,k=key:self.normalize_parameter(k))
-            ent.bind('<Return>',lambda e:self.apply_parameters())
+            self.parameter_entries[key]=ent
+            ent.bind('<FocusOut>',lambda e,k=key:self.commit_parameter_field(k))
+            ent.bind('<Return>',lambda e,k=key:self.parameter_return(k))
         saved=getattr(self,'_tool_defaults',{})
         family,method=self.family.get(),self.tool.get()
         if family=='Lines' and method in ('Two points','Connected points') and (family,method,'dx') in saved:
@@ -309,6 +310,49 @@ class Draft:
             hint='Select cutting boundaries before choosing Trim; click a section to remove. Right-click exits.' if self.family.get()=='Trim' else 'Select objects, then double-click to edit or choose a Modify method.'
             ttk.Label(self.parameter_frame,text=hint).grid(row=0,column=0,sticky='w')
         self.draw()
+
+    def focus_parameter(self,key):
+        entry=getattr(self,'parameter_entries',{}).get(key)
+        if entry is not None:
+            entry.focus_set()
+            entry.selection_range(0,'end')
+
+    def commit_parameter_field(self,key):
+        self.normalize_parameter(key)
+        if key in ('x','y') and self.points and self.family.get()=='Lines' and self.tool.get() in ('Two points','Connected points'):
+            try:
+                value=parse_number(self.params[key].get(),self.doc.display_unit)
+            except ValueError:return
+            self.points[0]=list(self.points[0])
+            self.points[0][key=='y']=value
+            self.start=self.points[0]
+            self._line_guides=(None,[])
+            self.draw()
+
+    def parameter_return(self,key):
+        recent=getattr(self,'_recent_mouse_line',None)
+        if key=='length' and recent is not None:
+            index,original=recent
+            if index>=len(self.objects) or self.objects[index] is not original or not self.doc.visible(index) or original.get('locked',False):
+                self._recent_mouse_line=None
+                self.error('The line is no longer available to resize.')
+                return 'break'
+            try:
+                length=parse_number(self.params['length'].get(),self.doc.display_unit)
+                if length<=0:raise ValueError('Length must be positive.')
+                end=geo.add(original['a'],geo.mul(geo.unit(geo.sub(original['b'],original['a'])),length))
+                self.doc.commit_updates({index:dict(original,b=end)})
+            except ValueError as ex:
+                self.error(str(ex));return 'break'
+            self._recent_mouse_line=(index,self.objects[index])
+            if self.tool.get()=='Connected points':
+                self.points=[end];self.start=end;self.set_point_fields(0,end)
+            else:self.set_point_fields(0,original['a'])
+            self.set_point_fields(1,end);self.update_line_fields(original['a'],end)
+            self.remember_parameters(self.values())
+            self.focus_parameter('length');self.draw()
+        else:self.apply_parameters()
+        return 'break'
 
     def parameter_changed(self,key):
         self.last_parameter=key
@@ -552,6 +596,7 @@ class Draft:
         self.track_snap_hover(e);self.draw()
 
     def click(self,e):
+        self._recent_mouse_line=None
         self.cancel_snap_hover()
         self.canvas.focus_set(); raw=self.world(e.x,e.y)
         if getattr(self,'polar_window',None):
@@ -599,7 +644,16 @@ class Draft:
         self.snap_history.remember(p,label)
         self.tracking_cursor=list(p)
         before=(copy.deepcopy(self.points),copy.deepcopy(self.refs),self.start)
-        try: self.pick(p,raw)
+        count=len(self.objects)
+        try:
+            self.pick(p,raw)
+            if self.family.get()=='Lines' and self.tool.get() in ('Two points','Connected points'):
+                if len(self.objects)>count:
+                    self._recent_mouse_line=(len(self.objects)-1,self.objects[-1])
+                    self.focus_parameter('length')
+                elif len(self.points)==1:self.focus_parameter('x')
+            elif self.tool.get()=='Center + diameter' and len(self.points)==1:
+                self.focus_parameter('diameter')
         except (ValueError,KeyError) as ex:
             self.points,self.refs,self.start=before
             self.error(str(ex))
@@ -804,6 +858,7 @@ class Draft:
             self.error(str(ex))
 
     def create_object(self,points):
+        self._recent_mouse_line=None
         self.cancel_snap_hover()
         values=self.values();obj=construct(self.tool.get(),points,values,self.refs,self.clockwise.get())
         obj['color']=self.color.get(); self.doc.add([obj])
@@ -851,6 +906,7 @@ class Draft:
         elif self.tool.get()=='Connected points': self.cancel()
 
     def cancel(self):
+        self._recent_mouse_line=None
         self._line_guides=(None,[])
         self.close_polar()
         self._paste=None
