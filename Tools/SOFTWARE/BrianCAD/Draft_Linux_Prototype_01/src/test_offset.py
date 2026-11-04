@@ -41,13 +41,17 @@ class OffsetTests(unittest.TestCase):
         # BrianCAD Béziers render their control endpoints even with the closed flag.
         o=dict(type='spline',method='bezier',points=[[0,0],[1,2],[3,0]],closed=True)
         points=sample(o);self.assertEqual(points[0],[0,0]);self.assertLess(g.dist(points[-1],[3,0]),1e-10)
-    def test_document_atomic_undo_redo_and_source_style(self):
+    def test_document_atomic_undo_redo_and_active_layer_style(self):
         d=Document();d.add([dict(type='circle',center=[0,0],radius=1,color='#123456',weight=.03)])
+        d.add_layer('Offsets');d.set_layer('Offsets');d.set_layer_color('#abcdef')
+        d.set_layer('Layer1');d.set_layer_color('#987654');d.set_layer('Offsets')
         before=d.state();history=len(d.history)
         with self.assertRaises(ValueError):d.offset_objects([0],2,[0,0])
         self.assertEqual(d.state(),before);self.assertEqual(len(d.history),history)
         self.assertFalse(d.offset_objects([0],.2,[2,0]));self.assertEqual(len(d.history),history+1)
-        self.assertEqual(d.objects[1]['color'],'#123456');self.assertEqual(d.selected,{1})
+        self.assertEqual(d.objects[1]['layer'],'Offsets')
+        self.assertEqual(d.objects[1]['color'],'#abcdef');self.assertEqual(d.objects[1]['weight'],.03)
+        self.assertEqual(d.objects[0]['color'],'#123456');self.assertEqual(d.selected,{1})
         d.undo();self.assertEqual(d.state(),before);d.redo();self.assertEqual(len(d.objects),2)
 
 @unittest.skipUnless(shapely,'Optional Shapely is required')

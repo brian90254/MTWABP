@@ -34,7 +34,8 @@ class OffsetUITests(unittest.TestCase):
                 if result is not None:return result
         return find(self.a.parameter_frame)
     def test_active_x_or_y_field_click_sets_both_then_apply_undo(self):
-        a=self.a;self.activate();before=a.doc.state();n=len(a.doc.history)
+        a=self.a;a.doc.set_layer('Construction');a.doc.set_layer_color('#654321')
+        self.activate();before=a.doc.state();n=len(a.doc.history)
         self.assertEqual(len(a.offset_sources),1);self.assertEqual(set(a.params),{'offset','x','y'})
         a.params['offset'].set('.5')
         for key,p in [('x',[1,1]),('y',[2,-1])]:
@@ -42,7 +43,8 @@ class OffsetUITests(unittest.TestCase):
             self.assertAlmostEqual(float(a.params['x'].get()),p[0]);self.assertAlmostEqual(float(a.params['y'].get()),p[1])
             self.assertTrue(a.offset_preview);self.assertEqual(a.doc.state(),before)
         a.apply_parameters();self.assertEqual(len(a.objects),2);self.assertEqual(a.objects[1]['a'],[0,-.5])
-        self.assertEqual(a.objects[1]['color'],'#123456');self.assertEqual(len(a.doc.history),n+1)
+        self.assertEqual(a.objects[1]['layer'],'Construction');self.assertEqual(a.objects[1]['color'],'#654321')
+        self.assertEqual(len(a.doc.history),n+1)
         self.assertEqual(a.objects[0],before['objects'][0]);a.undo();self.assertEqual(a.doc.state(),before)
     def test_no_selection_choose_source_then_manual_point_and_cancel(self):
         a=self.a;a.doc.clear_selection();self.activate();self.click([1,0]);self.assertEqual(len(a.offset_sources),1)

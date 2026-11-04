@@ -216,10 +216,9 @@ class Document:
         if any(not 0<=i<len(self.objects) or not self.visible(i) or self.objects[i].get('locked',False) for i in indices):
             raise ValueError('Choose visible, unlocked offset sources.')
         objects,approximate=offset([self.objects[i] for i in indices],distance,reference)
-        pending=[self.prepare(o) for o in objects]
-        if len(self.objects)+len(pending)>100000: raise ValueError('Offset would exceed 100000 drawing objects.')
-        self.checkpoint();start=len(self.objects);self.objects.extend(pending)
-        self.selected=set(range(start,len(self.objects)));self.point_selection={}
+        if len(self.objects)+len(objects)>100000: raise ValueError('Offset would exceed 100000 drawing objects.')
+        color=self.layer_color()
+        self.add([dict(o,layer=self.active,color=color) for o in objects])
         return approximate
 
     def chamfer_objects(self,first,second,click_first,click_second,radius):
@@ -333,6 +332,16 @@ class Document:
             if o['layer']==old: o['layer']=new
         if self.active==old: self.active=new
 
+    def layer_color(self):
+        layer=next(l for l in self.layers if l['name']==self.active)
+        return layer.get('drawing_color',COLORS['Black'])
+
+    def set_layer_color(self,color):
+        color=rgb_color(color)
+        if color==self.layer_color():return
+        self.checkpoint()
+        next(l for l in self.layers if l['name']==self.active)['drawing_color']=color
+
     def set_layer(self,name):
         if name not in [l['name'] for l in self.layers]: raise ValueError('Unknown layer.')
         self.checkpoint(); self.active=name
@@ -385,6 +394,8 @@ class Document:
             names.append(l['name'])
         d.layers=copy.deepcopy(layers); d.active=data.get('active_layer','Layer1' if 'Layer1' in names else names[0])
         if d.active not in names: raise ValueError('Active layer does not exist.')
+        for layer in d.layers:
+            if 'drawing_color' in layer:layer['drawing_color']=rgb_color(layer['drawing_color'])
         objs=data.get('objects')
         if not isinstance(objs,list) or len(objs)>100000: raise ValueError('Invalid object list.')
         if any(not isinstance(o,dict) for o in objs): raise ValueError('Invalid object.')

@@ -63,6 +63,8 @@ Collinear or coincident points and ambiguous tangent cases show an error instead
 
 ## Layers
 
+Each layer remembers the last drawing pen selected for it. Activating a layer restores its pen, and native drawings save these settings. Layers without a remembered pen start with Black.
+
 **Layers...** opens a floating list with eye icons, an active marker, and layer names.
 
 - Single-click highlights a row without changing the active layer.
@@ -235,7 +237,7 @@ Select any objects, open **Edit objects...**, and set **Line width** (in the cur
 
 Select a curve or an endpoint-connected chain, then choose **Offset**. Partial handle selections use the entire owning curve. Enter **Distance**, **Direction X**, and **Direction Y** in the current drawing units. With either direction field active, left-click the workspace to fill both coordinates and preview the side to offset toward. The direction point chooses a side, not the offset magnitude. You can also type the coordinates and click **Preview offset**; **Apply offset** creates the result in one undoable step. Enter in a parameter field applies the offset. Right-click returns to Select, and Esc cancels the preview. Originals remain unchanged.
 
-If nothing was preselected, click a curve first; Shift-click can add more source curves to the chain. Subsequent clicks choose direction points. Sources remain the same until cancelled or the tool is changed, allowing multiple offsets from the original chain. Only visible, unlocked sources are accepted. New geometry uses the first source object's layer, RGB color, pattern and line width; output objects can be edited normally afterward.
+If nothing was preselected, click a curve first; Shift-click can add more source curves to the chain. Subsequent clicks choose direction points. Sources remain the same until cancelled or the tool is changed, allowing multiple offsets from the original chain. Only visible, unlocked sources are accepted. New geometry uses the active drawing layer and its remembered pen color, and keeps the first source object's pattern and line width. Output objects can be edited normally afterward.
 
 Single lines, circles and circular arcs are offset analytically and retain their original types (including signed arc sweeps). Other curves and joined chains use the optional Shapely geometry engine:
 

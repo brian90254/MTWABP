@@ -3,7 +3,8 @@ import os
 import sys
 import tkinter as tk
 import unittest
-from cad_document import Document,layer_sort_key
+from tkinter import ttk
+from cad_document import COLORS,Document,layer_sort_key
 from draft import Draft
 
 class LayerHeaderTests(unittest.TestCase):
@@ -60,3 +61,24 @@ class LayerHeaderUITests(unittest.TestCase):
         self.header('#0');self.assertEqual([l['name'] for l in a.doc.layers if l['visible']],['Beta'])
         x,y,w,h=self.tree.bbox(row,'#0');self.double(x+w//2,y+h//2);self.assertFalse(next(l for l in a.doc.layers if l['name']=='Beta')['visible'])
         self.header('#0');self.assertTrue(all(l['visible'] for l in a.doc.layers))
+
+    def test_active_layer_restores_pen_and_native_save_preserves_it(self):
+        a=self.a
+        def activate(name):
+            row=next(row for row in self.tree.get_children() if self.tree.item(row,'values')[-1]==name)
+            self.tree.see(row);self.root.update()
+            x,y,w,h=self.tree.bbox(row,'name');self.double(x+20,y+h//2)
+        def choose(parent,name):
+            for widget in parent.winfo_children():
+                if isinstance(widget,ttk.Radiobutton) and widget.cget('text')==name:
+                    widget.invoke();return True
+                if choose(widget,name):return True
+            return False
+        self.assertTrue(choose(self.root,'Blue'))
+        activate('Beta');self.assertEqual(a.color.get(),COLORS['Black'])
+        self.assertTrue(choose(self.root,'Red'))
+        activate('Layer1');self.assertEqual(a.color.get(),COLORS['Blue'])
+        a.family.set('Lines');a.family_changed();a.create_object([[0,0],[1,0]])
+        self.assertEqual(a.objects[-1]['color'],COLORS['Blue'])
+        loaded=Document.from_payload(a.doc.payload())
+        loaded.set_layer('Beta');self.assertEqual(loaded.layer_color(),COLORS['Red'])
