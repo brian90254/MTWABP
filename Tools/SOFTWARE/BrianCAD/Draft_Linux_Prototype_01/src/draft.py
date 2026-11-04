@@ -188,7 +188,7 @@ class Draft:
         ttk.Separator(side).pack(fill='x',pady=12)
         pens=ttk.Frame(side); pens.pack(fill='x')
         for i,(name,color) in enumerate(COLORS.items()):
-            ttk.Radiobutton(pens,text=name,variable=self.color,value=color).grid(row=i//2,column=i%2,sticky='w',padx=(0,14))
+            ttk.Radiobutton(pens,text=name,variable=self.color,value=color,command=self.choose_pen_color).grid(row=i//2,column=i%2,sticky='w',padx=(0,14))
         ttk.Separator(side).pack(fill='x',pady=10)
         ttk.Checkbutton(side,text='Object snaps / alignment',variable=self.snap).pack(anchor='w')
         ttk.Checkbutton(side,text='Show grid',variable=self.grid,command=self.draw).pack(anchor='w',pady=3)
@@ -857,11 +857,15 @@ class Draft:
             self.points,self.refs,self.start=before
             self.error(str(ex))
 
+    def choose_pen_color(self):
+        self.doc.set_layer_color(self.color.get())
+        self.draw()
+
     def create_object(self,points):
         self._recent_mouse_line=None
         self.cancel_snap_hover()
         values=self.values();obj=construct(self.tool.get(),points,values,self.refs,self.clockwise.get())
-        obj['color']=self.color.get(); self.doc.add([obj])
+        obj['color']=self.doc.layer_color(); self.doc.add([obj])
         self.remember_parameters(values,obj)
         end=list(points[-1]); connected=self.tool.get()=='Connected points'
         self.points=[end] if connected else []; self.refs=[None] if connected else []
@@ -1035,6 +1039,9 @@ class Draft:
     def draw(self):
         if not hasattr(self,'canvas'): return
         self.sync_units()
+        if hasattr(self,'color'):
+            color=self.doc.layer_color()
+            if self.color.get()!=color:self.color.set(color)
         w=self.canvas.winfo_width(); h=self.canvas.winfo_height()
         self.canvas.delete('overlay')
         grid_key=(w,h,tuple(self.origin),self.scale,self.grid.get(),self.grid_spacing,self.grid_subdivisions)
