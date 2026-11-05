@@ -187,6 +187,9 @@ def spline_point(o,t):
 
 def path(o,samples=128):
     kind=o['type']
+    if kind=='dimension':
+        from cad_dimensions import layout
+        return [p for path in layout(o) for p in path]
     if kind=='line': return [o['a'],o['b']]
     if kind=='polygon': return o['points']+([o['points'][0]] if o.get('closed',True) else [])
     if kind=='spline':
@@ -201,6 +204,7 @@ def path(o,samples=128):
 
 def anchors(o):
     kind=o['type']
+    if kind=='dimension':return [(o['a'],'endpoint'),(o['b'],'endpoint'),(o['label'],'control point')]
     if kind=='line':
         return [(o['a'],'endpoint'),(o['b'],'endpoint'),(mul(add(o['a'],o['b']),.5),'midpoint')]
     if kind=='circle':
@@ -227,6 +231,9 @@ def anchors(o):
 
 
 def hit_distance(p,o):
+    if o['type']=='dimension':
+        from cad_dimensions import nearest_point
+        return dist(p,nearest_point(p,o))
     if o['type']=='circle': return abs(dist(p,o['center'])-o['radius'])
     if o['type']=='arc':
         a=(angle(o['center'],p)-o['start'])%TAU
@@ -238,6 +245,7 @@ def hit_distance(p,o):
 
 
 def length(o):
+    if o['type']=='dimension':return 0.  # An annotation is not drawing geometry.
     if o['type']=='line': return dist(o['a'],o['b'])
     if o['type'] in ('circle','arc'): return o['radius']*abs(o.get('sweep',TAU))
     pts=path(o,1024)
@@ -257,11 +265,11 @@ def transform(o,mode,pivot=(0,0),dx=0,dy=0,angle=0,factor=1):
             x,y=x*math.cos(2*a)+y*math.sin(2*a),x*math.sin(2*a)-y*math.cos(2*a)
         return add(pivot,[x,y])
     n=copy.deepcopy(o)
-    for k in ('a','b','center'):
+    for k in ('a','b','center','label'):
         if k in o: n[k]=point(o[k])
     if 'points' in o: n['points']=[point(p) for p in o['points']]
     if mode=='Scale':
-        for k in ('radius','rx','ry'):
+        for k in ('radius','rx','ry','text_height'):
             if k in n: n[k]*=factor
     if o['type']=='circle':
         if mode=='Rotate': n['handle_angle']=o.get('handle_angle',0.)+a
@@ -285,7 +293,16 @@ def validate_geometry(o):
         if not isinstance(v,(list,tuple)) or len(v)!=2: raise ValueError('Expected an X/Y point.')
         for x in v: number(x)
     kind=o.get('type')
-    if kind=='line':
+    if kind=='dimension':
+        from cad_dimensions import METRICS
+        for key in ('a','b','label'):point(o.get(key))
+        if dist(o['a'],o['b'])<EPS:raise ValueError('Measurement points must be distinct.')
+        if o.get('metric') not in METRICS:raise ValueError('Unknown dimension measurement.')
+        number(o.get('text_height'))
+        if not EPS<=o['text_height']<=1e6:raise ValueError('Dimension text height must be positive.')
+        number(o.get('sweep'))
+        if not EPS<=abs(o['sweep'])<=TAU+EPS:raise ValueError('Dimension arc sweep must be nonzero and at most 360 degrees.')
+    elif kind=='line':
         point(o.get('a')); point(o.get('b'))
         if dist(o['a'],o['b'])<EPS: raise ValueError('Line endpoints must be distinct.')
     elif kind in ('circle','arc','ellipse'):

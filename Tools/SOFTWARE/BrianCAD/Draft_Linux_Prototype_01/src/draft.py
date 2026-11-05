@@ -14,6 +14,7 @@ import cad_selection as selection
 import cad_trim
 import cad_guides
 from curve_trim import crossings
+import cad_dimensions
 import cad_chamfer
 import cad_groups
 import cad_offset
@@ -307,7 +308,7 @@ class Draft:
         if self.family.get()=='Splines':
             ttk.Button(actions,text='Finish spline',command=self.finish).pack(side='left',padx=3)
         if not fields:
-            hint='Select cutting boundaries before choosing Trim; click a section to remove. Right-click exits.' if self.family.get()=='Trim' else 'Select objects, then double-click to edit or choose a Modify method.'
+            hint='Pick two snap points, or an on-line/on-curve snap to measure a whole object.' if self.family.get()=='Dimension' else 'Select cutting boundaries before choosing Trim; click a section to remove. Right-click exits.' if self.family.get()=='Trim' else 'Select objects, then double-click to edit or choose a Modify method.'
             ttk.Label(self.parameter_frame,text=hint).grid(row=0,column=0,sticky='w')
         self.draw()
 
@@ -407,16 +408,20 @@ class Draft:
         if not hasattr(self,'_bounds_cache'): self._bounds_cache={}
         if len(self._bounds_cache)>2*len(self.objects)+32: self._bounds_cache.clear()
         cached=self._bounds_cache.get(id(o))
-        if cached is None or cached[0]!=o:
-            cached=(copy.deepcopy(o),selection.bounds(o)); self._bounds_cache[id(o)]=cached
-        return cached[1]
+        unit=self.doc.display_unit if o['type']=='dimension' else None
+        if cached is None or cached[0]!=o or cached[1]!=unit:
+            cached=(copy.deepcopy(o),unit,selection.bounds(o,self.doc.display_unit)); self._bounds_cache[id(o)]=cached
+        return cached[2]
+
+    def nearest_point(self,p,o):
+        return selection.nearest_point(p,o,self.doc.display_unit)
 
     def on_object(self,p,ids):
         candidates=[]; tolerance=9/self.scale
         for i in ids:
             o=self.objects[i]
             if selection.box_distance(p,self.object_bounds(o))>tolerance: continue
-            q=selection.nearest_point(p,o)
+            q=self.nearest_point(p,o)
             if distance(p,q)<=tolerance:
                 candidates.append((q,'on line' if o['type']=='line' else 'on curve'))
         return min(candidates,key=lambda v:distance(p,v[0]),default=None)
@@ -541,7 +546,7 @@ class Draft:
             d=min((distance(p,q) for _,q in selection.controls(o)),default=float('inf'))
             if not lines_only: d=min(d,min(distance(p,q) for q,_ in anchors(o)))
             if selection.box_distance(p,self.object_bounds(o))<=tolerance:
-                d=min(d,distance(p,selection.nearest_point(p,o)))
+                d=min(d,distance(p,self.nearest_point(p,o)))
             hits.append((d,i))
         best=min(hits,default=(float('inf'),None))
         return best[1] if best[0]<=tolerance else None
@@ -561,7 +566,7 @@ class Draft:
             candidates=line_grid_candidates(p,self.objects[owner],self.grid_spacing/self.grid_subdivisions)
             best=min(candidates,key=lambda v:distance(p,v[0]),default=None)
             if best and distance(p,best[0])*self.scale<=9: return list(best[0]),best[1]
-        return (selection.nearest_point(p,self.objects[owner]),'on object') if self.snap.get() else (list(p),'')
+        return (self.nearest_point(p,self.objects[owner]),'on object') if self.snap.get() else (list(p),'')
 
     def cancel_snap_hover(self):
         job=getattr(self,'_snap_hover_job',None)
@@ -610,6 +615,8 @@ class Draft:
                 point,label=self.snap_point(raw);cad_clipboard.place(self.doc,self._paste['snapshot'],point)
             except (ValueError,TypeError,KeyError,OverflowError) as ex:self.error(str(ex));return
             self.snap_history.clear();self.cancel();self.refresh_layers();return
+        if self.family.get()=='Dimension':
+            self.dimension_click(raw);return
         if self.family.get()=='Offset':
             self.offset_click(raw,e.state); return
         if self.family.get()=='Chamfer':
@@ -659,6 +666,26 @@ class Draft:
             self.error(str(ex))
         self.draw()
 
+    def dimension_click(self,raw):
+        try:
+            p,label=self.snap_point(raw)
+            self.snap_history.remember(p,label)
+            height=12/self.scale;spacing=32/self.scale
+            if label in ('on line','on curve'):
+                candidates=[self.objects[i] for i in self.visible_ids()
+                            if self.objects[i]['type']!='dimension' and selection.box_distance(p,self.object_bounds(self.objects[i]))<=9/self.scale]
+                obj=min(candidates,key=lambda o:distance(p,self.nearest_point(p,o)),default=None)
+                if obj is None:raise ValueError('Pick a line, circle or arc.')
+                dimensions=cad_dimensions.on_object(obj,p,spacing,height)
+            else:
+                if not label:raise ValueError('Pick a control or snap point.')
+                if not self.points:
+                    self.points=[list(p)];self.start=list(p);self.draw();return
+                dimensions=cad_dimensions.between(self.points[0],p,spacing,height)
+            self.doc.add_dimensions(dimensions)
+            self.points=[];self.start=None;self.refresh_layers();self.draw()
+        except (ValueError,KeyError) as ex:self.error(str(ex))
+
     def offset_indices(self):
         sources=getattr(self,'offset_sources',[])
         ids=[];lookup={id(o):i for i,o in enumerate(self.objects)}
@@ -705,7 +732,7 @@ class Draft:
         try:
             radius=self.values()['radius']
             if not 1e-6<=radius<=1e7: raise ValueError('Enter a positive radius between 0.000001 and 10,000,000 inches.')
-            hits=[(distance(raw,selection.nearest_point(raw,o)),i)
+            hits=[(distance(raw,self.nearest_point(raw,o)),i)
                   for i,o in enumerate(self.objects) if self.doc.visible(i) and not o.get('locked',False)
                   and o['type'] in cad_chamfer.SUPPORTED
                   and selection.box_distance(raw,self.object_bounds(o))<=9/self.scale]
@@ -713,12 +740,12 @@ class Draft:
             if d>9/self.scale: return
             first=getattr(self,'chamfer_first',None)
             if first is None:
-                self.chamfer_first=(self.objects[index],selection.nearest_point(raw,self.objects[index]))
+                self.chamfer_first=(self.objects[index],self.nearest_point(raw,self.objects[index]))
                 self.selected={index}; self.doc.point_selection={}; self.draw(); return
             first_index=next((i for i,o in enumerate(self.objects) if o is first[0]),None)
             if first_index is None: self.chamfer_first=None; raise ValueError('The first segment changed. Choose it again.')
             if first_index==index: raise ValueError('Choose a different second segment.')
-            self.doc.chamfer_objects(first_index,index,first[1],selection.nearest_point(raw,self.objects[index]),radius)
+            self.doc.chamfer_objects(first_index,index,first[1],self.nearest_point(raw,self.objects[index]),radius)
             self.remember_parameters({'radius':radius})
             self.chamfer_first=None; self.mouse=None; self.marker=''; self.tracking_cursor=None
             self.refresh_layers(); self.draw()
@@ -729,14 +756,14 @@ class Draft:
              if any(o is boundary for boundary in getattr(self,'trim_cutters',[])) and self.doc.visible(i)}
         if not ids:
             self.error('Select cutting boundaries, then choose Trim.'); return
-        hits=[(distance(raw,selection.nearest_point(raw,o)),i)
+        hits=[(distance(raw,self.nearest_point(raw,o)),i)
               for i,o in enumerate(self.objects)
               if i not in ids and self.doc.visible(i) and not o.get('locked',False)
               and selection.box_distance(raw,self.object_bounds(o))<=9/self.scale]
         d,i=min(hits,default=(float('inf'),None))
         if d>9/self.scale: return
         try:
-            self.doc.trim_object(i,ids,selection.nearest_point(raw,self.objects[i]))
+            self.doc.trim_object(i,ids,self.nearest_point(raw,self.objects[i]))
             self.mouse=None; self.marker=''; self.refresh_layers(); self.draw()
         except ValueError as ex: self.error(str(ex))
 
@@ -930,6 +957,8 @@ class Draft:
         if getattr(self,'_zoom_window',False):return 'Zoom window: drag an area; Esc/right-click cancels'
         if getattr(self,'_paste',None):return 'Paste: anchor follows cursor | click to place | Esc/right-click cancels'
         method=self.tool.get(); n=len(self.points)
+        if self.family.get()=='Dimension':
+            return 'Pick second snap point' if self.points else 'Pick two snap points, or an on-line/on-curve snap for a whole-object measurement'
         if self.family.get()=='Offset':
             return f'{len(getattr(self,"offset_sources",[]))} source curves | Set distance and direction X/Y; click side point; Apply offset'
         if self.family.get()=='Chamfer':
@@ -956,6 +985,8 @@ class Draft:
         return 'Pick first point / center' if not n else 'Pick second point'
 
     def preview(self):
+        if self.family.get()=='Dimension':
+            return {'type':'line','a':self.points[0],'b':self.mouse} if self.points and self.mouse and distance(self.points[0],self.mouse)>geo.EPS else None
         if self.family.get()=='Offset': return None
         if self.mouse is None or not self.points or self.family.get() in ['Select','Modify']: return None
         try:
@@ -992,6 +1023,7 @@ class Draft:
         records=getattr(self,'_rendered_objects',{})
         view=(self.scale,tuple(self.origin));previous=getattr(self,'_geometry_view',None)
         moved=previous is not None and previous!=view
+        resized=previous is not None and previous[0]!=self.scale
         if moved and records:
             factor=self.scale/previous[0]
             c.scale('geometry',0,0,factor,factor)
@@ -1003,12 +1035,12 @@ class Draft:
         for i in visible:
             obj=getattr(self,'drag_preview',{}).get(i,self.objects[i])
             chosen=i in self.selected;partial=self.doc.point_selection.get(i,set())
-            state=(obj,chosen,partial);old=records.get(i)
-            if old is None or old[0]!=state:
+            state=(obj,chosen,partial,self.doc.display_unit if obj['type']=='dimension' else None);old=records.get(i)
+            if old is None or old[0]!=state or (resized and obj['type']=='dimension'):
                 if old is not None:c.delete(*old[1])
                 tag=f'entity:{i}';weight=float(obj.get('weight',.01));width_tag='stroke:'+str(weight)
                 item=self.draw_object(obj,color='#d08213' if chosen else None,tags=('geometry',tag,width_tag))
-                items=[item];handles=[]
+                items=item if isinstance(item,list) else [item];handles=[]
                 if chosen or partial or obj.get('controls'):
                     for key,p in selection.controls(obj):
                         x,y=self.screen(p);selected=chosen or key in partial
@@ -1029,6 +1061,20 @@ class Draft:
         self._rendered_objects=records;self._geometry_view=view
 
     def draw_object(self,o,color=None,dash=None,tags=('overlay',)):
+        if o['type']=='dimension':
+            stroke=color or o.get('color',COLORS['Blue'])
+            width=max(1,min(5,o.get('weight',.01)*self.scale))
+            pattern=dash or {'Dashed':(6,4),'Dotted':(1,3)}.get(o.get('pattern'))
+            items=[]
+            for path in cad_dimensions.layout(o,self.doc.display_unit):
+                opts=dict(fill=stroke,width=width,tags=tags)
+                if pattern:opts['dash']=pattern
+                items.append(self.canvas.create_line(*[v for p in path for v in self.screen(p)],**opts))
+            # Keep text off stroke-width tags; Canvas text's width means wrapping.
+            text_tags=tuple(t for t in tags if not t.startswith(('stroke:','paste-stroke:')))
+            items.append(self.canvas.create_text(*self.screen(o['label']),text=cad_dimensions.text(o,self.doc.display_unit),
+                fill=stroke,font=(self.snap_label_font.cget('family'),-max(2,min(4096,round(o['text_height']*self.scale)))),tags=text_tags))
+            return items
         pts=self.object_path(o); coords=[v for p in pts for v in self.screen(p)]
         pattern=dash or {'Solid':None,'Dashed':(6,4),'Dotted':(1,3)}.get(o.get('pattern','Solid'))
         width=max(1,min(5,o.get('weight',.01)*self.scale))
@@ -1162,6 +1208,10 @@ class Draft:
         session=getattr(self,'_paste',None)
         if not session:return
         c=self.canvas;point=session['point'];view=(self.scale,tuple(self.origin))
+        if (session['rendered'] and (session['view'][0]!=self.scale or session.get('unit')!=self.doc.display_unit)
+                and any(o['type']=='dimension' for o in session['snapshot']['drawing']['objects'])):
+            c.delete('paste-preview');session['rendered']=False
+        session['unit']=self.doc.display_unit
         if not session['rendered']:
             objects=session['snapshot']['drawing']['objects'];session['weights']={float(o['weight']) for o in objects}
             for obj in objects:
@@ -1570,6 +1620,11 @@ class Draft:
     def refresh_edit_length(self):
         try:
             proposed=list(self.proposed_edits().values())
+            dimensions=[o for o in proposed if o['type']=='dimension']
+            if dimensions and len(dimensions)==len(proposed):
+                self.edit_length.set(' | '.join(cad_dimensions.text(o,self.doc.display_unit) for o in dimensions[:4])+
+                    (f' | +{len(dimensions)-4} more' if len(dimensions)>4 else ''))
+                return
             approx=' (approx.)' if any(o['type'] in ('ellipse','spline') for o in proposed) else ''
             prefix='Length' if len(proposed)==1 else 'Selected total length'
             self.edit_length.set(f'{prefix}: {display_value(sum(geo.length(o) for o in proposed),self.doc.display_unit):.6g} {self.doc.display_unit}{approx}')

@@ -12,7 +12,10 @@ BASE={'layer':('Layer','choice'),'color':('Color','choice'),'locked':('Locked','
 
 def schema(o):
     result=dict(BASE); kind=o['type']
-    if kind=='line':
+    if kind=='dimension':
+        result.update({k:(label,'number') for k,label in [('ax','First X'),('ay','First Y'),('bx','Second X'),('by','Second Y'),('labelx','Label X'),('labely','Label Y'),('text_height','Text height')]})
+        if o['metric']=='arc_length':result['sweep']=('Measured sweep °','number')
+    elif kind=='line':
         result.update({k:(label,'number') for k,label in [('ax','Start X'),('ay','Start Y'),('bx','End X'),('by','End Y')]})
     elif kind in ('circle','arc','ellipse'):
         result.update(cx=('Center X','number'),cy=('Center Y','number'))
@@ -32,7 +35,10 @@ def values(o,unit='in'):
     result['color']=next((name for name,color in COLORS.items() if color==o['color']),o['color'])
     for key in ('locked','controls'): result[key]=str(result[key])
     kind=o['type']
-    if kind=='line':
+    if kind in ('line','dimension'):
+        if kind=='dimension':
+            result.update(labelx=o['label'][0],labely=o['label'][1],text_height=o['text_height'])
+            if o['metric']=='arc_length':result['sweep']=math.degrees(o['sweep'])
         for key in ('a','b'):
             for axis,letter in enumerate(('x','y')): result[key+letter]=o[key][axis]
     elif kind in ('circle','arc','ellipse'):
@@ -84,6 +90,7 @@ def apply_changes(original,changes,unit='in'):
             value=parse_number(text,unit,field_kind(key))
             if not math.isfinite(value): raise ValueError('Enter finite numeric values.')
             if key in ('ax','ay','bx','by'): o[key[0]][0 if key[1]=='x' else 1]=value
+            elif key in ('labelx','labely'):o['label'][0 if key=='labelx' else 1]=value
             elif key in ('cx','cy'): o['center'][0 if key=='cx' else 1]=value
             elif key=='diameter': o['radius']=value/2
             elif key in ('angle','start','sweep'): o[key]=math.radians(value)

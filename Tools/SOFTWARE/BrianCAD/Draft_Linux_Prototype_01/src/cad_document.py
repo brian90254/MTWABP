@@ -135,12 +135,12 @@ class Document:
             if obj.get('group'):groups.setdefault(obj['group'],[]).append(i)
         for members in groups.values():
             visible=[i for i in members if self.visible(i)]
-            if visible and all(wholly_inside(self.objects[i],box) for i in visible):
+            if visible and all(wholly_inside(self.objects[i],box,self.display_unit) for i in visible):
                 self.selected.update(members)
                 for i in members:self.point_selection.pop(i,None)
         for i,obj in enumerate(self.objects):
             if not self.visible(i) or obj.get('group'): continue
-            if wholly_inside(obj,box):
+            if wholly_inside(obj,box,self.display_unit):
                 self.selected.add(i); self.point_selection.pop(i,None)
             elif i not in self.selected:
                 keys={key for key,p in controls(obj) if in_box(p,box)}
@@ -210,6 +210,21 @@ class Document:
             pending.extend(parts)
         self.checkpoint();self.objects=pending;self.selected=selected;self.point_selection={}
         return len(ids)*count
+
+    def add_dimensions(self,objects):
+        if not objects:return
+        if len(self.objects)+len(objects)>100000:raise ValueError('Dimensions would exceed 100000 drawing objects.')
+        layers=copy.deepcopy(self.layers)
+        layer=next((l for l in layers if l['name']=='Dimension'),None)
+        if layer is None:
+            if len(layers)>=1000:raise ValueError('Dimensions would exceed 1000 layers.')
+            layer=dict(name='Dimension',visible=True,drawing_color=COLORS['Blue']);layers.append(layer)
+        layer['visible']=True
+        layer.setdefault('drawing_color',COLORS['Blue'])
+        candidate=Document();candidate.layers=layers
+        pending=[candidate.prepare(dict(o,layer='Dimension',color=layer['drawing_color'])) for o in objects]
+        self.checkpoint();self.layers=layers;start=len(self.objects);self.objects.extend(pending)
+        self.selected=set(range(start,len(self.objects)));self.point_selection={}
 
     def offset_objects(self,indices,distance,reference):
         from cad_offset import offset
@@ -334,7 +349,7 @@ class Document:
 
     def layer_color(self):
         layer=next(l for l in self.layers if l['name']==self.active)
-        return layer.get('drawing_color',COLORS['Black'])
+        return layer.get('drawing_color',COLORS['Blue'] if self.active=='Dimension' else COLORS['Black'])
 
     def set_layer_color(self,color):
         color=rgb_color(color)

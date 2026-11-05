@@ -33,7 +33,7 @@ def endpoints(o):
 
 def is_closed(objects):
     """One endpoint-connected, unbranched loop; closed does not imply no crossings."""
-    if not objects:return False
+    if not objects or any(o['type']=='dimension' for o in objects):return False
     pairs=[endpoints(o) for o in objects]
     if len(pairs)==1:return g.dist(*pairs[0])<=TOLERANCE
     if any(g.dist(a,b)<=TOLERANCE for a,b in pairs):return False

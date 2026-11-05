@@ -63,7 +63,7 @@ Collinear or coincident points and ambiguous tangent cases show an error instead
 
 ## Layers
 
-Each layer remembers the last drawing pen selected for it. Activating a layer restores its pen, and native drawings save these settings. Layers without a remembered pen start with Black.
+Each layer remembers the last drawing pen selected for it. Activating a layer restores its pen, and native drawings save these settings. Layers without a remembered pen start with Black, except Dimension, which starts with Blue.
 
 **Layers...** opens a floating list with eye icons, an active marker, and layer names.
 
@@ -349,3 +349,37 @@ In **Layers**, highlight a layer and click **Duplicate Layer**. Its objects are 
 When starting a line at an existing line endpoint, dashed guides show its extension and perpendicular through that point. Snap along either guide or to its crossings with nearby geometry, grid lines, or alignment guides. When dragging a single selected line endpoint, the opposite endpoint stays fixed and the original line direction provides the extension guide. The endpoint can also snap to perpendicular contacts on the destination geometry. Object snaps include isolated intersections of finite line, arc, circle, oval, spline and polygon geometry; overlapping portions are not discrete intersection targets.
 
 When drawing a line, clicking its start focuses Start X. Tab to commit that coordinate and edit Start Y. Clicking the end draws the line and selects its Length value for typing. Enter in Length resizes that line in place, keeping its starting point and direction. In Center + diameter circle mode, clicking the center selects Diameter; type a value and press Enter to draw the circle.
+
+## Dimension tool
+
+Choose **Dimension** and click two control or snap points. A diagonal pair creates
+four independent annotations: length, horizontal distance (X), vertical distance
+(Y), and signed angle from the positive horizontal axis. A horizontal or vertical
+pair creates only its length dimension. Picked points must be distinct. Dimensions
+use projected extension lines, arrowheads, and offset labels in the current drawing
+units; changing display units updates their labels.
+
+An **on line** snap measures that entire line with one click. An **on curve** snap
+on a circle creates diameter and circumference annotations; on an arc it creates
+radius and arc-length annotations (including clockwise and major arcs). These
+whole-object measurements also replace a pending first point. Endpoint, quadrant,
+intersection and other point snaps use the two-point workflow instead. For ovals
+and splines, choose two point snaps. Grid/object snap settings still apply; disable
+grid snapping if it takes priority over the desired on-curve snap.
+
+Annotations go on the **Dimension** layer, initially Blue, and reuse its remembered
+pen color. Creating dimensions shows that layer without changing the active drawing
+layer. Each annotation is independently selectable, movable, editable and deletable.
+**Edit > Edit Objects...** exposes its measurement points, label X/Y, text height,
+layer, color and stroke properties; arc-length dimensions also expose the measured
+sweep. Use partial-handle selection to drag just the label. Creating a set is one
+undo step.
+
+Dimensions are independent measurements of the picked geometry, rather than live
+constraints attached to source objects. Editing an annotation's measurement points
+recalculates its label; editing the original drawing geometry does not move it.
+Native Save/Open, Import, Copy/Paste and groups retain editable annotations. DXF
+export includes their strokes and text as ordinary DXF entities, rather than
+associative DXF DIMENSION entities; the existing DXF importer skips text. Annotation
+strokes are not cutting boundaries and annotations cannot be offset, divided, or
+used as fillet/chamfer segments.

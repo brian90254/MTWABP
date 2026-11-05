@@ -30,7 +30,7 @@ def require_ezdxf():
 
 def snapshot_drawing(document):
     selected=sorted(i for i in set(document.selected)|set(document.point_selection) if 0<=i<len(document.objects))
-    return copy.deepcopy({'objects':document.objects,'layers':document.layers,'selected':selected})
+    return copy.deepcopy({'objects':document.objects,'layers':document.layers,'selected':selected,'display_unit':document.display_unit})
 
 
 def _flatten_bezier(points,tolerance=FLATTEN_TOLERANCE):
@@ -72,10 +72,17 @@ def _attributes(obj,layer_map):
             'lineweight':min(VALID_DXF_LINEWEIGHTS,key=lambda v:abs(v-width))}
 
 
-def _add_object(msp,obj,attrs):
+def _add_object(msp,obj,attrs,unit='in'):
     """Return whether this object's curve needed a polyline approximation."""
     kind=obj['type']
-    if kind=='line': msp.add_line(obj['a'],obj['b'],dxfattribs=attrs)
+    if kind=='dimension':
+        import cad_dimensions as dimensions
+        for path in dimensions.layout(obj,unit):
+            msp.add_lwpolyline(path,format='xy',dxfattribs=attrs)
+        # DXF TEXT horizontal/vertical alignment codes 1/2 center the label.
+        msp.add_text(dimensions.text(obj,unit),dxfattribs=dict(attrs,height=obj['text_height'],
+            insert=obj['label'],align_point=obj['label'],halign=1,valign=2))
+    elif kind=='line': msp.add_line(obj['a'],obj['b'],dxfattribs=attrs)
     elif kind=='polygon': msp.add_lwpolyline(obj['points'],format='xy',close=obj.get('closed',True),dxfattribs=attrs)
     elif kind in ('circle','arc'):
         sweep=obj.get('sweep',g.TAU)
@@ -122,7 +129,7 @@ def build_dxf(snapshot,selected_only=False):
     layer_map=_layer_names(document,layers); msp=document.modelspace(); approximated=0
     for obj in objects:
         g.validate_geometry(obj)
-        approximated+=int(_add_object(msp,obj,_attributes(obj,layer_map)))
+        approximated+=int(_add_object(msp,obj,_attributes(obj,layer_map),snapshot.get('display_unit','in')))
     report={'objects':len(objects),'entities':len(msp),'approximated':approximated,'layer_names':layer_map}
     return document,report
 
