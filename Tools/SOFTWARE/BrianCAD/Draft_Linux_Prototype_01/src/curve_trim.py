@@ -142,6 +142,7 @@ def _spline_pair(a,b):
 
 
 def crossings(a,b):
+    if a['type']=='dimension' or b['type']=='dimension':return []
     if a['type']=='polygon':
         return [(0.,tb,p) for points,_ in spans(a) for _,tb,p in crossings({'type':'line','a':points[0],'b':points[1]},b)]
     if b['type']=='polygon':

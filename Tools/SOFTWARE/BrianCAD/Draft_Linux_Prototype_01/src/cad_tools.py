@@ -4,6 +4,7 @@ import cad_geometry as g
 
 METHODS={
     'Select':['Select'],
+    'Dimension':['Dimensions'],
     'Trim':['Trim'],
     'Chamfer':['Chamfer'],
     'Offset':['Offset curves'],
@@ -23,7 +24,7 @@ LABELS={'x':'X','y':'Y','x2':'End X','y2':'End Y','x3':'Third X','y3':'Third Y',
 
 
 def fields_for(family,method):
-    if family in ('Select','Trim'): return []
+    if family in ('Select','Trim','Dimension'): return []
     if family=='Chamfer': return ['radius']
     if family=='Offset': return ['offset','x','y']
     if family=='Modify': return ['x','y','dx','dy'] if method=='Move' else ['x','y','factor'] if method=='Scale' else ['x','y','angle']

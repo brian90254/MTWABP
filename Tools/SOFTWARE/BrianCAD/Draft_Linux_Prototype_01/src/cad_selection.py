@@ -6,6 +6,7 @@ import cad_geometry as g
 
 def controls(o):
     kind=o['type']
+    if kind=='dimension':return [(key,list(o[key])) for key in ('a','b','label')]
     if kind=='line': return [('a',list(o['a'])),('b',list(o['b']))]
     if kind=='circle': return [('center',list(o['center'])),('radius',g.polar(o['center'],o['radius'],o.get('handle_angle',0.)))]
     if kind=='arc':
@@ -32,7 +33,8 @@ def move_controls(o,keys,dx,dy):
         return g.transform(o,'Move',dx=dx,dy=dy)
     new={key:g.add(p,[dx,dy]) if key in keys else p for key,p in old.items()}
     n=copy.deepcopy(o); kind=o['type']
-    if kind=='line': n.update(a=new['a'],b=new['b'])
+    if kind=='dimension':n.update({key:new[key] for key in ('a','b','label')})
+    elif kind=='line': n.update(a=new['a'],b=new['b'])
     elif kind=='circle':
         n['radius']=g.dist(o['center'],new['radius']); n['handle_angle']=g.angle(o['center'],new['radius'])
     elif kind=='arc': n.update(g.arc_three(new['start'],new['through'],new['end']))
@@ -77,8 +79,11 @@ def _bernstein_roots(coeffs,lo=0.,hi=1.,depth=0):
     return endpoints+_bernstein_roots(left,lo,mid,depth+1)+_bernstein_roots(right,mid,hi,depth+1)
 
 
-def bounds(o):
+def bounds(o,unit='in'):
     kind=o['type']
+    if kind=='dimension':
+        from cad_dimensions import bounds as dimension_bounds
+        return dimension_bounds(o,unit)
     if kind=='circle':
         c=o['center']; r=o['radius']; return [c[0]-r,c[1]-r,c[0]+r,c[1]+r]
     if kind=='ellipse':
@@ -115,8 +120,8 @@ def in_box(p,box,tol=1e-10):
     return box[0]-tol<=p[0]<=box[2]+tol and box[1]-tol<=p[1]<=box[3]+tol
 
 
-def wholly_inside(o,box):
-    b=bounds(o)
+def wholly_inside(o,box,unit='in'):
+    b=bounds(o,unit)
     return in_box(b[:2],box) and in_box(b[2:],box)
 
 
@@ -145,8 +150,11 @@ def _minimum_parameter(fn,p,steps):
 def _minimum(fn,p,steps): return fn(_minimum_parameter(fn,p,steps))
 
 
-def nearest_point(p,o):
+def nearest_point(p,o,unit='in'):
     kind=o['type']
+    if kind=='dimension':
+        from cad_dimensions import nearest_point as dimension_nearest
+        return dimension_nearest(p,o,unit)
     if kind=='line': return g.project(p,o['a'],o['b'],True)
     if kind in ['circle','arc']:
         a=g.angle(o['center'],p)
