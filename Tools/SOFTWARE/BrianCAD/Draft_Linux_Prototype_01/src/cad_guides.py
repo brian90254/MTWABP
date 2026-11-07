@@ -5,16 +5,39 @@ from grid_snap import line_grid_candidates
 
 ENDPOINT_TOLERANCE=1e-6
 
-def directions(start,lines):
+def directions(start,objects):
+    """Local tangents/normals at finite curve contacts; include both vertex edges."""
+    from cad_selection import nearest_point,_spline_spans
+    from cad_chamfer import evaluate,_PreparedCurve
+    from curve_trim import parameter
     result=[]
-    for line in lines:
-        if line['type']!='line':continue
-        if min(g.dist(start,line[k]) for k in ('a','b'))>ENDPOINT_TOLERANCE:continue
-        direction=g.unit(g.sub(line['b'],line['a']))
-        for vector,label in ((direction,'extension guide'),(g.normal(direction),'perpendicular guide')):
-            if not any(abs(g.cross(vector,v))<1e-10 and label==old for v,old in result):
-                result.append((vector,label))
+    def add(vector,label):
+        if g.dist([0,0],vector)<g.EPS:return
+        vector=g.unit(vector)
+        if not any(abs(g.cross(vector,v))<1e-10 and label==old for v,old in result):
+            result.append((vector,label))
+    for obj in objects:
+        kind=obj['type']
+        if kind in ('line','polygon'):
+            pts=g.path(obj)
+            for a,b in zip(pts,pts[1:]):
+                if g.dist(a,b)<g.EPS or g.dist(start,g.project(start,a,b,True))>ENDPOINT_TOLERANCE:continue
+                vector=g.sub(b,a)
+                add(vector,'extension guide');add(g.normal(vector),'perpendicular guide')
+        elif kind in ('circle','arc','ellipse','spline'):
+            q=nearest_point(start,obj)
+            if g.dist(start,q)>ENDPOINT_TOLERANCE:continue
+            t=parameter(obj,q)
+            if t is None:continue
+            _,vector=evaluate(_PreparedCurve(obj),t)
+            # Repeated Bézier endpoint handles can yield a zero first derivative.
+            if kind=='spline' and g.dist([0,0],vector)<g.EPS and (t<1e-8 or t>1-1e-8):
+                points=_spline_spans(obj)[0 if t<.5 else -1]
+                if t>.5:points=list(reversed(points))
+                vector=next((g.sub(p,points[0]) for p in points[1:] if g.dist(p,points[0])>=g.EPS),[0,0])
+            add(vector,'tangent guide');add(g.normal(vector),'perpendicular guide')
     return result
+
 
 def targets(start,guides,cursor,tolerance,objects,step=None,axes=()):
     hits=[];projections=[]

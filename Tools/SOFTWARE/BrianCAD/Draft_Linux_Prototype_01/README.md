@@ -383,3 +383,30 @@ export includes their strokes and text as ordinary DXF entities, rather than
 associative DXF DIMENSION entities; the existing DXF importer skips text. Annotation
 strokes are not cutting boundaries and annotations cannot be offset, divided, or
 used as fillet/chamfer segments.
+
+## Curve-start guides and partial Modify selections
+
+After picking a starting point on a line or curve, drawing tools show its local
+tangent/extension and perpendicular guides. This works at interior contacts and
+finite endpoints of lines, arcs, circles, ovals and splines; polygon vertices can
+provide guides for both adjoining edges. A point inside a circle or an off-curve
+spline handle does not define a curve tangent. The guides participate in snapping
+to the grid, other objects and remembered alignment guides, as well as direct
+projection onto a guide. Turn off Object snaps / alignment to disable these guides.
+Spline drawing uses the latest picked point for the next segment. Existing endpoint
+extension guides during selection dragging remain available.
+
+Each tool remembers its last selected construction method for the session, including
+when switching through Select or opening a different drawing. Numeric defaults
+continue to be remembered independently for each method.
+
+Modify > Move, Rotate, Scale and Mirror now work with partial control-point
+selections made by the Select tool's window selection. Unselected controls stay
+fixed where the geometry allows; dependent controls follow the same rules used
+during selection dragging (for example, moving a circle's center translates its
+circle, and changing an oval axis keeps the axes perpendicular). Selecting a whole
+object takes precedence over any partial handles on it. Whole objects and partial
+selections can be modified together in one undo step. With Copy when transforming,
+partial selections produce a new, reshaped copy of the owning object and retain
+the corresponding partial selection. Invalid/collapsed results cancel the entire
+operation. Hidden or locked controls are excluded.

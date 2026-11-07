@@ -5,7 +5,7 @@ import re
 import cad_groups
 from cad_units import UNITS
 from cad_geometry import validate_geometry, transform
-from cad_selection import controls, move_controls, wholly_inside, in_box
+from cad_selection import controls, move_controls, transform_controls, wholly_inside, in_box
 
 COLORS={'Black':'#202b36','Blue':'#2465d8','Green':'#198548','Red':'#c44236','Cyan':'#00bfc4','Magenta':'#cf36b5','Yellow':'#d8b400'}
 
@@ -286,16 +286,21 @@ class Document:
         self.checkpoint(); self.objects=[o for i,o in enumerate(self.objects) if i not in ids]; self.clear_selection()
 
     def transform_selected(self,mode,copy_objects=False,**kwargs):
-        ids=self.editable_selection()
-        if not ids: raise ValueError('Select at least one visible, unlocked object.')
-        pending=[self.prepare(transform(self.objects[i],mode,**kwargs)) for i in ids]
-        self.checkpoint()
+        ids=self.editable_selection();points=self.editable_point_selection()
+        if not ids and not points:raise ValueError('Select at least one visible, unlocked object or control point.')
+        updates={i:self.prepare(transform(self.objects[i],mode,**kwargs)) for i in ids}
+        for i,keys in points.items():
+            if i not in updates:updates[i]=self.prepare(transform_controls(self.objects[i],keys,mode,**kwargs))
+        # Validate every result before changing any object or history.
         if copy_objects:
-            pending=cad_groups.remap(pending)
-            start=len(self.objects); self.objects.extend(pending); self.selected=set(range(start,len(self.objects)))
+            if len(self.objects)+len(updates)>100000:raise ValueError('Copy would exceed 100000 drawing objects.')
+            order=sorted(updates);copies=cad_groups.remap([updates[i] for i in order])
+            self.checkpoint();start=len(self.objects);self.objects.extend(copies)
+            self.selected={start+j for j,i in enumerate(order) if i in ids}
+            self.point_selection={start+j:set(points[i]) for j,i in enumerate(order) if i not in ids}
         else:
-            for i,o in zip(ids,pending): self.objects[i]=o
-            self.selected=set(ids)
+            self.commit_updates(updates)
+            self.selected=set(ids);self.point_selection={i:set(keys) for i,keys in points.items() if i not in ids}
 
     def polar_duplicate(self,center,total):
         from cad_divide import segment_count

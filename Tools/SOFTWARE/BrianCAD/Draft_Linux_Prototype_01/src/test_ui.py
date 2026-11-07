@@ -352,7 +352,7 @@ class WorkflowTests(unittest.TestCase):
                 self.choose(family,method)
                 self.assertEqual(self.app.tool.get(),method)
                 self.assertTrue(self.app.status.get())
-        self.choose('Lines')
+        self.choose('Lines','Two points')
         entries=[]
         for frame in self.app.parameter_frame.winfo_children():
             entries.extend(w for w in frame.winfo_children() if w.winfo_class()=='TEntry')

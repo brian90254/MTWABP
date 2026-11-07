@@ -55,7 +55,7 @@ class CanvasLayer:
 
 class Draft:
     def __init__(self,root):
-        self.root=root; self.doc=Document(); self.path=None;self._tool_defaults={}
+        self.root=root; self.doc=Document(); self.path=None;self._tool_defaults={};self._tool_methods={}
         self.recent_files=RecentFiles();self._zoom_window=False;self._view_box_start=None;self._view_box_end=None
         self.scale=90.; self.origin=[470.,320.]; self.pan=None
         self.points=[]; self.refs=[]; self.start=None; self.mouse=None; self.marker=''
@@ -248,10 +248,14 @@ class Draft:
         return 'break'
 
     def family_changed(self):
-        self.tool.set(METHODS[self.family.get()][0]); self.method_box.configure(values=METHODS[self.family.get()])
+        family=self.family.get();methods=METHODS[family]
+        method=getattr(self,'_tool_methods',{}).get(family,methods[0])
+        self.tool.set(method if method in methods else methods[0]);self.method_box.configure(values=methods)
         self.method_changed()
 
     def method_changed(self):
+        if not hasattr(self,'_tool_methods'):self._tool_methods={}
+        if self.tool.get() in METHODS[self.family.get()]:self._tool_methods[self.family.get()]=self.tool.get()
         self.snap_history.clear()
         self.canvas.configure(cursor='arrow')
         self.cancel()
@@ -452,9 +456,11 @@ class Draft:
             i=drag['owner'];keys=points.get(i,set())
             if len(drag['ids'])==1 and len(keys)==1 and self.objects[i]['type']=='line':
                 return self.objects[i]['b' if 'a' in keys else 'a'], self.objects[i]
-        if self.family.get()=='Lines' and self.tool.get() in ('Two points','Connected points') and self.points:
+        if self.family.get()=='Lines' and self.tool.get() not in ('Two points','Connected points'):return None,None
+        if self.family.get() in ('Lines','Arcs','Circles','Ovals','Polygons','Splines') and self.points:
+            if self.family.get()=='Splines':return self.points[-1],None
             try:return self.field_point(0),None
-            except (ValueError,KeyError,AttributeError):pass
+            except (ValueError,KeyError,AttributeError):return self.points[0],None
         return None,None
 
     def intersection_points(self,a,b):
@@ -475,7 +481,7 @@ class Draft:
             best=min(candidates,key=lambda v:distance(p,v[0]),default=None)
             return (list(best[0]),best[1]) if best and distance(p,best[0])<=tolerance else None
         excluded=set(exclude or [])
-        if self.family.get()=='Modify': excluded.update(self.selected)
+        if self.family.get()=='Modify': excluded.update(set(self.doc.editable_selection())|set(self.doc.editable_point_selection()))
         ids=[i for i in self.visible_ids() if i not in excluded]
         self._line_guides=(None,[])
         guide_projections=[]
@@ -483,9 +489,14 @@ class Draft:
             nearby=[self.objects[i] for i in ids if selection.box_distance(p,self.object_bounds(self.objects[i]))<=tolerance]
             start,original=self.line_guide_start()
             if start is not None:
-                lines=[self.objects[i] for i in ids if self.objects[i]['type']=='line']
-                if original is not None:lines.append(original)
-                guides=cad_guides.directions(start,lines)
+                sources=[self.objects[i] for i in ids
+                         if selection.box_distance(start,self.object_bounds(self.objects[i]))<=cad_guides.ENDPOINT_TOLERANCE]
+                if original is not None:sources.append(original)
+                cached=getattr(self,'_guide_direction_cache',None)
+                if cached is None or cached[0]!=start or cached[1]!=sources:
+                    cached=(list(start),copy.deepcopy(sources),cad_guides.directions(start,sources))
+                    self._guide_direction_cache=cached
+                guides=cached[2]
                 self._line_guides=(start,guides)
                 step=self.grid_spacing/self.grid_subdivisions if self.grid_snap.get() else None
                 history=getattr(self,'snap_history',None)
@@ -493,8 +504,9 @@ class Draft:
                 guide_hits,guide_projections=cad_guides.targets(start,guides,p,tolerance,nearby,step,axes)
                 best=nearest(guide_hits)
                 if best:return best
-                best=nearest(candidate for obj in nearby for candidate in self.line_constraint_candidates(start,obj))
-                if best:return best
+                if self.family.get()=='Lines' or getattr(self,'drag',None):
+                    best=nearest(candidate for obj in nearby for candidate in self.line_constraint_candidates(start,obj))
+                    if best:return best
             best=nearest((q,'intersection') for i,a in enumerate(nearby) for b in nearby[i+1:]
                          for q in self.intersection_points(a,b))
             if best:return best
@@ -645,8 +657,8 @@ class Draft:
                 self.mouse,self.marker=source,label
                 self.track_snap_hover(e)
             self.draw(); return
-        if self.family.get()=='Modify' and not self.doc.editable_selection():
-            self.error('Select visible, unlocked geometry first.'); return
+        if self.family.get()=='Modify' and not (self.doc.editable_selection() or self.doc.editable_point_selection()):
+            self.error('Select visible, unlocked geometry or control points first.'); return
         p,label=self.snap_point(raw)
         self.snap_history.remember(p,label)
         self.tracking_cursor=list(p)
@@ -1148,9 +1160,9 @@ class Draft:
             for vector,label in guide_vectors:
                 delta=geo.mul(vector,extent)
                 c.create_line(*self.screen(geo.sub(guide_start,delta)),*self.screen(geo.add(guide_start,delta)),
-                              fill='#7693a7' if label=='extension guide' else '#a38bb1',dash=(2,5),tags=('line-guide',))
+                              fill='#7693a7' if label in ('extension guide','tangent guide') else '#a38bb1',dash=(2,5),tags=('line-guide',))
         history=getattr(self,'snap_history',None)
-        excluded=set(self.selected) if self.family.get()=='Modify' else set()
+        excluded=(set(self.doc.editable_selection())|set(self.doc.editable_point_selection())) if self.family.get()=='Modify' else set()
         if getattr(self,'drag',None): excluded.update(self.drag['ids'])
         guides=history.guides(getattr(self,'tracking_cursor',None),self.scale,self.tracking_exclusions(excluded)) if history and self.snap.get() else []
         label_counts=[0,0]
