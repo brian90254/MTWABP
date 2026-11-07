@@ -31,7 +31,13 @@ def move_controls(o,keys,dx,dy):
     if not keys: return copy.deepcopy(o)
     if keys==set(old) or 'center' in keys or (o['type']=='arc' and keys >= {'start','through','end'}):
         return g.transform(o,'Move',dx=dx,dy=dy)
-    new={key:g.add(p,[dx,dy]) if key in keys else p for key,p in old.items()}
+    return set_controls(o,{key:g.add(old[key],[dx,dy]) for key in keys})
+
+
+def set_controls(o,positions):
+    old=dict(controls(o))
+    if not set(positions)<=set(old):raise ValueError('The selected control point no longer exists.')
+    new=dict(old);new.update(positions)
     n=copy.deepcopy(o); kind=o['type']
     if kind=='dimension':n.update({key:new[key] for key in ('a','b','label')})
     elif kind=='line': n.update(a=new['a'],b=new['b'])
@@ -46,6 +52,20 @@ def move_controls(o,keys,dx,dy):
         else: n.update(g.ellipse_axes(new['center'],new['axis_x'],new['axis_y']))
     else: n['points']=[new['p'+str(i)] for i in range(len(o['points']))]
     return g.validate_geometry(n)
+
+
+
+def transform_controls(o,keys,mode,**kwargs):
+    keys=set(keys);old=dict(controls(o))
+    if not keys or not keys<=set(old):raise ValueError('The selected control point no longer exists.')
+    if keys==set(old) or (o['type']=='arc' and keys>={'start','through','end'}):
+        return g.validate_geometry(g.transform(o,mode,**kwargs))
+    positions={key:g.transform(dict(type='line',a=old[key],b=old[key]),mode,**kwargs)['a'] for key in keys}
+    n=copy.deepcopy(o)
+    if 'center' in positions:
+        dx,dy=g.sub(positions.pop('center'),old['center'])
+        n=g.transform(n,'Move',dx=dx,dy=dy)
+    return set_controls(n,positions) if positions else g.validate_geometry(n)
 
 
 def _bezier_point(points,t):

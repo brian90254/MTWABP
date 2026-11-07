@@ -51,4 +51,5 @@ class ToolDefaultTests(unittest.TestCase):
         self.tool('Modify','Scale');a.params['factor'].set('2');a.apply_parameters()
         self.tool('Select');self.tool('Modify','Scale');self.assertEqual(a.values()['factor'],2)
         self.tool('Circles','Diameter endpoints');a.pick([0,0]);a.pick([3,0])
-        self.tool('Select');self.tool('Circles');self.assertEqual(a.values()['diameter'],3)
+        self.tool('Select');self.tool('Circles');self.assertEqual(a.tool.get(),'Diameter endpoints')
+        self.tool('Circles','Center + diameter');self.assertEqual(a.values()['diameter'],3)
