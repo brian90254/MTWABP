@@ -1024,24 +1024,145 @@
       "pattern": "Solid",
       "weight": 0.01,
       "controls": false
+    },
+    {
+      "type": "dimension",
+      "metric": "length",
+      "a": [
+        -0.25,
+        5.875
+      ],
+      "b": [
+        -0.25000000000000444,
+        -0.375
+      ],
+      "label": [
+        -1.395375006547819,
+        2.7499999999999996
+      ],
+      "text_height": 0.18673465236686382,
+      "sweep": 6.283185307179586,
+      "layer": "Dimension",
+      "color": "#2465d8",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "dimension",
+      "metric": "length",
+      "a": [
+        5.5,
+        5.875
+      ],
+      "b": [
+        5.5,
+        -0.6250000000000024
+      ],
+      "label": [
+        6.859893624925317,
+        3.5
+      ],
+      "text_height": 0.14119822485207092,
+      "sweep": 6.283185307179586,
+      "layer": "Dimension",
+      "color": "#2465d8",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "dimension",
+      "metric": "length",
+      "a": [
+        -0.25,
+        5.875
+      ],
+      "b": [
+        11.25,
+        5.875
+      ],
+      "label": [
+        5.5,
+        6.75
+      ],
+      "text_height": 0.14119822485207092,
+      "sweep": 6.283185307179586,
+      "layer": "Dimension",
+      "color": "#2465d8",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "dimension",
+      "metric": "length",
+      "a": [
+        13.6875,
+        9.75
+      ],
+      "b": [
+        15.1875,
+        9.75
+      ],
+      "label": [
+        14.5,
+        11.0
+      ],
+      "text_height": 0.21474485022189335,
+      "sweep": 6.283185307179586,
+      "layer": "Dimension",
+      "color": "#2465d8",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "dimension",
+      "metric": "length",
+      "a": [
+        15.1875,
+        0.0
+      ],
+      "b": [
+        15.1875,
+        9.75
+      ],
+      "label": [
+        16.884662342341965,
+        5.0
+      ],
+      "text_height": 0.21474485022189335,
+      "sweep": 6.283185307179586,
+      "layer": "Dimension",
+      "color": "#2465d8",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
     }
   ],
   "layers": [
     {
       "name": "Constraints",
-      "visible": true
+      "visible": false
     },
     {
       "name": "Construction",
-      "visible": true
+      "visible": false
     },
     {
       "name": "Dimension",
-      "visible": true
+      "visible": true,
+      "drawing_color": "#2465d8"
     },
     {
       "name": "0_CONSTRUCTION",
-      "visible": true
+      "visible": false
     },
     {
       "name": "1_CUT_LINE",
@@ -1050,21 +1171,21 @@
     },
     {
       "name": "2_SEW_LINE",
-      "visible": true,
+      "visible": false,
       "drawing_color": "#198548"
     },
     {
       "name": "3_QUILTING",
-      "visible": true,
+      "visible": false,
       "drawing_color": "#c44236"
     },
     {
       "name": "4_FOLD_LINE",
-      "visible": true,
+      "visible": false,
       "drawing_color": "#00bfc4"
     }
   ],
-  "active_layer": "4_FOLD_LINE",
+  "active_layer": "1_CUT_LINE",
   "display_unit": "in",
   "grid": {
     "spacing": 1.0,
