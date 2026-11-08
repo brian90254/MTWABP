@@ -338,7 +338,7 @@ class Draft:
         recent=getattr(self,'_recent_mouse_line',None)
         if key=='length' and recent is not None:
             index,original=recent
-            if index>=len(self.objects) or self.objects[index] is not original or not self.doc.visible(index) or original.get('locked',False):
+            if index>=len(self.objects) or self.objects[index] is not original or not self.doc.visible(index) or self.doc.locked(index):
                 self._recent_mouse_line=None
                 self.error('The line is no longer available to resize.')
                 return 'break'
@@ -551,9 +551,9 @@ class Draft:
         return p,''
 
     def hit(self,p,lines_only=False):
-        hits=[]; tolerance=9/self.scale
+        hits=[]; tolerance=9/self.scale;allowed=self.doc.selectable_ids()
         for i,o in enumerate(self.objects):
-            if not self.doc.visible(i) or (lines_only and o['type']!='line'): continue
+            if i not in allowed or (lines_only and o['type']!='line'): continue
             # Control handles (including off-curve spline handles) select owners.
             d=min((distance(p,q) for _,q in selection.controls(o)),default=float('inf'))
             if not lines_only: d=min(d,min(distance(p,q) for q,_ in anchors(o)))
@@ -564,8 +564,9 @@ class Draft:
         return best[1] if best[0]<=tolerance else None
 
     def selected_handle(self,p):
+        allowed=self.doc.selectable_ids()
         hits=[(distance(p,q),i,key,q) for i,keys in self.doc.point_selection.items()
-              if self.doc.visible(i) for key,q in selection.controls(self.objects[i]) if key in keys]
+              if i in allowed for key,q in selection.controls(self.objects[i]) if key in keys]
         best=min(hits,key=lambda item:item[0],default=None)
         return best if best and best[0]*self.scale<=9 else None
 
@@ -703,7 +704,7 @@ class Draft:
         ids=[];lookup={id(o):i for i,o in enumerate(self.objects)}
         for source in sources:
             index=lookup.get(id(source))
-            if index is None or not self.doc.visible(index) or source.get('locked',False):
+            if index is None or not self.doc.visible(index) or self.doc.locked(index):
                 raise ValueError('An offset source changed or is hidden/locked. Select sources and activate Offset again.')
             ids.append(index)
         return ids
@@ -713,7 +714,7 @@ class Draft:
             if not getattr(self,'offset_sources',[]) or state & 0x0001:
                 i=self.hit(raw)
                 if i is None: raise ValueError('Click a source curve first, or preselect a connected chain.')
-                if self.objects[i].get('locked',False): raise ValueError('Choose an unlocked source.')
+                if self.doc.locked(i): raise ValueError('Choose an unlocked source.')
                 if not any(o is self.objects[i] for o in getattr(self,'offset_sources',[])):
                     self.offset_sources=getattr(self,'offset_sources',[])+[self.objects[i]]
                 self.selected=set(self.offset_indices());self.doc.point_selection={};self.offset_preview=[];self.draw();return
@@ -745,7 +746,7 @@ class Draft:
             radius=self.values()['radius']
             if not 1e-6<=radius<=1e7: raise ValueError('Enter a positive radius between 0.000001 and 10,000,000 inches.')
             hits=[(distance(raw,self.nearest_point(raw,o)),i)
-                  for i,o in enumerate(self.objects) if self.doc.visible(i) and not o.get('locked',False)
+                  for i,o in enumerate(self.objects) if self.doc.visible(i) and not self.doc.locked(i)
                   and o['type'] in cad_chamfer.SUPPORTED
                   and selection.box_distance(raw,self.object_bounds(o))<=9/self.scale]
             d,index=min(hits,default=(float('inf'),None))
@@ -770,7 +771,7 @@ class Draft:
             self.error('Select cutting boundaries, then choose Trim.'); return
         hits=[(distance(raw,self.nearest_point(raw,o)),i)
               for i,o in enumerate(self.objects)
-              if i not in ids and self.doc.visible(i) and not o.get('locked',False)
+              if i not in ids and self.doc.visible(i) and not self.doc.locked(i)
               and selection.box_distance(raw,self.object_bounds(o))<=9/self.scale]
         d,i=min(hits,default=(float('inf'),None))
         if d>9/self.scale: return
@@ -1463,7 +1464,7 @@ class Draft:
         if self.layer_window is not None and self.layer_window.winfo_exists(): self.layer_window.lift(); return
         dlg=tk.Toplevel(self.root); self.layer_window=dlg; dlg.title('Layers'); dlg.transient(self.root)
         f=ttk.Frame(dlg,padding=12); f.pack(fill='both',expand=True)
-        tree=ttk.Treeview(f,columns=('active','name'),show='tree headings',selectmode='browse',height=13)
+        tree=ttk.Treeview(f,columns=('active','locked','name'),show='tree headings',selectmode='browse',height=13)
         tree.heading('#0',text='Eye'); tree.column('#0',width=45,stretch=False)
         self.layer_icons=[]
         for visible in (False,True):
@@ -1474,13 +1475,14 @@ class Draft:
                     eye=(.65<ellipse<1.05 or (x-8.5)**2+(y-6.5)**2<5) if visible else (abs(y-6.5)<1 and 1<x<17) or (abs(y-x*.6-1)<.8 and 1<x<17)
                     if eye: icon.put('#273543',to=(x,y))
             self.layer_icons.append(icon)
-        for col,title,width in [('active','Active',55),('name','Layer',210)]:
+        for col,title,width in [('active','Active',55),('locked','Locked',65),('name','Layer',210)]:
             tree.heading(col,text=title); tree.column(col,width=width,anchor='w')
         self.layer_tree=tree
         tree.grid(row=0,column=0,rowspan=6,sticky='nsew')
         f.columnconfigure(0,weight=1); f.rowconfigure(0,weight=1)
         rename=tk.StringVar(); ttk.Label(f,text='Layer name').grid(row=6,column=0,sticky='w',pady=(8,0))
-        ttk.Entry(f,textvariable=rename).grid(row=7,column=0,sticky='ew')
+        self.layer_name=rename;self.layer_name_entry=ttk.Entry(f,textvariable=rename)
+        self.layer_name_entry.grid(row=7,column=0,sticky='ew')
         def selected_name():
             items=tree.selection()
             if not items: raise ValueError('Highlight a layer first.')
@@ -1493,18 +1495,26 @@ class Draft:
             rows=list(enumerate(self.doc.layers))
             if sort_reverse is not None:rows.sort(key=lambda item:layer_sort_key(item[1]['name']),reverse=sort_reverse)
             for i,l in rows:
-                key=str(i); tree.insert('', 'end',iid=key,image=self.layer_icons[int(l['visible'])],values=('*' if l['name']==self.doc.active else '',l['name']))
+                key=str(i); tree.insert('', 'end',iid=key,image=self.layer_icons[int(l['visible'])],values=('*' if l['name']==self.doc.active else '','Yes' if l.get('locked',False) else '',l['name']))
                 if l['name']==keep: tree.selection_set(key)
         self.layer_refresh=refresh
         def action(kind):
             try:
                 name=selected_name() if kind!='new' else None
-                if kind=='new': self.doc.add_layer(rename.get())
+                if kind=='new':
+                    text=rename.get().strip()
+                    current=selected_name() if tree.selection() else self.doc.active
+                    target=self.doc.next_layer_name(current) if text==current or not text else text
+                    self.doc.add_layer(target);refresh()
+                    row=str(next(i for i,l in enumerate(self.doc.layers) if l['name']==target))
+                    tree.selection_set(row);tree.see(row);rename.set(target);self.cancel();return
                 elif kind=='duplicate':
                     target=self.doc.duplicate_layer(name);refresh()
                     row=str(next(i for i,l in enumerate(self.doc.layers) if l['name']==target))
                     tree.selection_set(row);tree.see(row);self.cancel();return
                 elif kind=='rename': self.doc.rename_layer(name,rename.get())
+                elif kind=='rename_active': self.doc.rename_layer(self.doc.active,rename.get())
+                elif kind=='lock':self.doc.toggle_layer_lock(name)
                 elif kind=='set': self.doc.set_layer(name)
                 elif kind=='hide': self.doc.toggle_layer(name)
                 elif kind=='delete':
@@ -1516,25 +1526,28 @@ class Draft:
             except ValueError as ex: messagebox.showerror('Layers',str(ex),parent=dlg)
         for i,(label,kind) in enumerate([('New','new'),('Delete','delete'),('Show / Hide','hide'),('Set Layer','set'),('Rename','rename'),('Duplicate Layer','duplicate')]):
             ttk.Button(f,text=label,command=lambda k=kind:action(k)).grid(row=i,column=1,padx=(10,0),pady=4,sticky='ew')
+        self.layer_name_entry.bind('<Return>',lambda e:(action('rename_active'),'break')[1])
         def highlight(e):
             if tree.selection(): rename.set(selected_name())
         def double(e):
             nonlocal sort_reverse
             column=tree.identify_column(e.x)
             if tree.identify_region(e.x,e.y)=='heading':
-                if column=='#2':
+                if column=='#3':
                     current=[tree.item(row,'values')[-1] for row in tree.get_children()]
                     sort_reverse=current==sorted(current,key=layer_sort_key)
                     refresh()
                 elif column=='#0':
                     self.doc.toggle_other_layers();refresh();self.cancel()
+                elif column=='#2':
+                    self.doc.toggle_all_layer_locks();refresh();self.cancel()
                 return 'break'
             row=tree.identify_row(e.y)
             if row:
-                tree.selection_set(row); action('hide' if tree.identify_column(e.x)=='#0' else 'set')
+                tree.selection_set(row); action('hide' if column=='#0' else 'lock' if column=='#2' else 'set')
             return 'break'
         tree.bind('<<TreeviewSelect>>',highlight); tree.bind('<Double-1>',double)
-        ttk.Label(f,text='Double-click row name: active; row eye: show/hide.\nDouble-click Layer header: sort/reverse; Eye header: isolate active/show all.').grid(row=8,column=0,columnspan=2,pady=8)
+        ttk.Label(f,text='Double-click row: name sets active; Eye toggles visibility; Locked toggles lock.\nHeaders: Layer sorts; Eye isolates/shows all; Locked locks/unlocks all.\nEnter renames the active layer; New with an unchanged name increments its number.').grid(row=8,column=0,columnspan=2,pady=8)
         refresh()
 
     def edit_dialog(self):
@@ -1556,8 +1569,9 @@ class Draft:
         self.edit_fields={}; self.edit_widgets={}; self._edit_dirty=set()
 
     def edit_selection(self):
-        return sorted(self.doc.group_members(i for i in set(self.selected)|set(self.doc.point_selection)
-                      if 0<=i<len(self.objects) and self.doc.visible(i)))
+        allowed=self.doc.selectable_ids()
+        members=self.doc.group_members((set(self.selected)|set(self.doc.point_selection)) & allowed)
+        return sorted(i for i in members if not self.doc.layer_locked(i))
 
     def edit_matches(self):
         ids=self.edit_selection()

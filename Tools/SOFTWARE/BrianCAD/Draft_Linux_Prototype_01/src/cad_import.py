@@ -25,7 +25,7 @@ def merge(document,source):
     document.checkpoint(); start=len(document.objects)
     document.layers=candidate.layers; document.objects.extend(pending)
     document.selected=document.group_members(i for i in range(start,len(document.objects)) if document.visible(i))
-    document.point_selection={}
+    document.point_selection={};document.prune_selection()
     return len(pending)
 
 

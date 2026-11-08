@@ -39,22 +39,22 @@ class LayerHeaderUITests(unittest.TestCase):
             self.tree.event_generate('<ButtonRelease-1>',x=x,y=y,time=self.clock+offset+20)
         self.root.update()
     def header(self,column):
-        x=20 if column=='#0' else self.tree.column('#0','width')+self.tree.column('active','width')+30
+        x=20 if column=='#0' else self.tree.column('#0','width')+self.tree.column('active','width')+self.tree.column('locked','width')+30
         self.assertEqual(self.tree.identify_column(x),column);self.assertEqual(self.tree.identify_region(x,10),'heading')
         self.double(x,10)
     def test_sort_reverse_selection_and_refresh_without_dirtying_drawing(self):
         a=self.a;before=a.doc.state();n=len(a.doc.history);selected=str(next(i for i,l in enumerate(a.doc.layers) if l['name']=='Beta'))
-        self.tree.selection_set(selected);self.header('#2')
+        self.tree.selection_set(selected);self.header('#3')
         self.assertEqual(self.names(),sorted(self.names(),key=layer_sort_key));self.assertEqual(self.names()[:2],['2 Parts','10 Ramps'])
         self.assertEqual(self.tree.selection(),(selected,));self.assertEqual(a.doc.state(),before);self.assertEqual(len(a.doc.history),n);self.assertFalse(a.doc.dirty)
-        self.header('#2');self.assertEqual(self.names(),sorted(self.names(),key=layer_sort_key,reverse=True))
+        self.header('#3');self.assertEqual(self.names(),sorted(self.names(),key=layer_sort_key,reverse=True))
         a.doc.add_layer('1 First');a.refresh_layers();self.assertEqual(self.names(),sorted(self.names(),key=layer_sort_key,reverse=True))
-        self.header('#2');self.assertEqual(self.names()[0],'1 First')
+        self.header('#3');self.assertEqual(self.names()[0],'1 First')
     def test_eye_header_isolates_restores_and_row_double_clicks_still_work(self):
         a=self.a;n=len(a.doc.history);self.header('#0')
         self.assertEqual([l['name'] for l in a.doc.layers if l['visible']],[a.doc.active]);self.assertEqual(len(a.doc.history),n+1)
         self.header('#0');self.assertTrue(all(l['visible'] for l in a.doc.layers))
-        self.header('#2')
+        self.header('#3')
         row=str(next(i for i,l in enumerate(a.doc.layers) if l['name']=='Beta'))
         self.tree.see(row);self.root.update();x,y,w,h=self.tree.bbox(row,'name');self.double(x+20,y+h//2)
         self.assertEqual(a.doc.active,'Beta')

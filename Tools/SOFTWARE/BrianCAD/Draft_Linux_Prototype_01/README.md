@@ -410,3 +410,27 @@ selections can be modified together in one undo step. With Copy when transformin
 partial selections produce a new, reshaped copy of the owning object and retain
 the corresponding partial selection. Invalid/collapsed results cancel the entire
 operation. Hidden or locked controls are excluded.
+
+## Layer locks and faster layer naming
+
+The Layers panel has a **Locked** column between Active and Layer. Double-click a
+row's Locked cell to toggle it. Double-click the Locked heading to lock every
+layer, including the active layer; if all are already locked, it unlocks all.
+Mixed states become all locked. Visibility and the active drawing layer stay the
+same.
+
+Locked-layer geometry remains visible and continues to supply object snaps and
+construction guides, but cannot be selected, dragged or edited. Locking a layer
+clears its existing whole-object and control-point selections. A group spanning
+layers is unselectable as a whole if any member is on a locked layer. Individual
+object lock settings remain independent and are preserved when layers unlock.
+Layer locks save in native drawings and support Undo/Redo. Drawing, importing or
+pasting onto a locked layer is allowed; the resulting objects remain unselected.
+
+Press **Enter** in the Layer name box to rename the **active drawing layer**. The
+Rename button continues to rename the highlighted row. Press **New** with an
+unchanged name to generate the next available numbered name: Layer1 → Layer2,
+Ramp007 → Ramp008, or Construction → Construction1. Existing names are skipped;
+after creation the new row is highlighted for another New. Typing a new name
+before pressing New creates that named layer. New does not change the active
+drawing layer.
