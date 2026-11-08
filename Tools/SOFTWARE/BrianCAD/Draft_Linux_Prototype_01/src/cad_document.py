@@ -69,6 +69,21 @@ class Document:
     def visible(self,index):
         return any(l['name']==self.objects[index].get('layer',self.active) and l['visible'] for l in self.layers)
 
+    def layer_locked(self,index):
+        name=self.objects[index].get('layer',self.active)
+        return any(l['name']==name and l.get('locked',False) for l in self.layers)
+
+    def locked(self,index):
+        return self.layer_locked(index) or self.objects[index].get('locked',False)
+
+    def selectable_ids(self):
+        locked={l['name'] for l in self.layers if l.get('locked',False)}
+        visible={l['name'] for l in self.layers if l['visible']}
+        # A cross-layer group remains a unit: never select only its unlocked part.
+        blocked={o['group'] for o in self.objects if o.get('group') and o['layer'] in locked}
+        return {i for i,o in enumerate(self.objects) if o['layer'] in visible and o['layer'] not in locked
+                and o.get('group') not in blocked}
+
     def set_display_unit(self,unit):
         if unit not in UNITS:raise ValueError('Choose a supported drawing unit.')
         if unit==self.display_unit:return False
@@ -82,12 +97,12 @@ class Document:
 
     def editable_selection(self):
         ids=self.group_members(i for i in self.selected if self.visible(i))
-        blocked={self.objects[i]['group'] for i in ids if self.objects[i].get('group') and self.objects[i].get('locked',False)}
-        return sorted(i for i in ids if not self.objects[i].get('locked',False) and self.objects[i].get('group') not in blocked)
+        blocked={self.objects[i]['group'] for i in ids if self.objects[i].get('group') and self.locked(i)}
+        return sorted(i for i in ids if not self.locked(i) and self.objects[i].get('group') not in blocked)
 
     def group_selection(self):
         ids=self.group_members(set(self.selected)|set(self.point_selection))
-        if any(self.objects[i].get('locked',False) for i in ids):raise ValueError('Unlock every selected group member before grouping.')
+        if any(self.locked(i) for i in ids):raise ValueError('Unlock every selected group member before grouping.')
         if len(ids)<2:
             if ids and self.objects[next(iter(ids))]['type']=='polygon':return False
             raise ValueError('Select at least two components to group.')
@@ -98,7 +113,7 @@ class Document:
 
     def ungroup_selection(self):
         ids=self.group_members(set(self.selected)|set(self.point_selection))
-        if any(self.objects[i].get('locked',False) for i in ids):raise ValueError('Unlock every selected group member before ungrouping.')
+        if any(self.locked(i) for i in ids):raise ValueError('Unlock every selected group member before ungrouping.')
         if not any(self.objects[i].get('group') or self.objects[i]['type']=='polygon' for i in ids):return False
         pending=[];selected=set()
         for i,obj in enumerate(self.objects):
@@ -121,25 +136,29 @@ class Document:
         self.selected=set(); self.point_selection={}
 
     def prune_selection(self):
-        self.selected=self.group_members(i for i in self.selected if i<len(self.objects) and self.visible(i))
+        allowed=self.selectable_ids()
+        members=self.group_members(self.selected)
+        blocked={self.objects[i]['group'] for i in members if self.layer_locked(i) and self.objects[i].get('group')}
+        self.selected=self.group_members(i for i in self.selected if i in allowed and self.objects[i].get('group') not in blocked)
         self.point_selection={i:set(keys)&{key for key,_ in controls(self.objects[i])}
                               for i,keys in self.point_selection.items()
-                              if i<len(self.objects) and i not in self.selected and self.visible(i)}
+                              if i in allowed and i not in self.selected}
         self.point_selection={i:keys for i,keys in self.point_selection.items() if keys}
 
     def select_window(self,a,b,extend=False):
         box=[min(a[0],b[0]),min(a[1],b[1]),max(a[0],b[0]),max(a[1],b[1])]
         if not extend: self.clear_selection()
+        self.prune_selection();allowed=self.selectable_ids()
         groups={}
         for i,obj in enumerate(self.objects):
             if obj.get('group'):groups.setdefault(obj['group'],[]).append(i)
         for members in groups.values():
             visible=[i for i in members if self.visible(i)]
-            if visible and all(wholly_inside(self.objects[i],box,self.display_unit) for i in visible):
+            if visible and all(i in allowed for i in visible) and not any(self.layer_locked(i) for i in members) and all(wholly_inside(self.objects[i],box,self.display_unit) for i in visible):
                 self.selected.update(members)
                 for i in members:self.point_selection.pop(i,None)
         for i,obj in enumerate(self.objects):
-            if not self.visible(i) or obj.get('group'): continue
+            if i not in allowed or obj.get('group'): continue
             if wholly_inside(obj,box,self.display_unit):
                 self.selected.add(i); self.point_selection.pop(i,None)
             elif i not in self.selected:
@@ -148,7 +167,7 @@ class Document:
 
     def editable_point_selection(self):
         return {i:keys for i,keys in self.point_selection.items()
-                if i not in self.selected and self.visible(i) and not self.objects[i].get('locked',False)}
+                if i not in self.selected and self.visible(i) and not self.locked(i)}
 
     def selection_updates(self,dx,dy):
         if abs(dx)<1e-12 and abs(dy)<1e-12: return {}
@@ -159,6 +178,7 @@ class Document:
         return updates
 
     def commit_updates(self,updates):
+        if any(self.layer_locked(i) for i in updates):raise ValueError('Unlock the layer before editing its objects.')
         pending={i:self.prepare(obj) for i,obj in updates.items()}
         if not any(obj!=self.objects[i] for i,obj in pending.items()): return False
         self.checkpoint()
@@ -191,13 +211,13 @@ class Document:
         for l in self.layers:
             if l['name']==self.active: l['visible']=True
         start=len(self.objects); self.objects.extend(pending)
-        self.selected=set(range(start,len(self.objects))); self.point_selection={}
+        self.selected=set(range(start,len(self.objects))); self.point_selection={};self.prune_selection()
 
     def divide_objects(self,indices,count):
         from cad_divide import divide_object,segment_count
         count=segment_count(count);ids=set(indices)
         if not ids:raise ValueError('Select at least one object to divide.')
-        if any(not 0<=i<len(self.objects) or not self.visible(i) or self.objects[i].get('locked',False) for i in ids):
+        if any(not 0<=i<len(self.objects) or not self.visible(i) or self.locked(i) for i in ids):
             raise ValueError('Divide requires visible, unlocked objects. Show and unlock every selected group member first.')
         if len(self.objects)+len(ids)*(count-1)>100000:raise ValueError('Divide would exceed 100000 drawing objects.')
         replacements={i:[self.prepare(part) for section in divide_object(self.objects[i],count) for part in section] for i in sorted(ids)}
@@ -224,11 +244,11 @@ class Document:
         candidate=Document();candidate.layers=layers
         pending=[candidate.prepare(dict(o,layer='Dimension',color=layer['drawing_color'])) for o in objects]
         self.checkpoint();self.layers=layers;start=len(self.objects);self.objects.extend(pending)
-        self.selected=set(range(start,len(self.objects)));self.point_selection={}
+        self.selected=set(range(start,len(self.objects)));self.point_selection={};self.prune_selection()
 
     def offset_objects(self,indices,distance,reference):
         from cad_offset import offset
-        if any(not 0<=i<len(self.objects) or not self.visible(i) or self.objects[i].get('locked',False) for i in indices):
+        if any(not 0<=i<len(self.objects) or not self.visible(i) or self.locked(i) for i in indices):
             raise ValueError('Choose visible, unlocked offset sources.')
         objects,approximate=offset([self.objects[i] for i in indices],distance,reference)
         if len(self.objects)+len(objects)>100000: raise ValueError('Offset would exceed 100000 drawing objects.')
@@ -240,7 +260,7 @@ class Document:
         from cad_chamfer import chamfer
         if first==second: raise ValueError('Choose two different segments.')
         for index in (first,second):
-            if not 0<=index<len(self.objects) or not self.visible(index) or self.objects[index].get('locked',False):
+            if not 0<=index<len(self.objects) or not self.visible(index) or self.locked(index):
                 raise ValueError('Choose visible, unlocked segments.')
         a,b,arc=chamfer(self.objects[first],self.objects[second],click_first,click_second,radius)
         for key in ('layer','color','pattern','weight','controls'):
@@ -262,7 +282,7 @@ class Document:
              and self.objects[i]['type'] in BOUNDARIES}
         if not ids: raise ValueError('Select cutting boundaries, then choose Trim.')
         if index in ids: raise ValueError('Cutting boundaries cannot be trimmed while active.')
-        if not self.visible(index) or self.objects[index].get('locked',False):
+        if not self.visible(index) or self.locked(index):
             raise ValueError('The trim target must be visible and unlocked.')
         pieces=[self.prepare(o) for o in trim(self.objects[index],
                                              [self.objects[i] for i in sorted(ids)],click)]
@@ -275,6 +295,7 @@ class Document:
         return pieces
 
     def edit(self,index,obj):
+        if self.layer_locked(index):raise ValueError('Unlock the layer before editing its objects.')
         n=self.prepare(obj)
         self.checkpoint(); self.objects[index]=n
         self.point_selection.pop(index,None)
@@ -334,7 +355,33 @@ class Document:
         self.checkpoint();self.layers.append(layer);self.objects.extend(copies);self.active=target
         return target
 
+    def next_layer_name(self,name=None):
+        name=self.active if name is None else name.strip()
+        match=re.fullmatch(r'(.*?)([0-9]+)',name)
+        base=match[1] if match else name
+        number=int(match[2])+1 if match else 1
+        width=len(match[2]) if match else 1
+        used={l['name'].casefold() for l in self.layers}
+        while True:
+            suffix=str(number).zfill(width)
+            if len(suffix)>255:raise ValueError('Choose a shorter layer name.')
+            target=base[:255-len(suffix)]+suffix
+            if target.casefold() not in used:return target
+            number+=1
+
+    def toggle_layer_lock(self,name):
+        layer=next((l for l in self.layers if l['name']==name),None)
+        if layer is None:raise ValueError('Unknown layer.')
+        self.checkpoint();layer['locked']=not layer.get('locked',False);self.prune_selection()
+
+    def toggle_all_layer_locks(self):
+        locked=not all(l.get('locked',False) for l in self.layers)
+        self.checkpoint()
+        for layer in self.layers:layer['locked']=locked
+        self.prune_selection()
+
     def add_layer(self,name):
+        if len(self.layers)>=1000:raise ValueError('New Layer would exceed 1000 layers.')
         name=name.strip()
         if not name or len(name)>255 or name in [l['name'] for l in self.layers]:
             raise ValueError('Choose a unique layer name of 1–255 characters.')
@@ -410,6 +457,7 @@ class Document:
         for l in layers:
             if not isinstance(l,dict) or not isinstance(l.get('name'),str) or not l['name'].strip() or len(l['name'])>255 or not isinstance(l.get('visible'),bool):
                 raise ValueError('Invalid layer.')
+            if 'locked' in l and not isinstance(l['locked'],bool):raise ValueError('Invalid layer lock.')
             if l['name'] in names: raise ValueError('Duplicate layer name.')
             names.append(l['name'])
         d.layers=copy.deepcopy(layers); d.active=data.get('active_layer','Layer1' if 'Layer1' in names else names[0])

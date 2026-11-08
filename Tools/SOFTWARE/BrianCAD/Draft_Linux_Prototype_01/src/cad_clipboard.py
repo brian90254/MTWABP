@@ -51,5 +51,5 @@ def place(document,data,point):
     candidate=Document();candidate.layers=layers;candidate.active=document.active
     pending=[candidate.prepare(o) for o in objects]
     document.checkpoint();start=len(document.objects)
-    document.layers=layers;document.objects.extend(pending);document.selected=set(range(start,len(document.objects)));document.point_selection={}
+    document.layers=layers;document.objects.extend(pending);document.selected=set(range(start,len(document.objects)));document.point_selection={};document.prune_selection()
     return len(pending)
