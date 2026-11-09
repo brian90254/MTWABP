@@ -50,8 +50,8 @@ class DXFWorkflowTests(unittest.TestCase):
             with patch('draft.filedialog.asksaveasfilename',return_value=str(path)) as save:
                 self.find(a.export_window,'TButton','Export').invoke()
             entities=list(ezdxf.readfile(path).modelspace())
-            self.assertEqual([e.dxftype() for e in entities],['LINE','CIRCLE'])
-            self.assertEqual(tuple(entities[1].dxf.center),(3,0,0))
+            self.assertEqual([e.dxftype() for e in entities],['CIRCLE'])
+            self.assertEqual(tuple(entities[0].dxf.center),(3,0,0))
             self.assertEqual(save.call_args.kwargs['initialfile'],'playfield.dxf')
         self.assertEqual(a.doc.state(),before); self.assertEqual(a.doc.history,history); self.assertEqual(a.doc.future,future)
         self.assertEqual(a.selected,{2}); self.assertEqual(a.path,'/tmp/playfield.draft.json')

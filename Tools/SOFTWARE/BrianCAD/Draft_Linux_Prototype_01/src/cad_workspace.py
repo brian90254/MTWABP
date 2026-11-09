@@ -236,3 +236,38 @@ class WorkspacePanels:
         if record['top']:record['top'].destroy()
         else:self.right.forget(record['outer']);record['outer'].destroy()
         if not self.right.panes() and str(self.right) in tuple(map(str,self.body.panes())):self.body.forget(self.right)
+
+
+class HoverHint:
+    """A non-modal hint after one second of stationary hovering."""
+    def __init__(self,widget,text,delay=1000):
+        self.widget=widget;self.text=text;self.delay=delay;self.job=None;self.popup=None
+        widget.bind('<Enter>',self.schedule,add='+')
+        widget.bind('<Motion>',self.schedule,add='+')
+        for event in ('<Leave>','<ButtonPress>','<Unmap>'):
+            widget.bind(event,self.hide,add='+')
+        widget.bind('<Destroy>',lambda e:self.hide() if e.widget is widget else None,add='+')
+
+    def schedule(self,event=None):
+        self.hide();self.job=self.widget.after(self.delay,self.show)
+
+    def hide(self,event=None):
+        if self.job is not None:
+            try:self.widget.after_cancel(self.job)
+            except tk.TclError:pass
+            self.job=None
+        if self.popup is not None:
+            try:self.popup.destroy()
+            except tk.TclError:pass
+            self.popup=None
+
+    def show(self):
+        self.hide()
+        if not self.widget.winfo_exists() or not self.widget.winfo_ismapped():return
+        tip=tk.Toplevel(self.widget);self.popup=tip;tip.wm_overrideredirect(True)
+        tk.Label(tip,text=self.text,background=INK,foreground='white',padx=9,pady=6).pack()
+        tip.update_idletasks()
+        x=min(self.widget.winfo_rootx(),tip.winfo_screenwidth()-tip.winfo_reqwidth()-8)
+        y=self.widget.winfo_rooty()+self.widget.winfo_height()+5
+        if y+tip.winfo_reqheight()>tip.winfo_screenheight():y=self.widget.winfo_rooty()-tip.winfo_reqheight()-5
+        tip.geometry(f'+{max(0,x)}+{max(0,y)}')

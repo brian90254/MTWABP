@@ -9,7 +9,7 @@ import os
 import tempfile
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, simpledialog, font as tkfont
-from cad_workspace import setup_style,tool_icon,WorkspacePanels
+from cad_workspace import setup_style,tool_icon,WorkspacePanels,HoverHint
 import cad_geometry as geo
 import cad_selection as selection
 import cad_trim
@@ -28,7 +28,7 @@ from cad_units import UNITS, parse_number, format_value, display_value, field_ki
 from snap_tracking import SnapHistory
 from cad_geometry import dist as distance, anchors, hit_distance
 from cad_document import Document, COLORS, layer_sort_key
-from cad_tools import METHODS, THREE, DEFAULTS, LABELS, fields_for, point_values, construct
+from cad_tools import TOOL_KEYS, METHODS, THREE, DEFAULTS, LABELS, fields_for, point_values, construct
 from grid_snap import grid_values, grid_positions, grid_candidates, line_grid_candidates, alignment_candidates
 
 
@@ -86,6 +86,7 @@ class Draft:
         if root.tk.call('tk','windowingsystem')=='aqua':
             root.bind('<Command-Shift-G>',lambda e:self.shortcut(e,self.ungroup_selected))
         root.bind('<Escape>',self.escape)
+        root.bind_all('<KeyPress>',self.tool_shortcut,add='+')
         self.draw()
         for panel in self.panels.preferences.data['open']:
             (self.layers_dialog if panel=='layers' else self.edit_dialog)()
@@ -184,7 +185,7 @@ class Draft:
         self.parameter_frame.pack(fill='x')
         body=ttk.Frame(self.root);body.pack(fill='both',expand=True)
         side=ttk.Frame(body,padding=10);side.pack(side='left',fill='y')
-        self.tool_buttons={};self.tool_icons={}
+        self.tool_buttons={};self.tool_icons={};self.tool_hints={}
         groups=[('SELECT & MEASURE',['Select','Dimension']),
                 ('DRAW',['Lines','Arcs','Circles','Ovals','Polygons','Splines']),
                 ('MODIFY',['Trim','Chamfer','Offset','Modify'])]
@@ -197,6 +198,8 @@ class Draft:
                     variable=self.family,value=family,command=self.family_changed,width=10)
                 button.grid(row=i//2,column=i%2,sticky='ew',padx=2,pady=2)
                 self.tool_buttons[family]=button
+                key=next(k for k,v in TOOL_KEYS.items() if v==family)
+                self.tool_hints[family]=HoverHint(button,f'{family} — {key.upper()}')
         self.select_icon=self.tool_icons['Select']
         ttk.Separator(side).pack(fill='x',pady=10)
         ttk.Label(side,text='DRAWING PEN',style='Muted.TLabel').pack(anchor='w',pady=(0,4))
@@ -248,6 +251,16 @@ class Draft:
             self.origin[0]+=(size[0]-old[0])/2;self.origin[1]+=(size[1]-old[1])/2
         self._canvas_size=size;self.draw()
 
+    def tool_shortcut(self,event):
+        if event.widget.winfo_class() in ('Entry','TEntry','Text','TCombobox','Spinbox','TSpinbox'):return
+        modifiers=0x4|0x8|0x40|0x80
+        if self.root.tk.call('tk','windowingsystem')=='aqua':modifiers|=0x10
+        if event.state & modifiers or self.root.grab_current() is not None:return
+        family=TOOL_KEYS.get(event.keysym.lower())
+        if family is None:return
+        self.family.set(family);self.family_changed();self.canvas.focus_set()
+        return 'break'
+
     def shortcut(self,event,fn):
         if event.widget.winfo_class() in ['Entry','TEntry','Text','TCombobox'] and fn in [self.undo,self.redo,self.copy_objects,self.paste_objects]: return
         fn(); return 'break'
@@ -273,6 +286,7 @@ class Draft:
         return 'break'
 
     def family_changed(self):
+        for hint in getattr(self,'tool_hints',{}).values():hint.hide()
         family=self.family.get();methods=METHODS[family]
         method=getattr(self,'_tool_methods',{}).get(family,methods[0])
         self.tool.set(method if method in methods else methods[0]);self.method_box.configure(values=methods)
@@ -1773,8 +1787,9 @@ class Draft:
                         variable=scope,value='all').pack(anchor='w',pady=4)
         ttk.Radiobutton(frame,text=f"Selected objects ({len(snapshot['selected'])} objects)",variable=scope,
                         value='selected',state='normal' if snapshot['selected'] else 'disabled').pack(anchor='w',pady=4)
-        ttk.Label(frame,text='Units: inches. Whole drawing includes hidden layers.').pack(anchor='w',pady=(8,2))
-        ttk.Label(frame,text='Control-point selections export their entire objects.').pack(anchor='w',pady=(0,8))
+        unit=snapshot['display_unit']
+        ttk.Label(frame,text=f'Units: {UNITS[unit][0]} ({unit}), from drawing preferences.\nWhole drawing includes hidden layers.').pack(anchor='w',pady=(8,2))
+        ttk.Label(frame,text='Selection only includes whole objects; control-point selections are excluded.').pack(anchor='w',pady=(0,8))
         buttons=ttk.Frame(frame); buttons.pack(fill='x')
         def export():
             try: cad_dxf.require_ezdxf()
@@ -1789,8 +1804,8 @@ class Draft:
             except Exception as ex:
                 messagebox.showerror('Export DXF','Could not export DXF:\n'+str(ex),parent=dlg); return
             dlg.destroy()
-            text=f"Exported {report['objects']} objects to:\n{path}"
-            if report['approximated']: text+=f"\n\n{report['approximated']} high-degree spline(s) exported as polylines (0.00001 inch tolerance)."
+            text=f"Exported {report['objects']} objects in {unit} to:\n{path}"
+            if report['approximated']: text+=f"\n\n{report['approximated']} high-degree spline(s) exported as polylines ({format_value(cad_dxf.FLATTEN_TOLERANCE,unit)} {unit} tolerance)."
             messagebox.showinfo('Export DXF',text,parent=self.root)
         ttk.Button(buttons,text='Cancel',command=dlg.destroy).pack(side='right',padx=4)
         ttk.Button(buttons,text='Export...',command=export).pack(side='right',padx=4)

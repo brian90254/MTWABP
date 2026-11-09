@@ -92,12 +92,12 @@ class DXFTests(unittest.TestCase):
             error=min(g.dist(q,g.project(q,a,b,True)) for a,b in zip(points,points[1:]))
             self.assertLessEqual(error,FLATTEN_TOLERANCE*1.01)
 
-    def test_selected_scope_partial_owners_snapshot_and_empty(self):
+    def test_selected_scope_excludes_partial_owners_snapshot_and_empty(self):
         d=self.make([{'type':'circle','center':[i*3,0],'radius':1} for i in range(3)])
         d.selected={0}; d.point_selection={1:{'radius'}}; snap=snapshot_drawing(d)
         d.objects[0]['center']=[999,999]; d.selected={2}
-        out,report=build_dxf(snap,True); self.assertEqual(report['objects'],2)
-        self.assertEqual([tuple(e.dxf.center) for e in out.modelspace()],[(0,0,0),(3,0,0)])
+        out,report=build_dxf(snap,True); self.assertEqual(report['objects'],1)
+        self.assertEqual([tuple(e.dxf.center) for e in out.modelspace()],[(0,0,0)])
         self.assertEqual(build_dxf(snap)[1]['objects'],3)
         snap['selected']=[]
         with self.assertRaises(ValueError): build_dxf(snap,True)
