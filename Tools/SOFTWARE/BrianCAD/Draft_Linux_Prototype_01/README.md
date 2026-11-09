@@ -65,7 +65,7 @@ Collinear or coincident points and ambiguous tangent cases show an error instead
 
 Each layer remembers the last drawing pen selected for it. Activating a layer restores its pen, and native drawings save these settings. Layers without a remembered pen start with Black, except Dimension, which starts with Blue.
 
-**Layers...** opens a floating list with eye icons, an active marker, and layer names.
+**Layers...** opens a dockable panel with eye icons, active and lock markers, and layer names. Use Float in its header for a separate window.
 
 - Single-click highlights a row without changing the active layer.
 - Double-click the name to **Set Layer**; double-click the eye to show/hide it. Buttons offer the same actions.
@@ -434,3 +434,40 @@ Ramp007 → Ramp008, or Construction → Construction1. Existing names are skipp
 after creation the new row is highlighted for another New. Typing a new name
 before pressing New creates that named layer. New does not change the active
 drawing layer.
+
+
+## Workspace layout
+
+The sidebar groups icon-and-label tool buttons into Select & Measure, Draw, and
+Modify. The selected tool has a highlighted tile. A restrained light theme uses
+consistent spacing and readable labels while preserving the white canvas and
+drawing colors. Icons are drawn by the application; there are no additional
+packages or image files to install.
+
+Construction methods now sit immediately above the bottom numeric fields.
+Clockwise is shown only for Center + start + end arcs, and Copy when transforming
+only for Modify. Tools still remember their last selected method. For two-point
+and connected lines, Start X/Y and Length/Angle are shown first; **More fields**
+reveals End X/Y and dX/dY without discarding values. Tab and Shift+Tab follow the
+visible fields, and programmatically focusing an advanced field reveals it.
+Other methods retain the coordinates required to construct their geometry.
+
+**Layers** and **Properties** buttons, the existing menu commands, and the new
+View menu entries open panels on the right. Drag the divider beside the canvas to
+adjust width and the divider between panels to adjust their heights. Each panel
+has **Float**, **Dock**, and **Close** controls. Both docked panels and floating
+windows remain non-modal, allowing drawing and selection to continue. Properties
+keeps Apply visible while its fields scroll; pending field edits, layer name edits,
+and layer selection survive docking changes. The canvas preserves its center as
+panels open/close or the drawing controls change height.
+
+Panel modes, floating positions/sizes, dock width and vertical split are stored in
+a separate workspace.json beside the recent-files preferences. Open panels are
+restored after a normal application close. Settings are best effort: invalid or
+unwritable preferences do not prevent drawing. Newly installed workspaces start
+with panels closed so the full canvas is immediately available.
+
+This change does not alter drawing file formats, geometry algorithms, snaps, or
+the right-click/selection workflows. The interface work is isolated to a single
+pull-request commit so reverting that commit restores the previous layout; saved
+drawings remain compatible. A reverted version simply ignores workspace.json.

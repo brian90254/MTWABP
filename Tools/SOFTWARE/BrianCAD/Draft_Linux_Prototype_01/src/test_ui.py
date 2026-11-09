@@ -184,6 +184,7 @@ class WorkflowTests(unittest.TestCase):
         a=self.app; a.scale=100; a.origin=[400,300]
         a.snap.set(False); a.grid_snap.set(False)
         self.choose('Arcs','Start tangent + end')
+        a.origin=[400,300]  # Exact-pixel fixture after the contextual controls resize.
         self.assertEqual(list(a.params),['x','y','x2','y2','x3','y3'])
         for p in [[0,0],[2,0]]:
             self.trim_mouse(p)
@@ -353,6 +354,7 @@ class WorkflowTests(unittest.TestCase):
                 self.assertEqual(self.app.tool.get(),method)
                 self.assertTrue(self.app.status.get())
         self.choose('Lines','Two points')
+        self.app.more_fields.set(True);self.app.toggle_more_fields();self.root.update()
         entries=[]
         for frame in self.app.parameter_frame.winfo_children():
             entries.extend(w for w in frame.winfo_children() if w.winfo_class()=='TEntry')
