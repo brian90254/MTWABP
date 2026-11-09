@@ -9040,7 +9040,7 @@
       "type": "line",
       "a": [
         100.0,
-        21.202412872
+        21.2802291897
       ],
       "b": [
         100.0,
@@ -9420,7 +9420,7 @@
       "type": "line",
       "a": [
         100.0,
-        21.202412872
+        21.2802291897
       ],
       "b": [
         100.0,
@@ -38606,7 +38606,7 @@
     },
     {
       "name": "Dimension",
-      "visible": true,
+      "visible": false,
       "drawing_color": "#2465d8"
     },
     {
@@ -38615,11 +38615,11 @@
     },
     {
       "name": "0_CONSTRUCTION",
-      "visible": true
+      "visible": false
     },
     {
       "name": "1_SEW_LINE",
-      "visible": true,
+      "visible": false,
       "drawing_color": "#198548"
     },
     {
