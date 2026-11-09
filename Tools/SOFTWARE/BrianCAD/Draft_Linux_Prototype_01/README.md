@@ -188,9 +188,9 @@ python3 -m pip install -r requirements-dxf.txt
 
 For example, use `python3.13 -m pip ...` if you launch with Python 3.13. The requirements select the older ezdxf 1.3 series on Python 3.9 and the 1.4 series or newer compatible 1.x releases on newer Python. Drafting and JSON save/open continue to work without ezdxf; attempting DXF export then shows the installation command for the running interpreter.
 
-Choose **File → Export...**, choose **Whole drawing** or **Selected objects**, then **Export...** and choose a `.dxf` filename. Whole drawing is the default and includes hidden and locked objects; hidden layers remain off in the DXF. Selected-only export is disabled with no selection. Selected handles export their complete owning objects, once per object. The drawing and selection are captured when the export dialog opens. Export includes committed geometry, without grid lines, snap guides, handles, pending construction previews, or unapplied Edit fields.
+Choose **File → Export...**, choose **Whole drawing** or **Selected objects**, then **Export...** and choose a `.dxf` filename. Whole drawing is the default and includes hidden and locked objects; hidden layers remain off in the DXF. Selected-only export includes only whole-object selections and is disabled if none are selected. Objects with only control points selected are excluded. The drawing and selection are captured when the export dialog opens. Export includes committed geometry, without grid lines, snap guides, handles, pending construction previews, or unapplied Edit fields.
 
-Exports use DXF R2018, with coordinates and units in **inches**, preserving the origin and scale. Lines, circles, clockwise/counterclockwise arcs, polygons, rotated ovals, trimmed oval arcs, Bézier splines, and open/closed through-point splines are supported. Clockwise curves are written with equivalent counterclockwise DXF parameterization. Through-point splines become exact cubic spline spans. Béziers up to degree 10 remain exact SPLINE entities; higher degrees become polylines within **0.00001 inch** of the curve for reader compatibility, identified in the completion message.
+Exports use DXF R2018 in the current drawing units from Edit → Units (inches, millimeters, centimeters, meters, or feet). Coordinates, radii, annotation sizes and custom dash lengths are converted, and the DXF unit header is set accordingly, preserving the origin and physical size. Line weights remain physical widths. Lines, circles, clockwise/counterclockwise arcs, polygons, rotated ovals, trimmed oval arcs, Bézier splines, and open/closed through-point splines are supported. Clockwise curves are written with equivalent counterclockwise DXF parameterization. Through-point splines become exact cubic spline spans. Béziers up to degree 10 remain exact SPLINE entities; higher degrees become polylines within **0.00001 inch** of the curve for reader compatibility, identified in the completion message.
 
 Layer assignments and visibility, true-color pen values, dashed/dotted patterns, and the nearest supported DXF lineweight are preserved. DXF-incompatible layer names are sanitized, with distinct names for case-insensitive collisions. Unused layers are omitted. DXF is a geometry export; keep the JSON drawing for BrianCAD editing state and object flags. Like the referenced BallyPlayfieldDesigner exporter, this uses ezdxf and an R2018 output document, creating entities directly from BrianCAD geometry rather than importing existing DXF documents.
 
@@ -338,7 +338,7 @@ Numeric fields accept `+`, `-`, `*`, `/`, unary signs and parentheses, using sta
 
 Inches also accept `in`, `inch`, `inches` or `"`; feet accept `ft` or `'`; metric unit names and common plurals are supported. Numeric terms with explicit units are converted to the active display units before calculator arithmetic. Products of lengths/areas and other dimensional algebra are not a separate supported quantity system. Drawing-parameter and inspector fields normalize on leaving the field or applying/pressing Enter; incomplete expressions stay editable and are reported on Apply. Grid and Divide dialogs calculate their expressions on Apply. Invalid expressions and division by zero leave the drawing unchanged.
 
-Parsing uses a bounded arithmetic grammar, without executing Python or accepting functions, variables or exponentiation. No new dependency is needed. Geometry, native coordinate storage, clipboard geometry and DXF export remain physically expressed in inches internally; `display_unit` is a separate native-file preference. Imports/paste retain the destination drawing's display-unit preference and existing physical conversion behavior.
+Parsing uses a bounded arithmetic grammar, without executing Python or accepting functions, variables or exponentiation. No new dependency is needed. Geometry, native coordinate storage and clipboard geometry remain physically expressed in inches internally; DXF export converts to the chosen display units; `display_unit` is a separate native-file preference. Imports/paste retain the destination drawing's display-unit preference and existing physical conversion behavior.
 
 
 ## Session drawing defaults
@@ -480,3 +480,37 @@ This change does not alter drawing file formats, geometry algorithms, snaps, or
 the right-click/selection workflows. The interface work is isolated to a single
 pull-request commit so reverting that commit restores the previous layout; saved
 drawings remain compatible. A reverted version simply ignores workspace.json.
+
+
+## Tool shortcuts and hover hints
+
+With focus outside text-entry controls, press a single letter to select a tool:
+
+| Key | Tool |
+|---|---|
+| V | Select |
+| D | Dimension |
+| L | Lines |
+| A | Arcs |
+| C | Circles |
+| E | Ovals (ellipses) |
+| P | Polygons |
+| S | Splines |
+| T | Trim |
+| F | Chamfer (fillet) |
+| O | Offset |
+| M | Modify |
+
+The tool's remembered construction method is restored, just as when clicking its
+sidebar button. Hover over a tool without moving for one second to see its name
+and shortcut. Leaving, clicking, switching tools or closing the widget cancels
+the hint. Hints do not capture focus.
+
+Letters typed in entries, combo boxes, spin boxes or text controls do not switch
+tools. Modal dialogs also suspend tool shortcuts. Existing Ctrl/Command commands
+for Save, Copy, Paste, etc. remain unchanged. Single-letter shortcuts also work
+from floating Layers/Properties panels when focus is not in a text-entry control.
+
+The DXF dialog displays the drawing unit captured when it opens. Selection-only
+export ignores partial control-point selections; this does not change Copy/Paste
+or editing behavior.

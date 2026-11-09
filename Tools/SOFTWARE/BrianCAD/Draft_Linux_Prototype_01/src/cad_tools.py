@@ -16,6 +16,9 @@ METHODS={
     'Splines':['Through points','Closed through points','Bezier controls'],
     'Modify':['Move','Rotate','Scale','Mirror'],
 }
+# Single-letter shortcuts; Ctrl/Cmd combinations remain document commands.
+TOOL_KEYS={'v':'Select','d':'Dimension','t':'Trim','f':'Chamfer','o':'Offset',
+           'l':'Lines','a':'Arcs','c':'Circles','e':'Ovals','p':'Polygons','s':'Splines','m':'Modify'}
 THREE={'Start tangent + end','Center + start + end','Three-point arc','Three-point circle','Center + axis + width','Axis endpoints + width'}
 DEFAULTS={'x':0,'y':0,'x2':1,'y2':0,'x3':1,'y3':1,'dx':1,'dy':0,'length':1,'angle':0,
           'diameter':1,'radius':.25,'offset':.25,'sides':6,'factor':1}

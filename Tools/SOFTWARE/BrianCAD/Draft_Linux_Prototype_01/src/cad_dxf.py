@@ -11,6 +11,7 @@ import cad_geometry as g
 import cad_selection as selection
 from curve_trim import split
 from cad_document import COLORS
+from cad_units import UNITS
 
 MAX_NATIVE_SPLINE_DEGREE=10  # compatible with ezdxf readers, including C extensions
 FLATTEN_TOLERANCE=1e-5  # inches, for Béziers above common CAD degree limits
@@ -29,7 +30,7 @@ def require_ezdxf():
 
 
 def snapshot_drawing(document):
-    selected=sorted(i for i in set(document.selected)|set(document.point_selection) if 0<=i<len(document.objects))
+    selected=sorted(i for i in set(document.selected) if 0<=i<len(document.objects))
     return copy.deepcopy({'objects':document.objects,'layers':document.layers,'selected':selected,'display_unit':document.display_unit})
 
 
@@ -120,17 +121,29 @@ def build_dxf(snapshot,selected_only=False):
     ids=snapshot['selected'] if selected_only else range(len(snapshot['objects']))
     objects=[snapshot['objects'][i] for i in ids]
     if not objects: raise ValueError('No selected objects to export.' if selected_only else 'The drawing is empty.')
+    unit=snapshot.get('display_unit','in')
+    if unit not in UNITS:raise ValueError('Unsupported export unit.')
+    factor=1/UNITS[unit][1]
     document=ezdxf.new(dxfversion='R2018',setup=True)
-    document.units=1; document.header['$MEASUREMENT']=0; document.header['$LUNITS']=2
-    document.linetypes.new('BRIANCAD_DASHED',dxfattribs={'description':'BrianCAD dashed','pattern':[.375,.25,-.125]})
-    document.linetypes.new('BRIANCAD_DOTTED',dxfattribs={'description':'BrianCAD dotted','pattern':[.125,0.,-.125]})
+    document.units={'in':1,'ft':2,'mm':4,'cm':5,'m':6}[unit]
+    document.header['$MEASUREMENT']=1 if unit in ('mm','cm','m') else 0
+    document.header['$LUNITS']=2
+    document.linetypes.new('BRIANCAD_DASHED',dxfattribs={'description':'BrianCAD dashed','pattern':[value*factor for value in (.375,.25,-.125)]})
+    document.linetypes.new('BRIANCAD_DOTTED',dxfattribs={'description':'BrianCAD dotted','pattern':[value*factor for value in (.125,0.,-.125)]})
     used={o['layer'] for o in objects}
     layers=[layer for layer in snapshot['layers'] if layer['name'] in used]
     layer_map=_layer_names(document,layers); msp=document.modelspace(); approximated=0
     for obj in objects:
         g.validate_geometry(obj)
         approximated+=int(_add_object(msp,obj,_attributes(obj,layer_map),snapshot.get('display_unit','in')))
-    report={'objects':len(objects),'entities':len(msp),'approximated':approximated,'layer_names':layer_map}
+    if factor!=1:
+        from ezdxf.math import Matrix44
+        matrix=Matrix44.scale(factor,factor,factor)
+        for entity in msp:
+            entity.transform(matrix)
+            if entity.dxftype()=='ARC':
+                entity.dxf.start_angle%=360;entity.dxf.end_angle%=360
+    report={'unit':unit,'objects':len(objects),'entities':len(msp),'approximated':approximated,'layer_names':layer_map}
     return document,report
 
 
