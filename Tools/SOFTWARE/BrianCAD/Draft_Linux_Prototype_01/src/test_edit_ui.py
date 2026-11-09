@@ -137,7 +137,7 @@ class EditInspectorTests(unittest.TestCase):
         frame=a.layer_tree.master
         entry=next(w for w in frame.winfo_children() if w.winfo_class()=='TEntry')
         entry.delete(0,'end'); entry.insert(0,'New Group')
-        new=next(w for w in frame.winfo_children() if w.winfo_class()=='TButton' and w.cget('text')=='New')
+        new=next(w for w in a.layer_actions.winfo_children() if w.winfo_class()=='TButton' and w.cget('text')=='New')
         new.invoke(); self.root.update()
         self.assertEqual(a.edit_fields['color'].get(),'Green')
         self.assertIn('New Group',a.edit_widgets['layer'].cget('values'))

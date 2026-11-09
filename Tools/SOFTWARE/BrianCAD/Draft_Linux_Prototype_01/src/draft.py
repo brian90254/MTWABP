@@ -9,6 +9,7 @@ import os
 import tempfile
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, simpledialog, font as tkfont
+from cad_workspace import setup_style,tool_icon,WorkspacePanels
 import cad_geometry as geo
 import cad_selection as selection
 import cad_trim
@@ -86,6 +87,8 @@ class Draft:
             root.bind('<Command-Shift-G>',lambda e:self.shortcut(e,self.ungroup_selected))
         root.bind('<Escape>',self.escape)
         self.draw()
+        for panel in self.panels.preferences.data['open']:
+            (self.layers_dialog if panel=='layers' else self.edit_dialog)()
 
     @property
     def objects(self): return self.doc.objects
@@ -146,6 +149,9 @@ class Draft:
         view.add_command(label='Zoom In',command=lambda:self.zoom_center(1.25))
         view.add_command(label='Zoom Out',command=lambda:self.zoom_center(.8))
         view.add_command(label='Window',command=self.begin_window_zoom)
+        view.add_separator()
+        view.add_command(label='Layers panel',command=self.layers_dialog)
+        view.add_command(label='Properties panel',command=self.edit_dialog)
         self.root.configure(menu=self.menu_bar);self.refresh_recent_menu()
 
     def refresh_recent_menu(self):
@@ -162,43 +168,56 @@ class Draft:
     def remember_drawing(self,path):self.recent_files.remember(path);self.refresh_recent_menu()
 
     def build_ui(self):
+        self.ui_style=setup_style(self.root)
         self.build_menus()
-        ttk.Label(self.root,textvariable=self.status,padding=5).pack(side='bottom',fill='x')
-        self.parameter_frame=ttk.LabelFrame(self.root,text='Drawing parameters  |  inches',padding=6)
-        self.parameter_frame.pack(side='bottom',fill='x')
-        body=ttk.Frame(self.root); body.pack(fill='both',expand=True)
-        side=ttk.Frame(body,padding=10,width=215); side.pack(side='left',fill='y')
-        ttk.Label(side,text='TOOLS',font=('',11,'bold')).pack(anchor='w',pady=(0,6))
-        families=ttk.Frame(side); families.pack(fill='x')
-        # Small arrow with a distinct shaft; keep the image alive with the app.
-        self.select_icon=tk.PhotoImage(master=self.root,width=18,height=20)
-        rows=['#','##','###','####','#####','######','#######','########',
-              '#########','##########','######','##  ###','#   ###','     ###','     ###','      ##']
-        for y,row in enumerate(rows,2):
-            for x,pixel in enumerate(row,2):
-                if pixel=='#': self.select_icon.put('#202b36',to=(x,y))
-        for i,family in enumerate(METHODS):
-            opts={'image':self.select_icon,'compound':'left'} if family=='Select' else {}
-            ttk.Radiobutton(families,**opts,text=family,variable=self.family,value=family,command=self.family_changed).grid(row=i//2,column=i%2,sticky='w',pady=3,padx=(0,8))
-        ttk.Label(side,text='Construction method').pack(anchor='w',pady=(14,3))
-        self.method_box=ttk.Combobox(side,textvariable=self.tool,values=METHODS['Select'],state='readonly',width=25)
-        self.method_box.pack(fill='x'); self.method_box.bind('<<ComboboxSelected>>',lambda e:self.method_changed())
-        self.direction_check=ttk.Checkbutton(side,text='Clockwise center arc',variable=self.clockwise)
-        self.direction_check.pack(anchor='w',pady=(8,2))
-        ttk.Checkbutton(side,text='Copy when transforming',variable=self.copy_mode).pack(anchor='w')
-        ttk.Separator(side).pack(fill='x',pady=12)
-        pens=ttk.Frame(side); pens.pack(fill='x')
-        for i,(name,color) in enumerate(COLORS.items()):
-            ttk.Radiobutton(pens,text=name,variable=self.color,value=color,command=self.choose_pen_color).grid(row=i//2,column=i%2,sticky='w',padx=(0,14))
+        status=ttk.Frame(self.root,padding=(10,5));status.pack(side='bottom',fill='x')
+        ttk.Label(status,textvariable=self.status,style='Muted.TLabel').pack(fill='x')
+        controls=ttk.Frame(self.root,padding=(10,7));controls.pack(side='bottom',fill='x')
+        self.method_bar=ttk.Frame(controls);self.method_bar.pack(fill='x',pady=(0,5))
+        self.tool_heading=tk.StringVar()
+        ttk.Label(self.method_bar,textvariable=self.tool_heading,style='Heading.TLabel').pack(side='left',padx=(0,14))
+        self.method_box=ttk.Combobox(self.method_bar,textvariable=self.tool,values=METHODS['Select'],state='readonly',width=27)
+        self.method_box.bind('<<ComboboxSelected>>',lambda e:self.method_changed())
+        self.direction_check=ttk.Checkbutton(self.method_bar,text='Clockwise',variable=self.clockwise)
+        self.copy_check=ttk.Checkbutton(self.method_bar,text='Copy when transforming',variable=self.copy_mode)
+        self.parameter_frame=ttk.LabelFrame(controls,text='Drawing parameters | inches',padding=6)
+        self.parameter_frame.pack(fill='x')
+        body=ttk.Frame(self.root);body.pack(fill='both',expand=True)
+        side=ttk.Frame(body,padding=10);side.pack(side='left',fill='y')
+        self.tool_buttons={};self.tool_icons={}
+        groups=[('SELECT & MEASURE',['Select','Dimension']),
+                ('DRAW',['Lines','Arcs','Circles','Ovals','Polygons','Splines']),
+                ('MODIFY',['Trim','Chamfer','Offset','Modify'])]
+        for title,families in groups:
+            ttk.Label(side,text=title,style='Muted.TLabel').pack(anchor='w',pady=(5,4))
+            group=ttk.Frame(side);group.pack(fill='x')
+            for i,family in enumerate(families):
+                icon=tool_icon(self.root,family);self.tool_icons[family]=icon
+                button=ttk.Radiobutton(group,text=family,image=icon,compound='left',style='Tool.TRadiobutton',
+                    variable=self.family,value=family,command=self.family_changed,width=10)
+                button.grid(row=i//2,column=i%2,sticky='ew',padx=2,pady=2)
+                self.tool_buttons[family]=button
+        self.select_icon=self.tool_icons['Select']
         ttk.Separator(side).pack(fill='x',pady=10)
+        ttk.Label(side,text='DRAWING PEN',style='Muted.TLabel').pack(anchor='w',pady=(0,4))
+        pens=ttk.Frame(side);pens.pack(fill='x')
+        for i,(name,color) in enumerate(COLORS.items()):
+            ttk.Radiobutton(pens,text=name,variable=self.color,value=color,command=self.choose_pen_color).grid(row=i//2,column=i%2,sticky='w',padx=(0,12),pady=1)
+        ttk.Separator(side).pack(fill='x',pady=9)
         ttk.Checkbutton(side,text='Object snaps / alignment',variable=self.snap).pack(anchor='w')
-        ttk.Checkbutton(side,text='Show grid',variable=self.grid,command=self.draw).pack(anchor='w',pady=3)
+        ttk.Checkbutton(side,text='Show grid',variable=self.grid,command=self.draw).pack(anchor='w')
         ttk.Checkbutton(side,text='Snap to grid',variable=self.grid_snap).pack(anchor='w')
-        ttk.Button(side,text='Grid preferences...',command=self.grid_dialog).pack(fill='x',pady=8)
-        ttk.Label(side,textvariable=self.layer_status,wraplength=200).pack(anchor='w',pady=6)
-        ttk.Label(side,text='Shift-click: add/remove\nDrag blank: window selection\nDrag selection: move\nDouble-click: edit\nWheel: zoom; middle drag: pan\nEsc: cancel; Delete: objects\nRight-click: Select\nSpline: right-click/Enter finishes',wraplength=205).pack(anchor='w',pady=8)
-        self.canvas=tk.Canvas(body,bg='white',highlightthickness=0,cursor='arrow')
+        ttk.Button(side,text='Grid preferences...',command=self.grid_dialog).pack(fill='x',pady=5)
+        panels=ttk.Frame(side);panels.pack(fill='x',pady=6)
+        ttk.Button(panels,text='Layers',command=self.layers_dialog).pack(side='left',fill='x',expand=True,padx=(0,3))
+        ttk.Button(panels,text='Properties',command=self.edit_dialog).pack(side='left',fill='x',expand=True)
+        ttk.Label(side,textvariable=self.layer_status,wraplength=210,style='Muted.TLabel').pack(anchor='w',pady=4)
+        ttk.Label(side,text='Esc: cancel · Right-click: Select',wraplength=215,style='Muted.TLabel').pack(anchor='w',pady=3)
+        workspace=ttk.Panedwindow(body,orient='horizontal');workspace.pack(side='left',fill='both',expand=True)
+        canvas_host=ttk.Frame(workspace)
+        self.canvas=tk.Canvas(canvas_host,bg='white',highlightthickness=0,cursor='arrow')
         self.canvas.pack(fill='both',expand=True)
+        self.panels=WorkspacePanels(self,workspace,canvas_host)
         aqua=self.root.tk.call('tk','windowingsystem')=='aqua'
         # Tk 8.6 Aqua swaps middle/right; Tk 8.7+ uses the standard mapping.
         legacy_aqua=aqua and int(self.root.tk.call('package','vcompare',
@@ -209,7 +228,7 @@ class Draft:
         if aqua:
             self.canvas.bind('<Control-Button-1>',self.right_click)
             self.root.bind('<Control-Button-1>',self.right_click)
-        for event,fn in [('<Configure>',lambda e:self.draw()),('<Motion>',self.motion),('<Enter>',self.motion),
+        for event,fn in [('<Configure>',self.canvas_resized),('<Motion>',self.motion),('<Enter>',self.motion),
                          ('<ButtonPress-1>',self.click),('<B1-Motion>',self.drag_select),
                          ('<ButtonRelease-1>',self.release_select),('<Double-Button-1>',self.double_click),
                          (f'<ButtonPress-{middle_button}>',self.pan_start),(f'<B{middle_button}-Motion>',self.pan_move),
@@ -222,6 +241,12 @@ class Draft:
         if self.root.tk.call('tk','windowingsystem')!='aqua':
             self.canvas.bind('<Button-4>',lambda e:self.zoom(e,1.15))
             self.canvas.bind('<Button-5>',lambda e:self.zoom(e,1/1.15))
+
+    def canvas_resized(self,event):
+        size=(event.width,event.height);old=getattr(self,'_canvas_size',None)
+        if old is not None:
+            self.origin[0]+=(size[0]-old[0])/2;self.origin[1]+=(size[1]-old[1])/2
+        self._canvas_size=size;self.draw()
 
     def shortcut(self,event,fn):
         if event.widget.winfo_class() in ['Entry','TEntry','Text','TCombobox'] and fn in [self.undo,self.redo,self.copy_objects,self.paste_objects]: return
@@ -273,11 +298,22 @@ class Draft:
     def configure_parameters(self):
         for child in self.parameter_frame.winfo_children(): child.destroy()
         self.params={}; self.parameter_entries={}; self.last_parameter=None;self._parameter_unit=self.doc.display_unit
-        fields=fields_for(self.family.get(),self.tool.get())
+        family,method=self.family.get(),self.tool.get()
+        for widget in (self.method_box,self.direction_check,self.copy_check):widget.pack_forget()
+        self.tool_heading.set(family)
+        if len(METHODS[family])>1:self.method_box.pack(side='left',padx=(0,12))
+        if family=='Arcs' and method=='Center + start + end':self.direction_check.pack(side='left',padx=5)
+        if family=='Modify':self.copy_check.pack(side='left',padx=5)
+        fields=fields_for(family,method)
+        advanced=[]
+        if family=='Lines' and method in ('Two points','Connected points'):
+            fields=['x','y','length','angle','x2','y2','dx','dy'];advanced=['x2','y2','dx','dy']
+        self._advanced_cells=[];self.more_fields=tk.BooleanVar(value=False)
         for i,key in enumerate(fields):
             row,col=divmod(i,4)
             cell=ttk.Frame(self.parameter_frame); cell.grid(row=row,column=col,sticky='w',padx=5,pady=3)
             label=LABELS[key]
+            if family=='Lines' and method in ('Two points','Connected points'):label={'x':'Start X','y':'Start Y'}.get(key,label)
             if self.family.get()=='Modify' and key in ['x','y']: label='Pivot '+key.upper() if self.tool.get()!='Move' else 'Ref '+key.upper()
             if self.family.get()=='Arcs' and self.tool.get()=='Center + start + end':
                 label={'x':'Center X','y':'Center Y','x2':'Start X','y2':'Start Y','x3':'End X','y3':'End Y'}.get(key,label)
@@ -293,12 +329,15 @@ class Draft:
             self.parameter_entries[key]=ent
             ent.bind('<FocusOut>',lambda e,k=key:self.commit_parameter_field(k))
             ent.bind('<Return>',lambda e,k=key:self.parameter_return(k))
+            if key in advanced:self._advanced_cells.append(cell);cell.grid_remove()
         saved=getattr(self,'_tool_defaults',{})
         family,method=self.family.get(),self.tool.get()
         if family=='Lines' and method in ('Two points','Connected points') and (family,method,'dx') in saved:
             a=self.field_point(0);b=geo.add(a,[saved[(family,method,'dx')],saved[(family,method,'dy')]])
             self.set_point_fields(1,b);self.update_line_fields(a,b)
         actions=ttk.Frame(self.parameter_frame); actions.grid(row=(len(fields)+3)//4,column=0,columnspan=4,padx=5,pady=4,sticky='w')
+        if advanced:
+            ttk.Checkbutton(actions,text='More fields',variable=self.more_fields,command=self.toggle_more_fields).pack(side='left',padx=(0,10))
         if self.family.get()=='Offset':
             ttk.Button(actions,text='Preview offset',command=self.preview_offset).pack(side='left',padx=3)
             ttk.Button(actions,text='Apply offset',command=self.apply_offset).pack(side='left',padx=3)
@@ -314,11 +353,18 @@ class Draft:
         if not fields:
             hint='Pick two snap points, or an on-line/on-curve snap to measure a whole object.' if self.family.get()=='Dimension' else 'Select cutting boundaries before choosing Trim; click a section to remove. Right-click exits.' if self.family.get()=='Trim' else 'Select objects, then double-click to edit or choose a Modify method.'
             ttk.Label(self.parameter_frame,text=hint).grid(row=0,column=0,sticky='w')
-        self.draw()
+        self.root.update_idletasks();self.draw()
+
+    def toggle_more_fields(self):
+        for cell in self._advanced_cells:
+            if self.more_fields.get():cell.grid()
+            else:cell.grid_remove()
 
     def focus_parameter(self,key):
         entry=getattr(self,'parameter_entries',{}).get(key)
         if entry is not None:
+            if entry.master in getattr(self,'_advanced_cells',[]):
+                self.more_fields.set(True);self.toggle_more_fields()
             entry.focus_set()
             entry.selection_range(0,'end')
 
@@ -1461,11 +1507,11 @@ class Draft:
         if self.layer_window is not None and self.layer_window.winfo_exists(): self.layer_refresh()
 
     def layers_dialog(self):
-        if self.layer_window is not None and self.layer_window.winfo_exists(): self.layer_window.lift(); return
-        dlg=tk.Toplevel(self.root); self.layer_window=dlg; dlg.title('Layers'); dlg.transient(self.root)
+        if self.layer_window is not None and self.layer_window.winfo_exists():self.refresh_layers();self.panels.show('layers');return
+        dlg=self.panels.create('layers','Layers',self.close_layers);self.layer_window=self.panels.panels['layers']['outer']
         f=ttk.Frame(dlg,padding=12); f.pack(fill='both',expand=True)
-        tree=ttk.Treeview(f,columns=('active','locked','name'),show='tree headings',selectmode='browse',height=13)
-        tree.heading('#0',text='Eye'); tree.column('#0',width=45,stretch=False)
+        tree=ttk.Treeview(f,columns=('active','locked','name'),show='tree headings',selectmode='browse',height=3)
+        tree.heading('#0',text='Eye'); tree.column('#0',width=36,stretch=False)
         self.layer_icons=[]
         for visible in (False,True):
             icon=tk.PhotoImage(master=dlg,width=18,height=14)
@@ -1475,19 +1521,20 @@ class Draft:
                     eye=(.65<ellipse<1.05 or (x-8.5)**2+(y-6.5)**2<5) if visible else (abs(y-6.5)<1 and 1<x<17) or (abs(y-x*.6-1)<.8 and 1<x<17)
                     if eye: icon.put('#273543',to=(x,y))
             self.layer_icons.append(icon)
-        for col,title,width in [('active','Active',55),('locked','Locked',65),('name','Layer',210)]:
+        for col,title,width in [('active','Active',50),('locked','Locked',56),('name','Layer',170)]:
             tree.heading(col,text=title); tree.column(col,width=width,anchor='w')
         self.layer_tree=tree
-        tree.grid(row=0,column=0,rowspan=6,sticky='nsew')
+        tree.grid(row=0,column=0,columnspan=3,sticky='nsew')
         f.columnconfigure(0,weight=1); f.rowconfigure(0,weight=1)
-        rename=tk.StringVar(); ttk.Label(f,text='Layer name').grid(row=6,column=0,sticky='w',pady=(8,0))
+        rename=tk.StringVar();ttk.Label(f,text='Name').grid(row=1,column=0,sticky='w',pady=(5,0))
         self.layer_name=rename;self.layer_name_entry=ttk.Entry(f,textvariable=rename)
-        self.layer_name_entry.grid(row=7,column=0,sticky='ew')
+        self.layer_name_entry.grid(row=1,column=1,columnspan=2,sticky='ew',pady=(5,0))
         def selected_name():
             items=tree.selection()
             if not items: raise ValueError('Highlight a layer first.')
             return tree.item(items[0],'values')[-1]
-        sort_reverse=None
+        self._layer_highlight_name=None
+        sort_reverse=getattr(self,'_layer_sort_reverse',None)
         def refresh():
             keep=selected_name() if tree.selection() else self.doc.active
             if keep not in [l['name'] for l in self.doc.layers]: keep=self.doc.active
@@ -1496,7 +1543,7 @@ class Draft:
             if sort_reverse is not None:rows.sort(key=lambda item:layer_sort_key(item[1]['name']),reverse=sort_reverse)
             for i,l in rows:
                 key=str(i); tree.insert('', 'end',iid=key,image=self.layer_icons[int(l['visible'])],values=('*' if l['name']==self.doc.active else '','Yes' if l.get('locked',False) else '',l['name']))
-                if l['name']==keep: tree.selection_set(key)
+                if l['name']==keep:tree.selection_set(key);tree.see(key)
         self.layer_refresh=refresh
         def action(kind):
             try:
@@ -1524,18 +1571,21 @@ class Draft:
                     self.doc.delete_layer(name)
                 refresh(); self.cancel()
             except ValueError as ex: messagebox.showerror('Layers',str(ex),parent=dlg)
+        layer_actions=ttk.Frame(f);self.layer_actions=layer_actions;layer_actions.grid(row=2,column=0,columnspan=3,sticky='ew',pady=6)
         for i,(label,kind) in enumerate([('New','new'),('Delete','delete'),('Show / Hide','hide'),('Set Layer','set'),('Rename','rename'),('Duplicate Layer','duplicate')]):
-            ttk.Button(f,text=label,command=lambda k=kind:action(k)).grid(row=i,column=1,padx=(10,0),pady=4,sticky='ew')
+            ttk.Button(layer_actions,text=label,command=lambda k=kind:action(k)).grid(row=i//3,column=i%3,padx=2,pady=3,sticky='ew')
         self.layer_name_entry.bind('<Return>',lambda e:(action('rename_active'),'break')[1])
         def highlight(e):
-            if tree.selection(): rename.set(selected_name())
+            if tree.selection():
+                name=selected_name()
+                if name!=self._layer_highlight_name:self._layer_highlight_name=name;rename.set(name)
         def double(e):
             nonlocal sort_reverse
             column=tree.identify_column(e.x)
             if tree.identify_region(e.x,e.y)=='heading':
                 if column=='#3':
                     current=[tree.item(row,'values')[-1] for row in tree.get_children()]
-                    sort_reverse=current==sorted(current,key=layer_sort_key)
+                    sort_reverse=current==sorted(current,key=layer_sort_key);self._layer_sort_reverse=sort_reverse
                     refresh()
                 elif column=='#0':
                     self.doc.toggle_other_layers();refresh();self.cancel()
@@ -1547,24 +1597,52 @@ class Draft:
                 tree.selection_set(row); action('hide' if column=='#0' else 'lock' if column=='#2' else 'set')
             return 'break'
         tree.bind('<<TreeviewSelect>>',highlight); tree.bind('<Double-1>',double)
-        ttk.Label(f,text='Double-click row: name sets active; Eye toggles visibility; Locked toggles lock.\nHeaders: Layer sorts; Eye isolates/shows all; Locked locks/unlocks all.\nEnter renames the active layer; New with an unchanged name increments its number.').grid(row=8,column=0,columnspan=2,pady=8)
-        refresh()
+        ttk.Label(f,text='Double-click cells to activate, show/hide or lock. Headers apply to all. Enter renames active layer.',
+                  wraplength=325,style='Muted.TLabel').grid(row=3,column=0,columnspan=3,pady=5,sticky='w')
+        refresh();self.panels.rebind('layers')
+
+    def close_layers(self):
+        self.panels.remove('layers');self.layer_window=None
+
+    def toggle_panel(self,key):
+        scroll=self.panels.panels[key]['canvas'].yview()[0]
+        if key=='layers':
+            selected=self.layer_tree.selection()
+            name=self.layer_tree.item(selected[0],'values')[-1] if selected else self.doc.active
+            text=self.layer_name.get()
+        else:
+            draft={k:v.get() for k,v in self.edit_fields.items() if k in self._edit_dirty}
+        self.panels.remember()
+        saved=self.panels.preferences.data['panels'][key]
+        saved['mode']='dock' if saved['mode']=='float' else 'float'
+        self.panels.preferences.save()
+        if key=='layers':
+            self.close_layers();self.layers_dialog()
+            row=next((row for row in self.layer_tree.get_children() if self.layer_tree.item(row,'values')[-1]==name),None)
+            if row:self.layer_tree.selection_set(row);self.layer_tree.see(row)
+            self.root.update_idletasks();self._layer_highlight_name=name;self.layer_name.set(text)
+        else:
+            self.close_edit();self.edit_dialog()
+            for k,value in draft.items():
+                if k in self.edit_fields:self.edit_fields[k].set(value)
+        self.root.update_idletasks();self.panels.panels[key]['canvas'].yview_moveto(scroll)
+
 
     def edit_dialog(self):
         if self.edit_window is not None and self.edit_window.winfo_exists():
-            self.refresh_edit(); self.edit_window.lift(); return
-        dlg=tk.Toplevel(self.root); self.edit_window=dlg; dlg.title('Edit objects'); dlg.transient(self.root)
-        self.edit_frame=ttk.Frame(dlg,padding=14); self.edit_frame.pack(fill='both',expand=True)
-        buttons=ttk.Frame(dlg,padding=(14,0,14,14)); buttons.pack(fill='x')
+            self.refresh_edit(); self.panels.show('properties'); return
+        dlg=self.panels.create('properties','Properties',self.close_edit);self.edit_window=self.panels.panels['properties']['outer']
+        self.edit_frame=ttk.Frame(dlg,padding=10); self.edit_frame.pack(fill='both',expand=True)
+        self.edit_frame.columnconfigure(1,weight=1)
+        buttons=ttk.Frame(self.edit_window,padding=(10,7));buttons.pack(side='bottom',fill='x',before=self.panels.panels['properties']['canvas'].master)
         ttk.Button(buttons,text='Close',command=self.close_edit).pack(side='right',padx=5)
         self.edit_apply=ttk.Button(buttons,text='Apply',command=self.apply_edit); self.edit_apply.pack(side='right')
-        dlg.protocol('WM_DELETE_WINDOW',self.close_edit)
-        dlg.bind('<Escape>',lambda e:(self.close_edit(),'break')[1])
-        dlg.bind('<Return>',lambda e:self.apply_edit())
+        self.panels.bind('properties','<Escape>',lambda e:(self.close_edit(),'break')[1])
+        self.panels.bind('properties','<Return>',lambda e:(self.apply_edit(),'break')[1])
         self._edit_doc=None; self.refresh_edit()
 
     def close_edit(self):
-        if self.edit_window is not None and self.edit_window.winfo_exists(): self.edit_window.destroy()
+        self.panels.remove('properties')
         self.edit_window=None; self._edit_doc=None; self._edit_originals=[]
         self.edit_fields={}; self.edit_widgets={}; self._edit_dirty=set()
 
@@ -1604,13 +1682,13 @@ class Draft:
             text=cad_properties.display(vals[0],kind) if all(v==vals[0] for v in vals) else ''
             self._edit_initial[key]=text
             if key=='weight':label=f'Line width ({self.doc.display_unit})'
-            ttk.Label(self.edit_frame,text=label).grid(row=row,column=0,sticky='w',padx=(0,12),pady=3)
+            ttk.Label(self.edit_frame,text=label,wraplength=130).grid(row=row,column=0,sticky='w',padx=(0,12),pady=3)
             var=tk.StringVar(value=text); self.edit_fields[key]=var
             options=cad_properties.choices(key,self._edit_layers)
             if key=='weight':options=[format_value(float(value),self.doc.display_unit) for value in options]
             if key=='color': options+=sorted({v['color'] for v in properties if v['color'] not in options})
-            widget=(ttk.Combobox(self.edit_frame,textvariable=var,values=['']+options,state='normal' if key in ('color','weight') else 'readonly',width=27)
-                    if options is not None else ttk.Entry(self.edit_frame,textvariable=var,width=30))
+            widget=(ttk.Combobox(self.edit_frame,textvariable=var,values=['']+options,state='normal' if key in ('color','weight') else 'readonly',width=18)
+                    if options is not None else ttk.Entry(self.edit_frame,textvariable=var,width=18))
             widget.grid(row=row,column=1,sticky='ew',pady=3); self.edit_widgets[key]=widget
             if kind in ('number','points'):widget.bind('<FocusOut>',lambda e,k=key:self.normalize_edit_field(k))
             var.trace_add('write',lambda *args,k=key:self.edit_changed(k))
@@ -1619,7 +1697,7 @@ class Draft:
         if not originals:
             ttk.Label(self.edit_frame,text='Select objects on the canvas to edit their shared properties.').grid(row=2,column=0,columnspan=2,sticky='w')
         self.edit_apply.configure(state='normal' if originals else 'disabled')
-        self.refresh_edit_length()
+        self.refresh_edit_length();self.panels.rebind('properties')
 
     def normalize_edit_field(self,key):
         try:
@@ -1658,6 +1736,8 @@ class Draft:
             self.edit_length.set('Length: - (check entered values)')
 
     def apply_edit(self):
+        focus=self.root.focus_get()
+        focus_key=next((k for k,w in self.edit_widgets.items() if w==focus),None)
         if not self.edit_matches(): self.refresh_edit(); return
         try:
             updates=self.proposed_edits()
@@ -1666,6 +1746,7 @@ class Draft:
             messagebox.showerror('Edit objects',str(ex),parent=self.edit_window); return
         self.doc.prune_selection(); self._edit_doc=None
         self.refresh_layers(); self.draw()
+        if focus_key in self.edit_widgets:self.edit_widgets[focus_key].focus_set()
 
     def import_drawing(self):
         path=filedialog.askopenfilename(parent=self.root,title='Import into current drawing',
@@ -1741,7 +1822,7 @@ class Draft:
         except (OSError,ValueError,TypeError,KeyError,OverflowError) as ex: self.error(str(ex))
     def close(self):
         if self.discard():
-            self.cancel_snap_hover(); self.root.destroy()
+            self.panels.remember(open_state=True);self.cancel_snap_hover(); self.root.destroy()
 
 
 if __name__=='__main__':

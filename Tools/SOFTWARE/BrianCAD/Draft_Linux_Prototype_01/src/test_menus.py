@@ -52,7 +52,7 @@ class MenuUITests(unittest.TestCase):
         self.assertEqual(self.labels(a.menus['File']),['New','Open...','Open Recent...','Save','Save As...','Import...','Export...'])
         self.assertEqual(self.labels(a.menus['Edit']),['Undo','Redo','Copy','Paste','Edit Objects...','Flip Horizontal','Flip Vertical','Polar Duplicate...','Units...'])
         self.assertEqual(self.labels(a.menus['Objects']),['Group','Ungroup','Divide...','Layers...'])
-        self.assertEqual(self.labels(a.menus['View']),['Fit','Zoom In','Zoom Out','Window'])
+        self.assertEqual(self.labels(a.menus['View']),['Fit','Zoom In','Zoom Out','Window','Layers panel','Properties panel'])
         before=a.doc.state();scale=a.scale;center=(a.canvas.winfo_width()/2,a.canvas.winfo_height()/2)
         world=a.world(*center);self.invoke('View','Zoom In');self.assertAlmostEqual(a.scale,scale*1.25)
         for p,q in zip(world,a.world(*center)):self.assertAlmostEqual(p,q)
