@@ -38593,6 +38593,1454 @@
       "pattern": "Solid",
       "weight": 0.01,
       "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        117.0,
+        77.1646875
+      ],
+      "b": [
+        117.0,
+        82.8353125
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.230625,
+        80.0
+      ],
+      "b": [
+        119.769375,
+        80.0
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        119.769375,
+        82.8353125
+      ],
+      "b": [
+        119.769375,
+        78.1646874999993
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        118.76937500004784,
+        77.1646875
+      ],
+      "b": [
+        115.23062499997982,
+        77.1646875
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        119.769375,
+        82.8353125
+      ],
+      "b": [
+        114.230625,
+        82.8353125
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.230625,
+        82.8353125
+      ],
+      "b": [
+        114.230625,
+        78.16468749996687
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        115.23062499998991,
+        78.16468749998344
+      ],
+      "radius": 1.0,
+      "start": -3.1415926535732233,
+      "sweep": 1.570796326768237,
+      "layer": "1_SEW_LINE",
+      "color": "#198548",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false,
+      "locked": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        118.76937500002393,
+        78.16468749999964
+      ],
+      "radius": 1.0,
+      "start": -3.4106051317301004e-13,
+      "sweep": -1.5707963267706386,
+      "layer": "1_SEW_LINE",
+      "color": "#198548",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false,
+      "locked": false
+    },
+    {
+      "type": "line",
+      "a": [
+        117.0,
+        82.8353125
+      ],
+      "b": [
+        117.0,
+        83.8353125
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        117.0,
+        83.8353125
+      ],
+      "b": [
+        117.0,
+        84.2103125
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "layer": "2_CUT_LINE",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "a": [
+        120.394375,
+        82.8353125
+      ],
+      "b": [
+        120.394375,
+        78.16085250020501
+      ]
+    },
+    {
+      "type": "line",
+      "layer": "2_CUT_LINE",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "a": [
+        118.77321000015426,
+        76.53968749999964
+      ],
+      "b": [
+        115.22679000008908,
+        76.5396875
+      ]
+    },
+    {
+      "type": "line",
+      "layer": "2_CUT_LINE",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "a": [
+        113.6056249999899,
+        78.16085249986351
+      ],
+      "b": [
+        113.605625,
+        82.83531250000135
+      ]
+    },
+    {
+      "type": "arc",
+      "center": [
+        118.77320999979965,
+        78.1608525002
+      ],
+      "radius": 1.6211650002003495,
+      "start": 0.0,
+      "sweep": -1.5707963265761542,
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        115.2267899999,
+        78.1608524999
+      ],
+      "radius": 1.621164999900003,
+      "start": 3.141592653589793,
+      "sweep": 1.570796326911526,
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.394375,
+        82.8353125
+      ],
+      "b": [
+        120.394375,
+        84.2103125
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.394375,
+        84.2103125
+      ],
+      "b": [
+        113.605625,
+        84.2103125
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.605625,
+        84.2103125
+      ],
+      "b": [
+        113.605625,
+        82.83531250000135
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        117.0,
+        86.0
+      ],
+      "b": [
+        117.0,
+        88.11
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        115.04312500000079,
+        86.00000000002895
+      ],
+      "b": [
+        118.95687500001199,
+        86.0
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        119.956875,
+        86.99999999997021
+      ],
+      "b": [
+        119.956875,
+        88.11
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        119.956875,
+        88.11
+      ],
+      "b": [
+        114.04312499999924,
+        88.11000000002895
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.04312499999924,
+        88.11000000002895
+      ],
+      "b": [
+        114.04312499999924,
+        87.0
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        115.043125,
+        87.00000000001448
+      ],
+      "radius": 1.0,
+      "start": -3.1415926535753123,
+      "sweep": 1.5707963267811973,
+      "layer": "1_SEW_LINE",
+      "color": "#198548",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false,
+      "locked": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        118.956875000006,
+        86.9999999999851
+      ],
+      "radius": 1.0,
+      "start": -1.4892975741621013e-11,
+      "sweep": -1.5707963267740066,
+      "layer": "1_SEW_LINE",
+      "color": "#198548",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false,
+      "locked": false
+    },
+    {
+      "type": "line",
+      "a": [
+        117.0,
+        88.11
+      ],
+      "b": [
+        117.0,
+        88.36
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        117.0,
+        86.0
+      ],
+      "b": [
+        117.0,
+        85.8125
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        119.956875,
+        87.555
+      ],
+      "b": [
+        120.144375,
+        87.555
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.04312499999924,
+        87.55500000002895
+      ],
+      "b": [
+        113.85562499999924,
+        87.55500000002895
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.85562499999924,
+        88.36000000002895
+      ],
+      "b": [
+        120.144375,
+        88.36
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.144375,
+        88.36
+      ],
+      "b": [
+        120.144375,
+        87.0
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.85562499999924,
+        88.36000000002895
+      ],
+      "b": [
+        113.85562499999924,
+        87.00000000001405
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        115.043125,
+        85.8125
+      ],
+      "b": [
+        118.956875000006,
+        85.8125
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        115.043125,
+        87.0
+      ],
+      "radius": 1.1875,
+      "start": 3.141592653589793,
+      "sweep": 1.5707963267948966,
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        118.956875,
+        87.0
+      ],
+      "radius": 1.1875,
+      "start": 0.0,
+      "sweep": -1.5707963267898464,
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.7690625,
+        91.0
+      ],
+      "b": [
+        120.2309375,
+        91.0
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        117.0,
+        90.340625
+      ],
+      "b": [
+        117.0,
+        91.659375
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.7690625,
+        91.659375
+      ],
+      "b": [
+        120.2309375,
+        91.659375
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.2309375,
+        91.659375
+      ],
+      "b": [
+        120.2309375,
+        90.340625
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.2309375,
+        90.340625
+      ],
+      "b": [
+        113.7690625,
+        90.340625
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.7690625,
+        90.340625
+      ],
+      "b": [
+        113.7690625,
+        91.659375
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.2309375,
+        91.0
+      ],
+      "b": [
+        120.7309375,
+        91.0
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.7690625,
+        91.0
+      ],
+      "b": [
+        113.2690625,
+        91.0
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        117.0,
+        91.659375
+      ],
+      "b": [
+        117.0,
+        92.034375
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        117.0,
+        90.340625
+      ],
+      "b": [
+        117.0,
+        89.965625
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.2690625,
+        92.034375
+      ],
+      "b": [
+        120.7309375,
+        92.034375
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.7309375,
+        92.034375
+      ],
+      "b": [
+        120.7309375,
+        89.965625
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.7309375,
+        89.965625
+      ],
+      "b": [
+        113.2690625,
+        89.965625
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.2690625,
+        89.965625
+      ],
+      "b": [
+        113.2690625,
+        92.034375
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.7690625,
+        92.034375
+      ],
+      "b": [
+        113.7690625,
+        91.909375
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.7690625,
+        89.965625
+      ],
+      "b": [
+        113.7690625,
+        90.090625
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.2690625,
+        91.659375
+      ],
+      "b": [
+        113.3940625,
+        91.659375
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.2690625,
+        90.340625
+      ],
+      "b": [
+        113.3940625,
+        90.340625
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.2309375,
+        92.034375
+      ],
+      "b": [
+        120.2309375,
+        91.909375
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.7309375,
+        91.659375
+      ],
+      "b": [
+        120.6059375,
+        91.659375
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.2309375,
+        89.965625
+      ],
+      "b": [
+        120.2309375,
+        90.090625
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.7309375,
+        90.340625
+      ],
+      "b": [
+        120.6059375,
+        90.340625
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        119.956875,
+        88.36
+      ],
+      "b": [
+        119.95687499999937,
+        88.235
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.144375,
+        88.11
+      ],
+      "b": [
+        120.019375,
+        88.11
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.043125,
+        88.36
+      ],
+      "b": [
+        114.04312499999939,
+        88.235
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.855625,
+        88.11
+      ],
+      "b": [
+        113.980625,
+        88.11
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        115.043125,
+        85.8125
+      ],
+      "b": [
+        115.043125,
+        85.9375
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        118.956875,
+        85.8125
+      ],
+      "b": [
+        118.9568750000005,
+        85.9375
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.144375,
+        87.0
+      ],
+      "b": [
+        120.019375,
+        87.0
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.855625,
+        87.0
+      ],
+      "b": [
+        113.980625,
+        87.0
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        119.769375,
+        84.2103125
+      ],
+      "b": [
+        119.769375,
+        84.0853125
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.394375,
+        82.8353125
+      ],
+      "b": [
+        120.269375,
+        82.8353125
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.230625,
+        84.2103125
+      ],
+      "b": [
+        114.230625,
+        84.0853125
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.605625,
+        82.8353125
+      ],
+      "b": [
+        113.730625,
+        82.83531249999957
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.394375,
+        78.1608525002
+      ],
+      "b": [
+        120.269375,
+        78.1608525002
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        118.77321,
+        76.5396875
+      ],
+      "b": [
+        118.77321000000002,
+        76.6646875
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        115.22679,
+        76.5396875
+      ],
+      "b": [
+        115.22679000000001,
+        76.6646875
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.605625,
+        78.1608524999
+      ],
+      "b": [
+        113.730625,
+        78.16085249989973
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        120.394375,
+        83.8353125
+      ],
+      "b": [
+        120.269375,
+        83.8353125
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        113.605625,
+        83.8353125
+      ],
+      "b": [
+        113.730625,
+        83.8353125
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.230625,
+        91.659375
+      ],
+      "b": [
+        114.230625,
+        91.284375
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        119.769375,
+        91.659375
+      ],
+      "b": [
+        119.769375,
+        91.284375
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.230625,
+        91.284375
+      ],
+      "b": [
+        119.769375,
+        91.284375
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.230625,
+        91.284375
+      ],
+      "b": [
+        114.230625,
+        91.221875
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.230625,
+        91.221875
+      ],
+      "b": [
+        114.230625,
+        90.971875
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.230625,
+        91.221875
+      ],
+      "b": [
+        119.769375,
+        91.221875
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        114.230625,
+        90.971875
+      ],
+      "b": [
+        119.769375,
+        90.971875
+      ],
+      "color": "#198548",
+      "layer": "1_SEW_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        117.0,
+        82.8353125
+      ],
+      "b": [
+        117.0,
+        82.2103125
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        117.0,
+        88.11
+      ],
+      "b": [
+        117.0,
+        86.985
+      ],
+      "color": "#202b36",
+      "layer": "0_CONSTRUCTION",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        117.0,
+        86.985
+      ],
+      "radius": 0.0625,
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        117.0,
+        82.2103125
+      ],
+      "radius": 0.0625,
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
     }
   ],
   "layers": [
@@ -38629,7 +40077,7 @@
     }
   ],
   "active_layer": "2_CUT_LINE",
-  "display_unit": "in",
+  "display_unit": "mm",
   "grid": {
     "spacing": 1.0,
     "subdivisions": 4
