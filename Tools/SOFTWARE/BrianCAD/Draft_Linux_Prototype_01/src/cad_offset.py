@@ -52,9 +52,9 @@ def sample(o):
     return points
 
 
-def connected_path(objects):
+def connected_path(objects,return_order=False):
     paths=[sample(o) for o in objects]
-    if len(paths)==1:return paths[0]
+    if len(paths)==1:return (paths[0],[(0,False)]) if return_order else paths[0]
     if any(_closed(o) for o in objects):raise ValueError('Select a single closed curve, or one connected open/closed chain.')
     # Build an endpoint graph. Branches and ambiguous coincident endpoints are rejected.
     nodes=[];ends=[];adj=[];buckets={}
@@ -74,22 +74,89 @@ def connected_path(objects):
     if any(len(items)>2 for items in adj):raise ValueError('Offset requires an unbranched chain.')
     terminals=[i for i,items in enumerate(adj) if len(items)==1]
     if len(terminals) not in (0,2):raise ValueError('Select one connected chain.')
-    current=terminals[0] if terminals else ends[0][0];used=set();result=[]
+    current=terminals[0] if terminals else ends[0][0];used=set();result=[];order=[]
     while len(used)<len(paths):
         choices=[i for i in adj[current] if i not in used]
         if not choices:raise ValueError('Selected curves are disconnected.')
-        i=choices[0];path=paths[i]
-        if ends[i][0]!=current:path=list(reversed(path));current=ends[i][0]
+        i=choices[0];path=paths[i];reverse=ends[i][0]!=current
+        order.append((i,reverse))
+        if reverse:path=list(reversed(path));current=ends[i][0]
         else:current=ends[i][1]
         if result:result.extend(path[1:])
         else:result.extend(path)
         used.add(i)
     if not terminals:result[-1]=list(result[0])
-    return result
+    return (result,order) if return_order else result
 
 
 def _style(o):
     return {key:copy.deepcopy(o[key]) for key in ('layer','color','pattern','weight') if key in o}
+
+
+def _exact_tangent_chain(objects,order,signed,style,closed):
+    """Preserve analytic pieces when their offset joins remain tangent and simple.
+
+    Return None for corners, collapsing radii or topology changes, leaving those
+    cases to the established topology-aware fallback.
+    """
+    if not any(o['type']=='arc' for o in objects) or any(o['type'] not in ('line','arc') for o in objects):return None
+    ordered=[]
+    for index,reverse in order:
+        obj=copy.deepcopy(objects[index])
+        if reverse:
+            if obj['type']=='line':obj['a'],obj['b']=obj['b'],obj['a']
+            else:obj['start']+=obj['sweep'];obj['sweep']=-obj['sweep']
+        ordered.append(obj)
+    pairs=list(zip(ordered,ordered[1:]))
+    if closed:pairs.append((ordered[-1],ordered[0]))
+    for a,b in pairs:
+        pa,da=evaluate(_PreparedCurve(a),1);pb,db=evaluate(_PreparedCurve(b),0)
+        if g.dist(pa,pb)>JOIN_TOLERANCE or g.dot(g.unit(da),g.unit(db))<1-1e-12:return None
+        if abs(g.cross(g.unit(da),g.unit(db)))>1e-8:return None
+    result=[]
+    for obj in ordered:
+        if obj['type']=='line':
+            shift=g.mul(g.normal(g.unit(g.sub(obj['b'],obj['a']))),signed)
+            part=dict(type='line',a=g.add(obj['a'],shift),b=g.add(obj['b'],shift),**style)
+        else:
+            radius=obj['radius']-math.copysign(1,obj['sweep'])*signed
+            if radius<g.EPS:return None
+            part=dict(type='arc',center=list(obj['center']),radius=radius,
+                      start=obj['start'],sweep=obj['sweep'],**style)
+        result.append(g.validate_geometry(part))
+    pairs=list(zip(result,result[1:]))
+    if closed:pairs.append((result[-1],result[0]))
+    if any(g.dist(evaluate(_PreparedCurve(a),1)[0],evaluate(_PreparedCurve(b),0)[0])>JOIN_TOLERANCE for a,b in pairs):return None
+    # Offset normals can fold/cross even when the source chain is simple.
+    from shapely.geometry import LineString
+    check=LineString(connected_path(result))
+    if not check.is_simple:return None
+    # Adjacent fragments of the same circle need only one editable arc.
+    merged=[]
+    for obj in result:
+        if (merged and merged[-1]['type']==obj['type']=='line'
+                and g.dist(merged[-1]['b'],obj['a'])<1e-10
+                and abs(g.cross(g.unit(g.sub(merged[-1]['b'],merged[-1]['a'])),g.unit(g.sub(obj['b'],obj['a']))))<1e-10):
+            merged[-1]['b']=obj['b']
+        elif merged and _mergeable_arcs(merged[-1],obj):
+            merged[-1]['sweep']+=obj['sweep']
+        else:merged.append(obj)
+    if closed and len(merged)>1 and _mergeable_arcs(merged[-1],merged[0]):
+        last=merged.pop();merged[0]['start']=last['start'];merged[0]['sweep']+=last['sweep']
+    if len(merged)==1 and merged[0]['type']=='arc' and abs(abs(merged[0]['sweep'])-g.TAU)<1e-10:
+        obj=merged[0];merged=[dict(type='circle',center=obj['center'],radius=obj['radius'],**style)]
+    if len(merged)>1:
+        from cad_groups import new_id
+        group=new_id()
+        for obj in merged:obj['group']=group
+    return merged
+
+
+def _mergeable_arcs(a,b):
+    return (a['type']==b['type']=='arc' and g.dist(a['center'],b['center'])<1e-10
+            and abs(a['radius']-b['radius'])<1e-10 and a['sweep']*b['sweep']>0
+            and g.dist(g.polar(a['center'],a['radius'],a['start']+a['sweep']),g.polar(b['center'],b['radius'],b['start']))<1e-10
+            and abs(a['sweep']+b['sweep'])<=g.TAU+1e-10)
 
 
 def _polylines(shape,style):
@@ -105,9 +172,19 @@ def _polylines(shape,style):
     if closed:points.pop()
     if len(points)<2:return []
     if 3<=len(points)<=200:return [dict(type='polygon',points=points,closed=closed,**style)]
-    pairs=list(zip(points,points[1:]))
-    if closed:pairs.append((points[-1],points[0]))
-    return [dict(type='line',a=a,b=b,**style) for a,b in pairs if g.dist(a,b)>g.EPS]
+    # Keep long sampled boundaries in compact, connected editable chunks,
+    # rather than exploding every chord into an independent LINE object.
+    sequence=points+[points[0]] if closed else points
+    result=[]
+    for i in range(0,len(sequence)-1,199):
+        part=sequence[i:i+200]
+        if len(part)==2:result.append(dict(type='line',a=part[0],b=part[1],**style))
+        else:result.append(dict(type='polygon',points=part,closed=False,**style))
+    if len(result)>1:
+        from cad_groups import new_id
+        group=new_id()
+        for obj in result:obj['group']=group
+    return result
 
 
 def offset(objects,distance,reference):
@@ -132,7 +209,7 @@ def offset(objects,distance,reference):
             result=dict(type=kind,center=list(o['center']),radius=radius,**style)
             if kind=='arc':result.update(start=o['start'],sweep=o['sweep'])
         return [g.validate_geometry(result)],False
-    shapely=require_shapely();path=connected_path(objects)
+    shapely=require_shapely();path,order=connected_path(objects,return_order=True)
     from shapely.geometry import LineString,Point,Polygon
     line=LineString(path);point=Point(reference)
     if not line.is_simple:raise ValueError('Self-intersecting source chains cannot be offset.')
@@ -142,6 +219,9 @@ def offset(objects,distance,reference):
         polygon=Polygon(path)
         if not polygon.is_valid:raise ValueError('The closed source boundary is not valid.')
         signed=-distance if polygon.contains(point) else distance
+        area_sign=sum(g.cross(a,b) for a,b in zip(path,path[1:]))
+        exact=_exact_tangent_chain(objects,order,-signed*(1 if area_sign>0 else -1),style,True)
+        if exact:return exact,False
         area=polygon.buffer(signed,join_style=2,mitre_limit=5.)
         result=_polylines(area.boundary,style)
     else:
@@ -153,7 +233,10 @@ def offset(objects,distance,reference):
             candidates.append((g.dist(reference,q),side))
         side=min(candidates)[1]
         if abs(side)<JOIN_TOLERANCE:raise ValueError('Direction is ambiguous at an endpoint; choose a point beside the curve.')
-        result=_polylines(shapely.offset_curve(line,math.copysign(distance,side),join_style=2,mitre_limit=5.),style)
+        signed=math.copysign(distance,side)
+        exact=_exact_tangent_chain(objects,order,signed,style,False)
+        if exact:return exact,False
+        result=_polylines(shapely.offset_curve(line,signed,join_style=2,mitre_limit=5.),style)
     if not result:raise ValueError('The requested offset collapses the curve. Try a smaller distance.')
     if len(result)>100000:raise ValueError('Offset result is too complex.')
     for obj in result:g.validate_geometry(obj)
