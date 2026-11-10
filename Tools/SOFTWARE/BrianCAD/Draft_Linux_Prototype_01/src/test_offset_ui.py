@@ -6,6 +6,8 @@ import tkinter as tk
 import unittest
 from unittest.mock import patch
 from draft import Draft
+try:import shapely
+except ImportError:shapely=None
 
 @unittest.skipUnless(os.environ.get('DISPLAY') or sys.platform=='darwin','A graphical display is required')
 class OffsetUITests(unittest.TestCase):
@@ -56,3 +58,17 @@ class OffsetUITests(unittest.TestCase):
         a=self.a;self.activate();before=a.doc.state();n=len(a.doc.history)
         a.params['offset'].set('-1');a.apply_offset();self.assertTrue(self.errors);self.errors.clear()
         self.assertEqual(a.doc.state(),before);self.assertEqual(len(a.doc.history),n)
+
+    @unittest.skipUnless(shapely,'Optional Shapely is required')
+    def test_connected_arc_preview_and_apply_preserve_native_arc(self):
+        import math
+        a=self.a;a.doc.objects[0]['b']=[0,0];a.doc.objects[0]['a']=[-2,0]
+        a.doc.add([dict(type='arc',center=[0,1],radius=1,start=-math.pi/2,sweep=math.pi/2)])
+        a.selected={0,1};self.activate()
+        a.params['offset'].set('.2');a.params['x'].set('-1');a.params['y'].set('-1')
+        before=a.doc.state();a.preview_offset()
+        self.assertEqual([o['type'] for o in a.offset_preview],['line','arc'])
+        self.assertEqual(a.doc.state(),before)
+        a.apply_offset();self.assertEqual([o['type'] for o in a.objects[-2:]],['line','arc'])
+        self.assertEqual(len(a.objects),4);self.assertEqual(a.objects[-1]['radius'],1.2)
+        a.undo();self.assertEqual(a.doc.state(),before)

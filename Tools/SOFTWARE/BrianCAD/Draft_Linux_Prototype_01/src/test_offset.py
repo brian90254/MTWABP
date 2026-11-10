@@ -99,6 +99,6 @@ class GeneralOffsetTests(unittest.TestCase):
         self.assertTrue(all(o.get('closed') for o in result))
     def test_connected_line_arc(self):
         source=[dict(type='line',a=[-2,0],b=[0,0]),dict(type='arc',center=[0,1],radius=1,start=-math.pi/2,sweep=math.pi/2)]
-        result,approx=offset(source,.1,[-1,-1]);self.assertTrue(approx);self.assertTrue(result)
+        result,approx=offset(source,.1,[-1,-1]);self.assertFalse(approx);self.assertEqual([o['type'] for o in result],['line','arc'])
         # Every result is valid and can be saved/reopened as editable geometry.
         d=Document();d.add(result);self.assertEqual(Document.from_payload(d.payload()).objects,d.objects)

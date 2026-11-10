@@ -256,7 +256,7 @@ python3 -m pip install -r requirements-offset.txt
 
 Use the same Python interpreter that runs BrianCAD. This dependency is loaded only when needed; single line/circle/arc offsets work without it. The requirements select the Shapely 2.0 series on Python 3.9 and a compatible 2.x release on newer Python versions.
 
-Ovals and splines, and circular arcs within joined chains, are adaptively sampled with a **0.0001 inch source-chord criterion**. This is a numerical approximation, not an exact ellipse/spline offset or a strict bound on final offset error. The result consists of editable polylines, or line segments when a boundary exceeds the polygon vertex limit, with an approximation notice on Apply. Sharp chain corners use mitre joins, beveled when the mitre exceeds five times the distance. Endpoint connections use a 0.000001 inch tolerance.
+Ovals and splines, and joined chains that require the general fallback, are adaptively sampled with a **0.0001 inch source-chord criterion**. This is a numerical approximation, not an exact ellipse/spline offset or a strict bound on final offset error. The result consists of editable polylines; boundaries over 200 vertices are stored in a few connected, grouped polyline chunks instead of hundreds of separate line objects, with an approximation notice on Apply. Sharp chain corners use mitre joins, beveled when the mitre exceeds five times the distance. Endpoint connections use a 0.000001 inch tolerance.
 
 Closed boundaries offset inward when the reference point is inside, outward when outside. Inward offsets may split into multiple boundaries; all resulting components are kept. Empty/collapsed offsets, branched/disconnected selections and self-intersecting source chains are rejected without modifying the drawing. For an open chain, choose a point beside the curve; a point directly along an endpoint's tangent can be ambiguous.
 
@@ -514,3 +514,25 @@ from floating Layers/Properties panels when focus is not in a text-entry control
 The DXF dialog displays the drawing unit captured when it opens. Selection-only
 export ignores partial control-point selections; this does not change Copy/Paste
 or editing behavior.
+
+
+## Compact arc offsets
+
+A single native circle or arc remains an exact circle/arc. Offset now also preserves
+native lines and circular arcs in a **tangent-connected chain**, including closed
+rounded boundaries and shuffled/reversed selections. Radii change by the offset
+distance; centers, circular shape and signed sweeps remain analytic. Adjacent
+fragments of the same circle merge into one arc, and a complete circular loop
+becomes a circle. Collinear line fragments within such a chain can merge too.
+
+Multi-piece analytic results form a fresh group so they can be selected and moved
+together; Ungroup exposes the individual line/arc pieces. The active layer and its
+remembered pen still determine the new geometry's layer/color. Native save/open,
+Undo/Redo and DXF export retain these analytic pieces.
+
+The exact chain path is used only when tangent joints remain connected and the
+offset does not fold or cross itself. Sharp corners, collapsed corner radii and
+topology changes continue through the existing general offset path. Ovals, splines
+and already-sampled imported curves are still approximated; this change does not
+fit new circular arcs to arbitrary spline data or loosen the sampling criterion.
+Connected chains still require the existing optional Shapely dependency.
