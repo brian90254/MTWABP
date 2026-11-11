@@ -9240,23 +9240,6 @@
         24.8548103788
       ],
       "b": [
-        86.8125,
-        24.935
-      ],
-      "layer": "2_CUT_LINE",
-      "color": "#2465d8",
-      "pattern": "Solid",
-      "weight": 0.01,
-      "locked": false,
-      "controls": false
-    },
-    {
-      "type": "line",
-      "a": [
-        86.5757097455,
-        24.8548103788
-      ],
-      "b": [
         87.4414180368,
         22.2984784802
       ],
@@ -9359,23 +9342,6 @@
       "radius": 4.4656781568,
       "start": -1.2442661496877299,
       "sweep": 0.550940647830656,
-      "layer": "2_CUT_LINE",
-      "color": "#2465d8",
-      "pattern": "Solid",
-      "weight": 0.01,
-      "locked": false,
-      "controls": false
-    },
-    {
-      "type": "line",
-      "a": [
-        86.8125,
-        24.935
-      ],
-      "b": [
-        86.7315788234,
-        25.173950449
-      ],
       "layer": "2_CUT_LINE",
       "color": "#2465d8",
       "pattern": "Solid",
@@ -9526,40 +9492,6 @@
       "b": [
         100.0,
         34.79125
-      ],
-      "layer": "2_CUT_LINE",
-      "color": "#2465d8",
-      "pattern": "Solid",
-      "weight": 0.01,
-      "locked": false,
-      "controls": false
-    },
-    {
-      "type": "line",
-      "a": [
-        89.1869819986,
-        34.1143375161
-      ],
-      "b": [
-        89.3014316806,
-        33.4999058517
-      ],
-      "layer": "2_CUT_LINE",
-      "color": "#2465d8",
-      "pattern": "Solid",
-      "weight": 0.01,
-      "locked": false,
-      "controls": false
-    },
-    {
-      "type": "line",
-      "a": [
-        89.0539064129,
-        33.4648167959
-      ],
-      "b": [
-        89.3014316806,
-        33.4999058517
       ],
       "layer": "2_CUT_LINE",
       "color": "#2465d8",
@@ -40035,6 +39967,142 @@
         82.2103125
       ],
       "radius": 0.0625,
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        86.73157882322835,
+        25.173950448976377
+      ],
+      "b": [
+        86.49478856908857,
+        25.09376082788413
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        86.57570974566929,
+        24.854810378818897
+      ],
+      "b": [
+        86.49478856908857,
+        25.09376082788413
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        86.5757097457,
+        24.8548103788
+      ],
+      "b": [
+        86.69410487297371,
+        24.894905189409883
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        86.7315788234,
+        25.173950449
+      ],
+      "b": [
+        86.77167363401495,
+        25.055555321728008
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        89.1869819986,
+        34.1143375161
+      ],
+      "b": [
+        88.96762295516945,
+        34.07347768704987
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        89.0539064129,
+        33.4648167959
+      ],
+      "b": [
+        88.96762295516945,
+        34.07347768704987
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        89.0539064129,
+        33.4648167959
+      ],
+      "b": [
+        89.17766904676299,
+        33.48236132380184
+      ],
+      "color": "#2465d8",
+      "layer": "2_CUT_LINE",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        89.1869819986,
+        34.1143375161
+      ],
+      "b": [
+        89.20987193500736,
+        33.99145118320953
+      ],
       "color": "#2465d8",
       "layer": "2_CUT_LINE",
       "locked": false,
