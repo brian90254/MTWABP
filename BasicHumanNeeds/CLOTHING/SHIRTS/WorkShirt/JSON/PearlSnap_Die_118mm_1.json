@@ -1,0 +1,241 @@
+{
+  "objects": [
+    {
+      "type": "line",
+      "a": [
+        0.0,
+        -0.2755905511811024
+      ],
+      "b": [
+        0.0,
+        1.1023622047244095
+      ],
+      "color": "#202b36",
+      "layer": "Layer1",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -0.23228346456692914,
+        0.3543307086614173
+      ],
+      "b": [
+        -0.23228346456692914,
+        0.0
+      ],
+      "color": "#202b36",
+      "layer": "Layer1",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -0.23228346456692914,
+        0.0
+      ],
+      "b": [
+        0.0,
+        0.0
+      ],
+      "color": "#202b36",
+      "layer": "Layer1",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -0.23228346456692914,
+        0.3543307086614173
+      ],
+      "b": [
+        -0.2168237509350669,
+        0.4340082489688789
+      ],
+      "color": "#202b36",
+      "layer": "Layer1",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -0.23228346456692914,
+        0.43700787401574803
+      ],
+      "radius": 0.015748031496062964,
+      "start": 1.5707963267948966,
+      "sweep": -1.7624435217703116,
+      "color": "#202b36",
+      "layer": "Layer1",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -0.4330708661417323,
+        0.452755905511811
+      ],
+      "b": [
+        -0.4330708661417323,
+        0.905511811023622
+      ],
+      "color": "#202b36",
+      "layer": "Layer1",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -0.23228346456692914,
+        0.905511811023622
+      ],
+      "b": [
+        -0.23228346456692914,
+        0.7559055118110236
+      ],
+      "color": "#202b36",
+      "layer": "Layer1",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -0.23228346456692914,
+        0.7559055118110236
+      ],
+      "b": [
+        -0.039370078740157494,
+        0.562992125984252
+      ],
+      "color": "#202b36",
+      "layer": "Layer1",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -0.03937007874015748,
+        0.562992125984252
+      ],
+      "b": [
+        0.0,
+        0.562992125984252
+      ],
+      "color": "#202b36",
+      "layer": "Layer1",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -0.4330708661417323,
+        0.905511811023622
+      ],
+      "b": [
+        -0.23228346456692914,
+        0.905511811023622
+      ],
+      "color": "#202b36",
+      "layer": "Layer1",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -0.4330708661417323,
+        0.452755905511811
+      ],
+      "b": [
+        -0.23228346456692914,
+        0.452755905511811
+      ],
+      "color": "#202b36",
+      "layer": "Layer1",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "dimension",
+      "metric": "length",
+      "a": [
+        -0.4330708661417323,
+        0.905511811023622
+      ],
+      "b": [
+        -0.4330708661417323,
+        0.0
+      ],
+      "label": [
+        -0.5905511811023622,
+        0.452755905511811
+      ],
+      "text_height": 0.03092146040031519,
+      "sweep": 6.283185307179586,
+      "layer": "Dimension",
+      "color": "#2465d8",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    }
+  ],
+  "layers": [
+    {
+      "name": "Constraints",
+      "visible": true
+    },
+    {
+      "name": "Construction",
+      "visible": true
+    },
+    {
+      "name": "Dimension",
+      "visible": true,
+      "drawing_color": "#2465d8"
+    },
+    {
+      "name": "Layer1",
+      "visible": true
+    }
+  ],
+  "active_layer": "Layer1",
+  "display_unit": "mm",
+  "grid": {
+    "spacing": 0.03937007874015748,
+    "subdivisions": 2
+  },
+  "format": "briancad-2",
+  "units": "inches"
+}

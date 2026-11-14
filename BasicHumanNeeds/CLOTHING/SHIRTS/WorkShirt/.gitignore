@@ -1,6 +1,9 @@
 # LIGHTBURN Files
 LightBurn/
 
+# Rhino Files
+Rhino/
+
 # OS-specific files
 .DS_Store
 Thumbs.db
