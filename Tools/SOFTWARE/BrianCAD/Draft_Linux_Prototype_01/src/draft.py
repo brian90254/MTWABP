@@ -577,8 +577,8 @@ class Draft:
             if best: return best
         if guide_projections and self.start is not None:
             guide_projections.extend(alignment_candidates(p,self.start))
-        best=nearest(guide_projections)
-        if best:return best
+        # Plain guide projections must not mask a nearby grid intersection.
+        tracked=None
         history=getattr(self,'snap_history',None)
         if self.snap.get() and history:
             ignored=self.tracking_exclusions(excluded)
@@ -587,7 +587,6 @@ class Draft:
             crossing=nearest(history.crossings(p,self.scale,nearby,step,ignored,self.object_bounds))
             if crossing: return crossing
             tracked=history.snap(p,self.scale,ignored)
-            if tracked: return tracked
         grid=None
         if self.grid_snap.get():
             step=self.grid_spacing/self.grid_subdivisions
@@ -599,6 +598,9 @@ class Draft:
             if best: return best
             grid=grid_candidates(p,step); best=nearest(grid[:1])
             if best: return best
+        best=nearest(guide_projections)
+        if best:return best
+        if tracked:return tracked
         if self.snap.get():
             best=self.on_object(p,ids)
             if best: return best
