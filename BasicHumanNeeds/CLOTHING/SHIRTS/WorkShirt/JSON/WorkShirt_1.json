@@ -40109,6 +40109,102 @@
       "pattern": "Solid",
       "weight": 0.01,
       "controls": false
+    },
+    {
+      "type": "dimension",
+      "metric": "length",
+      "a": [
+        29.999999999999996,
+        26.5625
+      ],
+      "b": [
+        30.000000000000004,
+        26.9375
+      ],
+      "label": [
+        29.74782966960719,
+        26.750000000000004
+      ],
+      "text_height": 0.09456387389730458,
+      "sweep": 6.283185307179586,
+      "layer": "Dimension",
+      "color": "#2465d8",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "dimension",
+      "metric": "length",
+      "a": [
+        29.5,
+        23.625
+      ],
+      "b": [
+        29.5,
+        23.0
+      ],
+      "label": [
+        29.833495261944496,
+        23.3125
+      ],
+      "text_height": 0.1250607232291852,
+      "sweep": 6.283185307179586,
+      "layer": "Dimension",
+      "color": "#2465d8",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "dimension",
+      "metric": "length",
+      "a": [
+        20.3125,
+        23.625
+      ],
+      "b": [
+        19.8125,
+        23.625
+      ],
+      "label": [
+        20.0625,
+        23.37282966960719
+      ],
+      "text_height": 0.09456387389730452,
+      "sweep": 6.283185307179586,
+      "layer": "Dimension",
+      "color": "#2465d8",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "dimension",
+      "metric": "length",
+      "a": [
+        117.0,
+        70.0
+      ],
+      "b": [
+        117.0,
+        69.5
+      ],
+      "label": [
+        117.4410474839216,
+        69.75
+      ],
+      "text_height": 0.16539280647059731,
+      "sweep": 6.283185307179586,
+      "layer": "Dimension",
+      "color": "#2465d8",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
     }
   ],
   "layers": [
@@ -40122,7 +40218,7 @@
     },
     {
       "name": "Dimension",
-      "visible": false,
+      "visible": true,
       "drawing_color": "#2465d8"
     },
     {
@@ -40135,7 +40231,7 @@
     },
     {
       "name": "1_SEW_LINE",
-      "visible": false,
+      "visible": true,
       "drawing_color": "#198548"
     },
     {
@@ -40145,7 +40241,7 @@
     }
   ],
   "active_layer": "2_CUT_LINE",
-  "display_unit": "mm",
+  "display_unit": "in",
   "grid": {
     "spacing": 1.0,
     "subdivisions": 4
