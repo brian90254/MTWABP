@@ -536,3 +536,12 @@ topology changes continue through the existing general offset path. Ovals, splin
 and already-sampled imported curves are still approximated; this change does not
 fit new circular arcs to arbitrary spline data or loosen the sampling criterion.
 Connected chains still require the existing optional Shapely dependency.
+
+### Line endpoint grid snapping
+
+When placing a second line point, nearby grid intersections take priority over
+plain extension/tangent/perpendicular or remembered alignment projections. This
+prevents a guide from moving the endpoint off a grid point directly under the
+cursor. Specific object points and actual guide intersections retain their
+existing priority. Grid-disabled guide snapping is unchanged, and the same rule
+is used for the mouse preview and click in Two points and Connected points.
