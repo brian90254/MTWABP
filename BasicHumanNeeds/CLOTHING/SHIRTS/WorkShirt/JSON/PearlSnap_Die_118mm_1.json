@@ -8,10 +8,10 @@
       ],
       "b": [
         0.0,
-        1.1023622047244095
+        1.1811023622047243
       ],
       "color": "#202b36",
-      "layer": "Layer1",
+      "layer": "Layer3",
       "locked": false,
       "pattern": "Solid",
       "weight": 0.01,
@@ -28,7 +28,7 @@
         0.0
       ],
       "color": "#202b36",
-      "layer": "Layer1",
+      "layer": "Layer3",
       "locked": false,
       "pattern": "Solid",
       "weight": 0.01,
@@ -45,7 +45,7 @@
         0.0
       ],
       "color": "#202b36",
-      "layer": "Layer1",
+      "layer": "Layer3",
       "locked": false,
       "pattern": "Solid",
       "weight": 0.01,
@@ -62,7 +62,7 @@
         0.4340082489688789
       ],
       "color": "#202b36",
-      "layer": "Layer1",
+      "layer": "Layer3",
       "locked": false,
       "pattern": "Solid",
       "weight": 0.01,
@@ -78,7 +78,7 @@
       "start": 1.5707963267948966,
       "sweep": -1.7624435217703116,
       "color": "#202b36",
-      "layer": "Layer1",
+      "layer": "Layer3",
       "locked": false,
       "pattern": "Solid",
       "weight": 0.01,
@@ -87,15 +87,15 @@
     {
       "type": "line",
       "a": [
-        -0.4330708661417323,
-        0.452755905511811
+        -0.23622047244094488,
+        1.0433070866141732
       ],
       "b": [
-        -0.4330708661417323,
-        0.905511811023622
+        -0.23622047244094488,
+        0.8937007874015748
       ],
       "color": "#202b36",
-      "layer": "Layer1",
+      "layer": "Layer3",
       "locked": false,
       "pattern": "Solid",
       "weight": 0.01,
@@ -104,32 +104,15 @@
     {
       "type": "line",
       "a": [
-        -0.23228346456692914,
-        0.905511811023622
+        -0.15748031496062992,
+        0.8937007874015748
       ],
       "b": [
-        -0.23228346456692914,
-        0.7559055118110236
+        -0.03937007874015748,
+        0.7755905511811023
       ],
       "color": "#202b36",
-      "layer": "Layer1",
-      "locked": false,
-      "pattern": "Solid",
-      "weight": 0.01,
-      "controls": false
-    },
-    {
-      "type": "line",
-      "a": [
-        -0.23228346456692914,
-        0.7559055118110236
-      ],
-      "b": [
-        -0.039370078740157494,
-        0.562992125984252
-      ],
-      "color": "#202b36",
-      "layer": "Layer1",
+      "layer": "Layer3",
       "locked": false,
       "pattern": "Solid",
       "weight": 0.01,
@@ -139,31 +122,14 @@
       "type": "line",
       "a": [
         -0.03937007874015748,
-        0.562992125984252
+        0.7755905511811023
       ],
       "b": [
         0.0,
-        0.562992125984252
+        0.7755905511811023
       ],
       "color": "#202b36",
-      "layer": "Layer1",
-      "locked": false,
-      "pattern": "Solid",
-      "weight": 0.01,
-      "controls": false
-    },
-    {
-      "type": "line",
-      "a": [
-        -0.4330708661417323,
-        0.905511811023622
-      ],
-      "b": [
-        -0.23228346456692914,
-        0.905511811023622
-      ],
-      "color": "#202b36",
-      "layer": "Layer1",
+      "layer": "Layer3",
       "locked": false,
       "pattern": "Solid",
       "weight": 0.01,
@@ -180,31 +146,58 @@
         0.452755905511811
       ],
       "color": "#202b36",
-      "layer": "Layer1",
+      "layer": "Layer3",
       "locked": false,
       "pattern": "Solid",
       "weight": 0.01,
       "controls": false
     },
     {
-      "type": "dimension",
-      "metric": "length",
+      "type": "line",
+      "a": [
+        -0.23622047244094488,
+        0.8937007874015748
+      ],
+      "b": [
+        -0.15748031496062992,
+        0.8937007874015748
+      ],
+      "color": "#202b36",
+      "layer": "Layer3",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
       "a": [
         -0.4330708661417323,
-        0.905511811023622
+        0.452755905511811
       ],
       "b": [
         -0.4330708661417323,
-        0.0
+        1.0433070866141732
       ],
-      "label": [
-        -0.5905511811023622,
-        0.452755905511811
+      "color": "#202b36",
+      "layer": "Layer3",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -0.4330708661417323,
+        1.0433070866141732
       ],
-      "text_height": 0.03092146040031519,
-      "sweep": 6.283185307179586,
-      "layer": "Dimension",
-      "color": "#2465d8",
+      "b": [
+        -0.23622047244094488,
+        1.0433070866141732
+      ],
+      "color": "#202b36",
+      "layer": "Layer3",
       "locked": false,
       "pattern": "Solid",
       "weight": 0.01,
@@ -226,11 +219,11 @@
       "drawing_color": "#2465d8"
     },
     {
-      "name": "Layer1",
+      "name": "Layer3",
       "visible": true
     }
   ],
-  "active_layer": "Layer1",
+  "active_layer": "Layer3",
   "display_unit": "mm",
   "grid": {
     "spacing": 0.03937007874015748,
