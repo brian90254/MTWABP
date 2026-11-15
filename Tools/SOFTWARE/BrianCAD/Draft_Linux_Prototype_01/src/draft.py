@@ -66,6 +66,8 @@ class Draft:
         font_size=self.snap_label_font.cget('size')
         self.snap_label_font.configure(size=max(8,font_size-1) if font_size>0 else min(-8,font_size+2))
         self.family=tk.StringVar(value='Select'); self.tool=tk.StringVar(value='Select')
+        self.pen_size=tk.StringVar(value='.01');self.pen_error=tk.StringVar();self.pen_size_label=tk.StringVar(value='Size (in)')
+        self._pen_width=.01;self._pen_unit='in'
         self.color=tk.StringVar(value=COLORS['Black']); self.snap=tk.BooleanVar(value=True)
         self.grid=tk.BooleanVar(value=True); self.grid_snap=tk.BooleanVar(value=True)
         self.clockwise=tk.BooleanVar(value=False); self.copy_mode=tk.BooleanVar(value=False)
@@ -206,6 +208,13 @@ class Draft:
         pens=ttk.Frame(side);pens.pack(fill='x')
         for i,(name,color) in enumerate(COLORS.items()):
             ttk.Radiobutton(pens,text=name,variable=self.color,value=color,command=self.choose_pen_color).grid(row=i//2,column=i%2,sticky='w',padx=(0,12),pady=1)
+        size=ttk.Frame(pens);size.grid(row=len(COLORS)//2,column=1,sticky='ew')
+        ttk.Label(size,textvariable=self.pen_size_label).pack(side='left',padx=(0,4))
+        self.pen_size_entry=ttk.Entry(size,textvariable=self.pen_size,width=6)
+        self.pen_size_entry.pack(side='left',fill='x',expand=True)
+        self.pen_size_entry.bind('<Return>',lambda e:(self.commit_pen_size(),'break')[1])
+        self.pen_size_entry.bind('<FocusOut>',lambda e:self.commit_pen_size())
+        self.pen_error_label=ttk.Label(side,textvariable=self.pen_error,foreground='#a3342a',wraplength=215)
         ttk.Separator(side).pack(fill='x',pady=9)
         ttk.Checkbutton(side,text='Object snaps / alignment',variable=self.snap).pack(anchor='w')
         ttk.Checkbutton(side,text='Show grid',variable=self.grid,command=self.draw).pack(anchor='w')
@@ -757,6 +766,8 @@ class Draft:
                 if not self.points:
                     self.points=[list(p)];self.start=list(p);self.draw();return
                 dimensions=cad_dimensions.between(self.points[0],p,spacing,height)
+            width=self.pen_width()
+            for obj in dimensions:obj['weight']=width
             self.doc.add_dimensions(dimensions)
             self.points=[];self.start=None;self.refresh_layers();self.draw()
         except (ValueError,KeyError) as ex:self.error(str(ex))
@@ -959,6 +970,20 @@ class Draft:
             self.points,self.refs,self.start=before
             self.error(str(ex))
 
+    def pen_width(self):
+        if not hasattr(self,'pen_size'):return .01
+        value=parse_number(self.pen_size.get(),self._pen_unit)
+        if not 0<value<=1:
+            raise ValueError(f'Pen size must be greater than zero and at most {format_value(1,self._pen_unit)} {self._pen_unit}.')
+        return value
+
+    def commit_pen_size(self):
+        try:value=self.pen_width()
+        except ValueError as ex:
+            self.pen_error.set(str(ex));self.pen_error_label.pack(after=self.pen_size_entry.master.master,anchor='w');return False
+        self._pen_width=value;self.pen_size.set(format_value(value,self._pen_unit));self.pen_error.set('');self.pen_error_label.pack_forget()
+        self.draw();return True
+
     def choose_pen_color(self):
         self.doc.set_layer_color(self.color.get())
         self.draw()
@@ -967,7 +992,7 @@ class Draft:
         self._recent_mouse_line=None
         self.cancel_snap_hover()
         values=self.values();obj=construct(self.tool.get(),points,values,self.refs,self.clockwise.get())
-        obj['color']=self.doc.layer_color(); self.doc.add([obj])
+        obj['color']=self.doc.layer_color();obj['weight']=self.pen_width();self.doc.add([obj])
         self.remember_parameters(values,obj)
         end=list(points[-1]); connected=self.tool.get()=='Connected points'
         self.points=[end] if connected else []; self.refs=[None] if connected else []
@@ -1060,6 +1085,13 @@ class Draft:
         return 'Pick first point / center' if not n else 'Pick second point'
 
     def preview(self):
+        obj=self.preview_geometry()
+        if obj is not None:
+            try:obj['weight']=self.pen_width()
+            except ValueError:return None
+        return obj
+
+    def preview_geometry(self):
         if self.family.get()=='Dimension':
             return {'type':'line','a':self.points[0],'b':self.mouse} if self.points and self.mouse and distance(self.points[0],self.mouse)>geo.EPS else None
         if self.family.get()=='Offset': return None
@@ -1451,6 +1483,12 @@ class Draft:
 
     def sync_units(self):
         unit=self.doc.display_unit;old=getattr(self,'_parameter_unit',unit)
+        if hasattr(self,'pen_size'):
+            if self._pen_unit!=unit:
+                try:self._pen_width=self.pen_width()
+                except ValueError:pass
+                self._pen_unit=unit;self.pen_size.set(format_value(self._pen_width,unit));self.pen_error.set('');self.pen_error_label.pack_forget()
+            self.pen_size_label.set(f'Size ({unit})')
         if old!=unit:
             for key,var in self.params.items():
                 try:var.set(format_value(parse_number(var.get(),old,field_kind(key)),unit,field_kind(key)))
