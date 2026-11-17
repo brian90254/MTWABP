@@ -22,6 +22,7 @@ import cad_offset
 import cad_properties
 import cad_dxf
 import cad_import
+from cad_library import LibraryMixin
 import cad_clipboard
 from cad_recent import RecentFiles
 from cad_units import UNITS, parse_number, format_value, display_value, field_kind
@@ -54,7 +55,7 @@ class CanvasLayer:
         return create
 
 
-class Draft:
+class Draft(LibraryMixin):
     def __init__(self,root):
         self.root=root; self.doc=Document(); self.path=None;self._tool_defaults={};self._tool_methods={}
         self.recent_files=RecentFiles();self._zoom_window=False;self._view_box_start=None;self._view_box_end=None
@@ -91,7 +92,7 @@ class Draft:
         root.bind_all('<KeyPress>',self.tool_shortcut,add='+')
         self.draw()
         for panel in self.panels.preferences.data['open']:
-            (self.layers_dialog if panel=='layers' else self.edit_dialog)()
+            {'layers':self.layers_dialog,'properties':self.edit_dialog,'library':self.library_dialog}[panel]()
 
     @property
     def objects(self): return self.doc.objects
@@ -155,6 +156,7 @@ class Draft:
         view.add_separator()
         view.add_command(label='Layers panel',command=self.layers_dialog)
         view.add_command(label='Properties panel',command=self.edit_dialog)
+        view.add_command(label='Library panel',command=self.library_dialog)
         self.root.configure(menu=self.menu_bar);self.refresh_recent_menu()
 
     def refresh_recent_menu(self):
@@ -221,8 +223,9 @@ class Draft:
         ttk.Checkbutton(side,text='Snap to grid',variable=self.grid_snap).pack(anchor='w')
         ttk.Button(side,text='Grid preferences...',command=self.grid_dialog).pack(fill='x',pady=5)
         panels=ttk.Frame(side);panels.pack(fill='x',pady=6)
-        ttk.Button(panels,text='Layers',command=self.layers_dialog).pack(side='left',fill='x',expand=True,padx=(0,3))
-        ttk.Button(panels,text='Properties',command=self.edit_dialog).pack(side='left',fill='x',expand=True)
+        ttk.Button(panels,text='Layers',width=9,command=self.layers_dialog).pack(side='left',fill='x',expand=True,padx=(0,3))
+        ttk.Button(panels,text='Properties',width=9,command=self.edit_dialog).pack(side='left',fill='x',expand=True)
+        ttk.Button(panels,text='Library',width=9,command=self.library_dialog).pack(side='left',fill='x',expand=True,padx=(3,0))
         ttk.Label(side,textvariable=self.layer_status,wraplength=210,style='Muted.TLabel').pack(anchor='w',pady=4)
         ttk.Label(side,text='Esc: cancel · Right-click: Select',wraplength=215,style='Muted.TLabel').pack(anchor='w',pady=3)
         workspace=ttk.Panedwindow(body,orient='horizontal');workspace.pack(side='left',fill='both',expand=True)
@@ -282,7 +285,7 @@ class Draft:
     def right_click(self,event=None):
         if getattr(self,'polar_window',None):return self.close_polar()
         if getattr(self,'_zoom_window',False):self.cancel_window_zoom();return 'break'
-        if getattr(self,'_paste',None):self.cancel();return 'break'
+        if getattr(self,'_paste',None) or getattr(self,'_library',None):self.cancel();return 'break'
         if self.family.get()=='Splines' and self.points:
             self.finish()
             return 'break'
@@ -322,6 +325,7 @@ class Draft:
         for child in self.parameter_frame.winfo_children(): child.destroy()
         self.params={}; self.parameter_entries={}; self.last_parameter=None;self._parameter_unit=self.doc.display_unit
         family,method=self.family.get(),self.tool.get()
+        if getattr(self,'_library',None):self.library_parameters();return
         for widget in (self.method_box,self.direction_check,self.copy_check):widget.pack_forget()
         self.tool_heading.set(family)
         if len(METHODS[family])>1:self.method_box.pack(side='left',padx=(0,12))
@@ -682,12 +686,15 @@ class Draft:
         self.mouse,self.marker=self.snap_point(self.world(e.x,e.y))
         if getattr(self,'_paste',None):
             self._paste['point']=list(self.mouse);self.marker=self.marker or 'paste anchor'
+        if getattr(self,'_library',None):self.library_motion(self.mouse)
         self.track_snap_hover(e);self.draw()
 
     def click(self,e):
         self._recent_mouse_line=None
         self.cancel_snap_hover()
         self.canvas.focus_set(); raw=self.world(e.x,e.y)
+        if getattr(self,'_library',None):
+            point,_=self.snap_point(raw);self.library_click(point);return
         if getattr(self,'polar_window',None):
             point,_=self.snap_point(raw)
             for var,value in zip(self.polar_fields,point):var.set(format_value(value,self.polar_unit))
@@ -905,7 +912,7 @@ class Draft:
 
     def double_click(self,e):
         if getattr(self,'polar_window',None):return
-        if getattr(self,'_zoom_window',False) or getattr(self,'_paste',None):return
+        if getattr(self,'_zoom_window',False) or getattr(self,'_paste',None) or getattr(self,'_library',None):return
         if self.family.get()=='Select':
             self.cancel(); self.edit_dialog()
 
@@ -1029,6 +1036,7 @@ class Draft:
         except (ValueError,KeyError) as ex: self.error(str(ex))
 
     def finish(self):
+        if getattr(self,'_library',None):self.commit_library();return
         if self.family.get()=='Splines':
             try:
                 if len(self.points)<2: raise ValueError('Pick at least two spline points.')
@@ -1040,6 +1048,8 @@ class Draft:
         self._recent_mouse_line=None
         self._line_guides=(None,[])
         self.close_polar()
+        was_library=bool(getattr(self,'_library',None));self._library=None
+        if was_library:self.configure_parameters()
         self._paste=None
         if hasattr(self,'canvas'):self.canvas.delete('paste-preview')
         self.cancel_window_zoom(draw=False)
@@ -1056,6 +1066,7 @@ class Draft:
     def prompt(self):
         if getattr(self,'_zoom_window',False):return 'Zoom window: drag an area; Esc/right-click cancels'
         if getattr(self,'_paste',None):return 'Paste: anchor follows cursor | click to place | Esc/right-click cancels'
+        if getattr(self,'_library',None):return 'Library: click origin, edit angle, Enter to place another copy | Esc/right-click finishes'
         method=self.tool.get(); n=len(self.points)
         if self.family.get()=='Dimension':
             return 'Pick second snap point' if self.points else 'Pick two snap points, or an on-line/on-curve snap for a whole-object measurement'
@@ -1229,6 +1240,7 @@ class Draft:
         self.render_geometry(visible)
         self.canvas.tag_lower('background')
         self.render_paste_preview()
+        self.render_library_preview()
         c=CanvasLayer(self.canvas,'overlay')
         if self.tool.get()=='Start tangent + end' and len(self.points)>=2:
             try:
@@ -1483,6 +1495,11 @@ class Draft:
 
     def sync_units(self):
         unit=self.doc.display_unit;old=getattr(self,'_parameter_unit',unit)
+        if getattr(self,'_library',None) and self.library_unit!=unit:
+            for key in ('x','y'):
+                try:self.library_fields[key].set(format_value(parse_number(self.library_fields[key].get(),self.library_unit),unit))
+                except ValueError:self.library_fields[key].set(format_value(self._library['point'][0 if key=='x' else 1],unit))
+            self.library_unit=unit
         if hasattr(self,'pen_size'):
             if self._pen_unit!=unit:
                 try:self._pen_width=self.pen_width()
@@ -1660,6 +1677,10 @@ class Draft:
 
     def toggle_panel(self,key):
         scroll=self.panels.panels[key]['canvas'].yview()[0]
+        if key=='library':
+            self.panels.remember();saved=self.panels.preferences.data['panels'][key]
+            saved['mode']='dock' if saved['mode']=='float' else 'float';self.panels.preferences.save()
+            self.close_library();self.library_dialog();self.panels.panels[key]['canvas'].yview_moveto(scroll);return
         if key=='layers':
             selected=self.layer_tree.selection()
             name=self.layer_tree.item(selected[0],'values')[-1] if selected else self.doc.active

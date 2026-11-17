@@ -70,6 +70,14 @@ Choose a tool family and a construction method. Its numeric parameters appear al
 
 Collinear or coincident points and ambiguous tangent cases show an error instead of creating invalid geometry. The tangent-arc method uses three freely chosen points and needs no existing geometry. The start and tangent direction point must differ, and the arc endpoint must be off their tangent line. Circle tangent construction still needs existing straight lines and uses their supporting lines where necessary. Circle tangencies to other circles and general spline constraint solving are not implemented. Arbitrary pairs of exact contact points do not always admit a common tangent circle, which is why the second line pick chooses a solution rather than forcing a second exact contact.
 
+## Library
+
+Open **View > Library panel** or click **Library** beside Layers and Properties. The panel can dock or float, and lists DXF files from the project's `LIBRARY` folder with geometry thumbnails. Use **Refresh library** after adding files. DXF loading uses the same optional `ezdxf` dependency as Import.
+
+Click a thumbnail or its name to start placing copies. A preview follows the cursor with the normal drawing snaps; the cross marks the original DXF **0,0**, not its bounding-box center. The bottom fields set **Origin X**, **Origin Y**, and **Angle** (degrees counterclockwise). Coordinates accept drawing units, explicit unit suffixes, and arithmetic.
+
+Click the workspace to hold the origin location and select the Angle field. Edit the angle if desired, then press **Enter** to place the copy. You can also type all three fields and press Enter or **Place copy**. Placement continues for another copy, retaining the angle. **Escape** or **right-click** ends placement; changing tools also cancels the pending preview. Each placed copy is one undo step and preserves imported layers, colors, line widths, and groups; the library file is unchanged.
+
 ## Drawing pen size
 
 The **Size** field beside the pen colors sets the line width for new geometry and dimensions. Press Enter or leave the field to apply it. It uses the displayed drawing unit and accepts expressions and unit suffixes, such as `1/64` or `0.5mm`. Valid sizes are greater than zero and at most 1 inch (or its equivalent). Changing units preserves the physical width.
