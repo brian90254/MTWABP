@@ -72,11 +72,11 @@ Collinear or coincident points and ambiguous tangent cases show an error instead
 
 ## Library
 
-Open **View > Library panel** or click **Library** beside Layers and Properties. The panel can dock or float, and lists DXF files from the project's `LIBRARY` folder with geometry thumbnails. Use **Refresh library** after adding files. DXF loading uses the same optional `ezdxf` dependency as Import.
+Open **View > Library panel** or click **Library** beside Layers and Properties. The panel can dock or float, and lists DXF files from the project's `LIBRARY` folder with compact geometry thumbnails. Hover over an icon for one second to see its filename. **Load...** opens a folder chooser and adds that folder's DXFs alongside the default library items. Only DXFs directly in each chosen folder are loaded; subfolders are not scanned. Choose a subfolder explicitly to load its contents. Additional folders stay loaded for the session, including when docking or reopening the panel. DXF loading uses the same optional `ezdxf` dependency as Import.
 
-Click a thumbnail or its name to start placing copies. A preview follows the cursor with the normal drawing snaps; the cross marks the original DXF **0,0**, not its bounding-box center. The bottom fields set **Origin X**, **Origin Y**, and **Angle** (degrees counterclockwise). Coordinates accept drawing units, explicit unit suffixes, and arithmetic.
+Click a thumbnail to start placing copies. A preview follows the cursor with the normal drawing snaps; the cross marks the original DXF **0,0**, not its bounding-box center. The bottom fields set **Origin X**, **Origin Y**, and **Angle** (degrees counterclockwise). Coordinates accept drawing units, explicit unit suffixes, and arithmetic.
 
-Click the workspace to hold the origin location and select the Angle field. Edit the angle if desired, then press **Enter** to place the copy. You can also type all three fields and press Enter or **Place copy**. Placement continues for another copy, retaining the angle. **Escape** or **right-click** ends placement; changing tools also cancels the pending preview. Each placed copy is one undo step and preserves imported layers, colors, line widths, and groups; the library file is unchanged.
+Click the workspace to hold the origin location and select the Angle field. Edit the angle if desired, then press **Enter** to place the copy. Alternatively, **double-click** a workspace location to place the copy there with the current angle. You can also type all three fields and press Enter or **Place copy**. Placement continues for another copy, retaining the angle. **Escape** or **right-click** ends placement; changing tools also cancels the pending preview. Each placed copy is one undo step and preserves imported layers, colors, line widths, and groups; the library file is unchanged.
 
 ## Drawing pen size
 
