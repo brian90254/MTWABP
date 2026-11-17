@@ -1,7 +1,8 @@
 """DXF library thumbnails and repeat placement around the file's original origin."""
 from pathlib import Path
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, filedialog
+from cad_workspace import HoverHint
 import cad_geometry as geo
 import cad_import
 from cad_document import Document
@@ -21,8 +22,8 @@ class LibraryMixin:
     def library_dialog(self):
         if self.panels.show('library'):return
         content=self.panels.create('library','Library',self.close_library)
-        ttk.Label(content,text='Choose a DXF, click its origin location, then press Enter to place.',wraplength=300).pack(fill='x',padx=10,pady=8)
-        ttk.Button(content,text='Refresh library',command=self.refresh_library).pack(anchor='w',padx=10)
+        ttk.Label(content,text='Choose a DXF. Click its origin, then Enter or double-click to place.',wraplength=300).pack(fill='x',padx=10,pady=8)
+        ttk.Button(content,text='Load...',command=self.load_library).pack(anchor='w',padx=10)
         self.library_items=ttk.Frame(content);self.library_items.pack(fill='both',expand=True,padx=10,pady=8)
         self.refresh_library()
         self.panels.bind('library','<Escape>',lambda e:(self.cancel(),'break')[1])
@@ -30,32 +31,45 @@ class LibraryMixin:
     def close_library(self):
         self.panels.remove('library')
 
+    def load_library(self):
+        folder=filedialog.askdirectory(parent=self.root,title='Load DXF library folder',
+            initialdir=str(getattr(self,'_library_last_folder',LIBRARY_DIR)))
+        if not folder:return
+        path=Path(folder).resolve();self._library_last_folder=path
+        folders=getattr(self,'_library_folders',[])
+        if path not in folders:self._library_folders=folders+[path]
+        self.refresh_library()
+
     def refresh_library(self):
         for child in self.library_items.winfo_children():child.destroy()
-        paths=sorted(LIBRARY_DIR.glob('*'),key=lambda p:p.name.casefold())
-        paths=[p for p in paths if p.is_file() and p.suffix.lower()=='.dxf']
-        if not paths:ttk.Label(self.library_items,text='Add DXF files to the project LIBRARY folder.',wraplength=290).pack();return
-        for path in paths:
-            box=ttk.Frame(self.library_items);box.pack(fill='x',pady=5)
+        self.library_hints=[];self.library_icons=[]
+        paths=[];seen=set()
+        for folder in [LIBRARY_DIR]+getattr(self,'_library_folders',[]):
+            for path in sorted(folder.glob('*'),key=lambda p:p.name.casefold()):
+                if path.is_file() and path.suffix.lower()=='.dxf' and path.resolve() not in seen:
+                    paths.append(path);seen.add(path.resolve())
+        if not paths:ttk.Label(self.library_items,text='No DXFs found. Use Load... to choose a folder.',wraplength=290).pack();return
+        for index,path in enumerate(paths):
+            box=ttk.Frame(self.library_items);box.grid(row=index//4,column=index%4,padx=3,pady=4,sticky='n')
             try:
                 source,warnings=cad_import.read_dxf(path)
                 if not source.objects:raise ValueError('No supported geometry.')
                 paths_=[geo.path(o) for o in source.objects]
                 points=[p for line in paths_ for p in line]
                 lo=[min(p[i] for p in points) for i in (0,1)];hi=[max(p[i] for p in points) for i in (0,1)]
-                scale=min(140/max(hi[0]-lo[0],1e-8),80/max(hi[1]-lo[1],1e-8))
+                scale=min(52/max(hi[0]-lo[0],1e-8),52/max(hi[1]-lo[1],1e-8))
                 center=[(a+b)/2 for a,b in zip(lo,hi)]
-                icon=tk.Canvas(box,width=168,height=104,background='white',highlightthickness=1,highlightbackground='#bcc8d5',cursor='hand2',takefocus=True)
+                icon=tk.Canvas(box,width=64,height=64,background='white',highlightthickness=1,highlightbackground='#bcc8d5',cursor='hand2',takefocus=True)
                 icon.pack(anchor='center')
                 for obj,line in zip(source.objects,paths_):
-                    coords=[v for p in line for v in (84+(p[0]-center[0])*scale,52-(p[1]-center[1])*scale)]
+                    coords=[v for p in line for v in (32+(p[0]-center[0])*scale,32-(p[1]-center[1])*scale)]
                     if len(coords)>=4:icon.create_line(*coords,fill=obj.get('color','#222222'))
                 action=lambda e=None,s=source,n=path.stem,w=warnings:self.begin_library(s,n,w)
                 icon.bind('<Button-1>',action);icon.bind('<Return>',action);icon.bind('<space>',action)
-                ttk.Button(box,text=path.stem,command=action).pack(fill='x')
-                if warnings:ttk.Label(box,text='Import notes: '+'; '.join(warnings),wraplength=290).pack(fill='x')
+                self.library_icons.append(icon)
+                self.library_hints.append(HoverHint(icon,path.name+('\n'+'\n'.join(warnings) if warnings else ''),delay=1000))
             except Exception as ex:
-                ttk.Label(box,text=path.name+'\n'+str(ex),wraplength=290,foreground='#a3342a').pack(fill='x')
+                ttk.Label(box,text=path.name+'\n'+str(ex),wraplength=64,foreground='#a3342a').pack(fill='x')
         self.panels.rebind('library')
 
     def begin_library(self,source,name,warnings=()):

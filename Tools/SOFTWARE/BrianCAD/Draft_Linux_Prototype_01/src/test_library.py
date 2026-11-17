@@ -79,6 +79,43 @@ class LibraryUITests(unittest.TestCase):
             a.toggle_panel('library');self.root.update();self.assertIsNotNone(a.panels.panels['library']['top'])
             a.toggle_panel('library');self.root.update();self.assertIsNone(a.panels.panels['library']['top'])
             a.close_library();self.assertNotIn('library',a.panels.panels)
+    def test_double_click_places_at_snapped_spot_with_current_angle(self):
+        a=self.a;a.begin_library(source(),'Example');a.snap.set(False)
+        # Grid snapping stays enabled and rounds a nearby mouse location.
+        x,y=a.screen([1.02,2.02]);event=SimpleNamespace(x=x,y=y,state=0)
+        a.click(event);a.library_fields['angle'].set('90')
+        self.assertEqual(a.double_click(event),'break');self.assertEqual(len(a.objects),1)
+        self.assertAlmostEqual(a.objects[0]['a'][0],1);self.assertAlmostEqual(a.objects[0]['a'][1],3)
+        self.assertFalse(a._library['fixed']);self.assertEqual(a._library['angle'],90)
+        a.library_fields['angle'].set('bad');a.double_click(event)
+        self.assertEqual(len(a.objects),1);self.assertTrue(a.library_error.get())
+        a.library_fields['angle'].set('0')
+        for stamp in (10000,10100):
+            a.canvas.event_generate('<ButtonPress-1>',x=round(x),y=round(y),time=stamp)
+            a.canvas.event_generate('<ButtonRelease-1>',x=round(x),y=round(y),time=stamp+20)
+            self.root.update()
+        self.assertEqual(len(a.objects),2)
+
+    def test_load_folders_nonrecursive_deduplicated_and_filename_hints(self):
+        a=self.a;folder=Path(self.temp.name);default=folder/'LIBRARY';other=folder/'Other'
+        nested=default/'Nested';nested.mkdir(parents=True);other.mkdir()
+        for path in (default/'Top.dxf',nested/'Child.dxf',other/'Extra.DXF'):path.write_text('placeholder')
+        with patch('cad_library.LIBRARY_DIR',default),patch('cad_library.cad_import.read_dxf',side_effect=lambda p:(source(),[])) as reader:
+            a.library_dialog();self.root.update()
+            self.assertEqual([Path(call.args[0]).name for call in reader.call_args_list],['Top.dxf'])
+            self.assertEqual(len(a.library_icons),1);self.assertEqual(a.library_icons[0].cget('width'),'64')
+            self.assertEqual(a.library_hints[0].text,'Top.dxf');self.assertEqual(a.library_hints[0].delay,1000)
+            with patch('cad_library.filedialog.askdirectory',return_value=str(nested)) as chooser:a.load_library()
+            self.assertEqual(len(a.library_icons),2);self.assertEqual(chooser.call_args.kwargs['initialdir'],str(default))
+            with patch('cad_library.filedialog.askdirectory',return_value=str(other)):a.load_library();a.load_library()
+            self.assertEqual(len(a.library_icons),3)
+            with patch('cad_library.filedialog.askdirectory',return_value=''):a.load_library()
+            self.assertEqual(len(a.library_icons),3)
+            a.toggle_panel('library');self.root.update();self.assertEqual(len(a.library_icons),3)
+            hint=a.library_hints[0];hint.schedule();self.assertIsNone(hint.popup)
+            self.root.after(1100,self.root.quit);self.root.mainloop();self.assertIsNotNone(hint.popup)
+            a.close_library();self.assertIsNone(hint.popup)
+
     def test_change_tools_cancels_placement(self):
         a=self.a;a.begin_library(source(),'Example');a.family.set('Lines');a.family_changed()
         self.assertIsNone(a._library);self.assertIn('length',a.params)

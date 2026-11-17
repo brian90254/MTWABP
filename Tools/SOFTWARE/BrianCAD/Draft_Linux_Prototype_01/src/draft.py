@@ -912,7 +912,10 @@ class Draft(LibraryMixin):
 
     def double_click(self,e):
         if getattr(self,'polar_window',None):return
-        if getattr(self,'_zoom_window',False) or getattr(self,'_paste',None) or getattr(self,'_library',None):return
+        if getattr(self,'_zoom_window',False) or getattr(self,'_paste',None):return
+        if getattr(self,'_library',None):
+            self.canvas.focus_set();point,_=self.snap_point(self.world(e.x,e.y))
+            self.library_click(point);self.commit_library();return 'break'
         if self.family.get()=='Select':
             self.cancel(); self.edit_dialog()
 
@@ -1066,7 +1069,7 @@ class Draft(LibraryMixin):
     def prompt(self):
         if getattr(self,'_zoom_window',False):return 'Zoom window: drag an area; Esc/right-click cancels'
         if getattr(self,'_paste',None):return 'Paste: anchor follows cursor | click to place | Esc/right-click cancels'
-        if getattr(self,'_library',None):return 'Library: click origin, edit angle, Enter to place another copy | Esc/right-click finishes'
+        if getattr(self,'_library',None):return 'Library: click origin, edit angle, Enter or double-click to place | Esc/right-click finishes'
         method=self.tool.get(); n=len(self.points)
         if self.family.get()=='Dimension':
             return 'Pick second snap point' if self.points else 'Pick two snap points, or an on-line/on-curve snap for a whole-object measurement'
