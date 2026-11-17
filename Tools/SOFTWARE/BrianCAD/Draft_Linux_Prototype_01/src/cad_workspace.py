@@ -87,12 +87,12 @@ class WorkspacePreferences:
                     self.data['split']=max(.2,min(.8,data['split']))
                 if isinstance(data.get('panels'),dict):
                     for key,value in data['panels'].items():
-                        if key not in ('layers','properties') or not isinstance(value,dict):continue
+                        if key not in ('layers','properties','library') or not isinstance(value,dict):continue
                         item={'mode':'float' if value.get('mode')=='float' else 'dock'}
                         geometry=value.get('geometry')
                         if isinstance(geometry,str) and re.fullmatch(r'\d{2,4}x\d{2,4}[+-]\d{1,5}[+-]\d{1,5}',geometry):item['geometry']=geometry
                         self.data['panels'][key]=item
-                if isinstance(data.get('open'),list):self.data['open']=[k for k in data['open'] if k in ('layers','properties')]
+                if isinstance(data.get('open'),list):self.data['open']=[k for k in data['open'] if k in ('layers','properties','library')]
         except (OSError,ValueError,TypeError):pass
 
     def save(self):
