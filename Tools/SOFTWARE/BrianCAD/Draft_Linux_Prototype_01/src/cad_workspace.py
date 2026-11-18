@@ -7,6 +7,7 @@ import re
 import tempfile
 import tkinter as tk
 from tkinter import ttk
+from cad_scroll import touchpad_deltas
 from cad_recent import preferences_path
 
 INK='#253447'
@@ -185,15 +186,23 @@ class WorkspacePanels:
         canvas.bind('<Configure>',size_content)
         self.panels[key]={'outer':outer,'content':content,'top':top,'canvas':canvas,'bindings':{}}
         if top:top.bind('<Configure>',lambda e:self.capture_geometry(key) if e.widget is top else None)
-        def wheel(event):
+        def wheel(event,precise=False):
             if event.widget.winfo_class()=='TCombobox':return
             box=canvas.bbox('all')
             if not box or box[3]<=canvas.winfo_height():return
+            if precise:
+                _,dy=touchpad_deltas(event.delta)
+                if dy:canvas.yview_moveto(canvas.yview()[0]-dy*8/max(1,box[3]-box[1]))
+                return 'break'
             amount=-1 if getattr(event,'num',None)==4 else 1 if getattr(event,'num',None)==5 else -int(event.delta/(1 if self.root.tk.call('tk','windowingsystem')=='aqua' else 120))
             if amount:canvas.yview_scroll(amount,'units')
             return 'break'
         for event in ('<MouseWheel>','<Button-4>','<Button-5>'):
             self.bind(key,event,wheel);canvas.bind(event,wheel)
+        try:
+            precise_wheel=lambda e:wheel(e,precise=True)
+            canvas.bind('<TouchpadScroll>',precise_wheel);self.bind(key,'<TouchpadScroll>',precise_wheel)
+        except tk.TclError:pass
         self.root.update_idletasks();self.restore_width();self.root.update_idletasks()
         return content
 

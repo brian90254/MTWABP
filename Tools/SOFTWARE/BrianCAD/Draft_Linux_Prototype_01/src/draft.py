@@ -23,6 +23,7 @@ import cad_properties
 import cad_dxf
 import cad_import
 from cad_library import LibraryMixin
+from cad_scroll import touchpad_deltas
 import cad_clipboard
 from cad_recent import RecentFiles
 from cad_units import UNITS, parse_number, format_value, display_value, field_kind
@@ -253,6 +254,8 @@ class Draft(LibraryMixin):
         self.canvas.bind('<Leave>',self.leave_canvas)
         self.canvas.bind('<Destroy>',lambda e:self.cancel_snap_hover())
         self.canvas.bind('<MouseWheel>',self.scroll_workspace)
+        try:self.canvas.bind('<TouchpadScroll>',lambda e:self.scroll_workspace(e,precise=True))
+        except tk.TclError:pass  # Tk 8.6 has no separate precise-scroll event.
         if self.root.tk.call('tk','windowingsystem')!='aqua':
             self.canvas.bind('<Button-4>',self.scroll_workspace)
             self.canvas.bind('<Button-5>',self.scroll_workspace)
@@ -1467,9 +1470,15 @@ class Draft(LibraryMixin):
         self.scale=max(.01,min(100000,(w-40)/max(high[0]-low[0],1e-9),(h-40)/max(high[1]-low[1],1e-9)))
         self.origin=[w/2-(low[0]+high[0])*self.scale/2,h/2+(low[1]+high[1])*self.scale/2];self.draw()
 
-    def scroll_workspace(self,e):
+    def scroll_workspace(self,e,precise=False):
+        state=getattr(e,'state',0)
         number=getattr(e,'num',None)
-        if number in (4,5):
+        if precise:
+            dx,dy=touchpad_deltas(e.delta)
+            delta=dy if dy or not (state & 0x1) or state & 0x4 else dx
+            if not delta:return 'break'
+            pixels=delta*8;zoom_steps=delta/5
+        elif number in (4,5):
             pixels=40 if number==4 else -40;zoom_steps=1 if number==4 else -1
         else:
             delta=getattr(e,'delta',0)
@@ -1479,7 +1488,6 @@ class Draft(LibraryMixin):
                 pixels=delta*8;zoom_steps=delta/5
             else:
                 pixels=delta/120*40;zoom_steps=delta/120
-        state=getattr(e,'state',0)
         if state & 0x4:
             self.zoom(e,1.15**max(-8,min(8,zoom_steps)))
         else:
