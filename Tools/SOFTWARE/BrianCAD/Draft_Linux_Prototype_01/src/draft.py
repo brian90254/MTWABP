@@ -554,7 +554,9 @@ class Draft(LibraryMixin):
             best=min(candidates,key=lambda v:distance(p,v[0]),default=None)
             return (list(best[0]),best[1]) if best and distance(p,best[0])<=tolerance else None
         excluded=set(exclude or [])
-        if self.family.get()=='Modify': excluded.update(set(self.doc.editable_selection())|set(self.doc.editable_point_selection()))
+        # Rotation references may belong to the selected geometry itself.
+        if self.family.get()=='Modify' and self.tool.get()!='Rotate':
+            excluded.update(set(self.doc.editable_selection())|set(self.doc.editable_point_selection()))
         ids=[i for i in self.visible_ids() if i not in excluded]
         self._line_guides=(None,[])
         guide_projections=[]
