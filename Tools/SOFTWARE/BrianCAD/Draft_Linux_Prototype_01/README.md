@@ -190,6 +190,8 @@ When the pointer's current drawing position is within 6 screen pixels of a remem
 
 **Scroll** pans vertically; **Shift + Scroll** pans horizontally; **Control + Scroll** zooms around the pointer (Control, including on macOS). Both older MouseWheel and newer Tk TouchpadScroll events are supported; packed touchpad X/Y deltas are decoded before applying movement. Mac trackpad deltas are handled smoothly, and mouse wheels use the same controls. Middle-button drag also pans; **Fit** frames visible geometry. Delete/Backspace removes unlocked selected objects while the canvas has focus. Control+Z / Control+Y undo/redo; Control+S saves; Control+O opens. macOS also supports the equivalent Command shortcuts. If macOS Accessibility Zoom is configured to use Control-scroll, change that system shortcut so BrianCAD can receive it.
 
+Quitting with the window close button or macOS **Command+Q / Quit** asks whether to save unsaved drawing changes. Choose Yes to save, No to quit without saving, or Cancel to keep working. Cancelling Save As or a failed save keeps the application open.
+
 ## Drawing files
 
 Save/Open use JSON in the `briancad-2` format with geometry, styles, layers, active layer, and grid preferences. Original `draft-prototype-1` JSON drawings still open and get a default layer. Save As creates a separate file; saves write a temporary file before replacing the destination. Unsaved changes trigger a discard prompt for New/Open/Exit. VC6 compatibility is outside this implementation.

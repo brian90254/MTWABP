@@ -78,7 +78,7 @@ class Draft(LibraryMixin):
         self.drag=None; self.drag_preview={}; self.drag_error=''; self._bounds_cache={}
         root.title('BrianCAD'); root.geometry('1220x820'); root.minsize(850,620)
         self.build_ui(); self.configure_parameters()
-        root.protocol('WM_DELETE_WINDOW',self.close)
+        self.install_close_handlers()
         for key,action in [('z',self.undo),('y',self.redo),('s',self.save),('o',self.open),('g',self.group_selected),('n',self.new),('c',self.copy_objects),('v',self.paste_objects)]:
             root.bind('<Control-'+key+'>',lambda e,f=action:self.shortcut(e,f))
             if root.tk.call('tk','windowingsystem')=='aqua':
@@ -1930,9 +1930,23 @@ class Draft(LibraryMixin):
             with open(path,encoding='utf-8') as f: doc=Document.from_payload(json.load(f))
             self.snap_history.clear(); self.doc=doc; self.path=path; self.cancel(); self.refresh_layers(); self.fit();self.remember_drawing(path)
         except (OSError,ValueError,TypeError,KeyError,OverflowError) as ex: self.error(str(ex))
+    def install_close_handlers(self):
+        self.root.protocol('WM_DELETE_WINDOW',self.close)
+        if self.root.tk.call('tk','windowingsystem')=='aqua':
+            self.root.createcommand('::tk::mac::Quit',self.close)
+
     def close(self):
-        if self.discard():
-            self.panels.remember(open_state=True);self.cancel_snap_hover(); self.root.destroy()
+        if getattr(self,'_closing',False):return
+        self._closing=True
+        try:
+            if self.doc.dirty:
+                answer=messagebox.askyesnocancel('Unsaved drawing','Save changes before quitting?',parent=self.root)
+                if answer is None:return
+                if answer:
+                    self.save()
+                    if self.doc.dirty:return  # Save cancelled or failed.
+            self.panels.remember(open_state=True);self.cancel_snap_hover();self.root.destroy()
+        finally:self._closing=False
 
 
 if __name__=='__main__':
