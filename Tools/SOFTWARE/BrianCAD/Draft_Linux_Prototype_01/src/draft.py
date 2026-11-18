@@ -252,10 +252,10 @@ class Draft(LibraryMixin):
             self.canvas.bind(event,fn)
         self.canvas.bind('<Leave>',self.leave_canvas)
         self.canvas.bind('<Destroy>',lambda e:self.cancel_snap_hover())
-        self.canvas.bind('<MouseWheel>',lambda e:self.zoom(e,1.15 if e.delta>0 else 1/1.15))
+        self.canvas.bind('<MouseWheel>',self.scroll_workspace)
         if self.root.tk.call('tk','windowingsystem')!='aqua':
-            self.canvas.bind('<Button-4>',lambda e:self.zoom(e,1.15))
-            self.canvas.bind('<Button-5>',lambda e:self.zoom(e,1/1.15))
+            self.canvas.bind('<Button-4>',self.scroll_workspace)
+            self.canvas.bind('<Button-5>',self.scroll_workspace)
 
     def canvas_resized(self,event):
         size=(event.width,event.height);old=getattr(self,'_canvas_size',None)
@@ -1466,6 +1466,27 @@ class Draft(LibraryMixin):
         w=self.canvas.winfo_width();h=self.canvas.winfo_height()
         self.scale=max(.01,min(100000,(w-40)/max(high[0]-low[0],1e-9),(h-40)/max(high[1]-low[1],1e-9)))
         self.origin=[w/2-(low[0]+high[0])*self.scale/2,h/2+(low[1]+high[1])*self.scale/2];self.draw()
+
+    def scroll_workspace(self,e):
+        number=getattr(e,'num',None)
+        if number in (4,5):
+            pixels=40 if number==4 else -40;zoom_steps=1 if number==4 else -1
+        else:
+            delta=getattr(e,'delta',0)
+            if not delta:return 'break'
+            if self.root.tk.call('tk','windowingsystem')=='aqua':
+                # Aqua sends small trackpad deltas; do not round them to wheel notches.
+                pixels=delta*8;zoom_steps=delta/5
+            else:
+                pixels=delta/120*40;zoom_steps=delta/120
+        state=getattr(e,'state',0)
+        if state & 0x4:
+            self.zoom(e,1.15**max(-8,min(8,zoom_steps)))
+        else:
+            self.cancel_window_zoom(draw=False);self.tracking_cursor=None;self.cancel_snap_hover()
+            self.origin[0 if state & 0x1 else 1]+=max(-1000,min(1000,pixels))
+            self.motion(e)
+        return 'break'
 
     def zoom(self,e,factor):
         self.cancel_window_zoom(draw=False)
