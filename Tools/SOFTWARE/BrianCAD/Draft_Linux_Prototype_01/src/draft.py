@@ -1488,6 +1488,7 @@ class Draft(LibraryMixin):
                 pixels=delta*8;zoom_steps=delta/5
             else:
                 pixels=delta/120*40;zoom_steps=delta/120
+        if not precise:pixels*=.25  # Wheel panning is gentler than precise trackpad input.
         if state & 0x4:
             self.zoom(e,1.15**max(-8,min(8,zoom_steps)))
         else:

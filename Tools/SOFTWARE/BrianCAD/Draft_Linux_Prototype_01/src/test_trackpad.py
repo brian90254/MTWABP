@@ -16,10 +16,10 @@ class ScrollTests(unittest.TestCase):
         a.cancel_window_zoom=Mock();a.cancel_snap_hover=Mock();a.motion=Mock();a.zoom=Mock()
         return a
     def event(self,delta=0,state=0,num=None):return SimpleNamespace(delta=delta,state=state,num=num,x=20,y=30)
-    def test_mac_small_deltas_pan_both_axes_and_zero_is_noop(self):
-        a=self.app('aqua');a.scroll_workspace(self.event(delta=1));self.assertEqual(a.origin,[100,208])
-        a.scroll_workspace(self.event(delta=-2,state=1));self.assertEqual(a.origin,[84,208])
-        a.scroll_workspace(self.event(delta=.5));self.assertEqual(a.origin,[84,212])
+    def test_mac_legacy_wheel_pan_both_axes_and_zero_is_noop(self):
+        a=self.app('aqua');a.scroll_workspace(self.event(delta=1));self.assertEqual(a.origin,[100,202])
+        a.scroll_workspace(self.event(delta=-2,state=1));self.assertEqual(a.origin,[96,202])
+        a.scroll_workspace(self.event(delta=.5));self.assertEqual(a.origin,[96,203])
         a.motion.reset_mock();a.scroll_workspace(self.event());a.motion.assert_not_called();a.zoom.assert_not_called()
     def test_control_overrides_shift_zoom_magnitude_and_direction(self):
         a=self.app('aqua');a.scroll_workspace(self.event(delta=1,state=5))
@@ -49,9 +49,9 @@ class ScrollTests(unittest.TestCase):
 
     def test_windows_and_linux_wheel_events(self):
         for system in ('win32','x11'):
-            a=self.app(system);a.scroll_workspace(self.event(delta=120));self.assertEqual(a.origin,[100,240])
-            a.scroll_workspace(self.event(delta=-60,state=1));self.assertEqual(a.origin,[80,240])
-            a.scroll_workspace(self.event(num=5));self.assertEqual(a.origin,[80,200])
+            a=self.app(system);a.scroll_workspace(self.event(delta=120));self.assertEqual(a.origin,[100,210])
+            a.scroll_workspace(self.event(delta=-60,state=1));self.assertEqual(a.origin,[95,210])
+            a.scroll_workspace(self.event(num=5));self.assertEqual(a.origin,[95,200])
             a.scroll_workspace(self.event(num=4,state=4));self.assertEqual(a.zoom.call_args.args[1],1.15)
             a.scroll_workspace(self.event(delta=-120,state=4));self.assertAlmostEqual(a.zoom.call_args.args[1],1/1.15)
 
