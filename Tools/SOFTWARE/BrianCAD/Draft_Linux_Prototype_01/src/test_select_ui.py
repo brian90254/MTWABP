@@ -74,6 +74,32 @@ class SelectWorkflowTests(unittest.TestCase):
         a.doc.select_window([.9,-.1],[1.1,.1]); self.click([1,0])
         self.assertEqual(a.selected,{0}); self.assertFalse(a.doc.point_selection)
 
+    def test_intersection_hover_is_preserved_as_drag_handle_and_exact_drop(self):
+        a=self.app;a.snap.set(True)
+        a.doc.add([dict(type='circle',center=[0,0],radius=2),
+                   dict(type='line',a=[-3,1],b=[3,1]),
+                   dict(type='line',a=[4,3.29],b=[6,3.29]),
+                   dict(type='line',a=[5.17,2],b=[5.17,4])])
+        a.selected={0,1};before=copy.deepcopy(a.objects);history=len(a.doc.history)
+        source=[math.sqrt(3),1];offset=[.02,.015];target=[5.17,3.29]
+        event=self.event(g.add(source,offset));a.motion(event)
+        self.assertEqual(a.marker,'intersection');self.assertLess(g.dist(a.mouse,source),1e-8)
+        a.click(event)
+        self.assertEqual(a.marker,'intersection');self.assertLess(g.dist(a.drag['handle'],source),1e-8)
+        a.drag_select(self.event(g.add(target,offset)))
+        self.assertEqual(a.marker,'intersection');self.assertLess(g.dist(a.mouse,target),1e-8)
+        a.release_select(self.event(g.add(target,offset)))
+        moved=g.add(a.objects[0]['center'],source)
+        self.assertLess(g.dist(moved,target),1e-8)
+        self.assertEqual(a.objects[2:],before[2:]);self.assertEqual(len(a.doc.history),history+1)
+        a.undo();self.assertEqual(a.objects,before)
+
+    def test_drag_handle_does_not_use_unrelated_nearby_anchor(self):
+        a=self.app;a.snap.set(True)
+        a.doc.add([dict(type='line',a=[0,0],b=[4,0]),dict(type='circle',center=[1.37,.04],radius=.3)])
+        point,label=a.drag_handle([1.37,.01],0)
+        self.assertEqual(point,[1.37,0]);self.assertNotEqual(label,'center')
+
     def test_live_curve_target_and_release_coordinates(self):
         a=self.app; a.snap.set(True)
         a.doc.add([{'type':'circle','center':[-3,0],'radius':.5}, {'type':'line','a':[0,2],'b':[4,2]}]); a.selected={0}

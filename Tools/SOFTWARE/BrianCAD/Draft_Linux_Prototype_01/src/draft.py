@@ -651,6 +651,14 @@ class Draft(LibraryMixin):
         return best if best and best[0]*self.scale<=9 else None
 
     def drag_handle(self,p,owner):
+        # Keep the full hover snap (especially intersections) on mouse-down,
+        # but only when it belongs to the object being picked up.
+        if self.snap.get() or self.grid_snap.get():
+            point,label=self.snap_point(p)
+            obj=self.objects[owner]
+            belongs=(distance(point,self.nearest_point(point,obj))<=1e-7 or
+                     any(distance(point,q)<=1e-7 for q,_ in self.object_anchors(obj)))
+            if label and belongs:return list(point),label
         if self.snap.get():
             candidates=anchors(self.objects[owner])
             best=min(candidates,key=lambda v:distance(p,v[0]))
