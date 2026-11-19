@@ -42,7 +42,7 @@ class DXFWorkflowTests(unittest.TestCase):
     @unittest.skipUnless(ezdxf,'Install requirements-dxf.txt')
     def test_selected_scope_is_frozen_and_does_not_change_document_or_path(self):
         a=self.app; a.selected={1}; a.doc.point_selection={0:{'a'}}
-        a.export_dxf_dialog(); self.root.update(); a.export_scope.set('selected')
+        a.export_dxf_dialog(); self.root.update(); self.assertEqual(a.export_scope.get(),'selected')
         a.objects[1]['center']=[99,99]; a.selected={2}; a.doc.point_selection={}
         before=a.doc.state(); history=copy.deepcopy(a.doc.history); future=copy.deepcopy(a.doc.future)
         with tempfile.TemporaryDirectory() as folder:
