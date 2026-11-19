@@ -1,0 +1,7711 @@
+{
+  "objects": [
+    {
+      "type": "circle",
+      "center": [
+        -5.375,
+        5.78125
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.375,
+        5.78125
+      ],
+      "b": [
+        -4.625,
+        5.78125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.25,
+        5.46875
+      ],
+      "b": [
+        -4.25,
+        5.625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.6875,
+        6.03125
+      ],
+      "b": [
+        -4.25,
+        5.625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.25,
+        2.3750000000000004
+      ],
+      "b": [
+        -4.25,
+        2.53125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.6875,
+        1.9687500000000004
+      ],
+      "b": [
+        -4.25,
+        2.3750000000000004
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.75,
+        2.625
+      ],
+      "b": [
+        -5.75,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.75,
+        5.375
+      ],
+      "b": [
+        -5.75,
+        5.46875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.75,
+        2.625
+      ],
+      "b": [
+        -5.75,
+        2.53125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.75,
+        5.46875
+      ],
+      "b": [
+        -5.75,
+        5.625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.75,
+        2.3750000000000004
+      ],
+      "b": [
+        -5.75,
+        2.53125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -6.25,
+        4.0
+      ],
+      "b": [
+        -3.75,
+        4.0
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.25,
+        2.625
+      ],
+      "b": [
+        -5.75,
+        2.625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.75,
+        5.375
+      ],
+      "b": [
+        -4.25,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.75,
+        5.46875
+      ],
+      "b": [
+        -4.25,
+        5.46875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.25,
+        5.375
+      ],
+      "b": [
+        -5.75,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.75,
+        2.53125
+      ],
+      "b": [
+        -4.25,
+        2.53125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.25,
+        2.625
+      ],
+      "b": [
+        -5.75,
+        2.625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.0,
+        4.0
+      ],
+      "radius": 1.25,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.75,
+        5.625
+      ],
+      "b": [
+        -5.3125,
+        6.03125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.75,
+        2.3750000000000004
+      ],
+      "b": [
+        -5.3125,
+        1.9687500000000004
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.25,
+        5.375
+      ],
+      "b": [
+        -4.25,
+        2.625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.25,
+        5.46875
+      ],
+      "b": [
+        -4.25,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.25,
+        2.53125
+      ],
+      "b": [
+        -4.25,
+        2.625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.0,
+        4.0
+      ],
+      "radius": 0.375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.0,
+        5.46875
+      ],
+      "b": [
+        -5.0,
+        2.53125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.0,
+        5.46875
+      ],
+      "b": [
+        -5.0,
+        6.03125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.0,
+        2.53125
+      ],
+      "b": [
+        -5.0,
+        1.9687500000000004
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.3125,
+        6.03125
+      ],
+      "b": [
+        -4.6875,
+        6.03125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.3125,
+        1.9687500000000004
+      ],
+      "b": [
+        -4.6875,
+        1.9687500000000004
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.0,
+        2.53125
+      ],
+      "b": [
+        -5.0,
+        2.2187500000000004
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -4.625,
+        2.2187500000000004
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.375,
+        2.2187500000000004
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.375,
+        2.2187500000000004
+      ],
+      "b": [
+        -4.625,
+        2.2187500000000004
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.0,
+        5.78125
+      ],
+      "b": [
+        -5.0,
+        5.46875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -4.625,
+        5.78125
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.5,
+        4.953125
+      ],
+      "b": [
+        -10.5,
+        4.953125
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.5,
+        5.078125
+      ],
+      "b": [
+        -9.5,
+        4.953125
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.5,
+        5.078125
+      ],
+      "b": [
+        -9.5,
+        5.078125
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.5,
+        4.953125
+      ],
+      "b": [
+        -10.5,
+        5.078125
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -9.25,
+        4.590624999999999
+      ],
+      "radius": 0.095,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 4.71238898038469
+    },
+    {
+      "type": "circle",
+      "center": [
+        -9.250000000000002,
+        3.3406249999999993
+      ],
+      "radius": 0.095,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 4.71238898038469
+    },
+    {
+      "type": "circle",
+      "center": [
+        -10.75,
+        3.3406249999999993
+      ],
+      "radius": 0.095,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 4.71238898038469
+    },
+    {
+      "type": "line",
+      "a": [
+        -12.875,
+        4.640625
+      ],
+      "b": [
+        -12.125,
+        4.640625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -12.875,
+        4.703125
+      ],
+      "b": [
+        -12.875,
+        4.640625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -12.125,
+        4.703125
+      ],
+      "b": [
+        -12.875,
+        4.703125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -12.125,
+        4.828125
+      ],
+      "b": [
+        -12.125,
+        4.703125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -11.125,
+        3.6691249999999993
+      ],
+      "b": [
+        -12.125,
+        3.6691249999999993
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -12.125,
+        3.6691249999999993
+      ],
+      "b": [
+        -12.125,
+        4.828125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -12.125,
+        4.828125
+      ],
+      "b": [
+        -11.125,
+        4.828125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -11.125,
+        4.828125
+      ],
+      "b": [
+        -11.125,
+        3.6691249999999993
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -11.125,
+        4.890625
+      ],
+      "b": [
+        -11.125,
+        4.828125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -11.0,
+        4.890625
+      ],
+      "b": [
+        -11.125,
+        4.890625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.0,
+        4.890625
+      ],
+      "b": [
+        -10.0,
+        4.953125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.5,
+        4.590624999999999
+      ],
+      "b": [
+        -10.5,
+        4.590624999999999
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.0,
+        4.690625000000001
+      ],
+      "b": [
+        -9.000000000000002,
+        3.0906249999999993
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.8,
+        4.890625
+      ],
+      "b": [
+        -9.2,
+        4.890625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -11.0,
+        3.0906249999999993
+      ],
+      "b": [
+        -11.0,
+        4.690625000000001
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.200000000000001,
+        2.890625
+      ],
+      "b": [
+        -10.8,
+        2.890625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.8,
+        2.890625
+      ],
+      "b": [
+        -11.0,
+        3.0906249999999993
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.8,
+        4.890625
+      ],
+      "b": [
+        -11.0,
+        4.690625000000001
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.2,
+        4.890625
+      ],
+      "b": [
+        -9.0,
+        4.690625000000001
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.200000000000001,
+        2.890625
+      ],
+      "b": [
+        -9.000000000000002,
+        3.0906249999999993
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -10.0,
+        3.8406249999999993
+      ],
+      "radius": 0.5,
+      "start": 3.141592653589793,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -10.0,
+        3.8406249999999993
+      ],
+      "radius": 0.5,
+      "start": 4.71238898038469,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.5,
+        4.590624999999999
+      ],
+      "b": [
+        -10.5,
+        3.8406249999999993
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.5,
+        4.590624999999999
+      ],
+      "b": [
+        -9.500000000000002,
+        3.8406249999999993
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -10.75,
+        4.590624999999999
+      ],
+      "radius": 0.095,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 4.71238898038469
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.5,
+        4.890625
+      ],
+      "b": [
+        -9.5,
+        4.890625
+      ],
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.5,
+        5.109375
+      ],
+      "b": [
+        -9.5,
+        5.109375
+      ],
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -10.5,
+        5.0
+      ],
+      "radius": 0.109375,
+      "start": 7.853981633974483,
+      "sweep": 3.141592653589793,
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -9.5,
+        5.0
+      ],
+      "radius": 0.109375,
+      "start": 4.71238898038469,
+      "sweep": 3.141592653589793,
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.45872621448972,
+        5.851259352294959
+      ],
+      "b": [
+        -18.88603157477465,
+        6.456823722091661
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.551778916101185,
+        5.302569173741274
+      ],
+      "b": [
+        -19.04301819906214,
+        5.531143785772505
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -19.0,
+        6.0
+      ],
+      "radius": 0.4708255675,
+      "start": 1.3263070466568814,
+      "sweep": 3.294586737038793,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -19.0,
+        6.0
+      ],
+      "radius": 0.3563678145,
+      "start": 1.3263070466568805,
+      "sweep": 3.294586737038793,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -19.0,
+        6.0
+      ],
+      "radius": 0.2946859661,
+      "start": 1.32630704665688,
+      "sweep": 3.294586737038793,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -16.52628018554184,
+        5.580480349962182
+      ],
+      "radius": 0.2790784964,
+      "start": -1.6622915234839146,
+      "sweep": 2.9885985701407933,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -16.52628018554184,
+        5.580480349962182
+      ],
+      "radius": 0.1763775123,
+      "start": -1.6622915234839137,
+      "sweep": 2.9885985701407933,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -16.52628018554184,
+        5.580480349962182
+      ],
+      "radius": 0.127949224,
+      "start": -1.662291523483915,
+      "sweep": 2.9885985701407933,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -18.913737312913558,
+        6.345769819368856
+      ],
+      "b": [
+        -16.483586099405777,
+        5.751612584894197
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -18.92866807199945,
+        6.285922322765331
+      ],
+      "b": [
+        -16.495308690822576,
+        5.704624501789051
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -19.02692474756115,
+        5.706546636376291
+      ],
+      "b": [
+        -16.537970598171544,
+        5.453066307650204
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -19.032560469524388,
+        5.645122788761359
+      ],
+      "b": [
+        -16.542395374373868,
+        5.4048405835706
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -19.0,
+        6.0
+      ],
+      "radius": 0.125,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.430830285797294
+    },
+    {
+      "type": "line",
+      "a": [
+        -18.948450729549872,
+        5.283815474769042
+      ],
+      "b": [
+        -20.544976680279447,
+        5.28381547484588
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -19.312798971543607,
+        6.000000000000022
+      ],
+      "b": [
+        -18.687201028456393,
+        5.999999999999978
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.246824324366802,
+        6.039537789825091
+      ],
+      "b": [
+        -16.691293350848127,
+        6.039537789725449
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.691293350889836,
+        5.283815474493923
+      ],
+      "b": [
+        -17.246824324408507,
+        5.283815474593565
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.34691999532683,
+        5.18371980366641
+      ],
+      "b": [
+        -17.34691999530062,
+        4.973518894835495
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -20.54497667983111,
+        9.357709280226233
+      ],
+      "b": [
+        -18.958460296268697,
+        9.357709280048498
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.346919995161333,
+        6.13963346069431
+      ],
+      "b": [
+        -17.34691999501106,
+        8.501891293773475
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -20.544976680146874,
+        6.0395377901191685
+      ],
+      "b": [
+        -19.989445706760822,
+        6.039537790068627
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -20.544976680279447,
+        5.28381547484588
+      ],
+      "b": [
+        -20.544976680146874,
+        6.0395377901191685
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.691293350889836,
+        5.283815474493923
+      ],
+      "b": [
+        -16.691293350848127,
+        6.039537789725449
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.346919994845564,
+        9.457804950801377
+      ],
+      "b": [
+        -17.346919994820272,
+        10.04836940903801
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.246824324009275,
+        9.357709279841293
+      ],
+      "b": [
+        -16.69129335053236,
+        9.357709279832514
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.691293350574064,
+        8.601986964600988
+      ],
+      "b": [
+        -17.24682432405098,
+        8.601986964609768
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.691293350574064,
+        8.601986964600988
+      ],
+      "b": [
+        -16.69129335053236,
+        9.357709279832514
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -17.24682432432946,
+        6.139633460656966
+      ],
+      "radius": 0.1000956709,
+      "start": 3.1415926534903083,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -17.246824324088323,
+        8.501891293777891
+      ],
+      "radius": 0.1000956709,
+      "start": 1.5707963266936606,
+      "sweep": 1.5707963268018779,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -17.24682432401369,
+        9.457804950764032
+      ],
+      "radius": 0.1000956709,
+      "start": 3.1415926534903122,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -18.958460296273117,
+        9.457804950971235
+      ],
+      "radius": 0.1000956709,
+      "start": -1.5707963268943854,
+      "sweep": 1.5707963267826792,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -19.989445706482346,
+        8.501891294021428
+      ],
+      "radius": 0.1000956709,
+      "start": -9.947720425174111e-11,
+      "sweep": 1.5707963267914058,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -19.989445706765242,
+        6.139633460991363
+      ],
+      "radius": 0.1000956709,
+      "start": -1.5707963268926348,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -18.948450729545453,
+        5.183719803846305
+      ],
+      "radius": 0.1000956709,
+      "start": -1.0122425120329126e-10,
+      "sweep": 1.5707963267983873,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -17.24682432440409,
+        5.183719803670827
+      ],
+      "radius": 0.1000956709,
+      "start": 1.5707963266936722,
+      "sweep": 1.5707963268036234,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -20.354860918074994,
+        9.160020330203142
+      ],
+      "radius": 0.069,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.430830285797294
+    },
+    {
+      "type": "circle",
+      "center": [
+        -20.354860918156064,
+        8.784661564335574
+      ],
+      "radius": 0.069,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.430830285797294
+    },
+    {
+      "type": "circle",
+      "center": [
+        -16.881409112342133,
+        9.160020329793669
+      ],
+      "radius": 0.069,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.430830285797294
+    },
+    {
+      "type": "circle",
+      "center": [
+        -16.881409112332335,
+        8.784661563967864
+      ],
+      "radius": 0.069,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.430830285797294
+    },
+    {
+      "type": "circle",
+      "center": [
+        -16.881475125575655,
+        5.856863190376448
+      ],
+      "radius": 0.069,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.430830285797294
+    },
+    {
+      "type": "circle",
+      "center": [
+        -16.881475125565863,
+        5.481504424550643
+      ],
+      "radius": 0.069,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.430830285797294
+    },
+    {
+      "type": "circle",
+      "center": [
+        -20.354860918469672,
+        5.481504424884725
+      ],
+      "radius": 0.069,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.430830285797294
+    },
+    {
+      "type": "circle",
+      "center": [
+        -20.354860918479467,
+        5.856863190710531
+      ],
+      "radius": 0.069,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.430830285797294
+    },
+    {
+      "type": "line",
+      "a": [
+        -19.989445706486766,
+        8.601986964944164
+      ],
+      "b": [
+        -20.544976679963675,
+        8.601986964952944
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -20.54497667983111,
+        9.357709280226233
+      ],
+      "b": [
+        -20.544976679963675,
+        8.601986964952944
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.346919995354508,
+        5.066607868763057
+      ],
+      "b": [
+        -18.848355058650395,
+        5.0666078689473695
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.34691999530062,
+        4.973518894835495
+      ],
+      "b": [
+        -18.84835505868737,
+        4.973518894978045
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.346919994820272,
+        10.04836940903801
+      ],
+      "b": [
+        -18.858364625325084,
+        10.048369409212288
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -19.00000000000002,
+        5.68720102845639
+      ],
+      "b": [
+        -18.99999999999998,
+        6.31279897154361
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -19.889350035842504,
+        6.13963346099578
+      ],
+      "b": [
+        -19.88935003565047,
+        8.501891293984084
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -18.858364625325084,
+        10.048369409212288
+      ],
+      "b": [
+        -18.85836462535038,
+        9.457804950975653
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -18.84835505868737,
+        4.973518894978045
+      ],
+      "b": [
+        -18.848355058622715,
+        5.183719803850722
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -19.0,
+        6.0
+      ],
+      "radius": 0.25,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.430830285797294
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.187500000007933,
+        5.485000000013816
+      ],
+      "b": [
+        -25.1875000000275,
+        5.5529999999991375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.812500000049113,
+        5.484999999965726
+      ],
+      "b": [
+        -25.187500000007933,
+        5.485000000013816
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.812499999968754,
+        5.5529999999473
+      ],
+      "b": [
+        -24.812500000049113,
+        5.484999999965726
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.1875000000275,
+        5.5529999999991375
+      ],
+      "b": [
+        -24.812499999968754,
+        5.5529999999473
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.187500000007933,
+        5.485000000013816
+      ],
+      "b": [
+        -24.812500000049113,
+        5.484999999965726
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.187499999970875,
+        5.615000000009452
+      ],
+      "b": [
+        -25.37500000000212,
+        5.614999999985407
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.62499999998081,
+        5.614999999985407
+      ],
+      "b": [
+        -24.812500000012054,
+        5.614999999961359
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.812500000049113,
+        5.484999999965726
+      ],
+      "b": [
+        -24.812500000012054,
+        5.614999999961359
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.187500000007933,
+        5.485000000013816
+      ],
+      "b": [
+        -25.187499999970875,
+        5.615000000009452
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -24.812500000016325,
+        5.807499999968655
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -1.6082416810093396
+    },
+    {
+      "type": "circle",
+      "center": [
+        -25.18749999997514,
+        5.807500000016752
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -1.6082416810093396
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.37500000000212,
+        5.614999999985407
+      ],
+      "b": [
+        -25.375000000010655,
+        6.0
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.624999999989345,
+        6.0000000000000036
+      ],
+      "b": [
+        -24.62499999998081,
+        5.614999999985407
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.375000000010655,
+        6.0
+      ],
+      "b": [
+        -24.624999999989345,
+        6.0000000000000036
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.800000000005312,
+        5.485000000012462
+      ],
+      "b": [
+        -24.800000000065268,
+        5.035000000001926
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.200000000008018,
+        5.035000000052726
+      ],
+      "b": [
+        -25.200000000051734,
+        5.48499999996708
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.500000000012857,
+        5.384999999936841
+      ],
+      "b": [
+        -24.499999999998284,
+        5.484999999972491
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.499999999969656,
+        5.385000000067585
+      ],
+      "b": [
+        -24.500000000012857,
+        5.384999999936841
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.499999999998284,
+        5.484999999972491
+      ],
+      "b": [
+        -25.500000000058762,
+        5.485000000007052
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.500000000058762,
+        5.485000000007052
+      ],
+      "b": [
+        -25.499999999969656,
+        5.385000000067585
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.200000000051734,
+        5.48499999996708
+      ],
+      "b": [
+        -24.800000000005312,
+        5.485000000012462
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.890000000048886,
+        5.034999999973195
+      ],
+      "b": [
+        -24.890000000059718,
+        4.935000000037476
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.11000000003897,
+        4.9350000000458
+      ],
+      "b": [
+        -25.11000000002814,
+        5.034999999981526
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.890000000059718,
+        4.935000000037476
+      ],
+      "b": [
+        -25.11000000003897,
+        4.9350000000458
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.79999999997788,
+        5.141249999955804
+      ],
+      "b": [
+        -24.800000000036487,
+        5.078749999947888
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.20000000002056,
+        5.1412500000103485
+      ],
+      "b": [
+        -24.79999999997788,
+        5.141249999955804
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.199999999979234,
+        5.078749999998685
+      ],
+      "b": [
+        -25.20000000002056,
+        5.1412500000103485
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.800000000036487,
+        5.078749999947888
+      ],
+      "b": [
+        -25.199999999979234,
+        5.078749999998685
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.11000000002814,
+        5.034999999981526
+      ],
+      "b": [
+        -24.890000000048886,
+        5.034999999973195
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.800000000065268,
+        5.035000000001926
+      ],
+      "b": [
+        -25.200000000008018,
+        5.035000000052726
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -24.687443837688893,
+        5.328754278294966
+      ],
+      "radius": 0.25,
+      "start": -1.5707963268360812,
+      "sweep": 3.141592653589793,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -24.687443837723446,
+        5.078754278255797
+      ],
+      "b": [
+        -25.312443837721435,
+        5.078754278338447
+      ],
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.312443837656062,
+        5.5787542783168504
+      ],
+      "b": [
+        -24.68744383765808,
+        5.5787542782342
+      ],
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -25.31244383769062,
+        5.328754278277685
+      ],
+      "radius": 0.25,
+      "start": -4.7123889804258745,
+      "sweep": 3.141592653589793,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -32.64499999999903,
+        3.674083384697443
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.6917646647001304
+    },
+    {
+      "type": "line",
+      "a": [
+        -32.457500000032375,
+        3.9240833847137937
+      ],
+      "b": [
+        -32.45750000003234,
+        3.424083384738865
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -35.54250000004128,
+        3.9240833845975454
+      ],
+      "b": [
+        -35.54250000004125,
+        3.4240833846226115
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -35.54250000004125,
+        3.4240833846226115
+      ],
+      "b": [
+        -34.73000000001956,
+        3.4240833846256864
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -35.292500000047184,
+        3.6740833846804986
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.6917646647001304
+    },
+    {
+      "type": "line",
+      "a": [
+        -34.25000000010548,
+        4.946583384667044
+      ],
+      "b": [
+        -33.75000000005355,
+        4.94658338473087
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -35.54250000004128,
+        3.9240833845975454
+      ],
+      "b": [
+        -34.71857119252314,
+        3.9240833847104
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -34.25000000010548,
+        4.946583384667044
+      ],
+      "b": [
+        -34.25000000006393,
+        4.384083384664713
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -33.75000000005355,
+        4.94658338473087
+      ],
+      "b": [
+        -33.75000000001198,
+        4.384083384728539
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -34.00000000008912,
+        4.759083384700383
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.6917646647001304
+    },
+    {
+      "type": "line",
+      "a": [
+        -34.667500000000665,
+        3.026583384615148
+      ],
+      "b": [
+        -34.6675000000607,
+        4.32158338463042
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -33.33250000001292,
+        3.02658338470599
+      ],
+      "b": [
+        -34.667500000000665,
+        3.026583384615148
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -33.332500000072955,
+        4.3215833847212615
+      ],
+      "b": [
+        -33.33250000001292,
+        3.02658338470599
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -34.6675000000607,
+        4.32158338463042
+      ],
+      "b": [
+        -33.332500000072955,
+        4.3215833847212615
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -34.00000000003082,
+        3.1991192731880043
+      ],
+      "b": [
+        -34.0,
+        4.0
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -34.0,
+        4.0
+      ],
+      "b": [
+        -33.86376807122078,
+        3.8637680711281996
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -34.0,
+        4.0
+      ],
+      "b": [
+        -34.136231928885024,
+        3.863768071079976
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -34.00595339428369,
+        3.9999999999595692
+      ],
+      "radius": 0.53125,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": 0.6917646647001304
+    },
+    {
+      "type": "line",
+      "a": [
+        -32.45750000003234,
+        3.424083384738865
+      ],
+      "b": [
+        -33.26999999999023,
+        3.4240833846587817
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -32.457500000032375,
+        3.9240833847137937
+      ],
+      "b": [
+        -33.27000000005406,
+        3.924083384710724
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -33.332500000072955,
+        4.3215833847212615
+      ],
+      "radius": 0.0625,
+      "start": 2.2670199051333384e-11,
+      "sweep": 1.5707963267931515,
+      "layer": "3_250BIT_500TAB",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -33.33250000001292,
+        3.02658338470599
+      ],
+      "radius": 0.0625,
+      "start": -1.5707963267722262,
+      "sweep": 1.5707963267948966,
+      "layer": "3_250BIT_500TAB",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -34.667500000025214,
+        4.38408338472161
+      ],
+      "b": [
+        -33.332500000050686,
+        4.384083384671647
+      ],
+      "layer": "3_250BIT_500TAB",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -34.6675000000607,
+        4.32158338463042
+      ],
+      "radius": 0.0625,
+      "start": 1.5707963268175669,
+      "sweep": 1.5707963267948966,
+      "layer": "3_250BIT_500TAB",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -34.667500000000665,
+        3.026583384615148
+      ],
+      "radius": 0.0625,
+      "start": 3.1415926536124634,
+      "sweep": 1.5707963267948966,
+      "layer": "3_250BIT_500TAB",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -34.73000000001483,
+        3.026583384714429
+      ],
+      "b": [
+        -34.73000000001108,
+        4.321583384652684
+      ],
+      "layer": "3_250BIT_500TAB",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -33.33249999997139,
+        2.964083384678596
+      ],
+      "b": [
+        -34.667500000022926,
+        2.9640833846647654
+      ],
+      "layer": "3_250BIT_500TAB",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -33.26999999998176,
+        4.321583384685774
+      ],
+      "b": [
+        -33.269999999985515,
+        3.0265833847475214
+      ],
+      "layer": "3_250BIT_500TAB",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -44.56250000006074,
+        5.031250000097187
+      ],
+      "radius": 0.35,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "arc",
+      "center": [
+        -44.56250000006074,
+        5.031250000097187
+      ],
+      "radius": 0.285,
+      "start": -0.554685494479454,
+      "sweep": 1.3014558713242383,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -44.56250000006074,
+        5.031250000097187
+      ],
+      "radius": 0.285,
+      "start": -2.6490805968726523,
+      "sweep": 1.3014558713242383,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -44.56250000006074,
+        5.031250000097187
+      ],
+      "radius": 0.285,
+      "start": 1.5397096079137425,
+      "sweep": 1.3014558713242377,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.499422751853906,
+        4.7533178846998565
+      ],
+      "b": [
+        -44.51823526452586,
+        4.836209919169397
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.51823526452586,
+        4.836209919169397
+      ],
+      "b": [
+        -44.320231154501364,
+        4.881147346963156
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.83473489661945,
+        5.115589558468388
+      ],
+      "b": [
+        -44.75354203275259,
+        5.090435655115123
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.75354203275259,
+        5.090435655115123
+      ],
+      "b": [
+        -44.81362713354995,
+        4.896490351832259
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.415722702971706,
+        5.167104426080433
+      ],
+      "b": [
+        -44.553641712130904,
+        5.31611230149615
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.35334235170887,
+        5.2248425571233135
+      ],
+      "b": [
+        -44.415722702971706,
+        5.167104426080433
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -44.56250000006074,
+        5.031250000097187
+      ],
+      "radius": 0.059,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "circle",
+      "center": [
+        -44.56250000006074,
+        5.031250000097187
+      ],
+      "radius": 0.085,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "circle",
+      "center": [
+        -44.56250000006074,
+        5.031250000097187
+      ],
+      "radius": 0.4,
+      "layer": "Z0_RUBBER",
+      "color": "#d8b400",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "circle",
+      "center": [
+        -44.56250000006074,
+        5.031250000097187
+      ],
+      "radius": 0.215,
+      "layer": "Z0_RUBBER",
+      "color": "#d8b400",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.843750000116216,
+        4.874999999855851
+      ],
+      "b": [
+        -44.15625000008994,
+        4.875000000110058
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.15625000002006,
+        5.187500000036281
+      ],
+      "b": [
+        -41.84375000004633,
+        5.187499999782077
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.15625000008994,
+        4.875000000110058
+      ],
+      "b": [
+        -44.15625000002006,
+        5.187500000036281
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.843750000116216,
+        4.874999999855851
+      ],
+      "b": [
+        -41.84375000004633,
+        5.187499999782077
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -44.56250000006074,
+        5.031250000097187
+      ],
+      "radius": 0.25,
+      "start": -3.816724186633472,
+      "sweep": 1.3502630658744317,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.757656187518116,
+        5.187500000136283
+      ],
+      "b": [
+        -44.093750000063075,
+        5.1875000000233955
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.75765618752008,
+        4.875000000136675
+      ],
+      "b": [
+        -44.09375000006503,
+        4.875000000023782
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.63750000004581,
+        5.106250000176265
+      ],
+      "b": [
+        -44.48750000004959,
+        5.106250000155647
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.63750000006643,
+        4.956250000180042
+      ],
+      "b": [
+        -44.487500000070206,
+        4.956250000159423
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -44.637500000092814,
+        5.0312500001441895
+      ],
+      "radius": 0.075,
+      "start": 1.5707963266884357,
+      "sweep": 3.141592653589793,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -44.48750000009659,
+        5.031250000123574
+      ],
+      "radius": 0.075,
+      "start": -1.5707963269013572,
+      "sweep": 3.141592653589793,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.09375000006503,
+        4.875000000023782
+      ],
+      "b": [
+        -44.093750000063075,
+        5.1875000000233955
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.69250000009944,
+        4.874999999803014
+      ],
+      "b": [
+        -40.99234381264891,
+        4.8749999996988445
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -41.18750000010628,
+        5.03124999973794
+      ],
+      "radius": 0.075,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.843750000085194,
+        4.4062499998197335
+      ],
+      "b": [
+        -41.84374999993603,
+        5.656249999812727
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.90625000018349,
+        4.4062499998380815
+      ],
+      "b": [
+        -41.843750000085194,
+        4.4062499998197335
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.906250000034326,
+        5.6562499998310765
+      ],
+      "b": [
+        -41.90625000018349,
+        4.4062499998380815
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.84374999993603,
+        5.656249999812727
+      ],
+      "b": [
+        -41.906250000034326,
+        5.6562499998310765
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.90625000018349,
+        4.4062499998380815
+      ],
+      "b": [
+        -41.68750000012208,
+        4.406249999784791
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.906250000034326,
+        5.6562499998310765
+      ],
+      "b": [
+        -41.68749999997292,
+        5.656249999777783
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.90625000018349,
+        4.4062499998380815
+      ],
+      "b": [
+        -41.906250000034326,
+        5.6562499998310765
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -41.18750000010628,
+        5.03124999973794
+      ],
+      "radius": 0.25,
+      "start": -0.675131533043679,
+      "sweep": 1.350263065874432,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.69250000007935,
+        4.65624999980953
+      ],
+      "b": [
+        -41.69250000009944,
+        4.874999999803014
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.69250000007935,
+        4.65624999980953
+      ],
+      "b": [
+        -41.43750000016376,
+        4.6562499997704165
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -41.562500000108955,
+        4.531249999740909
+      ],
+      "radius": 0.125,
+      "start": -1.570796326901358,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.43750000012161,
+        4.53124999978307
+      ],
+      "b": [
+        -41.43750000016376,
+        4.6562499997704165
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.68750000012208,
+        4.406249999784791
+      ],
+      "b": [
+        -41.562500000134726,
+        4.406249999826945
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -41.562500000108955,
+        4.531249999740909
+      ],
+      "radius": 0.0445,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.69249999997626,
+        5.406249999790647
+      ],
+      "b": [
+        -41.43750000006068,
+        5.406249999751539
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -40.992343812573566,
+        5.187499999766387
+      ],
+      "b": [
+        -41.69250000009748,
+        5.1874999998026246
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.69250000009748,
+        5.1874999998026246
+      ],
+      "b": [
+        -41.69249999997626,
+        5.406249999790647
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -41.5625000000168,
+        5.531249999764659
+      ],
+      "radius": 0.125,
+      "start": -1.0645706538525701e-10,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.56249999998557,
+        5.65624999981994
+      ],
+      "b": [
+        -41.68749999997292,
+        5.656249999777783
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.43750000006068,
+        5.406249999751539
+      ],
+      "b": [
+        -41.43750000002945,
+        5.531249999806819
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -41.5625000000168,
+        5.531249999764659
+      ],
+      "radius": 0.0445,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "line",
+      "a": [
+        -42.25000000014402,
+        4.7812499998737366
+      ],
+      "b": [
+        -42.250000000057746,
+        4.843749999898645
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.937500000076476,
+        4.781249999798387
+      ],
+      "b": [
+        -42.25000000014402,
+        4.7812499998737366
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.93750000009658,
+        4.999999999791873
+      ],
+      "b": [
+        -41.937500000076476,
+        4.781249999798387
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.75000000001093,
+        4.999999999815684
+      ],
+      "b": [
+        -41.93750000009658,
+        4.999999999791873
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.75000000005308,
+        5.124999999803033
+      ],
+      "b": [
+        -41.75000000001093,
+        4.999999999815684
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.43750000005347,
+        5.124999999801073
+      ],
+      "b": [
+        -41.75000000005308,
+        5.124999999803033
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.43750000004058,
+        5.187499999758055
+      ],
+      "b": [
+        -41.43750000005347,
+        5.124999999801073
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.81250000006511,
+        5.187499999846289
+      ],
+      "b": [
+        -41.43750000004058,
+        5.187499999758055
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.812500000096335,
+        5.062499999791009
+      ],
+      "b": [
+        -41.81250000006511,
+        5.187499999846289
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -42.0000000001086,
+        5.062499999835128
+      ],
+      "b": [
+        -41.812500000096335,
+        5.062499999791009
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -42.000000000088505,
+        4.843749999841645
+      ],
+      "b": [
+        -42.0000000001086,
+        5.062499999835128
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -42.250000000057746,
+        4.843749999898645
+      ],
+      "b": [
+        -42.000000000088505,
+        4.843749999841645
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -43.750000000038334,
+        4.7812500000065175
+      ],
+      "b": [
+        -43.75000000009337,
+        4.843750000036884
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.06250000010587,
+        4.781250000081868
+      ],
+      "b": [
+        -43.750000000038334,
+        4.7812500000065175
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.062500000058044,
+        5.000000000001962
+      ],
+      "b": [
+        -44.06250000010587,
+        4.781250000081868
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.2500000000703,
+        5.000000000046076
+      ],
+      "b": [
+        -44.062500000058044,
+        5.000000000001962
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.25000000012535,
+        5.062500000076448
+      ],
+      "b": [
+        -44.2500000000703,
+        5.000000000046076
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.00000000008271,
+        5.062500000087371
+      ],
+      "b": [
+        -44.25000000012535,
+        5.062500000076448
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -44.00000000006261,
+        4.84375000009389
+      ],
+      "b": [
+        -44.00000000008271,
+        5.062500000087371
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -43.75000000009337,
+        4.843750000036884
+      ],
+      "b": [
+        -44.00000000006261,
+        4.84375000009389
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -42.31250000011214,
+        4.437499999837865
+      ],
+      "radius": 0.0625,
+      "start": -1.570796326901379,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -43.687500000105366,
+        4.374999999987886
+      ],
+      "b": [
+        -42.31250000012502,
+        4.374999999880883
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -42.250000000155154,
+        4.437499999824978
+      ],
+      "b": [
+        -42.25000000003177,
+        5.5624999999040075
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -42.312499999988745,
+        5.562499999916893
+      ],
+      "radius": 0.0625,
+      "start": -1.0645706538525701e-10,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -42.31249999997586,
+        5.624999999873875
+      ],
+      "b": [
+        -43.68750000002414,
+        5.625000000054271
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -43.68750000016041,
+        4.437500000018258
+      ],
+      "radius": 0.0625,
+      "start": -3.14159265369625,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -43.74999999999946,
+        5.562499999968857
+      ],
+      "b": [
+        -43.75000000011739,
+        4.437500000031144
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -43.68749999996909,
+        5.562500000023899
+      ],
+      "radius": 0.0625,
+      "start": 1.5707963266884144,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -41.18750000010628,
+        5.03124999973794
+      ],
+      "radius": 0.285,
+      "start": -0.554685494479454,
+      "sweep": 1.3014558713242383,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -41.18750000010628,
+        5.03124999973794
+      ],
+      "radius": 0.285,
+      "start": -2.649080596872654,
+      "sweep": 1.3014558713242383,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -41.18750000010628,
+        5.03124999973794
+      ],
+      "radius": 0.285,
+      "start": 1.5397096079137411,
+      "sweep": 1.3014558713242377,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.124422751899445,
+        4.753317884340612
+      ],
+      "b": [
+        -41.14323526450347,
+        4.836209918736758
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.14323526450347,
+        4.836209918736758
+      ],
+      "b": [
+        -40.94523115447351,
+        4.881147346671833
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.459734896665,
+        5.115589558109145
+      ],
+      "b": [
+        -41.3785420327302,
+        5.090435654682489
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.3785420327302,
+        5.090435654682489
+      ],
+      "b": [
+        -41.438627133595496,
+        4.896490351473007
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -41.04072270301725,
+        5.1671044257211864
+      ],
+      "b": [
+        -41.17864171210852,
+        5.316112301063514
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -40.978342351754414,
+        5.2248425567640675
+      ],
+      "b": [
+        -41.04072270301725,
+        5.1671044257211864
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -41.18750000010628,
+        5.03124999973794
+      ],
+      "radius": 0.059,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "circle",
+      "center": [
+        -41.18750000010628,
+        5.03124999973794
+      ],
+      "radius": 0.085,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "circle",
+      "center": [
+        -41.18750000010628,
+        5.03124999973794
+      ],
+      "radius": 0.35,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "circle",
+      "center": [
+        -41.18750000010628,
+        5.03124999973794
+      ],
+      "radius": 0.4,
+      "layer": "Z0_RUBBER",
+      "color": "#d8b400",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "circle",
+      "center": [
+        -41.18750000010628,
+        5.03124999973794
+      ],
+      "radius": 0.215,
+      "layer": "Z0_RUBBER",
+      "color": "#d8b400",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "circle",
+      "center": [
+        -41.18750000010628,
+        5.03124999973794
+      ],
+      "radius": 0.0825,
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "circle",
+      "center": [
+        -44.56250000006074,
+        5.031250000097187
+      ],
+      "radius": 0.0825,
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.824025949950115
+    },
+    {
+      "type": "line",
+      "a": [
+        -47.49999999997072,
+        4.822499999912729
+      ],
+      "b": [
+        -48.50000000003023,
+        4.822499999919415
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.50000000003023,
+        4.822499999919415
+      ],
+      "b": [
+        -48.49999999996977,
+        5.177499999948267
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.49999999996977,
+        5.177499999948267
+      ],
+      "b": [
+        -47.50000000000935,
+        5.177499999955089
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -47.50000000000935,
+        5.177499999955089
+      ],
+      "b": [
+        -47.49999999997072,
+        4.822499999912729
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -47.25000000001799,
+        4.4599999998862785
+      ],
+      "radius": 0.095,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.13548999375874582
+    },
+    {
+      "type": "circle",
+      "center": [
+        -47.25000000009054,
+        3.2099999998963256
+      ],
+      "radius": 0.095,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.13548999375874582
+    },
+    {
+      "type": "circle",
+      "center": [
+        -48.7500000001235,
+        3.2099999999491473
+      ],
+      "radius": 0.095,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.13548999375874582
+    },
+    {
+      "type": "line",
+      "a": [
+        -50.875000000063025,
+        4.510000000034083
+      ],
+      "b": [
+        -50.12500000004654,
+        4.510000000007679
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -50.875000000067956,
+        4.57250000004484
+      ],
+      "b": [
+        -50.875000000063025,
+        4.510000000034083
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -50.12500000005147,
+        4.5725000000184295
+      ],
+      "b": [
+        -50.875000000067956,
+        4.57250000004484
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -50.124999999962256,
+        4.697500000026437
+      ],
+      "b": [
+        -50.12500000005147,
+        4.5725000000184295
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -49.125000000019,
+        3.5385000000262252
+      ],
+      "b": [
+        -50.1250000000785,
+        3.5385000000329185
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -50.1250000000785,
+        3.5385000000329185
+      ],
+      "b": [
+        -50.124999999962256,
+        4.697500000026437
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -50.124999999962256,
+        4.697500000026437
+      ],
+      "b": [
+        -49.125000000001826,
+        4.697500000033251
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -49.125000000001826,
+        4.697500000033251
+      ],
+      "b": [
+        -49.125000000019,
+        3.5385000000262252
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -49.125000000020265,
+        4.759999999944931
+      ],
+      "b": [
+        -49.125000000001826,
+        4.697500000033251
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.99999999999875,
+        4.759999999954793
+      ],
+      "b": [
+        -49.125000000020265,
+        4.759999999944931
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.00000000003833,
+        4.7599999999616145
+      ],
+      "b": [
+        -48.00000000004326,
+        4.822499999972365
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -47.500000000047514,
+        4.459999999965639
+      ],
+      "b": [
+        -48.50000000000794,
+        4.459999999958818
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -47.000000000042306,
+        4.559999999931314
+      ],
+      "b": [
+        -47.000000000126875,
+        2.9599999998865343
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.79999999996163,
+        4.7599999999903915
+      ],
+      "b": [
+        -47.20000000001594,
+        4.759999999919337
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -49.00000000003421,
+        2.959999999971984
+      ],
+      "b": [
+        -49.000000000048736,
+        4.560000000030264
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -47.20000000011489,
+        2.759999999912907
+      ],
+      "b": [
+        -48.800000000060585,
+        2.759999999983961
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.800000000060585,
+        2.759999999983961
+      ],
+      "b": [
+        -49.00000000003421,
+        2.959999999971984
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.79999999996163,
+        4.7599999999903915
+      ],
+      "b": [
+        -49.000000000048736,
+        4.560000000030264
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -47.20000000001594,
+        4.759999999919337
+      ],
+      "b": [
+        -47.000000000042306,
+        4.559999999931314
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -47.20000000011489,
+        2.759999999912907
+      ],
+      "b": [
+        -47.000000000126875,
+        2.9599999998865343
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -48.000000000060886,
+        3.7099999998961977
+      ],
+      "radius": 0.5,
+      "start": -3.141592653628716,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -48.000000000060886,
+        3.7099999998961977
+      ],
+      "radius": 0.5,
+      "start": -1.570796326833816,
+      "sweep": 1.5707963267948966,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.50000000000794,
+        4.459999999958818
+      ],
+      "b": [
+        -48.50000000003435,
+        3.709999999942333
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -47.500000000047514,
+        4.459999999965639
+      ],
+      "b": [
+        -47.500000000073925,
+        3.7099999999491544
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -48.75000000005096,
+        4.459999999939093
+      ],
+      "radius": 0.095,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.13548999375874582
+    },
+    {
+      "type": "arc",
+      "center": [
+        -48.375000000021274,
+        5.0
+      ],
+      "radius": 0.25,
+      "start": 1.570796326754229,
+      "sweep": 3.1415926535915384,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -47.62500000000479,
+        4.999999999973589
+      ],
+      "radius": 0.25,
+      "start": -1.5707963268338188,
+      "sweep": 3.1415926535915384,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.37499999995542,
+        5.249999999930431
+      ],
+      "b": [
+        -47.62500000003802,
+        5.249999999917527
+      ],
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.37500000000155,
+        4.749999999956977
+      ],
+      "b": [
+        -47.62499999998507,
+        4.749999999930566
+      ],
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.00000000003615,
+        5.01800000003125
+      ],
+      "b": [
+        -54.000000000005556,
+        4.974250000021023
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.37500000010069,
+        5.017999999938901
+      ],
+      "b": [
+        -54.3750000000701,
+        4.9742499999286665
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.3750000000701,
+        4.9742499999286665
+      ],
+      "b": [
+        -54.000000000005556,
+        4.974250000021023
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.37500000010069,
+        5.017999999938901
+      ],
+      "b": [
+        -54.00000000003615,
+        5.01800000003125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.077500000095064,
+        5.0179999999739735
+      ],
+      "b": [
+        -54.29750000004177,
+        5.017999999996185
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.297500000026766,
+        5.118000000007989
+      ],
+      "b": [
+        -54.07750000008006,
+        5.117999999985777
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.07750000008006,
+        5.117999999985777
+      ],
+      "b": [
+        -54.077500000095064,
+        5.0179999999739735
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.29750000004177,
+        5.017999999996185
+      ],
+      "b": [
+        -54.297500000026766,
+        5.118000000007989
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.000000000005556,
+        4.974250000021023
+      ],
+      "b": [
+        -54.00000000008925,
+        4.911750000023773
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -53.91749999995815,
+        4.568000000073383
+      ],
+      "b": [
+        -53.91750000005574,
+        4.667999999999616
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -53.91750000005574,
+        4.667999999999616
+      ],
+      "b": [
+        -54.45749999997447,
+        4.667999999959953
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.45749999998948,
+        4.5679999999481495
+      ],
+      "b": [
+        -53.91749999995815,
+        4.568000000073383
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.45749999997447,
+        4.667999999959953
+      ],
+      "b": [
+        -54.45749999998948,
+        4.5679999999481495
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -53.99999999999109,
+        4.568000000063691
+      ],
+      "b": [
+        -54.37499999995654,
+        4.567999999957841
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.00000000008925,
+        4.911750000023773
+      ],
+      "b": [
+        -54.3750000000412,
+        4.911750000017001
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.3750000000412,
+        4.911750000017001
+      ],
+      "b": [
+        -54.3750000000701,
+        4.9742499999286665
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.3750000000701,
+        4.9742499999286665
+      ],
+      "b": [
+        -54.000000000005556,
+        4.974250000021023
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.37499999995654,
+        4.567999999957841
+      ],
+      "b": [
+        -54.3750000000701,
+        4.9742499999286665
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.000000000005556,
+        4.974250000021023
+      ],
+      "b": [
+        -53.99999999999109,
+        4.568000000063691
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.37499999995654,
+        4.567999999957841
+      ],
+      "b": [
+        -53.99999999999109,
+        4.568000000063691
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.374999999973355,
+        4.437999999962308
+      ],
+      "b": [
+        -54.56250000000562,
+        4.43799999991613
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -53.812499999989136,
+        4.438000000015251
+      ],
+      "b": [
+        -54.0000000000079,
+        4.438000000068165
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -53.99999999999109,
+        4.568000000063691
+      ],
+      "b": [
+        -54.0000000000079,
+        4.438000000068165
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.37499999995654,
+        4.567999999957841
+      ],
+      "b": [
+        -54.374999999973355,
+        4.437999999962308
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -53.99999999991023,
+        4.2455000000483665
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.13548999359136873
+    },
+    {
+      "type": "circle",
+      "center": [
+        -54.37499999997477,
+        4.245499999956017
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.13548999359136873
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.56250000000562,
+        4.43799999991613
+      ],
+      "b": [
+        -54.56249999989586,
+        4.052999999989133
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -53.812499999892886,
+        4.052999999989169
+      ],
+      "b": [
+        -53.812499999989136,
+        4.438000000015251
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.56249999989586,
+        4.052999999989133
+      ],
+      "b": [
+        -53.812499999892886,
+        4.052999999989169
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.37499999995654,
+        4.567999999957841
+      ],
+      "b": [
+        -54.37499999999936,
+        4.500000000006743
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -53.99999999999109,
+        4.568000000063691
+      ],
+      "b": [
+        -54.37499999995654,
+        4.567999999957841
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -53.99999999994833,
+        4.5
+      ],
+      "b": [
+        -53.99999999999109,
+        4.568000000063691
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.37499999999936,
+        4.500000000006743
+      ],
+      "b": [
+        -53.99999999994833,
+        4.5
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -54.187499999998906,
+        4.725341189802116
+      ],
+      "radius": 0.3125,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.13548999359136873
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.1507354561391665,
+        14.000000000049337
+      ],
+      "b": [
+        -5.150735456168249,
+        13.547244094474184
+      ],
+      "layer": "Z0_WALLS",
+      "color": "#a57c00",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.838235456219543,
+        14.000000000018172
+      ],
+      "b": [
+        -4.463235456158152,
+        14.00000000009182
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -3.7757354562298246,
+        15.50000000004258
+      ],
+      "b": [
+        -3.775735456135777,
+        12.500000000126686
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.150735456183909,
+        13.062499999977131
+      ],
+      "radius": 0.125,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.150735456183909,
+        13.062499999977131
+      ],
+      "radius": 0.0445,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.1507354561391665,
+        14.000000000049337
+      ],
+      "radius": 0.7283464567,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.150735456191413,
+        13.27165354336017
+      ],
+      "b": [
+        -5.150735456186283,
+        14.728346456749822
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -3.775735456135777,
+        12.500000000126686
+      ],
+      "b": [
+        -6.525735456159197,
+        12.49999999996805
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.00073545610983,
+        12.85000000003252
+      ],
+      "b": [
+        -6.30073545616731,
+        12.849999999920637
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -6.30073545616731,
+        12.849999999920637
+      ],
+      "radius": 0.0825,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -4.00073545610983,
+        12.85000000003252
+      ],
+      "radius": 0.0825,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "line",
+      "a": [
+        -3.775735456188464,
+        14.000000000034955
+      ],
+      "b": [
+        -6.525735456200557,
+        13.999999999975689
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -4.465735456215384,
+        14.000000000093078
+      ],
+      "radius": 0.275,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "line",
+      "a": [
+        -6.525735456241918,
+        15.499999999983313
+      ],
+      "b": [
+        -3.7757354562298246,
+        15.50000000004258
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.000735456215452,
+        14.000000000066922
+      ],
+      "b": [
+        -6.30073545617357,
+        13.999999999943714
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -6.300735456279192,
+        15.149999999978117
+      ],
+      "b": [
+        -4.000735456221712,
+        15.15000000009
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.465735456215384,
+        14.000000000093078
+      ],
+      "b": [
+        -5.835735456162311,
+        14.000000000016922
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -4.465735456215384,
+        14.000000000093078
+      ],
+      "radius": 0.125,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.422388999450007,
+        13.99999999999709
+      ],
+      "b": [
+        -5.879081912839659,
+        14.000000000002213
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.770735456350614,
+        16.660000000022205
+      ],
+      "b": [
+        -4.7707354562160305,
+        15.500000000056946
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.530735456255719,
+        15.499999999968946
+      ],
+      "b": [
+        -5.530735456279615,
+        16.660000000022233
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.530735456279615,
+        16.660000000022233
+      ],
+      "b": [
+        -4.770735456350614,
+        16.660000000022205
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.835735456162311,
+        14.000000000016922
+      ],
+      "radius": 0.125,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.1507354561391665,
+        14.000000000049337
+      ],
+      "radius": 0.4527559055,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.835735456162311,
+        14.000000000016922
+      ],
+      "radius": 0.275,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -6.300735456279192,
+        15.149999999978117
+      ],
+      "radius": 0.0825,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.150735456205112,
+        14.937500000033513
+      ],
+      "radius": 0.125,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.150735456205112,
+        14.937500000033513
+      ],
+      "radius": 0.0445,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.7707354562160305,
+        15.500000000056946
+      ],
+      "b": [
+        -5.530735456255719,
+        15.499999999968946
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -4.000735456221712,
+        15.15000000009
+      ],
+      "radius": 0.0825,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.1507354561391665,
+        14.000000000049337
+      ],
+      "radius": 1.25,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.1507354561391665,
+        14.000000000049337
+      ],
+      "radius": 1.135,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.1507354561391665,
+        14.000000000049337
+      ],
+      "radius": 1.0,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.1507354561391665,
+        14.000000000049337
+      ],
+      "radius": 0.8125,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "line",
+      "a": [
+        -6.525735456159197,
+        12.49999999996805
+      ],
+      "b": [
+        -6.525735456241918,
+        15.499999999983313
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -6.30073545616731,
+        12.849999999920637
+      ],
+      "b": [
+        -6.300735456279192,
+        15.149999999978117
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.150735456132907,
+        12.85000000002626
+      ],
+      "b": [
+        -5.150735456256115,
+        15.149999999984384
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.150735456097806,
+        12.500000000041705
+      ],
+      "b": [
+        -5.1507354562912155,
+        15.499999999968932
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -5.150735456205112,
+        14.937500000033513
+      ],
+      "b": [
+        -5.150735456183909,
+        13.062499999977131
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -4.000735456221712,
+        15.15000000009
+      ],
+      "b": [
+        -4.00073545610983,
+        12.85000000003252
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -5.1507354561391665,
+        14.000000000049337
+      ],
+      "radius": 1.26,
+      "layer": "3_250BIT_500TAB",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.1135106789363956
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.56250000003279,
+        14.869499999968681
+      ],
+      "b": [
+        -16.562500000069523,
+        15.192999999920723
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.437500000038202,
+        14.869499999983852
+      ],
+      "b": [
+        -16.56250000003279,
+        14.869499999968681
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.437500000040014,
+        15.193000000029592
+      ],
+      "b": [
+        -17.437500000038202,
+        14.869499999983852
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.500000000072824,
+        15.192999999943666
+      ],
+      "b": [
+        -16.500000000071633,
+        15.192999999912942
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.500000000071633,
+        15.192999999912942
+      ],
+      "b": [
+        -16.500000000042682,
+        14.806999999963011
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.500000000042682,
+        14.806999999963011
+      ],
+      "b": [
+        -17.500000000043872,
+        14.806999999993735
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.500000000043872,
+        14.806999999993735
+      ],
+      "b": [
+        -17.500000000072824,
+        15.192999999943666
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.187500000077165,
+        14.88149999999927
+      ],
+      "b": [
+        -16.812500000089813,
+        14.88149999995261
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.812500000089813,
+        14.88149999995261
+      ],
+      "b": [
+        -16.812500000024365,
+        14.869499999999789
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.812500000024365,
+        14.869499999999789
+      ],
+      "b": [
+        -17.18750000004663,
+        14.869499999952751
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.18750000004663,
+        14.869499999952751
+      ],
+      "b": [
+        -17.187500000077165,
+        14.88149999999927
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.107500000110463,
+        14.806999999939165
+      ],
+      "b": [
+        -16.892500000104707,
+        14.80699999995879
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -17.00000000008261,
+        15.011755208309765
+      ],
+      "radius": 0.2527552083,
+      "start": -2.0101036911052637,
+      "sweep": 0.8786147285544074,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.107500000110463,
+        14.806999999939165
+      ],
+      "b": [
+        -17.10750000010819,
+        14.78299999997472
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.892500000104707,
+        14.80699999995879
+      ],
+      "b": [
+        -16.892500000102427,
+        14.782999999994345
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.187500000073303,
+        15.231499999938237
+      ],
+      "b": [
+        -17.187500000085876,
+        15.299499999964262
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.81250000005104,
+        15.231499999985274
+      ],
+      "b": [
+        -17.187500000073303,
+        15.231499999938237
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.812500000063608,
+        15.299500000011314
+      ],
+      "b": [
+        -16.81250000005104,
+        15.231499999985274
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.187500000085876,
+        15.299499999964262
+      ],
+      "b": [
+        -16.812500000063608,
+        15.299500000011314
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.187500000073303,
+        15.231499999938237
+      ],
+      "b": [
+        -16.81250000005104,
+        15.231499999985274
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.187500000065725,
+        15.361500000013883
+      ],
+      "b": [
+        -17.3750000000594,
+        15.361500000037218
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.625000000084693,
+        15.361499999943895
+      ],
+      "b": [
+        -16.812500000078373,
+        15.361499999967222
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.81250000005104,
+        15.231499999985274
+      ],
+      "b": [
+        -16.812500000078373,
+        15.361499999967222
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.187500000073303,
+        15.231499999938237
+      ],
+      "b": [
+        -17.187500000065725,
+        15.361500000013883
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -16.81250000009793,
+        15.55399999994706
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.35666942744768726
+    },
+    {
+      "type": "circle",
+      "center": [
+        -17.187500000085286,
+        15.55399999999372
+      ],
+      "radius": 0.09375,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "handle_angle": -0.35666942744768726
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.3750000000594,
+        15.361500000037218
+      ],
+      "b": [
+        -17.37500000000481,
+        15.746499999961976
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.62499999999519,
+        15.746499999962367
+      ],
+      "b": [
+        -16.625000000084693,
+        15.361499999943895
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.37500000000481,
+        15.746499999961976
+      ],
+      "b": [
+        -16.62499999999519,
+        15.746499999962367
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -16.625000000035485,
+        15.000000000000377
+      ],
+      "radius": 0.25,
+      "start": -1.5707963268280611,
+      "sweep": 3.141592653589793,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        -17.375000000045105,
+        15.0
+      ],
+      "radius": 0.25,
+      "start": 1.5707963267617324,
+      "sweep": 3.1415926535915384,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.625000000066592,
+        14.750000000008818
+      ],
+      "b": [
+        -17.375000000076213,
+        14.750000000008427
+      ],
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -16.625000000004377,
+        15.24999999999195
+      ],
+      "b": [
+        -17.375000000013998,
+        15.249999999991573
+      ],
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -10.25,
+        16.2032940163
+      ],
+      "radius": 0.0825,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -10.575,
+        16.647
+      ],
+      "radius": 0.0825,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -9.925,
+        16.647
+      ],
+      "radius": 0.0825,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -10.25,
+        15.125
+      ],
+      "radius": 0.61,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.865000000000002,
+        14.149999999999999
+      ],
+      "b": [
+        -10.865000000000002,
+        15.75
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.634999999999998,
+        14.149999999999999
+      ],
+      "b": [
+        -10.865000000000002,
+        14.149999999999999
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.634999999999998,
+        15.75
+      ],
+      "b": [
+        -9.634999999999998,
+        14.149999999999999
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.865000000000002,
+        15.75
+      ],
+      "b": [
+        -9.634999999999998,
+        15.75
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.75,
+        15.822000000000003
+      ],
+      "b": [
+        -10.75,
+        16.822000000000003
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.75,
+        15.822000000000003
+      ],
+      "b": [
+        -10.75,
+        15.822000000000003
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.75,
+        16.822000000000003
+      ],
+      "b": [
+        -9.75,
+        15.822000000000003
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.75,
+        16.822000000000003
+      ],
+      "b": [
+        -9.75,
+        16.822000000000003
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.75,
+        15.75
+      ],
+      "b": [
+        -10.75,
+        15.822000000000003
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.75,
+        15.75
+      ],
+      "b": [
+        -10.75,
+        15.75
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.75,
+        15.822000000000003
+      ],
+      "b": [
+        -9.75,
+        15.75
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.75,
+        15.822000000000003
+      ],
+      "b": [
+        -9.75,
+        15.822000000000003
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -10.25,
+        15.125
+      ],
+      "radius": 0.25,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.625,
+        15.75
+      ],
+      "b": [
+        -10.625,
+        14.75
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.875,
+        15.75
+      ],
+      "b": [
+        -10.625,
+        15.75
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -9.875,
+        14.75
+      ],
+      "b": [
+        -9.875,
+        15.75
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.625,
+        14.75
+      ],
+      "b": [
+        -9.875,
+        14.75
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -10.25,
+        15.125
+      ],
+      "radius": 0.225,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -10.25,
+        15.125
+      ],
+      "radius": 0.25,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        -10.25,
+        15.125
+      ],
+      "radius": 0.25,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.75,
+        5.0
+      ],
+      "b": [
+        -9.25,
+        5.0
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.0,
+        4.75
+      ],
+      "b": [
+        -10.0,
+        5.25
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -43.000000000058115,
+        4.249999999999999
+      ],
+      "b": [
+        -42.999999999941885,
+        5.75
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -43.875,
+        5.000000000091722
+      ],
+      "b": [
+        -42.125,
+        4.999999999908278
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.0000000000132,
+        4.625
+      ],
+      "b": [
+        -47.9999999999868,
+        5.375
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -48.75,
+        5.000000000101593
+      ],
+      "b": [
+        -47.25,
+        4.999999999898407
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.624999999998906,
+        4.725341189783904
+      ],
+      "b": [
+        -53.749999999998906,
+        4.725341189820334
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -54.1874999999925,
+        4.287841189802116
+      ],
+      "b": [
+        -54.187500000005315,
+        5.162841189802116
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.75,
+        15.125
+      ],
+      "b": [
+        -9.75,
+        15.125
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -10.25,
+        15.625
+      ],
+      "b": [
+        -10.25,
+        14.625
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.75,
+        15.0
+      ],
+      "b": [
+        -16.25,
+        15.0
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -17.0,
+        14.625
+      ],
+      "b": [
+        -17.0,
+        15.375
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    }
+  ],
+  "layers": [
+    {
+      "name": "Constraints",
+      "visible": true
+    },
+    {
+      "name": "Construction",
+      "visible": true
+    },
+    {
+      "name": "Dimension",
+      "visible": true
+    },
+    {
+      "name": "Layer1",
+      "visible": true
+    },
+    {
+      "name": "Z0_RAMPS",
+      "visible": true
+    },
+    {
+      "name": "Z0_BOTCOMP",
+      "visible": true
+    },
+    {
+      "name": "Z0_FLYWIRES",
+      "visible": true
+    },
+    {
+      "name": "Z0_TOPCOMP",
+      "visible": true
+    },
+    {
+      "name": "Z0_WALLS",
+      "visible": true
+    },
+    {
+      "name": "2_250BIT_250DEP",
+      "visible": true
+    },
+    {
+      "name": "Z0_RUBBER",
+      "visible": true
+    },
+    {
+      "name": "Z1_RAMPS_A",
+      "visible": true
+    },
+    {
+      "name": "Z1_RAMPS_C",
+      "visible": true
+    },
+    {
+      "name": "Z1_RAMPS_D",
+      "visible": true
+    },
+    {
+      "name": "Z1_RAMPS_B",
+      "visible": true
+    },
+    {
+      "name": "1_250BIT_500DEP",
+      "visible": true
+    },
+    {
+      "name": "Z0_WIREFORMS",
+      "visible": true
+    },
+    {
+      "name": "Z0_PLASTICS",
+      "visible": true
+    },
+    {
+      "name": "Z0_SIDERAILS",
+      "visible": true
+    },
+    {
+      "name": "6_125BIT_500DEP",
+      "visible": true
+    },
+    {
+      "name": "3_250BIT_500TAB",
+      "visible": true
+    },
+    {
+      "name": "8_250BIT_500OUTLINE",
+      "visible": true
+    },
+    {
+      "name": "7A_1250BALL",
+      "visible": true
+    }
+  ],
+  "active_layer": "Construction",
+  "display_unit": "in",
+  "grid": {
+    "spacing": 1.0,
+    "subdivisions": 4
+  },
+  "format": "briancad-2",
+  "units": "inches"
+}
