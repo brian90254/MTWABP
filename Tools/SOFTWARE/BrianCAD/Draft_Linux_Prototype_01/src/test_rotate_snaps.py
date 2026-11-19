@@ -50,3 +50,20 @@ class RotateSnapUITests(unittest.TestCase):
                 self.assertLess(g.dist(actual,expected),1e-8)
             a.undo();self.assertEqual(a.objects,before)
         finally:root.destroy()
+
+    def test_pivot_focuses_angle_and_enter_applies_typed_rotation(self):
+        root=tk.Tk();errors=[]
+        try:
+            a=Draft(root);root.update();a.error=errors.append
+            a.doc.add([dict(type='line',a=[2,3],b=[4,3])]);before=copy.deepcopy(a.objects)
+            a.family.set('Modify');a.family_changed();a.tool.set('Rotate');a.method_changed()
+            a.grid_snap.set(False)
+            x,y=a.screen([2,3]);a.click(SimpleNamespace(x=x,y=y,state=0));root.update()
+            entry=a.parameter_entries['angle']
+            self.assertIs(root.focus_get(),entry);self.assertTrue(entry.selection_present())
+            self.assertEqual(a.field_point(0),[2,3]);self.assertEqual(len(a.points),1)
+            entry.delete(0,'end');entry.insert(0,'90');entry.event_generate('<Return>');root.update()
+            self.assertFalse(errors);self.assertLess(g.dist(a.objects[0]['a'],[2,3]),1e-8)
+            self.assertLess(g.dist(a.objects[0]['b'],[2,5]),1e-8);self.assertEqual(a.points,[])
+            a.undo();self.assertEqual(a.objects,before)
+        finally:root.destroy()
