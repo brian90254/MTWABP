@@ -936,7 +936,9 @@ class Draft(LibraryMixin):
         family=self.family.get(); method=self.tool.get(); raw=p if raw is None else raw
         if family=='Modify':
             self.points.append(p); self.start=self.points[0]
-            if len(self.points)==1: self.set_point_fields(0,p)
+            if len(self.points)==1:
+                self.set_point_fields(0,p)
+                if method=='Rotate':self.focus_parameter('angle')
             needed=3 if method in ['Rotate','Scale'] else 2
             if len(self.points)==needed:
                 pivot=self.field_point(0)

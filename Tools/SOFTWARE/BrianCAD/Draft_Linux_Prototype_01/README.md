@@ -170,6 +170,8 @@ Choose **Modify**, then Move, Rotate, Scale, or Mirror. Set **Copy when transfor
 | Scale | Pivot, reference length, new length | Pivot X/Y, positive uniform Factor |
 | Mirror | Two points defining the reflection axis | Axis through X/Y at Angle |
 
+After picking the Rotate pivot, the Angle field receives focus with its value selected. Type an angle and press Enter to rotate around that pivot, or continue picking the reference and new direction with the mouse.
+
 Rotate can snap its pivot, reference direction, and new direction to control points and other snap targets on selected objects, including partially selected geometry. Object snaps / alignment must be enabled.
 
 Scale is uniform; ellipses, circles, arcs, polygons, and spline definitions retain their analytic/control representation. Mirror reverses an arc's sweep correctly. The explicit Modify tools commit after their final pick without a live geometry preview; Select-drag provides a live movement preview.
