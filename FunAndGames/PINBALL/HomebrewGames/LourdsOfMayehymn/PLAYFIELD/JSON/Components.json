@@ -3,7 +3,7 @@
     {
       "type": "circle",
       "center": [
-        -5.375,
+        -4.375,
         5.78125
       ],
       "radius": 0.09375,
@@ -12,16 +12,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.375,
+        -4.375,
         5.78125
       ],
       "b": [
-        -4.625,
+        -3.625,
         5.78125
       ],
       "layer": "Z0_BOTCOMP",
@@ -29,16 +30,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -4.25,
+        -3.25,
         5.46875
       ],
       "b": [
-        -4.25,
+        -3.25,
         5.625
       ],
       "layer": "Z0_BOTCOMP",
@@ -46,16 +48,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -4.6875,
+        -3.6875,
         6.03125
       ],
       "b": [
-        -4.25,
+        -3.25,
         5.625
       ],
       "layer": "Z0_BOTCOMP",
@@ -63,16 +66,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -4.25,
+        -3.25,
         2.3750000000000004
       ],
       "b": [
-        -4.25,
+        -3.25,
         2.53125
       ],
       "layer": "Z0_BOTCOMP",
@@ -80,16 +84,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -4.6875,
+        -3.6875,
         1.9687500000000004
       ],
       "b": [
-        -4.25,
+        -3.25,
         2.3750000000000004
       ],
       "layer": "Z0_BOTCOMP",
@@ -97,16 +102,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.75,
+        -4.75,
         2.625
       ],
       "b": [
-        -5.75,
+        -4.75,
         5.375
       ],
       "layer": "Z0_BOTCOMP",
@@ -114,16 +120,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.75,
+        -4.75,
         5.375
       ],
       "b": [
-        -5.75,
+        -4.75,
         5.46875
       ],
       "layer": "Z0_BOTCOMP",
@@ -131,16 +138,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.75,
+        -4.75,
         2.625
       ],
       "b": [
-        -5.75,
+        -4.75,
         2.53125
       ],
       "layer": "Z0_BOTCOMP",
@@ -148,16 +156,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.75,
+        -4.75,
         5.46875
       ],
       "b": [
-        -5.75,
+        -4.75,
         5.625
       ],
       "layer": "Z0_BOTCOMP",
@@ -165,16 +174,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.75,
+        -4.75,
         2.3750000000000004
       ],
       "b": [
-        -5.75,
+        -4.75,
         2.53125
       ],
       "layer": "Z0_BOTCOMP",
@@ -182,16 +192,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -6.25,
+        -5.25,
         4.0
       ],
       "b": [
-        -3.75,
+        -2.75,
         4.0
       ],
       "layer": "Z0_BOTCOMP",
@@ -199,16 +210,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -4.25,
+        -3.25,
         2.625
       ],
       "b": [
-        -5.75,
+        -4.75,
         2.625
       ],
       "layer": "Z0_BOTCOMP",
@@ -216,16 +228,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.75,
+        -4.75,
         5.375
       ],
       "b": [
-        -4.25,
+        -3.25,
         5.375
       ],
       "layer": "Z0_BOTCOMP",
@@ -233,16 +246,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.75,
+        -4.75,
         5.46875
       ],
       "b": [
-        -4.25,
+        -3.25,
         5.46875
       ],
       "layer": "Z0_BOTCOMP",
@@ -250,16 +264,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -4.25,
+        -3.25,
         5.375
       ],
       "b": [
-        -5.75,
+        -4.75,
         5.375
       ],
       "layer": "Z0_BOTCOMP",
@@ -267,16 +282,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.75,
+        -4.75,
         2.53125
       ],
       "b": [
-        -4.25,
+        -3.25,
         2.53125
       ],
       "layer": "Z0_BOTCOMP",
@@ -284,16 +300,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -4.25,
+        -3.25,
         2.625
       ],
       "b": [
-        -5.75,
+        -4.75,
         2.625
       ],
       "layer": "Z0_BOTCOMP",
@@ -301,12 +318,13 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "circle",
       "center": [
-        -5.0,
+        -4.0,
         4.0
       ],
       "radius": 1.25,
@@ -315,16 +333,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.75,
+        -4.75,
         5.625
       ],
       "b": [
-        -5.3125,
+        -4.3125,
         6.03125
       ],
       "layer": "Z0_BOTCOMP",
@@ -332,16 +351,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.75,
+        -4.75,
         2.3750000000000004
       ],
       "b": [
-        -5.3125,
+        -4.3125,
         1.9687500000000004
       ],
       "layer": "Z0_BOTCOMP",
@@ -349,16 +369,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -4.25,
+        -3.25,
         5.375
       ],
       "b": [
-        -4.25,
+        -3.25,
         2.625
       ],
       "layer": "Z0_BOTCOMP",
@@ -366,16 +387,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -4.25,
+        -3.25,
         5.46875
       ],
       "b": [
-        -4.25,
+        -3.25,
         5.375
       ],
       "layer": "Z0_BOTCOMP",
@@ -383,16 +405,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -4.25,
+        -3.25,
         2.53125
       ],
       "b": [
-        -4.25,
+        -3.25,
         2.625
       ],
       "layer": "Z0_BOTCOMP",
@@ -400,12 +423,13 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "circle",
       "center": [
-        -5.0,
+        -4.0,
         4.0
       ],
       "radius": 0.375,
@@ -414,16 +438,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.0,
+        -4.0,
         5.46875
       ],
       "b": [
-        -5.0,
+        -4.0,
         2.53125
       ],
       "layer": "Z0_BOTCOMP",
@@ -431,16 +456,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.0,
+        -4.0,
         5.46875
       ],
       "b": [
-        -5.0,
+        -4.0,
         6.03125
       ],
       "layer": "Z0_BOTCOMP",
@@ -448,16 +474,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.0,
+        -4.0,
         2.53125
       ],
       "b": [
-        -5.0,
+        -4.0,
         1.9687500000000004
       ],
       "layer": "Z0_BOTCOMP",
@@ -465,16 +492,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.3125,
+        -4.3125,
         6.03125
       ],
       "b": [
-        -4.6875,
+        -3.6875,
         6.03125
       ],
       "layer": "Z0_BOTCOMP",
@@ -482,16 +510,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.3125,
+        -4.3125,
         1.9687500000000004
       ],
       "b": [
-        -4.6875,
+        -3.6875,
         1.9687500000000004
       ],
       "layer": "Z0_BOTCOMP",
@@ -499,16 +528,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.0,
+        -4.0,
         2.53125
       ],
       "b": [
-        -5.0,
+        -4.0,
         2.2187500000000004
       ],
       "layer": "Z0_BOTCOMP",
@@ -516,12 +546,13 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "circle",
       "center": [
-        -4.625,
+        -3.625,
         2.2187500000000004
       ],
       "radius": 0.09375,
@@ -530,12 +561,13 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "circle",
       "center": [
-        -5.375,
+        -4.375,
         2.2187500000000004
       ],
       "radius": 0.09375,
@@ -544,16 +576,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.375,
+        -4.375,
         2.2187500000000004
       ],
       "b": [
-        -4.625,
+        -3.625,
         2.2187500000000004
       ],
       "layer": "Z0_BOTCOMP",
@@ -561,16 +594,17 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
       "a": [
-        -5.0,
+        -4.0,
         5.78125
       ],
       "b": [
-        -5.0,
+        -4.0,
         5.46875
       ],
       "layer": "Z0_BOTCOMP",
@@ -578,12 +612,13 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "circle",
       "center": [
-        -4.625,
+        -3.625,
         5.78125
       ],
       "radius": 0.09375,
@@ -592,7 +627,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "819aea3a5f5d436882aa2ad575940f46"
     },
     {
       "type": "line",
@@ -609,7 +645,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c97a13809fd04b0894cac3bab5fae78d"
     },
     {
       "type": "line",
@@ -626,7 +663,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c97a13809fd04b0894cac3bab5fae78d"
     },
     {
       "type": "line",
@@ -643,7 +681,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c97a13809fd04b0894cac3bab5fae78d"
     },
     {
       "type": "line",
@@ -660,7 +699,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c97a13809fd04b0894cac3bab5fae78d"
     },
     {
       "type": "circle",
@@ -675,7 +715,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 4.71238898038469
+      "handle_angle": 4.71238898038469,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "circle",
@@ -690,7 +731,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 4.71238898038469
+      "handle_angle": 4.71238898038469,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "circle",
@@ -705,7 +747,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 4.71238898038469
+      "handle_angle": 4.71238898038469,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -722,7 +765,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -739,7 +783,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -756,7 +801,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -773,7 +819,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -790,7 +837,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -807,7 +855,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -824,7 +873,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -841,7 +891,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -858,7 +909,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -875,7 +927,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -892,7 +945,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -909,7 +963,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -926,7 +981,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -943,7 +999,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -960,7 +1017,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -977,7 +1035,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -994,7 +1053,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -1011,7 +1071,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -1028,7 +1089,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -1045,7 +1107,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "arc",
@@ -1061,7 +1124,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "arc",
@@ -1077,7 +1141,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -1094,7 +1159,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -1111,7 +1177,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "circle",
@@ -1126,7 +1193,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 4.71238898038469
+      "handle_angle": 4.71238898038469,
+      "group": "af1afeb6af304a4f973448b27b6e8731"
     },
     {
       "type": "line",
@@ -1143,7 +1211,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b4689d6b0b674148b730bb416adcdc01"
     },
     {
       "type": "line",
@@ -1160,7 +1229,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b4689d6b0b674148b730bb416adcdc01"
     },
     {
       "type": "arc",
@@ -1176,7 +1246,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b4689d6b0b674148b730bb416adcdc01"
     },
     {
       "type": "arc",
@@ -1192,7 +1263,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b4689d6b0b674148b730bb416adcdc01"
     },
     {
       "type": "line",
@@ -1209,7 +1281,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "line",
@@ -1226,7 +1299,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "arc",
@@ -1242,7 +1316,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "arc",
@@ -1258,7 +1333,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "arc",
@@ -1274,7 +1350,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "arc",
@@ -1290,7 +1367,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "arc",
@@ -1306,7 +1384,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "arc",
@@ -1322,7 +1401,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "line",
@@ -1339,7 +1419,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "line",
@@ -1356,7 +1437,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "line",
@@ -1373,7 +1455,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "line",
@@ -1390,7 +1473,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "circle",
@@ -1405,7 +1489,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.430830285797294
+      "handle_angle": 0.430830285797294,
+      "group": "7dc177423aa34df19bfff4486f86394c"
     },
     {
       "type": "line",
@@ -1422,7 +1507,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1439,7 +1525,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1456,7 +1543,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1473,7 +1561,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1490,7 +1579,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1507,7 +1597,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1524,7 +1615,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1541,7 +1633,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1558,7 +1651,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1575,7 +1669,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1592,7 +1687,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1609,7 +1705,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1626,7 +1723,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1643,7 +1741,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "arc",
@@ -1659,7 +1758,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "arc",
@@ -1675,7 +1775,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "arc",
@@ -1691,7 +1792,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "arc",
@@ -1707,7 +1809,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "arc",
@@ -1723,7 +1826,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "arc",
@@ -1739,7 +1843,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "arc",
@@ -1755,7 +1860,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "arc",
@@ -1771,7 +1877,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "circle",
@@ -1786,7 +1893,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.430830285797294
+      "handle_angle": 0.430830285797294,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "circle",
@@ -1801,7 +1909,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.430830285797294
+      "handle_angle": 0.430830285797294,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "circle",
@@ -1816,7 +1925,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.430830285797294
+      "handle_angle": 0.430830285797294,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "circle",
@@ -1831,7 +1941,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.430830285797294
+      "handle_angle": 0.430830285797294,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "circle",
@@ -1846,7 +1957,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.430830285797294
+      "handle_angle": 0.430830285797294,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "circle",
@@ -1861,7 +1973,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.430830285797294
+      "handle_angle": 0.430830285797294,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "circle",
@@ -1876,7 +1989,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.430830285797294
+      "handle_angle": 0.430830285797294,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "circle",
@@ -1891,7 +2005,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.430830285797294
+      "handle_angle": 0.430830285797294,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1908,7 +2023,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1925,7 +2041,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1942,7 +2059,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1959,7 +2077,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1976,7 +2095,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -1993,7 +2113,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -2010,7 +2131,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -2027,7 +2149,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "line",
@@ -2044,7 +2167,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "a392b057afb545ccaea4db592a9181d7"
     },
     {
       "type": "circle",
@@ -2065,160 +2189,169 @@
       "type": "line",
       "a": [
         -25.187500000007933,
-        5.485000000013816
+        5.156245721736131
       ],
       "b": [
         -25.1875000000275,
-        5.5529999999991375
+        5.224245721721452
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -24.812500000049113,
-        5.484999999965726
+        5.156245721688041
       ],
       "b": [
         -25.187500000007933,
-        5.485000000013816
+        5.156245721736131
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -24.812499999968754,
-        5.5529999999473
+        5.2242457216696145
       ],
       "b": [
         -24.812500000049113,
-        5.484999999965726
+        5.156245721688041
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -25.1875000000275,
-        5.5529999999991375
+        5.224245721721452
       ],
       "b": [
         -24.812499999968754,
-        5.5529999999473
+        5.2242457216696145
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -25.187500000007933,
-        5.485000000013816
+        5.156245721736131
       ],
       "b": [
         -24.812500000049113,
-        5.484999999965726
+        5.156245721688041
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -25.187499999970875,
-        5.615000000009452
+        5.286245721731767
       ],
       "b": [
         -25.37500000000212,
-        5.614999999985407
+        5.286245721707722
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -24.62499999998081,
-        5.614999999985407
+        5.286245721707722
       ],
       "b": [
         -24.812500000012054,
-        5.614999999961359
+        5.286245721683674
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -24.812500000049113,
-        5.484999999965726
+        5.156245721688041
       ],
       "b": [
         -24.812500000012054,
-        5.614999999961359
+        5.286245721683674
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -25.187500000007933,
-        5.485000000013816
+        5.156245721736131
       ],
       "b": [
         -25.187499999970875,
-        5.615000000009452
+        5.286245721731767
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "circle",
       "center": [
         -24.812500000016325,
-        5.807499999968655
+        5.47874572169097
       ],
       "radius": 0.09375,
       "layer": "Z0_BOTCOMP",
@@ -2227,13 +2360,14 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -1.6082416810093396
+      "handle_angle": -1.6082416810093396,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "circle",
       "center": [
         -25.18749999997514,
-        5.807500000016752
+        5.478745721739067
       ],
       "radius": 0.09375,
       "layer": "Z0_BOTCOMP",
@@ -2242,336 +2376,356 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -1.6082416810093396
+      "handle_angle": -1.6082416810093396,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -25.37500000000212,
-        5.614999999985407
+        5.286245721707722
       ],
       "b": [
         -25.375000000010655,
-        6.0
+        5.671245721722315
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -24.624999999989345,
-        6.0000000000000036
+        5.671245721722318
       ],
       "b": [
         -24.62499999998081,
-        5.614999999985407
+        5.286245721707722
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -25.375000000010655,
-        6.0
+        5.671245721722315
       ],
       "b": [
         -24.624999999989345,
-        6.0000000000000036
+        5.671245721722318
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "1e56d87752ee47ffa5d7083aaef807df"
     },
     {
       "type": "line",
       "a": [
         -24.800000000005312,
-        5.485000000012462
+        5.156245721734777
       ],
       "b": [
         -24.800000000065268,
-        5.035000000001926
+        4.70624572172424
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -25.200000000008018,
-        5.035000000052726
+        4.706245721775041
       ],
       "b": [
         -25.200000000051734,
-        5.48499999996708
+        5.156245721689395
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -24.500000000012857,
-        5.384999999936841
+        5.056245721659156
       ],
       "b": [
         -24.499999999998284,
-        5.484999999972491
+        5.156245721694805
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -25.499999999969656,
-        5.385000000067585
+        5.0562457217898995
       ],
       "b": [
         -24.500000000012857,
-        5.384999999936841
+        5.056245721659156
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -24.499999999998284,
-        5.484999999972491
+        5.156245721694805
       ],
       "b": [
         -25.500000000058762,
-        5.485000000007052
+        5.156245721729366
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -25.500000000058762,
-        5.485000000007052
+        5.156245721729366
       ],
       "b": [
         -25.499999999969656,
-        5.385000000067585
+        5.0562457217898995
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -25.200000000051734,
-        5.48499999996708
+        5.156245721689395
       ],
       "b": [
         -24.800000000005312,
-        5.485000000012462
+        5.156245721734777
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -24.890000000048886,
-        5.034999999973195
+        4.70624572169551
       ],
       "b": [
         -24.890000000059718,
-        4.935000000037476
+        4.606245721759791
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -25.11000000003897,
-        4.9350000000458
+        4.606245721768115
       ],
       "b": [
         -25.11000000002814,
-        5.034999999981526
+        4.706245721703841
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -24.890000000059718,
-        4.935000000037476
+        4.606245721759791
       ],
       "b": [
         -25.11000000003897,
-        4.9350000000458
+        4.606245721768115
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -24.79999999997788,
-        5.141249999955804
+        4.812495721678118
       ],
       "b": [
         -24.800000000036487,
-        5.078749999947888
+        4.749995721670203
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -25.20000000002056,
-        5.1412500000103485
+        4.812495721732663
       ],
       "b": [
         -24.79999999997788,
-        5.141249999955804
+        4.812495721678118
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -25.199999999979234,
-        5.078749999998685
+        4.749995721721
       ],
       "b": [
         -25.20000000002056,
-        5.1412500000103485
+        4.812495721732663
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -24.800000000036487,
-        5.078749999947888
+        4.749995721670203
       ],
       "b": [
         -25.199999999979234,
-        5.078749999998685
+        4.749995721721
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -25.11000000002814,
-        5.034999999981526
+        4.706245721703841
       ],
       "b": [
         -24.890000000048886,
-        5.034999999973195
+        4.70624572169551
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "line",
       "a": [
         -24.800000000065268,
-        5.035000000001926
+        4.70624572172424
       ],
       "b": [
         -25.200000000008018,
-        5.035000000052726
+        4.706245721775041
       ],
       "layer": "Z0_TOPCOMP",
       "color": "#cf36b5",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "52330c89dcaa441687bbc430fb92583b"
     },
     {
       "type": "arc",
       "center": [
         -24.687443837688893,
-        5.328754278294966
+        5.00000000001728
       ],
       "radius": 0.25,
       "start": -1.5707963268360812,
@@ -2581,47 +2735,50 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "ab8d901b805b44418053f3c591b2ce69"
     },
     {
       "type": "line",
       "a": [
         -24.687443837723446,
-        5.078754278255797
+        4.749999999978112
       ],
       "b": [
         -25.312443837721435,
-        5.078754278338447
+        4.750000000060762
       ],
       "layer": "1_250BIT_500DEP",
       "color": "#2465d8",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "ab8d901b805b44418053f3c591b2ce69"
     },
     {
       "type": "line",
       "a": [
         -25.312443837656062,
-        5.5787542783168504
+        5.250000000039165
       ],
       "b": [
         -24.68744383765808,
-        5.5787542782342
+        5.249999999956515
       ],
       "layer": "1_250BIT_500DEP",
       "color": "#2465d8",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "ab8d901b805b44418053f3c591b2ce69"
     },
     {
       "type": "arc",
       "center": [
         -25.31244383769062,
-        5.328754278277685
+        5.0
       ],
       "radius": 0.25,
       "start": -4.7123889804258745,
@@ -2631,13 +2788,14 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "ab8d901b805b44418053f3c591b2ce69"
     },
     {
       "type": "circle",
       "center": [
         -32.64499999999903,
-        3.674083384697443
+        3.0125093310891202
       ],
       "radius": 0.09375,
       "layer": "Z0_BOTCOMP",
@@ -2646,64 +2804,68 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.6917646647001304
+      "handle_angle": 0.6917646647001304,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -32.457500000032375,
-        3.9240833847137937
+        3.2625093311054707
       ],
       "b": [
         -32.45750000003234,
-        3.424083384738865
+        2.762509331130542
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -35.54250000004128,
-        3.9240833845975454
+        3.2625093309892224
       ],
       "b": [
         -35.54250000004125,
-        3.4240833846226115
+        2.7625093310142885
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -35.54250000004125,
-        3.4240833846226115
+        2.7625093310142885
       ],
       "b": [
         -34.73000000001956,
-        3.4240833846256864
+        2.7625093310173634
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "circle",
       "center": [
         -35.292500000047184,
-        3.6740833846804986
+        3.0125093310721756
       ],
       "radius": 0.09375,
       "layer": "Z0_BOTCOMP",
@@ -2712,81 +2874,86 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.6917646647001304
+      "handle_angle": 0.6917646647001304,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -34.25000000010548,
-        4.946583384667044
+        4.285009331058721
       ],
       "b": [
         -33.75000000005355,
-        4.94658338473087
+        4.285009331122547
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -35.54250000004128,
-        3.9240833845975454
+        3.2625093309892224
       ],
       "b": [
         -34.71857119252314,
-        3.9240833847104
+        3.262509331102077
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -34.25000000010548,
-        4.946583384667044
+        4.285009331058721
       ],
       "b": [
         -34.25000000006393,
-        4.384083384664713
+        3.72250933105639
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -33.75000000005355,
-        4.94658338473087
+        4.285009331122547
       ],
       "b": [
         -33.75000000001198,
-        4.384083384728539
+        3.722509331120216
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "circle",
       "center": [
         -34.00000000008912,
-        4.759083384700383
+        4.09750933109206
       ],
       "radius": 0.09375,
       "layer": "Z0_BOTCOMP",
@@ -2795,132 +2962,140 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.6917646647001304
+      "handle_angle": 0.6917646647001304,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -34.667500000000665,
-        3.026583384615148
+        2.365009331006825
       ],
       "b": [
         -34.6675000000607,
-        4.32158338463042
+        3.6600093310220974
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -33.33250000001292,
-        3.02658338470599
+        2.365009331097667
       ],
       "b": [
         -34.667500000000665,
-        3.026583384615148
+        2.365009331006825
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -33.332500000072955,
-        4.3215833847212615
+        3.6600093311129385
       ],
       "b": [
         -33.33250000001292,
-        3.02658338470599
+        2.365009331097667
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -34.6675000000607,
-        4.32158338463042
+        3.6600093310220974
       ],
       "b": [
         -33.332500000072955,
-        4.3215833847212615
+        3.6600093311129385
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -34.00000000003082,
-        3.1991192731880043
+        2.5375452195796813
       ],
       "b": [
         -34.0,
-        4.0
+        3.338425946391677
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -34.0,
-        4.0
+        3.338425946391677
       ],
       "b": [
         -33.86376807122078,
-        3.8637680711281996
+        3.2021940175198766
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -34.0,
-        4.0
+        3.338425946391677
       ],
       "b": [
         -34.136231928885024,
-        3.863768071079976
+        3.202194017471653
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "circle",
       "center": [
         -34.00595339428369,
-        3.9999999999595692
+        3.3384259463512462
       ],
       "radius": 0.53125,
       "layer": "Z0_BOTCOMP",
@@ -2929,47 +3104,50 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": 0.6917646647001304
+      "handle_angle": 0.6917646647001304,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -32.45750000003234,
-        3.424083384738865
+        2.762509331130542
       ],
       "b": [
         -33.26999999999023,
-        3.4240833846587817
+        2.7625093310504587
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "line",
       "a": [
         -32.457500000032375,
-        3.9240833847137937
+        3.2625093311054707
       ],
       "b": [
         -33.27000000005406,
-        3.924083384710724
+        3.262509331102401
       ],
       "layer": "Z0_BOTCOMP",
       "color": "#00bfc4",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "68fba52dc8a44ac3869d0a53f945e0f3"
     },
     {
       "type": "arc",
       "center": [
         -33.332500000072955,
-        4.3215833847212615
+        3.6600093311129385
       ],
       "radius": 0.0625,
       "start": 2.2670199051333384e-11,
@@ -2979,13 +3157,14 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b13eca8f49d146ecaa52759ccbe50f6a"
     },
     {
       "type": "arc",
       "center": [
         -33.33250000001292,
-        3.02658338470599
+        2.365009331097667
       ],
       "radius": 0.0625,
       "start": -1.5707963267722262,
@@ -2995,30 +3174,32 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b13eca8f49d146ecaa52759ccbe50f6a"
     },
     {
       "type": "line",
       "a": [
         -34.667500000025214,
-        4.38408338472161
+        3.7225093311132866
       ],
       "b": [
         -33.332500000050686,
-        4.384083384671647
+        3.722509331063324
       ],
       "layer": "3_250BIT_500TAB",
       "color": "#2465d8",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b13eca8f49d146ecaa52759ccbe50f6a"
     },
     {
       "type": "arc",
       "center": [
         -34.6675000000607,
-        4.32158338463042
+        3.6600093310220974
       ],
       "radius": 0.0625,
       "start": 1.5707963268175669,
@@ -3028,13 +3209,14 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b13eca8f49d146ecaa52759ccbe50f6a"
     },
     {
       "type": "arc",
       "center": [
         -34.667500000000665,
-        3.026583384615148
+        2.365009331006825
       ],
       "radius": 0.0625,
       "start": 3.1415926536124634,
@@ -3044,58 +3226,62 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b13eca8f49d146ecaa52759ccbe50f6a"
     },
     {
       "type": "line",
       "a": [
         -34.73000000001483,
-        3.026583384714429
+        2.365009331106106
       ],
       "b": [
         -34.73000000001108,
-        4.321583384652684
+        3.6600093310443613
       ],
       "layer": "3_250BIT_500TAB",
       "color": "#2465d8",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b13eca8f49d146ecaa52759ccbe50f6a"
     },
     {
       "type": "line",
       "a": [
         -33.33249999997139,
-        2.964083384678596
+        2.302509331070273
       ],
       "b": [
         -34.667500000022926,
-        2.9640833846647654
+        2.3025093310564424
       ],
       "layer": "3_250BIT_500TAB",
       "color": "#2465d8",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b13eca8f49d146ecaa52759ccbe50f6a"
     },
     {
       "type": "line",
       "a": [
         -33.26999999998176,
-        4.321583384685774
+        3.6600093310774513
       ],
       "b": [
         -33.269999999985515,
-        3.0265833847475214
+        2.3650093311391984
       ],
       "layer": "3_250BIT_500TAB",
       "color": "#2465d8",
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "b13eca8f49d146ecaa52759ccbe50f6a"
     },
     {
       "type": "circle",
@@ -3126,7 +3312,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6e4e5abe72bf4fc48b14d9b28a8e2edf"
     },
     {
       "type": "arc",
@@ -3142,7 +3329,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6e4e5abe72bf4fc48b14d9b28a8e2edf"
     },
     {
       "type": "arc",
@@ -3158,7 +3346,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6e4e5abe72bf4fc48b14d9b28a8e2edf"
     },
     {
       "type": "line",
@@ -3175,7 +3364,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6e4e5abe72bf4fc48b14d9b28a8e2edf"
     },
     {
       "type": "line",
@@ -3192,7 +3382,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6e4e5abe72bf4fc48b14d9b28a8e2edf"
     },
     {
       "type": "line",
@@ -3209,7 +3400,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6e4e5abe72bf4fc48b14d9b28a8e2edf"
     },
     {
       "type": "line",
@@ -3226,7 +3418,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6e4e5abe72bf4fc48b14d9b28a8e2edf"
     },
     {
       "type": "line",
@@ -3243,7 +3436,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6e4e5abe72bf4fc48b14d9b28a8e2edf"
     },
     {
       "type": "line",
@@ -3260,7 +3454,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6e4e5abe72bf4fc48b14d9b28a8e2edf"
     },
     {
       "type": "circle",
@@ -3275,7 +3470,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.824025949950115
+      "handle_angle": -0.824025949950115,
+      "group": "6e4e5abe72bf4fc48b14d9b28a8e2edf"
     },
     {
       "type": "circle",
@@ -3290,7 +3486,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.824025949950115
+      "handle_angle": -0.824025949950115,
+      "group": "6e4e5abe72bf4fc48b14d9b28a8e2edf"
     },
     {
       "type": "circle",
@@ -3337,7 +3534,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3354,7 +3552,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3371,7 +3570,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3388,7 +3588,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "arc",
@@ -3404,7 +3605,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3421,7 +3623,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3438,7 +3641,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3455,7 +3659,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3472,7 +3677,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "arc",
@@ -3488,7 +3694,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "arc",
@@ -3504,7 +3711,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3521,7 +3729,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3538,7 +3747,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "circle",
@@ -3553,7 +3763,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.824025949950115
+      "handle_angle": -0.824025949950115,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3570,7 +3781,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3587,7 +3799,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3604,7 +3817,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3621,7 +3835,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3638,7 +3853,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3655,7 +3871,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3672,7 +3889,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "arc",
@@ -3688,7 +3906,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3705,7 +3924,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3722,7 +3942,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "arc",
@@ -3738,7 +3959,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3755,7 +3977,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3772,7 +3995,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "circle",
@@ -3787,7 +4011,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.824025949950115
+      "handle_angle": -0.824025949950115,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3804,7 +4029,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3821,7 +4047,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3838,7 +4065,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "arc",
@@ -3854,7 +4082,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3871,7 +4100,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3888,7 +4118,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "circle",
@@ -3903,7 +4134,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.824025949950115
+      "handle_angle": -0.824025949950115,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3920,7 +4152,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3937,7 +4170,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3954,7 +4188,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3971,7 +4206,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -3988,7 +4224,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4005,7 +4242,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4022,7 +4260,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4039,7 +4278,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4056,7 +4296,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4073,7 +4314,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4090,7 +4332,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4107,7 +4350,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4124,7 +4368,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4141,7 +4386,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4158,7 +4404,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4175,7 +4422,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4192,7 +4440,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4209,7 +4458,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4226,7 +4476,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4243,7 +4494,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "arc",
@@ -4259,7 +4511,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4276,7 +4529,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4293,7 +4547,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "arc",
@@ -4309,7 +4564,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4326,7 +4582,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "arc",
@@ -4342,7 +4599,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "line",
@@ -4359,7 +4617,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "arc",
@@ -4375,7 +4634,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "9bfa8ae2224343bfad21d413991b878a"
     },
     {
       "type": "arc",
@@ -4391,7 +4651,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6f7485a21157448184fd62ad9ca4e3a9"
     },
     {
       "type": "arc",
@@ -4407,7 +4668,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6f7485a21157448184fd62ad9ca4e3a9"
     },
     {
       "type": "arc",
@@ -4423,7 +4685,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6f7485a21157448184fd62ad9ca4e3a9"
     },
     {
       "type": "line",
@@ -4440,7 +4703,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6f7485a21157448184fd62ad9ca4e3a9"
     },
     {
       "type": "line",
@@ -4457,7 +4721,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6f7485a21157448184fd62ad9ca4e3a9"
     },
     {
       "type": "line",
@@ -4474,7 +4739,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6f7485a21157448184fd62ad9ca4e3a9"
     },
     {
       "type": "line",
@@ -4491,7 +4757,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6f7485a21157448184fd62ad9ca4e3a9"
     },
     {
       "type": "line",
@@ -4508,7 +4775,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6f7485a21157448184fd62ad9ca4e3a9"
     },
     {
       "type": "line",
@@ -4525,7 +4793,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "6f7485a21157448184fd62ad9ca4e3a9"
     },
     {
       "type": "circle",
@@ -4540,7 +4809,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.824025949950115
+      "handle_angle": -0.824025949950115,
+      "group": "6f7485a21157448184fd62ad9ca4e3a9"
     },
     {
       "type": "circle",
@@ -4555,7 +4825,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.824025949950115
+      "handle_angle": -0.824025949950115,
+      "group": "6f7485a21157448184fd62ad9ca4e3a9"
     },
     {
       "type": "circle",
@@ -4647,7 +4918,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "036e7a16251f4bc1ac6652375d9341a7"
     },
     {
       "type": "line",
@@ -4664,7 +4936,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "036e7a16251f4bc1ac6652375d9341a7"
     },
     {
       "type": "line",
@@ -4681,7 +4954,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "036e7a16251f4bc1ac6652375d9341a7"
     },
     {
       "type": "line",
@@ -4698,7 +4972,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "036e7a16251f4bc1ac6652375d9341a7"
     },
     {
       "type": "circle",
@@ -4713,7 +4988,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.13548999375874582
+      "handle_angle": -0.13548999375874582,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "circle",
@@ -4728,7 +5004,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.13548999375874582
+      "handle_angle": -0.13548999375874582,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "circle",
@@ -4743,7 +5020,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.13548999375874582
+      "handle_angle": -0.13548999375874582,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4760,7 +5038,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4777,7 +5056,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4794,7 +5074,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4811,7 +5092,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4828,7 +5110,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4845,7 +5128,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4862,7 +5146,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4879,7 +5164,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4896,7 +5182,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4913,7 +5200,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4930,7 +5218,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4947,7 +5236,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4964,7 +5254,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4981,7 +5272,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -4998,7 +5290,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -5015,7 +5308,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -5032,7 +5326,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -5049,7 +5344,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -5066,7 +5362,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -5083,7 +5380,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "arc",
@@ -5099,7 +5397,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "arc",
@@ -5115,7 +5414,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -5132,7 +5432,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "line",
@@ -5149,7 +5450,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "circle",
@@ -5164,7 +5466,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.13548999375874582
+      "handle_angle": -0.13548999375874582,
+      "group": "8f94256b9ec1483aa930cfb3cc2bffe1"
     },
     {
       "type": "arc",
@@ -5180,7 +5483,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "36bac34998454315817995106b1f74cf"
     },
     {
       "type": "arc",
@@ -5196,7 +5500,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "36bac34998454315817995106b1f74cf"
     },
     {
       "type": "line",
@@ -5213,7 +5518,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "36bac34998454315817995106b1f74cf"
     },
     {
       "type": "line",
@@ -5230,7 +5536,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "36bac34998454315817995106b1f74cf"
     },
     {
       "type": "line",
@@ -5247,7 +5554,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5264,7 +5572,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5281,7 +5590,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5298,7 +5608,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5315,7 +5626,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5332,7 +5644,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5349,7 +5662,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5366,7 +5680,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5383,7 +5698,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c6b1b3cc0f7c4971a0c398d334a9b22e"
     },
     {
       "type": "line",
@@ -5400,7 +5716,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c6b1b3cc0f7c4971a0c398d334a9b22e"
     },
     {
       "type": "line",
@@ -5417,7 +5734,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c6b1b3cc0f7c4971a0c398d334a9b22e"
     },
     {
       "type": "line",
@@ -5434,7 +5752,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c6b1b3cc0f7c4971a0c398d334a9b22e"
     },
     {
       "type": "line",
@@ -5451,7 +5770,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c6b1b3cc0f7c4971a0c398d334a9b22e"
     },
     {
       "type": "line",
@@ -5468,7 +5788,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c6b1b3cc0f7c4971a0c398d334a9b22e"
     },
     {
       "type": "line",
@@ -5485,7 +5806,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c6b1b3cc0f7c4971a0c398d334a9b22e"
     },
     {
       "type": "line",
@@ -5502,7 +5824,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c6b1b3cc0f7c4971a0c398d334a9b22e"
     },
     {
       "type": "line",
@@ -5519,7 +5842,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c6b1b3cc0f7c4971a0c398d334a9b22e"
     },
     {
       "type": "line",
@@ -5536,7 +5860,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c6b1b3cc0f7c4971a0c398d334a9b22e"
     },
     {
       "type": "line",
@@ -5553,7 +5878,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "c6b1b3cc0f7c4971a0c398d334a9b22e"
     },
     {
       "type": "line",
@@ -5570,7 +5896,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5587,7 +5914,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5604,7 +5932,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5621,7 +5950,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5638,7 +5968,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "circle",
@@ -5653,7 +5984,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.13548999359136873
+      "handle_angle": -0.13548999359136873,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "circle",
@@ -5668,7 +6000,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.13548999359136873
+      "handle_angle": -0.13548999359136873,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5685,7 +6018,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5702,7 +6036,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5719,7 +6054,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5736,7 +6072,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5753,7 +6090,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5770,7 +6108,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "line",
@@ -5787,7 +6126,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "85ff834b6d8e4f31867a1f87d3c98713"
     },
     {
       "type": "circle",
@@ -5824,23 +6164,6 @@
     {
       "type": "line",
       "a": [
-        -5.838235456219543,
-        14.000000000018172
-      ],
-      "b": [
-        -4.463235456158152,
-        14.00000000009182
-      ],
-      "layer": "Z0_TOPCOMP",
-      "color": "#cf36b5",
-      "pattern": "Solid",
-      "weight": 0.01,
-      "locked": false,
-      "controls": false
-    },
-    {
-      "type": "line",
-      "a": [
         -3.7757354562298246,
         15.50000000004258
       ],
@@ -5853,7 +6176,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -5868,7 +6192,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -5883,7 +6208,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -5898,7 +6224,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -5915,7 +6242,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -5932,7 +6260,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -5949,7 +6278,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -5964,7 +6294,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -5979,7 +6310,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -5996,7 +6328,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6011,7 +6344,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6028,7 +6362,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6045,7 +6380,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6062,7 +6398,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6079,7 +6416,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6094,7 +6432,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6111,7 +6450,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6128,7 +6468,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6145,7 +6486,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6162,7 +6504,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6177,7 +6520,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6192,7 +6536,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6207,7 +6552,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6222,7 +6568,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6237,7 +6584,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6252,7 +6600,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6269,7 +6618,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6284,7 +6634,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6299,7 +6650,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6314,7 +6666,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6329,7 +6682,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6344,7 +6698,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.1135106789363956
+      "handle_angle": -0.1135106789363956,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6361,7 +6716,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6378,7 +6734,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6395,7 +6752,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6412,7 +6770,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6429,7 +6788,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "line",
@@ -6446,7 +6806,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "5329da47fcff4c10a184371eef977f82"
     },
     {
       "type": "circle",
@@ -6478,7 +6839,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6495,7 +6857,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6512,7 +6875,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6529,7 +6893,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6546,7 +6911,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6563,7 +6929,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6580,7 +6947,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6597,7 +6965,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6614,7 +6983,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6631,7 +7001,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6648,7 +7019,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6665,7 +7037,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "arc",
@@ -6681,7 +7054,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6698,7 +7072,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6715,7 +7090,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "d0d54451fa424ee0a7a5512599f6cbfb"
     },
     {
       "type": "line",
@@ -6732,7 +7108,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "line",
@@ -6749,7 +7126,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "line",
@@ -6766,7 +7144,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "line",
@@ -6783,7 +7162,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "line",
@@ -6800,7 +7180,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "line",
@@ -6817,7 +7198,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "line",
@@ -6834,7 +7216,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "line",
@@ -6851,7 +7234,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "line",
@@ -6868,7 +7252,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "circle",
@@ -6883,7 +7268,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.35666942744768726
+      "handle_angle": -0.35666942744768726,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "circle",
@@ -6898,7 +7284,8 @@
       "weight": 0.01,
       "locked": false,
       "controls": false,
-      "handle_angle": -0.35666942744768726
+      "handle_angle": -0.35666942744768726,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "line",
@@ -6915,7 +7302,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "line",
@@ -6932,7 +7320,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "line",
@@ -6949,7 +7338,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "4392256e9a1344f69c363a80c8cbff79"
     },
     {
       "type": "arc",
@@ -6965,7 +7355,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "718686df0cb04852a4e480ca6f948cbf"
     },
     {
       "type": "arc",
@@ -6981,7 +7372,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "718686df0cb04852a4e480ca6f948cbf"
     },
     {
       "type": "line",
@@ -6998,7 +7390,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "718686df0cb04852a4e480ca6f948cbf"
     },
     {
       "type": "line",
@@ -7015,7 +7408,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "718686df0cb04852a4e480ca6f948cbf"
     },
     {
       "type": "circle",
@@ -7029,7 +7423,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "circle",
@@ -7043,7 +7438,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "circle",
@@ -7057,7 +7453,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "circle",
@@ -7071,7 +7468,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7088,7 +7486,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7105,7 +7504,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7122,7 +7522,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7139,7 +7540,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7156,7 +7558,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7173,7 +7576,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7190,7 +7594,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7207,7 +7612,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7224,7 +7630,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7241,7 +7648,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7258,7 +7666,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7275,7 +7684,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "circle",
@@ -7289,7 +7699,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7306,7 +7717,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7323,7 +7735,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7340,7 +7753,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "line",
@@ -7357,7 +7771,8 @@
       "pattern": "Solid",
       "weight": 0.01,
       "locked": false,
-      "controls": false
+      "controls": false,
+      "group": "7353e919647b4ba2bcd30030dd47f9bc"
     },
     {
       "type": "circle",
@@ -7416,7 +7831,8 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
-      "controls": false
+      "controls": false,
+      "group": "21cbd5aad7704f52bdaec2a6b581fe14"
     },
     {
       "type": "line",
@@ -7433,7 +7849,8 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
-      "controls": false
+      "controls": false,
+      "group": "21cbd5aad7704f52bdaec2a6b581fe14"
     },
     {
       "type": "line",
@@ -7450,7 +7867,8 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
-      "controls": false
+      "controls": false,
+      "group": "0e25b92b47fc4f99812253a7f4369f4a"
     },
     {
       "type": "line",
@@ -7467,7 +7885,8 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
-      "controls": false
+      "controls": false,
+      "group": "0e25b92b47fc4f99812253a7f4369f4a"
     },
     {
       "type": "line",
@@ -7484,7 +7903,8 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
-      "controls": false
+      "controls": false,
+      "group": "8b73942eafba4a20afdba44727d5dd14"
     },
     {
       "type": "line",
@@ -7501,7 +7921,8 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
-      "controls": false
+      "controls": false,
+      "group": "8b73942eafba4a20afdba44727d5dd14"
     },
     {
       "type": "line",
@@ -7518,7 +7939,8 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
-      "controls": false
+      "controls": false,
+      "group": "8a4c36ae89854e108e94dbaa9fd05ede"
     },
     {
       "type": "line",
@@ -7535,7 +7957,8 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
-      "controls": false
+      "controls": false,
+      "group": "8a4c36ae89854e108e94dbaa9fd05ede"
     },
     {
       "type": "line",
@@ -7552,7 +7975,8 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
-      "controls": false
+      "controls": false,
+      "group": "30c1d659fbe44691bd57465073cac7fa"
     },
     {
       "type": "line",
@@ -7569,7 +7993,8 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
-      "controls": false
+      "controls": false,
+      "group": "30c1d659fbe44691bd57465073cac7fa"
     },
     {
       "type": "line",
@@ -7586,7 +8011,8 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
-      "controls": false
+      "controls": false,
+      "group": "b787eecef2fe436a9e8135c9d403d167"
     },
     {
       "type": "line",
@@ -7603,7 +8029,78 @@
       "layer": "Construction",
       "locked": false,
       "pattern": "Solid",
+      "controls": false,
+      "group": "b787eecef2fe436a9e8135c9d403d167"
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.6875,
+        5.000000000033814
+      ],
+      "b": [
+        -24.3125,
+        4.999999999966186
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
       "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -25.000000000049464,
+        4.625
+      ],
+      "b": [
+        -24.99999999995054,
+        5.375
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        -34.875,
+        3.000000000002389
+      ],
+      "b": [
+        -33.125,
+        2.9999999999976117
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false,
+      "group": "0ac3c6acf1e44f7784afbfaaadda4ed3"
+    },
+    {
+      "type": "line",
+      "a": [
+        -34.0,
+        2.1250000000000004
+      ],
+      "b": [
+        -34.0,
+        3.875
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false,
+      "group": "0ac3c6acf1e44f7784afbfaaadda4ed3"
     }
   ],
   "layers": [
