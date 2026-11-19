@@ -147,7 +147,33 @@ def read_dxf(path):
             if len(source.objects)>100000: raise OverflowError('DXF exceeds 100000 imported objects.')
         except (ValueError,TypeError,AttributeError,IndexError,ZeroDivisionError,KeyError,ezdxf.DXFError) as ex:
             skipped[entity.dxftype()+' ('+str(ex)+')']+=1
-    for entity in drawing.modelspace(): visit(entity)
+    # Associate a modelspace handle with all geometry it produced. INSERTs and
+    # decomposed curves can yield several native objects for one DXF entity.
+    by_handle={}
+    for entity in drawing.modelspace():
+        start=len(source.objects);visit(entity)
+        by_handle[entity.dxf.handle]=list(range(start,len(source.objects)))
+    parent={};membership={};overlapping=False
+    def find(i):
+        parent.setdefault(i,i)
+        while parent[i]!=i:
+            parent[i]=parent[parent[i]];i=parent[i]
+        return i
+    for name,group in drawing.groups:
+        members=[i for handle in group.handles() for i in by_handle.get(handle,[])]
+        if not members:continue
+        if not group.dxf.selectable:
+            warnings.append(f'Non-selectable DXF group {name} was not applied.');continue
+        first=find(members[0])
+        for i in members:
+            if i in membership:overlapping=True
+            membership[i]=True;parent[find(i)]=first
+    identities={}
+    for i in membership:
+        root=find(i)
+        if root not in identities:identities[root]=cad_groups.new_id()
+        source.objects[i]['group']=identities[root]
+    if overlapping:warnings.append('Overlapping DXF groups were combined because BrianCAD supports one group per object.')
     used={o['layer'] for o in source.objects}; source.layers=[l for l in source.layers if l['name'] in used]
     if source.layers: source.active=source.layers[0]['name']
     if skipped: warnings.append('Skipped entities: '+', '.join(f'{n} × {kind}' for kind,n in sorted(skipped.items())))
