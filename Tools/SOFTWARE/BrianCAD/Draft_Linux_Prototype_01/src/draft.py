@@ -1479,17 +1479,18 @@ class Draft(LibraryMixin):
             if not delta:return 'break'
             pixels=delta*8;zoom_steps=delta/5
         elif number in (4,5):
-            pixels=40 if number==4 else -40;zoom_steps=1 if number==4 else -1
+            zoom_steps=1 if number==4 else -1
         else:
             delta=getattr(e,'delta',0)
             if not delta:return 'break'
             if self.root.tk.call('tk','windowingsystem')=='aqua':
-                # Aqua sends small trackpad deltas; do not round them to wheel notches.
-                pixels=delta*8;zoom_steps=delta/5
+                # Preserve the Aqua MouseWheel delta scale used by earlier releases.
+                zoom_steps=delta/5
             else:
-                pixels=delta/120*40;zoom_steps=delta/120
-        if state & 0x4:
-            self.zoom(e,1.15**max(-8,min(8,zoom_steps)))
+                zoom_steps=delta/120
+        if not precise or state & 0x4:
+            sensitivity=.5 if not precise else 1.
+            self.zoom(e,1.15**(max(-8,min(8,zoom_steps))*sensitivity))
         else:
             self.cancel_window_zoom(draw=False);self.tracking_cursor=None;self.cancel_snap_hover()
             self.origin[0 if state & 0x1 else 1]+=max(-1000,min(1000,pixels))
