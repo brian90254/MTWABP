@@ -1886,7 +1886,7 @@ class Draft(LibraryMixin):
         dlg=tk.Toplevel(self.root); dlg.title('Export DXF'); dlg.transient(self.root)
         self.export_window=dlg
         frame=ttk.Frame(dlg,padding=14); frame.pack(fill='both',expand=True)
-        scope=tk.StringVar(value='all'); self.export_scope=scope
+        scope=tk.StringVar(value='selected' if snapshot['selected'] else 'all'); self.export_scope=scope
         ttk.Radiobutton(frame,text=f"Whole drawing ({len(snapshot['objects'])} objects)",
                         variable=scope,value='all').pack(anchor='w',pady=4)
         ttk.Radiobutton(frame,text=f"Selected objects ({len(snapshot['selected'])} objects)",variable=scope,

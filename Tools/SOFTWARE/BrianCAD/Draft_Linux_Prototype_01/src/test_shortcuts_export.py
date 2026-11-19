@@ -105,6 +105,7 @@ class ShortcutUITests(unittest.TestCase):
         a=self.a;a.doc.add([dict(type='line',a=[0,0],b=[2,0])]);a.doc.clear_selection()
         a.doc.point_selection={0:{'b'}};a.doc.set_display_unit('mm')
         a.export_dxf_dialog();self.root.update()
+        self.assertEqual(a.export_scope.get(),'all')
         def widgets(parent):
             for child in parent.winfo_children():
                 yield child;yield from widgets(child)
