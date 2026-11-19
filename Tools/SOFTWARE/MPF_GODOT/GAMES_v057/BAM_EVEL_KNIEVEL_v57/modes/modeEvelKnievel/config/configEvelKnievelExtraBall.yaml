@@ -1,0 +1,154 @@
+#config_version=6
+
+# ---------------------
+# EXTRA::BALLS
+# ---------------------
+extra_balls:
+  extraBallEvelKnievel:
+    light_events: eventExtraBallEvelKnievelLit
+    award_events: eventExtraBallEvelKnievelAward
+    max_per_game: 3
+
+# ---------------------
+# EVENT::PLAYER
+# ---------------------
+event_player:
+  # EXTRA BALL LIT
+  eventAchTargetSlamDunkExtraBallStarted:
+    - eventExtraBallEvelKnievelLit
+  # EXTRA BALL AWARDED
+  eventAchTargetSlamDunkExtraBallCompleted:
+    - eventExtraBallEvelKnievelAward
+
+# # ---------------------
+# # SHOW::PLAYER
+# # ---------------------
+# show_player:
+#     # ---------------------
+#     # SHOW PLAYER::EXTRA BALL
+#     # ---------------------
+#     extra_ball_extraBallEvelKnievel_awarded:
+#         showAwardExtraBallEvelKnievel:
+#             loops: -1
+#             speed: 3
+
+# ---------------------
+# SLIDE::PLAYER
+# ---------------------
+slide_player:
+  # EXTRA BALL LIT
+  extra_ball_extraBallEvelKnievel_lit:
+    slideExtraBallEvelKnievelLit:
+      target: displayDMD
+  # EXTRA BALL AWARD
+  extra_ball_extraBallEvelKnievel_awarded:
+    slideExtraBallEvelKnievelAward:
+      target: displayDMD
+
+# ---------------------
+# SLIDE::EXTRA BALL::LIGHT
+# ---------------------
+slides:
+
+# ---------------------
+# SLIDE::EXTRA BALL::LIT
+# ---------------------
+  slideExtraBallEvelKnievelLit:
+    widgets:
+      # -------------------------------
+      # RED FORGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLitEvelKnievel
+        #font_size: 24
+        color: colorFontExtraBallLitInnerEvelKnievel
+        text: EXTRA BALL LIT
+        y: middle
+        x: middle
+
+      # -------------------------------
+      # YELLOW BACKGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLitEvelKnievel
+        #font_size: 24
+        color: colorFontExtraBallLitOuter1EvelKnievel
+        text: EXTRA BALL LIT
+        y: middle - 1
+        x: middle + 1
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLitEvelKnievel
+        #font_size: 24
+        color: colorFontExtraBallLitOuter1EvelKnievel
+        text: EXTRA BALL LIT
+        y: middle - 1
+        x: middle - 1
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLitEvelKnievel
+        #font_size: 24
+        color: colorFontExtraBallLitOuter1EvelKnievel
+        text: EXTRA BALL LIT
+        y: middle + 1
+        x: middle + 1
+      # -------------------------------
+      - type: text
+        style: fontExtraBallLitEvelKnievel
+        #font_size: 24
+        color: colorFontExtraBallLitOuter1EvelKnievel
+        text: EXTRA BALL LIT
+        y: middle + 1
+        x: middle - 1
+      # -------------------------------
+    expire: 4.0s
+
+# ---------------------
+# SLIDE::EXTRA BALL::AWARD
+# ---------------------
+  slideExtraBallEvelKnievelAward:
+    widgets:
+      # -------------------------------
+      # BLUE FORGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallAwardEvelKnievel
+        color: colorFontExtraBallAwardInnerEvelKnievel
+        text: EXTRA BALL
+        y: middle
+        x: middle
+      
+      # -------------------------------
+      # GREEN BACKGROUND
+      # -------------------------------
+      - type: text
+        style: fontExtraBallAwardEvelKnievel
+        color: colorFontExtraBallAwardOuter1EvelKnievel
+        text: EXTRA BALL
+        y: middle - 1
+        x: middle + 1
+      # -------------------------------
+      - type: text
+        style: fontExtraBallAwardEvelKnievel
+        color: colorFontExtraBallAwardOuter1EvelKnievel
+        text: EXTRA BALL
+        y: middle - 1
+        x: middle - 1
+      # -------------------------------
+      - type: text
+        style: fontExtraBallAwardEvelKnievel
+        color: colorFontExtraBallAwardOuter1EvelKnievel
+        text: EXTRA BALL
+        y: middle + 1
+        x: middle + 1
+      # -------------------------------
+      - type: text
+        style: fontExtraBallAwardEvelKnievel
+        color: colorFontExtraBallAwardOuter1EvelKnievel
+        text: EXTRA BALL
+        y: middle + 1
+        x: middle - 1
+      # -------------------------------
+    expire: 4.0s
+
+

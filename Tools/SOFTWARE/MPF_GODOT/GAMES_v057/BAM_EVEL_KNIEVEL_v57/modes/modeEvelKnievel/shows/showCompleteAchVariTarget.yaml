@@ -1,0 +1,135 @@
+#show_version=6
+
+- time: 0
+
+  events:
+    - eventDisableShotVariTarget
+    
+  lights:
+    # --------------------------
+    ledBonusReturn: 'ff8800'
+    ledBonusCount5: '00ff00'
+    ledBonusCount4: '00ff00'
+    ledBonusCount3: '00ff00'
+    ledBonusCount2: '00ff00'
+    ledBonusCount1: '00ff00'
+    ledBonusBase: 'ff8800'
+    # --------------------------
+
+- time: '+1'
+  lights:
+    # --------------------------
+    ledBonusReturn: '000000'
+    ledBonusCount5: '000000'
+    ledBonusCount4: '000000'
+    ledBonusCount3: '000000'
+    ledBonusCount2: '000000'
+    ledBonusCount1: '000000'
+    ledBonusBase: '000000'
+    # --------------------------
+
+- time: '+1'
+  lights:
+    # --------------------------
+    ledBonusReturn: 'ff8800'
+    ledBonusCount5: '00ff00'
+    ledBonusCount4: '00ff00'
+    ledBonusCount3: '00ff00'
+    ledBonusCount2: '00ff00'
+    ledBonusCount1: '00ff00'
+    ledBonusBase: 'ff8800'
+    # --------------------------
+
+- time: '+1'
+  lights:
+    # --------------------------
+    ledBonusReturn: '000000'
+    ledBonusCount5: '000000'
+    ledBonusCount4: '000000'
+    ledBonusCount3: '000000'
+    ledBonusCount2: '000000'
+    ledBonusCount1: '000000'
+    ledBonusBase: '000000'
+    # --------------------------
+
+- time: '+1'
+  lights:
+    # --------------------------
+    ledBonusReturn: 'ff8800'
+    ledBonusCount5: '00ff00'
+    ledBonusCount4: '00ff00'
+    ledBonusCount3: '00ff00'
+    ledBonusCount2: '00ff00'
+    ledBonusCount1: '00ff00'
+    ledBonusBase: 'ff8800'
+    # --------------------------
+
+  events:
+    - eventPulseCoilVariTarget
+    
+- time: '+1'
+  lights:
+    # --------------------------
+    ledBonusReturn: '000000'
+    ledBonusCount5: '000000'
+    ledBonusCount4: '000000'
+    ledBonusCount3: '000000'
+    ledBonusCount2: '000000'
+    ledBonusCount1: '000000'
+    ledBonusBase: '000000'
+    # --------------------------
+
+- time: '+1'
+  lights:
+    # --------------------------
+    ledBonusReturn: 'ff8800'
+    ledBonusCount5: '00ff00'
+    ledBonusCount4: '00ff00'
+    ledBonusCount3: '00ff00'
+    ledBonusCount2: '00ff00'
+    ledBonusCount1: '00ff00'
+    ledBonusBase: 'ff8800'
+    # --------------------------
+
+  events:
+    - eventResetAchVariTarget
+    - eventResetShotVariTarget
+    - eventResetShotGroupVariTarget
+    
+- time: '+1'
+  lights:
+    # --------------------------
+    ledBonusReturn: '000000'
+    ledBonusCount5: '000000'
+    ledBonusCount4: '000000'
+    ledBonusCount3: '000000'
+    ledBonusCount2: '000000'
+    ledBonusCount1: '000000'
+    ledBonusBase: '000000'
+    # --------------------------
+
+  events:
+    - eventEnableShotVariTarget
+    - eventEnableShotGroupVariTarget
+    - eventEnableAgAchVariTarget
+    
+- time: '+1'
+  lights:
+    # --------------------------
+    ledBonusReturn: 'ff8800'
+    ledBonusCount5: '00ff00'
+    ledBonusCount4: '00ff00'
+    ledBonusCount3: '00ff00'
+    ledBonusCount2: '00ff00'
+    ledBonusCount1: '00ff00'
+    ledBonusBase: 'ff8800'
+    # --------------------------
+
+  events:
+    - eventEnableAchVariTarget1
+    - eventSelectAchVariTarget1
+    - eventStartAchVariTarget1
+
+- time: '+1'
+
+

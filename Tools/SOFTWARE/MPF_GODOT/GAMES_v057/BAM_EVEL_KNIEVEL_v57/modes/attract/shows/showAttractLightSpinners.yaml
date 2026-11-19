@@ -1,0 +1,183 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ff0000'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ff0000'
+        led1: ledSpinnerRight1
+        led2: ledSpinnerRight2
+        led3: ledSpinnerRight3
+        led4: ledSpinnerRight4
+        led5: ledSpinnerRight5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ffff00'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ffff00'
+        led1: ledSpinnerRight1
+        led2: ledSpinnerRight2
+        led3: ledSpinnerRight3
+        led4: ledSpinnerRight4
+        led5: ledSpinnerRight5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: '00ff00'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: '00ff00'
+        led1: ledSpinnerRight1
+        led2: ledSpinnerRight2
+        led3: ledSpinnerRight3
+        led4: ledSpinnerRight4
+        led5: ledSpinnerRight5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: '00ffff'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: '00ffff'
+        led1: ledSpinnerRight1
+        led2: ledSpinnerRight2
+        led3: ledSpinnerRight3
+        led4: ledSpinnerRight4
+        led5: ledSpinnerRight5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: '0000ff'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: '0000ff'
+        led1: ledSpinnerRight1
+        led2: ledSpinnerRight2
+        led3: ledSpinnerRight3
+        led4: ledSpinnerRight4
+        led5: ledSpinnerRight5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ff00ff'
+        led1: ledSpinnerLeft1
+        led2: ledSpinnerLeft2
+        led3: ledSpinnerLeft3
+        led4: ledSpinnerLeft4
+        led5: ledSpinnerLeft5
+
+- time: "+0.5"
+
+  shows:
+    pulseFiveLedTwoColor:
+      loops: -1
+      speed: 8
+      show_tokens:
+        color2: '000000'
+        color1: 'ff00ff'
+        led1: ledSpinnerRight1
+        led2: ledSpinnerRight2
+        led3: ledSpinnerRight3
+        led4: ledSpinnerRight4
+        led5: ledSpinnerRight5
+
+- time: "+0.5"

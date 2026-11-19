@@ -1,0 +1,153 @@
+#show_version=6
+
+- time: 0
+
+  shows:
+    traceFifteenLedTwoColor:
+      loops: 0
+      speed: 18
+      show_tokens:
+        color1: '000000'
+        color2: 'ff0000'
+        led1: ledAwardGlobe1A
+        led2: ledAwardGlobe1B
+        led3: ledAwardGlobe1C
+        led4: ledAwardGlobe2A
+        led5: ledAwardGlobe2B
+        led6: ledAwardGlobe2C
+        led7: ledAwardGlobe3A
+        led8: ledAwardGlobe3B
+        led9: ledAwardGlobe3C
+        led10: ledAwardGlobe4A
+        led11: ledAwardGlobe4B
+        led12: ledAwardGlobe4C
+        led13: ledAwardGlobe5A
+        led14: ledAwardGlobe5B
+        led15: ledAwardGlobe5C
+
+- time: "+2"
+
+  shows:
+    traceFifteenLedTwoColor:
+      loops: 0
+      speed: 18
+      show_tokens:
+        color1: '000000'
+        color2: 'ffff00'
+        led1: ledAwardGlobe1A
+        led2: ledAwardGlobe1B
+        led3: ledAwardGlobe1C
+        led4: ledAwardGlobe2A
+        led5: ledAwardGlobe2B
+        led6: ledAwardGlobe2C
+        led7: ledAwardGlobe3A
+        led8: ledAwardGlobe3B
+        led9: ledAwardGlobe3C
+        led10: ledAwardGlobe4A
+        led11: ledAwardGlobe4B
+        led12: ledAwardGlobe4C
+        led13: ledAwardGlobe5A
+        led14: ledAwardGlobe5B
+        led15: ledAwardGlobe5C
+
+- time: "+2"
+
+  shows:
+    traceFifteenLedTwoColor:
+      loops: 0
+      speed: 18
+      show_tokens:
+        color1: '000000'
+        color2: '00ff00'
+        led1: ledAwardGlobe1A
+        led2: ledAwardGlobe1B
+        led3: ledAwardGlobe1C
+        led4: ledAwardGlobe2A
+        led5: ledAwardGlobe2B
+        led6: ledAwardGlobe2C
+        led7: ledAwardGlobe3A
+        led8: ledAwardGlobe3B
+        led9: ledAwardGlobe3C
+        led10: ledAwardGlobe4A
+        led11: ledAwardGlobe4B
+        led12: ledAwardGlobe4C
+        led13: ledAwardGlobe5A
+        led14: ledAwardGlobe5B
+        led15: ledAwardGlobe5C
+
+- time: "+2"
+#
+#  shows:
+#    traceFifteenLedTwoColor:
+#      loops: 0
+#      speed: 9
+#      show_tokens:
+#        color1: '000000'
+#        color2: '00ffff'
+#        led1: ledAwardGlobe1A
+#        led2: ledAwardGlobe1B
+#        led3: ledAwardGlobe1C
+#        led4: ledAwardGlobe2A
+#        led5: ledAwardGlobe2B
+#        led6: ledAwardGlobe2C
+#        led7: ledAwardGlobe3A
+#        led8: ledAwardGlobe3B
+#        led9: ledAwardGlobe3C
+#        led10: ledAwardGlobe4A
+#        led11: ledAwardGlobe4B
+#        led12: ledAwardGlobe4C
+#        led13: ledAwardGlobe5A
+#        led14: ledAwardGlobe5B
+#        led15: ledAwardGlobe5C
+#
+#- time: "+2"
+#
+#  shows:
+#    traceFifteenLedTwoColor:
+#      loops: 0
+#      speed: 9
+#      show_tokens:
+#        color1: '000000'
+#        color2: '0000ff'
+#        led1: ledAwardGlobe1A
+#        led2: ledAwardGlobe1B
+#        led3: ledAwardGlobe1C
+#        led4: ledAwardGlobe2A
+#        led5: ledAwardGlobe2B
+#        led6: ledAwardGlobe2C
+#        led7: ledAwardGlobe3A
+#        led8: ledAwardGlobe3B
+#        led9: ledAwardGlobe3C
+#        led10: ledAwardGlobe4A
+#        led11: ledAwardGlobe4B
+#        led12: ledAwardGlobe4C
+#        led13: ledAwardGlobe5A
+#        led14: ledAwardGlobe5B
+#        led15: ledAwardGlobe5C
+#
+#- time: "+2"
+#
+#  shows:
+#    traceFifteenLedTwoColor:
+#      loops: 0
+#      speed: 9
+#      show_tokens:
+#        color1: '000000'
+#        color2: 'ff00ff'
+#        led1: ledAwardGlobe1A
+#        led2: ledAwardGlobe1B
+#        led3: ledAwardGlobe1C
+#        led4: ledAwardGlobe2A
+#        led5: ledAwardGlobe2B
+#        led6: ledAwardGlobe2C
+#        led7: ledAwardGlobe3A
+#        led8: ledAwardGlobe3B
+#        led9: ledAwardGlobe3C
+#        led10: ledAwardGlobe4A
+#        led11: ledAwardGlobe4B
+#        led12: ledAwardGlobe4C
+#        led13: ledAwardGlobe5A
+#        led14: ledAwardGlobe5B
+#        led15: ledAwardGlobe5C
+#
+#- time: "+2"
