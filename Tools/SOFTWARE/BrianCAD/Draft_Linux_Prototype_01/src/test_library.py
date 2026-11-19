@@ -35,7 +35,7 @@ class LibraryTests(unittest.TestCase):
     def test_project_example_loads_and_places_twice(self):
         try:import ezdxf
         except ImportError:self.skipTest('ezdxf is optional')
-        src,warnings=cad_import.read_dxf(LIBRARY_DIR/'ArrowMedium_Mirco.dxf')
+        src,warnings=cad_import.read_dxf(LIBRARY_DIR/'Arrow_SM.dxf')
         self.assertTrue(src.objects);self.assertEqual(warnings,[])
         dst=Document();cad_import.merge(dst,placed(src,[1,2],45));cad_import.merge(dst,placed(src,[3,4],-90))
         self.assertEqual(len(dst.objects),2*len(src.objects))

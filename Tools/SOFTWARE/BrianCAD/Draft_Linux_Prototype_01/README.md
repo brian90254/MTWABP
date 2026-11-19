@@ -563,3 +563,11 @@ prevents a guide from moving the endpoint off a grid point directly under the
 cursor. Specific object points and actual guide intersections retain their
 existing priority. Grid-disabled guide snapping is unchanged, and the same rule
 is used for the mouse preview and click in Two points and Connected points.
+
+## DXF groups and Library components
+
+DXF export writes BrianCAD groups as standard selectable DXF `GROUP` records. DXF import and Library loading restore those groups while keeping layers independent. A flipper bat and a mechanism can therefore be separate groups on separate layers; rotating the bat group leaves the mechanism in place. Geometry is not automatically grouped by layer, and ungrouped geometry stays ungrouped.
+
+Create the desired groups in the source drawing (in BrianCAD, select each set and use Group, then export the DXF). Each Library placement assigns independent group identities, so selecting one bat does not select other copies. Entities emitted from a split spline, and imported pieces of a grouped block reference, retain the enclosing group's membership. Selection-only export includes groups for the exported entities only.
+
+BrianCAD uses flat groups with one membership per object. Overlapping DXF groups are combined and reported in import notes. Non-selectable DXF groups are not applied and are reported. DXF group names/descriptions are not retained; native membership and separation are preserved.

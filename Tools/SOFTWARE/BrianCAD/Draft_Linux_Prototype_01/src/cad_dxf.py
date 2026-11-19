@@ -116,6 +116,15 @@ def _add_object(msp,obj,attrs,unit='in'):
     return False
 
 
+class _EntityWriter:
+    """Capture every entity emitted for one native object, including split splines."""
+    def __init__(self,layout):self.layout=layout;self.entities=[]
+    def __getattr__(self,name):
+        def add(*args,**kwargs):
+            entity=getattr(self.layout,name)(*args,**kwargs);self.entities.append(entity);return entity
+        return add
+
+
 def build_dxf(snapshot,selected_only=False):
     ezdxf=require_ezdxf()
     ids=snapshot['selected'] if selected_only else range(len(snapshot['objects']))
@@ -132,10 +141,14 @@ def build_dxf(snapshot,selected_only=False):
     document.linetypes.new('BRIANCAD_DOTTED',dxfattribs={'description':'BrianCAD dotted','pattern':[value*factor for value in (.125,0.,-.125)]})
     used={o['layer'] for o in objects}
     layers=[layer for layer in snapshot['layers'] if layer['name'] in used]
-    layer_map=_layer_names(document,layers); msp=document.modelspace(); approximated=0
+    layer_map=_layer_names(document,layers); msp=document.modelspace(); approximated=0;groups={}
     for obj in objects:
         g.validate_geometry(obj)
-        approximated+=int(_add_object(msp,obj,_attributes(obj,layer_map),snapshot.get('display_unit','in')))
+        writer=_EntityWriter(msp)
+        approximated+=int(_add_object(writer,obj,_attributes(obj,layer_map),snapshot.get('display_unit','in')))
+        if obj.get('group'):groups.setdefault(obj['group'],[]).extend(writer.entities)
+    for members in groups.values():
+        document.groups.new().set_data(members)
     if factor!=1:
         from ezdxf.math import Matrix44
         matrix=Matrix44.scale(factor,factor,factor)
