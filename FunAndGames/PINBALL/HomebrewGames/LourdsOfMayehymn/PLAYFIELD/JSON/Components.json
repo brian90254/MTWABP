@@ -8101,6 +8101,3190 @@
       "pattern": "Solid",
       "controls": false,
       "group": "0ac3c6acf1e44f7784afbfaaadda4ed3"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        13.25
+      ],
+      "radius": 0.0825,
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        14.0
+      ],
+      "radius": 0.234375,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        14.75
+      ],
+      "radius": 0.0825,
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        14.75
+      ],
+      "radius": 0.35,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "e0e41e371909465eb2c7fcadebb0845b"
+    },
+    {
+      "type": "arc",
+      "center": [
+        6.0,
+        13.15
+      ],
+      "radius": 0.09,
+      "start": 3.141592653589793,
+      "sweep": 3.141592653589793,
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "e9528381a4cc48d78e74523ed39c1cea"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.0,
+        15.035
+      ],
+      "b": [
+        4.0,
+        14.95
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.0,
+        14.95
+      ],
+      "b": [
+        4.203039405,
+        14.95
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.1732050808,
+        14.65
+      ],
+      "b": [
+        4.071685378200001,
+        14.474162717299999
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.2468172401,
+        14.6075
+      ],
+      "b": [
+        4.1732050808,
+        14.65
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "line",
+      "a": [
+        3.8267949192,
+        14.65
+      ],
+      "b": [
+        3.7252752167000005,
+        14.8258372827
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "line",
+      "a": [
+        3.7531827599000005,
+        14.6075
+      ],
+      "b": [
+        3.8267949192,
+        14.65
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "arc",
+      "center": [
+        4.0,
+        14.75
+      ],
+      "radius": 0.285,
+      "start": -0.5235987755982989,
+      "sweep": 1.3014558713242383,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "arc",
+      "center": [
+        4.0,
+        14.75
+      ],
+      "radius": 0.285,
+      "start": -2.6179938779914944,
+      "sweep": 1.3014558713242383,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "arc",
+      "center": [
+        4.0,
+        14.75
+      ],
+      "radius": 0.285,
+      "start": 1.5707963267948966,
+      "sweep": 1.3014558713242381,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        13.25
+      ],
+      "radius": 0.35,
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "e0e41e371909465eb2c7fcadebb0845b"
+    },
+    {
+      "type": "line",
+      "a": [
+        6.09,
+        14.85
+      ],
+      "b": [
+        6.09,
+        13.15
+      ],
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "e9528381a4cc48d78e74523ed39c1cea"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.91,
+        14.85
+      ],
+      "b": [
+        5.91,
+        13.15
+      ],
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "e9528381a4cc48d78e74523ed39c1cea"
+    },
+    {
+      "type": "arc",
+      "center": [
+        6.0,
+        14.85
+      ],
+      "radius": 0.09,
+      "start": 0.0,
+      "sweep": 3.141592653589793,
+      "layer": "6_125BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "e9528381a4cc48d78e74523ed39c1cea"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        14.75
+      ],
+      "radius": 0.085,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        14.75
+      ],
+      "radius": 0.059,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        14.75
+      ],
+      "radius": 0.215,
+      "layer": "Z0_RUBBER",
+      "color": "#d8b400",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "ae7a6c9ae8e44a96a113dc28166f8805"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        14.75
+      ],
+      "radius": 0.4,
+      "layer": "Z0_RUBBER",
+      "color": "#d8b400",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "ae7a6c9ae8e44a96a113dc28166f8805"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        13.25
+      ],
+      "radius": 0.085,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        13.25
+      ],
+      "radius": 0.059,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.0,
+        13.535
+      ],
+      "b": [
+        4.0,
+        13.45
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.0,
+        13.45
+      ],
+      "b": [
+        4.203039405,
+        13.45
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.1732050808,
+        13.15
+      ],
+      "b": [
+        4.071685378200001,
+        12.974162717299999
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.2468172401,
+        13.1075
+      ],
+      "b": [
+        4.1732050808,
+        13.15
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "line",
+      "a": [
+        3.8267949192,
+        13.15
+      ],
+      "b": [
+        3.7252752167000005,
+        13.3258372827
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "line",
+      "a": [
+        3.7531827599000005,
+        13.1075
+      ],
+      "b": [
+        3.8267949192,
+        13.15
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "arc",
+      "center": [
+        4.0,
+        13.25
+      ],
+      "radius": 0.285,
+      "start": -0.5235987755982989,
+      "sweep": 1.3014558713242383,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "arc",
+      "center": [
+        4.0,
+        13.25
+      ],
+      "radius": 0.285,
+      "start": -2.6179938779914944,
+      "sweep": 1.3014558713242383,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "arc",
+      "center": [
+        4.0,
+        13.25
+      ],
+      "radius": 0.285,
+      "start": 1.5707963267948966,
+      "sweep": 1.3014558713242381,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "5cbda5838d194da9b0999989bdce99a6"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        13.25
+      ],
+      "radius": 0.215,
+      "layer": "Z0_RUBBER",
+      "color": "#d8b400",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "ae7a6c9ae8e44a96a113dc28166f8805"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        13.25
+      ],
+      "radius": 0.4,
+      "layer": "Z0_RUBBER",
+      "color": "#d8b400",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "ae7a6c9ae8e44a96a113dc28166f8805"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        14.75
+      ],
+      "radius": 0.075,
+      "layer": "Z0_PLASTICS",
+      "color": "#202b36",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "41ed8672db9645b7a0b7c92277c58789"
+    },
+    {
+      "type": "circle",
+      "center": [
+        4.0,
+        13.25
+      ],
+      "radius": 0.075,
+      "layer": "Z0_PLASTICS",
+      "color": "#202b36",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "41ed8672db9645b7a0b7c92277c58789"
+    },
+    {
+      "type": "line",
+      "a": [
+        7.562499999999999,
+        5.25
+      ],
+      "b": [
+        8.4375,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "a9891953d9bc41839db52f05f2af13ab"
+    },
+    {
+      "type": "line",
+      "a": [
+        8.4375,
+        5.25
+      ],
+      "b": [
+        8.4375,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "a9891953d9bc41839db52f05f2af13ab"
+    },
+    {
+      "type": "line",
+      "a": [
+        8.4375,
+        4.875
+      ],
+      "b": [
+        7.562499999999999,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "a9891953d9bc41839db52f05f2af13ab"
+    },
+    {
+      "type": "line",
+      "a": [
+        7.562499999999999,
+        4.875
+      ],
+      "b": [
+        7.562499999999999,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "a9891953d9bc41839db52f05f2af13ab"
+    },
+    {
+      "type": "arc",
+      "center": [
+        6.374999999999999,
+        5.0
+      ],
+      "radius": 0.25,
+      "start": 1.5707963267948966,
+      "sweep": 3.141592653589793,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0f5b9840170a4640bf0a4111b9e73c2e"
+    },
+    {
+      "type": "line",
+      "a": [
+        9.625,
+        4.75
+      ],
+      "b": [
+        6.374999999999999,
+        4.75
+      ],
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0f5b9840170a4640bf0a4111b9e73c2e"
+    },
+    {
+      "type": "line",
+      "a": [
+        6.374999999999999,
+        5.25
+      ],
+      "b": [
+        9.625,
+        5.25
+      ],
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0f5b9840170a4640bf0a4111b9e73c2e"
+    },
+    {
+      "type": "arc",
+      "center": [
+        9.625,
+        5.0
+      ],
+      "radius": 0.25,
+      "start": -1.5707963267948966,
+      "sweep": 3.141592653589793,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0f5b9840170a4640bf0a4111b9e73c2e"
+    },
+    {
+      "type": "line",
+      "a": [
+        8.75,
+        5.25
+      ],
+      "b": [
+        9.625,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "dadbc30bedbf465cb16ddbb702f1c2df"
+    },
+    {
+      "type": "line",
+      "a": [
+        9.625,
+        5.25
+      ],
+      "b": [
+        9.625,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "dadbc30bedbf465cb16ddbb702f1c2df"
+    },
+    {
+      "type": "line",
+      "a": [
+        9.625,
+        4.875
+      ],
+      "b": [
+        8.75,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "dadbc30bedbf465cb16ddbb702f1c2df"
+    },
+    {
+      "type": "line",
+      "a": [
+        8.75,
+        4.875
+      ],
+      "b": [
+        8.75,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "dadbc30bedbf465cb16ddbb702f1c2df"
+    },
+    {
+      "type": "line",
+      "a": [
+        6.374999999999999,
+        5.25
+      ],
+      "b": [
+        7.249999999999999,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "89fe413d6add45ecb307c3a6093096f7"
+    },
+    {
+      "type": "line",
+      "a": [
+        7.249999999999999,
+        5.25
+      ],
+      "b": [
+        7.249999999999999,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "89fe413d6add45ecb307c3a6093096f7"
+    },
+    {
+      "type": "line",
+      "a": [
+        7.249999999999999,
+        4.875
+      ],
+      "b": [
+        6.374999999999999,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "89fe413d6add45ecb307c3a6093096f7"
+    },
+    {
+      "type": "line",
+      "a": [
+        6.374999999999999,
+        4.875
+      ],
+      "b": [
+        6.374999999999999,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "89fe413d6add45ecb307c3a6093096f7"
+    },
+    {
+      "type": "arc",
+      "center": [
+        4.0,
+        13.25
+      ],
+      "radius": 0.35,
+      "start": 3.141592653589793,
+      "sweep": 3.141592653589793,
+      "layer": "Z0_PLASTICS",
+      "color": "#202b36",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "41ed8672db9645b7a0b7c92277c58789"
+    },
+    {
+      "type": "arc",
+      "center": [
+        4.0,
+        14.75
+      ],
+      "radius": 0.35,
+      "start": 0.0,
+      "sweep": 3.141592653589793,
+      "layer": "Z0_PLASTICS",
+      "color": "#202b36",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "41ed8672db9645b7a0b7c92277c58789"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.4,
+        13.25
+      ],
+      "b": [
+        4.3500000000000005,
+        13.25
+      ],
+      "layer": "Z0_PLASTICS",
+      "color": "#202b36",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "41ed8672db9645b7a0b7c92277c58789"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.4,
+        14.75
+      ],
+      "b": [
+        4.4,
+        13.25
+      ],
+      "layer": "Z0_PLASTICS",
+      "color": "#202b36",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "41ed8672db9645b7a0b7c92277c58789"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.3500000000000005,
+        14.75
+      ],
+      "b": [
+        4.4,
+        14.75
+      ],
+      "layer": "Z0_PLASTICS",
+      "color": "#202b36",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "41ed8672db9645b7a0b7c92277c58789"
+    },
+    {
+      "type": "line",
+      "a": [
+        3.6,
+        13.25
+      ],
+      "b": [
+        3.6500000000000004,
+        13.25
+      ],
+      "layer": "Z0_PLASTICS",
+      "color": "#202b36",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "41ed8672db9645b7a0b7c92277c58789"
+    },
+    {
+      "type": "line",
+      "a": [
+        3.6,
+        14.75
+      ],
+      "b": [
+        3.6,
+        13.25
+      ],
+      "layer": "Z0_PLASTICS",
+      "color": "#202b36",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "41ed8672db9645b7a0b7c92277c58789"
+    },
+    {
+      "type": "line",
+      "a": [
+        3.6500000000000004,
+        14.75
+      ],
+      "b": [
+        3.6,
+        14.75
+      ],
+      "layer": "Z0_PLASTICS",
+      "color": "#202b36",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "41ed8672db9645b7a0b7c92277c58789"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.0625,
+        5.375
+      ],
+      "b": [
+        10.0625,
+        5.3125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        10.0625,
+        5.3125
+      ],
+      "b": [
+        5.937499999999999,
+        5.3125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        5.937499999999999,
+        5.375
+      ],
+      "b": [
+        10.0625,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        5.937499999999999,
+        5.3125
+      ],
+      "b": [
+        5.937499999999999,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        7.999999999999999,
+        5.3125
+      ],
+      "b": [
+        7.999999999999999,
+        3.1875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0f10b783b39d49769993e9e3c91fd0db"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.999999999999999,
+        3.1875
+      ],
+      "b": [
+        5.999999999999999,
+        5.3125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0f10b783b39d49769993e9e3c91fd0db"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.0,
+        4.25
+      ],
+      "b": [
+        5.999999999999999,
+        4.25
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0f10b783b39d49769993e9e3c91fd0db"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.999999999999999,
+        5.3125
+      ],
+      "b": [
+        10.0,
+        5.3125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0f10b783b39d49769993e9e3c91fd0db"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.0,
+        3.1875
+      ],
+      "b": [
+        5.999999999999999,
+        3.1875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0f10b783b39d49769993e9e3c91fd0db"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.0,
+        5.3125
+      ],
+      "b": [
+        10.0,
+        3.1875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0f10b783b39d49769993e9e3c91fd0db"
+    },
+    {
+      "type": "line",
+      "a": [
+        9.9375,
+        4.875
+      ],
+      "b": [
+        10.0,
+        4.875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        9.9375,
+        5.3125
+      ],
+      "b": [
+        9.9375,
+        4.875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        6.062499999999999,
+        4.875
+      ],
+      "b": [
+        5.999999999999999,
+        4.875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        6.062499999999999,
+        5.3125
+      ],
+      "b": [
+        6.062499999999999,
+        4.875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        10.0,
+        5.0625
+      ],
+      "b": [
+        10.0,
+        2.6875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "cf01b677aecc4954b539ca00a0726b4f"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.4375,
+        2.6875
+      ],
+      "b": [
+        10.4375,
+        5.0625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "cf01b677aecc4954b539ca00a0726b4f"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.4375,
+        5.0625
+      ],
+      "b": [
+        10.0,
+        5.0625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "cf01b677aecc4954b539ca00a0726b4f"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.0,
+        2.6875
+      ],
+      "b": [
+        10.4375,
+        2.6875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "cf01b677aecc4954b539ca00a0726b4f"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.25,
+        2.6875
+      ],
+      "b": [
+        10.25,
+        2.9375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        10.25,
+        2.9375
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        10.25,
+        4.8125
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        10.25,
+        5.0625
+      ],
+      "b": [
+        10.25,
+        4.8125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        9.78125,
+        6.4375
+      ],
+      "b": [
+        9.78125,
+        6.1875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        9.78125,
+        6.1875
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        9.53125,
+        5.375
+      ],
+      "b": [
+        9.53125,
+        6.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0a80b0c877a8455f94fdcd184a6480f0"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.03125,
+        6.4375
+      ],
+      "b": [
+        10.03125,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0a80b0c877a8455f94fdcd184a6480f0"
+    },
+    {
+      "type": "line",
+      "a": [
+        9.53125,
+        6.4375
+      ],
+      "b": [
+        10.03125,
+        6.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0a80b0c877a8455f94fdcd184a6480f0"
+    },
+    {
+      "type": "line",
+      "a": [
+        9.53125,
+        5.375
+      ],
+      "b": [
+        10.03125,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0a80b0c877a8455f94fdcd184a6480f0"
+    },
+    {
+      "type": "line",
+      "a": [
+        9.53125,
+        5.4375
+      ],
+      "b": [
+        9.53125,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0a80b0c877a8455f94fdcd184a6480f0"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.03125,
+        5.4375
+      ],
+      "b": [
+        9.53125,
+        5.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0a80b0c877a8455f94fdcd184a6480f0"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.03125,
+        5.375
+      ],
+      "b": [
+        10.03125,
+        5.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0a80b0c877a8455f94fdcd184a6480f0"
+    },
+    {
+      "type": "line",
+      "a": [
+        10.03125,
+        5.375
+      ],
+      "b": [
+        9.53125,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "0a80b0c877a8455f94fdcd184a6480f0"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.999999999999999,
+        5.0625
+      ],
+      "b": [
+        5.999999999999999,
+        2.6875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "f8160e83fb56419ba20b98629d207de1"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.562499999999999,
+        2.6875
+      ],
+      "b": [
+        5.562499999999999,
+        5.0625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "f8160e83fb56419ba20b98629d207de1"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.562499999999999,
+        5.0625
+      ],
+      "b": [
+        5.999999999999999,
+        5.0625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "f8160e83fb56419ba20b98629d207de1"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.999999999999999,
+        2.6875
+      ],
+      "b": [
+        5.562499999999999,
+        2.6875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "f8160e83fb56419ba20b98629d207de1"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.749999999999999,
+        2.6875
+      ],
+      "b": [
+        5.749999999999999,
+        2.9375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        5.749999999999999,
+        2.9375
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        5.749999999999999,
+        4.8125
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        5.749999999999999,
+        5.0625
+      ],
+      "b": [
+        5.749999999999999,
+        4.8125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        6.218749999999999,
+        6.4375
+      ],
+      "b": [
+        6.218749999999999,
+        6.1875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        6.218749999999999,
+        6.1875
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        5.968749999999999,
+        5.375
+      ],
+      "b": [
+        5.968749999999999,
+        6.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d2624c2390114b97a1bf2738b69c1e93"
+    },
+    {
+      "type": "line",
+      "a": [
+        6.468749999999999,
+        6.4375
+      ],
+      "b": [
+        6.468749999999999,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d2624c2390114b97a1bf2738b69c1e93"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.968749999999999,
+        6.4375
+      ],
+      "b": [
+        6.468749999999999,
+        6.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d2624c2390114b97a1bf2738b69c1e93"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.968749999999999,
+        5.375
+      ],
+      "b": [
+        6.468749999999999,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d2624c2390114b97a1bf2738b69c1e93"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.968749999999999,
+        5.4375
+      ],
+      "b": [
+        5.968749999999999,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d2624c2390114b97a1bf2738b69c1e93"
+    },
+    {
+      "type": "line",
+      "a": [
+        6.468749999999999,
+        5.4375
+      ],
+      "b": [
+        5.968749999999999,
+        5.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d2624c2390114b97a1bf2738b69c1e93"
+    },
+    {
+      "type": "line",
+      "a": [
+        6.468749999999999,
+        5.375
+      ],
+      "b": [
+        6.468749999999999,
+        5.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d2624c2390114b97a1bf2738b69c1e93"
+    },
+    {
+      "type": "line",
+      "a": [
+        6.468749999999999,
+        5.375
+      ],
+      "b": [
+        5.968749999999999,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d2624c2390114b97a1bf2738b69c1e93"
+    },
+    {
+      "type": "line",
+      "a": [
+        3.5,
+        14.0
+      ],
+      "b": [
+        4.5,
+        14.0
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false,
+      "group": "f4ba45b58c26420d8babc862a3dd5355"
+    },
+    {
+      "type": "line",
+      "a": [
+        4.0,
+        15.25
+      ],
+      "b": [
+        4.0,
+        12.75
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false,
+      "group": "f4ba45b58c26420d8babc862a3dd5355"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.75,
+        14.0
+      ],
+      "b": [
+        6.25,
+        14.0
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false,
+      "group": "42d571b5989042e5ab8e63b8cddb66ff"
+    },
+    {
+      "type": "line",
+      "a": [
+        6.0,
+        12.875
+      ],
+      "b": [
+        6.0,
+        15.125
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false,
+      "group": "42d571b5989042e5ab8e63b8cddb66ff"
+    },
+    {
+      "type": "line",
+      "a": [
+        5.25,
+        5.0
+      ],
+      "b": [
+        10.75,
+        5.0
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        8.0,
+        5.75
+      ],
+      "b": [
+        8.0,
+        2.75
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        14.5625,
+        5.25
+      ],
+      "b": [
+        15.4375,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "22d6b289c75942ec86617dc1e597894b"
+    },
+    {
+      "type": "line",
+      "a": [
+        15.4375,
+        5.25
+      ],
+      "b": [
+        15.4375,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "22d6b289c75942ec86617dc1e597894b"
+    },
+    {
+      "type": "line",
+      "a": [
+        15.4375,
+        4.875
+      ],
+      "b": [
+        14.5625,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "22d6b289c75942ec86617dc1e597894b"
+    },
+    {
+      "type": "line",
+      "a": [
+        14.5625,
+        4.875
+      ],
+      "b": [
+        14.5625,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "22d6b289c75942ec86617dc1e597894b"
+    },
+    {
+      "type": "arc",
+      "center": [
+        13.375,
+        5.0
+      ],
+      "radius": 0.25,
+      "start": 1.5707963267948966,
+      "sweep": 3.141592653589793,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        16.625,
+        4.75
+      ],
+      "b": [
+        13.375,
+        4.75
+      ],
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        13.375,
+        5.25
+      ],
+      "b": [
+        16.625,
+        5.25
+      ],
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "arc",
+      "center": [
+        16.625,
+        5.0
+      ],
+      "radius": 0.25,
+      "start": -1.5707963267948966,
+      "sweep": 3.141592653589793,
+      "layer": "1_250BIT_500DEP",
+      "color": "#2465d8",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        15.75,
+        5.25
+      ],
+      "b": [
+        16.625,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "51a01d6611b44eb5818e3cdf35f3d1fa"
+    },
+    {
+      "type": "line",
+      "a": [
+        16.625,
+        5.25
+      ],
+      "b": [
+        16.625,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "51a01d6611b44eb5818e3cdf35f3d1fa"
+    },
+    {
+      "type": "line",
+      "a": [
+        16.625,
+        4.875
+      ],
+      "b": [
+        15.75,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "51a01d6611b44eb5818e3cdf35f3d1fa"
+    },
+    {
+      "type": "line",
+      "a": [
+        15.75,
+        4.875
+      ],
+      "b": [
+        15.75,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "51a01d6611b44eb5818e3cdf35f3d1fa"
+    },
+    {
+      "type": "line",
+      "a": [
+        13.375,
+        5.25
+      ],
+      "b": [
+        14.25,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "52243ba38dd64076adb76e839508bcff"
+    },
+    {
+      "type": "line",
+      "a": [
+        14.25,
+        5.25
+      ],
+      "b": [
+        14.25,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "52243ba38dd64076adb76e839508bcff"
+    },
+    {
+      "type": "line",
+      "a": [
+        14.25,
+        4.875
+      ],
+      "b": [
+        13.375,
+        4.875
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "52243ba38dd64076adb76e839508bcff"
+    },
+    {
+      "type": "line",
+      "a": [
+        13.375,
+        4.875
+      ],
+      "b": [
+        13.375,
+        5.25
+      ],
+      "layer": "Z0_TOPCOMP",
+      "color": "#cf36b5",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "52243ba38dd64076adb76e839508bcff"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.0625,
+        5.375
+      ],
+      "b": [
+        17.0625,
+        5.3125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        17.0625,
+        5.3125
+      ],
+      "b": [
+        12.9375,
+        5.3125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        12.9375,
+        5.375
+      ],
+      "b": [
+        17.0625,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        12.9375,
+        5.3125
+      ],
+      "b": [
+        12.9375,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        15.0,
+        5.3125
+      ],
+      "b": [
+        15.0,
+        3.1875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "543af2c4dff3446d8b716404dc936ac9"
+    },
+    {
+      "type": "line",
+      "a": [
+        13.0,
+        3.1875
+      ],
+      "b": [
+        13.0,
+        5.3125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "543af2c4dff3446d8b716404dc936ac9"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.0,
+        4.25
+      ],
+      "b": [
+        13.0,
+        4.25
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "543af2c4dff3446d8b716404dc936ac9"
+    },
+    {
+      "type": "line",
+      "a": [
+        13.0,
+        5.3125
+      ],
+      "b": [
+        17.0,
+        5.3125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "543af2c4dff3446d8b716404dc936ac9"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.0,
+        3.1875
+      ],
+      "b": [
+        13.0,
+        3.1875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "543af2c4dff3446d8b716404dc936ac9"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.0,
+        5.3125
+      ],
+      "b": [
+        17.0,
+        3.1875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "543af2c4dff3446d8b716404dc936ac9"
+    },
+    {
+      "type": "line",
+      "a": [
+        16.9375,
+        4.875
+      ],
+      "b": [
+        17.0,
+        4.875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        16.9375,
+        5.3125
+      ],
+      "b": [
+        16.9375,
+        4.875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        13.0625,
+        4.875
+      ],
+      "b": [
+        13.0,
+        4.875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        13.0625,
+        5.3125
+      ],
+      "b": [
+        13.0625,
+        4.875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        17.0,
+        5.0625
+      ],
+      "b": [
+        17.0,
+        2.6875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "6fd06b59e00648f1952f38559e3a4e20"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.4375,
+        2.6875
+      ],
+      "b": [
+        17.4375,
+        5.0625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "6fd06b59e00648f1952f38559e3a4e20"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.4375,
+        5.0625
+      ],
+      "b": [
+        17.0,
+        5.0625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "6fd06b59e00648f1952f38559e3a4e20"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.0,
+        2.6875
+      ],
+      "b": [
+        17.4375,
+        2.6875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "6fd06b59e00648f1952f38559e3a4e20"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.25,
+        2.6875
+      ],
+      "b": [
+        17.25,
+        2.9375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        17.25,
+        2.9375
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        17.25,
+        4.8125
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        17.25,
+        5.0625
+      ],
+      "b": [
+        17.25,
+        4.8125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        16.78125,
+        6.4375
+      ],
+      "b": [
+        16.78125,
+        6.1875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        16.78125,
+        6.1875
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        16.53125,
+        5.375
+      ],
+      "b": [
+        16.53125,
+        6.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d92b84eec59841a5aa1c90c320b313a4"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.03125,
+        6.4375
+      ],
+      "b": [
+        17.03125,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d92b84eec59841a5aa1c90c320b313a4"
+    },
+    {
+      "type": "line",
+      "a": [
+        16.53125,
+        6.4375
+      ],
+      "b": [
+        17.03125,
+        6.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d92b84eec59841a5aa1c90c320b313a4"
+    },
+    {
+      "type": "line",
+      "a": [
+        16.53125,
+        5.375
+      ],
+      "b": [
+        17.03125,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d92b84eec59841a5aa1c90c320b313a4"
+    },
+    {
+      "type": "line",
+      "a": [
+        16.53125,
+        5.4375
+      ],
+      "b": [
+        16.53125,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d92b84eec59841a5aa1c90c320b313a4"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.03125,
+        5.4375
+      ],
+      "b": [
+        16.53125,
+        5.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d92b84eec59841a5aa1c90c320b313a4"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.03125,
+        5.375
+      ],
+      "b": [
+        17.03125,
+        5.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d92b84eec59841a5aa1c90c320b313a4"
+    },
+    {
+      "type": "line",
+      "a": [
+        17.03125,
+        5.375
+      ],
+      "b": [
+        16.53125,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "d92b84eec59841a5aa1c90c320b313a4"
+    },
+    {
+      "type": "line",
+      "a": [
+        13.0,
+        5.0625
+      ],
+      "b": [
+        13.0,
+        2.6875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "a455b555a7594c9ca8fd5fc8bd7ec3dd"
+    },
+    {
+      "type": "line",
+      "a": [
+        12.5625,
+        2.6875
+      ],
+      "b": [
+        12.5625,
+        5.0625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "a455b555a7594c9ca8fd5fc8bd7ec3dd"
+    },
+    {
+      "type": "line",
+      "a": [
+        12.5625,
+        5.0625
+      ],
+      "b": [
+        13.0,
+        5.0625
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "a455b555a7594c9ca8fd5fc8bd7ec3dd"
+    },
+    {
+      "type": "line",
+      "a": [
+        13.0,
+        2.6875
+      ],
+      "b": [
+        12.5625,
+        2.6875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "a455b555a7594c9ca8fd5fc8bd7ec3dd"
+    },
+    {
+      "type": "line",
+      "a": [
+        12.75,
+        2.6875
+      ],
+      "b": [
+        12.75,
+        2.9375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        12.75,
+        2.9375
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        12.75,
+        4.8125
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        12.75,
+        5.0625
+      ],
+      "b": [
+        12.75,
+        4.8125
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        13.21875,
+        6.4375
+      ],
+      "b": [
+        13.21875,
+        6.1875
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        13.21875,
+        6.1875
+      ],
+      "radius": 0.08425,
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        12.96875,
+        5.375
+      ],
+      "b": [
+        12.96875,
+        6.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "7cb20ac33dc146738fb9107640576114"
+    },
+    {
+      "type": "line",
+      "a": [
+        13.46875,
+        6.4375
+      ],
+      "b": [
+        13.46875,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "7cb20ac33dc146738fb9107640576114"
+    },
+    {
+      "type": "line",
+      "a": [
+        12.96875,
+        6.4375
+      ],
+      "b": [
+        13.46875,
+        6.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "7cb20ac33dc146738fb9107640576114"
+    },
+    {
+      "type": "line",
+      "a": [
+        12.96875,
+        5.375
+      ],
+      "b": [
+        13.46875,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "7cb20ac33dc146738fb9107640576114"
+    },
+    {
+      "type": "line",
+      "a": [
+        12.96875,
+        5.4375
+      ],
+      "b": [
+        12.96875,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "7cb20ac33dc146738fb9107640576114"
+    },
+    {
+      "type": "line",
+      "a": [
+        13.46875,
+        5.4375
+      ],
+      "b": [
+        12.96875,
+        5.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "7cb20ac33dc146738fb9107640576114"
+    },
+    {
+      "type": "line",
+      "a": [
+        13.46875,
+        5.375
+      ],
+      "b": [
+        13.46875,
+        5.4375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "7cb20ac33dc146738fb9107640576114"
+    },
+    {
+      "type": "line",
+      "a": [
+        13.46875,
+        5.375
+      ],
+      "b": [
+        12.96875,
+        5.375
+      ],
+      "layer": "Z0_BOTCOMP",
+      "color": "#00bfc4",
+      "pattern": "Solid",
+      "weight": 0.01,
+      "locked": false,
+      "controls": false,
+      "group": "7cb20ac33dc146738fb9107640576114"
+    },
+    {
+      "type": "line",
+      "a": [
+        15.0,
+        5.75
+      ],
+      "b": [
+        15.0,
+        2.75
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
+    },
+    {
+      "type": "line",
+      "a": [
+        15.0,
+        5.0625
+      ],
+      "b": [
+        16.1875,
+        5.0625
+      ],
+      "color": "#202b36",
+      "weight": 0.01,
+      "layer": "Construction",
+      "locked": false,
+      "pattern": "Solid",
+      "controls": false
     }
   ],
   "layers": [
@@ -8194,6 +11378,18 @@
     },
     {
       "name": "7A_1250BALL",
+      "visible": true
+    },
+    {
+      "name": "LAYER1",
+      "visible": true
+    },
+    {
+      "name": "Z0_CUT500",
+      "visible": true
+    },
+    {
+      "name": "0_WOOD",
       "visible": true
     }
   ],

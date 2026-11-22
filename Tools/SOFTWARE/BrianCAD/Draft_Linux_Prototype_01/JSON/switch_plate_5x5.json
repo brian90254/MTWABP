@@ -1,0 +1,166 @@
+{
+  "objects": [
+    {
+      "type": "polygon",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "closed": true,
+      "layer": "Plate Outline",
+      "color": "#202b36",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          1.26,
+          1.94
+        ],
+        [
+          1.72,
+          1.94
+        ],
+        [
+          1.72,
+          3.0
+        ],
+        [
+          1.26,
+          3.0
+        ]
+      ],
+      "closed": true,
+      "layer": "Switch Cutouts",
+      "color": "#202b36",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        1.49,
+        1.15
+      ],
+      "radius": 0.115,
+      "layer": "Screw Holes",
+      "color": "#202b36",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        1.49,
+        3.81
+      ],
+      "radius": 0.115,
+      "layer": "Screw Holes",
+      "color": "#202b36",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "polygon",
+      "points": [
+        [
+          3.28,
+          1.94
+        ],
+        [
+          3.74,
+          1.94
+        ],
+        [
+          3.74,
+          3.0
+        ],
+        [
+          3.28,
+          3.0
+        ]
+      ],
+      "closed": true,
+      "layer": "Switch Cutouts",
+      "color": "#202b36",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        3.51,
+        1.15
+      ],
+      "radius": 0.115,
+      "layer": "Screw Holes",
+      "color": "#202b36",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    },
+    {
+      "type": "circle",
+      "center": [
+        3.51,
+        3.81
+      ],
+      "radius": 0.115,
+      "layer": "Screw Holes",
+      "color": "#202b36",
+      "locked": false,
+      "pattern": "Solid",
+      "weight": 0.01,
+      "controls": false
+    }
+  ],
+  "layers": [
+    {
+      "name": "Plate Outline",
+      "visible": true
+    },
+    {
+      "name": "Switch Cutouts",
+      "visible": true
+    },
+    {
+      "name": "Screw Holes",
+      "visible": true
+    }
+  ],
+  "active_layer": "Plate Outline",
+  "display_unit": "in",
+  "grid": {
+    "spacing": 1.0,
+    "subdivisions": 4
+  },
+  "format": "briancad-2",
+  "units": "inches"
+}
