@@ -1884,12 +1884,34 @@ class Draft(LibraryMixin):
         self.refresh_layers(); self.draw()
         if focus_key in self.edit_widgets:self.edit_widgets[focus_key].focus_set()
 
+    def choose_dxf_import_units(self):
+        dlg=tk.Toplevel(self.root);dlg.title('Import DXF');dlg.transient(self.root)
+        self.import_units_window=dlg
+        default='mm' if self.doc.display_unit in ('mm','cm','m') else 'in'
+        self.import_unit=tk.StringVar(value=default);result=[]
+        frame=ttk.Frame(dlg,padding=14);frame.pack(fill='both',expand=True)
+        ttk.Label(frame,text='Interpret DXF coordinates as:').pack(anchor='w',pady=(0,6))
+        for text,value in [('Millimeters','mm'),('Inches','in')]:
+            ttk.Radiobutton(frame,text=text,variable=self.import_unit,value=value).pack(anchor='w',pady=3)
+        ttk.Label(frame,text='This choice overrides the file’s unit setting.\nWorkspace units stay unchanged.').pack(anchor='w',pady=8)
+        buttons=ttk.Frame(frame);buttons.pack(fill='x')
+        def accept():result.append(self.import_unit.get());dlg.destroy()
+        ttk.Button(buttons,text='Cancel',command=dlg.destroy).pack(side='right',padx=4)
+        button=ttk.Button(buttons,text='Import',command=accept);button.pack(side='right',padx=4)
+        dlg.bind('<Escape>',lambda e:dlg.destroy());dlg.bind('<Return>',lambda e:accept())
+        dlg.grab_set();button.focus_set();self.root.wait_window(dlg)
+        return result[0] if result else None
+
     def import_drawing(self):
         path=filedialog.askopenfilename(parent=self.root,title='Import into current drawing',
             filetypes=[('DXF or BrianCAD drawing','*.dxf *.json'),('DXF drawing','*.dxf'),('BrianCAD drawing','*.json')])
         if not path: return
+        unit=None
+        if os.path.splitext(path)[1].lower()=='.dxf':
+            unit=self.choose_dxf_import_units()
+            if unit is None:return
         try:
-            source,warnings=cad_import.read_drawing(path)
+            source,warnings=cad_import.read_drawing(path,dxf_unit=unit)
             count=cad_import.merge(self.doc,source)
         except Exception as ex:
             self.error('Could not import drawing:\n'+str(ex)); return
