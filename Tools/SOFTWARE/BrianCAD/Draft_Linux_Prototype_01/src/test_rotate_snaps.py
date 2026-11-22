@@ -23,12 +23,12 @@ class RotateSnapTests(unittest.TestCase):
         p=[1.15,2.18];self.assertEqual(a.snap_point(p,exclude={0}),(p,''))
         a.snap.set(False);self.assertEqual(a.snap_point(p),(p,''))
 
-    def test_partial_spline_control_and_move_still_excluded(self):
+    def test_partial_spline_control_and_move_reference(self):
         a=editor();a.family=Value('Modify');a.tool=Value('Rotate');a.grid_snap.set(False)
         a.doc.add([dict(type='spline',method='bezier',closed=False,points=[[1,1],[2.13,4.17],[5,1]])])
         a.doc.clear_selection();a.doc.point_selection={0:{'p1'}}
         self.assertEqual(a.snap_point([2.15,4.18]),([2.13,4.17],'control point'))
-        a.tool.set('Move');self.assertEqual(a.snap_point([2.15,4.18]),([2.15,4.18],''))
+        a.tool.set('Move');self.assertEqual(a.snap_point([2.15,4.18]),([2.13,4.17],'control point'))
 
 
 @unittest.skipUnless(os.environ.get('DISPLAY') or sys.platform=='darwin','A graphical display is required')

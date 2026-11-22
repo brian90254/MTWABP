@@ -127,7 +127,7 @@ class GridTests(unittest.TestCase):
         app.start=None
         self.assertEqual(app.snap_point(p),(p,''))
 
-    def test_toggles_and_move_excludes_self(self):
+    def test_toggles_and_move_includes_original_selection(self):
         app=editor(); app.snap=Value(False); app.grid_snap=Value(False)
         self.assertEqual(app.snap_point([.26,.27]),([.26,.27],''))
         app.grid_snap=Value(True)
@@ -135,7 +135,7 @@ class GridTests(unittest.TestCase):
         app.tool=Value('Move'); app.family=Value('Modify'); app.selected=0
         app.objects=[{'type':'line','a':[.26,.27],'b':[2,1]}]
         app.snap=Value(True)
-        self.assertEqual(app.snap_point([.26,.27])[1],'grid intersection')
+        self.assertEqual(app.snap_point([.26,.27])[1],'endpoint')
 
     def test_dense_grid_is_bounded_and_not_rescaled(self):
         self.assertEqual(list(grid_positions(-1e8,1e8,.000001,.01,8)),[])
