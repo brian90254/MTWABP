@@ -29,8 +29,8 @@ def merge(document,source):
     return len(pending)
 
 
-def read_drawing(path):
-    if Path(path).suffix.lower()=='.dxf': return read_dxf(path)
+def read_drawing(path,dxf_unit=None):
+    if Path(path).suffix.lower()=='.dxf': return read_dxf(path,unit=dxf_unit)
     with open(path,encoding='utf-8') as f: source=Document.from_payload(json.load(f))
     return source,[]
 
@@ -113,12 +113,15 @@ def _geometry(e,scale):
     raise ValueError('unsupported entity')
 
 
-def read_dxf(path):
+def read_dxf(path,unit=None):
     ezdxf=require_ezdxf()
     from ezdxf import units
     drawing=ezdxf.readfile(path); warnings=[]; skipped=Counter(); approximated=0
     code=drawing.units
-    if code==0: scale=1.; warnings.append('DXF has no declared units; coordinates were interpreted as inches.')
+    if unit is not None:
+        if unit not in ('in','mm'):raise ValueError('DXF import units must be inches or millimeters.')
+        scale=1. if unit=='in' else 1/25.4
+    elif code==0: scale=1.; warnings.append('DXF has no declared units; coordinates were interpreted as inches.')
     else: scale=units.conversion_factor(code,1)
     source=Document(); source.objects=[]; source.layers=[]; layer_names=set()
     def visit(entity,inherited_layer=None,block_pen=None,depth=0):

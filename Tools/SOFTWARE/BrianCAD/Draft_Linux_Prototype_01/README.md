@@ -577,3 +577,7 @@ BrianCAD uses flat groups with one membership per object. Overlapping DXF groups
 ### Move reference snaps and preview
 
 Modify > Move can use the selected objects' original control points, intersections, and other enabled snaps for both the reference point and destination. After the first pick, the original geometry becomes a muted dashed ghost and a moving preview follows the snapped destination. The ghost remains available for snapping until the second click commits the move. Escape, right-click, or changing tools clears the preview. Partial-control selections and Copy when transforming use the same preview behavior. Select-tool dragging still excludes moving objects from its destination snaps.
+
+### DXF import units
+
+After choosing a DXF with File > Import, select **Millimeters** or **Inches** in the import dialog. The default matches the workspace's unit family: millimeters for mm/cm/m, inches for in/ft. The chosen source units override the DXF header and determine the imported geometry's physical size; workspace display units remain unchanged. Cancel imports nothing. Native BrianCAD imports and Library files retain their existing unit handling.
