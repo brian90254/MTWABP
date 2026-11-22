@@ -557,8 +557,8 @@ class Draft(LibraryMixin):
             best=min(candidates,key=lambda v:distance(p,v[0]),default=None)
             return (list(best[0]),best[1]) if best and distance(p,best[0])<=tolerance else None
         excluded=set(exclude or [])
-        # Rotation references may belong to the selected geometry itself.
-        if self.family.get()=='Modify' and self.tool.get()!='Rotate':
+        # Explicit Move/Rotate references may belong to the original selection.
+        if self.family.get()=='Modify' and self.tool.get() not in ('Move','Rotate'):
             excluded.update(set(self.doc.editable_selection())|set(self.doc.editable_point_selection()))
         ids=[i for i in self.visible_ids() if i not in excluded]
         self._line_guides=(None,[])
@@ -1171,11 +1171,13 @@ class Draft(LibraryMixin):
         for i in visible:
             obj=getattr(self,'drag_preview',{}).get(i,self.objects[i])
             chosen=i in self.selected;partial=self.doc.point_selection.get(i,set())
-            state=(obj,chosen,partial,self.doc.display_unit if obj['type']=='dimension' else None);old=records.get(i)
+            ghost=i in getattr(self,'_modify_move_preview',{})
+            state=(obj,chosen,partial,self.doc.display_unit if obj['type']=='dimension' else None,ghost);old=records.get(i)
             if old is None or old[0]!=state or (resized and obj['type']=='dimension'):
                 if old is not None:c.delete(*old[1])
                 tag=f'entity:{i}';weight=float(obj.get('weight',.01));width_tag='stroke:'+str(weight)
-                item=self.draw_object(obj,color='#d08213' if chosen else None,tags=('geometry',tag,width_tag))
+                item=self.draw_object(obj,color='#98a3af' if ghost else '#d08213' if chosen else None,
+                    dash=(3,5) if ghost else None,tags=('geometry',tag,width_tag)+(('move-origin-ghost',) if ghost else ()))
                 items=item if isinstance(item,list) else [item];handles=[]
                 if chosen or partial or obj.get('controls'):
                     for key,p in selection.controls(obj):
@@ -1218,9 +1220,17 @@ class Draft(LibraryMixin):
         if pattern: opts['dash']=pattern
         return self.canvas.create_line(*coords,**opts)
 
+    def modify_move_preview(self):
+        if self.family.get()!='Modify' or self.tool.get()!='Move' or len(self.points)!=1 or self.mouse is None:return {}
+        try:
+            dx,dy=geo.sub(self.mouse,self.field_point(0))
+            return self.doc.selection_updates(dx,dy)
+        except (ValueError,KeyError):return {}
+
     def draw(self):
         if not hasattr(self,'canvas'): return
         self.sync_units()
+        self._modify_move_preview=self.modify_move_preview()
         if hasattr(self,'color'):
             color=self.doc.layer_color()
             if self.color.get()!=color:self.color.set(color)
@@ -1259,6 +1269,8 @@ class Draft(LibraryMixin):
         self.canvas.tag_lower('background')
         self.render_paste_preview()
         self.render_library_preview()
+        for obj in self._modify_move_preview.values():
+            self.draw_object(obj,color='#d08213',tags=('overlay','modify-move-preview'))
         c=CanvasLayer(self.canvas,'overlay')
         if self.tool.get()=='Start tangent + end' and len(self.points)>=2:
             try:
@@ -1287,7 +1299,7 @@ class Draft(LibraryMixin):
                 c.create_line(*self.screen(geo.sub(guide_start,delta)),*self.screen(geo.add(guide_start,delta)),
                               fill='#7693a7' if label in ('extension guide','tangent guide') else '#a38bb1',dash=(2,5),tags=('line-guide',))
         history=getattr(self,'snap_history',None)
-        excluded=(set(self.doc.editable_selection())|set(self.doc.editable_point_selection())) if self.family.get()=='Modify' else set()
+        excluded=(set(self.doc.editable_selection())|set(self.doc.editable_point_selection())) if self.family.get()=='Modify' and self.tool.get() not in ('Move','Rotate') else set()
         if getattr(self,'drag',None): excluded.update(self.drag['ids'])
         guides=history.guides(getattr(self,'tracking_cursor',None),self.scale,self.tracking_exclusions(excluded)) if history and self.snap.get() else []
         label_counts=[0,0]

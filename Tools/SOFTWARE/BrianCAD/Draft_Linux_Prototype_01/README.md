@@ -174,7 +174,7 @@ After picking the Rotate pivot, the Angle field receives focus with its value se
 
 Rotate can snap its pivot, reference direction, and new direction to control points and other snap targets on selected objects, including partially selected geometry. Object snaps / alignment must be enabled.
 
-Scale is uniform; ellipses, circles, arcs, polygons, and spline definitions retain their analytic/control representation. Mirror reverses an arc's sweep correctly. The explicit Modify tools commit after their final pick without a live geometry preview; Select-drag provides a live movement preview.
+Scale is uniform; ellipses, circles, arcs, polygons, and spline definitions retain their analytic/control representation. Mirror reverses an arc's sweep correctly. The Modify tools commit after their final pick. Modify > Move and Select-drag provide live movement previews.
 
 ## Grid, snaps, and view
 
@@ -573,3 +573,7 @@ DXF export writes BrianCAD groups as standard selectable DXF `GROUP` records. DX
 Create the desired groups in the source drawing (in BrianCAD, select each set and use Group, then export the DXF). Each Library placement assigns independent group identities, so selecting one bat does not select other copies. Entities emitted from a split spline, and imported pieces of a grouped block reference, retain the enclosing group's membership. Selection-only export includes groups for the exported entities only.
 
 BrianCAD uses flat groups with one membership per object. Overlapping DXF groups are combined and reported in import notes. Non-selectable DXF groups are not applied and are reported. DXF group names/descriptions are not retained; native membership and separation are preserved.
+
+### Move reference snaps and preview
+
+Modify > Move can use the selected objects' original control points, intersections, and other enabled snaps for both the reference point and destination. After the first pick, the original geometry becomes a muted dashed ghost and a moving preview follows the snapped destination. The ghost remains available for snapping until the second click commits the move. Escape, right-click, or changing tools clears the preview. Partial-control selections and Copy when transforming use the same preview behavior. Select-tool dragging still excludes moving objects from its destination snaps.

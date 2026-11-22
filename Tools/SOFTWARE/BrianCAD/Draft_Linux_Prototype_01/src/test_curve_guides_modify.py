@@ -128,7 +128,7 @@ class CurveGuideModifyUITests(unittest.TestCase):
         self.tool('Modify','Move');a.params['dx'].set('1');a.params['dy'].set('1');a.apply_parameters()
         self.assertEqual(a.objects[0]['a'],[0,0]);self.assertEqual(a.objects[0]['b'],[3,1])
         self.assertEqual(a.doc.point_selection,{0:{'b'}})
-        a.grid_snap.set(False);self.assertEqual(a.snap_point([3,1])[1],'')
+        a.grid_snap.set(False);self.assertEqual(a.snap_point([3,1])[1],'endpoint')
         self.tool('Modify','Rotate');self.click([0,0]);self.click([3,1]);self.click([-1,3])
         self.assertLess(g.dist(a.objects[0]['b'],[-1,3]),1e-8);self.assertEqual(a.objects[0]['a'],[0,0])
         a.undo();self.assertEqual(a.objects[0]['b'],[3,1])
