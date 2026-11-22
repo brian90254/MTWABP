@@ -61,6 +61,20 @@ class MenuUITests(unittest.TestCase):
         self.invoke('Edit','Edit Objects...');self.assertTrue(a.edit_window.winfo_exists())
         self.invoke('Edit','Undo');self.assertEqual(len(a.objects),0)
         self.invoke('Edit','Redo');self.assertEqual(len(a.objects),1)
+    def test_bracket_zoom_shortcuts_preserve_center_and_document(self):
+        a=self.a;a.canvas.focus_force();self.root.update()
+        center=(a.canvas.winfo_width()/2,a.canvas.winfo_height()/2)
+        world=a.world(*center);before=a.doc.state();scale=a.scale
+        modifier='Command' if self.root.tk.call('tk','windowingsystem')=='aqua' else 'Control'
+        a.canvas.event_generate('<'+modifier+'-bracketright>');self.root.update()
+        self.assertAlmostEqual(a.scale,scale*1.25)
+        for p,q in zip(world,a.world(*center)):self.assertAlmostEqual(p,q)
+        a.canvas.event_generate('<'+modifier+'-bracketleft>');self.root.update()
+        self.assertAlmostEqual(a.scale,scale);self.assertEqual(a.doc.state(),before)
+        prefix='Cmd' if modifier=='Command' else 'Ctrl'
+        self.assertEqual(a.menus['View'].entrycget('Zoom In','accelerator'),prefix+'+]')
+        self.assertEqual(a.menus['View'].entrycget('Zoom Out','accelerator'),prefix+'+[')
+
     def test_import_export_menu_routes_and_new_save_as_shortcuts(self):
         a=self.a
         with patch('draft.filedialog.askopenfilename',return_value='') as chooser:self.invoke('File','Import...')

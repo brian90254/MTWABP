@@ -89,6 +89,10 @@ class Draft(LibraryMixin):
         root.bind('<Control-Shift-G>',lambda e:self.shortcut(e,self.ungroup_selected))
         if root.tk.call('tk','windowingsystem')=='aqua':
             root.bind('<Command-Shift-G>',lambda e:self.shortcut(e,self.ungroup_selected))
+        for key,factor in [('bracketleft',.8),('bracketright',1.25)]:
+            root.bind('<Control-'+key+'>',lambda e,f=factor:self.shortcut(e,lambda:self.zoom_center(f)))
+            if root.tk.call('tk','windowingsystem')=='aqua':
+                root.bind('<Command-'+key+'>',lambda e,f=factor:self.shortcut(e,lambda:self.zoom_center(f)))
         root.bind('<Escape>',self.escape)
         root.bind_all('<KeyPress>',self.tool_shortcut,add='+')
         self.draw()
@@ -151,8 +155,8 @@ class Draft(LibraryMixin):
         objects.add_command(label='Layers...',command=self.layers_dialog)
         view=self.menus['View']
         view.add_command(label='Fit',command=self.fit)
-        view.add_command(label='Zoom In',command=lambda:self.zoom_center(1.25))
-        view.add_command(label='Zoom Out',command=lambda:self.zoom_center(.8))
+        view.add_command(label='Zoom In',accelerator=prefix+'+]',command=lambda:self.zoom_center(1.25))
+        view.add_command(label='Zoom Out',accelerator=prefix+'+[',command=lambda:self.zoom_center(.8))
         view.add_command(label='Window',command=self.begin_window_zoom)
         view.add_separator()
         view.add_command(label='Layers panel',command=self.layers_dialog)
