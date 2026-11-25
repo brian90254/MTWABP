@@ -49371,28 +49371,28 @@
   "layers": [
     {
       "name": "Constraints",
-      "visible": false
+      "visible": true
     },
     {
       "name": "Construction",
-      "visible": false
+      "visible": true
     },
     {
       "name": "Dimension",
-      "visible": false,
+      "visible": true,
       "drawing_color": "#2465d8"
     },
     {
       "name": "Layer1",
-      "visible": false
+      "visible": true
     },
     {
       "name": "0_CONSTRUCTION",
-      "visible": false
+      "visible": true
     },
     {
       "name": "1_SEW_LINE",
-      "visible": false,
+      "visible": true,
       "drawing_color": "#cf36b5"
     },
     {
@@ -49407,7 +49407,7 @@
     },
     {
       "name": "4_FOLD",
-      "visible": false,
+      "visible": true,
       "drawing_color": "#00bfc4"
     }
   ],
