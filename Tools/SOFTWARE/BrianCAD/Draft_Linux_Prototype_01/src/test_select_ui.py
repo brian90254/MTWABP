@@ -113,16 +113,30 @@ class SelectWorkflowTests(unittest.TestCase):
         self.assertEqual(len(a.doc.history),history+1)
         a.undo(); self.assertEqual(a.objects[0]['center'],[-3,0])
 
-    def test_grid_handle_drop_and_no_self_snapping(self):
+    def test_grid_handle_drop_and_original_ghost_snapping(self):
         a=self.app; a.snap.set(True); a.grid_snap.set(True)
         a.doc.add([{'type':'line','a':[-3,0],'b':[-2,0]}]); a.selected={0}
         self.drag([-3,0],[2.26,.24])
         self.assertEqual(a.objects[0]['a'],[2.25,.25]); self.assertEqual(a.objects[0]['b'],[3.25,.25])
-        # Move a selected endpoint close to its own old location; it must not stick there.
+        # The original endpoint is now an intentional snap target.
         a.snap.set(True); a.grid_snap.set(False); a.doc.selected=set(); a.doc.point_selection={0:{'b'}}
         self.drag([3.25,.25],[3.30,.32])
-        self.assertAlmostEqual(a.objects[0]['b'][0],3.31); self.assertAlmostEqual(a.objects[0]['b'][1],.31)
-        self.assertEqual(a.marker,'45°')  # alignment remains live, without self-snapping
+        self.assertEqual(a.objects[0]['b'],[3.25,.25])
+        self.assertLess(g.dist(a.mouse,[3.25,.25]),1e-9)
+
+    def test_select_drag_original_ghost_snaps_and_cleanup(self):
+        a=self.app;a.snap.set(True)
+        a.doc.add([dict(type='line',a=[1.13,1.17],b=[3.13,1.17])]);a.selected={0}
+        before=copy.deepcopy(a.objects);history=len(a.doc.history)
+        a.click(self.event([1.13,1.17]));a.drag_select(self.event([3.15,1.18]))
+        self.assertEqual(a.marker,'endpoint');self.assertEqual(a.mouse,[3.13,1.17])
+        self.assertTrue(a.canvas.find_withtag('move-origin-ghost'));self.assertTrue(a.canvas.find_withtag('select-move-preview'))
+        self.assertEqual(a.objects,before);self.assertEqual(len(a.doc.history),history)
+        a.release_select(self.event([3.15,1.18]));self.assertEqual(a.objects[0]['a'],[3.13,1.17])
+        self.assertFalse(a.canvas.find_withtag('move-origin-ghost'));self.assertFalse(a.canvas.find_withtag('select-move-preview'))
+        a.undo();self.assertEqual(a.objects,before)
+        a.click(self.event([1.13,1.17]));a.drag_select(self.event([4.13,2.17]));a.cancel()
+        self.assertEqual(a.objects,before);self.assertFalse(a.canvas.find_withtag('select-move-preview'))
 
     def test_mixed_whole_and_point_selection_moves_together(self):
         a=self.app; self.add_circle(); a.doc.add([{'type':'line','a':[3,0],'b':[4,0]}])
