@@ -583,3 +583,5 @@ Modify > Move can use the selected objects' original control points, intersectio
 After choosing a DXF with File > Import, select **Millimeters** or **Inches** in the import dialog. The default matches the workspace's unit family: millimeters for mm/cm/m, inches for in/ft. The chosen source units override the DXF header and determine the imported geometry's physical size; workspace display units remain unchanged. Cancel imports nothing. Native BrianCAD imports and Library files retain their existing unit handling.
 
 For Offset, after clicking a direction point in the workspace, press **Enter** to apply the offset, just like the Apply offset button.
+
+**Command+I** opens Import and **Command+E** opens Export on macOS (Control+I / Control+E on Linux and Windows). The File menu displays these shortcuts beside the commands.
