@@ -1938,11 +1938,18 @@ class Draft(LibraryMixin):
                         variable=scope,value='all').pack(anchor='w',pady=4)
         ttk.Radiobutton(frame,text=f"Selected objects ({len(snapshot['selected'])} objects)",variable=scope,
                         value='selected',state='normal' if snapshot['selected'] else 'disabled').pack(anchor='w',pady=4)
-        unit=snapshot['display_unit']
-        ttk.Label(frame,text=f'Units: {UNITS[unit][0]} ({unit}), from drawing preferences.\nWhole drawing includes hidden layers.').pack(anchor='w',pady=(8,2))
+        workspace_unit=snapshot['display_unit']
+        self.export_unit=tk.StringVar(value='mm' if workspace_unit in ('mm','cm','m') else 'in')
+        ttk.Label(frame,text=f'Workspace units: {UNITS[workspace_unit][0]} ({workspace_unit}).').pack(anchor='w',pady=(8,2))
+        unit_frame=ttk.LabelFrame(frame,text='Export units',padding=8);unit_frame.pack(fill='x',pady=4)
+        for label,value in [('Millimeters (mm)','mm'),('Inches (in)','in')]:
+            ttk.Radiobutton(unit_frame,text=label,variable=self.export_unit,value=value).pack(anchor='w',pady=2)
+        ttk.Label(frame,text='Export units do not change workspace units.\nWhole drawing includes hidden layers.').pack(anchor='w',pady=(4,2))
         ttk.Label(frame,text='Selection only includes whole objects; control-point selections are excluded.').pack(anchor='w',pady=(0,8))
         buttons=ttk.Frame(frame); buttons.pack(fill='x')
         def export():
+            unit=self.export_unit.get()
+            export_snapshot=dict(snapshot,display_unit=unit)
             try: cad_dxf.require_ezdxf()
             except cad_dxf.DXFDependencyError as ex:
                 messagebox.showerror('Export DXF',str(ex),parent=dlg); return
@@ -1951,7 +1958,7 @@ class Draft(LibraryMixin):
             path=filedialog.asksaveasfilename(parent=dlg,title='Export DXF',initialfile=stem+'.dxf',
                     defaultextension='.dxf',filetypes=[('DXF drawing','*.dxf')])
             if not path: return
-            try: report=cad_dxf.export_dxf(path,snapshot,selected_only=scope.get()=='selected')
+            try: report=cad_dxf.export_dxf(path,export_snapshot,selected_only=scope.get()=='selected')
             except Exception as ex:
                 messagebox.showerror('Export DXF','Could not export DXF:\n'+str(ex),parent=dlg); return
             dlg.destroy()
