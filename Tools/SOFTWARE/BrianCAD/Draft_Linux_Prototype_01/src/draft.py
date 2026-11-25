@@ -79,7 +79,7 @@ class Draft(LibraryMixin):
         root.title('BrianCAD'); root.geometry('1220x820'); root.minsize(850,620)
         self.build_ui(); self.configure_parameters()
         self.install_close_handlers()
-        for key,action in [('z',self.undo),('y',self.redo),('s',self.save),('o',self.open),('g',self.group_selected),('n',self.new),('c',self.copy_objects),('v',self.paste_objects)]:
+        for key,action in [('z',self.undo),('y',self.redo),('s',self.save),('o',self.open),('g',self.group_selected),('n',self.new),('c',self.copy_objects),('v',self.paste_objects),('i',self.import_drawing),('e',self.export_dxf_dialog)]:
             root.bind('<Control-'+key+'>',lambda e,f=action:self.shortcut(e,f))
             if root.tk.call('tk','windowingsystem')=='aqua':
                 root.bind('<Command-'+key+'>',lambda e,f=action:self.shortcut(e,f))
@@ -133,8 +133,8 @@ class Draft(LibraryMixin):
         file.add_command(label='Save',accelerator=prefix+'+S',command=self.save)
         file.add_command(label='Save As...',accelerator=prefix+'+Shift+S',command=lambda:self.save(True))
         file.add_separator()
-        file.add_command(label='Import...',command=self.import_drawing)
-        file.add_command(label='Export...',command=self.export_dxf_dialog)
+        file.add_command(label='Import...',accelerator=prefix+'+I',command=self.import_drawing)
+        file.add_command(label='Export...',accelerator=prefix+'+E',command=self.export_dxf_dialog)
         edit=self.menus['Edit']
         edit.add_command(label='Undo',accelerator=prefix+'+Z',command=self.undo)
         edit.add_command(label='Redo',accelerator=prefix+'+Y',command=self.redo)

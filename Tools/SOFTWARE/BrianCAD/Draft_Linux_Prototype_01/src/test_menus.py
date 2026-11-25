@@ -80,6 +80,16 @@ class MenuUITests(unittest.TestCase):
         with patch('draft.filedialog.askopenfilename',return_value='') as chooser:self.invoke('File','Import...')
         self.assertTrue(chooser.called)
         self.invoke('File','Export...');self.assertTrue(a.export_window.winfo_exists());a.export_window.destroy()
+        modifier='Command' if self.root.tk.call('tk','windowingsystem')=='aqua' else 'Control'
+        prefix='Cmd' if modifier=='Command' else 'Ctrl'
+        self.assertEqual(a.menus['File'].entrycget('Import...','accelerator'),prefix+'+I')
+        self.assertEqual(a.menus['File'].entrycget('Export...','accelerator'),prefix+'+E')
+        a.canvas.focus_force();self.root.update();before=a.doc.state()
+        with patch('draft.filedialog.askopenfilename',return_value='') as chooser:
+            a.canvas.event_generate('<'+modifier+'-KeyPress-i>');self.root.update()
+        chooser.assert_called_once();self.assertEqual(a.doc.state(),before)
+        a.canvas.event_generate('<'+modifier+'-KeyPress-e>');self.root.update()
+        self.assertTrue(a.export_window.winfo_exists());a.export_window.destroy()
         path=self.folder/'shortcut.draft.json';a.canvas.focus_force();self.root.update()
         with patch('draft.filedialog.asksaveasfilename',return_value=str(path)) as chooser:
             a.canvas.event_generate('<Control-Shift-KeyPress-S>');self.root.update()
