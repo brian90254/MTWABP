@@ -84,6 +84,34 @@ class DXFWorkflowTests(unittest.TestCase):
         self.assertEqual(a.doc.state(),before); self.assertEqual(len(a.doc.history),n)
         self.find(a.export_window,'TButton','Cancel').invoke(); self.assertIsNone(self.root.grab_current())
 
+    def test_export_unit_radio_defaults_to_workspace_family(self):
+        a=self.app
+        for unit,expected in [('in','in'),('mm','mm'),('cm','mm'),('m','mm'),('ft','in')]:
+            a.doc.set_display_unit(unit);before=a.doc.state();a.export_dxf_dialog();self.root.update()
+            self.assertEqual(a.export_unit.get(),expected)
+            self.find(a.export_window,'TRadiobutton','Millimeters').invoke();self.assertEqual(a.export_unit.get(),'mm')
+            self.find(a.export_window,'TRadiobutton','Inches').invoke();self.assertEqual(a.export_unit.get(),'in')
+            self.find(a.export_window,'TButton','Cancel').invoke();self.assertEqual(a.doc.state(),before)
+
+    @unittest.skipUnless(ezdxf,'Install requirements-dxf.txt')
+    def test_override_exports_scaled_geometry_and_preserves_workspace(self):
+        a=self.app
+        with tempfile.TemporaryDirectory() as folder:
+            for workspace,output,factor,code in [('in','mm',25.4,4),('mm','in',1,1)]:
+                for scope in ('all','selected'):
+                    a.doc.set_display_unit(workspace);a.selected={0};before=a.doc.state();history=copy.deepcopy(a.doc.history)
+                    a.export_dxf_dialog();self.root.update();a.export_scope.set(scope)
+                    self.find(a.export_window,'TRadiobutton','Millimeters' if output=='mm' else 'Inches').invoke()
+                    path=Path(folder)/'override.dxf'
+                    with patch('draft.filedialog.asksaveasfilename',return_value=str(path)):
+                        self.find(a.export_window,'TButton','Export').invoke()
+                    drawing=ezdxf.readfile(path);self.assertEqual(drawing.units,code)
+                    line=list(drawing.modelspace().query('LINE'))[0]
+                    self.assertAlmostEqual(line.dxf.end.x,2*factor)
+                    self.assertEqual(len(drawing.modelspace()),1 if scope=='selected' else 3)
+                    self.assertEqual(a.doc.state(),before);self.assertEqual(a.doc.history,history)
+                    self.assertIn('in '+output+' to:',self.info[-1])
+
     def test_missing_optional_dependency_and_empty_drawing(self):
         a=self.app; before=a.doc.state(); a.export_dxf_dialog()
         with patch('draft.cad_dxf.require_ezdxf',side_effect=DXFDependencyError('Install requirements-dxf.txt')),patch('draft.filedialog.asksaveasfilename') as save:
