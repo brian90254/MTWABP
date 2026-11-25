@@ -54,6 +54,15 @@ class OffsetUITests(unittest.TestCase):
         self.assertTrue(a.offset_preview);self.assertEqual(len(a.objects),1)
         a.right_click();self.assertEqual(a.family.get(),'Select');self.assertFalse(a.offset_preview)
         self.assertEqual(len(a.objects),1)
+    def test_canvas_enter_after_direction_matches_apply_button(self):
+        a=self.a;self.activate();a.params['offset'].set('.5');before=a.doc.state();history=len(a.doc.history)
+        a.canvas.focus_force();self.root.update();self.click([1,1])
+        self.assertTrue(a.offset_preview);self.assertEqual(a.doc.state(),before)
+        a.canvas.event_generate('<Return>');self.root.update()
+        self.assertEqual(len(a.objects),2);self.assertEqual(a.objects[-1]['a'],[0,.5])
+        self.assertEqual(len(a.doc.history),history+1);self.assertFalse(a.offset_preview)
+        a.undo();self.assertEqual(a.doc.state(),before)
+
     def test_invalid_distance_no_commit(self):
         a=self.a;self.activate();before=a.doc.state();n=len(a.doc.history)
         a.params['offset'].set('-1');a.apply_offset();self.assertTrue(self.errors);self.errors.clear()

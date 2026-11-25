@@ -884,7 +884,7 @@ class Draft(LibraryMixin):
         if not self.drag['active']: return
         self.start=self.drag['handle']
         desired=geo.add(self.drag['handle'],geo.sub(raw,self.drag['raw']))
-        target,label=self.snap_point(desired,exclude=self.drag['ids'])
+        target,label=self.snap_point(desired)
         self.mouse,self.marker=target,label
         self.track_snap_hover(e)
         dx,dy=geo.sub(target,self.drag['handle'])
@@ -1059,6 +1059,7 @@ class Draft(LibraryMixin):
 
     def finish(self):
         if getattr(self,'_library',None):self.commit_library();return
+        if self.family.get()=='Offset':self.apply_parameters();return
         if self.family.get()=='Splines':
             try:
                 if len(self.points)<2: raise ValueError('Pick at least two spline points.')
@@ -1173,9 +1174,10 @@ class Draft(LibraryMixin):
             if i not in keep:
                 c.delete(*records.pop(i)[1]);changed=True
         for i in visible:
-            obj=getattr(self,'drag_preview',{}).get(i,self.objects[i])
+            obj=self.objects[i]
             chosen=i in self.selected;partial=self.doc.point_selection.get(i,set())
-            ghost=i in getattr(self,'_modify_move_preview',{})
+            drag=getattr(self,'drag',None)
+            ghost=i in getattr(self,'_modify_move_preview',{}) or bool(drag and drag['active'] and i in drag['ids'])
             state=(obj,chosen,partial,self.doc.display_unit if obj['type']=='dimension' else None,ghost);old=records.get(i)
             if old is None or old[0]!=state or (resized and obj['type']=='dimension'):
                 if old is not None:c.delete(*old[1])
@@ -1273,6 +1275,12 @@ class Draft(LibraryMixin):
         self.canvas.tag_lower('background')
         self.render_paste_preview()
         self.render_library_preview()
+        for i,obj in getattr(self,'drag_preview',{}).items():
+            self.draw_object(obj,color='#d08213',tags=('overlay','select-move-preview'))
+            for key,point in selection.controls(obj):
+                if i in self.selected or key in self.doc.point_selection.get(i,set()):
+                    x,y=self.screen(point)
+                    self.canvas.create_rectangle(x-4,y-4,x+4,y+4,outline='#b66b00',fill='#eaa23d',tags=('overlay','select-move-preview'))
         for obj in self._modify_move_preview.values():
             self.draw_object(obj,color='#d08213',tags=('overlay','modify-move-preview'))
         c=CanvasLayer(self.canvas,'overlay')
@@ -1304,7 +1312,6 @@ class Draft(LibraryMixin):
                               fill='#7693a7' if label in ('extension guide','tangent guide') else '#a38bb1',dash=(2,5),tags=('line-guide',))
         history=getattr(self,'snap_history',None)
         excluded=(set(self.doc.editable_selection())|set(self.doc.editable_point_selection())) if self.family.get()=='Modify' and self.tool.get() not in ('Move','Rotate') else set()
-        if getattr(self,'drag',None): excluded.update(self.drag['ids'])
         guides=history.guides(getattr(self,'tracking_cursor',None),self.scale,self.tracking_exclusions(excluded)) if history and self.snap.get() else []
         label_counts=[0,0]
         for axis,value in guides:
